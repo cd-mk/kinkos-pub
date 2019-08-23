@@ -1,0 +1,338 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>퍼블리싱가이드 > 현황판 > 메인</title>
+	<link href="common.css" rel="stylesheet" type="text/css">
+	<link href="basic.css" rel="stylesheet" type="text/css">
+	<link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
+	<link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
+	<link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
+	
+	<script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div id="g_header">
+		<h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+		<div id="g_navi">
+			
+			<ul class="g_gnb">
+				<li class="g_on"><a href="status-list.html">Status Board</a></li>
+				<li><a href="guide-info.html">Info Guide</a></li>
+				<li><a href="code-txt.html">Code Guide</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="g_content">
+		<div id="gTabBox">	
+			<ul id="gTab" class="g_tab">
+				<li><a href="status-list.html">WWW</a></li>
+				<li class="g_on"><a href="status-mall.html">MALL</a></li>
+				<li><a href="status-biz.html">BIZ</a></li>
+			</ul>
+		</div>
+		<h2 class="g_m_tit">온라인 쇼핑몰</h2>
+
+		<a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+		<div class="g_main_description">
+			<ul>
+				<li><span style="background:#d8ebf6; color:#000;">진행 / 수정</span></li>
+				<li><span style="background:#efc96e; color:#000;">완료 / 수정완료</span></li>
+				<li><span style="background:#e00f0f;">오늘 날짜</span></li>
+				<li><span style="margin-top:20px;">상태 및 완료 예정일에 맞추어 색이 변경 됩니다.</span></li> 
+			</ul>
+		</div>
+		
+		<h3 class="g_status_tit">메인 현황판 <span class="g_finto"></span>/<span class="g_num">/</span></h3>
+		<div class="g_status_board">
+
+
+			<table id="table_format" class="table table-bordered">
+				<caption>관리자</caption>
+				<colgroup>
+					<col style="width: 40px;" />
+					<col />
+					<col />
+					<col />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col style="width: 80px;" />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>No</th>
+						<th class="g_screen">Screen Name</th>
+						<th class="g_name">파일명</th>
+						<th>Depth</th>
+						<th class="g_start">시작일</th>
+						<th class="g_due_date">완료예정일</th>
+						<th class="g_fin">완료일</th>
+						<th>디자인<br />(O,X)</th>
+						<th class="g_status">상태</th>
+						<th class="g_ac">작성자</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+				<!-- 관리자 -->
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">공통영역</td>
+					<td class="g_name"></td>
+					<td>common</td>
+					<td class="g_start">2019-02-28</td>
+					<td class="g_due_date">19-03-14</td>
+					<td class="g_fin"></td>
+					<td>O</td>
+					<td class="g_status">진행</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">관리자 로그인</td>
+					<td class="g_name">../web/member/login.html</td>
+					<td class="g_start"></td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td>O</td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">관리자 회원가입</td>
+					<td class="g_name">admin-join.html</td>
+					<td class="g_start">admin/main</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td>O</td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">관리자 메인</td>
+					<td class="g_name">admin-main.html</td>
+					<td class="g_start">admin/main</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td>O</td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">관리자 정보 수정</td>
+					<td class="g_name">admin-info-modify.html</td>
+					<td class="g_start">admin/main</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">회원관리 목록</td>
+					<td class="g_name">admin-member-list.html</td>
+					<td class="g_start">admin/member</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td>O</td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">회원관리 상세</td>
+					<td class="g_name">admin-info-view.html</td>
+					<td class="g_start">admin/member</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">신청현황 목록</td>
+					<td class="g_name">admin-escrow-list.html</td>
+					<td class="g_start">admin/escrow</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-06</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">신청현황 상세</td>
+					<td class="g_name">admin-escrow-view.html</td>
+					<td class="g_start">admin/escrow</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-11</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">승인 현황 목록</td>
+					<td class="g_name">admin-escrow-status.html</td>
+					<td class="g_start">admin/escrow</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-11</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">관리자 현황</td>
+					<td class="g_name">admin-mgt-list.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">자료실 목록</td>
+					<td class="g_name">admin-data-list.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">자료실 등록</td>
+					<td class="g_name">admin-data-write.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-12</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">자료실 상세</td>
+					<td class="g_name">admin-data-view.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-12</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">자료실 수정</td>
+					<td class="g_name">admin-data-modify.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-13</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">게시판 관리 목록</td>
+					<td class="g_name">admin-bbs-list.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-07</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="g_num"></td>
+					<td class="g_screen">게시판 관리 등록</td>
+					<td class="g_name">admin-bbs-write.html</td>
+					<td class="g_start">admin/mgt</td>
+					<td class="g_start"></td>
+					<td class="g_due_date">2019-03-14</td>
+					<td class="g_fin">2019-03-13</td>
+					<td></td>
+					<td class="g_status">완료</td>
+					<td class="g_ac">성민경</td>
+					<td></td>
+				</tr>
+				
+				</tbody>
+			</table>
+
+
+
+
+
+
+
+
+
+		</div>	
+	</div>
+<!-- SCRIPT -->
+<script src="../www/js/wow.min.js"></script>
+<script src="../www/js/swiper/swiper.min.js"></script>
+<script src="../www/js/common-www.js"></script>
+<script type="text/javascript" src="./common.js"></script>
+<script src="ddtf.js"></script>
+<script>
+	// gTab();
+	$('.g_status_board tbody tr').each(function(){
+		var num=$(this).index()+1;
+		$(this).find('td').eq(0).html(num);
+		var tdStr1=$(this).find('td').eq(2).text();
+		var tdStr2 = $(this).find('td').eq(3).text();
+		$(this).find('td').eq(2).html('<a class="g_url_link" href="../'+tdStr2+'/'+tdStr1+'" target="_blank">'+tdStr2+'/'+tdStr1+'</a>');
+	});
+</script>
+<script>
+	jQuery('#table_format').ddTableFilter();
+</script>
+</body>
+</html>
