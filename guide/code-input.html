@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
+    <title>퍼블리싱가이드 > 코딩가이드 > input</title>
+  <script type="text/javascript" src="../assets/common/js/jquery-3.4.1.min.js"></script>
+  <link href="common.css" rel="stylesheet" type="text/css">
+  <link href="basic.css" rel="stylesheet" type="text/css">
+  <link href="../assets/company/css/app-co.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2c/css/app-b2c.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2b/css/app-b2b.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="g_header">
+      <h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+      <div id="g_navi">
+        <ul class="g_gnb">
+          <li><a href="status-list.html">Status Board</a></li>
+          <li><a href="guide-info.html">Info Guide</a></li>
+          <li class="g_on"><a href="code-txt.html">Code Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="g_content">
+      <div id="gTabBox">
+      </div>
+      <div class="g_title_box">
+        <h2 class="g_m_tit">input</h2>
+        <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+      </div>
+      <div class="g_main_description">
+        <ul>
+          <li>설정상 탭키 들여쓰기를 하지 않습니다.</li>
+          <li>최신 날짜 순으로 정리 합니다.</li>
+        </ul>
+      </div>
+        <!-- 코드 추가-->
+        <div class="g_code_page">
+            <div class="g_header">
+              <h3 class="g_tit2">Checkbox</h3>
+              <span>Update. 2019.04.04</span>
+            </div>
+            <div class="g_codebox">
+              <!-- source code -->
+              <div class="g_code_temp">
+                <!-- S: checkbox with text label -->
+                <span class="chk_inp_box">
+                  <span class="chk_inp">
+                    <input type="checkbox" id="chk1" class="chk_inp">
+                    <label for="chk1"><span class="blind">로그인 유지 설정</span></label>
+                  </span>
+                  <span class="txt_label">로그인 유지</span>
+                </span>
+                <span class="chk_inp_box">
+                  <span class="chk_inp">
+                    <input type="checkbox" id="chk2" class="chk_inp">
+                    <label for="chk2"><span class="blind">아이디 저장 설정</span></label>
+                  </span>
+                  <span class="txt_label">아이디 저장</span>
+                </span>
+                <!-- E: checkbox with text label -->
+
+                <!-- S: checkbox without text label -->
+                <div>
+                  <span class="chk_inp_box">
+                    <span class="chk_inp">
+                      <input type="checkbox" id="chk3" class="chk_inp">
+                      <label for="chk3"><span class="blind">로그인 유지 설정</span></label>
+                    </span>
+                  </span>
+                </div>                    
+                <!-- E: checkbox without text label -->
+      
+              </div>
+              <!-- //source code -->
+            </div>
+        
+            <div class="g_code_description">
+              <div>
+                <h4>Description</h4>
+      
+              </div>
+            </div>
+        </div>
+        <!-- //코드 추가 -->
+
+        <!-- 코드 추가-->
+        <div class="g_code_page">
+          <div class="g_header">
+            <h3 class="g_tit2">INPUT type text</h3>
+            <span>Update. 2019.04.04</span>
+          </div>
+          <div class="g_codebox">
+            <!-- source code -->
+            <div class="g_code_temp">
+              <!-- S : INPUT type text -->
+              <div class="inp_box">
+                <input type="text" name="" title="정보입력" placeholder="인풋혼자">
+              </div>
+              <!-- E : INPUT type text -->
+
+              <!-- S : INPUT type text with BUTTON -->
+              <div class="inp_box">
+                <input type="text" name="" title="정보입력" placeholder="인풋옆에 버튼이 있는 경우" class="inp_not_full">
+                <button type="button" class="inp_next_btn point_type3">중복 확인</button>
+              </div>
+              <!-- E : INPUT type text with BUTTON -->
+    
+            </div>
+            <!-- //source code -->
+          </div>
+      
+        <div class="g_code_description">
+          <div>
+            <h4>Description</h4>
+
+          </div>
+        </div>
+      </div>
+      <!-- //코드 추가 -->
+
+      <!-- 코드 추가-->
+      <div class="g_code_page">
+        <div class="g_header">
+          <h3 class="g_tit2">INPUT type date</h3>
+          <span>Update. 2019.04.04</span>
+        </div>
+        <div class="g_codebox">
+          <!-- source code -->
+          <div class="g_code_temp">
+            <!-- S : INPUT type date single -->
+            <div class="code_inner">
+              <input type="text" class="input_date" title="날짜 입력">
+            </div>
+            <!-- E : INPUT type date single -->
+
+            <!-- S : INPUT type date double -->
+            <div class="inp_date_box">
+              <input type="text" class="input_date" title="시작일 입력">
+              <span class="hypon">-</span>
+              <input type="text" class="input_date" title="종료일 입력">
+            </div>
+            <!-- E : INPUT type date double -->
+            
+          </div>
+          <!-- //source code -->
+        </div>
+        <div class="g_code_description">
+          <div>
+            <h4>Description</h4>
+  
+          </div>
+        </div>
+      </div>
+      <!-- //코드 추가 -->
+
+      <!-- 코드 추가-->
+      <div class="g_code_page">
+        <div class="g_header">
+            <h3 class="g_tit2">select</h3>
+            <span>Update. 2019.04.04</span>
+        </div>
+        <div class="g_codebox">
+          <!-- source code -->
+          <div class="g_code_temp">
+            <!-- S : select -->
+            <div class="code_inner">
+              <select name="" id="">
+                <option value="">옵션1</option>
+                <option value="">옵션2</option>
+                <option value="">옵션3</option>
+                <option value="">옵션4</option>
+              </select>
+            </div> 
+            <!-- E : select -->   
+          </div>
+          <!-- //source code -->
+        </div>
+    
+        <div class="g_code_description">
+          <div>
+            <h4>Description</h4>
+  
+          </div>
+        </div>
+      </div>
+      <!-- //코드 추가 -->
+
+      <!-- 코드 추가-->
+      <div class="g_code_page">
+        <div class="g_header">
+          <h3 class="g_tit2">TEXTAREA</h3>
+          <span>Update. 2019.04.04</span>
+        </div>
+        <div class="g_codebox">
+          <!-- source code -->
+          <div class="g_code_temp">
+            <!-- S : textarea -->
+            <textarea name="" id=""></textarea>     
+            <!-- E : textarea -->
+          </div>
+          <!-- //source code -->
+        </div>
+    
+        <div class="g_code_description">
+          <div>
+              <h4>Description</h4>
+  
+          </div>
+        </div>
+      </div>
+      <!-- //코드 추가 -->
+
+
+    </div>
+    <script src="../assets/js/plugins/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="../assets/js/plugins/slick.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="./common.js"></script>
+    <script>
+        gTabCode();
+    </script>
+</body>
+
+</html>

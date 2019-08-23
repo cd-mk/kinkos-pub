@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
+  <title>퍼블리싱가이드 > 코딩가이드 > Popup</title>
+  <script type="text/javascript" src="../assets/common/js/jquery-3.4.1.min.js"></script>
+  <link href="common.css" rel="stylesheet" type="text/css">
+  <link href="basic.css" rel="stylesheet" type="text/css">
+  <link href="../assets/company/css/app-co.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2c/css/app-b2c.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2b/css/app-b2b.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="g_header">
+    <h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+    <div id="g_navi">
+      <ul class="g_gnb">
+        <li><a href="status-list.html">Status Board</a></li>
+        <li><a href="guide-info.html">Info Guide</a></li>
+        <li class="g_on"><a href="code-txt.html">Code Guide</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="g_content">
+    <div id="gTabBox">
+    </div>
+    <div class="g_title_box">
+      <h2 class="g_m_tit">popup</h2>
+      <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+    </div>
+    <div class="g_main_description">
+      <ul>
+        <li>설정상 탭키 들여쓰기를 하지 않습니다.</li>
+        <li>최신 날짜 순으로 정리 합니다.</li>
+      </ul>
+    </div>
+  <!-- 코드 추가-->
+  <div class="g_code_page">
+    <div class="g_header">
+      <h3 class="g_tit2">레이어 팝업</h3>
+      <span>Update. 2019.03.07</span>
+    </div>
+    <div class="g_codebox">
+      <!-- source code -->
+      <div class="g_code_temp">
+        <!-- S : layerpopup -->
+        <a href="#url" class="js-layer-open" data-popup="layer-sample">팝업 호출 Click Me!</a>
+        <div class="layer_popup" data-popup="layer-sample">
+          <div class="popup_box">
+            <strong class="popup_title">사진 삭제</strong>
+            <div class="popup_con">
+              <p class="txt_desc">
+              <span class="txt_point1">사진을 삭제하면 입사 지원서에서도 삭제됩니다.</span><br>등록된 사진을 삭제하시겠습니까?
+              </p>
+              <div class="btn_wrap col2 algin_center">
+                <button type="button" class="btn point_type1">확인</button>
+                <button type="button" class="btn point_type2 js-popup-close">취소</button>
+              </div>
+            </div>
+            <button type="button" class="btn_pop_close js-popup-close"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="dim"></div>
+        </div>
+        <!-- E : layerpopup -->
+      </div>
+      <!-- //source code -->
+    </div>
+    <div class="g_code_description">
+      <div>
+        <h4>팝업 호출 버튼의 클래스는 "js-layer-open"</h4>
+        <h4>팝업 호출 버튼과 호출될 레이어 팝업의 연결은 data-popup="layer-naming" 으로 연결(naming 부분을 팝업에 맞게 변경)</h4>
+        <h4>레이어 팝업의 위치는 .container 최하단에 위치(버튼 다음에 위치 x)</h4>
+      </div>
+    </div>
+  </div>
+  <!-- //코드 추가 -->
+
+  </div>
+  <script src="../assets/js/plugins/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/plugins/jquery-ui.min.js"></script>
+  <script src="../assets/js/plugins/slick.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script type="text/javascript" src="./common.js"></script>
+  <script>
+      gTabCode();
+  </script>
+
+</body>
+
+</html>

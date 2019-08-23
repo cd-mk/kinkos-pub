@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
+  <title>퍼블리싱가이드 > 코딩가이드 > Table</title>
+  <script type="text/javascript" src="../assets/common/js/jquery-3.4.1.min.js"></script>
+  <link href="common.css" rel="stylesheet" type="text/css">
+  <link href="basic.css" rel="stylesheet" type="text/css">
+  <link href="../assets/company/css/app-co.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2c/css/app-b2c.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2b/css/app-b2b.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="g_header">
+    <h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+    <div id="g_navi">
+      <ul class="g_gnb">
+        <li><a href="status-list.html">Status Board</a></li>
+        <li><a href="guide-info.html">Info Guide</a></li>
+        <li class="g_on"><a href="code-txt.html">Code Guide</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="g_content">
+    <div id="gTabBox">
+    </div>
+    <div class="g_title_box">
+      <h2 class="g_m_tit">Table</h2>
+      <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+    </div>
+    <div class="g_main_description">
+      <ul>
+        <li>설정상 탭키 들여쓰기를 하지 않습니다.</li>
+        <li>최신 날짜 순으로 정리 합니다.</li>
+      </ul>
+    </div>
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">기본 테이블 타입</h3>
+        <span>Update. 2019.04.04</span>
+      </div>
+      <div class="g_codebox">
+        <div class="g_code_temp">
+          <!-- S : table type 1 -->
+            <div class="tbl_wrap">
+              <table>
+                <caption>입사지원 현황 리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="row">지원일</th>                  
+                    <th scope="row">회사명</th>
+                    <th scope="row" class="size_large">공고명</th>
+                    <th scope="row">접수마감일</th>
+                    <th scope="row">공고상태</th>
+                    <th scope="row">전형결과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2018.12.10</td>
+                    <td>SK 하이닉스</td>
+                    <td class="align_left"><a href="#url">[경력] 상반기 경력 및 병특 공채</a></td>
+                    <td>
+                    <ul class="date_list">
+                      <li><span>2018.12.31</span></li>
+                      <li><span class="txt_point1">D-day</span></li>
+                    </ul>
+                    </td>                  
+                    <td>서류접수중</td>
+                    <td><span class="txt_point1">서류합격</span></td>
+                  </tr>
+                  <tr>
+                    <td>2018.12.10</td>
+                    <td>협력사 A</td>
+                    <td class="align_left"><a href="#url">[신입] 2019년 하이닉스 그룹 신입 공채</a></td>
+                    <td>
+                    <ul class="date_list">
+                      <li><span>2018.12.31</span></li>
+                      <li><span>D-11</span></li>
+                    </ul>
+                    </td>                  
+                    <td>서류접수중</td>
+                    <td>서류불합격</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> 
+            <!-- E : table type 1 -->
+
+          <!-- S : table type 2 -->
+          <div class="tbl_wrap">
+            <table>
+              <caption>추천 기업 채용 공고 리스트</caption>
+              <thead>
+                <tr>
+                  <th scope="row">회사명</th>
+                  <th scope="row" class="size_xlarge">공고명</th>
+                  <th scope="row">공고상태</th>
+                  <th scope="row">접수마감일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SK 하이닉스</td>
+                  <td class="align_left"><a href="#url">[경력] 상반기 경력 및 병특 공채</a></td>
+                  <td>서류접수중</td>
+                  <td><span class="txt_point1">D-day</span></td>
+                </tr>
+                <tr>
+                  <td>협력사 A</td>
+                  <td class="align_left"><a href="#url">[신입] 2019년 하이닉스 그룹 신입 공채</a></td>
+                  <td>서류접수중</td>
+                  <td>D-11</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- E : table type 2 -->
+
+          <!-- S : table type 3 -->
+          <div class="tbl_wrap">
+            <table>
+              <caption>어학능력 리스트</caption>
+              <thead>
+                <tr>
+                  <th scope="row">언어</th>
+                  <th scope="row">시험종류</th>
+                  <th scope="row">점수/급수</th>
+                  <th scope="row">인증기관</th>
+                  <th scope="row">취득일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align_left">영어</td>
+                  <td>TOEFL</td>
+                  <td>900</td>
+                  <td>ETS</td>
+                  <td>1997.03</td>
+                </tr>
+                <tr>
+                  <td class="align_left">일본어 <span class="ico_pass">PASS</span></td>
+                  <td>JLPT</td>
+                  <td>2</td>
+                  <td>ETS</td>
+                  <td>1997.03</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- E : table type 3 -->
+        </div>  
+          
+      </div>
+
+      <div class="g_code_description">
+        <div>
+          <h4>Description</h4>
+          
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+  
+  </div>
+  <script src="../assets/js/plugins/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/plugins/jquery-ui.min.js"></script>
+  <script src="../assets/js/plugins/slick.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script type="text/javascript" src="./common.js"></script>
+  <script>
+      gTabCode();
+  </script>
+  </div>
+</body>
+
+</html>

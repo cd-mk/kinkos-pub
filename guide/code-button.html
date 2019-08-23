@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
+    <title>퍼블리싱가이드 > 코딩가이드 > button</title>
+  <script type="text/javascript" src="../assets/common/js/jquery-3.4.1.min.js"></script>
+  <link href="common.css" rel="stylesheet" type="text/css">
+  <link href="basic.css" rel="stylesheet" type="text/css">
+  <link href="../assets/company/css/app-co.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2c/css/app-b2c.css" rel="stylesheet" type="text/css">
+  <link href="../assets/b2b/css/app-b2b.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div id="g_header">
+    <h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+    <div id="g_navi">
+      <ul class="g_gnb">
+        <li><a href="status-list.html">Status Board</a></li>
+        <li><a href="guide-info.html">Info Guide</a></li>
+        <li class="g_on"><a href="code-txt.html">Code Guide</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="g_content">
+    <div id="gTabBox">
+    </div>
+    <div class="g_title_box">
+      <h2 class="g_m_tit">Button</h2>
+      <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+    </div>
+    <div class="g_main_description">
+      <ul>
+        <li>설정상 탭키 들여쓰기를 하지 않습니다.</li>
+        <li>최신 날짜 순으로 정리 합니다.</li>
+      </ul>
+    </div>
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">본문 하단 버튼</h3>
+        <span>Update. 2019.04.04 </span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S: button area/ col 1 -->
+          <div class="btn_wrap center">
+            <button type="button" class="btn point_type1">다음</button>
+          </div>
+          <!-- E: button area/ col 1 -->
+
+          <div>
+            <!-- S: button area/ col 2 -->
+            <div class="btn_wrap center col2">
+              <button type="button" class="btn point_type1">저장하기</button>
+              <button type="button" class="btn point_type2">통합인증하기</button>
+            </div>
+             <!-- E: button area/ col 2 -->
+          </div> 
+
+          <div>
+            <!-- S: button area/ col 3 -->
+            <div class="btn_wrap center col3">
+              <button type="button" class="btn point_type1">기본 정보 저장</button>
+              <button type="button" class="btn point_type2">비밀번호 변경</button>
+              <button type="button" class="btn point_type2">커리어패스 가기</button>
+            </div>
+            <!-- E: button area/ col 3 -->
+          </div>
+          
+            
+
+        </div>
+        <!-- //source code -->
+      </div>
+
+      <div class="g_code_description">
+        <div>
+          <h4>Description</h4>
+          * 버튼 width 값 확인                   
+        </div>
+      </div>
+    </div >
+    <!-- //코드 추가 -->
+
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">페이지 네비게이션</h3>
+        <span>Update. 2019.04.04</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S : page navi 1 -->
+          <div class="page_navi">
+            <a href="#url" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+            <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+            <ul class="navi_list">
+              <li class="active"><a href="#url">1</a></li>
+              <li><a href="#url">2</a></li>
+              <li><a href="#url">3</a></li>
+              <li><a href="#url">4</a></li>
+              <li><a href="#url">5</a></li>
+              <li><a href="#url">6</a></li>
+              <li><a href="#url">7</a></li>
+              <li><a href="#url">8</a></li>
+              <li><a href="#url">9</a></li>
+              <li><a href="#url">10</a></li>
+            </ul>
+            <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+            <a href="#url" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+          </div>
+          <!-- E : page navi 1 -->
+
+         
+          <div>
+            <!-- S : page navi 2 -->
+            <div class="page_navi">
+              <ul class="navi_list">
+                <li class="active"><a href="#url">1</a></li>
+                <li><a href="#url">2</a></li>
+              </ul>
+            </div>
+            <!-- E : page navi 2 -->
+          </div>
+        </div>
+        <!-- //source code -->
+      </div>
+      <div class="g_code_description">
+        <div>
+          <h4>Description</h4>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+
+
+
+
+  </div>
+  <script src="../assets/js/plugins/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/plugins/jquery-ui.min.js"></script>
+  <script src="../assets/js/plugins/slick.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script type="text/javascript" src="./common.js"></script>
+  <script>
+      gTabCode();
+  </script>
+</body>
+
+</html>

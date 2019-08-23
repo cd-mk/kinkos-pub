@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
+    <title>퍼블리싱가이드 > 현황판 > admin</title>
+    <link href="./basic.css" rel="stylesheet" type="text/css">
+
+    <link href="./common.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="g_header">
+        <h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+        <div id="g_navi">
+            <ul class="g_gnb">
+                <li><a href="status-list.html">Status Board</a></li>
+                <li class="g_on"><a href="guide-info01.html">Info Guide</a></li>
+                <li><a href="code-txt.html">Code Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="g_content">
+        <ul class="g_tab">
+            <li class="g_on"><a href="#g_info01">Basic</a></li>
+            <li class="g_on"><a href="#g_info02">HTML</a></li>
+            <li class="g_on"><a href="#g_info03">CSS</a></li>
+        </ul>
+        <h2 class="g_m_tit">HTML</h2>
+        <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+        <div class="g_main_description">
+            <p>도움말?</p>
+        </div>
+        <div class="g_info_box">
+            <h3 id="g_info01" class="g_tit_info">Basic</h3>
+            <h4>CSS 파일 네이밍</h4>
+            <dl>
+                <dt>common.css/reset.css</dt>
+                <dd>모든 요소의 공통적인 스타일을 정의</dd>
+                <dt>main.css</dt>
+                <dd>메인 페이지의 스타일을 정의</dd>
+               
+                <dt>content폴더 css</dt>
+                <dd>서브 페이지 내의 콘텐츠 영역의 특정 스타일을 정의 (추후 병합예정)</dd>
+            </dl>
+            <h4>영문 소문자, 숫자, 언더스코어 조합</h4>
+            <ul>
+                <li>영문 소문자, 숫자, 언더스코어(_)만 사용할 수 있다.</li>
+                <li>언더스코어(_)는 2개 이상의 단어를 조합할 때만 사용한다.</li>
+                <li>단어와 숫자를 조합하는 경우 언더스코어(_)를 생략한다.</li>
+                <li>언더스코어(_)를 이용하여 3단계를 초과하여 조합할 수 없다.</li>
+            </ul>
+
+
+            <h4>이미지 네이밍</h4>
+            <ul>
+                <li>이미지 예약어는 네이밍 규칙에 근거하여 작성한다.</li>
+                <li>같은 분류의 이미지가 두 개 이상이면 파일 이름 마지막에 숫자를 추가하여 구분한다.</li>
+                <li>이미지 네이밍을 확장해야 할 때는 이미지 네이밍 조합 규칙을 준수한다.</li>
+                <li>의미를 잘 살린 이미지의 naming은 이미지를 보지 않아도 대강의 의미를 알 수 있다.</li>
+                <li>이는 규모가 큰 프로젝트일 경우 다수의 작업자들이 중복된 이미지를 저장하는 것에 대한 예방을 목적으로 한다.</li>
+            </ul>
+            <h4>예약어</h4>
+            <table width="100%" summary="" style="margin-bottom:20px;text-align:center;">
+                <colgroup>
+                    <col width="50%">
+                    <col width="*">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>예약어</th>
+                        <th>분류</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="correct">h_, tit_, stit, th_</td>
+                        <td>제목</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">gnb_, lnb_, snb_</td>
+                        <td>네비게이션</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">tab_</td>
+                        <td>탭 메뉴</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">btn_</td>
+                        <td>버튼</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">bull_</td>
+                        <td>불릿</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">ico_</td>
+                        <td>아이콘</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">line_</td>
+                        <td>선</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">bg_</td>
+                        <td>배경 이미지</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">img_</td>
+                        <td>일반 이미지</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">_off, _on</td>
+                        <td>상태 변화</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">temp_</td>
+                        <td>임시 이미지</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">desc_, txt_, stxt_</td>
+                        <td>텍스트 이미지</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Cross Browser 검사</h4>
+            <table width="100%" summary="" style="text-align:center;">
+                <thead>
+                    <tr>
+                        <th width="20%">IE</th>
+                        <th width="20%">FireFox</th>
+                        <th width="20%">Chrome</th>
+                        <th width="20%">Safari</th>
+                        <th width="20%">Opera</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7/8/9/10/11/12</td>
+                        <td>최신버전</td>
+                        <td>최신버전</td>
+                        <td>최신버전</td>
+                        <td>최신버전</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="g_info02" class="g_tit_info">HTML</h3>
+            <ul>
+                <li>전체적인 마크업은 HTML5 을 기본으로 한다.</li>
+                <li>Tag는 각각의 의미에 맞는 마크업을 하여 StyleSheet가 적용되지 않더라도 내용이 제대로 전달될 수 있게 작성한다.</li>
+                <li>모든 태그는 반드시 닫아준다. br, img, input 처럼 닫기 태그가 없는 것은 태그 끝에서 닫아준다.</li>
+                <li>각 태그 속성 값은 항상 &quot; &quot; (따옴표)로 묶는다.</li>
+                <li>inline 스타일(&lt; div style=&quot;.....&quot; &gt; )은 되도록이면 자제한다.</li>
+                <li>img Tag는 해당 요소를 대체하기 위해 alt 속성을 기본적으로 사용한다. (border는 css에서 정의한다.)</li>
+                <li>font 태그 대신 span 태그를 사용한다.</li>
+                <li>강조표현은 strong 태그를 사용한다.</li>
+            </ul>
+            <h3 id="g_info03" class="g_tit_info">CSS</h3>
+            <ol>
+                <li>1. width & height : 크기</li>
+                <li>2. display : 표시</li>
+                <li>3. margin & padding : 간격 </li>
+                <li>4. position : 위치 </li>
+                <li>5. float : 흐름 </li>
+                <li>6. background : 배경 </li>
+                <li>7. border : 보더 </li>
+                <li>8. font / text : 폰트 / 텍스트 </li>
+                <li>9. etc :기타 </li>
+            </ol>
+        </div>
+    </div>
+    <script src="../assets/js/plugins/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="../assets/js/plugins/slick.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="./common.js"></script>
+</body>
+
+</html>
