@@ -551,94 +551,94 @@
   }
 }
 
-.bottom_wrap {
+.info_wrap {
   overflow: hidden;
   margin-top: 120px;
   padding: 0 195px;
 }
-.bottom_wrap .bottom_item {
+.info_wrap .item_box {
   float: left;
   width: 50%; height: 284px;
   box-sizing: border-box;
 }
-.bottom_wrap .bottom_item.notice {
+.info_wrap .item_box.notice {
   padding-right: 80px;
   border-right: 1px solid #e1e1e1;
 }
-.bottom_wrap .bottom_item.notice .title {
+.info_wrap .item_box.notice .title {
   overflow: hidden;
 }
-.bottom_wrap .bottom_item.notice .title h3 {
+.info_wrap .item_box.notice .title h3 {
   float: left;
   font-size: 18px;
 }
-.bottom_wrap .bottom_item.notice .title .btn_more {
+.info_wrap .item_box.notice .title .btn_more {
   float: right;
   font-size: 12px;
   font-weight: bold;
   padding-bottom: 3px;
   border-bottom: 2px solid #000;
 }
-.bottom_wrap .bottom_item.notice .notice_list {
+.info_wrap .item_box.notice .notice_list {
   margin-top: 40px;
 }
-.bottom_wrap .bottom_item.notice .notice_list > li {
+.info_wrap .item_box.notice .notice_list > li {
   padding: 17px 0;
   border-top: 1px solid #f1f1f1;
 }
-.bottom_wrap .bottom_item.notice .notice_list > li:first-child {
+.info_wrap .item_box.notice .notice_list > li:first-child {
   border-top: 0;
 }
-.bottom_wrap .bottom_item.notice .notice_list > li > a {
+.info_wrap .item_box.notice .notice_list > li > a {
   overflow: hidden;
   display: block;
   font-size: 16px;
 }
-.bottom_wrap .bottom_item.notice .notice_list > li > a:hover .title {
+.info_wrap .item_box.notice .notice_list > li > a:hover .title {
   text-decoration: underline;
 }
-.bottom_wrap .bottom_item.notice .notice_list > li .title {
+.info_wrap .item_box.notice .notice_list > li .title {
   float: left;
   color: #333;
 }
-.bottom_wrap .bottom_item.notice .notice_list > li .date {
+.info_wrap .item_box.notice .notice_list > li .date {
   float: right;
   color: #7c7c7c;
 }
-.bottom_wrap .bottom_item.cs {
+.info_wrap .item_box.cs {
   overflow: hidden;
   padding-left: 80px;
 }
-.bottom_wrap .bottom_item.cs .item {
+.info_wrap .item_box.cs .item {
   float: left;
   width: 50%;
 }
-.bottom_wrap .bottom_item.cs .item .title {
+.info_wrap .item_box.cs .item .title {
   font-size: 18px;
 }
-.bottom_wrap .bottom_item.cs .item .sub_title {
+.info_wrap .item_box.cs .item .sub_title {
   margin-top: 36px;
   font-size: 24px;
   line-height: 1.42;
 }
-.bottom_wrap .bottom_item.cs .item .desc {
+.info_wrap .item_box.cs .item .desc {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
   line-height: 1.63;
 }
-.bottom_wrap .bottom_item.cs .item .ico {
+.info_wrap .item_box.cs .item .ico {
   display: block;
   margin-top: 35px;
 }
-.bottom_wrap .bottom_item.cs .item .center_info {
+.info_wrap .item_box.cs .item .center_info {
   margin-top: 36px;
   height: 68px;
 }
-.bottom_wrap .bottom_item.cs .item .center_info > li {
+.info_wrap .item_box.cs .item .center_info > li {
   font-size: 24px;
   margin-top: 10px;
 }
-.bottom_wrap .bottom_item.cs .item .center_info > li:first-child {
+.info_wrap .item_box.cs .item .center_info > li:first-child {
   margin-top: 0;
 }

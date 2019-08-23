@@ -332,6 +332,102 @@
 }
 
 
+
+.info_wrap {
+  overflow: hidden;
+  margin-top: 120px;
+  padding: 0 195px;
+}
+.info_wrap .item_box {
+  float: left;
+  width: 50%; height: 284px;
+  box-sizing: border-box;
+}
+.info_wrap .item_box.notice {
+  padding-right: 80px;
+  border-right: 1px solid #e1e1e1;
+}
+.info_wrap .item_box.notice .title {
+  overflow: hidden;
+}
+.info_wrap .item_box.notice .title h3 {
+  float: left;
+  font-size: 18px;
+}
+.info_wrap .item_box.notice .title .btn_more {
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000;
+}
+.info_wrap .item_box.notice .notice_list {
+  margin-top: 40px;
+}
+.info_wrap .item_box.notice .notice_list > li {
+  padding: 17px 0;
+  border-top: 1px solid #f1f1f1;
+}
+.info_wrap .item_box.notice .notice_list > li:first-child {
+  border-top: 0;
+}
+.info_wrap .item_box.notice .notice_list > li > a {
+  overflow: hidden;
+  display: block;
+  font-size: 16px;
+}
+.info_wrap .item_box.notice .notice_list > li > a:hover .title {
+  text-decoration: underline;
+}
+.info_wrap .item_box.notice .notice_list > li .title {
+  float: left;
+  color: #333;
+}
+.info_wrap .item_box.notice .notice_list > li .date {
+  float: right;
+  color: #7c7c7c;
+}
+.info_wrap .item_box.cs {
+  overflow: hidden;
+  padding-left: 80px;
+}
+.info_wrap .item_box.cs .item {
+  float: left;
+  width: 50%;
+}
+.info_wrap .item_box.cs .item .title {
+  font-size: 18px;
+}
+.info_wrap .item_box.cs .item .sub_title {
+  margin-top: 36px;
+  font-size: 24px;
+  line-height: 1.42;
+}
+.info_wrap .item_box.cs .item .desc {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.63;
+}
+.info_wrap .item_box.cs .item .ico {
+  display: block;
+  margin-top: 35px;
+}
+.info_wrap .item_box.cs .item .center_info {
+  margin-top: 36px;
+  height: 68px;
+}
+.info_wrap .item_box.cs .item .center_info > li {
+  font-size: 24px;
+  margin-top: 10px;
+}
+.info_wrap .item_box.cs .item .center_info > li:first-child {
+  margin-top: 0;
+}
+
+
+
+
   #mo {display:none;}
   #pc {display:block; overflow: hidden;}
 
