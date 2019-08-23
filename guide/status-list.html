@@ -70,7 +70,6 @@
 					<tr>
 						<th>No</th>
 						<th class="g_screen">Screen Name</th>
-						<th class="g_name">파일명</th>
 						<th>Depth</th>
 						<th class="g_start">시작일</th>
 						<th class="g_due_date">완료예정일</th>
@@ -85,7 +84,6 @@
 	
 					<tr>
 						<td class="g_num"></td>
-						<td class="g_screen">메인</td>
 						<td class="g_name">00.main-www.html</td>
 						<td>main</td>
 						<td class="g_start"></td>
@@ -116,9 +114,8 @@
 		$('.g_status_board tbody tr').each(function () {
 			var num = $(this).index() + 1;
 			$(this).find('td').eq(0).html(num);
-			var tdStr1 = $(this).find('td').eq(2).text();
-			var tdStr2 = $(this).find('td').eq(3).text();
-			$(this).find('td').eq(2).html('<a class="g_url_link" href="../www/' + tdStr1 + '" target="_blank">' + tdStr1 + '</a>');
+			var tdStr1 = $(this).find('td').eq(1).text();
+			$(this).find('td').eq(1).html('<a class="g_url_link" href="../www/' + tdStr1 + '" target="_blank">' + tdStr1 + '</a>');
 		});
 	</script>
 	<script>

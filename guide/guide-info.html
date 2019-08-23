@@ -5,9 +5,13 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
     <title>퍼블리싱가이드 > 현황판 > admin</title>
-    <link href="./basic.css" rel="stylesheet" type="text/css">
-
-    <link href="./common.css" rel="stylesheet" type="text/css">
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <link href="basic.css" rel="stylesheet" type="text/css">
+    <link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
+    <link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
+    <link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
+    
+    <script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
@@ -36,8 +40,8 @@
             <h3 id="g_info01" class="g_tit_info">Basic</h3>
             <h4>CSS 파일 네이밍</h4>
             <dl>
-                <dt>common.css/reset.css</dt>
-                <dd>모든 요소의 공통적인 스타일을 정의</dd>
+                <dt>common.css/common.css</dt>
+                <dd>리셋, 모든 요소의 공통적인 스타일을 정의 / 추가되는 css는 common.css에 import한다. </dd>
                 <dt>main.css</dt>
                 <dd>메인 페이지의 스타일을 정의</dd>
                
@@ -76,7 +80,7 @@
                 <tbody>
                     <tr>
                         <td class="correct">h_, tit_, stit, th_</td>
-                        <td>제목</td>
+                        <td>제목: h_(헤딩태그), 일반제목, 서브제목, 테이블제목</td>
                     </tr>
                     <tr>
                         <td class="correct">gnb_, lnb_, snb_</td>
@@ -119,8 +123,12 @@
                         <td>임시 이미지</td>
                     </tr>
                     <tr>
-                        <td class="correct">desc_, txt_, stxt_</td>
-                        <td>텍스트 이미지</td>
+                        <td class="correct">_left, _center, _right</td>
+                        <td>정렬</td>
+                    </tr>
+                    <tr>
+                        <td class="correct">txt_, stxt_</td>
+                        <td>텍스트, 서브텍스트</td>
                     </tr>
                 </tbody>
             </table>
@@ -176,6 +184,9 @@
 <script src="../www/js/common-www.js"></script>
 <script type="text/javascript" src="./common.js"></script>
 <script src="ddtf.js"></script>
+<script>
+    gTabCode();
+</script>
 </body>
 
 </html>
