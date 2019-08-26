@@ -58,6 +58,9 @@ table {
 table caption {
   font-size:0;
 }
+form legend {
+  font-size:0;
+}
 img {
   vertical-align: middle;
 }
@@ -67,6 +70,14 @@ b {
 strong {
   font-weight: bold;
 }
+i {
+  font-style:normal;
+}
+select, input {
+  margin:0; padding:0;
+  box-sizing:border-box;
+}
+
 /*  ---------------------
         font
  --------------------- */
@@ -119,59 +130,108 @@ strong {
     color:#fff;
     text-align:center;   
   }
-  .btn.type_01 {
+  .btn.btn_type01 {
     background:#617d46;    
   }
-  .btn.type_02 {
+  .btn.btn_type02 {
     background:#ff3061;
   }
-  .btn_wrap .btn span {
+  .btn.btn_type03 {
+    background:#f0f0f0;
+    border:1px solid #f0f0f0;
+  }
+  .btn span {
     color:#fff;
     font-size:15px;
     font-weight:700;
   }
+  .btn.btn_type03 span {
+    color:#0c0c0c;
+  }
 
   /* table */
-  table {
+  .tb_type01 {
     margin-top:10px;
     width:100%;
     border-bottom:1px solid #ddd;
     border-right:1px solid #ddd;
   }
-  table th {
+  .tb_type01 th {
     line-height:24px;
     background:#e5ecef;
     border-top:1px solid #ddd;
-    border-left:1px solid #ddd;
+    border-left:1px solid #ddd;  
+    vertical-align: middle;  
+  }
+  .tb_type01 thead tr:last-child th {
     border-bottom:1px solid #ddd;
   }
-  table td {
+  .tb_type01 td {
     padding:0 10px;
     line-height:20px;
     border-top:1px solid #ddd;
     border-left:1px solid #ddd;
+    vertical-align: middle;
   }
-  table .cell_center {
+  .cell_center {
     text-align:center;
   }
-  table .cell_left {
+  .cell_left {
     text-align:left;
   }
   .table_section {
     margin-top:10px;
-    overflow:hidden;
   }
   .table_info {
     margin-top:10px;
   }
-  .table_info i {
-    font-style:normal;
+  .table_section .btn_right {
+    overflow: hidden;
   }
-  .table_section .btn_wrap {
+  .table_section .btn_right .btn {
     float:right;
-    margin-top:10px;
   }
 
+  .table_search {
+    margin-top:10px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+  }
+  .table_search .search_num {
+    padding:0 10px;
+    line-height:24px;
+    background:#e5ecef;
+  }
+  .table_search .search_num strong:after {
+    content:'';
+    display:inline-block;
+    width:1px; height:10px;
+    background:#d5d6d7;
+    margin:0 10px;
+    vertical-align: middle;
+  }
+  .table_search form {
+    padding:10px;
+  }
+  .table_search form select, 
+  .table_search form input {
+    height:20px;
+    border:1px solid #d5d6d7;
+    line-height:20px;
+    vertical-align: middle;
+  }
+  .table_search .btn_wrap {    
+    display:inline-block;
+    vertical-align: middle;
+  }
+  .table_search .btn_wrap .btn {
+    height:20px;
+    line-height:20px;
+  }
+  .table_search .btn_wrap .btn span {
+    font-size:12px;
+    font-weight:normal;
+  }
 /*  ---------------------
         common
  --------------------- */

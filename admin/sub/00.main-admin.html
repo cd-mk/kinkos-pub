@@ -34,12 +34,129 @@
     <div id="content" class="main">
       <h2>분류관리</h2>
       <div class="table_search">
-
+        <div class="search_num">
+          <strong>전체목록</strong>
+          <span>생성된 분류수</span>
+          <i>279</i>
+          <span>개</span>
+        </div>
+        <form>
+          <fieldset>
+            <legend>목록 검색을 위한 서식</legend>
+            <select>
+              <option>--업체선택--</option>
+              <option>--업체선택--</option>
+            </select>
+            <select>
+              <option>분류명</option>
+            </select>
+            <input type="text" title="검색명">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_type02">
+                <span>검색</span>
+              </button>
+            </div>
+          </fieldset>
+        </form>
       </div>
       <div class="table_section">
-        <h3>신규가입회원<span>5건</span>목록</h3>
-        <table>
+        <div class="btn_wrap btn_right">
+          <button type="button" class="btn btn_type03"><span>분류 추가</span></button>
+        </div>
+        <table class="tb_type01">
           <caption>분류관리 목록 나열을 위한 표</caption>
+          <thead>
+            <tr>
+              <th rowspan="2">분류코드</th>
+              <th>분류명</th>
+              <th>상품수</th>
+              <th>이미지 폭</th>
+              <th>이미지 높이</th>
+              <th>1행이미지수</th>
+              <th>모바일이미지수</th>
+              <th>PC스킨지정</th>
+              <th rowspan="2">관리</th>
+            </tr>
+            <tr>
+              <th>관리회원아이디</th>
+              <th>판매가능</th>
+              <th>본인인증</th>
+              <th>성인인증</th>
+              <th>이미지행수</th>
+              <th>순서</th>
+              <th>모바일스킨지정</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">80</td>
+              <td><input type="text" title="분류명"></td>
+              <td>31</td>
+              <td><input type="text" title="이미지 폭"></td>
+              <td><input type="text" title="이미지 높이"></td>
+              <td><input type="text" title="1행 이미지 수"></td>
+              <td><input type="text" title="모바일 이미지 수"></td>
+              <td>
+                <select>
+                  <option>선택</option>
+                </select>
+                <select>
+                  <option>list.10.skin.php</option>
+                </select>
+              </td>
+              <td rowspan="2">추가 수정 삭제</td>
+            </tr>
+            <tr>
+              <td><input type="text" title="관리회원아이디"></td>
+              <td><input type="checkbox" id="chk01"><label for="chk01">판매</label></td>
+              <td><input type="checkbox" id="chk02"><label for="chk02">사용</label></td>
+              <td><input type="checkbox" id="chk03"><label for="chk03">사용</label></td>
+              <td><input type="text" title="이미지행수"></td>
+              <td><input type="text" title="순서"></td>
+              <td>
+                <select>
+                  <option>선택</option>
+                </select>
+                <select>
+                  <option>list.10.skin.php</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">8010</td>
+              <td><input type="text" title="분류명"></td>
+              <td>31</td>
+              <td><input type="text" title="이미지 폭"></td>
+              <td><input type="text" title="이미지 높이"></td>
+              <td><input type="text" title="1행 이미지 수"></td>
+              <td><input type="text" title="모바일 이미지 수"></td>
+              <td>
+                <select>
+                  <option>선택</option>
+                </select>
+                <select>
+                  <option>list.10.skin.php</option>
+                </select>
+              </td>
+              <td rowspan="2">추가 수정 삭제</td>
+            </tr>
+            <tr>
+              <td><input type="text" title="관리회원아이디"></td>
+              <td><input type="checkbox" id="chk01"><label for="chk01">판매</label></td>
+              <td><input type="checkbox" id="chk02"><label for="chk02">사용</label></td>
+              <td><input type="checkbox" id="chk03"><label for="chk03">사용</label></td>
+              <td><input type="text" title="이미지행수"></td>
+              <td><input type="text" title="순서"></td>
+              <td>
+                <select>
+                  <option>선택</option>
+                </select>
+                <select>
+                  <option>list.10.skin.php</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
         </table>       
       </div>
     </div>
