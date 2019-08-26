@@ -96,8 +96,81 @@ strong {
         common
  --------------------- */
 
+ /* button */
+  .btn_wrap {
+    overflow:hidden;
+  }  
+  .btn_wrap .btn {
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+  }
+  .btn_wrap.col2 .btn:first-child {
+    margin-right:5px;
+  }
+  .btn_wrap.col2 .btn {
+    float:left;
+    width:calc(50% - 2.5px);
+  }
+  .btn {
+    display:inline-block;
+    box-sizing: border-box;
+    border:none;
+    color:#fff;
+    text-align:center;   
+  }
+  .btn.type_01 {
+    background:#617d46;    
+  }
+  .btn.type_02 {
+    background:#ff3061;
+  }
+  .btn_wrap .btn span {
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+  }
 
-
+  /* table */
+  table {
+    margin-top:10px;
+    width:100%;
+    border-bottom:1px solid #ddd;
+    border-right:1px solid #ddd;
+  }
+  table th {
+    line-height:24px;
+    background:#e5ecef;
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+  }
+  table td {
+    padding:0 10px;
+    line-height:20px;
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+  }
+  table .cell_center {
+    text-align:center;
+  }
+  table .cell_left {
+    text-align:left;
+  }
+  .table_section {
+    margin-top:10px;
+    overflow:hidden;
+  }
+  .table_info {
+    margin-top:10px;
+  }
+  .table_info i {
+    font-style:normal;
+  }
+  .table_section .btn_wrap {
+    float:right;
+    margin-top:10px;
+  }
 
 /*  ---------------------
         common
