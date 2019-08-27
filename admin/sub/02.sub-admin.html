@@ -33,16 +33,79 @@
     <!-- CONTENT -->
     <div id="content" class="main">
       <h2>1:1문의 설정</h2>
-      <div class="table_section">
+      <div class="tbl_wrap">
         <form>
           <fieldset>
             <legend>1:1문의 설정을 위한 입력 폼</legend>
-            <table class="tb_type02">
+            <table class="tbl tbl_type02">
               <caption></caption>
               <tbody>
                 <tr>
-                  <th>타이틀</th>
-                  <td><input type="text"></td>
+                  <th><label for="inp01">타이틀</label></th>
+                  <td>
+                    <input type="text" id="inp01"/>
+                    <div class="btn_wrap">
+                      <button type="button" class="btn btn_type04"><span>1:1문의 바로가기</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="inp02">타이틀</label></th>
+                  <td>
+                    <span>분류와 분류 사이는 | 로 구분하세요 (예: 질문|답변) 첫자로 #은 입력하지 마세요.(예:#질문|#답변 [X])</span>
+                    <input type="text" id="inp02"/>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="inp03">스킨 디텍토리</label></th>
+                  <td>
+                    <select id="inp03">
+                      <option>basic</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="inp04">모바일 스킨 디텍토리</label></th>
+                  <td>
+                    <select id="inp04">
+                      <option>basic</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>이메일 입력</th>
+                  <td>
+                    <div>
+                      <input type="checkbox" id="inp05"/>
+                      <label for="inp05">보이기</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="inp06"/>
+                      <label for="inp06">필수입력</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>휴대폰 입력</th>
+                  <td>
+                    <div>
+                      <input type="checkbox" id="inp07"/>
+                      <label for="inp07">보이기</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="inp08"/>
+                      <label for="inp08">필수입력</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="inp09">SMS 알림</label></th>
+                  <td>
+                    <span>휴대폰 입력을 사용하실 경우 문의글 등록시 등록자가 답변등록시 SMS 알림 수신을 선택할 수 있도록 합니다.<br/>SMS 알림을 사용하기 위해서는 기본환경설정 > SMS설정을 하셔야 합니다.</span>
+                    <select id="inp09">
+                      <option>사용안함</option>
+                    </select>
+                  </td>
                 </tr>
               </tbody>
             </table>
