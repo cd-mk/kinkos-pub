@@ -149,15 +149,19 @@ select, input {
     color:#0c0c0c;
   }
 
-  /* table */
-  .tb_type01 {
+  /* table */ 
+  table {
     margin-top:10px;
     width:100%;
+  }
+  table th {
+    line-height:24px;
+  }
+  .tb_type01 {
     border-bottom:1px solid #ddd;
     border-right:1px solid #ddd;
   }
   .tb_type01 th {
-    line-height:24px;
     background:#e5ecef;
     border-top:1px solid #ddd;
     border-left:1px solid #ddd;  
