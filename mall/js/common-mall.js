@@ -1,60 +1,78 @@
 // TypeB Mall page JS
 
-// gnb toggle
-(function () {
-    $('.btn_gnbtoggle').on('click', function () {
+// GNB
+var setGnb = function () {
+    (function () {
+        $('.btn_gnbtoggle').on('click', function () {
+            $(this).toggleClass('open');
+            $(this).closest('.company_gnb').toggleClass('active');
+            $('.gnb_drop').stop().slideUp(500);
+
+            if ($('.company_gnb').hasClass('active')) {
+                showMainGnb();
+            } else {
+                $('.gnb_links').removeClass('on');
+            }
+        });
+        function showMainGnb() {
+            setTimeout(function () {
+                $('.gnb_links').addClass('on');
+            }, 400);
+        }
+    })();
+
+    // sub gnb show / hide
+    (function () {
+        $('.gnb_list > li > a').on('mouseenter', function () {
+            var idx = $(this).parent().index();
+
+            $('.gnb_list > li > a').removeClass('on');
+            $('.gnb_list > li > a').addClass('not_on');
+            $(this).removeClass('not_on').addClass('on');
+
+            if (idx === 6) {
+                $('.gnb_drop_item').hide();
+                $('.location_item').show();
+                $('.gnb_drop').stop().slideDown(500);
+                $('.dim').show();
+            } else {
+                $('.gnb_drop_item').show();
+                $('.location_item').hide();
+                $('.gnb_drop').stop().slideDown(500);
+                $('.dim').show();
+            }
+        });
+        $('#header').on('mouseleave', function () {
+            $('.gnb_list > li > a').removeClass('on');
+            $('.gnb_list > li > a').removeClass('not_on');
+            $('.gnb_drop').stop().slideUp(500);
+            $('.dim').hide();
+        });
+        $('.lnb').on('mouseenter', function () {
+            $('.gnb_list > li > a').removeClass('on');
+            $('.gnb_list > li > a').removeClass('not_on');
+            $('.gnb_drop').stop().slideUp(500);
+            $('.dim').hide();
+
+        });
+    })();
+};
+
+
+// MOBILE GNB
+var mobileGnb = function () {
+    $('.btn_toggler').on('click', function () {
         $(this).toggleClass('open');
-        $(this).closest('.company_gnb').toggleClass('active');
-        $('.sub_gnb').stop().slideUp(500);
-
-        if ($('.company_gnb').hasClass('active')) {
-            showMainGnb();
-        } else {
-            $('.gnb_links').removeClass('on');
-        }
+        $('.mobile_gnb').toggleClass('open');
+        $('body').toggleClass('open');
     });
-    function showMainGnb() {
-        setTimeout(function () {
-            $('.gnb_links').addClass('on');
-        }, 400);
-    }
-})();
 
-// sub gnb show / hide
-(function () {
-    $('.gnb > li > a').on('mouseenter', function () {
-        var idx = $(this).parent().index();
-
-        $('.gnb > li > a').removeClass('on');
-        $('.gnb > li > a').addClass('not_on');
-        $(this).removeClass('not_on').addClass('on');
-
-        if (idx === 6) {
-            $('.sub_gnb_item').hide();
-            $('.location_item').show();
-            $('.sub_gnb').stop().slideDown(500);
-            $('.dim').show();
-        } else {
-            $('.sub_gnb_item').show();
-            $('.location_item').hide();
-            $('.sub_gnb').stop().slideDown(500);
-            $('.dim').show();
-        }
+    $('.mobile_gnb dt a').on('click', function () {
+        $(this).closest('dt').toggleClass('on');
+        $(this).closest('dl').find('dd').slideToggle();
     });
-    $('#header').on('mouseleave', function () {
-        $('.gnb > li > a').removeClass('on');
-        $('.gnb > li > a').removeClass('not_on');
-        $('.sub_gnb').stop().slideUp(500);
-        $('.dim').hide();
-    });
-    $('.header_top').on('mouseenter', function () {
-        $('.gnb > li > a').removeClass('on');
-        $('.gnb > li > a').removeClass('not_on');
-        $('.sub_gnb').stop().slideUp(500);
-        $('.dim').hide();
+};
 
-    });
-})();
 
 (function () {
     $('.btn_list').on('click', function () {
@@ -139,3 +157,26 @@ var consultSlide = new Swiper('.consult_slide', {
         $('body').css('overflow', 'auto');
     });
 })();
+
+
+$(document).ready(function () {
+    new WOW().init();
+   
+    //임시 header, footer영역 로드
+    $("#header").load("./include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
+    });
+    $("#footer").load("./include/common.html footer", function () {
+    });
+
+});
+
+
+
+
+
+
+
+

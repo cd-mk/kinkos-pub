@@ -29,97 +29,6 @@
 
     <!-- HEADER -->
     <div id="header">
-      <div class="header_top">
-        <a href="#url" class="logo"><img src="./image/main/logo.png" alt=""></a>
-        <ul class="menu_list">
-          <li><a href="#url">로그인</a></li>
-          <li><a href="#url">회원가입</a></li>
-          <li><a href="#url">장바구니 <span class="point_blue">(0)</span></a></li>
-          <li><a href="#url">주문/배송조회</a></li>
-          <li><a href="#url"><b>EN</b></a></li>
-        </ul>
-      </div>
-      <div class="gnb_wrap">
-        <div class="company_gnb">
-          <a href="#url" class="btn_gnbtoggle"><span>온라인몰 바로가기</span></a>
-          <ul class="gnb_links">
-            <li><a href="../mall/00.main-mall.html">즉석상품보기</a></li>
-            <li><a href="../mall/00.main-mall.html">대형출력/보드</a></li>
-            <li><a href="../mall/00.main-mall.html">디지털출력/스티커</a></li>
-            <li><a href="../mall/00.main-mall.html">배너/POP/등신대</a></li>
-            <li><a href="../mall/00.main-mall.html">슬로건/인화/카드</a></li>
-            <li><a href="../mall/00.main-mall.html">이벤트소품/기타</a></li>
-            <li><a href="../mall/00.main-mall.html" class="point_location white js-location">센터안내</a></li>
-          </ul>
-        </div>
-        <ul class="gnb">
-          <li><a href="#url">킨코스 소개</a></li>
-          <li><a href="#url">서비스 안내</a></li>
-          <li><a href="#url" class="point_circle">이벤트/K매거진</a></li>
-          <li><a href="#url">고객지원</a></li>
-          <li><a href="#url" class="point_location black">센터안내</a></li>
-        </ul>
-        <a href="#url" class="btn_sch"></a>
-      </div>
-      <div class="sub_gnb">
-        <div class="sub_gnb_item">
-          <div class="sub_gnb_list">
-            <h3 class="title">킨코스 소개</h3>
-            <ul class="depth1">
-              <li><a href="#url">인사말</a></li>
-              <li><a href="#url">킨코스 둘러보기</a></li>
-              <li><a href="#url">채용정보</a></li>
-            </ul>
-          </div>
-          <div class="sub_gnb_list">
-            <h3 class="title">서비스 안내</h3>
-            <ul class="depth1">
-              <li><a href="#url">디지털 출력/복사</a></li>
-              <li><a href="#url">제본</a></li>
-              <li><a href="#url">후가공</a></li>
-              <li><a href="#url">사인그래픽</a></li>
-              <li>
-                <ul class="depth2">
-                  <li><a href="#url">・S&amp;G 일반상품</a></li>
-                  <li><a href="#url">・S&amp;G 패키지 상품</a></li>
-                  <li><a href="#url">・S&amp;G 제작사례</a></li>
-                </ul>
-              </li>
-              <li><a href="#url">스캔투파일</a></li>
-              <li><a href="#url">디자인</a></li>
-              <li><a href="#url">명함제작</a></li>
-              <li><a href="#url">고객편의 서비스</a></li>
-              <li><a href="#url">주요사례별 서비스</a></li>
-              <li><a href="#url">추천상품</a></li>
-              <li><a href="#url">법인우대 프로그램</a></li>
-              <li><a href="#url">DHL항공특송 서비스</a></li>
-            </ul>
-          </div>
-          <div class="sub_gnb_list">
-            <h3 class="title">이벤트/K매거진</h3>
-            <ul class="depth1">
-              <li><a href="#url">이벤트</a></li>
-              <li><a href="#url">K매거진 <span><img src="./image/main/ico-new.png" alt=""></span></a></li>
-            </ul>
-          </div>
-          <div class="sub_gnb_list">
-            <h3 class="title">고객지원</h3>
-            <ul class="depth1">
-              <li><a href="#url">공지사항</a></li>
-              <li><a href="#url">자주묻는 질문</a></li>
-              <li><a href="#url">온라인 견적문의</a></li>
-              <li><a href="#url">문의 및 제안</a></li>
-              <li><a href="#url">서비스 의견</a></li>
-              <li><a href="#url">기업 및 단체 문의</a></li>
-            </ul>
-          </div>
-          <div class="point">
-          </div>
-        </div>
-        <div class="location_item">
-          <img src="./image/main/img-map.jpg" alt="">
-        </div>
-      </div>
     </div>
     <!-- //HEADER -->
 
@@ -477,9 +386,9 @@
 
 
     <!-- FOOTER -->
-    <div id="footer" class="layout_width footer">
-      <img src="./image/main/footer.png" alt="">
+    <div id="footer" class="layout_width">
     </div>
+
     <div class="dim">
     </div>
     <!-- //FOOTER -->
@@ -497,16 +406,6 @@
 
     <!-- Initialize Swiper -->
     <script>
-      $('.btn_menu').on('click', function () {
-        $('.menu').addClass('open');
-        $('.mo_quick').hide();
-        $('body').css('overflow', 'hidden');
-      });
-      $('.btn_close').on('click', function () {
-        $('.menu').removeClass('open');
-        $('.mo_quick').show();
-        $('body').css('overflow', 'auto');
-      });
       var swiper = new Swiper('.visual_slide', {
         slidesPerView: 1,
         loop: true,
@@ -556,8 +455,11 @@
           swiper: galleryThumbs
         }
       });
+      
     </script>
   <!-- //SCRIPT -->
+
+
 </body>
 
 </html>

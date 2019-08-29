@@ -1131,6 +1131,43 @@
 						<td class="g_ac"></td>
 						<td></td>
 					</tr>
+					</tbody>
+				</table>
+
+				<div style="background-color:#000;color:#fff;line-height: 40px;text-align: center;margin-bottom:10px;">온라인몰</div>
+
+
+				<table id="table_format" class="table table-bordered">
+					<caption>현황표</caption>
+					<colgroup>
+						<col style="width: 40px;" />
+						<col />
+						<col />
+						<col style="width: 90px;" />
+						<col style="width: 90px;" />
+						<col style="width: 90px;" />
+						<col style="width: 90px;" />
+						<col style="width: 90px;" />
+						<col style="width: 90px;" />
+						<col style="width: 90px;" />
+						<col />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th class="g_screen">Screen Name</th>
+							<th class="g_name">파일명</th>
+							<th>Depth</th>
+							<th class="g_start">시작일</th>
+							<th class="g_due_date">완료예정일</th>
+							<th class="g_fin">완료일</th>
+							<th>디자인<br />(O,X)</th>
+							<th class="g_status">상태</th>
+							<th class="g_ac">작성자</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
 					<tr>
 						<td class="g_num"></td>
 						<td class="g_screen">즉석상품보기</td>
@@ -1631,8 +1668,8 @@
 		$('.g_status_board tbody tr').each(function () {
 			var num = $(this).index() + 1;
 			$(this).find('td').eq(0).html(num);
-			var tdStr1 = $(this).find('td').eq(1).text();
-			$(this).find('td').eq(1).html('<a class="g_url_link" href="../www/' + tdStr1 + '" target="_blank">' + tdStr1 + '</a>');
+			var tdStr1 = $(this).find('td').eq(2).text();
+			$(this).find('td').eq(2).html('<a class="g_url_link" href="../www/' + tdStr1 + '" target="_blank">' + tdStr1 + '</a>');
 		});
 	</script>
 	<script>
