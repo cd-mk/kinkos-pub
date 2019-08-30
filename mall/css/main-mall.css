@@ -2,7 +2,9 @@
 
 /* key visual */
 .visual_wrap .swiper-slide {position: relative;}
-.visual_wrap .bg img {width: 100%;}
+.visual_wrap .bg {position:relative; display:inline-block; width:100%; height:600px; overflow:hidden;}
+.visual_wrap .bg img {z-index:-1; position:absolute; width:100%; height:100%; pointer-events: none;}
+
 .visual_wrap .txt {position: absolute; top: 50%; transform: translateY(-50%); opacity: 0; transition: all .7s ease-in-out;}
 .visual_wrap .txt.right,
 .visual_wrap .txt.right2 {right: 25%;}
@@ -16,7 +18,9 @@
 .visual_wrap .swiper-pagination {bottom: 100px;}
 .visual_wrap .swiper-pagination-bullet {width: 10px; height: 10px; background: #fff; opacity: .44; transition: width .3s;}
 .visual_wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {width: 38px; opacity: 1; border-radius: 5px;}
+@media screen and (max-width: 768px) { 
 
+}
 .sch_wrap {position: relative; top: -50px; width: 1515px; height: 100px; margin: 0 auto; z-index: 10; background: #fff; box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.1);}
 .sch_wrap::after {content: ''; display: table; clear: both;}
 .sch_wrap .item_box {position: relative; float: left; height: 100%; box-sizing: border-box; border-right: 1px solid #cacaca;}
