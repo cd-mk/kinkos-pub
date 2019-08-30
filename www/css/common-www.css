@@ -67,7 +67,7 @@ strong {font-weight: bold;}
         common
  --------------------- */
  /* layout */
-.wrap {min-width:1530px;}
+#wrap {overflow: hidden;}
 .layout_width {width:1530px;margin:0 auto;}
 .layout_full {width:100%;}
 .pc {position: relative;}
