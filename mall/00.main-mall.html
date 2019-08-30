@@ -34,8 +34,8 @@
 
     <!-- CONTENT -->
     <div id="content">
-      <!-- Key Visual -->
-      <div class="swiper-container main_slide">
+      <!-- visual area Swiper -->
+      <div class="visual_wrap swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="bg">
@@ -57,13 +57,16 @@
         <div class="swiper-pagination">
         </div>
       </div>
-      <!-- 상품 검색 box -->
-      <div class="smart_sch">
-        <div class="sch_item">
+      <!-- //visual area Swiper -->
+
+
+      <!-- search area -->
+      <div class="sch_wrap">
+        <div class="item_box">
           <strong>Smart 상품 검색<br>
             어떤 제품을 찾으시나요?</strong>
         </div>
-        <div class="sch_item">
+        <div class="item_box">
           <a href="#url" class="btn_list">제품선택</a>
           <ul class="opt_list">
             <li><a href="#url">명함</a></li>
@@ -72,7 +75,7 @@
             <li><a href="#url">배너/POP/등신대</a></li>
           </ul>
         </div>
-        <div class="sch_item">
+        <div class="item_box">
           <a href="#url" class="btn_list">센터선택</a>
           <ul class="opt_list">
             <li><a href="#url">강남역센터</a></li>
@@ -82,16 +85,19 @@
             <li><a href="#url">분당센터</a></li>
           </ul>
         </div>
-        <div class="sch_item">
+        <div class="item_box">
           <input type="text" placeholder="검색명">
         </div>
-        <div class="sch_item">
+        <div class="item_box">
           <button type="button" class="btn_sch">검색</button>
         </div>
       </div>
+      <!-- //search area -->
+
+
       <!-- 초스피드한 즉석상품 -->
-      <div class="speed_prd">
-        <div class="title">
+      <div class="speedPrd_wrap">
+        <div class="title_box">
           <h2>초스피드한 즉석상품</h2>
           <p>
             13시 이전 접수하시면 당일 완성!
@@ -162,8 +168,11 @@
           </div>
         </div>
       </div>
+      <!-- //초스피드한 즉석상품 -->
+
+
       <!-- 상담상품 -->
-      <div class="consult_prd">
+      <div class="consultPrd_wrap">
         <div class="left">
           <div class="title">
             <h2>상담상품</h2>
@@ -179,7 +188,7 @@
             </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="items">
+                <div class="item_box">
                   <div class="item">
                     <div class="thumb">
                       <img src="./image/main/img-consult01.jpg" alt="">
@@ -220,7 +229,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="items">
+                <div class="item_box">
                   <div class="item">
                     <div class="thumb">
                       <img src="./image/main/img-consult05.jpg" alt="">
@@ -262,7 +271,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="items">
+                <div class="item_box">
                   <div class="item">
                     <div class="thumb">
                       <img src="./image/main/img-consult01.jpg" alt="">
@@ -303,7 +312,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="items">
+                <div class="item_box">
                   <div class="item">
                     <div class="thumb">
                       <img src="./image/main/img-consult05.jpg" alt="">
@@ -345,7 +354,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="items">
+                <div class="item_box">
                   <div class="item">
                     <div class="thumb">
                       <img src="./image/main/img-consult01.jpg" alt="">
@@ -389,16 +398,20 @@
           </div>
         </div>
       </div>
-      <!-- 소량상품 -->
-      <div class="amount_prd">
-        <h2 class="title">베스트상품</h2>
+      <!-- //상담상품 -->
+
+      <!-- 베스트상품 -->
+      <div class="bestPrd_wrap">
+        <div class="title_box">
+          <h2>베스트상품</h2>
+        </div>
         <ul class="tab_nav">
           <li class="active"><a href="#url">인기상품</a></li>
           <li><a href="#url">추천상품</a></li>
         </ul>
         <div class="tab_con">
           <div class="tab_item">
-            <ul class="items">
+            <ul class="item_box">
               <li>
                 <div class="thumb">
                   <img src="./image/main/img-amount01.jpg" alt="">
@@ -442,7 +455,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="items">
+            <ul class="item_box">
               <li>
                 <div class="thumb">
                   <img src="./image/main/img-amount05.jpg" alt="">
@@ -489,8 +502,10 @@
           </div>
         </div>
       </div>
-      <!-- 손쉬운 제작 -->
-      <div class="process">
+      <!-- //베스트상품 -->
+      
+      <!-- 프로세스 안내 -->
+      <div class="process_wrap">
         <div class="prd_step">
           <strong class="title">손쉬운 제작</strong>
           <div class="step">
@@ -529,8 +544,10 @@
           </div>
         </div>
       </div>
+      <!-- 프로세스 안내 -->
+
       <!-- 이벤트 배너 -->
-      <div class="banner">
+      <div class="banner_wrap">
         <div class="banner_item left">
           <div class="txt">
             <strong>이벤트 소품</strong>
@@ -550,6 +567,8 @@
           </div>
         </div>
       </div>
+      <!-- //이벤트 배너 -->
+
       <!-- NOTICE & FAQ & CALL -->
       <div class="info_wrap">
         <div class="item_box notice">
@@ -620,9 +639,9 @@
     </div>
 
     <!-- //FOOTER -->
+
     <div class="dim">
     </div>
-
 
   </div>
 <!-- //WRAP -->

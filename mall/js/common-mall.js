@@ -95,7 +95,7 @@ var mobileGnb = function () {
 })();
 
 // main slide
-var mainSlide = new Swiper('.main_slide', {
+var mainSlide = new Swiper('.visual_wrap', {
     effect: 'fade',
     speed: 500,
     pagination: {
