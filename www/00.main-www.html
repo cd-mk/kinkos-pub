@@ -150,13 +150,19 @@
           </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-scrollbar mo"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next">
+        <div class="pg_nav_wrap">
+          <div class="swiper-scrollbar mo"></div>
+          <div class="pg_nav">
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
         </div>
-        <div class="swiper-button-prev">
-        </div>
+
+
+
       </div>
       <!-- //베스트 상품군 Swiper -->
 
@@ -249,9 +255,9 @@
             <div class="swiper-pagination">
             </div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next">
+            <div class="swiper-button-next small">
             </div>
-            <div class="swiper-button-prev">
+            <div class="swiper-button-prev small">
             </div>
           </div>
         </div>
@@ -428,7 +434,6 @@
         slidesPerView: 1,
         loop: true,
         autoplay: true,
-        roundLengths: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -440,35 +445,34 @@
         loop: true,
         centeredSlides: true,
         loopFillGroupWithBlank: true,
-        roundLengths: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        roundLengths: true,
-        //breakpointsInverse: true,
         breakpoints: {
           // when window width is >= ㅡ모바일 1024이하
           1024: {
             spaceBetween: 16,
             scrollbar: {
               el: '.swiper-scrollbar',
-              hide: true,
+              hide: false,
             },
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction',
+            }
           }
         }
       });
       var swiper = new Swiper('.insta_wrap', {
         slidesPerView: 8,
         spaceBetween: 22,
-        roundLengths: true,
         loop: true,
         loopFillGroupWithBlank: true,
       });
       var gallerythumb = new Swiper('.navi_thumb', {
         slidesPerView: 1,
         freeMode: true,
-        roundLengths: true,
         loop: true,
         watchSlidesVisibility: true,
         pagination: {
@@ -480,7 +484,6 @@
         slidesPerView: 'auto',
         spaceBetween: 30,
         loop: true,
-        roundLengths: true,
         loopFillGroupWithBlank: true,
         navigation: {
           nextEl: '.swiper-button-next',
