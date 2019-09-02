@@ -40,7 +40,7 @@
   .visual_wrap .swiper-pagination {bottom:73px;}
 }
 
-.sch_wrap {position: relative; top: -50px; width: 1515px; height: 100px; margin: 0 auto; z-index: 10; background: #fff; box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.1);}
+.sch_wrap {z-index: 10; position: relative; top: -50px; margin: 0 auto; width: 1515px; height: 100px; background: #fff; box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.1);}
 .sch_wrap::after {content: ''; display: table; clear: both;}
 .sch_wrap .item_box {position: relative; float: left; height: 100%; box-sizing: border-box; border-right: 1px solid #cacaca;}
 .sch_wrap .item_box > strong {display: inline-block; margin-top: 22px; font-size: 19px; font-weight: bold; text-decoration: underline; line-height: 1.6;}
@@ -73,7 +73,7 @@
 .speed_slide .swiper-button-next {background-image: url(../image/main/next.png); right: 20px; left: auto; transform: translateY(-50%); width:84px; height:84px; background-size:84px;}
 .speed_slide .swiper-button-prev {background-image: url(../image/main/prev.png); left: 20px; right: auto; transform: translateY(-50%); width:84px; height:84px; background-size:84px;}
 
-.consultPrd_wrap {overflow: hidden; margin-top: 150px; padding: 0 195px;}
+.consultPrd_wrap {overflow: hidden; margin-top: 150px;}
 .consultPrd_wrap .left {float: left;}
 .consultPrd_wrap .left .title h2 {color: #222; font-size: 40px; font-weight: normal; line-height:1.1;}
 .consultPrd_wrap .left .title p {margin-top: 10px; font-size: 18px; color: #222; line-height: normal;}
@@ -152,7 +152,7 @@
 .banner_wrap .banner_item .txt p {margin-top: 10px; line-height: 1.4; font-size: 16px; color: #fff;}
 @keyframes textMove {0%, 10%, 30%, 50%, 70%, 90%, 100% {top: 50%;}20%, 40%, 60%, 80% {top: 40%;}}
 
-.info_wrap {overflow: hidden; margin-top: 120px; padding: 0 195px;}
+.info_wrap {overflow: hidden; margin-top: 120px;}
 .info_wrap .item_box {float: left; width: 50%; height: 284px; box-sizing: border-box;}
 .info_wrap .item_box.notice {padding-right: 80px; border-right: 1px solid #e1e1e1;}
 .info_wrap .item_box.notice .title {overflow: hidden;}
