@@ -109,7 +109,7 @@ $(document).ready(function () {
         setGnb();
         mobileGnb();
     });
-    $("#footer").load("./include/common.html footer", function () {
+    $("#footer").load("./include/common.html .footer_inner", function () {
     });
 });
 
