@@ -42,24 +42,34 @@ strong {font-weight: bold;}
 /*  ---------------------
         font
  --------------------- */
-@font-face {font-family:'notokr'; font-weight:700; font-style:normal; src:url('../font/notokr-bold.eot'); src:url('../font/notokr-bold.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-bold.woff2') format('woff2'),
-    url('../font/notokr-bold.woff') format('woff'),
-    url('../font/notokr-bold.ttf') format('truetype'),
-    url('../font/notokr-bold.svg#notokr-medium') format('svg');}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../font/NotoSansKR-Regular.woff2) format('woff2'),
+        url(../font/NotoSansKR-Regular.woff) format('woff'),
 
-@font-face {font-family:'notokr'; font-weight:500; font-style:normal; src:url('../font/notokr-medium.eot'); src:url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),
-  url('../font/notokr-medium.woff2') format('woff2'),
-  url('../font/notokr-medium.woff') format('woff'),
-  url('../font/notokr-medium.ttf') format('truetype'),
-  url('../font/notokr-medium.svg#notokr-medium') format('svg');}
+ 
+        url(../font/NotoSansKR-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(../font/NotoSansKR-Medium.woff2) format('woff2'),
+        url(../font/NotoSansKR-Medium.woff) format('woff'),
+        url(../font/NotoSansKR-Medium.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url(../font/NotoSansKR-Bold.woff2) format('woff2'),
+        url(../font/NotoSansKR-Bold.woff) format('woff'),
 
-@font-face {font-family:'notokr'; font-weight:400; font-style:normal; src:url('../font/notokr-regular.eot'); src:url('../font/notokr-regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-regular.woff2') format('woff2'),
-    url('../font/notokr-regular.woff') format('woff'),
-    url('../font/notokr-regular.ttf') format('truetype'),
-    url('../font/notokr-regular.svg#notokr-regular') format('svg');}
-
+ 
+        url(../font/NotoSansKR-Bold.otf) format('opentype');
+ }
 
 /*  ---------------------
         common
