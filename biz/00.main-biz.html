@@ -573,8 +573,8 @@
         </div>
       </div>
       <!-- NOTICE & FAQ & CALL -->
-      <div class="bottom_wrap">
-        <div class="bottom_item notice">
+      <div class="info_wrap layout_width">
+        <div class="item_box notice">
           <div class="title">
             <h3>NOTICE</h3>
             <a href="#url" class="btn_more">MORE VIEW</a>
@@ -606,30 +606,43 @@
             </li>
           </ul>
         </div>
-        <div class="bottom_item cs">
-          <div class="item">
-            <h3 class="title">FAQ</h3>
-            <p class="sub_title">
-              kinko’s<br>
-              자주묻는 질문
-            </p>
-            <p class="desc">
-              kinko’s 이용 및 제품에 대한<br>
-              자주묻는 질문입니다.
-            </p>
-            <span class="ico"><img src="./image/main/ico-note.png" alt=""></span>
+        <div class="item_box cs">
+          <div class="swiper-wrapper">
+            <div class="item swiper-slide">
+              <h3 class="title">FAQ</h3>
+              <p class="sub_title">
+                kinko’s<br class="pc">
+                자주묻는 질문
+              </p>
+              <p class="desc">
+                kinko’s 이용 및 제품에 대한<br>
+                자주묻는 질문입니다.
+              </p>
+              <span class="ico"><img src="./image/main/ico-note.png" alt=""></span>
+            </div>
+            <div class="item swiper-slide">
+              <h3 class="title">CALL</h3>
+              <ul class="center_info">
+                <li>센터위치 안내 <b>02. 557. 0055</b></li>
+                <li>견적문의 전화 <b>02. 557. 0055</b></li>
+              </ul>
+              <p class="desc">
+                평일 9:00-19:00<br>
+                휴일 공휴일/토/일
+              </p>
+              <span class="ico"><img src="./image/main/ico-pc.png" alt=""></span>
+            </div>
           </div>
-          <div class="item">
-            <h3 class="title">CALL</h3>
-            <ul class="center_info">
-              <li>센터위치 안내 <b>02. 557. 0055</b></li>
-              <li>견적문의 전화 <b>02. 557. 0055</b></li>
-            </ul>
-            <p class="desc">
-              평일 9:00-19:00<br>
-              휴일 공휴일/토/일
-            </p>
-            <span class="ico"><img src="./image/main/ico-pc.png" alt=""></span>
+          <!-- Add Pagination -->
+          <div class="pg_nav_wrap">
+            <div class="swiper-scrollbar mo"></div>
+            <div class="pg_nav">
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -675,6 +688,23 @@
   <script src="./js/wow.min.js"></script>
   <script src="./js/swiper/swiper.min.js"></script>
   <script src="./js/common-biz.js"></script>
+
+  <script>
+  // cs문의 슬라이드
+  var mql = window.matchMedia("screen and (max-width: 1024px)");
+      
+    if (mql.matches) {
+      var swiper = new Swiper('.info_wrap .cs', {
+        roundLengths: true,
+        slidesPerView: 1,
+        roundLengths: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }  
+      });
+  }  
+  </script>
   <!-- //SCRIPT -->
 </body>
 
