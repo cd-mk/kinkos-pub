@@ -685,25 +685,20 @@
         setGnb();
       });
 
-      // 자주묻는 질문
-      var swiper = new Swiper('.info_wrap .cs', {
-        slidesPerView: 0,
-        freeMode: false,
-        roundLengths: true,
-        breakpoints: {          
-          // when window width is >= ㅡ모바일 1024이하
-          1024: {
+      // cs문의 슬라이드
+      var mql = window.matchMedia("screen and (max-width: 1024px)");
+      
+        if (mql.matches) {
+          var swiper = new Swiper('.info_wrap .cs', {
+            roundLengths: true,
             slidesPerView: 1,
-            loop: false,
-            autoplay: false,
             roundLengths: true,
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
-            }
-          }
-        }
-      });
+            }  
+          });
+      }   
     </script>
 </body>
 

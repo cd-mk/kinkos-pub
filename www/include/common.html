@@ -1,5 +1,5 @@
 <header>
-  <div class="header_wrap">
+  <div class="header_wrap pc">
     <div class="lnb_wrap">
       <a href="#url" class="logo"><img src="./image/common/img_logo.png" alt="kinko's On Demand Solutions, KONICA MINOLIA"></a>
       <ul class="lnb">
@@ -11,23 +11,11 @@
         <li><a href="#url">EN</a></li>
       </ul>
     </div>
-    <div class="gnb_wrap clearfix">
+    <!-- 홈페이지 타입에 따라 gnb_wrap에 클래스 추가 회사소개 : company, 쇼핑몰: mall -->
+    <div class="gnb_wrap company clearfix">
       <div class="inner">
-        <div class="toggle_item">
-          <button type="button" title="온라인몰 메뉴 보기" class="btn_toggle"><span>온라인몰 바로가기</span><span class="ico_close"></span></button>
-
-          <ul class="toggle_gnb" data-gnb="mall">
-            <li><a href="#url">즉석상품보기</a></li>
-            <li><a href="#url">명함</a></li>
-            <li><a href="#url">대형출력/보드</a></li>
-            <li><a href="#url">디지털출력/스티커</a></li>
-            <li><a href="#url">배너/POP/등신대</a></li>
-            <li><a href="#url">슬로건/인화/카드</a></li>
-            <li><a href="#url">이벤트소품/기타</a></li>
-            <li class="js_center"><a href="#url" class="point_marker white">센터안내</a></li>
-          </ul>
-        </div>
-        <div class="gnb_item clearfix" data-gnb="company">
+        <button type="button" class="btn_toggle"><span>온라인몰 바로가기</span><span class="ico_close"></span></button>
+        <div class="company_gnb js_gnb" data-gnb="company">
           <span class="link_item"><a href="#url">킨코스 소개</a></span>
           <span class="link_item"><a href="#url">서비스 안내</a></span>
           <span class="link_item"><a href="#url">이벤트/K매거진</a></span>
@@ -35,9 +23,20 @@
           <span class="link_item js_center"><a href="#url" class="point_marker black">센터안내</a></span>
           <span class="gnb_bar"></span>
         </div>
+        <ul class="mall_gnb js_gnb" data-gnb="mall">
+          <li class="link_item"><a href="#url">즉석상품보기</a></li>
+          <li class="link_item"><a href="#url">명함</a></li>
+          <li class="link_item"><a href="#url">대형출력/보드</a></li>
+          <li class="link_item"><a href="#url">디지털출력/스티커</a></li>
+          <li class="link_item"><a href="#url">배너/POP/등신대</a></li>
+          <li class="link_item"><a href="#url">슬로건/인화/카드</a></li>
+          <li class="link_item"><a href="#url">이벤트소품/기타</a></li>
+          <li class="link_item js_center"><a href="#url" class="point_marker white">센터안내</a></li>
+        </ul>
         <div class="search_item">
           <button type="button" class="btn_sch black"><span class="blind">검색창 열기</span></button>
         </div>
+        <div class="toggle_bg"></div>
       </div>
     </div>
 
@@ -202,6 +201,85 @@
     <!-- //센터안내 -->
     <!-- //Sub Menu -->
   </div>
+  <!-- company mobile gnb -->
+  <div class="header_wrap mo">
+    <div class="nav clearfix">
+      <button type="button" class="btn_mo_gnb">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="#url" class="logo"><img src="./image/common/img_logo.png" alt="kinko's On Demand Solutions, KONICA MINOLIA"></a>
+      <a href="#url" class="btn_link"><img src="./image/common/ico_mall.png" alt="GO TO MALL PAGE"></a>
+    </div>
+    <div class="mo_gnb_wrap">
+      <div class="lnb_box">
+        <div class="login_item">
+          <a href="#url" class="btn_login point_blue">로그인</a> 하고 다양한 혜택받으세요.
+        </div>
+        <div class="mymenu_box clearfix">
+          <a href="#url" class="my_link mypage">마이페이지</a>
+          <a href="#url" class="my_link delivery">주문/배송조회</a>
+          <a href="#url" class="my_link order">장바구니 <span class="point_blue">(<strong>0</strong>)</span></a>
+        </div>
+      </div>
+      <div class="search_box">
+        <input type="text" class="inp_sch">
+        <button type="button" class="btn_sch"><span class="blind">검색하기</span></button>
+      </div>
+      <div class="menu_box">
+        <div class="menu_item">
+          <a href="#url" class="title"><strong>킨코스 소개</strong></a>
+          <ul class="menu_list">
+            <li><a href="#url">CEO인사말</a></li>
+            <li><a href="#url">기업이념 및 연혁</a></li>
+            <li><a href="#url">Only 킨코스</a></li>
+            <li><a href="#url" class="new_update">채용정보</a></li>
+          </ul>
+        </div>
+        <div class="menu_item">
+          <a href="#url" class="title"><strong>서비스 안내</strong></a>
+          <ul class="menu_list">
+            <li><a href="#url">CEO인사말</a></li>
+            <li><a href="#url">기업이념 및 연혁</a></li>
+            <li><a href="#url">Only 킨코스</a></li>
+            <li><a href="#url" class="new_update">채용정보</a></li>
+          </ul>
+        </div>
+        <div class="menu_item">
+          <a href="#url" class="title"><strong>이벤트/K매거진</strong></a>
+          <ul class="menu_list">
+            <li><a href="#url">CEO인사말</a></li>
+            <li><a href="#url">기업이념 및 연혁</a></li>
+            <li><a href="#url">Only 킨코스</a></li>
+            <li><a href="#url" class="new_update">채용정보</a></li>
+          </ul>
+        </div>
+        <div class="menu_item">
+          <a href="#url" class="title"><strong>고객지원</strong></a>
+          <ul class="menu_list">
+            <li><a href="#url">CEO인사말</a></li>
+            <li><a href="#url">기업이념 및 연혁</a></li>
+            <li><a href="#url">Only 킨코스</a></li>
+            <li><a href="#url" class="new_update">채용정보</a></li>
+          </ul>
+        </div>
+        <div class="menu_item">
+          <a href="#url" class="title point_marker black"><strong>센터안내</strong></a>
+        </div>
+      </div>
+      <div class="sns_box">
+        <a href="#url" class="btn_lang"><strong>EN</strong></a>
+        <ul class="sns_list">
+          <li><a href="#url" class="sns_link fb"><span class="blind">페이스북 바로가기</span></a></li>
+          <li><a href="#url" class="sns_link insta"><span class="blind">인스타그램 바로가기</span></a></li>
+          <li><a href="#url" class="sns_link twit"><span class="blind">트위터 바로가기</span></a></li>
+        </ul>
+      </div>
+      <button type="button" class="btn_close"><span class="blind">메뉴 닫기</span></button>
+    </div>
+  </div>
+  <!-- //company mobile gnb -->
 </header>
 
 
