@@ -46,7 +46,7 @@ var setGnb = function() {
     function moveSnbBg(target) {
         var width = 217;
         var idx = target.index();
-        var move = idx * width + 315;
+        var move = idx * width + 500;
 
         $('.sub_gnb_bg').css('left', move);
     }
