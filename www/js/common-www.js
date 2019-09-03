@@ -2,26 +2,23 @@
 var setGnb = function() {
     var $gnb, chkGnb;
 
-    $('.gnb_item .link_item').on('mouseenter focusin', function() {
-        $gnb = $(this).closest('.gnb_item');
+    $('.js_gnb .link_item').on('mouseenter focusin', function() {
+        $gnb = $(this).closest('.js_gnb');
         chkGnb = $gnb.attr('data-gnb');
 
-        $('.gnb_item .link_item').removeClass('on');
+        $('.js_gnb .link_item').removeClass('on');
         $(this).addClass('on');
 
-        gnbBar(true, $(this));
-        moveSnbBg($(this));
-        dropSubGnb($(this), chkGnb);
-    });
-    $('.toggle_gnb > li').on('mouseenter focusin', function() {
-        $gnb = $(this).closest('.toggle_gnb');
-        chkGnb = $gnb.attr('data-gnb');
-
+        if (chkGnb === 'company') {
+            gnbBar(true, $(this));
+            moveSnbBg($(this));
+        }
+        
         dropSubGnb($(this), chkGnb);
     });
     
     $('#header').on('mouseleave focusout', function() {
-        $('.gnb_item .link_item').removeClass('on');
+        $('.js_gnb .link_item').removeClass('on');
         $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
         $('.center_list_wrap').stop().slideUp(400);
         gnbBar(false);
@@ -62,17 +59,19 @@ var setGnb = function() {
     }
     function toggleGnb() {
         $('.btn_toggle').on('click', function() {
-            $('.sub_gnb_wrap, .center_list_wrap').stop().slideUp(400);
-            if ($(this).hasClass('on')) {
-                $('.toggle_gnb').removeClass('on');
-            } else {
-                setTimeout(function(){
-                    $('.toggle_gnb').addClass('on');
-                },400);
-            }
-            $(this).toggleClass('on');
-            $('.toggle_item').toggleClass('active');
+            var $gnbWrap = $(this).closest('.gnb_wrap');
             
+            $('.sub_gnb_wrap, .center_list_wrap').stop().slideUp(400);
+            $(this).toggleClass('on');
+            $('.toggle_bg').toggleClass('on');
+
+            if ($gnbWrap.hasClass('company')) {
+                $('.mall_gnb').toggleClass('active');
+                $('.company_gnb').toggleClass('off');
+            } else {
+                $('.company_gnb').toggleClass('active');
+                $('.mall_gnb').toggleClass('off');
+            }
         });
     }
     toggleGnb();
@@ -80,15 +79,15 @@ var setGnb = function() {
 
 // MOBILE GNB
 var mobileGnb = function () {
-    $('.btn_toggler').on('click', function () {
-        $(this).toggleClass('open');
-        $('.mobile_gnb').toggleClass('open');
-        $('body').toggleClass('open');
+    $('.btn_mo_gnb').on('click', function() {
+        $('.mo_gnb_wrap').addClass('active');
     });
-
-    $('.mobile_gnb dt a').on('click', function () {
-        $(this).closest('dt').toggleClass('on');
-        $(this).closest('dl').find('dd').slideToggle();
+    $('.mo_gnb_wrap .btn_close').on('click', function() {
+        $('.mo_gnb_wrap').removeClass('active');
+    });
+    $('.menu_item .title').on('click', function() {
+        $('.menu_item .menu_list').stop().slideUp(300);
+        $(this).next('.menu_list').stop().slideDown(300);
     });
 };
 
@@ -96,7 +95,7 @@ var mobileGnb = function () {
 // TypeB Main page JS
 $(document).ready(function () {
     setGnb();
-
+    mobileGnb();
     new WOW().init();
 
     $('body').on('mousewheel DOMMouseScroll', function(e){
