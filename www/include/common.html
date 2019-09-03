@@ -1,103 +1,187 @@
 <header>
-    <nav role="navigation">
-        <!-- local menu -->
-        <div class="lnb">
-            <a href="#url" class="logo"><img src="./image/main/logo.png" alt=""></a>
-            <ul class="menu_list">
-                <li><a href="#url">로그인</a></li>
-                <li><a href="#url">회원가입</a></li>
-                <li><a href="#url">장바구니 <span class="point_blue">(0)</span></a></li>
-                <li><a href="#url">주문/배송조회</a></li>
-                <li><a href="#url"><b>EN</b></a></li>
+  <div class="header_wrap company">
+    <div class="lnb_wrap">
+      <a href="#url" class="logo"><img src="./image/common/img_logo.png" alt="kinko's On Demand Solutions, KONICA MINOLIA"></a>
+      <ul class="lnb">
+        <li><a href="#url">로그인</a></li>
+        <li><a href="#url">회원가입</a></li>
+        <li><a href="#url">장바구니 <span class="point_blue">(0)</span></a></li>
+        <li><a href="#url">주문/배송조회</a></li>
+        <li><a href="#url">마이페이지</a></li>
+        <li><a href="#url">EN</a></li>
+      </ul>
+    </div>
+    <div class="gnb_wrap clearfix" data-gnb="company">
+      <div class="inner">
+        <div class="toggle_item">
+          <button type="button" title="온라인몰 메뉴 보기" class="btn_toggle"><span>온라인몰 바로가기</span><span class="ico_close"></span></button>
+
+          <ul class="toggle_gnb">
+            <li><a href="#url">즉석상품보기</a></li>
+            <li><a href="#url">명함</a></li>
+            <li><a href="#url">대형출력/보드</a></li>
+            <li><a href="#url">디지털출력/스티커</a></li>
+            <li><a href="#url">배너/POP/등신대</a></li>
+            <li><a href="#url">슬로건/인화/카드</a></li>
+            <li><a href="#url">이벤트소품/기타</a></li>
+            <li class="js_center"><a href="#url" class="point_marker white">센터안내</a></li>
+          </ul>
+        </div>
+        <div class="gnb_item clearfix">
+          <span class="link_item"><a href="#url">킨코스 소개</a></span>
+          <span class="link_item"><a href="#url">서비스 안내</a></span>
+          <span class="link_item"><a href="#url">이벤트/K매거진</a></span>
+          <span class="link_item"><a href="#url">고객지원</a></span>
+          <span class="link_item js_center"><a href="#url" class="point_marker black">센터안내</a></span>
+          <span class="gnb_bar"></span>
+        </div>
+        <div class="search_item">
+          <button type="button" class="btn_sch black"><span class="blind">검색창 열기</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub Menu -->
+    <div class="sub_gnb_wrap company" data-snb="company">
+      <ul class="sub_gnb_list">
+        <li><a href="#url"><strong>킨코스 소개</strong></a></li>
+        <li><a href="#url">CEO인사말</a></li>
+        <li><a href="#url">기업이념 및 연혁</a></li>
+        <li><a href="#url">Only 킨코스</a></li>
+        <li>
+          <a href="#url">채용정보</a>
+          <ul class="link_list">
+            <li><a href="#url">인재상</a></li>
+            <li><a href="#url">직무소개</a></li>
+            <li><a href="#url">채용안내</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="sub_gnb_list">
+        <li><a href="#url"><strong>서비스 안내</strong></a></li>
+        <li><a href="#url">디지털출력/복사</a></li>
+        <li><a href="#url">제본</a></li>
+        <li><a href="#url">후가공</a></li>
+        <li>
+          <a href="#url">사인앤그래픽</a>
+          <ul class="link_list">
+            <li><a href="#url">S&amp;G 일반상품</a></li>
+            <li><a href="#url">S&amp;G 패키지상품</a></li>
+            <li><a href="#url">S&amp;G 제작사례</a></li>
+          </ul>
+        </li>
+        <li><a href="#url">스캔투파일</a></li>
+        <li><a href="#url">디자인</a></li>
+        <li><a href="#url">명함제작</a></li>
+        <li><a href="#url">고객편의서비스</a></li>
+        <li><a href="#url">주요사례별서비스</a></li>
+        <li><a href="#url">추천상품</a></li>
+        <li><a href="#url">법인우대프로그램</a></li>
+        <li><a href="#url">DHL항공특송서비스</a></li>
+      </ul>
+      <ul class="sub_gnb_list">
+        <li><a href="#url"><strong>이벤트/공지사항</strong></a></li>
+        <li><a href="#url">공지사항</a></li>
+        <li><a href="#url">진행중인 이벤트</a></li>
+        <li><a href="#url">종료된 이벤트</a></li>
+        <li><a href="#url">K매거진</a></li>
+      </ul>
+      <ul class="sub_gnb_list">
+        <li><a href="#url"><strong>고객지원</strong></a></li>
+        <li><a href="#url">견적 및 서비스 문의</a></li>
+        <li><a href="#url">자주묻는 질문</a></li>
+        <li><a href="#url">서비스 의견</a></li>
+        <li><a href="#url">제후 문의 및 제안</a></li>
+      </ul>
+      <div class="sub_gnb_bg"></div>
+    </div>
+
+    <!-- 센터안내 -->
+    <div class="center_list_wrap">
+      <div class="inner clearfix">
+        <div class="tit_box">
+          <strong class="title">센터 안내</strong>
+          <p>Kinko’s는<br>편리함을 위해 여러분 곁에 좀 더 다가가고 있습니다.</p>
+        </div>
+        <div class="list_box">
+          <div class="list_item">
+            <strong class="locat_name">서울지역</strong>
+            <ul class="locat_list">
+              <li><a href="#url">가산디지털단지센터</a></li>
+              <li><a href="#url">강남역센터</a></li>
+              <li><a href="#url">경복궁센터</a></li>
+              <li><a href="#url">교대센터</a></li>
+              <li><a href="#url">구로센터</a></li>
+              <li><a href="#url">논현센터</a></li>
+              <li><a href="#url">동여의도센터</a></li>
+              <li><a href="#url">분당센터</a></li>
+              <li><a href="#url">남대문센터</a></li>
+              <li><a href="#url">삼성센터</a></li>
+              <li><a href="#url">시청센터</a></li>
+              <li><a href="#url">송파센터</a></li>
+              <li><a href="#url">신사센터</a></li>
+              <li><a href="#url">서여의도센터</a></li>
+              <li><a href="#url">선릉센터</a></li>
+              <li><a href="#url">양재센터</a></li>
+              <li><a href="#url">을지로센터</a></li>
+              <li><a href="#url">신촌센터</a></li>
+              <li><a href="#url">압구정센터</a></li>
+              <li><a href="#url">역삼센터</a></li>
+              <li><a href="#url">포스코센터</a></li>
+              <li><a href="#url">종로센터</a></li>
+              <li><a href="#url">충무로센터</a></li>
+              <li><a href="#url">홍대센터</a></li>
+              <li><a href="#url">홍대입구역센터</a></li>
             </ul>
-        </div>
-
-        <div class="gnb_bar">
-            <div class="company_gnb">
-                <a href="#url" class="btn_gnbtoggle"><span>온라인몰 바로가기</span></a>
-                <ul class="gnb_links">
-                    <li><a href="../mall/00.main-mall.html">즉석상품보기</a></li>
-                    <li><a href="../mall/00.main-mall.html">대형출력/보드</a></li>
-                    <li><a href="../mall/00.main-mall.html">디지털출력/스티커</a></li>
-                    <li><a href="../mall/00.main-mall.html">배너/POP/등신대</a></li>
-                    <li><a href="../mall/00.main-mall.html">슬로건/인화/카드</a></li>
-                    <li><a href="../mall/00.main-mall.html">이벤트소품/기타</a></li>
-                    <li><a href="../mall/00.main-mall.html" class="info_center white js-location">센터안내</a></li>
-                </ul>
-            </div>
-            <ul class="gnb_list">
-                <li><a href="#url">킨코스 소개</a></li>
-                <li><a href="#url">서비스 안내</a></li>
-                <li><a href="#url" class="active">이벤트/K매거진</a></li>
-                <li><a href="#url">고객지원</a></li>
-                <li><a href="#url" class="info_center black">센터안내</a></li>
+          </div>
+          <div class="list_item">
+            <strong class="locat_name">경기지역</strong>
+            <ul class="locat_list">
+              <li><a href="#url">분당센터</a></li>
+              <li><a href="#url">일산센터</a></li>
+              <li><a href="#url">판교센터</a></li>
+              <li><a href="#url">평촌센터</a></li>
             </ul>
-            <a href="#url" class="btn_sch"></a>
+          </div>
+          <div class="list_item">
+            <strong class="locat_name">부산지역</strong>
+            <ul class="locat_list">
+              <li><a href="#url">서면센터</a></li>
+              <li><a href="#url">센텀시티센터</a></li>
+            </ul>
+          </div>
+          <div class="list_item">
+            <ul class="locat_list etc">
+              <li><a href="#url">보안제작지원센터(SPC)</a></li>
+              <li><a href="#url">사인앤그래픽센터(S&amp;G)</a></li>
+            </ul>
+          </div>
         </div>
-
-        <!-- mega drop menu -->
-        <div class="gnb_drop">
-            <div class="sub_gnb_item">
-                <div class="sub_gnb_list">
-                    <h3 class="title">킨코스 소개</h3>
-                    <ul class="depth1">
-                        <li><a href="#url">인사말</a></li>
-                        <li><a href="#url">킨코스 둘러보기</a></li>
-                        <li><a href="#url">채용정보</a></li>
-                    </ul>
-                </div>
-                <div class="sub_gnb_list">
-                    <h3 class="title">서비스 안내</h3>
-                    <ul class="depth1">
-                        <li><a href="#url">디지털 출력/복사</a></li>
-                        <li><a href="#url">제본</a></li>
-                        <li><a href="#url">후가공</a></li>
-                        <li><a href="#url">사인그래픽</a></li>
-                        <li>
-                            <ul class="depth2">
-                                <li><a href="#url">・S&amp;G 일반상품</a></li>
-                                <li><a href="#url">・S&amp;G 패키지 상품</a></li>
-                                <li><a href="#url">・S&amp;G 제작사례</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#url">스캔투파일</a></li>
-                        <li><a href="#url">디자인</a></li>
-                        <li><a href="#url">명함제작</a></li>
-                        <li><a href="#url">고객편의 서비스</a></li>
-                        <li><a href="#url">주요사례별 서비스</a></li>
-                        <li><a href="#url">추천상품</a></li>
-                        <li><a href="#url">법인우대 프로그램</a></li>
-                        <li><a href="#url">DHL항공특송 서비스</a></li>
-                    </ul>
-                </div>
-                <div class="sub_gnb_list">
-                    <h3 class="title">이벤트/K매거진</h3>
-                    <ul class="depth1">
-                        <li><a href="#url">이벤트</a></li>
-                        <li><a href="#url">K매거진 <span><img src="./image/main/ico-new.png" alt=""></span></a></li>
-                    </ul>
-                </div>
-                <div class="sub_gnb_list">
-                    <h3 class="title">고객지원</h3>
-                    <ul class="depth1">
-                        <li><a href="#url">공지사항</a></li>
-                        <li><a href="#url">자주묻는 질문</a></li>
-                        <li><a href="#url">온라인 견적문의</a></li>
-                        <li><a href="#url">문의 및 제안</a></li>
-                        <li><a href="#url">서비스 의견</a></li>
-                        <li><a href="#url">기업 및 단체 문의</a></li>
-                    </ul>
-                </div>
-                <div class="point">
-                </div>
-            </div>
-            <div class="location_item">
-                <img src="./image/main/img-map.jpg" alt="">
-            </div>
+        <div class="map_box">
+          <!-- 지도 삽입 영역 -->
+          <div class="map_view">
+            <img src="./image/common/temp_map.jpg" alt="">
+          </div>
+          <!-- //지도 삽입 영역 -->
+          <div class="map_info">
+            <strong>가산디지털단지센터 <span class="tag_ing">영업중</span></strong>
+            <ul class="info_date">
+              <li><span class="date">월~목 :</span>24시간</li>
+              <li><span class="date">금~ :</span>22:00</li>
+              <li>토 9:00 ~ 18:00 / 일 09:00 ~</li>
+            </ul>
+            <ul class="info_etc">
+              <li>즉석 스티커/사진인화</li>
+              <li>대형 흑백/컬러 인쇄/스캔</li>
+              <li>CAD 출력가능</li>
+            </ul>
+          </div>
         </div>
-
-        <button type="button" class="btn_toggler mo"><span class="blind">Open the Menu</span></button>
-    </nav>
+      </div>
+    </div>
+    <!-- //센터안내 -->
+    <!-- //Sub Menu -->
+  </div>
 </header>
 
 
