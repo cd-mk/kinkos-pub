@@ -1,65 +1,72 @@
 // GNB
-var setGnb = function () {
-    $('.gnb_list > li > a').on('mouseenter', function () {
-        var idx = $(this).parent().index();
+var setGnb = function() {
+    var $gnb, chkGnb;
 
-        $('.gnb_list > li > a').removeClass('on');
+    $('.gnb_item .link_item').on('mouseenter focusin', function() {
+        $gnb = $(this).closest('.gnb_wrap');
+        chkGnb = $gnb.attr('data-gnb');
+
+        $('.gnb_item .link_item').removeClass('on');
         $(this).addClass('on');
-        $('.gnb_drop').stop().slideDown(500);
-        $('.dim').show();
-
-        if (idx !== 4) {
-            var left = 500;
-            var width = 226;
-            var move = idx * width;
-
-            $('.gnb_drop_item').show();
-            $('.location_item').hide();
-
-            $('.point').css('left', left + move + 'px');
+        gnbBar(true, $(this));
+        moveSnbBg($(this));
+        if ($(this).hasClass('js_center')) {
+            $("[data-snb=" + chkGnb + "]").hide();
+            $('.center_list_wrap').stop().slideDown(400);
         } else {
-            $('.gnb_drop_item').hide();
-            $('.location_item').show();
+            $('.center_list_wrap').hide();
+            $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
         }
+        
+    });
+    $('#header').on('mouseleave focusout', function() {
+        $('.gnb_item .link_item').removeClass('on');
+        $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
+        $('.center_list_wrap').stop().slideUp(400);
+        gnbBar(false);
     });
 
-    $('.lnb').on('mouseenter', function () {
-        $('.gnb_list > li > a').removeClass('on');
-        $('.gnb_drop').stop().slideUp(500);
-        $('.dim').hide();
-    });
-    $('#header').on('mouseleave', function () {
-        $('.gnb_list > li > a').removeClass('on');
-        $('.gnb_drop').stop().slideUp(500);
-        $('.dim').hide();
-    });
+    function gnbBar(flag, target) {
+        if (flag) {
+            var idx = target.index();
+            var width = target.outerWidth();
+            var move = target.position().left;
+            $('.gnb_bar').addClass('active');
+            $('.gnb_bar').width(width);
 
-    $('.gnb_links > li > a').on('mouseenter', function () {
-        $('.gnb_links > li > a').addClass('not_on');
-        $(this).removeClass('not_on');
-        $(this).addClass('on');
-    });
-
-    // gnb toggle
-
-    $('.btn_gnbtoggle').on('click', function () {
-        $(this).toggleClass('open');
-        $(this).closest('.company_gnb').toggleClass('active');
-        $('.gnb_drop').stop().slideUp(500);
-
-        if ($('.company_gnb').hasClass('active')) {
-            showMainGnb();
+            if (idx !== 0) {
+                $('.gnb_bar').css('left', move + 110 + 'px');
+            } else {
+                $('.gnb_bar').css('left', move);
+            }
         } else {
-            $('.gnb_links').removeClass('on');
+            $('.gnb_bar').removeClass('active');
         }
-    });
-    function showMainGnb() {
-        setTimeout(function () {
-            $('.gnb_links').addClass('on');
-        }, 400);
     }
+    function moveSnbBg(target) {
+        var width = 217;
+        var idx = target.index();
+        var move = idx * width + 315;
 
-};
+        $('.sub_gnb_bg').css('left', move);
+    }
+    function toggleGnb() {
+        $('.btn_toggle').on('click', function() {
+            $('.sub_gnb_wrap, .center_list_wrap').stop().slideUp(400);
+            if ($(this).hasClass('on')) {
+                $('.toggle_gnb').removeClass('on');
+            } else {
+                setTimeout(function(){
+                    $('.toggle_gnb').addClass('on');
+                },400);
+            }
+            $(this).toggleClass('on');
+            $('.toggle_item').toggleClass('active');
+            
+        });
+    }
+    toggleGnb();
+}
 
 // MOBILE GNB
 var mobileGnb = function () {
@@ -78,6 +85,8 @@ var mobileGnb = function () {
 
 // TypeB Main page JS
 $(document).ready(function () {
+    setGnb();
+
     new WOW().init();
 
     $('body').on('mousewheel DOMMouseScroll', function(e){
@@ -103,7 +112,7 @@ $(document).ready(function () {
 
 
 
-    //임시 header, footer영역 로드
+    // 임시 header, footer영역 로드
     $("#header").load("./include/common.html header", function () {
         // header 로드 후 header 관련 function 실행
         setGnb();
