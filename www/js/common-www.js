@@ -3,22 +3,23 @@ var setGnb = function() {
     var $gnb, chkGnb;
 
     $('.gnb_item .link_item').on('mouseenter focusin', function() {
-        $gnb = $(this).closest('.gnb_wrap');
+        $gnb = $(this).closest('.gnb_item');
         chkGnb = $gnb.attr('data-gnb');
 
         $('.gnb_item .link_item').removeClass('on');
         $(this).addClass('on');
+
         gnbBar(true, $(this));
         moveSnbBg($(this));
-        if ($(this).hasClass('js_center')) {
-            $("[data-snb=" + chkGnb + "]").hide();
-            $('.center_list_wrap').stop().slideDown(400);
-        } else {
-            $('.center_list_wrap').hide();
-            $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
-        }
-        
+        dropSubGnb($(this), chkGnb);
     });
+    $('.toggle_gnb > li').on('mouseenter focusin', function() {
+        $gnb = $(this).closest('.toggle_gnb');
+        chkGnb = $gnb.attr('data-gnb');
+
+        dropSubGnb($(this), chkGnb);
+    });
+    
     $('#header').on('mouseleave focusout', function() {
         $('.gnb_item .link_item').removeClass('on');
         $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
@@ -26,6 +27,15 @@ var setGnb = function() {
         gnbBar(false);
     });
 
+    function dropSubGnb(target, chkGnb) {
+        if (target.hasClass('js_center')) {
+            $("[data-snb=" + chkGnb + "]").hide();
+            $('.center_list_wrap').stop().slideDown(400);
+        } else {
+            $('.center_list_wrap').hide();
+            $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
+        }
+    }
     function gnbBar(flag, target) {
         if (flag) {
             var idx = target.index();
