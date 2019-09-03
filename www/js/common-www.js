@@ -121,6 +121,7 @@ $(document).ready(function () {
 
 
 
+
     // 임시 header, footer영역 로드
     $("#header").load("./include/common.html header", function () {
         // header 로드 후 header 관련 function 실행

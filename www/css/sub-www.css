@@ -36,4 +36,24 @@
 .page_tab > ul{position: absolute;top:0;left:50%;transform: translateX(-50%);display: table;}
 .page_tab > ul > li{display: table-cell;}
 .page_tab > ul > li > a{display:block;width:306px;height:64px;line-height:64px;font-size:16px;color:#333;text-align:center;border-top:3px solid #fff;overflow:hidden;font-weight:500;}
-.page_tab > ul > li.active a{border-color:#000;color:#000;}
+.page_tab > ul > li.active a, .page_tab > ul > li a:hover{border-color:#000;color:#000;}
+
+ /* anchor */
+.item_anchor {}
+.item_anchor ul {width:100%;}
+.item_anchor ul li {width:20%;}
+.item_anchor ul li a {width:100%;text-align: center;}
+
+
+
+
+/*  ---------------------
+        sub
+ --------------------- */
+.center_view h3 {font-size:24px;font-weight: 700;border-bottom:1px solid #000;padding-bottom:12px;margin-bottom:40px;}
+.center_view h3.border_none {border:0;padding:0;}
+.center_view .item_box {margin-top:100px;}
+.center_view .item_box:first-child{margin-top:0;}
+.center_view .item1 .inner {width:100%;}
+.center_view .item1 .inner .left {float:left;width:730px;margin-right:50px;}
+.center_view .item1 .inner .right {float:left;min-height: 454px;}
