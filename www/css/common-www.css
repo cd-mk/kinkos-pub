@@ -120,7 +120,7 @@ h2 {font-weight: 700;font-size: 18px;}
 
 /* icon */
 .point_marker {position: relative; padding-left: 20px}
-.point_marker::before {content: ''; position: absolute; left: 0; top: 0; width: 14px; height: 18px; background: url('../image/common/ico_marker.png') no-repeat; }
+.point_marker::before {content: ''; position: absolute; left: 0; top: 50%; width: 14px; height: 18px; background: url('../image/common/ico_marker.png') no-repeat; transform: translateY(-50%); }
 .point_marker.black::before {background-position: 0 -18px;}
 [class*="on"] .point_marker.black::before {background-position: 0 -36px;}
 
@@ -142,7 +142,7 @@ h2 {font-weight: 700;font-size: 18px;}
 .gnb_wrap .toggle_item {position: absolute; left: 0; top: 0; width: 215px; height: 100%; transition: width .4s linear; z-index: 10;}
 .gnb_wrap .toggle_item.active {width: 100%;}
 .gnb_wrap .toggle_item .btn_toggle {position: absolute; right: 0; top: 0; width: 215px; height: 100%; padding-left: 20px;}
-.company .toggle_item .btn_toggle > span {color: #fff;}
+.company .toggle_item .btn_toggle > span {font-size: 16px; color: #fff;}
 .company .toggle_item .btn_toggle .ico_close {float: right; width: 8px; height: 14px; margin-right: 18px; background: url('../image/common/arr_right.png') no-repeat;}
 .gnb_wrap .toggle_item .btn_toggle.on {width: 50px; padding: 0;}
 .gnb_wrap .toggle_item .btn_toggle.on > span:not(.ico_close) {display: none;}
