@@ -33,6 +33,40 @@ a:hover,a.active{color:#5e5e5e; text-decoration:underline;}
 a.un_line{text-decoration:underline;}
 .un_line {text-decoration:underline;}
 
+
+/*  ---------------------
+        font
+ --------------------- */
+
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../www/font/NotoSansKR-Regular.woff2) format('woff2'),
+        url(../www/font/NotoSansKR-Regular.woff) format('woff'),
+
+ 
+        url(../www/font/NotoSansKR-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(../www/font/NotoSansKR-Medium.woff2) format('woff2'),
+        url(../www/font/NotoSansKR-Medium.woff) format('woff'),
+        url(../www/font/NotoSansKR-Medium.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url(../www/font/NotoSansKR-Bold.woff2) format('woff2'),
+        url(../www/font/NotoSansKR-Bold.woff) format('woff'),
+        url(../www/font/NotoSansKR-Bold.otf) format('opentype');
+ }
+
+
+
 /* selectbox */
 select{padding:2px; height:27px;}
 span.selectbox{position:relative; display:inline-block; background:#fff; border:1px solid #CCC; vertical-align:middle}
