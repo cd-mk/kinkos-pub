@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* common */
+caption {visibility:hidden;}
+.bbs_list {width:100%;}
+.bbs_list table {width:100%;}
+.bbs_list th {height:54px; border-top:2px solid #000; border-bottom:1px solid #e7e7e7; vertical-align:middle; font-size:16px; font-weight:normal;}
+.bbs_list td {height:70px; border-bottom:1px solid #e7e7e7; color:#898989; vertical-align:middle; font-size:16px;}
+.bbs_list td a {display:inline-block; width:100%; color:#898989; text-overflow: ellipsis; white-space: nowrap;}
+.bbs_list td {text-align:center;}
+.bbs_list .cell_notice td, 
+.bbs_list .cell_notice td a {color:#000; font-weight:500;}
+.bbs_list .cell_new td, 
+.bbs_list .cell_new td a {color:#ff0201; font-weight:500;}
+.bbs_list .cell_new img {margin:0 auto; display:block; width:18px; height:18px;}
+.bbs_list .cell_left {padding-left:3.72%; text-align:left;}
+.bbs_list .cell_center {text-align:center;}
+
+.search_box {overflow:hidden;}
+.search_box form {float:right;}
+.search_box select {float:left; padding-left:20px; width:136px; height:50px; box-sizing: border-box; color:#333; border:1px solid #dedede; line-height:50px; font-size:16px;}
+.search_box .search_inp {float:left; position:relative; margin-left:10px;}
+.search_box .search_inp a {position:absolute; top:50%; right:20px; transform: translateY(-50%); width:20px; height:20px; background:url('../image/sub/btn_search.png') no-repeat; background-size:20px 20px; font-size:0;}
+
+.page_navi {position:relative; left:50%; display:inline-block; margin-top:40px; overflow:hidden; transform:translateX(-50%);}
+.page_navi .btn_navi {float:left; margin-left:4px; width:36px; height:36px; border:1px solid #dedede;}
+.page_navi .btn_navi.prev {margin-left:0;}
+.page_navi .navi_list {float:left; overflow:hidden;}
+.page_navi .navi_list > li {float:left; margin-left:4px; width:36px; height:36px; border:1px solid #dedede;}
+.page_navi .navi_list > li.active > a {background:#03a2ea; color:#fff;}
+.page_navi .navi_list > li a {display:block; width:100%; color:#333; text-align:center; line-height:36px;}
+
+/* input */
+input { padding:0 20px; height:50px; color:#333; border:1px solid #dedede; box-sizing: border-box; line-height:50px; font-size:16px;}
+
+/* select */
+select { padding:0 20px; width:136px; height:50px; box-sizing: border-box; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url(../images/common/arr-bottom.png) no-repeat; background-position: right 11px center; }
+select::-ms-expand {display: none;}
+
+/* 공지사항 */
+
+@media screen and (max-width: 1024px) {
+	
+}
+
+
+
