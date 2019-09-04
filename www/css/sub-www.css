@@ -62,6 +62,7 @@
 
 
 /* 센터안내 */
+.center_info_wrap {margin-bottom: 160px;}
 .center_info_wrap .sch_box {height: 172px; padding: 60px 240px; background: #f3f4f6; border-top: 2px solid #000; box-sizing: border-box;}
 .center_info_wrap .sch_box .sch_item {float: left; width: 250px; margin-left: 10px;}
 .center_info_wrap .sch_box .sch_item:first-child {margin-left: 0;}
@@ -79,3 +80,7 @@
 .center_info_wrap .bbs_list thead tr th:first-child {width: 260px;}
 .center_info_wrap .bbs_list thead tr th:nth-child(2) {width: 420px;}
 .center_info_wrap .bbs_list thead tr th:nth-child(4) {width: 380px;}
+.center_info_wrap .bbs_list tr .cell_left {padding-left: 0;}
+.center_info_wrap .bbs_list .btn_more {display: inline-block; width: 98px; height: 36px; border: 1px solid #dedede; color: #160000; line-height: 35px; text-align: center;}
+
+

@@ -123,6 +123,7 @@ input {
 
 /* color */
 .point_blue {color: #03a2ea;}
+.point_yellow {color: #fffd9b;}
 
 /* icon */
 .point_marker {position: relative; padding-left: 20px}
@@ -264,22 +265,24 @@ input {
   .header_wrap .nav .logo img {width: 100%;}
   .header_wrap .nav .btn_link {float: right; width: 60px; height: 60px;}
 
-  .mo_gnb_wrap {position: absolute; left: -100%; top: 0; width: 100%; height: 100vh; padding: 24px 4% 15px; transition: left .4s ease-in-out; background: #fff; z-index: 99;}
+  .mo_gnb_wrap {position: fixed; left: -100%; top: 0; width: 100%; min-height: 100%; max-height: 100%; padding: 24px 0 54px; overflow-y: auto; transition: left .4s ease-in-out; background: #fff; z-index: 99;}
   .mo_gnb_wrap.active {left: 0;}
-  .lnb_box .login_item {margin: 0 -4%; padding: 0 0 20px 4%; border-bottom: 1px solid #e7e7e7;}
+  .lnb_box .login_item {padding: 0 4% 20px 4%; border-bottom: 1px solid #e7e7e7;}
+  .lnb_box .login_item .welcome_txt {font-size: 24px;}
+  .lnb_box .login_item .welcome_txt .myname {font-size: 30px;}
   .lnb_box .login_item .btn_login {text-decoration: underline;}
-  .lnb_box .mymenu_box {margin-top: 22px;}
+  .lnb_box .mymenu_box {margin-top: 22px; padding: 0 4%;}
   .lnb_box .mymenu_box .my_link {float: left; width: calc(100% / 3); text-align: center;}
   .lnb_box .mymenu_box .my_link:first-child {text-align: left;}
   .lnb_box .mymenu_box .my_link:last-child {text-align: right;}
   .lnb_box .mymenu_box .my_link::before {content: ''; position: relative; top: 3px; display: inline-block; width: 14px; height: 14px; margin-right: 8px; background: url('../image/common/ico_mymenu.png') no-repeat 0 0;}
   .lnb_box .mymenu_box .my_link strong {color: inherit;}
 
-  .search_box {position: relative; margin-top: 40px;}
+  .search_box {position: relative; margin-top: 40px; padding: 0 4%;}
   .search_box .inp_sch {width: 100%; height: 32px; border-bottom: 3px solid #000; padding-right: 30px; font-size: 16px;}
-  .search_box .btn_sch {position: absolute; right: 0; top: 0; width: 24px; height: 24px; background: url('../image/common/ico_search.png') no-repeat 50% -21px;}
+  .search_box .btn_sch {position: absolute; right: 4%; top: 0; width: 21px; height: 21px; background: url('../image/common/ico_search.png') no-repeat 50% -21px;}
 
-  .menu_box {margin-top: 60px;}
+  .menu_box {margin-top: 60px; padding: 0 4%;}
   .menu_box .menu_item {padding: 20px 0; border-top: 1px solid #e7e7e7;}
   .menu_box .menu_item:first-child {padding-top: 0; border-top: 0;}
   .menu_box .menu_item .title {display: block; font-size: 20px;}
@@ -288,7 +291,7 @@ input {
   .menu_box .menu_item .menu_list > li:nth-child(n + 4) {margin-top: 10px;}
   .menu_box .menu_item .menu_list > li > a {font-size: 16px; color: #868686;}
 
-  .sns_box {position: absolute; left: 0; bottom: 15px; width: 100%; padding: 0 4%;}
+  .sns_box {position: absolute; left: 0; bottom: 0; width: 100%; height: 54px; padding: 17px 4% 0;}
   .sns_box .btn_lang {float: left;}
   .sns_box .sns_list {float: right;}
   .sns_box .sns_list > li {float: left; margin-left: 16px;}
