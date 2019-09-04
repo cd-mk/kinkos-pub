@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="./css/lib/animate.css">
   <link rel="stylesheet" href="./css/lib/swiper.min.css">
   <link rel="stylesheet" href="./css/common-www.css">
-  <link rel="stylesheet" href="./css/sub-www.css">
+  <link rel="stylesheet" href="./css/song-www.css">
 </head>
 
 <body>
@@ -190,69 +190,6 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.visual_wrap', {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        }
-      });
-      var swiper = new Swiper('.bestPro_wrap', {
-        slidesPerView: 'auto',
-        spaceBetween: 160,
-        loop: true,
-        centeredSlides: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          // when window width is >= ㅡ모바일 1024이하
-          1024: {
-            spaceBetween: 16,
-            scrollbar: {
-              el: '.swiper-scrollbar',
-              hide: false,
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'fraction',
-            }
-          }
-        }
-      });
-      var swiper = new Swiper('.insta_wrap', {
-        slidesPerView: 8,
-        spaceBetween: 22,
-        loop: true,
-        loopFillGroupWithBlank: true,
-      });
-      var gallerythumb = new Swiper('.navi_thumb', {
-        slidesPerView: 1,
-        freeMode: true,
-        loop: true,
-        watchSlidesVisibility: true,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        }
-      });
-      var galleryTop = new Swiper('.thumb', {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        thumb: {
-          swiper: gallerythumb
-        }
-      });
       
     </script>
   <!-- //SCRIPT -->
