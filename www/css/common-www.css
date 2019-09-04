@@ -279,7 +279,7 @@ input {
   .lnb_box .mymenu_box .my_link strong {color: inherit;}
 
   .search_box {position: relative; margin-top: 40px; padding: 0 4%;}
-  .search_box .inp_sch {width: 100%; height: 32px; border-bottom: 3px solid #000; padding-right: 30px; font-size: 16px;}
+  .search_box .inp_sch {width: 100%; height: 32px; border-width: 0 0 3px 0; border-bottom: 3px solid #000; padding-right: 30px; font-size: 16px;}
   .search_box .btn_sch {position: absolute; right: 4%; top: 0; width: 21px; height: 21px; background: url('../image/common/ico_search.png') no-repeat 50% -21px;}
 
   .menu_box {margin-top: 60px; padding: 0 4%;}
