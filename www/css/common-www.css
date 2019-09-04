@@ -139,7 +139,7 @@ input {
 /*  ---------------------
         header
  --------------------- */
-#header {background: #fff;}
+#header {position: relative; z-index: 30; background: #fff;}
 .header_wrap {position: relative;}
 .lnb_wrap {height: 70px; width: 1530px; margin: 0 auto; overflow: hidden;}
 .lnb_wrap .logo {float: left; width: 215px; height: 40px; margin-top: 16px;}

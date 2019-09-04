@@ -127,7 +127,7 @@ h2 {font-weight: 700;font-size: 18px;}
 /*  ---------------------
         header
  --------------------- */
-#header {background: #fff;}
+#header {position: relative; background: #fff; z-index: 30;}
 .header_wrap {position: relative;}
 .lnb_wrap {height: 70px; width: 1530px; margin: 0 auto; overflow: hidden;}
 .lnb_wrap .logo {float: left; width: 215px; height: 40px; margin-top: 16px;}

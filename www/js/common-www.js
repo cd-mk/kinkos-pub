@@ -6,6 +6,7 @@ var setGnb = function() {
         $gnb = $(this).closest('.js_gnb');
         chkGnb = $gnb.attr('data-gnb');
 
+        $('.dim').show();
         $('.js_gnb .link_item').removeClass('on');
         $(this).addClass('on');
 
@@ -18,6 +19,7 @@ var setGnb = function() {
     });
     
     $('#header').on('mouseleave focusout', function() {
+        $('.dim').hide();
         $('.js_gnb .link_item').removeClass('on');
         $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
         $('.center_list_wrap').stop().slideUp(400);
