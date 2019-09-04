@@ -60,9 +60,9 @@
     </div>
 
     <!-- 콘텐츠 group "cont_wrap" 고정, tab 유무에 따라 "tab_area"추가 -->
-    <div class="cont_wrap">
+    <div class="cont_wrap no_border no_pdt">
       <div class="con_box center_info_wrap">
-        <div class="center_sch_box">
+        <div class="sch_box clearfix">
           <div class="sch_item">
             <select>
               <option value="">지역</option>
@@ -88,16 +88,54 @@
             <button type="button" class="btn type01">조회</button>
           </div>
         </div>
-        <div class="page_navi">           
-          <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
-          <ul class="navi_list">
-            <li class="active"><a href="#url">1</a></li>
-            <li><a href="#url">2</a></li>
-            <li><a href="#url">3</a></li>
-            <li><a href="#url">4</a></li>
-            <li><a href="#url">5</a></li>
-          </ul>
-          <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>            
+
+        <div class="bbs_list">
+          <div class="head_item clearfix">
+            <span class="txt"><span class="point_blue">33개</span>의 센터가 검색되었습니다.</span>
+            <div class="sort_item">
+              <a href="#url" class="sort_opt active">가나다순</a>
+              <a href="#url" class="sort_opt">최신순</a>
+            </div>
+          </div>
+          <table>
+            <caption>각 지역별 센터 정보를 제공하는 표</caption>
+            <thead>
+              <tr>
+                <th scope="col">센터명</th>
+                <th scope="col">주소</th>
+                <th scope="col">전화번호</th>
+                <th scope="col">제공 서비스</th>
+                <th scope="col">영업시간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell_left">가산디지털단지 센터</td>
+                <td class="cell_left">서울특별시 금천구 가산동 371-28 우림라이온스벨리B동 106호</td>
+                <td>02-837-0020</td>
+                <td></td>
+                <td><a href="#url" class="btn_more">자세히보기</a></td>
+              </tr>
+              <tr>
+                <td class="cell_left">강남역 센터</td>
+                <td class="cell_left">서울특별시 강남구 역삼1동 클리닉빌딩 1층</td>
+                <td>02-561-0065</td>
+                <td></td>
+                <td><a href="#url" class="btn_more">자세히보기</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="page_navi">           
+            <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+            <ul class="navi_list">
+              <li class="active"><a href="#url">1</a></li>
+              <li><a href="#url">2</a></li>
+              <li><a href="#url">3</a></li>
+              <li><a href="#url">4</a></li>
+              <li><a href="#url">5</a></li>
+            </ul>
+            <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>            
+          </div>
         </div>
       </div>
     </div>
