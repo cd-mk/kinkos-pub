@@ -216,7 +216,7 @@ h2 {font-weight: 700;font-size: 18px;}
 .sub_gnb_wrap.mall .gnb_item .menu_list > li a {font-size: 16px; color: #fff;}
 
 .center_list_wrap {display: none; position: absolute; left: 0; top: 129px; width: 100%;  padding: 50px 9.5% 90px 10.41%; background: #f5f5f5; z-index: 10;}
-.center_list_wrap .tit_box {float: left; width: 195px;}
+.center_list_wrap .tit_box {float: left; width: 195px; text-align: left;}
 .center_list_wrap .tit_box strong {display: block; font-size: 28px;}
 .center_list_wrap .tit_box p {margin-top: 10px; font-size: 18px; line-height: 1.44;}
 .center_list_wrap .list_box {float: left; width: 710px; margin-left: 86px;}
