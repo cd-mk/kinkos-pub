@@ -350,6 +350,83 @@
       </div>
       <!-- //인스타그램 포토 Swiper -->
 
+      <!-- NOTICE & FAQ & CALL -->
+      <div class="info_wrap layout_width">
+        <div class="item_box notice">
+          <div class="title">
+            <h3>NOTICE</h3>
+            <a href="#url" class="btn_more">MORE VIEW</a>
+          </div>
+          <ul class="notice_list">
+            <li>
+              <a href="#url">
+                <span class="title">킨코스만의 즉석상품을 온라인스토어에서!</span>
+                <span class="date">2019. 06. 24</span>
+              </a>
+            </li>
+            <li>
+              <a href="#url">
+                <span class="title">[당첨자 발표] 온라인스토어, 킨코스 이용 후기 이벤트 “고객님! 만만잘부!”</span>
+                <span class="date">2019. 06. 24</span>
+              </a>
+            </li>
+            <li>
+              <a href="#url">
+                <span class="title">온라인스토어, 킨코스 이용 후기 이벤트 “고객님! 만만잘부!”</span>
+                <span class="date">2019. 05. 22</span>
+              </a>
+            </li>
+            <li>
+              <a href="#url">
+                <span class="title">스피드한 킨코스만의 상품을 만나보세요!</span>
+                <span class="date">2019. 02. 12</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="item_box cs">
+          <div class="swiper-wrapper">
+            <div class="item swiper-slide">
+              <h3 class="title">FAQ</h3>
+              <p class="sub_title">
+                kinko’s<br class="pc">
+                자주묻는 질문
+              </p>
+              <p class="desc">
+                kinko’s 이용 및 제품에 대한<br>
+                자주묻는 질문입니다.
+              </p>
+              <span class="ico"><img src="./image/main/ico-note.png" alt=""></span>
+            </div>
+            <div class="item swiper-slide">
+              <h3 class="title">CALL</h3>
+              <ul class="center_info">
+                <li>센터위치 안내 <b>02. 557. 0055</b></li>
+                <li>견적문의 전화 <b>02. 557. 0055</b></li>
+              </ul>
+              <p class="desc">
+                평일 9:00-19:00<br>
+                휴일 공휴일/토/일
+              </p>
+              <span class="ico"><img src="./image/main/ico-pc.png" alt=""></span>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="pg_nav_wrap">
+            <div class="swiper-scrollbar mo"></div>
+            <div class="pg_nav">
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //CONTENT -->
+
 
     <!-- FOOTER -->
     <div id="footer" class="layout_width">
@@ -444,6 +521,20 @@
           swiper: gallerythumb
         }
       });
+      // cs문의 슬라이드
+      var mql = window.matchMedia("screen and (max-width: 1024px)");
+      
+        if (mql.matches) {
+          var swiper = new Swiper('.info_wrap .cs', {
+            roundLengths: true,
+            slidesPerView: 1,
+            roundLengths: true,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }  
+          });
+        }  
 
       
     </script>
