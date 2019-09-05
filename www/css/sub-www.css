@@ -68,7 +68,7 @@
 .search_box {overflow:hidden;}
 .search_box form {float:right;}
 .search_box .search_inp {float:left; position:relative; margin-left:10px;}
-.search_box .search_inp a {position:absolute; top:50%; right:20px; transform: translateY(-50%); width:20px; height:20px; background:url('../image/sub/btn_search.png') no-repeat; background-size:20px 20px; font-size:0;}
+.search_box .search_inp a {position:absolute; top:50%; right:20px; transform: translateY(-50%); width:20px; height:20px; background:url('../image/sub/btn-search.png') no-repeat; background-size:20px 20px; font-size:0;}
 
 
 /* 페이지 네비게이션 */
