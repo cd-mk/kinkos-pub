@@ -122,6 +122,9 @@ body.open {overflow: hidden;}
 .blind, legend {overflow: hidden; position: absolute; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
 .clearfix::after {content: ''; display: table; clear: both}
 
+/* text */
+.txt_underline {text-decoration: underline;}
+
 /* color */
 .point_blue {color: #03a2ea;}
 .point_yellow {color: #fffd9b;}

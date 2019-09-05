@@ -230,6 +230,34 @@ select::-ms-expand {display: none;}
 .job_intro_wrap .item_list .txt .full_name {margin-left: 10px; font-size: 16px; font-weight: 400; color: #959595;}
 .job_intro_wrap .item_list .txt p {margin-top: 10px; font-size: 18px; color: #333; line-height: 1.44;}
 
+/* 채용안내 */
+.recruit_wrap {margin-bottom: 140px;}
+.recruit_wrap .item_box {margin-top: 60px;}
+.recruit_wrap .item_box h4 {font-size: 24px; padding-bottom: 12px; border-bottom: 1px solid #000;}
+.recruit_wrap .item_box h4.border_none {border: 0; padding: 0;}
+.recruit_wrap .item_box .item {margin-top: 80px;}
+.recruit_wrap .item_box .item:first-child {margin-top: 0;}
+.recruit_wrap .item_box .item .left {float: left;}
+.recruit_wrap .item_box .item .left p {margin-top: 14px; font-size: 18px; color: #222;}
+.recruit_wrap .item_box .item .right {float: right;margin-top: 5px;}
+.recruit_wrap .item_box .item .right .btn_wrap {margin-top: 0;}
+.recruit_wrap .item_box .item .right .btn_wrap .btn {width: 200px;}
+.recruit_wrap .item_box .item .bbs_list table {table-layout: fixed;}
+.recruit_wrap .item_box .item .bbs_list th {font-size: 18px; font-weight: 500; border-top: 0;}
+.recruit_wrap .item_box .item .bbs_list th:nth-child(2) {width: 520px;}
+.recruit_wrap .item_box .item .bbs_list td {height: auto; padding: 28px 0 26px; font-size: 18px; color: #222; text-align: left;}
+.recruit_wrap .item_box .item .bbs_list td:first-child {padding-left: 97px; font-weight: 500;}
+.recruit_wrap .item_box .item .bbs_list td:nth-child(2) {padding-left: 60px; }
+.recruit_wrap .item_box .item .bbs_list td:nth-child(3) {padding-left: 34px; color: #222;}
+.recruit_wrap .item_box .item .bbs_list td:nth-child(4) {padding-left: 50px;}
+.recruit_wrap .item_box .item .bbs_list td p {margin-top: 10px;}
+.recruit_wrap .item_box .item .bbs_list .list_type01 > li {line-height: 1.5;}
+.recruit_wrap .item_box .item .bbs_list .list_type02 > li {line-height: 1.5;}
+.recruit_wrap .item_box .item .bbs_list .list_type02 > li::before {content: '- ';}
+.recruit_wrap .item_box .item .submit_list {margin-top: 35px;}
+.recruit_wrap .item_box .item .submit_list > li {margin-top: 8px; font-size: 18px;}
+.recruit_wrap .item_box .item .submit_list > li:first-child {margin-top: 0;}
+.recruit_wrap .item_box .item .submit_list > li strong {font-weight: 500;}
 
 
 
