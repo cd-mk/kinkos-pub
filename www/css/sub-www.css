@@ -10,6 +10,9 @@
 .tit_sub {margin-bottom:50px;text-align: center;}
 .tit_sub h2 {font-size:36px;font-weight: 400;}
 .tit_sub p {font-size:16px;margin-top:20px;color:#333;}
+.tit_sub.type_bg {height: 220px; margin-bottom: 0; background: #000;}
+.tit_sub.type_bg h2 {padding-top: 60px; color: #fff;}
+.tit_sub.type_bg p {margin-top: 18px; font-size: 18px; color: #fff;}
 
 /* content */
 .cont_wrap {border-top:1px solid #e7e7e7;padding-top:90px;min-height:500px;}
@@ -32,6 +35,7 @@
 .breadcrumb_wrap li a {height:24px;line-height:24px;display: inline-block;}
 .breadcrumb_wrap li:last-child {font-weight:500;}
 .breadcrumb_wrap li:before {font-weight:400;content:"/";clear:both;font-size:10px;display:inline-block;padding:0 9px;}
+.tit_sub.type_bg + .breadcrumb_wrap {margin-top: 20px;}
 
  /* page_tab */
 .page_tab{margin-bottom:60px;height:64px;position: relative;width:100%;}
