@@ -128,7 +128,7 @@
 	.banner_wrap a {display:block; overflow:hidden; width:100%; height:170px;}
 }
 
-.insta_wrap {position:relative; margin-top:63px;}
+.insta_wrap {position:relative; margin-top:63px; overflow: hidden;}
 .insta_wrap h2 {}
 .insta_wrap .goto_insta {font-size:16px; position:absolute; right:0;}
 .insta_wrap .goto_insta::before {content:""; clear:both; display:inline-block; margin-right:16px; width:24px; height:24px; background:url(../image/main/ic_insta.png) no-repeat center; vertical-align:middle;}
@@ -147,7 +147,7 @@
 .insta_wrap .swiper-slide[data-swiper-slide-index="9"] .thumb.animated .color_bg {transition-delay:0.9s;}
 .insta_wrap .swiper-slide[data-swiper-slide-index="10"] .thumb.animated .color_bg {transition-delay:1s;}
 .insta_wrap .swiper-slide .thumb:hover .color_bg {width:500px; top:170px; transition:all 0.5s;}
-.sevice_wrap {position:relative; height:550px; margin-top:140px;}
+.sevice_wrap {position:relative; height:550px; margin-top:140px; overflow: hidden;}
 .sevice_wrap strong {font-size:36px; margin-top:32px; display:block;}
 .sevice_wrap .navi_thumb {width:390px; height:60px; box-sizing:border-box; position:absolute; z-index:99; border-bottom:3px solid #000; padding-bottom:4px; margin-top:20px; overflow:inherit;}
 .sevice_wrap .navi_thumb .swiper-slide {opacity:0; width:336px; font-size:36px; font-weight:700; display:initial;}
