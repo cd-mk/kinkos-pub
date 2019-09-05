@@ -10,6 +10,7 @@
   <link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
   <link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
   <link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
+  <link href="../www/css/sub-www.css" rel="stylesheet" type="text/css">
   
   <script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
 </head>
@@ -41,119 +42,116 @@
     <!-- 코드 추가-->
     <div class="g_code_page">
       <div class="g_header">
-        <h3 class="g_tit2">기본 테이블 타입</h3>
-        <span>Update. 2019.04.04</span>
+        <h3 class="g_tit2">공지사항 테이블 타입</h3>
+        <span>Update. 2019.09.05</span>
       </div>
       <div class="g_codebox">
         <div class="g_code_temp">
-          <!-- S : table type 1 -->
-            <div class="tbl_wrap">
-              <table>
-                <caption>입사지원 현황 리스트</caption>
-                <thead>
-                  <tr>
-                    <th scope="row">지원일</th>                  
-                    <th scope="row">회사명</th>
-                    <th scope="row" class="size_large">공고명</th>
-                    <th scope="row">접수마감일</th>
-                    <th scope="row">공고상태</th>
-                    <th scope="row">전형결과</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>2018.12.10</td>
-                    <td>SK 하이닉스</td>
-                    <td class="align_left"><a href="#url">[경력] 상반기 경력 및 병특 공채</a></td>
-                    <td>
-                    <ul class="date_list">
-                      <li><span>2018.12.31</span></li>
-                      <li><span class="txt_point1">D-day</span></li>
-                    </ul>
-                    </td>                  
-                    <td>서류접수중</td>
-                    <td><span class="txt_point1">서류합격</span></td>
-                  </tr>
-                  <tr>
-                    <td>2018.12.10</td>
-                    <td>협력사 A</td>
-                    <td class="align_left"><a href="#url">[신입] 2019년 하이닉스 그룹 신입 공채</a></td>
-                    <td>
-                    <ul class="date_list">
-                      <li><span>2018.12.31</span></li>
-                      <li><span>D-11</span></li>
-                    </ul>
-                    </td>                  
-                    <td>서류접수중</td>
-                    <td>서류불합격</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div> 
-            <!-- E : table type 1 -->
-
-          <!-- S : table type 2 -->
-          <div class="tbl_wrap">
+          <div class="bbs_list">
             <table>
-              <caption>추천 기업 채용 공고 리스트</caption>
+              <caption>공지사항의 정보를 나열한 표</caption>
               <thead>
                 <tr>
-                  <th scope="row">회사명</th>
-                  <th scope="row" class="size_xlarge">공고명</th>
-                  <th scope="row">공고상태</th>
-                  <th scope="row">접수마감일</th>
+                  <th scope="col">번호</th>
+                  <th scope="col" class="cell_left">제목</th>
+                  <th scope="col">조회수</th>
+                  <th scope="col">등록일</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>SK 하이닉스</td>
-                  <td class="align_left"><a href="#url">[경력] 상반기 경력 및 병특 공채</a></td>
-                  <td>서류접수중</td>
-                  <td><span class="txt_point1">D-day</span></td>
+                <tr class="cell_notice">
+                  <td>공지</td>
+                  <td class="cell_left"><a href="#url">[매장명 변경소식]여의도 지역 매장명 변경안내</a></td>
+                  <td>66</td>
+                  <td>2019.08.20</td>
+                </tr>
+                <tr class="cell_notice">
+                  <td>공지</td>
+                  <td class="cell_left"><a href="#url">킨코스만의 즉석상품을 온라인스토어에서!</a></td>
+                  <td>427</td>
+                  <td>2019.06.24</td>
+                </tr>
+                <tr class="cell_new">
+                  <td><span class="ico_new"><span class="blind">새로 등록된 글</span></span></td>
+                  <td class="cell_left"><a href="#url">[이벤트] 대형출력 이용시 쏟아지는 다양한 혜택!</a></td>
+                  <td>669</td>
+                  <td>2019.08.06</td>
                 </tr>
                 <tr>
-                  <td>협력사 A</td>
-                  <td class="align_left"><a href="#url">[신입] 2019년 하이닉스 그룹 신입 공채</a></td>
-                  <td>서류접수중</td>
-                  <td>D-11</td>
+                  <td>55</td>
+                  <td class="cell_left"><a href="#url">[리모델링 안내] 양재센터 / 선릉센터 / 송파센터</a></td>
+                  <td>224</td>
+                  <td>2019.08.12</td>
+                </tr>
+                <tr>
+                  <td>54</td>
+                  <td class="cell_left"><a href="#url">[광복절] 영업시간 안내</a></td>
+                  <td>527</td>
+                  <td>2019.08.12</td>
+                </tr>
+                <tr>
+                  <td>53</td>
+                  <td class="cell_left"><a href="#url">[당첨자발표] 감사하5~ 할인이벤트!</a></td>
+                  <td>247</td>
+                  <td>2019.06.12</td>
+                </tr>
+                <tr>
+                  <td>52</td>
+                  <td class="cell_left"><a href="#url">♥온라인스토어,감사하5~할인이벤트!</a></td>
+                  <td>1,139</td>
+                  <td>2019.05.10</td>
+                </tr>
+                <tr>
+                  <td>51</td>
+                  <td class="cell_left"><a href="#url">근로자의 날·어린이날 센터 영업시간 안내</a></td>
+                  <td>967</td>
+                  <td>2019.04.29</td>
+                </tr>
+                <tr>
+                  <td>50</td>
+                  <td class="cell_left"><a href="#url">[부산2호점] 부산서면점 오픈 이벤트!</a></td>
+                  <td>1,946</td>
+                  <td>2019.03.25</td>
+                </tr>
+                <tr>
+                  <td>49</td>
+                  <td class="cell_left"><a href="#url">●이벤트● 킨코스 이용후기 남기고, 선물도 받고!</a></td>
+                  <td>1,037</td>
+                  <td>2019.03.20</td>
+                </tr>
+                <tr>
+                  <td>48</td>
+                  <td class="cell_left"><a href="#url">킨코스 동여의도점 이전 안내</a></td>
+                  <td>740</td>
+                  <td>2019.02.26</td>
+                </tr>
+                <tr>
+                  <td>47</td>
+                  <td class="cell_left"><a href="#url">결산/감사/주총보고서, 역시- 킨코스에서!</a></td>
+                  <td>1,237</td>
+                  <td>2019.02.25</td>
+                </tr>
+                <tr>
+                  <td>46</td>
+                  <td class="cell_left"><a href="#url">설 연휴(2/1~ 2/6)기간 영업시간 안내</a></td>
+                  <td>1,210</td>
+                  <td>2019.01.29</td>
+                </tr>
+                <tr>
+                  <td>45</td>
+                  <td class="cell_left"><a href="#url">신정 연휴기간 센터별 영업시간 안내</a></td>
+                  <td>640</td>
+                  <td>2018.12.28</td>
+                </tr>
+                <tr>
+                  <td>44</td>
+                  <td class="cell_left"><a href="#url">[이전안내] 역삼센터 이전안내</a></td>
+                  <td>799</td>
+                  <td>2018.12.21</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <!-- E : table type 2 -->
-
-          <!-- S : table type 3 -->
-          <div class="tbl_wrap">
-            <table>
-              <caption>어학능력 리스트</caption>
-              <thead>
-                <tr>
-                  <th scope="row">언어</th>
-                  <th scope="row">시험종류</th>
-                  <th scope="row">점수/급수</th>
-                  <th scope="row">인증기관</th>
-                  <th scope="row">취득일</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="align_left">영어</td>
-                  <td>TOEFL</td>
-                  <td>900</td>
-                  <td>ETS</td>
-                  <td>1997.03</td>
-                </tr>
-                <tr>
-                  <td class="align_left">일본어 <span class="ico_pass">PASS</span></td>
-                  <td>JLPT</td>
-                  <td>2</td>
-                  <td>ETS</td>
-                  <td>1997.03</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- E : table type 3 -->
         </div>  
           
       </div>
@@ -161,7 +159,114 @@
       <div class="g_code_description">
         <div>
           <h4>Description</h4>
+          <p>테이블타입은 기본스타일과 공지사항 스타일 2가지로 나눔 (09.05기준)</p>
+          <p>텍스트 좌측 정렬이 필요한 곳에 'cell_left' 클래스 추가</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">기본 테이블 타입</h3>
+        <span>Update. 2019.09.05</span>
+      </div>
+      <div class="g_codebox">
+        <div class="g_code_temp">
+          <div class="bbs_list">
+            <table>
+              <caption>각 지역별 센터 정보를 제공하는 표</caption>
+              <thead>
+                <tr>
+                  <th scope="col">센터명</th>
+                  <th scope="col">주소</th>
+                  <th scope="col">전화번호</th>
+                  <th scope="col">제공 서비스</th>
+                  <th scope="col">영업시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell_left">가산디지털단지 센터</td>
+                  <td class="cell_left">서울특별시 금천구 가산동 371-28 우림라이온스벨리B동 106호</td>
+                  <td>02-837-0020</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">강남역 센터</td>
+                  <td class="cell_left">서울특별시 강남구 역삼1동 클리닉빌딩 1층</td>
+                  <td>02-561-0065</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">경복궁 센터</td>
+                  <td class="cell_left">서울특별시 종로구 내수동 벽산광화문시대 101호</td>
+                  <td>02-2195-4455</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">광화문 센터</td>
+                  <td class="cell_left">서울특별시 종로구 중학동 111 한국경제통신빌딩 1층</td>
+                  <td>02-730-6977</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">교대 센터</td>
+                  <td class="cell_left">서울특별시 서초구 서초1동 일광빌딩 1층</td>
+                  <td>02-3474-3780</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">구로 센터</td>
+                  <td class="cell_left">서울특별시 구로구 구로3동 에이스테크노타워 8차 104호</td>
+                  <td>02-3474-3780</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">국회의사당역 센터(구 서여의도)</td>
+                  <td class="cell_left">서울특별시 영등포구 여의도동 14 34 해운빌딩 1층</td>
+                  <td>02-2195-4455</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">남대문 센터</td>
+                  <td class="cell_left">서울특별시 강남구 논현2동 송암빌딩 1층</td>
+                  <td>02-730-6977</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">논현 센터</td>
+                  <td class="cell_left">서울특별시 서초구 서초1동 일광빌딩 1층</td>
+                  <td>02-3474-3780</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+                <tr>
+                  <td class="cell_left">시안앤그래픽센터(S&amp;G)</td>
+                  <td class="cell_left">경기 안양시 동안구 관양동 954-77 4~6층</td>
+                  <td>02-3474-3780</td>
+                  <td></td>
+                  <td>월~금</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>  
           
+      </div>
+
+      <div class="g_code_description">
+        <div>
+          <h4>Description</h4>
+          <p>테이블타입은 기본스타일과 공지사항 스타일 2가지로 나눔 (09.05기준)</p>
         </div>
       </div>
     </div>

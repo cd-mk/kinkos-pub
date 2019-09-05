@@ -106,14 +106,6 @@ input { padding:0 20px; height:50px; color:#333; border:1px solid #dedede; box-s
 select { padding:0 20px; width: 100%; height:50px; box-sizing: border-box; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url(../images/common/arr-bottom.png) no-repeat; background-position: right 11px center; }
 select::-ms-expand {display: none;}
 
-/* button */
-.btn_wrap {margin-top:60px; overflow:hidden;}
-.btn_wrap.center {position:relative; left:50%; display:inline-block; transform:translateX(-50%);}
-.btn_wrap .btn {display:inline-block; width:120px; height:50px; line-height:50px; text-align:center; font-size:14px; font-weight:500;}
-.btn.type01 {background:#03a2ea; color:#fff;}
-.btn.type02 {background:#fff; border:1px solid #03a2ea; color:#03a2ea;}
-
-
 /*  ---------------------
         sub
  --------------------- */
@@ -259,5 +251,21 @@ select::-ms-expand {display: none;}
 .recruit_wrap .item_box .item .submit_list > li:first-child {margin-top: 0;}
 .recruit_wrap .item_box .item .submit_list > li strong {font-weight: 500;}
 
-
-
+/* 인재상 */
+.talent_wrap {margin-bottom: 140px;}
+.talent_wrap .item_box {width: 1010px; margin: 60px auto 0;}
+.talent_wrap .item_box .item {float: left; width: 50%; box-sizing: border-box; border: 1px dotted #777;}
+.talent_wrap .item_box .item:first-child {padding:40px 0 95px 58px;}
+.talent_wrap .item_box .item:nth-child(2) {padding:40px 0 95px 247px;}
+.talent_wrap .item_box .item:nth-child(3) {padding:95px 0 40px 58px;}
+.talent_wrap .item_box .item:nth-child(4) {padding:95px 0 40px 247px;}
+.talent_wrap .item_box .item:nth-child(odd) .txt_box {text-align: right;}
+.talent_wrap .item_box .item .txt_box {width: 200px;}
+.talent_wrap .item_box .item .txt_box strong {font-size: 24px; color: #222;}
+.talent_wrap .item_box .item .txt_box p {margin-top: 12px; font-size: 18px; color: #222; line-height: 1.44;}
+.talent_wrap .item_list {margin-top: 60px; border-top: 2px solid #333; border-bottom: 1px solid #e7e7e7;}
+.talent_wrap .item_list > li {position: relative; float: left; width: 25%; height: 344px; box-sizing: border-box; border-left: 1px solid #e7e7e7; text-align: center;}
+.talent_wrap .item_list > li:first-child {border-left: 0;}
+.talent_wrap .item_list > li strong {font-size: 24px;}
+.talent_wrap .item_list > li p {margin-top: 20px; font-size: 18px; color: #222;}
+.talent_wrap .item_list .item_con {position: absolute; left: 0; bottom: 60px; width: 100%;}

@@ -10,6 +10,7 @@
   <link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
   <link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
   <link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
+  <link href="../www/css/sub-www.css" rel="stylesheet" type="text/css">
   
   <script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
 </head>
@@ -38,74 +39,71 @@
         <li>최신 날짜 순으로 정리 합니다.</li>
       </ul>
     </div>
+    
     <!-- 코드 추가-->
     <div class="g_code_page">
       <div class="g_header">
-        <h3 class="g_tit2">기본 탭</h3>
-        <span>Update. 2014.07.17</span>
+        <h3 class="g_tit2">페이지 tab(페이지 링크)</h3>
+        <span>Update. 2019.09.03</span>
       </div>
       <div class="g_codebox">
         <!-- source code -->
         <div class="g_code_temp">
-
-          <!-- Tab links -->
-          <div class="tab col2">
-            <button class="tablinks active" onclick="openCity(event, 'tab1')">제목1</button>
-            <button class="tablinks" onclick="openCity(event, 'tab2')">제목2</button>
+          <!-- page tab -->
+          <div class="page_tab">
+            <ul>
+              <li><a href="#url">인재상</a></li>
+              <li class="active"><a href="#url">직무소개</a></li>
+              <li><a href="#url">채용안내</a></li>
+            </ul>
           </div>
-            
-          <!-- S : Tab content -->
-          <div id="tab1" class="tabcontent" style="display:block;">
-            <h3>제목1</h3>
-            <p>내용</p>
-          </div>
-          
-          <div id="tab2" class="tabcontent">
-            <h3>제목2</h3>
-            <p>내용</p>
-          </div>
-
-        
-
-          <!-- Tab links col3-->
-          <div class="tab col3">
-            <button class="tablinks active" onclick="openCity(event, 'tab11')">제목1</button>
-            <button class="tablinks" onclick="openCity(event, 'tab22')">제목2</button>
-            <button class="tablinks" onclick="openCity(event, 'tab33')">제목2</button>
-          </div>
-            
-          <!-- S : Tab content -->
-          <div id="tab11" class="tabcontent" style="display:block;">
-            <h3>제목11</h3>
-            <p>내용</p>
-          </div>
-          
-          <div id="tab22" class="tabcontent">
-            <h3>제목22</h3>
-            <p>내용</p>
-          </div>
-
-          <div id="tab33" class="tabcontent">
-            <h3>제목33</h3>
-            <p>내용</p>
-          </div>
-
-
-
+          <!-- page tab -->
 
         </div>
         <!-- //source code -->
       </div>
-
       <div class="g_code_description">
         <div>
-            <h4>Description</h4>
-          
+          <h4>Description</h4>
+          <p>tab있는 영역 상위 요소에 'tab_area' 클래스 추가 ex : cont_wrap.tab_area</p>
         </div>
       </div>
     </div>
     <!-- //코드 추가 -->
 
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">페이지 tab(페이지 내 링크)</h3>
+        <span>Update. 2019.09.03</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- page tab -->
+          <div class="page_tab item_anchor">
+            <ul>
+              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">센터 정보</a></li>
+              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">제공 서비스</a></li>
+              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">컴퓨터 및 프로그램</a></li>
+              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">보유장비</a></li>
+              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">지도</a></li>
+            </ul>
+          </div>
+          <!-- page tab -->
+
+        </div>
+        <!-- //source code -->
+      </div>
+      <div class="g_code_description">
+        <div>
+          <h4>Description</h4>
+          <p>tab있는 영역 상위 요소에 'tab_area' 클래스 추가 ex : cont_wrap.tab_area</p>
+          <p>페이지 내 섹션 이동을 하는 tab</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
 
   </div>
 <!-- SCRIPT -->
