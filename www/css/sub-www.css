@@ -118,13 +118,42 @@ select::-ms-expand {display: none;}
 /*  ---------------------
         sub
  --------------------- */
-.center_view h3 {font-size:24px;font-weight: 700;border-bottom:1px solid #000;padding-bottom:12px;margin-bottom:40px;}
-.center_view h3.border_none {border:0;padding:0;}
-.center_view .item_box {margin-top:100px;}
-.center_view .item_box:first-child{margin-top:0;}
-.center_view .item1 .inner {width:100%;}
-.center_view .item1 .inner .left {float:left;width:730px;margin-right:50px;}
-.center_view .item1 .inner .right {float:left;min-height: 454px;}
+/* 센터 소개 */
+.center_view_wrap h3 {font-size:24px;font-weight: 700;border-bottom:1px solid #000;padding-bottom:12px;margin-bottom:40px;}
+.center_view_wrap h3.border_none {border:0;padding:0;}
+.center_view_wrap h3 .title_alert {position: relative; top: 8px; float: right; font-size: 14px; font-weight: 500;}
+.center_view_wrap .item_box {margin-top:100px;}
+.center_view_wrap .item_box:first-child{margin-top:0;}
+.center_view_wrap .item1 .inner {width:100%; height: 454px;}
+.center_view_wrap .item1 .inner .left {float:left;width:730px;}
+.center_view_wrap .item1 .inner .left img {width: 100%;}
+.center_view_wrap .item1 .inner .right {float:left; width: calc(100% - 730px); padding-left: 50px; box-sizing: border-box;}
+.center_view_wrap .item1 .btn_wrap {margin-top: 48px;}
+.center_view_wrap .item1 .btn_wrap .btn {float:left; width: 304px;}
+.center_view_wrap .item1 .btn_wrap .btn:first-child {margin-right: 12px;}
+
+.center_view_wrap .info_tbl table {width: 100%;}
+.center_view_wrap .info_tbl th {width: 120px; padding: 11px 0; text-align: left; font-size: 16px; font-weight: 500;}
+.center_view_wrap .info_tbl td {padding: 11px 0; color: #333;}
+.center_view_wrap .info_tbl td p {margin-top: 12px; color: #959595;}
+.center_view_wrap .service_list .service_item {float: left; margin-left: 50px;}
+.center_view_wrap .service_list .service_item:first-child {margin-left: 0;}
+.center_view_wrap .service_list .service_item .ico {display: block;}
+.center_view_wrap .service_list .service_item .name {display: block; margin-top: 17px; font-size: 16px; color: #333;}
+.center_view_wrap .item3 .item {float: left; width: 50%;}
+.center_view_wrap .item3 .item strong {font-size: 16px; font-weight: 500;}
+.center_view_wrap .item3 .item ul {margin-top: 16px;}
+.center_view_wrap .item3 .item ul > li {margin-top: 8px; font-size: 16px; color: #333;}
+.center_view_wrap .item3 .item ul > li:first-child {margin-top: 0;}
+
+.center_view_wrap .item4 .item {float: left; width: 50%;}
+.center_view_wrap .item4 .item:nth-child(n + 3) {margin-top: 40px;}
+.center_view_wrap .item4 .item strong {font-size: 16px; font-weight: 500;}
+.center_view_wrap .item4 .item ul {margin-top: 16px;}
+.center_view_wrap .item4 .item ul > li {margin-top: 8px; font-size: 16px; color: #333;}
+.center_view_wrap .item4 .item ul > li:first-child {margin-top: 0;}
+.center_view_wrap .item5 .map_view {height: 510px;}
+.center_view_wrap .item5 .btn_wrap {text-align: center;}
 
 /* 센터안내 */
 .center_info_wrap {margin-bottom: 160px;}

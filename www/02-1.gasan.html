@@ -53,18 +53,18 @@
 				</ul>
 			</div>
 			<!-- //breadcrumb  -->
+
 			<div class="tit_sub">
 				<h2>가산디지털단지 센터</h2>
 			</div>
 			
-
 			<!-- 콘텐츠 group "cont_wrap" 고정, tab 유무에 따라 "tab_area"추가 -->
 			<div class="cont_wrap tab_area">
 
 				<!-- page tab -->
 				<div class="page_tab item_anchor">
 					<ul>
-						<li><a href="#url" onclick="jumpto('item1');">센터 정보</a></li>
+						<li class="active"><a href="#url" onclick="jumpto('item1');">센터 정보</a></li>
 						<li><a href="#url" onclick="jumpto('item2');">제공 서비스</a></li>
 						<li><a href="#url" onclick="jumpto('item3');">컴퓨터 및 프로그램</a></li>
 						<li><a href="#url" onclick="jumpto('item4');">보유장비</a></li>
@@ -74,41 +74,152 @@
 				<!-- page tab -->
 
 				<!-- 본문 -->
-				<!-- 콘텐츠 "con" 고정 -->
-				<div class="con center_view">
+				<div class="con_box center_view_wrap">
 					<div id="item1" class="item_box item1">
 						<div class="inner clearfix">
 							<div class="left"><img src="./image/sub/center-img.jpg" alt="가산디지털 전경"></div>
 							<div class="right">
 								<h3 class="border_none">센터 정보</h3>
-								<dl>
-									<dt>위치</dt>
-									<dd>서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</dd>
-									<dt>위치</dt>
-									<dd>서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</dd>
-									<dt>위치</dt>
-									<dd>서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</dd>
-									<dt>위치</dt>
-									<dd>서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</dd>
-								</dl>
+								<div class="info_tbl">
+									<table>
+										<caption>센터 상세 정보를 제공하는 표</caption>
+										<tbody>
+											<tr>
+												<th scope="row">위치</th>
+												<td>서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</td>
+											</tr>
+											<tr>
+												<th scope="row">전화</th>
+												<td>02-837-0020</td>
+											</tr>
+											<tr>
+												<th scope="row">팩스</th>
+												<td>02-837-0030</td>
+											</tr>
+											<tr>
+												<th scope="row">센터메일</th>
+												<td>kinkos20@kinkos.co.kr</td>
+											</tr>
+											<tr>
+												<th scope="row">운영시간</th>
+												<td>
+													월 ~ 목 24시간 /  금 ~22:00 / 토 9:00 ~ 18:00 / 일 9:00 ~
+													<p class="txt_holiday">주말, 공휴일 점심 휴게 시간 : 13:00 ~ 14:00</p>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">DHL접수시간</th>
+												<td>일 발송 마감 - 평일 16:00 / 토요일 13:00</td>
+											</tr>
+											<tr>
+												<th scope="row">계좌</th>
+												<td>KEB하나은행 / 172-22-03665-8</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="btn_wrap">
+										<a href="#url" class="btn type01">파일 주문</a>
+										<a href="#url" class="btn type02">견적 문의</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div id="item2" class="item_box item2">
 						<h3>제공 서비스</h3>
-						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<div class="service_list clearfix">
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">24시간 운영</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">즉석 스티커</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">즉석 사진 인화</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">대형 칼라 스캔</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">대형 흑백 스캔</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">대형 컬러 출력</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">대형 흑백 출력</span>
+							</div>
+							<div class="service_item">
+								<span class="ico"></span>
+								<span class="name">CAD 출력</span>
+							</div>
+						</div>
 					</div>
 					<div id="item3" class="item_box item3">
-						<h3>컴퓨터 및 프로그램</h3>
-						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<h3>컴퓨터 및 프로그램<span class="title_alert point_blue">빠르고 정확한 출력을 원하신다면, PDF 접수를 권장합니다.</span></h3>
+						<div class="item_list clearfix">
+							<div class="item">
+								<strong>컴퓨터</strong>
+								<ul>
+									<li>Windows PC 2대</li>
+								</ul>
+							</div>
+							<div class="item">
+								<strong>프로그램</strong>
+								<ul>
+									<li>MS Office : 2003, 2007, 2010</li>
+									<li>Adobe Acrobat : 9, X</li>
+									<li>Adobe Illustrator : CS2, CS3, CS5.5, CS6</li>
+									<li>Adobe Photoshop : CS2, CS3, CS5.5, CS6</li>
+									<li>Adobe InDesign : CS5.5, CS6</li>
+									<li>한글 : 2007, 2010</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div id="item4" class="item_box item4">
 						<h3>보유장비</h3>
-						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<div class="item_list clearfix">
+							<div class="item">
+								<strong>칼라출력 장비</strong>
+								<ul>
+									<li>칼라 Scan to File A3 사이즈까지 가능 (저장가능 확장자명 : TIFF, JPG, PDF)</li>
+									<li>출력 가능 종이 사이즈 : 305 x 480 (mm)</li>
+									<li>출력 가능 종이 평량 : 280g까지 가능</li>
+								</ul>
+							</div>
+							<div class="item">
+								<strong>흑백출력 장비</strong>
+								<ul>
+									<li>흑백 Scan to File A3 사이즈까지 가능 (저장가능 확장자명 : TIFF, JPG, PDF)</li>
+									<li>출력 가능 종이 사이즈 : 305 x 480 (mm)</li>
+									<li>출력 가능 종이 평량 : 280g까지 가능</li>
+								</ul>
+							</div>
+							<div class="item">
+								<strong>대형칼라출력 장비</strong>
+								<ul>
+									<li>출력 가능 폭 : 36인치 [900(mm)]</li>
+									<li>용지종류 : 반광지, 유광지, 유포지, 텐트천, 페트(백릿)</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div id="item5" class="item_box item5">
 						<h3>지도</h3>
-						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<div class="inner">
+							<div class="map_view"><img src="./image/sub/temp_centermap.jpg" alt=""></div>
+							<div class="btn_wrap">
+								<a href="#url" class="btn type01">목록</a>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- //본문 -->
