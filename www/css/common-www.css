@@ -190,15 +190,15 @@ body.open {overflow: hidden;}
 .gnb_wrap .btn_toggle {position: absolute; left: 0; top: 0; width: 215px; height: 100%; padding-left: 20px; z-index: 30; transition: left .4s linear;}
 .gnb_wrap .btn_toggle > span {font-size: 16px;}
 .gnb_wrap .btn_toggle.on {width: 30px; left: calc(100% - 30px); padding-left: 0;}
-.gnb_wrap .btn_toggle.on > span:not(.ico-close) {display: none;}
+.gnb_wrap .btn_toggle.on > span:not(.ico_close) {display: none;}
 .gnb_wrap.company .btn_toggle {background: #03a2ea;}
 .gnb_wrap.company .btn_toggle > span {color: #fff;}
-.gnb_wrap.company .btn_toggle .ico-close {float: right; width: 8px; height: 14px; margin-right: 14px; background: url('../image/common/arr-right.png') no-repeat 0 0;}
-.gnb_wrap.company .btn_toggle.on .ico-close {width: 14px; background: url('../image/common/ico-close.png') no-repeat 0 0;}
+.gnb_wrap.company .btn_toggle .ico_close {float: right; width: 8px; height: 14px; margin-right: 14px; background: url('../image/common/arr-right.png') no-repeat 0 0;}
+.gnb_wrap.company .btn_toggle.on .ico_close {width: 14px; background: url('../image/common/ico-close.png') no-repeat 0 0;}
 .gnb_wrap.mall .btn_toggle {background: #fff;}
 .gnb_wrap.mall .btn_toggle > span {color: #03a2ea;}
-.gnb_wrap.mall .btn_toggle .ico-close {float: right; width: 8px; height: 14px; margin-right: 14px; background: url('../image/common/arr-right.png') no-repeat 0 -14px;}
-.gnb_wrap.mall .btn_toggle.on .ico-close {width: 14px; background: url('../image/common/ico-close.png') no-repeat 0 -14px;}
+.gnb_wrap.mall .btn_toggle .ico_close {float: right; width: 8px; height: 14px; margin-right: 14px; background: url('../image/common/arr-right.png') no-repeat 0 -14px;}
+.gnb_wrap.mall .btn_toggle.on .ico_close {width: 14px; background: url('../image/common/ico-close.png') no-repeat 0 -14px;}
 
 .gnb_wrap.company .mall_gnb {display: inline-block; position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 30; opacity: 0; visibility: hidden; transition: opacity .4s .4s;}
 .gnb_wrap.mall .mall_gnb {display: inline-block; margin: 19px 0 0 292px;}
