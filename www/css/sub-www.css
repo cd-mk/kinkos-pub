@@ -41,7 +41,7 @@
 .page_tab{margin-bottom:60px;height:64px;position: relative;width:100%; border-top:1px solid #e7e7e7;}
 .page_tab > ul{position: absolute;top:0;left:50%;transform: translateX(-50%);display: table;}
 .page_tab > ul > li{display: table-cell;}
-.page_tab > ul > li > a{display:block;width:306px;height:64px;line-height:64px;font-size:16px;color:#333;text-align:center;border-top:3px solid #fff;overflow:hidden;font-weight:500;}
+.page_tab > ul > li > a{display:block;width:306px;height:64px;line-height:64px;font-size:20px;color:#333;text-align:center;border-top:3px solid #fff;overflow:hidden;font-weight:500;}
 .page_tab > ul > li.active a, .page_tab > ul > li a:hover{border-color:#000;color:#000;}
 
  /* anchor */
@@ -114,6 +114,7 @@ select::-ms-expand {display: none;}
 .btn.type01 {background:#03a2ea; color:#fff;}
 .btn.type02 {background:#fff; border:1px solid #03a2ea; color:#03a2ea;}
 
+
 /*  ---------------------
         sub
  --------------------- */
@@ -124,7 +125,6 @@ select::-ms-expand {display: none;}
 .center_view .item1 .inner {width:100%;}
 .center_view .item1 .inner .left {float:left;width:730px;margin-right:50px;}
 .center_view .item1 .inner .right {float:left;min-height: 454px;}
-
 
 /* 센터안내 */
 .center_info_wrap {margin-bottom: 160px;}
@@ -172,3 +172,19 @@ select::-ms-expand {display: none;}
 .event_wrap .photo_list li:nth-child(7),
 .event_wrap .photo_list li:last-child {margin-bottom:40px;}
 .event_wrap  .photo_list .img_box {width:100%; height:300px;}
+
+/* 직무소개 */
+.job_intro_wrap {margin-bottom: 156px;}
+.job_intro_wrap .item_list {margin-top: 60px;}
+.job_intro_wrap .item_list > li {float: left; width: 490px; margin-left: 30px;}
+.job_intro_wrap .item_list > li:first-child {margin-left: 0;}
+.job_intro_wrap .item_list > li:nth-child(4) {margin-left: 0;}
+.job_intro_wrap .item_list > li:nth-child(n + 4) {margin-top: 80px;}
+.job_intro_wrap .item_list .thumb img {width: 100%;}
+.job_intro_wrap .item_list .txt {margin-top: 28px;}
+.job_intro_wrap .item_list .txt strong {font-size: 24px;}
+.job_intro_wrap .item_list .txt .full_name {margin-left: 10px; font-size: 16px; font-weight: 400; color: #959595;}
+.job_intro_wrap .item_list .txt p {margin-top: 10px; font-size: 18px; color: #333; line-height: 1.44;}
+
+
+
