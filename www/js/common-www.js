@@ -82,9 +82,11 @@ var setGnb = function() {
 // MOBILE GNB
 var mobileGnb = function () {
   $('.btn_mo_gnb').on('click', function() {
+    $('body').addClass('open');
     $('.mo_gnb_wrap').addClass('active');
   });
   $('.mo_gnb_wrap .btn_close').on('click', function() {
+		$('body').removeClass('open');
     $('.mo_gnb_wrap').removeClass('active');
   });
   $('.menu_item .title').on('click', function() {

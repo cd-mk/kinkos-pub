@@ -106,7 +106,7 @@ input {
 .swiper-button-prev {background-image:url(../image/common/prev.png); left:20px; right:auto; width:84px; height:84px; background-size:84px;}
 .swiper-button-next.small {background-image:url(../image/common/next-small.png); right:0; left:auto; width:21px; height:18px; background-size:21px;}
 .swiper-button-prev.small {background-image:url(../image/common/prev-small.png); left:0; right:auto; width:21px; height:18px; background-size:21px;}
-
+body.open {overflow: hidden;}
 
 @media screen and (max-width: 1024px) {
   .swiper-button-next {background-image:url(../image/common/next_mo.svg); right:20px; left:auto; width:21px; height:18px; background-size:21px;}
