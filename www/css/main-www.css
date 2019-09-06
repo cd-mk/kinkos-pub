@@ -6,6 +6,8 @@
 	.swiper-scrollbar-drag {background: #000}
 	.swiper-button-next {right:0;}
 	.swiper-button-prev {left:0;}
+	.swiper-button-next.swiper-button-disabled, 
+	.swiper-button-prev.swiper-button-disabled {opacity:1;}
 }
 
 .visual_wrap {position:relative; }
@@ -219,9 +221,9 @@
 .info_wrap .item_box.cs .item .center_info {margin-top: 36px; height: 68px;}
 .info_wrap .item_box.cs .item .center_info > li {font-size: 24px; margin-top: 10px;}
 .info_wrap .item_box.cs .item .center_info > li:first-child {margin-top: 0;}
-.info_wrap .item_box.cs .swiper-button-prev,
-.info_wrap .item_box.cs .swiper-button-next {display:none;}
+
 @media screen and (max-width:1024px) {
+	.info_wrap {padding-bottom:58px;}
   .info_wrap .item_box {float:none;}
   .info_wrap .item_box.notice {padding-right:0; width:100%; height:290px; border-right:none;}
   .info_wrap .item_box.notice .notice_list {margin-top:15px;}
@@ -232,5 +234,6 @@
   .info_wrap .item_box.cs .item {float: none;}
   .info_wrap .item_box.cs .item .sub_title {margin-top:30px;}
   .info_wrap .item_box.cs .item .ico {position:absolute; left:0; bottom:0; margin-top:0;}
-  .info_wrap .item_box.cs .swiper-slide-next {margin-left:-12%; opacity:0.2;}  
+	.info_wrap .item_box.cs .swiper-slide-next {margin-left:-12%; opacity:0.2;}  
+	.info_wrap .item_box.cs .swiper-pagination {bottom:6px;}
 }
