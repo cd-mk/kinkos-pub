@@ -100,9 +100,9 @@ caption {font-size:0;}
 #wrap {}
 .layout_width {width:1530px;margin:0 auto;}
 .layout_full {width:100%;}
-.pc {position: block;}
+.pc {display: block;}
 .mo {display: none;}
-.dim {display: none; position: absolute; left: 0; top:0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10;}
+.dim {display: none; position: fixed; left: 0; top:0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10;}
 .swiper-button-next {background-image:url(../image/common/next.png); right:20px; left:auto; width:84px; height:84px; background-size:84px;}
 .swiper-button-prev {background-image:url(../image/common/prev.png); left:20px; right:auto; width:84px; height:84px; background-size:84px;}
 .swiper-button-next.small {background-image:url(../image/common/next-small.png); right:0; left:auto; width:21px; height:18px; background-size:21px;}
@@ -158,16 +158,17 @@ body.open {overflow: hidden;}
 .bbs_list table {width:100%;}
 .bbs_list th {height:54px; border-top:2px solid #000; border-bottom:1px solid #e7e7e7; color:#000; vertical-align:middle; font-size:16px; font-weight:bold;}
 .bbs_list td {height:70px; border-bottom:1px solid #e7e7e7; color:#333; vertical-align:middle; font-size:16px; font-weight:normal;}
-.bbs_list td a {display:inline-block; width:100%; color:#333; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; font-size:16px; font-weight:normal;}
+.bbs_list td .title {display:inline-block; width:100%; color:#333; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; font-size:16px; font-weight:normal;}
 .bbs_list td {text-align:center;}
 .bbs_list .cell_notice td, 
-.bbs_list .cell_notice td a {color:#000; font-weight:500;}
+.bbs_list .cell_notice td .title {color:#000; font-weight:500;}
 .bbs_list .cell_new td, 
-.bbs_list .cell_new td a {color:#ff0201; font-weight:500;}
+.bbs_list .cell_new td .title {color:#ff0201; font-weight:500;}
 .bbs_list .cell_new img {margin:0 auto; display:block; width:18px; height:18px;}
 .bbs_list .cell_left {padding-left:3.72%; text-align:left;}
 .bbs_list .cell_center {text-align:center;}
 .bbs_list .ico_new {display: inline-block; width: 18px; height: 18px; background: url('../image/common/ico-new.png') no-repeat 0 0;}
+.bbs_list .btn_wrap {margin-top: 0;}
 
 /*  ---------------------
         header

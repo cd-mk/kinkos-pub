@@ -52,20 +52,6 @@
 .item_anchor ul li a {width:100%;text-align: center;}
 
 /* 게시판 리스트 */
-.cont_wrap .bbs_list {width:100%;}
-.cont_wrap .bbs_list table {width:100%;}
-.cont_wrap .bbs_list th {height:54px; border-top:2px solid #000; border-bottom:1px solid #e7e7e7; color:#000; vertical-align:middle; font-size:16px; font-weight:bold;}
-.cont_wrap .bbs_list td {height:70px; border-bottom:1px solid #e7e7e7; color:#333; vertical-align:middle; font-size:16px; font-weight:normal;}
-.cont_wrap .bbs_list td a {display:inline-block; width:100%; color:#333; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; font-size:16px; font-weight:normal;}
-.cont_wrap .bbs_list td {text-align:center;}
-.cont_wrap .bbs_list .cell_notice td, 
-.cont_wrap .bbs_list .cell_notice td a {color:#000; font-weight:500;}
-.cont_wrap .bbs_list .cell_new td, 
-.cont_wrap .bbs_list .cell_new td a {color:#ff0201; font-weight:500;}
-.cont_wrap .bbs_list .cell_new img {margin:0 auto; display:block; width:18px; height:18px;}
-.cont_wrap .bbs_list .cell_left {padding-left:3.72%; text-align:left;}
-.cont_wrap .bbs_list .cell_center {text-align:center;}
-
 .search_box {overflow:hidden;}
 .search_box form {float:right;}
 .search_box .search_inp {float:left; position:relative; margin-left:10px;}
@@ -120,14 +106,15 @@ select::-ms-expand {display: none;}
 .center_view_wrap .item1 .inner .left {float:left;width:730px;}
 .center_view_wrap .item1 .inner .left img {width: 100%;}
 .center_view_wrap .item1 .inner .right {float:left; width: calc(100% - 730px); padding-left: 50px; box-sizing: border-box;}
-.center_view_wrap .item1 .btn_wrap {margin-top: 48px;}
-.center_view_wrap .item1 .btn_wrap .btn {float:left; width: 304px;}
+.center_view_wrap .item1 .inner .right h3 {margin-bottom: 30px; font-size: 36px;}
+.center_view_wrap .item1 .btn_wrap {margin-top: 52px;}
+.center_view_wrap .item1 .btn_wrap .btn {float:left; width: 304px; font-size: 18px; font-weight: bold;}
 .center_view_wrap .item1 .btn_wrap .btn:first-child {margin-right: 12px;}
 
 .center_view_wrap .info_tbl table {width: 100%;}
-.center_view_wrap .info_tbl th {width: 120px; padding: 11px 0; text-align: left; font-size: 16px; font-weight: 500;}
-.center_view_wrap .info_tbl td {padding: 11px 0; color: #333;}
-.center_view_wrap .info_tbl td p {margin-top: 12px; color: #959595;}
+.center_view_wrap .info_tbl th {width: 130px; padding: 10px 0; text-align: left; font-size: 18px; font-weight: 500;}
+.center_view_wrap .info_tbl td {font-size: 18px; color: #777;}
+.center_view_wrap .info_tbl td .txt_holiday {margin-top: 12px;}
 .center_view_wrap .service_list .service_item {float: left; margin-left: 50px;}
 .center_view_wrap .service_list .service_item:first-child {margin-left: 0;}
 .center_view_wrap .service_list .service_item .ico {display: block;}
@@ -163,11 +150,14 @@ select::-ms-expand {display: none;}
 .center_info_wrap .bbs_list .head_item .sort_item .sort_opt:first-child {margin-left: 0;}
 .center_info_wrap .bbs_list .head_item .sort_item .sort_opt:first-child::before {display: none;}
 .center_info_wrap .bbs_list .head_item .sort_item .sort_opt.active {color: #03a2ea;}
-.center_info_wrap .bbs_list thead tr th:first-child {width: 260px;}
-.center_info_wrap .bbs_list thead tr th:nth-child(2) {width: 420px;}
-.center_info_wrap .bbs_list thead tr th:nth-child(4) {width: 380px;}
 .center_info_wrap .bbs_list tr .cell_left {padding-left: 0;}
+.center_info_wrap .bbs_list tr td {height: 200px;}
+.center_info_wrap .bbs_list tr td:first-child {padding-left: 50px;}
+.center_info_wrap .bbs_list tr td:nth-child(3) {padding-left: 55px;}
 .center_info_wrap .bbs_list .btn_more {display: inline-block; width: 98px; height: 36px; border: 1px solid #dedede; color: #160000; line-height: 35px; text-align: center;}
+.center_info_wrap .bbs_list .hours_list > li {margin-top: 8px; font-size: 18px; color: #333;}
+.center_info_wrap .bbs_list .hours_list > li:first-child {margin-top: 0;}
+.center_info_wrap .bbs_list .hours_txt {margin-top: 10px; font-size: 14px;}
 
 /* 공지사항 */
 .notice_wrap .search_box select {float:left; width:136px;}

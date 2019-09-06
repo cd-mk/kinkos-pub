@@ -94,9 +94,9 @@ input {
 .wrap {min-width:1530px;}
 .layout_width {width:1530px;margin:0 auto;}
 .layout_full {width:100%;}
-.pc {position: relative;}
+.pc {display: block;}
 .mo {display: none;}
-.dim {display: none; position: absolute; left: 0; top:0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10;}
+.dim {display: none; position: fixed; left: 0; top:0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10;}
 body.open {overflow: hidden;}
 @media screen and (max-width: 1024px) {
   .layout_width {width:100%; padding:0 4%;}
