@@ -264,9 +264,18 @@ select::-ms-expand {display: none;}
 /* Only Kinkos */
 .intro_wrap {width:1010px; margin:0 auto;}
 .intro_wrap .cont_img {display:block; margin-top:60px; width:100%; height:249px; border:1px solid pink;}
-.intro_wrap .list_only {margin-top:10px; overflow:hidden; text-align:left;}
-.intro_wrap .list_only li {float:left; position:relative; padding:35px 0 35px 130px; box-sizing:border-box; width:calc((100% - 15px) / 2); min-height:87px; border-bottom:1px solid #e7e7e7;}
-.intro_wrap .list_only li:before {content:''; position:absolute; top:50%; left:0; width:100px; height:87px; transform:translateY(-50%); background:pink;}
+.intro_wrap .list_only {margin-top:5px; overflow:hidden; text-align:left;}
+.intro_wrap .list_only li {float:left; position:relative; padding:49px 0 49px 120px; box-sizing:border-box; width:calc((100% - 15px) / 2); min-height:87px; border-bottom:1px solid #e7e7e7;}
+.intro_wrap .list_only li:nth-child(even) {padding:49px 0 49px 145px;}
+.intro_wrap .list_only li div {position:absolute; top:50%; left:0; width:89px; height:87px; transform:translateY(-50%); text-align:center;}
+.intro_wrap .list_only li:nth-child(even) div {left:25px;}
+.intro_wrap .list_only li div img {position:relative; top:50%; left:50%; display:block; transform:translate(-50%, -50%);}
+.intro_wrap .list_only li:first-child div img {width:74px; height:76px;}
+.intro_wrap .list_only li:nth-child(2) div img {width:85px; height:74px;}
+.intro_wrap .list_only li:nth-child(3) div img {width:89px; height:86px;}
+.intro_wrap .list_only li:nth-child(4) div img {width:67px; height:82px;}
+.intro_wrap .list_only li:nth-child(5) div img {width:85px; height:85px;}
+.intro_wrap .list_only li:last-child div img {width:88px; height:83px;}
 .intro_wrap .list_only li p {color:#222; font-size:20px; font-weight:bold; line-height:normal;}
 
 /* 기업이념 및 연혁 */
@@ -302,8 +311,9 @@ select::-ms-expand {display: none;}
 .history_wrap .history_item .phi_list02 ul li strong p  {font-size:18px; font-weight:normal; line-height:normal;}
 .history_wrap .history_item .phi_list02 ul li > span {display:block; margin-top:103px; font-size:18px; line-height:normal;}
 .history_wrap .history_item:last-child {margin-top:80px;}
-.history_wrap .history_item .history_list {position: relative; margin:0 auto; width:1288px;}
-.history_wrap .history_item .history_list:before {content:''; z-index:-1; position:absolute; top:16px; bottom:50px; left:50%; width:1px; transform:translateX(-50%); border-left:1px dotted #666;}
+.history_wrap .history_item .history_list {position: relative; margin:0 auto 60px; width:1270px;}
+.history_wrap .history_item .history_list:before {content:''; z-index:-1; position:absolute; top:16px; bottom:-50px; left:50%; width:1px; transform:translateX(-50%); border-left:1px dotted #666;}
+.history_wrap .history_item .history_list:after {content:''; position:absolute; bottom:-50px; left:50%; width:8px; height:8px; transform:translateX(-50%); background:#03a2ea; border-radius:100%;}
 .history_wrap .history_item .history_list > li {position:relative; margin-top:60px; width:100%; box-sizing:border-box;}
 .history_wrap .history_item .history_list > li:nth-child(odd) {padding-left:50%; text-align:left;}
 .history_wrap .history_item .history_list > li:nth-child(even) {padding-right:50%; text-align:right;}
@@ -316,6 +326,6 @@ select::-ms-expand {display: none;}
 .history_wrap .history_item .history_list > li p,
 .history_wrap .history_item .history_list > li ul li {font-size:18px; font-weight:normal; line-height:normal;}
 .history_wrap .history_item .history_list > li span {color:#03a2ea; font-weight:bold;}
-.history_wrap .history_item .history_list > li.point_bullet img {z-index:-1; position:absolute; top:42px; width:260px; height:180px; border:1px solid pink;}
-.history_wrap .history_item .history_list > li:nth-child(odd).point_bullet img {right:0;}
+.history_wrap .history_item .history_list > li.point_bullet img {z-index:-1; position:absolute; top:42px; width:260px; height:180px;}
+.history_wrap .history_item .history_list > li:nth-child(odd).point_bullet img {right:-15px;}
 .history_wrap .history_item .history_list > li:nth-child(even).point_bullet img {left:0;}
