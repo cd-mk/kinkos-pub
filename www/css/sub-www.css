@@ -254,19 +254,20 @@ select::-ms-expand {display: none;}
 
 /* 인재상 */
 .talent_wrap {margin-bottom: 140px;}
-.talent_wrap .item_box {width: 1010px; margin: 60px auto 0;}
-.talent_wrap .item_box .item {float: left; width: 50%; box-sizing: border-box; border: 1px dotted #777;}
-.talent_wrap .item_box .item:first-child {padding:40px 0 95px 58px;}
-.talent_wrap .item_box .item:nth-child(2) {padding:40px 0 95px 247px;}
-.talent_wrap .item_box .item:nth-child(3) {padding:95px 0 40px 58px;}
-.talent_wrap .item_box .item:nth-child(4) {padding:95px 0 40px 247px;}
+.talent_wrap .item_box {position: relative; width: 1010px; height: 476px; margin: 60px auto 0; background: url('../image/sub/img-personmodel.png') no-repeat center;}
+.talent_wrap .item_box .item {float: left; width: 50%; height: 234px; box-sizing: border-box;}
+.talent_wrap .item_box .item:first-child {padding: 40px 247px 0 0;}
+.talent_wrap .item_box .item:nth-child(2) {padding: 40px 0 0 247px;}
+.talent_wrap .item_box .item:nth-child(3) {padding: 93px 247px 0 0 ;}
+.talent_wrap .item_box .item:nth-child(4) {padding: 93px 0 0 247px;}
 .talent_wrap .item_box .item:nth-child(odd) .txt_box {text-align: right;}
-.talent_wrap .item_box .item .txt_box {width: 200px;}
 .talent_wrap .item_box .item .txt_box strong {font-size: 24px; color: #222;}
 .talent_wrap .item_box .item .txt_box p {margin-top: 12px; font-size: 18px; color: #222; line-height: 1.44;}
+.talent_wrap .item_box .float_txt {position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700; color: #fff; text-align: center; line-height: 1.5;}
 .talent_wrap .item_list {margin-top: 60px; border-top: 2px solid #333; border-bottom: 1px solid #e7e7e7;}
 .talent_wrap .item_list > li {position: relative; float: left; width: 25%; height: 344px; box-sizing: border-box; border-left: 1px solid #e7e7e7; text-align: center;}
 .talent_wrap .item_list > li:first-child {border-left: 0;}
+.talent_wrap .item_list .ico {display: block; height: 140px;}
 .talent_wrap .item_list > li strong {font-size: 24px;}
 .talent_wrap .item_list > li p {margin-top: 20px; font-size: 18px; color: #222;}
 .talent_wrap .item_list .item_con {position: absolute; left: 0; bottom: 60px; width: 100%;}
