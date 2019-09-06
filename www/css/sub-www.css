@@ -119,11 +119,23 @@ select::-ms-expand {display: none;}
 .center_view_wrap .service_list .service_item:first-child {margin-left: 0;}
 .center_view_wrap .service_list .service_item .ico {display: block;}
 .center_view_wrap .service_list .service_item .name {display: block; margin-top: 17px; font-size: 16px; color: #333;}
-.center_view_wrap .item3 .item {float: left; width: 50%;}
-.center_view_wrap .item3 .item strong {font-size: 16px; font-weight: 500;}
-.center_view_wrap .item3 .item ul {margin-top: 16px;}
-.center_view_wrap .item3 .item ul > li {margin-top: 8px; font-size: 16px; color: #333;}
-.center_view_wrap .item3 .item ul > li:first-child {margin-top: 0;}
+.center_view_wrap .item3 .item {float: left; width: 74%;}
+.center_view_wrap .item3 .item:first-child {width: 26%;}
+.center_view_wrap .item3 .item strong {font-size: 18px;}
+.center_view_wrap .item3 .item ul {margin-top: 26px;}
+.center_view_wrap .item3 .item ul > li {float: left; display: table; width: calc(100% / 3);}
+.center_view_wrap .item3 .item ul > li:nth-child(n + 4) {margin-top: 16px;}
+.center_view_wrap .item3 .item .ico_product {display: table-cell; width: 60px; height: 60px; background: url('../image/sub/ico-product.png') no-repeat;}
+.center_view_wrap .item3 .item .ico_product.windows {background-position: 0 0;}
+.center_view_wrap .item3 .item .ico_product.ms {background-position: 0 -60px;}
+.center_view_wrap .item3 .item .ico_product.acrobat {background-position: 0 -120px;}
+.center_view_wrap .item3 .item .ico_product.hangeul {background-position: 0 -180px;}
+.center_view_wrap .item3 .item .ico_product.ps {background-position: 0 -240px;}
+.center_view_wrap .item3 .item .ico_product.ai {background-position: 0 -300px;}
+.center_view_wrap .item3 .item .ico_product.id {background-position: 0 -360px;}
+.center_view_wrap .item3 .item .product_info {display: table-cell; padding-left: 20px; vertical-align: middle;}
+.center_view_wrap .item3 .item .product_info .name {display: block; font-size: 18px; color: #222;}
+.center_view_wrap .item3 .item .product_info .txt {display: block; margin-top: 10px; font-size: 18px; color: #222;}
 
 .center_view_wrap .item4 .item {float: left; width: 50%;}
 .center_view_wrap .item4 .item:nth-child(n + 3) {margin-top: 40px;}
