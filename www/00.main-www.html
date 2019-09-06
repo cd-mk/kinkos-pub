@@ -47,26 +47,38 @@
       <!-- visual area Swiper -->
       <div class="visual_wrap swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background:url('./image/main/visual-slide_1.png') no-repeat 50% 50% / cover;">
+          <div class="swiper-slide">
+            <div class="bg">
+              <img src="./image/main/bg-slide02.png" alt="" class="pc">
+              <img src="./image/main/m-bg-slide02.png" alt="" class="mo"/>
+            </div>
             <div class="txt">
-              <span class="title" data-wow-duration="1s" data-wow-offset="100">고객의 비지니스 성공파트너,<br>
-                킨코스 코리아</span>
-              <p>
-                컬러 출력, 제본, 디자인, Signs & Graphics 등의<br>
-                다양한 솔루션과 비즈니스 서비스를 제공합니다.
-              </p>
-              <a href="#url" class="btn_txt more">MORE VIEW</a>
+              <div class="txt_inner">
+                <span class="title" data-wow-duration="1s" data-wow-offset="100">고객의 비지니스 성공파트너,<br>
+                  킨코스 코리아</span>
+                <p>
+                  컬러 출력, 제본, 디자인, Signs & Graphics 등의<br>
+                  다양한 솔루션과 비즈니스 서비스를 제공합니다.
+                </p>
+                <a href="#url" class="btn_txt more">MORE VIEW</a>
+              </div>
             </div>
           </div>
-          <div class="swiper-slide" style="background:url('./image/main/visual-slide_2.png') no-repeat 50% 50% / cover;">
+          <div class="swiper-slide">
+            <div class="bg">
+              <img src="./image/main/bg-slide01.png" alt="" class="pc">
+              <img src="./image/main/m-bg-slide01.png" alt="" class="mo"/>
+            </div>
             <div class="txt">
-              <span class="title">투명부채・토퍼<br>
-                이거하나면이벤트 성공각!</span>
-              <p>
-                굿즈・여행・감성문구・홍보용 등<br>
-                상황에 맞게 다양하게 제작해보세요.
-              </p>
-              <a href="#url" class="btn_txt more">MORE VIEW</a>
+              <div class="txt_inner">
+                <span class="title">투명부채・토퍼<br>
+                  이거하나면이벤트 성공각!</span>
+                <p>
+                  굿즈・여행・감성문구・홍보용 등<br>
+                  상황에 맞게 다양하게 제작해보세요.
+                </p>
+                <a href="#url" class="btn_txt more">MORE VIEW</a>
+              </div>
             </div>
           </div>
         </div>
@@ -124,7 +136,7 @@
                 <p>
                   킨코스에서는 사진인화처럼<br>
                   선명한 컬러와 높은<br>
-                  해상도로 대형 칼라 출력이<br>
+                  해상도로 대형 칼라 출력이<br class="pc">
                   가능합니다.
                 </p>
                 <a href="#url" class="btn_txt more">MORE VIEW</a>
@@ -454,10 +466,10 @@
             <div class="swiper-scrollbar mo"></div>
             <div class="pg_nav">
               <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination mo"></div>
               <!-- Add Arrows -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next mo"></div>
+              <div class="swiper-button-prev mo"></div>
             </div>
           </div>
         </div>
@@ -508,7 +520,8 @@
         breakpoints: {
           // when window width is >= ㅡ모바일 1024이하
           1024: {
-            spaceBetween: 16,
+            spaceBetween: 15,
+            centeredSlides:false,
             scrollbar: {
               el: '.swiper-scrollbar',
               hide: false,
@@ -570,7 +583,15 @@
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
-            }  
+            },
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              hide: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction',
+            }
           });
         }  
 
