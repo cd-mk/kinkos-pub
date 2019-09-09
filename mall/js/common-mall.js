@@ -180,7 +180,6 @@ var consultSlide = new Swiper('.consult_slide', {
 			paginationClickable: true,
 			centeredSlides: true,
 			slidesPerView: 'auto',
-			centeredSlides:true,
 			roundLengths: true,
 			loop:true,
 			pagination: {
@@ -190,6 +189,16 @@ var consultSlide = new Swiper('.consult_slide', {
 		}
 	}
 });
+
+// 베스트 상품
+var mql = window.matchMedia("screen and (max-width: 1024px)");
+      
+		if (mql.matches) {
+			var swiper = new Swiper('.bestPrd_slide', {
+
+		});
+	} 
+
 (function () {
 	var width = 1530;
 

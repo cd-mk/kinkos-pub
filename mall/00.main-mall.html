@@ -530,21 +530,21 @@
           <strong class="title">손쉬운 제작</strong>
           <div class="step">
             <span class="step_item doc">
-              <strong>01. 상품선택</strong>
+              <strong>01.<br class="mo"> 상품선택</strong>
               <p>
                 제작해야할 상품을<br>
                 선택해주세요.
               </p>
             </span>
             <span class="step_item cloud">
-              <strong>02. 파일 추가</strong>
+              <strong>02.<br class="mo"> 파일 추가</strong>
               <p>
                 웹하드에 원하시는<br>
                 파일을 올려주세요.
               </p>
             </span>
             <span class="step_item basket">
-              <strong>03. 장바구니 저장</strong>
+              <strong>03.<br class="mo"> 장바구니 저장</strong>
               <p>
                 원하시는 옵션을 선택 후<br>
                 장바구니 클릭하면 완성!
@@ -698,13 +698,20 @@
           var swiper = new Swiper('.info_wrap .cs', {
             roundLengths: true,
             slidesPerView: 1,
-            roundLengths: true,
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
-            }  
+            },
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              hide: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction',
+            }
           });
-      }   
+        }    
     </script>
 </body>
 
