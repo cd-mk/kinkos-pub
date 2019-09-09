@@ -339,5 +339,9 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .history_wrap .history_item .history_list > li:nth-child(odd).point_bullet img {right:-15px;}
 .history_wrap .history_item .history_list > li:nth-child(even).point_bullet img {left:0;}
 
+/* 고객지원 */
+.support_wrap .inner {margin-top: 34px;}
+
 /* 개인정보 수집 및 이용안내 팝업 */
 .popup_wrap .privacy_txt {margin-top: 30px; height: 456px; max-height: 456px; overflow-y: auto; font-size: 16px;} */
+

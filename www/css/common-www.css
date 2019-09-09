@@ -56,6 +56,8 @@ input {
   color: #000;
   box-sizing: border-box;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0;}
 /* select */
 select { padding:0 20px; width: 100%; height:50px; box-sizing: border-box; border-radius: 0; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url(../images/common/arr-bottom.png) no-repeat; background-position: right 11px center; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 select::-ms-expand {display: none;}
@@ -199,8 +201,8 @@ body.open {overflow: hidden;}
 .form_wrap .form_group.top_line {margin-top: 40px; padding-top: 40px; border-top: 1px solid #e7e7e7;}
 .form_wrap .form_group.btm_line {padding-bottom: 40px; border-bottom: 1px solid #e7e7e7;}
 .form_wrap .form_group .form_item {display: table; width: 100%;}
-.form_wrap .form_group .form_item .txt_vaild {display: none; margin-top: 10px; color: #03a2ea;}
-.form_wrap .form_group .form_item.not_vaild .txt_vaild {display: inline-block;}
+.form_wrap .form_group .form_item .txt_vaild {display: none; float: left; margin-top: 10px; color: #03a2ea;}
+.form_wrap .form_group .form_item.not_vaild .txt_vaild {display: block;}
 .form_wrap .form_group .form_item.is_vaild .txt_vaild {display: none;}
 .form_wrap .form_group .form_item .form_name {display: table-cell; width: 114px; padding-top: 14px; font-size: 16px; font-weight: 700; vertical-align: top;}
 .form_wrap .form_group .form_item .form_name.ver_mid {vertical-align: middle;}

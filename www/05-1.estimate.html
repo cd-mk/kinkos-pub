@@ -15,7 +15,7 @@
 	<meta property="og:image" content="./image/main/logo.png">
 	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-	<title>서비스 의견 | 고객지원 | 킨코스코리아</title>
+	<title>견적 및 상품문의 | 고객지원 | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
 	<link rel="stylesheet" href="./css/lib/animate.css">
   <link rel="stylesheet" href="./css/lib/swiper.min.css">
@@ -55,7 +55,7 @@
 				<a href="./00.main-www.html" class="home">Home</a>
 				<ul class="item_list">
 					<li><a href="#url">고객지원</a></li>
-					<li><a href="#url">서비스 의견</a></li>
+					<li><a href="#url">견적 및 상품문의</a></li>
 				</ul>
 			</div>
 			<!-- //breadcrumb  -->
@@ -68,8 +68,8 @@
 				<!-- page tab -->
 				<div class="page_tab">
 					<ul>
-						<li><a href="./05-1.estimate.html">견적 및 상품문의</a></li>
-						<li class="active"><a href="./05-3.opinion.html">서비스 의견</a></li>
+						<li class="active"><a href="./05-1.estimate.html">견적 및 상품문의</a></li>
+						<li><a href="./05-3.opinion.html">서비스 의견</a></li>
 						<li><a href="./05-4.ally.html">제휴 및 제안</a></li>
 						<li><a href="#">자주묻는질문</a></li>
 					</ul>
@@ -80,21 +80,28 @@
 				<!-- 콘텐츠 "con_box" 고정 -->
 				<div class="con_box support_wrap">
 					<div class="tit_box">
-						<h3>서비스 의견</h3>
+						<h3>견적 및 상품문의</h3>
           </div>
 
           <div class="inner clearfix">
             <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
             <form action="">
               <fieldset>
-                <legend>서비스의견 입력 양식</legend>
+                <legend>견적 및 상품문의 작성 양식</legend>
                 <div class="form_wrap type_select">
-                  <div class="form_group">
+                  <div class="form_group col2">
                     <div class="form_item">
                       <select name="" id="" title="문의 유형 선택">
                         <option value="">문의 유형을 선택 하세요.</option>
                         <option value="">문의 유형1</option>
                         <option value="">문의 유형2</option>
+                      </select>
+                    </div>
+                    <div class="form_item">
+                      <select name="" id="" title="세부 문의 유형 선택">
+                        <option value="">세부내용을 선택 하세요.</option>
+                        <option value="">세부 문의 유형1</option>
+                        <option value="">세부 문의 유형2</option>
                       </select>
                     </div>
                   </div>
@@ -104,39 +111,6 @@
                   <div class="form_group col2">
                     <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
                     <div class="form_item">
-                      <span class="form_name">방문매장 <sup class="require">*</sup></span>
-                      <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">매장 선택</option>
-                          <option value="">매장1</option>
-                          <option value="">매장2</option>
-                        </select>
-                        <p class="txt_vaild">방문매장을 선택해주세요</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group col2">
-                    <div class="form_item">
-                      <span class="form_name">방문일 <sup class="require">*</sup></span>
-                      <div class="form_inp">
-                        <input type="text" class="inp_date" title="방문 날짜 선택">
-                        <p class="txt_vaild">방문일을 입력해주세요</p>
-                      </div>
-                    </div>
-                    <div class="form_item">
-                      <span class="form_name">방문시간 <sup class="require">*</sup></span>
-                      <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">시간 선택</option>
-                          <option value="">07:00</option>
-                          <option value="">08:00</option>
-                        </select>
-                        <p class="txt_vaild">방문시간을 선택해주세요</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group col2">
-                    <div class="form_item">
                       <span class="form_name">이름 <sup class="require">*</sup></span>
                       <div class="form_inp">
                         <input type="text" title="이름 입력">
@@ -144,33 +118,63 @@
                       </div>
                     </div>
                     <div class="form_item">
-                      <span class="form_name">연락처</span>
-                      <div class="form_inp col3">
-                        <select name="" id="" title="전화번호 앞 3자리 선택">
-                          <option value="">010</option>
-                          <option value="">011</option>
-                          <option value="">017</option>
-                        </select>
-                        <input type="number" title="전화번호 중간 3자리 입력">
-                        <input type="number" title="전화번호 마지막 3자리 입력">
+                      <span class="form_name">이름 <sup class="require">*</sup></span>
+                      <div class="form_inp">
+                        <input type="password" title="비밀번호 입력">
+                        <p class="txt_vaild">비밀번호를 입력해주세요</p>
                       </div>
                     </div>
                   </div>
                   <div class="form_group col2">
                     <div class="form_item">
-                      <span class="form_name">이메일</span>
+                      <span class="form_name">업체명 <sup class="require">*</sup></span>
                       <div class="form_inp">
-                        <input type="text" title="이메일 주소 입력">
+                        <input type="text" title="업체명 입력">
+                        <p class="txt_vaild">업체명을 입력해주세요</p>
                       </div>
                     </div>
                     <div class="form_item">
-                      <span class="form_name">답변방법</span>
+                      <span class="form_name">이메일 <sup class="require">*</sup></span>
                       <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">답변 방법 선택</option>
-                          <option value="">방법1</option>
-                          <option value="">방법2</option>
+                        <input type="text" title="이메일 주소 입력">
+                        <p class="txt_vaild">이메일 주소를 입력해주세요</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_group col2">
+                    <div class="form_item">
+                      <span class="form_name">연락처 <sup class="require">*</sup></span>
+                      <div class="form_inp col3">
+                        <select name="" id="" title="전화번호 앞 3자리 선택">
+                          <option value="">02</option>
+                          <option value="">031</option>
+                          <option value="">032</option>
                         </select>
+                        <input type="number" title="전화번호 중간 3자리 입력">
+                        <input type="number" title="전화번호 마지막 3자리 입력">
+                        <p class="txt_vaild">전화번호를 입력해주세요</p>
+                      </div>
+                    </div>
+                    <div class="form_item">
+                      <span class="form_name">연락처 <sup class="require">*</sup></span>
+                      <div class="form_inp col3">
+                        <select name="" id="" title="휴대전화 앞 3자리 선택">
+                          <option value="">010</option>
+                          <option value="">011</option>
+                          <option value="">017</option>
+                        </select>
+                        <input type="number" title="휴대전화 중간 3자리 입력">
+                        <input type="number" title="휴대전화 마지막 3자리 입력">
+                        <p class="txt_vaild">휴대전화 번호를 입력해주세요</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_group col2">
+                    <div class="form_item">
+                      <span class="form_name">수령센터 <sup class="require">*</sup></span>
+                      <div class="form_inp">
+                        <input type="text" title="수령 센터 입력">
+                        <p class="txt_vaild">수령 센터를 입력해주세요</p>
                       </div>
                     </div>
                   </div>
