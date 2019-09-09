@@ -97,9 +97,15 @@ input {
 .pc {display: block;}
 .mo {display: none;}
 .dim {display: none; position: fixed; left: 0; top:0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10;}
+.swiper-button-next {background-image:url(../image/common/next.png); right:20px; left:auto; width:84px; height:84px; background-size:84px;}
+.swiper-button-prev {background-image:url(../image/common/prev.png); left:20px; right:auto; width:84px; height:84px; background-size:84px;}
+.swiper-button-next.small {background-image:url(../image/common/next-small.png); right:0; left:auto; width:21px; height:18px; background-size:21px;}
+.swiper-button-prev.small {background-image:url(../image/common/prev-small.png); left:0; right:auto; width:21px; height:18px; background-size:21px;}
 body.open {overflow: hidden;}
 @media screen and (max-width: 1024px) {
   .layout_width {width:100%; padding:0 4%;}
+  .swiper-button-next {background-image:url(../image/common/next-mo.svg); right:20px; left:auto; width:21px; height:18px; background-size:21px;}
+  .swiper-button-prev {background-image:url(../image/common/prev-mo.svg); left:20px; right:auto; width:21px; height:18px; background-size:21px;}
 }
 
  /* headings */

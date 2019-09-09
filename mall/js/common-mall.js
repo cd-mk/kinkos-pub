@@ -125,7 +125,7 @@ var mainSlide = new Swiper('.visual_wrap', {
 	},
 });
 var speedSlide = new Swiper('.speed_slide', {
-	slidesPerView: 3,
+	slidesPerView: 3, 
 	spaceBetween: 30,
 	speed: 500,
 	loop: true,
@@ -135,6 +135,27 @@ var speedSlide = new Swiper('.speed_slide', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		// when window width is >= ㅡ모바일 1024이하
+		1024: {
+			slidesPerView: 'auto', 
+			spaceBetween: 15,
+			centeredSlides:false,
+			roundLengths: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				hide: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			}
+		}
 	}
 });
 var consultSlide = new Swiper('.consult_slide', {
@@ -152,6 +173,22 @@ var consultSlide = new Swiper('.consult_slide', {
 			return '<span class="' + className + '">' + bulletNames[index] + '</span>';
 		}
 	},
+	breakpoints: {
+		// when window width is >= ㅡ모바일 1024이하
+		1024: {
+			direction: 'horizontal',
+			paginationClickable: true,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			centeredSlides:true,
+			roundLengths: true,
+			loop:true,
+			pagination: {
+				spaceBetween: 12,
+				centeredSlides:true,				
+			}
+		}
+	}
 });
 (function () {
 	var width = 1530;
