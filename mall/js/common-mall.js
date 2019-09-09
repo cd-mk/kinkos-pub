@@ -140,6 +140,7 @@ var speedSlide = new Swiper('.speed_slide', {
 		// when window width is >= ㅡ모바일 1024이하
 		1024: {
 			slidesPerView: 'auto', 
+			loop: false,
 			spaceBetween: 15,
 			centeredSlides:false,
 			roundLengths: true,
