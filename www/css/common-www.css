@@ -47,6 +47,7 @@ button {
   color: #000; text-align: left;
   cursor: pointer;
 }
+/* input */
 input {
   padding: 0;
   border: 0;
@@ -56,8 +57,11 @@ input {
   box-sizing: border-box;
 }
 /* select */
-select { padding:0 20px; width: 100%; height:50px; box-sizing: border-box; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url(../images/common/arr-bottom.png) no-repeat; background-position: right 11px center; }
+select { padding:0 20px; width: 100%; height:50px; box-sizing: border-box; border-radius: 0; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url(../images/common/arr-bottom.png) no-repeat; background-position: right 11px center; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 select::-ms-expand {display: none;}
+
+/* textarea */
+textarea {width: 100%; height: 190px; padding: 20px; box-sizing: border-box; border: 1px solid #e7e7e7; font-family: 'notokr'; font-size:16px; color: #999;}
 
 /*  ---------------------
         font
@@ -131,8 +135,10 @@ body.open {overflow: hidden;}
 .btn_wrap {margin-top:60px; overflow:hidden;}
 .btn_wrap.center {position:relative; left:50%; display:inline-block; transform:translateX(-50%);}
 .btn_wrap .btn {display:inline-block; width:120px; height:50px; line-height:50px; text-align:center; font-size:14px; font-weight:500;}
+.btn_wrap .btn.large {width:200px; font-size:18px; font-weight:700;}
 .btn.type01 {background:#03a2ea; color:#fff;}
 .btn.type02 {background:#fff; border:1px solid #03a2ea; color:#03a2ea;}
+.btn.type03 {background:#777; color: #fff; border:1px solid transparent;}
 
 /* button col n~ */
 .btn_wrap[class*="col"] .btn {float: left; margin-left: 12px;}
@@ -173,7 +179,75 @@ body.open {overflow: hidden;}
 .bbs_list .btn_wrap {margin-top: 0;}
 
 /* form */
+.require {color: #03a2ea;}
 
+.inp_date {background: url('../image/common/ico-calender.png') no-repeat; background-position: right 12px center;}
+.form_alert {margin-bottom: 12px; text-align: right; color: #333;}
+.form_wrap input {width: 100%; height: 44px; line-height: 45px; color: #999; padding: 0 20px; border: 1px solid #dedede; box-sizing: border-box; font-size: 16px;}
+.form_wrap select {width: 100%; height: 44px; line-height: 45px; color: #999;}
+.form_wrap textarea {width: 100%; height: 190px; resize: none;}
+
+.form_wrap {margin-top: 80px; padding: 40px 0; border-top: 2px solid #000;}
+.form_wrap.type_select {height: 160px; margin-top: 0; padding: 55px 170px; background: #f3f4f6; box-sizing: border-box;}
+.form_wrap.type_select select {font-size: 18px; color: #777;}
+.form_wrap.type_select .form_group.col2 .form_item {width: calc((100% - 10px) / 2) !important; margin-left: 10px;}
+.form_wrap.type_select .form_group.col2 .form_item:first-child {margin-left: 0;}
+
+.form_wrap .form_group {margin-top: 20px; padding: 0 30px;}
+.form_wrap .form_group:first-child {margin-top: 0;}
+.form_wrap .form_group::after {content: ''; display: block; clear: both;}
+.form_wrap .form_group.top_line {margin-top: 40px; padding-top: 40px; border-top: 1px solid #e7e7e7;}
+.form_wrap .form_group.btm_line {padding-bottom: 40px; border-bottom: 1px solid #e7e7e7;}
+.form_wrap .form_group .form_item {display: table; width: 100%;}
+.form_wrap .form_group .form_item .txt_vaild {display: none; margin-top: 10px; color: #03a2ea;}
+.form_wrap .form_group .form_item.not_vaild .txt_vaild {display: inline-block;}
+.form_wrap .form_group .form_item.is_vaild .txt_vaild {display: none;}
+.form_wrap .form_group .form_item .form_name {display: table-cell; width: 114px; padding-top: 14px; font-size: 16px; font-weight: 700; vertical-align: top;}
+.form_wrap .form_group .form_item .form_name.ver_mid {vertical-align: middle;}
+.form_wrap .form_group .form_item .form_inp {display: table-cell;}
+.form_wrap .form_group .form_item .form_inp.col2 > input,
+.form_wrap .form_group .form_item .form_inp.col2 > select {float: left; width: calc((100% - 20px) / 2); margin-left: 10px;}
+.form_wrap .form_group .form_item .form_inp.col3 > input,
+.form_wrap .form_group .form_item .form_inp.col3 > select {float: left; width: calc((100% - 20px) / 3); margin-left: 10px;}
+.form_wrap .form_group .form_item .form_inp.col2.with_btn > input,
+.form_wrap .form_group .form_item .form_inp.col2.with_btn > select {width: calc(100% - 140px);}
+.form_wrap .form_group .form_item .form_inp.col3.with_btn > input,
+.form_wrap .form_group .form_item .form_inp.col3.with_btn > select {width: calc((100% - 150px) / 2);}
+.form_wrap .form_group .form_item .form_inp[class*="col"] > input:first-child,
+.form_wrap .form_group .form_item .form_inp[class*="col"] > select:first-child {margin-left: 0;}
+
+.form_wrap .form_group.col2 .form_item {float: left;}
+.form_wrap .form_group.col2 .form_item {width: calc(100% - 674px);}
+.form_wrap .form_group.col2 .form_item:first-child {width: 674px;}
+.form_wrap .form_group.col2 .form_item:nth-child(2) .form_name {width: 236px; padding-left: 120px;}
+.form_group .form_item .form_inp .btn  {float: right; width: 130px; height: 44px; margin-left: 10px; font-size: 16px; font-weight: 500; text-align: center; line-height: 44px; cursor: pointer; border: 0;}
+
+/* input file type */
+.form_group .form_item .form_inp input[type="file"] {overflow: hidden; position: absolute; width: 1px !important; height: 1px !important; clip: rect(1px, 1px, 1px, 1px); border: 0; line-height: 0;}
+.form_group.file_box .file_notice {margin:12px 0 0 114px;}
+.form_group.file_box .file_notice > li {margin-top: 6px; color: #999;}
+.form_group.file_box .file_notice > li::before {content: '- ';}
+.form_group.file_box .file_notice > li:first-child {margin-top: 0;}
+
+/* checkbox & radio */
+input[type="checkbox"],
+input[type="radio"] {overflow: hidden; position: absolute; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); border: 0; line-height: 0;}
+input[type="checkbox"] + label,
+input[type="radio"] + label {position: relative; padding: 2px 0 0 30px; cursor: pointer;}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {content: ''; position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: url('../image/common/ico-check.png') no-repeat 0 0;}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {background-position: 0 -24px;}
+.form_wrap .form_group.chk_box .form_item {margin-top: 25px;}
+.form_wrap .form_group.chk_box .form_item:first-child {margin-top: 0;}
+.form_wrap .form_group.chk_box .form_item .btn_popup {float: right; font-size: 16px; color: #333;}
+
+/* popup */
+.popup_wrap {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 99;}
+.popup_wrap .inner {position: absolute; left: 50%; top: 50%; width: 750px; height: 652px; padding: 40px 50px 80px; box-sizing: border-box; background: #fff; transform: translate(-50%, -50%);}
+.popup_wrap .inner .title {padding-bottom: 12px; font-size: 24px; font-weight: 500; border-bottom: 1px solid #222;}
+.popup_wrap .inner .btn_pop_close {position: absolute; right: 23px; top: 23px; width: 19px; height: 19px; background: url('../image/common/ico-close-big.png') no-repeat center;}
+.popup_wrap.active {display: block;}
 
 /*  ---------------------
         header

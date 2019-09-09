@@ -7,9 +7,9 @@
   <title>퍼블리싱가이드 > 코딩가이드 > Popup</title>
   <link href="common.css" rel="stylesheet" type="text/css">
   <link href="basic.css" rel="stylesheet" type="text/css">
-  <link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
   <link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
   <link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
+  <link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
   
   <script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
 </head>
@@ -42,43 +42,58 @@
   <div class="g_code_page">
     <div class="g_header">
       <h3 class="g_tit2">레이어 팝업</h3>
-      <span>Update. 2019.03.07</span>
+      <span>Update. 2019.09.09</span>
     </div>
     <div class="g_codebox">
       <!-- source code -->
       <div class="g_code_temp">
-        <!-- S : layerpopup -->
-        <a href="#url" class="js-layer-open" data-popup="layer-sample">팝업 호출 Click Me!</a>
-        <div class="layer_popup" data-popup="layer-sample">
-          <div class="popup_box">
-            <strong class="popup_title">사진 삭제</strong>
-            <div class="popup_con">
-              <p class="txt_desc">
-              <span class="txt_point1">사진을 삭제하면 입사 지원서에서도 삭제됩니다.</span><br>등록된 사진을 삭제하시겠습니까?
-              </p>
-              <div class="btn_wrap col2 algin_center">
-                <button type="button" class="btn point_type1">확인</button>
-                <button type="button" class="btn point_type2 js-popup-close">취소</button>
-              </div>
+        <!-- 팝업 호출 버튼 -->
+        <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
+        <!-- S: popup area -->
+        <div id="popup1" class="popup_wrap">
+          <div class="inner">
+            <h3 class="title">개인정보 수집 및 이용안내</h3>
+            
+            <div class="privacy_txt">
+              제1조 개인정보의 처리 목적<br>
+              •킨코스 코리아㈜<br>
+              는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.
+              1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산
+              - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송
+              2. 서비스 이용을 위한 이용 안내
+              - 원할한 이용을 위한 안내 및 고객불만사항 등의 처리
+              - 고객에 대한 서비스 제공에 따른 본인 식별.인증, 물품 또는 서비스 공급에 따른 금액 결제, 물품 또는 서비스의 공급.배송 등
+              
+              제2조 개인정보 수집 및 이용에 대한 안내
+              
+              • 킨코스 코리아㈜는 작업물의 진행을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+              1. 수집항목
+              - 필수 항목: 성명, 회사명, 유선전화번호, 휴대전화번호, 이메일
+              - 선택 항목: 부서명, 주소, 관심정보
+              
             </div>
-            <button type="button" class="btn_pop_close js-popup-close"><span class="blind">팝업 닫기</span></button>
+
+            <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
           </div>
-          <div class="dim"></div>
         </div>
-        <!-- E : layerpopup -->
+        <!-- E: popup area -->
       </div>
       <!-- //source code -->
     </div>
     <div class="g_code_description">
       <div>
-        <h4>팝업 호출 버튼의 클래스는 "js-layer-open"</h4>
-        <h4>팝업 호출 버튼과 호출될 레이어 팝업의 연결은 data-popup="layer-naming" 으로 연결(naming 부분을 팝업에 맞게 변경)</h4>
-        <h4>레이어 팝업의 위치는 .container 최하단에 위치(버튼 다음에 위치 x)</h4>
+        <h4>팝업 호출 버튼의 클래스는 "btn_popup"</h4>
+        <h4>팝업 호출 버튼의 href 값과 호출될 레이어 팝업의 id 값으로 연결 ex : 버튼 -> href="#popup1", 팝업 -> id="popup1"</h4>
+        <h4>레이어 팝업의 위치는 #content 최하단에 위치</h4>
       </div>
     </div>
   </div>
   <!-- //코드 추가 -->
-
+  
+  <!-- 공통 dim -->
+  <div class="dim"></div>
+  <!-- //공통 dim -->
+  
   </div>
 <!-- SCRIPT -->
 <script src="../www/js/wow.min.js"></script>

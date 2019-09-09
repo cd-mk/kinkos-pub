@@ -107,6 +107,39 @@ var setDatePicker = function() {
   $('.inp_date').datepicker();
 };
 
+// input file
+var setInpFile = function() {
+  $('.file_box').each(function() {
+    var target = $(this).find('.file_value');
+    var nameTarget = $(this).find('.file_name');
+
+    target.on('change', function() {
+      var filename = window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop();
+
+      nameTarget.val(filename);
+    });
+
+  });
+}
+
+// layer popup
+var setPopup = function() {
+  $('.btn_popup').on('click', function() {
+    var popupTarget = $(this).attr('href').slice(1);
+
+    if ($("#" + popupTarget + "").length) {
+      $('body').addClass('open');
+      $("#" + popupTarget + "").addClass('active');
+      $('.dim').show();
+    }
+  });
+  $('.btn_pop_close').on('click', function() {
+    $('body').removeClass('open');
+    $(this).closest('.popup_wrap').removeClass('active');
+    $('.dim').hide();
+  });
+}
+
 // TypeB Main page JS
 $(document).ready(function () {
   setGnb();
@@ -114,6 +147,8 @@ $(document).ready(function () {
   new WOW().init();
   
   if ($('.inp_date').length) setDatePicker();
+  if ($('.file_box').length) setInpFile();
+  if ($('.btn_popup').length) setPopup();
 
   $('body').on('mousewheel DOMMouseScroll', function(e){
     if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {

@@ -4,14 +4,16 @@
 <head>
   <meta charset="utf-8">
   <link rel="shortcut icon" href="http://vricks.com/favicon3.ico">
-  <title>퍼블리싱가이드 > 코딩가이드 > List</title>
+  <title>퍼블리싱가이드 > 코딩가이드 > Form</title>
   <link href="common.css" rel="stylesheet" type="text/css">
   <link href="basic.css" rel="stylesheet" type="text/css">
+  <link href="../www/js/jquery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css">
   <link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
   <link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
   <link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
   
   <script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="../www/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +31,7 @@
     <div id="gTabBox">
     </div>
     <div class="g_title_box">
-      <h2 class="g_m_tit">List</h2>
+      <h2 class="g_m_tit">Form</h2>
       <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
     </div>
     <div class="g_main_description">
@@ -41,19 +43,354 @@
     <!-- 코드 추가-->
     <div class="g_code_page">
       <div class="g_header">
-        <h3 class="g_tit2">기본 form 양식</h3>
-        <span>Update. 2019.09.06</span>
+        <h3 class="g_tit2">상단 select 양식</h3>
+        <span>Update. 2019.09.09</span>
       </div>
       <div class="g_codebox">
         <!-- source code -->
-
+        <div class="g_code_temp">
+          <!-- S -->
+          <div class="form_wrap type_select">
+            <div class="form_group">
+              <div class="form_item">
+                <select name="" id="" title="문의 유형 선택">
+                  <option value="">문의 유형을 선택 하세요.</option>
+                  <option value="">문의 유형1</option>
+                  <option value="">문의 유형2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- E -->
+        </div>
         <!-- //source code -->
       </div>
   
       <div class="g_code_description">
         <div>
-          <h4>Description</h4>
+          <h4>상단 select 박스</h4>
+          <p>"form_wrap" 에 "type_select" 추가</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
 
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">상단 select 양식 (2개일경우)</h3>
+        <span>Update. 2019.09.09</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S -->
+          <div class="form_wrap type_select">
+            <div class="form_group col2">
+              <div class="form_item">
+                <select name="" id="" title="문의 유형 선택">
+                  <option value="">문의 유형을 선택 하세요.</option>
+                  <option value="">문의 유형1</option>
+                  <option value="">문의 유형2</option>
+                </select>
+              </div>
+              <div class="form_item">
+                <select name="" id="" title="세부문의 유형 선택">
+                  <option value="">세부 문의 유형을 선택 하세요.</option>
+                  <option value="">문의 유형1</option>
+                  <option value="">문의 유형2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- E -->
+        </div>
+        <!-- //source code -->
+      </div>
+  
+      <div class="g_code_description">
+        <div>
+          <h4>상단 select 박스 col2</h4>
+          <p>"form_group" 에 "col2" 추가</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">기본 Form 양식</h3>
+        <span>Update. 2019.09.09</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S -->
+          <div class="form_wrap">
+            <div class="form_group col2">
+              <div class="form_item">
+                <span class="form_name">방문매장 <sup class="require">*</sup></span>
+                <div class="form_inp">
+                  <select name="" id="">
+                    <option value="">매장 선택</option>
+                    <option value="">매장1</option>
+                    <option value="">매장2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form_group col2">
+              <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
+              <div class="form_item">
+                <span class="form_name">방문일 <sup class="require">*</sup></span>
+                <div class="form_inp">
+                  <input type="text" class="inp_date" title="방문 날짜 선택">
+                  <p class="txt_vaild">방문일을 입력해주세요</p>
+                </div>
+              </div>
+              <div class="form_item">
+                <span class="form_name">방문시간 <sup class="require">*</sup></span>
+                <div class="form_inp">
+                  <select name="" id="">
+                    <option value="">시간 선택</option>
+                    <option value="">07:00</option>
+                    <option value="">08:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form_group col2">
+              <div class="form_item">
+                <span class="form_name">이름 <sup class="require">*</sup></span>
+                <div class="form_inp">
+                  <input type="text" title="이름 입력">
+                </div>
+              </div>
+              <div class="form_item">
+                <span class="form_name">연락처</span>
+                <div class="form_inp col3">
+                  <select name="" id="" title="전화번호 앞 3자리 선택">
+                    <option value="">010</option>
+                    <option value="">011</option>
+                    <option value="">017</option>
+                  </select>
+                  <input type="text" title="전화번호 중간 3자리 입력">
+                  <input type="text" title="전화번호 마지막 3자리 입력">
+                </div>
+              </div>
+            </div>
+            <div class="form_group col2">
+              <div class="form_item">
+                <span class="form_name">이메일</span>
+                <div class="form_inp">
+                  <input type="text" title="이메일 주소 입력">
+                </div>
+              </div>
+              <div class="form_item">
+                <span class="form_name">답변방법</span>
+                <div class="form_inp">
+                  <select name="" id="">
+                    <option value="">답변 방법 선택</option>
+                    <option value="">방법1</option>
+                    <option value="">방법2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form_group top_line">
+              <div class="form_item">
+                <span class="form_name">제목</span>
+                <div class="form_inp">
+                  <input type="text" title="제목 입력">
+                </div>
+              </div>
+            </div>
+            <div class="form_group">
+              <div class="form_item">
+                <span class="form_name ver_mid">내용</span>
+                <div class="form_inp">
+                  <textarea name="" id="" title="내용 입력"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form_group top_line file_box">
+              <div class="form_item">
+                <span class="form_name">파일 첨부</span>
+                <div class="form_inp col2 with_btn">
+                  <input type="text" class="file_name" disabled>
+                  
+                  <label for="file1" class="btn type03">파일 찾기</label>
+                  <input type="file" id="file1" class="file_value">
+                </div>
+              </div>
+              <ul class="file_notice">
+                <li>파일이 여러 개인 경우 압축하여 업로드 부탁드립니다.</li>
+                <li>파일첨부 용량은 10MB 이하면 업로드 가능합니다.</li>
+              </ul>
+            </div>
+            <div class="form_group top_line chk_box">
+              <div class="form_item">
+                <div class="form_inp">
+                  <input type="checkbox" id="chk1">
+                  <label for="chk1">개인정보 수집 및 이용에 대한 안내에 동의합니다. <span class="point_blue">[필수]</span></label>
+                </div>
+                <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
+              </div>
+              <div class="form_item">
+                <div class="form_inp">
+                  <input type="checkbox" id="chk2">
+                  <label for="chk2">이벤트 등 광고성 정보 수신에 동의합니다. <span class="point_blue">[필수]</span></label>
+                </div>
+                <a href="#url" class="btn_popup txt_underline">내용 보기</a>
+              </div>
+            </div>
+            <div class="form_group top_line btm_line">
+              <div class="form_item">
+                <span class="form_name">자동등록방지</span>
+                <div class="form_inp">
+                  <!-- 자동등록방지 영역 -->
+                  <!-- //자동등록방지 영역 -->
+                </div>
+              </div>
+            </div>
+            <div class="btn_wrap col2 center">
+              <button type="submit" class="btn large type01">작성완료</button>
+              <button type="button" class="btn large type02">취소</button>
+            </div>
+          </div>
+          <!-- E -->
+        </div>
+        <!-- //source code -->
+      </div>
+  
+      <div class="g_code_description">
+        <div>
+          <h4></h4>
+          <p>한줄에 2개의 "form_item" (입력양식)이 있을경우 "form_group" 에 "col2" 추가</p>
+          <p>"form_item"안에 input의 갯수가 2개 이상일경우(버튼도 갯수에 포함) "col2", "col3" 추가, input 옆에 버튼이 있을경우 "with_btn" 추가</p>
+          <p>상단 구분 border가 필요할경우 "form_group"에 "top_line"추가</p>
+          <p>마지막 "form_group" 요소에는 "btm_line" 추가</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">체크 박스</h3>
+        <span>Update. 2019.09.09</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S -->
+          <div class="form_wrap">
+            <div class="form_group chk_box">
+              <div class="form_item">
+                <div class="form_inp">
+                  <input type="checkbox" id="chk3">
+                  <label for="chk3">체크체크</label>
+                </div>
+              </div>
+              <div class="form_item">
+                <div class="form_inp">
+                  <input type="checkbox" id="chk1">
+                  <label for="chk1">개인정보 수집 및 이용에 대한 안내에 동의합니다. <span class="point_blue">[필수]</span></label>
+                </div>
+                <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
+              </div>
+            </div>
+          </div>
+          <!-- E -->
+        </div>
+        <!-- //source code -->
+      </div>
+  
+      <div class="g_code_description">
+        <div>
+          <h4>아이콘 크기 변경될수 있음 (09.09 기준)</h4>
+          <p>"form_group" 에 "chk_box" 추가</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">파일 input</h3>
+        <span>Update. 2019.09.09</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S -->
+          <div class="form_wrap">
+            <div class="form_group file_box">
+              <div class="form_item">
+                <span class="form_name">파일 첨부</span>
+                <div class="form_inp col2 with_btn">
+                  <input type="text" class="file_name" disabled>
+                  
+                  <label for="file2" class="btn type03">파일 찾기</label>
+                  <input type="file" id="file2" class="file_value">
+                </div>
+              </div>
+              <ul class="file_notice">
+                <li>파일이 여러 개인 경우 압축하여 업로드 부탁드립니다.</li>
+                <li>파일첨부 용량은 10MB 이하면 업로드 가능합니다.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- E -->
+        </div>
+        <!-- //source code -->
+      </div>
+  
+      <div class="g_code_description">
+        <div>
+          <h4>description</h4>
+          <p>"form_group" 에 "file_box" 추가</p>
+          <p>"file_name" 요소는 선택된 파일명을 보여주기 위한 요소임</p>
+          <p>실제 선택된 파일의 value값은 "file_value" 요소에 저장됨</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">datepicker</h3>
+        <span>Update. 2019.09.09</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+          <!-- S -->
+          <div class="form_wrap">
+            <div class="form_group">
+              <div class="form_item">
+                <span class="form_name">방문일 <sup class="require">*</sup></span>
+                <div class="form_inp">
+                  <input type="text" class="inp_date" title="방문 날짜 선택">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- E -->
+        </div>
+        <!-- //source code -->
+      </div>
+  
+      <div class="g_code_description">
+        <div>
+          <h4>description</h4>
+          <p>Datepicker 로 사용할 요소에 "inp_date" 추가</p>
         </div>
       </div>
     </div>
