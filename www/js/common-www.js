@@ -122,6 +122,24 @@ var setInpFile = function() {
   });
 }
 
+// accordian 변경 예정
+var setAccordian = function() {
+  $('.accor_title label').on('click', function(e) {
+    var $target = $(this).closest('.accor_title').next('.accor_con');
+
+    $(this).closest('.accor_wrap').find('.accor_con').removeClass('active');
+    $target.addClass('active');
+  });
+}
+
+// name으로 그룹핑된 체크박스 전체 체크 기능
+var setChkAll = function() {
+  $('.inp_chk_all').on('change', function() {
+    var name = $(this).attr('name');
+    $("input[name=" + name + "").prop('checked', $(this).prop('checked'));
+  });
+}
+
 // layer popup
 var setPopup = function() {
   $('.btn_popup').on('click', function() {
@@ -149,6 +167,8 @@ $(document).ready(function () {
   if ($('.inp_date').length) setDatePicker();
   if ($('.file_box').length) setInpFile();
   if ($('.btn_popup').length) setPopup();
+  if ($('.inp_chk_all').length) setChkAll();
+  if ($('.accor_wrap').length) setAccordian();
 
   $('body').on('mousewheel DOMMouseScroll', function(e){
     if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {

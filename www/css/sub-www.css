@@ -342,6 +342,32 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 /* 고객지원 */
 .support_wrap .inner {margin-top: 34px;}
 
+/* 회원가입 */
+.join_wrap .step_wrap {margin-bottom: 23px; padding-top: 40px; border-top: 1px solid #e7e7e7;}
+.join_wrap .step_wrap .inner {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
+.join_wrap .step_wrap .step_item {position: relative; float: left; display: table; margin-left: 37px; padding-left: 46px;}
+.join_wrap .step_wrap .step_item:first-child {margin-left: 0; padding-left: 0;}
+.join_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background: red;}
+.join_wrap .step_wrap .step_item .txt_step {display: table-cell; padding-left: 20px; vertical-align: middle;}
+.join_wrap .step_wrap .step_item .txt_step .number {display: block; color: #333;}
+.join_wrap .step_wrap .step_item .txt_step .desc {display: block; margin-top: 11px; font-size: 18px; color: #333;}
+.join_wrap .step_wrap .step_item.active .txt_step .number,
+.join_wrap .step_wrap .step_item.active .txt_step .desc {font-weight: 700; color: #03a2ea;}
+
+/* 이용약관 동의 */
+.join_wrap .accor_wrap {margin-top: 20px;}
+.join_wrap .agree_box {margin-top: 42px; padding: 0 30px;}
+.join_wrap .agree_box label {padding-top: 0; font-size: 18px;}
+.join_wrap .agree_box label::before {top: 2px;}
+.accor_wrap { border-top: 2px solid #222;}
+.accor_wrap .accor_item {border-bottom: 1px solid #e7e7e7;}
+.accor_wrap .accor_item .accor_title {height: 70px; padding: 0 30px; line-height: 70px; cursor: pointer;}
+.accor_wrap .accor_item .accor_con {display: none; height: 245px; padding: 30px; overflow-y: auto; box-sizing: border-box; background: #f3f4f6;}
+.accor_wrap .accor_item .accor_con.active {display: block;}
+
+/* 회원 정보 입력 */
+.join_wrap .form_wrap {margin-top: 0;}
+
 /* 개인정보 수집 및 이용안내 팝업 */
 .popup_wrap .privacy_txt {margin-top: 30px; height: 456px; max-height: 456px; overflow-y: auto; font-size: 16px;} */
 
