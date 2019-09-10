@@ -115,6 +115,78 @@ var mobileGnb = function () {
 	});
 })();
 
+// 리사이즈 이벤트에 따른 슬라이드 리로드
+function getScrollbarWidth() {
+	return window.innerWidth - document.documentElement.clientWidth;
+}
+function reloadSlide(slideTarget, pcOpt, moOpt) {
+	var flag = true;
+	var viewport;
+	var el = slideTarget.params.el;
+	var scrollW = getScrollbarWidth();
+
+	$(window).resize(function() {
+		var winW = $(this).outerWidth();
+		viewport = winW + scrollW;
+
+		if (viewport < 1024 && flag) {
+			slideTarget.destroy(true, true);
+			slideTarget = new Swiper(el, moOpt);
+			flag = false;
+		} else if (viewport > 1024 && !flag) {
+			slideTarget.destroy(true, true);
+			slideTarget = new Swiper(el, pcOpt);
+			flag = true;
+		}
+	});
+}
+
+(function() {
+	var pcOpt = {
+		slidesPerView: 3, 
+		spaceBetween: 30,
+		speed: 500,
+		loop: true,
+		grabCursor: true,
+		centeredSlides: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			hide: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		}
+	};
+	var moOpt = {
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		speed: 500,
+		loop: false,
+		grabCursor: true,
+		centeredSlides: false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			hide: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		}
+	};
+
+	var speedSlide = new Swiper('.speed_slide', pcOpt);
+	reloadSlide(speedSlide, pcOpt, moOpt);
+})();
+
 // main slide
 var mainSlide = new Swiper('.visual_wrap', {
 	effect: 'fade',
@@ -124,44 +196,8 @@ var mainSlide = new Swiper('.visual_wrap', {
 		clickable: true,
 	},
 });
-var speedSlide = new Swiper('.speed_slide', {
-	slidesPerView: 3, 
-	spaceBetween: 30,
-	speed: 500,
-	loop: true,
-	grabCursor: true,
-	centeredSlides: true,
-	initialSlide: 1,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	breakpoints: {
-		// when window width is >= ㅡ모바일 1024이하
-		1024: {
-			slidesPerView: 'auto', 
-			loop: false,
-			spaceBetween: 15,
-			centeredSlides:false,
-			roundLengths: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				hide: false,
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction',
-			}
-		}
-	}
-});
 
 // 상담상품
-
 var galleryThumbs = new Swiper('.consult_tag.gallery-thumbs', {
 	direction: 'vertical',
 	slidesPerView: 'auto',
@@ -181,6 +217,7 @@ var galleryThumbs = new Swiper('.consult_tag.gallery-thumbs', {
 		}
 	}
 });
+
 var galleryTop = new Swiper('.consult_slide.gallery-top', {
 	direction: 'vertical',
 	slidesPerView: 1,
