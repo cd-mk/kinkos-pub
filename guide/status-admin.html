@@ -1,0 +1,126 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>퍼블리싱가이드 > 현황판 > 메인</title>
+	<link href="common.css" rel="stylesheet" type="text/css">
+	<link href="basic.css" rel="stylesheet" type="text/css">
+	<link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
+	<link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
+	<link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
+	
+	<script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div id="g_header">
+		<h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+		<div id="g_navi">
+			
+			<ul class="g_gnb">
+				<li class="g_on"><a href="status-list.html">Status Board</a></li>
+				<li><a href="guide-info.html">Info Guide</a></li>
+				<li><a href="code-txt.html">Code Guide</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="g_content">
+		<div id="gTabBox">	
+      <ul id="gTab" class="g_tab">
+        <li class="g_on"><a href="status-list.html">WWW</a></li>
+        <li><a href="status-admin.html">관리자</a></li>
+      </ul>
+		</div>
+		<h2 class="g_m_tit">온라인 쇼핑몰</h2>
+
+		<a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+		<div class="g_main_description">
+			<ul>
+				<li><span style="background:#d8ebf6; color:#000;">진행 / 수정</span></li>
+				<li><span style="background:#efc96e; color:#000;">완료 / 수정완료</span></li>
+				<li><span style="background:#e00f0f;">오늘 날짜</span></li>
+				<li><span style="margin-top:20px;">상태 및 완료 예정일에 맞추어 색이 변경 됩니다.</span></li> 
+			</ul>
+		</div>
+		
+		<h3 class="g_status_tit">메인 현황판 <span class="g_finto"></span>/<span class="g_num">/</span></h3>
+		<div class="g_status_board">
+
+
+			<table id="table_format" class="table table-bordered">
+				<caption>현황표</caption>
+				<colgroup>
+					<col style="width: 40px;" />
+					<col />
+					<col />
+					<col />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col style="width: 90px;" />
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>No</th>
+						<th class="g_screen">Screen Name</th>
+						<th class="g_name">파일명</th>
+						<th>Depth</th>
+						<th>www/mall</th>
+						<th class="g_start">시작일</th>
+						<th class="g_due_date">완료예정일</th>
+						<th class="g_fin">완료일</th>
+						<th>디자인<br />(O,X)</th>
+						<th class="g_status">상태</th>
+						<th class="g_ac">작성자</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">공통</td>
+						<td class="g_name">common.html</td>
+						<td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td>X</td>
+						<td class="g_status"></td>
+						<td class="g_ac">박세빈</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+
+
+
+
+
+
+		</div>	
+	</div>
+<!-- SCRIPT -->
+<script src="../www/js/wow.min.js"></script>
+<script src="../www/js/swiper/swiper.min.js"></script>
+<script src="../www/js/common-www.js"></script>
+<script type="text/javascript" src="./common.js"></script>
+<script src="ddtf.js"></script>
+  <script>
+    // gTab();
+    $('.g_status_board tbody tr').each(function () {
+      var num = $(this).index() + 1;
+      $(this).find('td').eq(0).html(num);
+      var tdStr1 = $(this).find('td').eq(2).text();
+      $(this).find('td').eq(2).html('<a class="g_url_link" href="../admin/' + tdStr1 + '" target="_blank">' + tdStr1 + '</a>');
+    });
+  </script>
+  <script>
+    jQuery('#table_format').ddTableFilter();
+  </script>
+
+</body>
+</html>
