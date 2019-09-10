@@ -30,11 +30,11 @@
 	</div>
 	<div id="g_content">
 		<div id="gTabBox">
-			<ul id="gTab" class="g_tab">
+			<!-- <ul id="gTab" class="g_tab">
 				<li class="g_on"><a href="status-list.html">WWW</a></li>
 				<li><a href="status-mall.html">MALL</a></li>
 				<li><a href="status-biz.html">BIZ</a></li>
-			</ul>
+			</ul> -->
 		</div>
 		<h2 class="g_m_tit">Front Status Board</h2>
 		<a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
@@ -72,6 +72,7 @@
 						<th class="g_screen">Screen Name</th>
 						<th class="g_name">파일명</th>
 						<th>Depth</th>
+						<th>www/mall</th>
 						<th class="g_start">시작일</th>
 						<th class="g_due_date">완료예정일</th>
 						<th class="g_fin">완료일</th>
@@ -82,13 +83,67 @@
 					</tr>
 				</thead>
 				<tbody>
-	
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">공통</td>
+						<td class="g_name">common.html</td>
+						<td></td>
+						<td>www/include</td><td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td>X</td>
+						<td class="g_status"></td>
+						<td class="g_ac">안홍선</td>
+						<td>include파일: header/footer<br>1차 완료 (현재버전까지)</td>
+					</tr>
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">회원가입</td>
+						<td class="g_name">00.join-step1.html</td>
+						<td>common</td>
+						<td>www</td>
+						<td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td>O</td>
+						<td class="g_status">진행</td>
+						<td class="g_ac">안홍선</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">회원가입-회원정보 입력</td>
+						<td class="g_name">00.join-step2.html</td>
+						<td>common</td>
+						<td>www</td>
+						<td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td>O</td>
+						<td class="g_status">진행</td>
+						<td class="g_ac">안홍선</td>
+						<td>일반 회원 가입, SNS간편 회원 가입(네이버, 카카오톡, 페이스북)</td>
+					</tr>
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">회원가입-가입완료</td>
+						<td class="g_name">00.join-step3.html</td>
+						<td>common</td>
+						<td>www</td>
+						<td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td>O</td>
+						<td class="g_status"></td>
+						<td class="g_ac"></td>
+						<td></td>
+					</tr>
 					<tr>
 						<td class="g_num"></td>
 						<td class="g_screen">로그인</td>
 						<td class="g_name">H01-1.login.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -101,7 +156,7 @@
 						<td class="g_screen">장바구니</td>
 						<td class="g_name">H01-2.cart.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -114,7 +169,7 @@
 						<td class="g_screen">주문/배송조회</td>
 						<td class="g_name">H01-3.order.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -123,10 +178,24 @@
 						<td></td>
 					</tr>
 					<tr>
-						<td class="g_num">H.01</td>
+						<td class="g_num"></td>
 						<td class="g_screen">마이 페이지</td>
 						<td class="g_name">H01-4.mypage.html</td>
 						<td>common</td>
+						<td>www</td><td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td>X</td>
+						<td class="g_status"></td>
+						<td class="g_ac"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">비회원 주문 조회</td>
+						<td class="g_name">H01-6.non-member.html</td>
+						<td>common</td>
+						<td>www</td>
 						<td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
@@ -140,7 +209,7 @@
 						<td class="g_screen">ENGLISH</td>
 						<td class="g_name">H01-5.english.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -155,7 +224,7 @@
 						<td class="g_screen">이용약관</td>
 						<td class="g_name">F01.terms.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -168,7 +237,7 @@
 						<td class="g_screen">개인정보처리방침</td>
 						<td class="g_name">F01-1.privacy.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -181,7 +250,7 @@
 						<td class="g_screen">저작권정책</td>
 						<td class="g_name">F01-2.licen.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -194,7 +263,7 @@
 						<td class="g_screen">영상정보처리기기운영방침</td>
 						<td class="g_name">F01-3.cctv-policies.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -207,7 +276,7 @@
 						<td class="g_screen">정보보호인증</td>
 						<td class="g_name">F01-4.info-protection.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -220,12 +289,12 @@
 						<td class="g_screen">디자인템플릿</td>
 						<td class="g_name"></td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
-						<td class="g_status">진행</td>
-						<td class="g_ac">성민경</td>
+						<td class="g_status"></td>
+						<td class="g_ac"></td>
 						<td>서브페이지</td>
 					</tr>
 					<tr>
@@ -233,50 +302,10 @@
 						<td class="g_screen">SNS링크</td>
 						<td class="g_name">F01-6.sns.html</td>
 						<td>common</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">약관동의</td>
-						<td class="g_name">00.join-step1.html</td>
-						<td>common</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">진행</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">회원정보 입력</td>
-						<td class="g_name">00.join-step2.html</td>
-						<td>common</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">진행</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">가입완료</td>
-						<td class="g_name">00.join-step3.html</td>
-						<td>common</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
 						<td class="g_status"></td>
 						<td class="g_ac"></td>
 						<td></td>
@@ -286,12 +315,12 @@
 						<td class="g_screen">메인</td>
 						<td class="g_name">00.main-www.html</td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
 						<td class="g_status">진행</td>
-						<td class="g_ac"></td>
+						<td class="g_ac">성민경</td>
 						<td></td>
 					</tr>
 
@@ -300,7 +329,7 @@
 						<td class="g_screen">CEO인사말</td>
 						<td class="g_name">01-1.ceo.html</td>
 						<td>킨코스소개</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -313,7 +342,7 @@
 						<td class="g_screen">기업이념 및 연혁</td>
 						<td class="g_name">01-2.history.html</td>
 						<td>킨코스소개</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -326,7 +355,7 @@
 						<td class="g_screen">Only 킨코스</td>
 						<td class="g_name">01-3.only-kinkos.html</td>
 						<td>킨코스소개</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -338,8 +367,8 @@
 						<td class="g_num"></td>
 						<td class="g_screen">인재상</td>
 						<td class="g_name">01-4-1.person.html</td>
-						<td>킨코스소개</td>
-						<td class="g_start"></td>
+						<td>킨코스소개>채용정보</td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -351,8 +380,8 @@
 						<td class="g_num"></td>
 						<td class="g_screen">직무소개</td>
 						<td class="g_name">01-4-2.joblist.html</td>
-						<td>킨코스소개</td>
-						<td class="g_start"></td>
+						<td>킨코스소개>채용정보</td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -364,8 +393,8 @@
 						<td class="g_num"></td>
 						<td class="g_screen">채용안내</td>
 						<td class="g_name">01-4-3.recruit.html</td>
-						<td>킨코스소개</td>
-						<td class="g_start"></td>
+						<td>킨코스소개>채용정보</td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -379,7 +408,7 @@
 						<td class="g_screen">센터 안내 목록</td>
 						<td class="g_name">02.center-info.html</td>
 						<td>센터 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -392,7 +421,7 @@
 						<td class="g_screen">가산디지털단지 센터</td>
 						<td class="g_name">02-1.gasan.html</td>
 						<td>센터 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -402,400 +431,10 @@
 					</tr>
 					<tr>
 						<td class="g_num"></td>
-						<td class="g_screen">강남역 센터</td>
-						<td class="g_name">02-2.gangnam.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">경복궁 센터</td>
-						<td class="g_name">02-3.gyeongbokgung.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">광화문 센터</td>
-						<td class="g_name">02-4.Gwanghwamun.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">교대 센터</td>
-						<td class="g_name">02-5.gyodae.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">구로 센터</td>
-						<td class="g_name">02-6.guro.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">남대문 센터</td>
-						<td class="g_name">02-7.namdaemun.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">논현 센터</td>
-						<td class="g_name">02-8.nonhyeon.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">동여의도 센터</td>
-						<td class="g_name">02-9.dong-Yeouido.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">삼성 센터</td>
-						<td class="g_name">02-10.samsung.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">서여의도 센터</td>
-						<td class="g_name">02-11.seo-Yeouido.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">선릉 센터</td>
-						<td class="g_name">02-12.Seolleung.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">송파 센터</td>
-						<td class="g_name">02-13.Songpa.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">시청 센터</td>
-						<td class="g_name">02-14.cityhall.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">신사 센터</td>
-						<td class="g_name">02-15.sinsa.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">신촌 센터</td>
-						<td class="g_name">02-16.sinchon.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">압구정 센터</td>
-						<td class="g_name">02-17.abgujeong.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">양재 센터</td>
-						<td class="g_name">02-18.yangjae.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">역삼 센터</td>
-						<td class="g_name">02-19.yeogsam.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">을지로 센터</td>
-						<td class="g_name">02-20.euljilo.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">종로 센터</td>
-						<td class="g_name">02-21.jonglo.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">충무로 센터</td>
-						<td class="g_name">02-22.chungmulo.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">포스코 센터</td>
-						<td class="g_name">02-23.posco.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">홍대 센터</td>
-						<td class="g_name">02-24.hongik.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">홍대입구역 센터</td>
-						<td class="g_name">02-25.hongik-station.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">분당 센터</td>
-						<td class="g_name">02-26.bundang.hthml</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">일산 센터</td>
-						<td class="g_name">02-27.ilsan.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">판교 센터</td>
-						<td class="g_name">02-28.pangyo.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">평촌 센터</td>
-						<td class="g_name">02-29.pyeongchon.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">서면 센터(부산)</td>
-						<td class="g_name">02-30.seomyeon.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">센텀시티센터(부산)</td>
-						<td class="g_name">02-31.centum-city.html</td>
-						<td>센터 안내</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
 						<td class="g_screen">보안제작지원센터</td>
 						<td class="g_name">02-32.spc.html</td>
 						<td>센터 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -808,7 +447,7 @@
 						<td class="g_screen">예약문의</td>
 						<td class="g_name">02-32-1.spc-reserve.html</td>
 						<td>센터 안내/보안제작지원센터</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -821,7 +460,7 @@
 						<td class="g_screen">사인앤그래픽 센터</td>
 						<td class="g_name">02-33.sg-center.html</td>
 						<td>센터 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -834,7 +473,7 @@
 						<td class="g_screen">상담 신청</td>
 						<td class="g_name">02-33-1.sg-center-reserve.html</td>
 						<td>센터 안내/사인앤그래픽 센터</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -848,7 +487,7 @@
 						<td class="g_screen">service</td>
 						<td class="g_name">03.service_info.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -861,7 +500,7 @@
 						<td class="g_screen">디지털출력/복사</td>
 						<td class="g_name">03-1.print-copy.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -874,7 +513,7 @@
 						<td class="g_screen">제본</td>
 						<td class="g_name">03-2.binding.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -887,7 +526,7 @@
 						<td class="g_screen">후가공</td>
 						<td class="g_name">03-3.finishing.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -900,7 +539,7 @@
 						<td class="g_screen">사인앤그래픽</td>
 						<td class="g_name">03-4.sg.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -913,7 +552,7 @@
 						<td class="g_screen">S&G 일반상품</td>
 						<td class="g_name">03-4-1.sg-normal.html</td>
 						<td>서비스 안내/사인앤그래픽</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -926,7 +565,7 @@
 						<td class="g_screen">S&G 패키지상품</td>
 						<td class="g_name">03-4-2.sg-package.html</td>
 						<td>서비스 안내/사인앤그래픽</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -939,7 +578,7 @@
 						<td class="g_screen">S&G 제작사례</td>
 						<td class="g_name">03-4-3.sg-case.html</td>
 						<td>서비스 안내/사인앤그래픽</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -952,7 +591,7 @@
 						<td class="g_screen">스캔투파일</td>
 						<td class="g_name">03-5.scan-file.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -965,7 +604,7 @@
 						<td class="g_screen">디자인</td>
 						<td class="g_name">03-6.design.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -978,7 +617,7 @@
 						<td class="g_screen">명함제작</td>
 						<td class="g_name">03-7.business-card.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -991,7 +630,7 @@
 						<td class="g_screen">고객편의서비스</td>
 						<td class="g_name">03-8.customer-service.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1004,7 +643,7 @@
 						<td class="g_screen">주요사례별서비스</td>
 						<td class="g_name">03-9.case-service.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1017,7 +656,7 @@
 						<td class="g_screen">추천상품</td>
 						<td class="g_name">03-10.recommended-products.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1030,7 +669,7 @@
 						<td class="g_screen">법인우대프로그램</td>
 						<td class="g_name">03-11.Corporation.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1043,7 +682,7 @@
 						<td class="g_screen">DHL항공특송서비스</td>
 						<td class="g_name">03-12.dhl.html</td>
 						<td>서비스 안내</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1057,7 +696,7 @@
 						<td class="g_screen">공지사항 목록</td>
 						<td class="g_name">04-1.notice-list.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1070,7 +709,7 @@
 						<td class="g_screen">공지사항 보기</td>
 						<td class="g_name">04-1.notice-view.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1083,7 +722,7 @@
 						<td class="g_screen">진행중인 이벤트 목록</td>
 						<td class="g_name">04-2.event.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1091,12 +730,12 @@
 						<td class="g_ac">이송</td>
 						<td></td>
 					</tr>
-					tr>
+				<tr>
 						<td class="g_num"></td>
 						<td class="g_screen">진행중인 이벤트 보기</td>
 						<td class="g_name">04-2.event-view.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1109,7 +748,7 @@
 						<td class="g_screen">종료된 이벤트</td>
 						<td class="g_name">04-3.event-fin.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1122,7 +761,7 @@
 						<td class="g_screen">K매거진 목록</td>
 						<td class="g_name">04-4.k-magazine-list.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1135,7 +774,7 @@
 						<td class="g_screen">K매거진 보기</td>
 						<td class="g_name">04-4.k-magazine-view.html</td>
 						<td>이벤트/공지사항</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1148,7 +787,7 @@
 						<td class="g_screen">견적 및 서비스 문의</td>
 						<td class="g_name">05-1.estimate.html</td>
 						<td>고객지원</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1161,7 +800,7 @@
 						<td class="g_screen">자주묻는 질문</td>
 						<td class="g_name">05-2.faq.html</td>
 						<td>고객지원</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>X</td>
@@ -1174,7 +813,7 @@
 						<td class="g_screen">서비스 의견</td>
 						<td class="g_name">05-3.opinion.html</td>
 						<td>고객지원</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1187,7 +826,7 @@
 						<td class="g_screen">제휴 문의 및 제안</td>
 						<td class="g_name">05-4.ally.html</td>
 						<td>고객지원</td>
-						<td class="g_start"></td>
+						<td>www</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td>O</td>
@@ -1195,49 +834,25 @@
 						<td class="g_ac">안홍선</td>
 						<td></td>
 					</tr>
-					</tbody>
-				</table>
-
-				<div style="background-color:#000;color:#fff;line-height: 40px;text-align: center;margin-bottom:10px;">온라인몰</div>
-
-
-				<table id="table_format" class="table table-bordered">
-					<caption>현황표</caption>
-					<colgroup>
-						<col style="width: 40px;" />
-						<col />
-						<col />
-						<col style="width: 90px;" />
-						<col style="width: 90px;" />
-						<col style="width: 90px;" />
-						<col style="width: 90px;" />
-						<col style="width: 90px;" />
-						<col style="width: 90px;" />
-						<col style="width: 90px;" />
-						<col />
-					</colgroup>
-					<thead>
-						<tr>
-							<th>No</th>
-							<th class="g_screen">Screen Name</th>
-							<th class="g_name">파일명</th>
-							<th>Depth</th>
-							<th class="g_start">시작일</th>
-							<th class="g_due_date">완료예정일</th>
-							<th class="g_fin">완료일</th>
-							<th>디자인<br />(O,X)</th>
-							<th class="g_status">상태</th>
-							<th class="g_ac">작성자</th>
-							<th>비고</th>
-						</tr>
-					</thead>
-					<tbody>
+					<tr>
+						<td class="g_num"></td>
+						<td class="g_screen">온라인몰 메인</td>
+						<td class="g_name">00.main-mall.html</td>
+						<td></td>
+						<td>mall</td><td class="g_start"></td>
+						<td class="g_due_date"></td>
+						<td class="g_fin"></td>
+						<td></td>
+						<td class="g_status">진행</td>
+						<td class="g_ac">이송</td>
+						<td></td>
+					</tr>
 					<tr>
 						<td class="g_num"></td>
 						<td class="g_screen">즉석상품보기</td>
 						<td class="g_name">06-1.product-list.html</td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1250,7 +865,7 @@
 						<td class="g_screen">명함</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1263,7 +878,7 @@
 						<td class="g_screen">즉석명함</td>
 						<td class="g_name"></td>
 						<td>명함</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1276,7 +891,7 @@
 						<td class="g_screen">상품 상세 페이지</td>
 						<td class="g_name">06-2.product-view.html</td>
 						<td>명함/즉석명함</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1289,7 +904,7 @@
 						<td class="g_screen">주문서 작성</td>
 						<td class="g_name">06-3.order-sheet.html</td>
 						<td>명함/즉석명함</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1302,7 +917,7 @@
 						<td class="g_screen">주문 완료 페이지</td>
 						<td class="g_name">06-4.order-end.html</td>
 						<td>명함/즉석명함</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1315,7 +930,7 @@
 						<td class="g_screen">템플릿명함</td>
 						<td class="g_name"></td>
 						<td>명함</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1328,7 +943,7 @@
 						<td class="g_screen">편집/상담/특수명함</td>
 						<td class="g_name"></td>
 						<td>명함</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1341,7 +956,7 @@
 						<td class="g_screen">대형출력/보드</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1354,7 +969,7 @@
 						<td class="g_screen">패키지</td>
 						<td class="g_name"></td>
 						<td>대형출력/보드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1367,7 +982,7 @@
 						<td class="g_screen">컬러대형출력</td>
 						<td class="g_name"></td>
 						<td>대형출력/보드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1380,7 +995,7 @@
 						<td class="g_screen">흑백대형출력</td>
 						<td class="g_name"></td>
 						<td>대형출력/보드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1393,7 +1008,7 @@
 						<td class="g_screen">현수막</td>
 						<td class="g_name"></td>
 						<td>대형출력/보드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1406,7 +1021,7 @@
 						<td class="g_screen">비규격상담문의</td>
 						<td class="g_name"></td>
 						<td>대형출력/보드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1419,7 +1034,7 @@
 						<td class="g_screen">디지털출력/스티커</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1432,7 +1047,7 @@
 						<td class="g_screen">즉석스티커</td>
 						<td class="g_name"></td>
 						<td>디지털출력/스티커</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1445,7 +1060,7 @@
 						<td class="g_screen">브로슈어/표지</td>
 						<td class="g_name"></td>
 						<td>디지털출력/스티커</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1458,7 +1073,7 @@
 						<td class="g_screen">포토퍼즐</td>
 						<td class="g_name"></td>
 						<td>디지털출력/스티커</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1471,7 +1086,7 @@
 						<td class="g_screen">메뉴판</td>
 						<td class="g_name"></td>
 						<td>디지털출력/스티커</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1484,7 +1099,7 @@
 						<td class="g_screen">하드커버</td>
 						<td class="g_name"></td>
 						<td>디지털출력/스티커</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1497,7 +1112,7 @@
 						<td class="g_screen">상담문의</td>
 						<td class="g_name"></td>
 						<td>디지털출력/스티커</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1510,7 +1125,7 @@
 						<td class="g_screen">배너/POP/등신대</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1523,7 +1138,7 @@
 						<td class="g_screen">POP</td>
 						<td class="g_name"></td>
 						<td>배너/POP/등신대</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1536,7 +1151,7 @@
 						<td class="g_screen">미니/대형등신대</td>
 						<td class="g_name"></td>
 						<td>배너/POP/등신대</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1549,7 +1164,7 @@
 						<td class="g_screen">배너</td>
 						<td class="g_name"></td>
 						<td>배너/POP/등신대</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1562,7 +1177,7 @@
 						<td class="g_screen">슬로건/인화/카드</td>
 						<td class="g_name"></td>
 						<td>슬로건/인화/카드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1575,7 +1190,7 @@
 						<td class="g_screen">슬로건</td>
 						<td class="g_name"></td>
 						<td>슬로건/인화/카드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1588,7 +1203,7 @@
 						<td class="g_screen">사진인화</td>
 						<td class="g_name"></td>
 						<td>슬로건/인화/카드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1601,7 +1216,7 @@
 						<td class="g_screen">포토카드</td>
 						<td class="g_name"></td>
 						<td>슬로건/인화/카드</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1614,7 +1229,7 @@
 						<td class="g_screen">이벤트소품/기타</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1627,7 +1242,7 @@
 						<td class="g_screen">투명부채</td>
 						<td class="g_name"></td>
 						<td>이벤트소품/기타</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1640,7 +1255,7 @@
 						<td class="g_screen">토퍼</td>
 						<td class="g_name"></td>
 						<td>이벤트소품/기타</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1653,7 +1268,7 @@
 						<td class="g_screen">박스</td>
 						<td class="g_name"></td>
 						<td>이벤트소품/기타</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1666,7 +1281,7 @@
 						<td class="g_screen">봉투</td>
 						<td class="g_name"></td>
 						<td>이벤트소품/기타</td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1679,7 +1294,7 @@
 						<td class="g_screen">이용가이드</td>
 						<td class="g_name">06-5.guide.html</td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1692,7 +1307,7 @@
 						<td class="g_screen">검색</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1705,7 +1320,7 @@
 						<td class="g_screen">퀵메뉴</td>
 						<td class="g_name"></td>
 						<td></td>
-						<td class="g_start"></td>
+						<td>mall</td><td class="g_start"></td>
 						<td class="g_due_date"></td>
 						<td class="g_fin"></td>
 						<td></td>
@@ -1733,7 +1348,8 @@
 			var num = $(this).index() + 1;
 			$(this).find('td').eq(0).html(num);
 			var tdStr1 = $(this).find('td').eq(2).text();
-			$(this).find('td').eq(2).html('<a class="g_url_link" href="../www/' + tdStr1 + '" target="_blank">' + tdStr1 + '</a>');
+			var tdStr2 = $(this).find('td').eq(4).text();
+			$(this).find('td').eq(2).html('<a class="g_url_link" href="../' + tdStr2 + '/' + tdStr1 + '" target="_blank">' + tdStr2 + '/' + tdStr1 + '</a>');
 		});
 	</script>
 	<script>
