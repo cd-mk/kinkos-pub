@@ -46,10 +46,13 @@
 .page_tab > ul > li.active a, .page_tab > ul > li a:hover{border-color:#000;color:#000;}
 
  /* anchor */
-.item_anchor {}
-.item_anchor ul {width:100%;}
-.item_anchor ul li {width:20%;}
-.item_anchor ul li a {width:100%;text-align: center;}
+ .page_tab.col4 ul {width:100%;}
+ .page_tab.col4 ul li {width:25%;}
+ .page_tab.col4 ul li a {width:100%;text-align: center;}
+
+.page_tab.col5 ul {width:100%;}
+.page_tab.col5 ul li {width:20%;}
+.page_tab.col5 ul li a {width:100%;text-align: center;}
 
 /* 게시판 리스트 */
 .search_box {overflow:hidden;}

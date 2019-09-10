@@ -242,16 +242,15 @@ var galleryTop = new Swiper('.consult_slide.gallery-top', {
 
 
 $(document).ready(function () {
-	new WOW().init();
-	//임시 header, footer영역 로드
-	$("#header").load("./include/common.html header", function () {
-		// header 로드 후 header 관련 function 실행
-		setGnb();
-		mobileGnb();
-	});
-	$("#footer").load("./include/common.html footer", function () {
-
-	});
+	// 임시 header, footer영역 로드
+  $("#header").load("./include/common.html header", function () {
+    // header 로드 후 header 관련 function 실행
+    setGnb();
+    mobileGnb();
+  });
+  $("#footer").load("./include/common.html .footer_inner", function () {
+    
+  });
 
 });
 
