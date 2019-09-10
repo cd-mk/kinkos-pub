@@ -1,0 +1,556 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="title" content="회원관리 | 킨코스코리아(주)" />
+	<meta name="description" id="meta_description" content="회원관리 | 킨코스코리아(주)" />
+	<meta name="keywords" content="복사,인쇄,포스터,제본,킨코스" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="/data/_main/95bd29f4b4955d26f838b3e06bcf4dc8_14482417672292.ico">
+	<title>회원관리 | 킨코스코리아(주)</title>
+	<!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+	<link rel="stylesheet" href="./css/admin.css">
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.menu.js"></script>
+	<script src="./js/common.js"></script>
+
+</head>
+<body>
+
+<div id="to_content"><a href="#container">본문 바로가기</a></div>
+
+	<header id="hd">
+  <div id="hd_wrap">
+		<h1>킨코스코리아(주)</h1>
+
+		<div id="logo"><a href="00.main-admin.html"><img src="./image/logo.jpg" alt="킨코스코리아(주) 관리자"></a></div>
+
+		<ul id="tnb">
+				<li><a href="#">관리자정보</a></li>
+				<li><a href="#">기본환경</a></li>
+				<li><a href="#">커뮤니티</a></li>
+				<li><a href="#">쇼핑몰환경</a></li>
+				<li><a href="#">쇼핑몰</a></li>
+        <li id="tnb_logout"><a href="#">로그아웃</a></li>
+			</ul>
+
+      <nav id="gnb">
+        <h2>관리자 주메뉴</h2>
+        <ul id="gnb_1dul">
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">환경설정</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">관리권한설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">기본환경설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">메뉴설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">메인 좌측 슬라이드</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">메인 하단 슬라이드</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">페이지 배너관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">쇼핑몰 메인 슬라이드</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  gnb_grp_div">메일 테스트</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">팝업레이어관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">세션파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">캐시파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">캡챠파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">썸네일파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  gnb_grp_div">phpinfo()</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">알림톡설정</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">알림톡설정</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="./member_list.html" class="gnb_1da">회원관리</a>
+            <ul class="gnb_2dul"><li class="gnb_2dli"><a href="./member_list.html" class="gnb_2da">회원관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">기업회원관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">회원/비회원</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">회원메일발송</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">접속자집계</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">접속자검색</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">포인트관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">투표관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="board_list.html" class="gnb_1da">게시판관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="board_list.html" class="gnb_2da">게시판관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">게시판그룹관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">인기검색어관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">인기검색어순위</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">1:1문의설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">내용관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">FAQ관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">쇼핑몰관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  ">쇼핑몰설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">주문내역</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">주문내역(센터용)</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">주문내역(디자이너용)</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">개인결제관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">분류관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품문의</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">사용후기</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품재고관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품유형관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품옵션재고관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">쿠폰관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">추가배송비관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">쇼핑몰현황/기타</a>
+            <ul class="gnb_2dul"><li class="gnb_2dli"><a href="#" class="gnb_2da">매출현황</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품판매순위</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">주문내역출력</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">재입고SMS알림</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">이벤트관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">이벤트일괄처리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">배너관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">보관함현황</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">가격비교사이트</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="./group.html" class="gnb_1da">서비스관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="./group.html" class="gnb_2da">코드그룹관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">종이관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">자동견적관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+						<a href="center.html" class="gnb_1da">사이트관리</a>
+						<ul class="gnb_2dul">
+							<li class="gnb_2dli"><a href="center.html" class="gnb_2da">센터정보관리</a></li>
+							<li class="gnb_2dli"><a href="orderanalytics.html" class="gnb_2da gnb_grp_style gnb_grp_div">견적관리 통계</a></li>
+						</ul>
+					</li>
+				</ul>
+      </nav>
+
+    </div>
+	</header>
+
+	<ul id="lnb">
+		<li><a href="member_list.html">회원관리</a></li>
+		<li><a href="#">기업회원관리</a></li>
+		<li><a href="#">회원/비회원</a></li>
+		<li><a href="#">회원메일발송</a></li>
+		<li><a href="#">접속자집계</a></li>
+		<li><a href="#">접속자검색</a></li>
+		<li><a href="#">포인트관리</a></li>
+		<li><a href="#">투표관리</a></li>
+	</ul>
+
+	<div id="wrapper">
+		<div id="container">
+			<div id="text_size">
+				<!-- font_resize('엘리먼트id', '제거할 class', '추가할 class'); -->
+				<button onclick="font_resize('container', 'ts_up ts_up2', '');"><img src="./image/ts01.gif" alt="기본"></button>
+				<button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up');"><img src="./image/ts02.gif" alt="크게"></button>
+				<button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up2');"><img src="./image/ts03.gif" alt="더크게"></button>
+			</div>
+			<h1>회원관리</h1>
+
+			<div class="local_ov01 local_ov">
+					<a href="member_list.html" class="ov_listall">전체목록</a> 총회원수 4,473명 중,
+					<a href="#">차단 22</a>명,
+					<a href="#">탈퇴 91</a>명
+			</div>
+
+			<form id="fsearch" name="fsearch" class="local_sch01 local_sch">
+				<label for="sfl" class="sound_only">검색대상</label>
+				<select name="sfl" id="sfl">
+					<option value="">회원구분</option>
+					<option value="">회원아이디</option>
+					<option value="">이름</option>
+					<option value="">권한</option>
+					<option value="">E-MAIL</option>
+					<option value="">전화번호</option>
+					<option value="">휴대폰번호</option>
+					<option value="">가입일시</option>
+					<option value="mb_ip">IP</option>
+				</select>
+				<select name="mb_10" id="mb_10">
+					<option value=".">전체</option>
+					<option value="01" >개인</option>
+					<option value="02" >기업</option>
+					<option value="05" >통합인증</option>
+				</select>
+				<label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+				<input type="text" name="stx" value="" id="stx" required class="required frm_input">
+				<input type="submit" class="btn_submit" value="검색">
+			</form>
+
+			<div class="local_desc01 local_desc">
+					<p>
+							회원자료 삭제 시 다른 회원이 기존 회원아이디를 사용하지 못하도록 회원아이디, 이름, 닉네임은 삭제하지 않고 영구 보관합니다.
+					</p>
+				<p>
+					회원권한은 5 이하로 설정. 5이상은 IT팀에 문의하세요. 디자인 템플릿 읽기 전용(2 이상), 디자인 템플릿 등록, 수정(8 이상)
+				</p>
+			</div>
+
+			<div class="btn_add01 btn_add">
+					<a href="#" id="member_add">회원추가</a>
+			</div>
+
+			<form name="fmemberlist" id="fmemberlist">
+				<div class="tbl_head02 tbl_wrap">
+					<table>
+						<caption>회원관리 목록</caption>
+						<thead>
+							<tr>
+								<th scope="col" rowspan="2">
+										<label for="chkall" class="sound_only">회원 전체</label>
+										<input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all(this.form)">
+								</th>
+								<th scope="col" rowspan="2"><a href="#">아이디</a></th>
+								<th scope="col"><a href="#">회원구분(점포구분)</a></th>
+								<th scope="col" colspan="6"><a href="#">본인확인</a></th>
+								<th scope="col">휴대폰</th>
+								<th scope="col">상태/<a href="#">권한</a></th>
+								<th scope="col"><a href="#">최종접속</a></th>
+								<th scope="col" rowspan="2">접근<br>그룹</th>
+								<th scope="col" rowspan="2">관리</th>
+							</tr>
+							<tr>
+								<th scope="col"><a href="#">이름</a></th>
+								<th scope="col"><a href="#">메일<br>인증</a></th>
+								<th scope="col"><a href="#">정보<br>공개</a></th>
+								<th scope="col"><a href="#">메일<br>수신</a></th>
+								<th scope="col"><a href="#">SMS<br>수신</a></th>
+								<th scope="col"><a href="#">성인<br>인증</a></th>
+								<th scope="col"><a href="#">접근<br>차단</a></th>
+								<th scope="col">전화번호</th>
+								<th scope="col"><a href="#"> 포인트</a></th>
+								<th scope="col"><a href="#">가입일</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="bg0">
+								<td class="td_chk" rowspan="2">
+										<input type="hidden">
+										<label for="chk_0" class="sound_only">2018061님</label>
+										<input type="checkbox">
+								</td>
+								<td rowspan="2" class="td_name sv_use" style="font-weight:bold;">2018061</td>
+								<td class="td_name sv_use" style="font-weight:bold;">통합회원(선택없음)</td>
+								<td colspan="6" class="td_mbcert">
+									<input type="radio" id="mb_certify_ipin_1" >
+									<label for="mb_certify_ipin_1">아이핀</label>
+									<input type="radio" id="mb_certify_hp_1" >
+									<label for="mb_certify_hp_1">휴대폰</label>
+
+								</td>
+								
+								<td class="td_tel">025570055</td>
+								<td class="td_mbstat">정상            
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4" selected="selected">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
+								</td>
+								<td class="td_date">19-09-09</td>
+								<td rowspan="2" class="td_numsmall"></td>
+								<td rowspan="2" class="td_mngsmall">
+									<a href="#">수정</a>
+									<a href="#">그룹</a>
+								</td>
+							</tr>
+							<tr class="bg0">
+								<td class="td_mbname">김새미</td>
+							
+								<td class="td_chk"><span class="txt_true">Yes</span></td>
+								<td class="td_chk">
+									<label for="" class="sound_only">정보공개</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">메일수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">SMS수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">성인인증</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<input type="checkbox" id="">
+									<label for="" class="sound_only">접근차단</label>
+								</td>
+								<td class="td_tel"></td>
+								<td class="td_num"><a href="#">0</a></td>
+								<td class="td_date">19-09-09</td>
+							</tr>
+							<tr class="bg1">
+								<td class="td_chk" rowspan="2">
+										<input type="hidden">
+										<label for="chk_0" class="sound_only">2018061님</label>
+										<input type="checkbox">
+								</td>
+								<td rowspan="2" class="td_name sv_use" style="font-weight:bold;">2018061</td>
+								<td class="td_name sv_use" style="font-weight:bold;">통합회원(선택없음)</td>
+								<td colspan="6" class="td_mbcert">
+									<input type="radio" id="mb_certify_ipin_1" >
+									<label for="mb_certify_ipin_1">아이핀</label>
+									<input type="radio" id="mb_certify_hp_1" >
+									<label for="mb_certify_hp_1">휴대폰</label>
+
+								</td>
+								
+								<td class="td_tel">025570055</td>
+								<td class="td_mbstat">정상            
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4" selected="selected">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
+								</td>
+								<td class="td_date">19-09-09</td>
+								<td rowspan="2" class="td_numsmall"></td>
+								<td rowspan="2" class="td_mngsmall">
+									<a href="#">수정</a>
+									<a href="#">그룹</a>
+								</td>
+							</tr>
+							<tr class="bg1">
+								<td class="td_mbname">김새미</td>
+							
+								<td class="td_chk"><span class="txt_true">Yes</span></td>
+								<td class="td_chk">
+									<label for="" class="sound_only">정보공개</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">메일수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">SMS수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">성인인증</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<input type="checkbox" id="">
+									<label for="" class="sound_only">접근차단</label>
+								</td>
+								<td class="td_tel"></td>
+								<td class="td_num"><a href="#">0</a></td>
+								<td class="td_date">19-09-09</td>
+							</tr>
+							<tr class="bg0">
+								<td class="td_chk" rowspan="2">
+										<input type="hidden">
+										<label for="chk_0" class="sound_only">2018061님</label>
+										<input type="checkbox">
+								</td>
+								<td rowspan="2" class="td_name sv_use" style="font-weight:bold;">2018061</td>
+								<td class="td_name sv_use" style="font-weight:bold;">통합회원(선택없음)</td>
+								<td colspan="6" class="td_mbcert">
+									<input type="radio" id="mb_certify_ipin_1" >
+									<label for="mb_certify_ipin_1">아이핀</label>
+									<input type="radio" id="mb_certify_hp_1" >
+									<label for="mb_certify_hp_1">휴대폰</label>
+
+								</td>
+								
+								<td class="td_tel">025570055</td>
+								<td class="td_mbstat">정상            
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4" selected="selected">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
+								</td>
+								<td class="td_date">19-09-09</td>
+								<td rowspan="2" class="td_numsmall"></td>
+								<td rowspan="2" class="td_mngsmall">
+									<a href="#">수정</a>
+									<a href="#">그룹</a>
+								</td>
+							</tr>
+							<tr class="bg0">
+								<td class="td_mbname">김새미</td>
+							
+								<td class="td_chk"><span class="txt_true">Yes</span></td>
+								<td class="td_chk">
+									<label for="" class="sound_only">정보공개</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">메일수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">SMS수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">성인인증</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<input type="checkbox" id="">
+									<label for="" class="sound_only">접근차단</label>
+								</td>
+								<td class="td_tel"></td>
+								<td class="td_num"><a href="#">0</a></td>
+								<td class="td_date">19-09-09</td>
+							</tr>
+							<tr class="bg1">
+								<td class="td_chk" rowspan="2">
+										<input type="hidden">
+										<label for="chk_0" class="sound_only">2018061님</label>
+										<input type="checkbox">
+								</td>
+								<td rowspan="2" class="td_name sv_use" style="font-weight:bold;">2018061</td>
+								<td class="td_name sv_use" style="font-weight:bold;">통합회원(선택없음)</td>
+								<td colspan="6" class="td_mbcert">
+									<input type="radio" id="mb_certify_ipin_1" >
+									<label for="mb_certify_ipin_1">아이핀</label>
+									<input type="radio" id="mb_certify_hp_1" >
+									<label for="mb_certify_hp_1">휴대폰</label>
+
+								</td>
+								
+								<td class="td_tel">025570055</td>
+								<td class="td_mbstat">정상            
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4" selected="selected">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
+								</td>
+								<td class="td_date">19-09-09</td>
+								<td rowspan="2" class="td_numsmall"></td>
+								<td rowspan="2" class="td_mngsmall">
+									<a href="#">수정</a>
+									<a href="#">그룹</a>
+								</td>
+							</tr>
+							<tr class="bg1">
+								<td class="td_mbname">김새미</td>
+							
+								<td class="td_chk"><span class="txt_true">Yes</span></td>
+								<td class="td_chk">
+									<label for="" class="sound_only">정보공개</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">메일수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">SMS수신</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<label for="" class="sound_only">성인인증</label>
+									<input type="checkbox" id="">
+								</td>
+								<td class="td_chk">
+									<input type="checkbox" id="">
+									<label for="" class="sound_only">접근차단</label>
+								</td>
+								<td class="td_tel"></td>
+								<td class="td_num"><a href="#">0</a></td>
+								<td class="td_date">19-09-09</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			<div class="btn_list01 btn_list">
+					<input type="submit" name="act_button" value="선택수정" onclick="document.pressed=this.value">
+					<input type="submit" name="act_button" value="선택삭제" onclick="document.pressed=this.value">
+			</div>
+			</form>
+
+			<nav class="pg_wrap">
+				<span class="pg">
+					<span class="sound_only">열린</span>
+					<strong class="pg_current">1</strong>
+					<span class="sound_only">페이지</span>
+					<a href="#" class="pg_page">2<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">3<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">4<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">5<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">6<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">7<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">8<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">9<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page">10<span class="sound_only">페이지</span></a>
+					<a href="#" class="pg_page pg_next">다음</a>
+					<a href="#" class="pg_page pg_end">맨끝</a>
+			</span>
+		</nav>
+
+		<noscript>
+			<p>
+					귀하께서 사용하시는 브라우저는 현재 <strong>자바스크립트를 사용하지 않음</strong>으로 설정되어 있습니다.<br>
+					<strong>자바스크립트를 사용하지 않음</strong>으로 설정하신 경우는 수정이나 삭제시 별도의 경고창이 나오지 않으므로 이점 주의하시기 바랍니다.
+			</p>
+		</noscript>
+
+		</div>
+	</div>
+
+	<footer id="ft">
+			<p>
+					Copyright &copy; www.kinkos.co.kr. All rights reserved.<br>
+					<a href="#">상단으로</a>
+			</p>
+	</footer>
+
+</body>
+</html>

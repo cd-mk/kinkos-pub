@@ -1,0 +1,303 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="title" content="회원관리 | 킨코스코리아(주)" />
+    <meta name="description" id="meta_description" content="회원관리 | 킨코스코리아(주)" />
+    <meta name="keywords" content="복사,인쇄,포스터,제본,킨코스" />
+  
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="/data/_main/95bd29f4b4955d26f838b3e06bcf4dc8_14482417672292.ico">
+    <title>회원관리 | 킨코스코리아(주)</title>
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+    <link rel="stylesheet" href="./css/admin.css">
+  
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.menu.js"></script>
+    <script src="./js/common.js"></script>
+  </head>
+<body>
+
+  <div id="to_content"><a href="#container">본문 바로가기</a></div>
+
+  <header id="hd">
+    <div id="hd_wrap">
+      <h1>킨코스코리아(주)</h1>
+
+      <div id="logo"><a href="00.main-admin.html"><img src="./image/logo.jpg" alt="킨코스코리아(주) 관리자"></a></div>
+
+      <ul id="tnb">
+        <li><a href="#">관리자정보</a></li>
+        <li><a href="#">기본환경</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">쇼핑몰환경</a></li>
+        <li><a href="#">쇼핑몰</a></li>
+        <li id="tnb_logout"><a href="#">로그아웃</a></li>
+      </ul>
+
+      <nav id="gnb">
+        <h2>관리자 주메뉴</h2>
+        <ul id="gnb_1dul">
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">환경설정</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">관리권한설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">기본환경설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">메뉴설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">메인 좌측 슬라이드</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">메인 하단 슬라이드</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">페이지 배너관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">쇼핑몰 메인 슬라이드</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  gnb_grp_div">메일 테스트</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  ">팝업레이어관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">세션파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">캐시파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">캡챠파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">썸네일파일 일괄삭제</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  gnb_grp_div">phpinfo()</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">알림톡설정</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">알림톡설정</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="./member_list.html" class="gnb_1da">회원관리</a>
+            <ul class="gnb_2dul"><li class="gnb_2dli"><a href="./member_list.html" class="gnb_2da">회원관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">기업회원관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">회원/비회원</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">회원메일발송</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">접속자집계</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">접속자검색</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">포인트관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">투표관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="board_list.html" class="gnb_1da">게시판관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="board_list.html" class="gnb_2da">게시판관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">게시판그룹관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">인기검색어관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">인기검색어순위</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">1:1문의설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">내용관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">FAQ관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">쇼핑몰관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="#" class="gnb_2da  ">쇼핑몰설정</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">주문내역</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">주문내역(센터용)</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">주문내역(디자이너용)</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">개인결제관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">분류관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품문의</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">사용후기</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품재고관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품유형관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품옵션재고관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">쿠폰관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">추가배송비관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="#" class="gnb_1da">쇼핑몰현황/기타</a>
+            <ul class="gnb_2dul"><li class="gnb_2dli"><a href="#" class="gnb_2da">매출현황</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">상품판매순위</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">주문내역출력</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">재입고SMS알림</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">이벤트관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">이벤트일괄처리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">배너관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">보관함현황</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">가격비교사이트</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="./group.html" class="gnb_1da">서비스관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="./group.html" class="gnb_2da">코드그룹관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">종이관리</a></li>
+              <li class="gnb_2dli"><a href="#" class="gnb_2da">자동견적관리</a></li>
+            </ul>
+          </li>
+          <li class="gnb_1dli">
+            <a href="center.html" class="gnb_1da">사이트관리</a>
+            <ul class="gnb_2dul">
+              <li class="gnb_2dli"><a href="center.html" class="gnb_2da">센터정보관리</a></li>
+              <li class="gnb_2dli"><a href="orderanalytics.html" class="gnb_2da gnb_grp_style gnb_grp_div">견적관리 통계</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <ul id="lnb">
+    <li><a href="#">센터정보관리</a></li>
+    <li><a href="#">견적관리 통계</a></li>
+  </ul>
+
+  <div id="wrapper">
+    <div id="container">
+      <div id="text_size">
+          <!-- font_resize('엘리먼트id', '제거할 class', '추가할 class'); -->
+          <button onclick="font_resize('container', 'ts_up ts_up2', '');"><img src="./image/ts01.gif" alt="기본"></button>
+          <button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up');"><img src="./image/ts02.gif" alt="크게"></button>
+          <button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up2');"><img src="./image/ts03.gif" alt="더크게"></button>
+      </div>
+      <h1>견적관리 통계</h1>
+
+      <div class="local_ov01 local_ov"><span>년도와 월을 선택하여 주세요.</span></div>
+
+      <form name="fanalytics" class="local_sch02 local_sch" method="post" onsubmit="return form_submit(this);">
+        <div>
+          <label for="year" class="sound_only">년도선택</label>
+          <select name="year" id="year">
+            <option value="2017" >2017</option>
+            <option value="2018" >2018</option>
+            <option value="2019" selected="selected">2019</option>
+          </select> 년
+          <label for="month" class="sound_only">월선택</label>
+          <select name="month" id="month">
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" selected="selected">9</option>
+            <option value="10" >10</option>
+            <option value="11" >11</option>
+            <option value="12" >12</option>
+          </select> 월 ~
+          <select name="nyear" id="nyear">
+            <option value="2017" >2017</option>
+            <option value="2018" >2018</option>
+            <option value="2019" selected="selected">2019</option>
+          </select> 년
+          <label for="nmonth" class="sound_only">월선택</label>
+          <select name="nmonth" id="nmonth">
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" selected="selected">9</option>
+            <option value="10" >10</option>
+            <option value="11" >11</option>
+            <option value="12" >12</option>
+          </select> 월
+        </div>
+      </form>
+
+      <div class="btn_add01 btn_add"><a href="#">다운로드</a></div>
+
+      <div class="tbl_head01 tbl_wrap">
+        <ul>
+          <li>
+            <table class='centertable'>
+              <caption>견적관리 통계 목록</caption>
+              <thead>
+                <tr>
+                  <th scope="col">방문경로</th>
+                  <th scope="col">건수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg0">
+                  <td class="td_id">인터넷검색</td>
+                  <td>29</td>
+                </tr>
+                <tr class="bg1">
+                  <td class="td_id">기존이용</td>
+                  <td>18</td>
+                </tr>
+                <tr class="bg0">
+                  <td class="td_id">지인소개</td>
+                  <td>7</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <table class='postable'>
+              <caption>견적관리 통계 목록</caption>
+              <thead>
+              <tr>
+                <th scope="col">고객위치</th>
+                <th scope="col">건수</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr class="bg0">
+                  <td class="td_id">서울</td>
+                  <td>3</td>
+                </tr>
+                <tr class="bg1">
+                  <td class="td_id">일산</td>
+                  <td>3</td>
+                </tr>
+                <tr class="bg0">
+                  <td class="td_id">마포구 상수동</td>
+                  <td>2</td>
+                </tr>
+                <tr class="bg1">
+                  <td class="td_id">판교</td>
+                  <td>2</td>
+                </tr>
+                <tr class="bg0">
+                  <td class="td_id">분당</td>
+                  <td>1</td>
+                </tr>
+                <tr class="bg1">
+                  <td class="td_id">압구정동</td>
+                  <td>1</td>
+                </tr>
+                <tr class="bg0">
+                  <td class="td_id">학동역</td>
+                  <td>1</td>
+                </tr>
+                <tr class="bg1">
+                  <td class="td_id">서초동</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </div>
+      <noscript>
+        <p>
+            귀하께서 사용하시는 브라우저는 현재 <strong>자바스크립트를 사용하지 않음</strong>으로 설정되어 있습니다.<br>
+            <strong>자바스크립트를 사용하지 않음</strong>으로 설정하신 경우는 수정이나 삭제시 별도의 경고창이 나오지 않으므로 이점 주의하시기 바랍니다.
+        </p>
+      </noscript>
+    </div>
+  </div>
+
+  <footer id="ft">
+      <p>
+          Copyright &copy; www.kinkos.co.kr. All rights reserved.<br>
+          <a href="#">상단으로</a>
+      </p>
+  </footer>
+
+  </body>
+</html>
