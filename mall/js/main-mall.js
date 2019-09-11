@@ -59,6 +59,40 @@ function slideInit() {
 		reloadSlide(speedSlide, pcOpt, moOpt);
 	})();
 
+
+
+
+	// cs문의 슬라이드
+	(function () {
+		var pcOpt = {
+			slidesPerView: false,
+			allowTouchMove: false
+		};
+		var moOpt = {
+			roundLengths: true,
+			slidesPerView: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				hide: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			}
+		};
+
+		var csInfo = isMobile
+			? new Swiper('.info_wrap .cs', moOpt)
+			: new Swiper('.info_wrap .cs', pcOpt);
+
+		reloadSlide(csInfo, pcOpt, moOpt);
+	})();
+
+
 	// 상담상품
 	var galleryThumbs = new Swiper('.consult_tag.gallery-thumbs', {
 		direction: 'vertical',

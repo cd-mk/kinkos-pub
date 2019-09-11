@@ -77,7 +77,7 @@ function slideInit(){
     reloadSlide(instaSlide, pcOpt, moOpt);
   })();
 
-  // 인스타그램 슬라이드 
+ // cs문의 슬라이드
   (function () {
     var pcOpt = {
       slidesPerView: false,

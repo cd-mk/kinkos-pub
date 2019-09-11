@@ -93,15 +93,22 @@ input {
  /* layout */
 .wrap {min-width:1530px;}
 .layout_width {width:1530px;margin:0 auto;}
-.layout_full {width:100%;}
+.layout_full {width:100%;overflow: hidden;}
 .pc {display: block;}
 .mo {display: none;}
+.pc_tablet {display: block;}
+.mo_only {display: none;}
+
 .dim {display: none; position: fixed; left: 0; top:0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10;}
 .swiper-button-next {background-image:url(../image/common/next.png); right:20px; left:auto; width:84px; height:84px; background-size:84px;}
 .swiper-button-prev {background-image:url(../image/common/prev.png); left:20px; right:auto; width:84px; height:84px; background-size:84px;}
 .swiper-button-next.small {background-image:url(../image/common/next-small.png); right:0; left:auto; width:21px; height:18px; background-size:21px;}
 .swiper-button-prev.small {background-image:url(../image/common/prev-small.png); left:0; right:auto; width:21px; height:18px; background-size:21px;}
 body.open {overflow: hidden;}
+.bg_img {position:relative; display:inline-block; width:100%; height:100%; overflow:hidden;}
+.bg_img img {position:absolute; top:50%; left:50%; transform:translate(-50% , -50%); width:100%; height:100%; pointer-events: none; object-fit: cover;}
+
+
 @media screen and (max-width: 1024px) {
   .layout_width {width:100%; padding:0 4%;}
   .swiper-button-next {background-image:url(../image/common/next-mo.svg); right:20px; left:auto; width:21px; height:18px; background-size:21px;}
@@ -327,6 +334,8 @@ h2 {font-weight: 700;font-size: 18px;}
    .mo {display:block;}
    .pc{display:none;}
    .mo img {max-width: 100%;}
+  .pc_tablet {display: block;}
+  .mo_only {display: none;}
  
    .layout_width {width:100%; padding:0 4%;}
    #footer .footer_inner {padding: 35px 0 64px;}
@@ -338,3 +347,11 @@ h2 {font-weight: 700;font-size: 18px;}
    #footer .footer_inner .social > li {float: none; margin-left: 16px; display: inline-block;}
    #footer .footer_inner .cpr {right: 50%; bottom: 30px; font-size:13px; transform: translateX(50%); width:273px;}
  }
+@media screen and (max-width: 1600px) {
+  #wrap .layout_width {padding:20px;}
+}
+
+ @media screen and (max-width: 768px) {
+  .pc_tablet {display: none;}
+  .mo_only {display: block;}
+}

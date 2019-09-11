@@ -106,14 +106,14 @@ var mobileGnb = function () {
 	});
 })();
 
-(function () {
-	$('.banner_item').on('mouseenter', function () {
-		$(this).find('.txt').addClass('move');
-	});
-	$('.banner_item').on('mouseleave', function () {
-		$(this).find('.txt').removeClass('move');
-	});
-})();
+// (function () {
+// 	$('.banner_wrap .item').on('mouseenter', function () {
+// 		$(this).find('.txt').addClass('move');
+// 	});
+// 	$('.banner_wrap .item').on('mouseleave', function () {
+// 		$(this).find('.txt').removeClass('move');
+// 	});
+// })();
 
 // 브라우저별 스크롤바 넓이
 function getScrollbarWidth() {
