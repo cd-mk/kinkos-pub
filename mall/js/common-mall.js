@@ -115,10 +115,19 @@ var mobileGnb = function () {
 	});
 })();
 
-// 리사이즈 이벤트에 따른 슬라이드 리로드
+// 브라우저별 스크롤바 넓이
 function getScrollbarWidth() {
 	return window.innerWidth - document.documentElement.clientWidth;
 }
+// 페이지 로드시 viewport 체크
+function chkViewport() {
+	var scrollW = getScrollbarWidth();
+	var winW = $(window).outerWidth();
+	var viewport = winW + scrollW;
+
+	return viewport <= 1024 ? true : false;
+}
+// 리사이즈 이벤트에 따른 슬라이드 리로드
 function reloadSlide(slideTarget, pcOpt, moOpt) {
 	var flag = true;
 	var viewport;
@@ -129,7 +138,7 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
 		var winW = $(this).outerWidth();
 		viewport = winW + scrollW;
 
-		if (viewport < 1024 && flag) {
+		if (viewport <= 1024 && flag) {
 			slideTarget.destroy(true, true);
 			slideTarget = new Swiper(el, moOpt);
 			flag = false;
@@ -141,130 +150,6 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
 	});
 }
 
-(function() {
-	var pcOpt = {
-		slidesPerView: 3, 
-		spaceBetween: 30,
-		speed: 500,
-		loop: true,
-		grabCursor: true,
-		centeredSlides: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		scrollbar: {
-			el: '.swiper-scrollbar',
-			hide: false,
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'fraction',
-		}
-	};
-	var moOpt = {
-		slidesPerView: 'auto',
-		spaceBetween: 15,
-		speed: 500,
-		loop: false,
-		grabCursor: true,
-		centeredSlides: false,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		scrollbar: {
-			el: '.swiper-scrollbar',
-			hide: false,
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'fraction',
-		}
-	};
-
-	var speedSlide = new Swiper('.speed_slide', pcOpt);
-	reloadSlide(speedSlide, pcOpt, moOpt);
-})();
-
-// main slide
-var mainSlide = new Swiper('.visual_wrap', {
-	effect: 'fade',
-	speed: 500,
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-});
-
-// 상담상품
-var galleryThumbs = new Swiper('.consult_tag.gallery-thumbs', {
-	direction: 'vertical',
-	slidesPerView: 'auto',
-	freeMode: false,
-	watchSlidesVisibility: true,
-	watchSlidesProgress: true,
-	breakpoints: {
-		// when window width is >= ㅡ모바일 1024이하
-		1024: {
-			direction: 'horizontal',
-			slidesPerView: 'auto', 
-			slideToClickedSlide: true,
-			spaceBetween: 12,
-			centeredSlides:false,
-			roundLengths: true,
-			freeMode: false,
-		}
-	}
-});
-
-var galleryTop = new Swiper('.consult_slide.gallery-top', {
-	direction: 'vertical',
-	slidesPerView: 1,
-	spaceBetween: 30,
-	freeMode: true,
-	thumbs: {
-		swiper: galleryThumbs
-	},
-	breakpoints: {
-		// when window width is >= ㅡ모바일 1024이하
-		1024: {
-			direction: 'horizontal',
-			slidesPerView: 1, 
-			loop: true,
-			centeredSlides:true,
-			roundLengths: true
-		}
-	}
-});
-
-// 베스트 상품
-
-	var galleryThumbs = new Swiper('.best_name.gallery-thumbs', {
-		slidesPerView: 'auto',
-		freeMode: false,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-	});
-	var galleryTop = new Swiper('.best_item.gallery-top', {
-		slidesPerView: 'auto',
-		spaceBetween: 30,
-		freeMode: true,
-		thumbs: {
-			swiper: galleryThumbs
-		}
-	});
-
-	var mql = window.matchMedia("screen and (max-width: 1024px)");
-		if (mql.matches) {
-			var swiperV = new Swiper('.swiper-container-v', {
-				roundLengths: true,
-				slidesPerView: 'auto',
-				freeMode: true,
-				spaceBetween: 20
-			});
-		}   
-	
 // mobile
 (function () {
 	$('.btn_menu').on('click', function () {

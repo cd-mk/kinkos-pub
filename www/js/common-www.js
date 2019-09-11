@@ -158,6 +158,32 @@ var setPopup = function() {
   });
 }
 
+// 리사이즈 이벤트에 따른 슬라이드 리로드
+function getScrollbarWidth() {
+	return window.innerWidth - document.documentElement.clientWidth;
+}
+function reloadSlide(slideTarget, pcOpt, moOpt) {
+	var flag = true;
+	var viewport;
+	var el = slideTarget.params.el;
+	var scrollW = getScrollbarWidth();
+
+	$(window).resize(function() {
+		var winW = $(this).outerWidth();
+		viewport = winW + scrollW;
+
+		if (viewport < 1024 && flag) {
+			slideTarget.destroy(true, true);
+			slideTarget = new Swiper(el, moOpt);
+			flag = false;
+		} else if (viewport > 1024 && !flag) {
+			slideTarget.destroy(true, true);
+			slideTarget = new Swiper(el, pcOpt);
+			flag = true;
+		}
+	});
+}
+
 // TypeB Main page JS
 $(document).ready(function () {
   setGnb();
