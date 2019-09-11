@@ -166,7 +166,7 @@
           <div class="swiper-scrollbar mo"></div>
           <div class="pg_nav">
             <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination mo"></div>
             <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -347,54 +347,56 @@
       <div class="insta_wrap layout_width">
         <h2>INSTAGRAM</h2>
         <a href="#url" class="goto_insta pc">instagram.com/kinkos_korea</a>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide1.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide2.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide3.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide4.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide5.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide6.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide7.png" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#url" class="thumb wow">
-              <span class="color_bg"></span>
-              <img src="./image/main/insta-slide8.png" alt="">
-            </a>
+        <div class="insta_con swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide1.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide2.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide3.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide4.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide5.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide6.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide7.png" alt="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#url" class="thumb wow">
+                <span class="color_bg"></span>
+                <img src="./image/main/insta-slide8.png" alt="">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -494,107 +496,11 @@
     <script src="./js/wow.min.js"></script>
     <script src="./js/swiper/swiper.min.js"></script>
     <script src="./js/common-www.js"></script>
+    <script src="./js/main-www.js"></script>
 
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.visual_wrap', {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        }
-      });
-      var swiper = new Swiper('.bestPro_wrap', {
-        slidesPerView: 'auto',
-        spaceBetween: 160,
-        loop: true,
-        centeredSlides: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          // when window width is >= ㅡ모바일 1024이하
-          1024: {
-            spaceBetween: 15,
-            centeredSlides:false,
-            loop:false,
-            scrollbar: {
-              el: '.swiper-scrollbar',
-              hide: false,
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'fraction',
-            }
-          }
-        }
-      });
-      var swiper = new Swiper('.insta_wrap', {
-        slidesPerView: 8,
-        spaceBetween: 22,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        breakpoints: {
-          // when window width is >= ㅡ모바일 1024이하
-          1024: {
-            slidesPerView: 3,
-            slidesPerColumn: 2,
-            spaceBetween: 0,
-            loop: false,
-            centeredSlides: false,
-          }
-        }
-      });
-      var gallerythumb = new Swiper('.navi_thumb', {
-        slidesPerView: 1,
-        freeMode: true,
-        loop: true,
-        watchSlidesVisibility: true,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        }
-      });
-      var galleryTop = new Swiper('.service_wrap .thumb', {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        thumb: {
-          swiper: gallerythumb
-        }
-      });
-      // cs문의 슬라이드
-      var mql = window.matchMedia("screen and (max-width: 1024px)");
-      
-        if (mql.matches) {
-          var swiper = new Swiper('.info_wrap .cs', {
-            roundLengths: true,
-            slidesPerView: 1,
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-              el: '.swiper-scrollbar',
-              hide: false,
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'fraction',
-            }
-          });
-        }  
-
       
     </script>
   <!-- //SCRIPT -->
