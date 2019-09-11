@@ -76,17 +76,17 @@
 .cs_wrap ul li:first-child {background:url('../image/main/ico-book.png') no-repeat left center; background-size:53px 60px;}
 .cs_wrap ul li:nth-child(2) {background:url('../image/main/ico-pen.png') no-repeat left center; background-size:53px 60px;}
 .cs_wrap ul li:nth-child(3) {background:url('../image/main/ico-pencil.png') no-repeat left center; background-size:53px 60px;}
-.cs_wrap ul li::before {content:""; clear:both; position: absolute; top:50%; right:0; width:1.5px; height:63px; transform:translateY(-50%); background-color:#e7e7e7;}
+.cs_wrap ul li::before {content:""; clear:both; position: absolute; top:50%; right:0; width:1px; height:63px; transform:translateY(-50%); background-color:#e7e7e7;}
 .cs_wrap ul li:last-child:before {display: none;}
 @media screen and (max-width: 1024px) {
 	.cs_wrap {margin-top:80px;}
 	.cs_wrap ul {margin: 0 8px;}
-	.cs_wrap ul li {margin:0;padding:53px 0 0 0; width:calc((100% - 8px) / 3);}
+	.cs_wrap ul li {margin:0;padding:0; width:calc((100% - 8px) / 3);}
 	.cs_wrap ul li strong {font-size: 14px; display: block; text-align: center;}
-	.cs_wrap ul li a {padding:0;}
-	.cs_wrap ul li:first-child {background:url('../image/main/ico-book.png') no-repeat center top; background-size:35px 40px;}
-	.cs_wrap ul li:nth-child(2) {background:url('../image/main/ico-pen.png') no-repeat center top; background-size:35px 40px;}
-	.cs_wrap ul li:nth-child(3) {background:url('../image/main/ico-pencil.png') no-repeat center top; background-size:35px 40px;}
+	.cs_wrap ul li a {padding:53px 0 0 0;}
+	.cs_wrap ul li:first-child {background:url('../image/main/ico-book.png') no-repeat center 10px; background-size:35px 40px;}
+	.cs_wrap ul li:nth-child(2) {background:url('../image/main/ico-pen.png') no-repeat center 10px; background-size:35px 40px;}
+	.cs_wrap ul li:nth-child(3) {background:url('../image/main/ico-pencil.png') no-repeat center 10px; background-size:35px 40px;}
 	.cs_wrap ul li::before {height:66px;}
 }
 
