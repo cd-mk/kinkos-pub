@@ -77,6 +77,35 @@ function slideInit(){
     reloadSlide(instaSlide, pcOpt, moOpt);
   })();
 
+  // 인스타그램 슬라이드 
+  (function () {
+    var pcOpt = {
+      slidesPerView: false,
+      allowTouchMove: false
+    };
+    var moOpt = {
+      roundLengths: true,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      }
+    };
+
+    var csInfo = isMobile
+      ? new Swiper('.info_wrap .cs', moOpt)
+      : new Swiper('.info_wrap .cs', pcOpt);
+
+    reloadSlide(csInfo, pcOpt, moOpt);
+  })();
 
   var gallerythumb = new Swiper('.navi_thumb', {
     slidesPerView: 1,
@@ -101,28 +130,6 @@ function slideInit(){
       swiper: gallerythumb
     }
   });
-
-  // cs문의 슬라이드
-  var mql = window.matchMedia("screen and (max-width: 1024px)");
-
-  if (mql.matches) {
-    var swiper = new Swiper('.info_wrap .cs', {
-      roundLengths: true,
-      slidesPerView: 1,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      }
-    });
-  }
 
 
 }
