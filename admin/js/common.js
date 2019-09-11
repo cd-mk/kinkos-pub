@@ -1,8 +1,8 @@
-// �꾩뿭 蹂���
+// 전역 변수
 var errmsg = "";
 var errfld = null;
 
-// �꾨뱶 寃���
+// 필드 검사
 function check_field(fld, msg)
 {
     if ((fld.value = trim(fld.value)) == "")
@@ -12,7 +12,7 @@ function check_field(fld, msg)
     return;
 }
 
-// �꾨뱶 �ㅻ쪟 �쒖떆
+// 필드 오류 표시
 function error_field(fld, msg)
 {
     if (msg != "")
@@ -21,7 +21,7 @@ function error_field(fld, msg)
     fld.style.background = "#BDDEF7";
 }
 
-// �꾨뱶瑜� 源⑤걮�섍쾶
+// 필드를 깨끗하게
 function clear_field(fld)
 {
     fld.style.background = "#FFFFFF";
@@ -59,8 +59,8 @@ function trim(s)
     return t;
 }
 
-// �먮컮�ㅽ겕由쏀듃濡� PHP�� number_format �됰궡瑜� ��
-// �レ옄�� , 瑜� 異쒕젰
+// 자바스크립트로 PHP의 number_format 흉내를 냄
+// 숫자에 , 를 출력
 function number_format(data)
 {
 
@@ -99,21 +99,21 @@ function number_format(data)
     return number;
 }
 
-// �� 李�
+// 새 창
 function popup_window(url, winname, opt)
 {
     window.open(url, winname, opt);
 }
 
 
-// �쇰찓�� 李�
+// 폼메일 창
 function popup_formmail(url)
 {
     opt = 'scrollbars=yes,width=417,height=385,top=10,left=20';
     popup_window(url, "wformmail", opt);
 }
 
-// , 瑜� �놁븻��.
+// , 를 없앤다.
 function no_comma(data)
 {
     var tmp = '';
@@ -128,10 +128,10 @@ function no_comma(data)
     return tmp;
 }
 
-// ��젣 寃��� �뺤씤
+// 삭제 검사 확인
 function del(href)
 {
-    if(confirm("�쒕쾲 ��젣�� �먮즺�� 蹂듦뎄�� 諛⑸쾿�� �놁뒿�덈떎.\n\n�뺣쭚 ��젣�섏떆寃좎뒿�덇퉴?")) {
+    if(confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?")) {
         var iev = -1;
         if (navigator.appName == 'Microsoft Internet Explorer') {
             var ua = navigator.userAgent;
@@ -140,7 +140,7 @@ function del(href)
                 iev = parseFloat(RegExp.$1);
         }
 
-        // IE6 �댄븯�먯꽌 �쒓�源⑥쭚 諛⑹�
+        // IE6 이하에서 한글깨짐 방지
         if (iev != -1 && iev < 7) {
             document.location.href = encodeURI(href);
         } else {
@@ -149,7 +149,7 @@ function del(href)
     }
 }
 
-// 荑좏궎 �낅젰
+// 쿠키 입력
 function set_cookie(name, value, expirehours, domain)
 {
     var today = new Date();
@@ -160,7 +160,7 @@ function set_cookie(name, value, expirehours, domain)
     }
 }
 
-// 荑좏궎 �살쓬
+// 쿠키 얻음
 function get_cookie(name)
 {
     var find_sw = false;
@@ -192,7 +192,7 @@ function get_cookie(name)
     return "";
 }
 
-// 荑좏궎 吏���
+// 쿠키 지움
 function delete_cookie(name)
 {
     var today = new Date();
@@ -236,7 +236,7 @@ function textarea_increase(id, row)
     document.getElementById(id).rows += row;
 }
 
-// 湲��レ옄 寃���
+// 글숫자 검사
 function check_byte(content, target)
 {
     var i = 0;
@@ -252,13 +252,13 @@ function check_byte(content, target)
             cnt += 1;
         }
     }
-    // �レ옄瑜� 異쒕젰
+    // 숫자를 출력
     document.getElementById(target).innerHTML = cnt;
 
     return cnt;
 }
 
-// 釉뚮씪�곗��먯꽌 �ㅻ툕�앺듃�� �쇱そ 醫뚰몴
+// 브라우저에서 오브젝트의 왼쪽 좌표
 function get_left_pos(obj)
 {
     var parentObj = null;
@@ -275,7 +275,7 @@ function get_left_pos(obj)
     return left;
 }
 
-// 釉뚮씪�곗��먯꽌 �ㅻ툕�앺듃�� �곷떒 醫뚰몴
+// 브라우저에서 오브젝트의 상단 좌표
 function get_top_pos(obj)
 {
     var parentObj = null;
@@ -326,7 +326,7 @@ $(document).ready(function(){
 });
 
 /**
- * �ъ씤�� 李�
+ * 포인트 창
  **/
 var win_point = function(href) {
     var new_win = window.open(href, 'win_point', 'left=100,top=100,width=600, height=600, scrollbars=1');
@@ -334,7 +334,7 @@ var win_point = function(href) {
 }
 
 /**
- * 履쎌� 李�
+ * 쪽지 창
  **/
 var win_memo = function(href) {
     var new_win = window.open(href, 'win_memo', 'left=100,top=100,width=620,height=500,scrollbars=1');
@@ -342,7 +342,7 @@ var win_memo = function(href) {
 }
 
 /**
- * 硫붿씪 李�
+ * 메일 창
  **/
 var win_email = function(href) {
     var new_win = window.open(href, 'win_email', 'left=100,top=100,width=600,height=580,scrollbars=0');
@@ -350,7 +350,7 @@ var win_email = function(href) {
 }
 
 /**
- * �먭린�뚭컻 李�
+ * 자기소개 창
  **/
 var win_profile = function(href) {
     var new_win = window.open(href, 'win_profile', 'left=100,top=100,width=620,height=510,scrollbars=1');
@@ -358,7 +358,7 @@ var win_profile = function(href) {
 }
 
 /**
- * �ㅽ겕�� 李�
+ * 스크랩 창
  **/
 var win_scrap = function(href) {
     var new_win = window.open(href, 'win_scrap', 'left=100,top=100,width=600,height=600,scrollbars=1');
@@ -366,7 +366,7 @@ var win_scrap = function(href) {
 }
 
 /**
- * �덊럹�댁� 李�
+ * 홈페이지 창
  **/
 var win_homepage = function(href) {
     var new_win = window.open(href, 'win_homepage', '');
@@ -374,18 +374,18 @@ var win_homepage = function(href) {
 }
 
 /**
- * �고렪踰덊샇 李�
+ * 우편번호 창
  **/
 var win_zip = function(frm_name, frm_zip1, frm_zip2, frm_addr1, frm_addr2, frm_addr3, frm_jibeon) {
     if(typeof daum === 'undefined'){
-        alert("�ㅼ쓬 juso.js �뚯씪�� 濡쒕뱶�섏� �딆븯�듬땲��.");
+        alert("다음 juso.js 파일이 로드되지 않았습니다.");
         return false;
     }
 
     new daum.Postcode({
         oncomplete: function(data) {
-            // �앹뾽�먯꽌 寃��됯껐怨� ��ぉ�� �대┃�덉쓣�� �ㅽ뻾�� 肄붾뱶瑜� �묒꽦�섎뒗 遺�遺�.
-            // �고렪踰덊샇�� 二쇱냼 �뺣낫瑜� �대떦 �꾨뱶�� �ｊ퀬, 而ㅼ꽌瑜� �곸꽭二쇱냼 �꾨뱶濡� �대룞�쒕떎.
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+            // 우편번호와 주소 정보를 해당 필드에 넣고, 커서를 상세주소 필드로 이동한다.
             var of = document[frm_name];
             of[frm_zip1].value = data.postcode1;
             of[frm_zip2].value = data.postcode2;
@@ -393,7 +393,7 @@ var win_zip = function(frm_name, frm_zip1, frm_zip2, frm_addr1, frm_addr2, frm_a
             of[frm_addr2].value = "";
             of[frm_addr3].value = "";
 
-            if( data.addressType == "R" ){  //�꾨줈紐낆씠硫�
+            if( data.addressType == "R" ){  //도로명이면
                 of[frm_addr3].value = data.address2;
             }
             if(of[frm_jibeon] !== undefined){
@@ -406,7 +406,7 @@ var win_zip = function(frm_name, frm_zip1, frm_zip2, frm_addr1, frm_addr2, frm_a
 }
 
 /**
- * sms5 李�
+ * sms5 창
  **/
 var win_sms5 = function(href) {
     var new_win = window.open(href, 'win_sms5', 'width=474, height=560, scrollbars=1');
@@ -414,7 +414,7 @@ var win_sms5 = function(href) {
 }
 
 /**
- * �덈줈�� 鍮꾨�踰덊샇 遺꾩떎 李� : 101123
+ * 새로운 비밀번호 분실 창 : 101123
  **/
 win_password_lost = function(href)
 {
@@ -423,7 +423,7 @@ win_password_lost = function(href)
 }
 
 /**
- * �ㅻЦ議곗궗 寃곌낵
+ * 설문조사 결과
  **/
 var win_poll = function(href) {
     var new_win = window.open(href, 'win_poll', 'width=616, height=500, scrollbars=1');
@@ -431,8 +431,8 @@ var win_poll = function(href) {
 }
 
 /**
- * �ㅽ겕由곕━�� 誘몄궗�⑹옄瑜� �꾪븳 �ㅽ겕由쏀듃 - 吏��댁븘鍮� 2013-04-22
- * alt 媛믩쭔 媛뽯뒗 洹몃옒�� 留곹겕�� 留덉슦�ㅼ삤踰� �� title 媛� 遺���, 留덉슦�ㅼ븘�� �� title 媛� �쒓굅
+ * 스크린리더 미사용자를 위한 스크립트 - 지운아빠 2013-04-22
+ * alt 값만 갖는 그래픽 링크에 마우스오버 시 title 값 부여, 마우스아웃 시 title 값 제거
  **/
 $(function() {
     $('a img').mouseover(function() {
@@ -444,7 +444,7 @@ $(function() {
 });
 
 /**
- * �띿뒪�� 由ъ궗�댁쫰
+ * 텍스트 리사이즈
 **/
 function font_resize(id, rmv_class, add_class)
 {
@@ -504,7 +504,7 @@ $(function(){
     });
     */
 
-    // �ъ씠�쒕럭
+    // 사이드뷰
     var sv_hide = false;
     $(".sv_member, .sv_guest").click(function() {
         $(".sv").removeClass("sv_on");
@@ -534,7 +534,7 @@ $(function(){
         sv_hide = true;
     });
 
-    // ���됲듃 ul
+    // 셀렉트 ul
     var sel_hide = false;
     $('.sel_btn').click(function() {
         $('.sel_ul').removeClass('sel_on');
@@ -559,19 +559,19 @@ $(function(){
     });
 
     $(document).click(function() {
-        if(sv_hide) { // �ъ씠�쒕럭 �댁젣
+        if(sv_hide) { // 사이드뷰 해제
             $(".sv").removeClass("sv_on");
         }
-        if (sel_hide) { // ���됲듃 ul �댁젣
+        if (sel_hide) { // 셀렉트 ul 해제
             $('.sel_ul').removeClass('sel_on');
         }
     });
 
     $(document).focusin(function() {
-        if(sv_hide) { // �ъ씠�쒕럭 �댁젣
+        if(sv_hide) { // 사이드뷰 해제
             $(".sv").removeClass("sv_on");
         }
-        if (sel_hide) { // ���됲듃 ul �댁젣
+        if (sel_hide) { // 셀렉트 ul 해제
             $('.sel_ul').removeClass('sel_on');
         }
     });
@@ -586,15 +586,15 @@ $(function(){
     });
 });
 
-/* �앹뾽�몄텧�� �ъ슜�� �⑥닔 */
+/* 팝업호출시 사용할 함수 */
 function OpenPopupPost(Url, param, width, height, scroll, resizeble, name) {
-    /// <summary>�앹뾽 �몄텧 post 諛⑹떇</summary>
-    /// <param name="url" type="object">硫붾돱 Url</param>
+    /// <summary>팝업 호출 post 방식</summary>
+    /// <param name="url" type="object">메뉴 Url</param>
     /// <param name="parm" type="String">json param ex) {'param' : 'Y'}</param>
-    /// <param name="width" type="String">�볦씠</param>
-    /// <param name="height" type="String">�믪씠</param>
-    /// <param name="scroll" type="String">�ㅽ겕濡ㅼ뿬遺�</param>
-    /// <param name="resizeble" type="String">�ъ씠利덉“��</param>
+    /// <param name="width" type="String">넓이</param>
+    /// <param name="height" type="String">높이</param>
+    /// <param name="scroll" type="String">스크롤여부</param>
+    /// <param name="resizeble" type="String">사이즈조정</param>
     /// <param name="name" type="String">window name</param>
     /// <returns type="void"></returns>
 
@@ -618,10 +618,10 @@ function OpenPopupPost(Url, param, width, height, scroll, resizeble, name) {
 };
 
 function post_goto(url, parm, target) {
-    /// <summary>�섏씠吏� �대룞 post 諛⑹떇</summary>
-    /// <param name="url" type="object">硫붾돱 Url</param>
+    /// <summary>페이지 이동 post 방식</summary>
+    /// <param name="url" type="object">메뉴 Url</param>
     /// <param name="parm" type="String">json param ex) {'param' : 'Y'}</param>
-    /// <param name="target" type="String">��寃�</param>
+    /// <param name="target" type="String">타겟</param>
     /// <returns type="void"></returns>
 
     var f = $('<form></form>');
@@ -643,7 +643,7 @@ function post_goto(url, parm, target) {
     f.submit();
 }
 
-// �대�吏��� �ш린�� �곕씪 �덉갹�� �ш린媛� 蹂�寃�
+// 이미지의 크기에 따라 새창의 크기가 변경
 function image_window(img)
 {
 	var w = img.tmp_width; 
@@ -721,14 +721,14 @@ function image_window(img)
 	win=window.open("","image_window",settings); 
 	win.document.open(); 
 	win.document.write ("<html><head> \n<meta http-equiv='imagetoolbar' CONTENT='no'> \n<meta http-equiv='content-type' content='text/html; charset="+g4_charset+"'>\n"); 
-	var size = "�대�吏� �ъ씠利� : "+w+" x "+h;
+	var size = "이미지 사이즈 : "+w+" x "+h;
 	win.document.write ("<title>"+size+"</title> \n"); 
 	if(w >= screen.width || h >= screen.height) { 
 		win.document.write (js_url); 
-		var click = "ondblclick='window.close();' style='cursor:move' title=' "+size+" \n\n �대�吏� �ъ씠利덇� �붾㈃蹂대떎 �쎈땲��. \n �쇱そ 踰꾪듉�� �대┃�� �� 留덉슦�ㅻ� ��吏곸뿬�� 蹂댁꽭��. \n\n �붾툝 �대┃�섎㈃ �ロ���. '"; 
+		var click = "ondblclick='window.close();' style='cursor:move' title=' "+size+" \n\n 이미지 사이즈가 화면보다 큽니다. \n 왼쪽 버튼을 클릭한 후 마우스를 움직여서 보세요. \n\n 더블 클릭하면 닫혀요. '"; 
 	} 
 	else 
-		var click = "onclick='window.close();' style='cursor:pointer' title=' "+size+" \n\n �대┃�섎㈃ �ロ���. '"; 
+		var click = "onclick='window.close();' style='cursor:pointer' title=' "+size+" \n\n 클릭하면 닫혀요. '"; 
 	win.document.write ("<style>.dragme{position:relative;}</style> \n"); 
 	win.document.write ("</head> \n\n"); 
 	win.document.write ("<body leftmargin=0 topmargin=0 bgcolor=#dddddd style='cursor:arrow;'> \n"); 
@@ -744,20 +744,20 @@ var datepickerOption = {
     buttonImage: "/img/common/iconCalenda.gif",
     buttonImageOnly: true,
     dateFormat: 'yy-mm-dd',
-    prevText: '�댁쟾 ��',
-    nextText: '�ㅼ쓬 ��',
-    monthNames: ['1��', '2��', '3��', '4��', '5��', '6��', '7��', '8��', '9��', '10��', '11��', '12��'],
-    monthNamesShort: ['1��', '2��', '3��', '4��', '5��', '6��', '7��', '8��', '9��', '10��', '11��', '12��'],
-    dayNames: ['��', '��', '��', '��', '紐�', '湲�', '��'],
-    dayNamesShort: ['��', '��', '��', '��', '紐�', '湲�', '��'],
-    dayNamesMin: ['��', '��', '��', '��', '紐�', '湲�', '��'],
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
     showMonthAfterYear: true,
     yearSuffix: ' ',
     changeYear: true,
     changeMonth: true,
     showButtonPanel: true,
-    currentText: "�ㅻ뒛�좎쭨",
-    closeText: "�リ린",
+    currentText: "오늘날짜",
+    closeText: "닫기",
     onSelect: function (dateText, inst) {
         $(this).trigger('change');
 
@@ -812,7 +812,7 @@ function setTracker() {
 
 function get_Subway(select, lcode, ocode){
 	select.empty();
-	select.append('<option value="">吏��섏쿋��챸�쇰줈 李얘린</option>');
+	select.append('<option value="">지하철역명으로 찾기</option>');
 	
 	$.ajax({
 		url: '/svchandler/Common.php',
@@ -835,7 +835,7 @@ function get_Subway(select, lcode, ocode){
 
 function get_Paperlist(code, btn, view, txt) {
 	if (txt == null || txt == '') {
-		txt = "醫낅쪟蹂닿린";
+		txt = "종류보기";
 	}
 	
 	var regEx = /temp_view_([0-9])/gi;
@@ -885,7 +885,7 @@ function get_Paperlist(code, btn, view, txt) {
 						}
 					});
 				} else {
-					$(btn).html('�쒕퉬�� 以�鍮꾩쨷<img src="/img/service/07btn02.gif" class="btn_prod_down" alt=""/><img src="/img/service/07btn01.gif" class="btn_prod_up" alt=""/>');
+					$(btn).html('서비스 준비중<img src="/img/service/07btn02.gif" class="btn_prod_down" alt=""/><img src="/img/service/07btn01.gif" class="btn_prod_up" alt=""/>');
 				}
 			}
 		}
@@ -972,7 +972,7 @@ function encodeURL(str)
 	return s0;
 }
 
-//�쒗뵆由� 由ъ뒪��
+//템플릿 리스트
 $(document).on("click", ".btn_temp", function () {
 	var btn_nom = $(this).attr('data-n')
 	$(".temp_view_"+btn_nom).toggleClass('on');
