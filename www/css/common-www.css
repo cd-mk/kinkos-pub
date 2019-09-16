@@ -58,7 +58,7 @@ input {
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0;}
 /* select */
-select { padding:0 20px; width: 100%; height:50px; box-sizing: border-box; border-radius: 0; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url(../images/common/arr-bottom.png) no-repeat; background-position: right 11px center; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select { padding:0 20px; width: 100%; height:50px; box-sizing: border-box; border-radius: 0; color:#333; border:1px solid #dedede; line-height:50px; font-family: 'notokr'; font-size:16px; background: #fff url('../image/common/arr-bottom.png') no-repeat; background-position: right 11px center; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 select::-ms-expand {display: none;}
 
 /* textarea */

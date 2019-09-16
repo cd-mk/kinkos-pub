@@ -351,12 +351,16 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .join_wrap .step_wrap .inner {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
 .join_wrap .step_wrap .step_item {position: relative; float: left; display: table; margin-left: 37px; padding-left: 46px;}
 .join_wrap .step_wrap .step_item:first-child {margin-left: 0; padding-left: 0;}
-.join_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background: red;}
-.join_wrap .step_wrap .step_item .txt_step {display: table-cell; padding-left: 20px; vertical-align: middle;}
+.join_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background: url('../image/sub/ico-step.png') no-repeat;}
+.join_wrap .step_wrap .step_item:first-child .ico_step {background-position: 0 0;}
+.join_wrap .step_wrap .step_item:nth-child(2) .ico_step {background-position: 0 -56px;}
+.join_wrap .step_wrap .step_item:nth-child(3) .ico_step {background-position: 0 -112px;}
+.join_wrap .step_wrap .step_item .txt_step {display: table-cell; padding-left: 12px; vertical-align: middle;}
 .join_wrap .step_wrap .step_item .txt_step .number {display: block; color: #333;}
 .join_wrap .step_wrap .step_item .txt_step .desc {display: block; margin-top: 11px; font-size: 18px; color: #333;}
 .join_wrap .step_wrap .step_item.active .txt_step .number,
 .join_wrap .step_wrap .step_item.active .txt_step .desc {font-weight: 700; color: #03a2ea;}
+.join_wrap .step_wrap .step_item.active .ico_step {background-position-x: -56px;}
 
 /* 이용약관 동의 */
 .join_wrap .accor_wrap {margin-top: 20px;}
@@ -369,11 +373,18 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .accor_wrap .accor_item .accor_con {display: none; height: 245px; padding: 30px; overflow-y: auto; box-sizing: border-box; background: #f3f4f6;}
 .accor_wrap .accor_item .accor_con.active {display: block;}
 
+.accor_wrap .accor_item .accor_con .tit_agree {font-size: 18px; font-weight: 700; color: #222;}
+.accor_wrap .accor_item .accor_con .desc_agree {font-size: 18px; color: #222; line-height: 1.56;}
+.accor_wrap .accor_item .accor_con .tit_agree + .desc_agree {margin-top: 30px;}
+
 /* 회원 정보 입력 */
 .join_wrap .form_wrap {margin-top: 0;}
 
 /* 개인정보 수집 및 이용안내 팝업 */
-.popup_wrap .privacy_txt {margin-top: 30px; height: 456px; max-height: 456px; overflow-y: auto; font-size: 16px;} 
+.popup_wrap .privacy_txt {margin-top: 30px; height: 456px; max-height: 456px; overflow-y: auto;} 
+.popup_wrap .privacy_txt .tit {font-size: 16px; font-weight: 500; color: #333;}
+.popup_wrap .privacy_txt .desc {margin-top: 30px; font-size: 16px; color: #333; line-height: 1.56;}
+.popup_wrap .privacy_txt .desc + .tit {margin-top: 50px;}
 
 /* ceo 인사말 */
 .ceo_wrap {padding-bottom:227px; margin:0 auto; width:1010px; background:url('../image/sub/img-ceokinkos.png') no-repeat; background-size:418px 301px; background-position:right bottom;}
