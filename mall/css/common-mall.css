@@ -93,7 +93,7 @@ input {
  /* layout */
 .wrap {min-width:1530px;}
 .layout_width {width:1530px;margin:0 auto;}
-.layout_full {width:100%;overflow: hidden;}
+.layout_full {width:100%;overflow: hidden;min-width:1530px;}
 .pc {display: block;}
 .mo {display: none;}
 .pc_tablet {display: block;}

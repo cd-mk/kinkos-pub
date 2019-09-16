@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#content {overflow:hidden;}
+#content {}
 
 @media screen and (max-width:1024px) {
 	.pg_nav_wrap {position:relative;margin-top:40px;padding-right:30%;width:100%;height:18px;}
@@ -164,7 +164,7 @@
 }
 
 
-.service_wrap {position:relative;height:550px;margin-top:140px;}
+.service_wrap {position:relative;height:550px;margin-top:140px;overflow: hidden;}
 .service_wrap .left {z-index:99;position:absolute;top:0;left:0;}
 .service_wrap .title_box {padding-top:60px;z-index:99;}
 .service_wrap .title_box strong {font-size:36px;margin-top:32px;display:block;font-weight:400;}

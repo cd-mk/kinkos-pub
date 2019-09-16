@@ -106,7 +106,7 @@ textarea {width:100%; height:190px; padding:20px; box-sizing:border-box; border:
  /* layout */
 #wrap {}
 .layout_width {width:1530px;margin:0 auto;}
-.layout_full {width:100%;}
+.layout_full {width:100%;min-width:1530px;}
 .pc {display:block;}
 .mo {display:none;}
 .pc_tablet {display:block;}
