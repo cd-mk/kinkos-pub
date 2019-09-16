@@ -15,9 +15,10 @@
 /* key visual */
 .visual_wrap {position: relative;height:600px;}
 .visual_wrap .txt {position: absolute; top:0; left:50%; width:1530px; transform:translateX(-50%); opacity: 0; transition: all .7s ease-in-out;}
+.visual_wrap .swiper-slide-active .txt {transition:all 0.5s; top:121px; opacity:1}
 .visual_wrap .color_white {color:#fff;}
 .visual_wrap .color_black {color:#444;}
-.visual_wrap .txt_inner {position:absolute; top:121px; right:100px}
+.visual_wrap .txt_inner {position:absolute; top:0; right:100px;text-align: left;}
 .visual_wrap .txt_inner em {display:block; font-style: normal; font-size:20px; font-weight:300; line-height:0.9;}
 .visual_wrap .txt_inner .title {display:block; margin-top:39px; font-size:48px; font-weight:bold; line-height:normal;}
 .visual_wrap .txt_inner p {margin-top:8px; font-size:16px; font-weight:500; line-height:1.5;}
@@ -26,15 +27,10 @@
 .visual_wrap .color_black .btn_txt.more {color:#444; border-bottom:2px solid #444;}
 
 
-.visual_wrap .txt.left {left: 25%;}
-.visual_wrap .swiper-slide-active .txt {opacity: 1;}
-.visual_wrap .swiper-slide-active .txt.right {right: 18.5%;}
-.company_wrap .visual_wrap .swiper-slide-active .txt.right {right: 21.5%;}
-.visual_wrap .swiper-slide-active .txt.right2 {right: 15.6%;}
-.visual_wrap .swiper-slide-active .txt.left {left: 18.5%;}
-.visual_wrap .swiper-pagination {bottom: 100px;}
-.visual_wrap .swiper-pagination-bullet {width: 10px; height: 10px; background: #fff; opacity: .44; transition: width .3s;}
-.visual_wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {width: 38px; opacity: 1; border-radius: 5px;}
+.visual_wrap .swiper-slide {position: relative; text-align:center; font-size:18px; background:#fff; /* Center slide text vertically */ -webkit-box-pack:center; -ms-flex-pack:center; -webkit-justify-content:center; justify-content:center; -webkit-box-align:center; -ms-flex-align:center; -webkit-align-items:center; align-items:center;}
+.visual_wrap .swiper-pagination-bullet {width:10px; height:10px; display:inline-block; border:1px solid #fff; background:#fff; opacity:.4;}
+.visual_wrap .swiper-pagination-bullet-active {opacity:1; background:#fff; width:38px; border-radius:25px;}
+
 
 @media screen and (max-width: 1024px) { 
 

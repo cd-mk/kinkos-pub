@@ -77,7 +77,7 @@ function slideInit(){
     reloadSlide(instaSlide, pcOpt, moOpt);
   })();
 
- // cs문의 슬라이드
+  // cs문의 슬라이드
   (function () {
     var pcOpt = {
       slidesPerView: false,
@@ -86,6 +86,7 @@ function slideInit(){
     var moOpt = {
       roundLengths: true,
       slidesPerView: 1,
+      allowTouchMove: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -106,6 +107,7 @@ function slideInit(){
 
     reloadSlide(csInfo, pcOpt, moOpt);
   })();
+
 
   var gallerythumb = new Swiper('.navi_thumb', {
     slidesPerView: 1,

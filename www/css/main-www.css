@@ -15,9 +15,9 @@
 .visual_wrap .color_white {color:#fff;}
 .visual_wrap .color_black {color:#444;}
 .visual_wrap .txt_inner {position:absolute; top:0; left:131px;}
-.visual_wrap .title {font-size:40px; color:#fff; letter-spacing:-0.4px; display:block; line-height:48px;}
-.visual_wrap p {font-size:16px; color:#fff; letter-spacing:-0.3px; color:#fff; margin-top:27px; margin-bottom:78px; line-height:24px;}
-.visual_wrap .btn_txt.more {font-size:12px; letter-spacing:-0.3px; color:#fff; border-bottom:2px solid #fff; padding-bottom:4px; font-weight: 700;}
+.visual_wrap .title {font-size:40px; letter-spacing:-0.4px; display:block; line-height:48px;}
+.visual_wrap p {font-size:16px; letter-spacing:-0.3px; margin-top:27px; margin-bottom:78px; line-height:24px;}
+.visual_wrap .btn_txt.more {font-size:12px; letter-spacing:-0.3px; border-bottom:2px solid #fff; padding-bottom:4px; font-weight: 700;}
 .visual_wrap .color_white .btn_txt.more {color:#fff; border-bottom:2px solid #fff;}
 .visual_wrap .color_black .btn_txt.more {color:#444; border-bottom:2px solid #444;}
 

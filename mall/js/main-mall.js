@@ -71,6 +71,7 @@ function slideInit() {
 		var moOpt = {
 			roundLengths: true,
 			slidesPerView: 1,
+			allowTouchMove: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
