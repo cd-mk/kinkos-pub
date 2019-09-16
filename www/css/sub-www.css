@@ -42,8 +42,8 @@
 .page_tab{margin-bottom:60px;height:64px;position: relative;width:100%; border-top:1px solid #e7e7e7;}
 .page_tab > ul{position: absolute;top:0;left:50%;transform: translateX(-50%);display: table;}
 .page_tab > ul > li{display: table-cell;}
-.page_tab > ul > li > a{display:block;width:306px;height:64px;line-height:64px;font-size:20px;color:#333;text-align:center;border-top:3px solid #fff;overflow:hidden;font-weight:500;}
-.page_tab > ul > li.active a, .page_tab > ul > li a:hover{border-color:#000;color:#000;}
+.page_tab > ul > li > a{display:block;width:306px;height:64px;line-height:64px;font-size:18px;color:#222;text-align:center;border-top:3px solid #fff;overflow:hidden;font-weight:500;}
+.page_tab > ul > li.active a, .page_tab > ul > li a:hover{font-weight: 700; border-color:#000;color:#000;}
 
  /* anchor */
  .page_tab.col4 ul {width:100%;}

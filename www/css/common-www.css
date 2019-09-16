@@ -139,8 +139,8 @@ body.open {overflow: hidden;}
 /* button */
 .btn_wrap {margin-top:60px; overflow:hidden;}
 .btn_wrap.center {position:relative; left:50%; display:inline-block; transform:translateX(-50%);}
-.btn_wrap .btn {display:inline-block; width:120px; height:50px; line-height:50px; text-align:center; font-size:18px; font-weight:500;}
-.btn_wrap .btn.large {width:200px; font-size:18px; font-weight:700;}
+.btn_wrap .btn {display:inline-block; width:120px; height:50px; line-height:50px; text-align:center; font-size:18px; font-weight:700;}
+.btn_wrap .btn.large {width:200px;}
 .btn.type01 {background:#03a2ea; color:#fff;}
 .btn.type02 {background:#fff; border:1px solid #03a2ea; color:#03a2ea;}
 .btn.type03 {background:#777; color: #fff; border:1px solid transparent;}
