@@ -263,27 +263,8 @@
 	.banner_wrap a {height:170px;}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.info_wrap { margin-top: 120px;}
-.info_wrap .item_box {float: left; width: 50%; height: 284px; box-sizing: border-box;}
+.info_wrap {margin-top: 120px;overflow: hidden;}
+.info_wrap .item_box {float: left; width: 50%; min-height: 284px; box-sizing: border-box;}
 .info_wrap .item_box.notice {padding-right: 80px; border-right: 1px solid #e1e1e1;}
 .info_wrap .item_box.notice .title {overflow: hidden;}
 .info_wrap .item_box.notice .title h3 {float: left; font-size: 18px;}
@@ -294,7 +275,7 @@
 .info_wrap .item_box.notice .notice_list > li > a:hover .title {text-decoration: underline;}
 .info_wrap .item_box.notice .notice_list > li .title {float: left; color: #333;}
 .info_wrap .item_box.notice .notice_list > li .date {float: right; color: #7c7c7c;}
-.info_wrap .item_box.cs {position:relative; overflow: hidden; padding-left: 80px;}
+.info_wrap .item_box.cs {position:relative; padding-left: 80px;}
 .info_wrap .item_box.cs .item {float: left; width: 50%;}
 .info_wrap .item_box.cs .item .title {font-size: 18px;}
 .info_wrap .item_box.cs .item .sub_title {margin-top: 36px; font-size: 24px; line-height: 1.42;}
@@ -313,10 +294,10 @@
   .info_wrap .item_box.notice .notice_list > li {padding:15px 0;}
   .info_wrap .item_box.notice .notice_list > li .title {margin-right:41px; width:calc(100% - 121px); text-overflow: ellipsis; white-space: nowrap; font-size:14px;}
   .info_wrap .item_box.notice .notice_list > li .date {width:80px; font-size:14px; line-height:16px;}
-  .info_wrap .item_box.cs {padding-left:0; width:100%; overflow: visible;}
-  .info_wrap .item_box.cs .item {float: none;height:253px;}
+  .info_wrap .item_box.cs {padding-left:0; width:100%; }
+  .info_wrap .item_box.cs .item {float: none;height: 270px;}
   .info_wrap .item_box.cs .item .sub_title {margin-top:30px;}
-  .info_wrap .item_box.cs .item .ico {position:absolute; left:0; bottom:0; margin-top:0;}
+  .info_wrap .item_box.cs .item .ico {position: absolute;bottom: 0;}
 	.info_wrap .item_box.cs .swiper-slide-next {margin-left:-12%; opacity:0.2;}  
 	.info_wrap .item_box.cs .swiper-pagination {bottom:6px;}
 }
