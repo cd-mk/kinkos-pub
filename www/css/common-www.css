@@ -139,7 +139,7 @@ body.open {overflow: hidden;}
 /* button */
 .btn_wrap {margin-top:60px; overflow:hidden;}
 .btn_wrap.center {position:relative; left:50%; display:inline-block; transform:translateX(-50%);}
-.btn_wrap .btn {display:inline-block; width:120px; height:50px; line-height:50px; text-align:center; font-size:14px; font-weight:500;}
+.btn_wrap .btn {display:inline-block; width:120px; height:50px; line-height:50px; text-align:center; font-size:18px; font-weight:500;}
 .btn_wrap .btn.large {width:200px; font-size:18px; font-weight:700;}
 .btn.type01 {background:#03a2ea; color:#fff;}
 .btn.type02 {background:#fff; border:1px solid #03a2ea; color:#03a2ea;}
@@ -184,10 +184,10 @@ body.open {overflow: hidden;}
 .bbs_list .btn_wrap {margin-top: 0;}
 
 /* form */
-.require {color: #03a2ea;}
+.require {font-weight: 700; color: #03a2ea;}
 
 .inp_date {background: url('../image/common/ico-calender.png') no-repeat; background-position: right 12px center;}
-.form_alert {margin-bottom: 12px; text-align: right; color: #333;}
+.form_alert {margin-bottom: 12px; text-align: right; color: #222;}
 .form_wrap input {width: 100%; height: 44px; line-height: 45px; color: #000; padding: 0 20px; border: 1px solid #dedede; box-sizing: border-box; font-size: 16px;}
 .form_wrap input::placeholder {color: #999;}
 .form_wrap select {width: 100%; height: 44px; line-height: 45px; color: #000;}
