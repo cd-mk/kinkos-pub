@@ -331,6 +331,7 @@ h2 {font-weight: 700;font-size: 18px;}
  
  /* common mobile */
  @media screen and (max-width:1024px) {
+   .layout_full {min-width:100%;}
    .mo {display:block;}
    .pc{display:none;}
    .mo img {max-width: 100%;}
