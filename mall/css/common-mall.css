@@ -348,7 +348,7 @@ h2 {font-weight: 700;font-size: 18px;}
    #footer .footer_inner .cpr {right: 50%; bottom: 30px; font-size:13px; transform: translateX(50%); width:273px;}
  }
 @media screen and (max-width: 1600px) {
-  #wrap .layout_width {padding:20px;}
+  #wrap .layout_width {padding:0 15px;}
 }
 
  @media screen and (max-width: 768px) {

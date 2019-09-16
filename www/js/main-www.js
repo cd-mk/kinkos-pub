@@ -1,11 +1,11 @@
 
 
-function slideInit(){
+function slideInit() {
   var isMobile = chkViewport();
 
 
   // visual section
-  var swiper = new Swiper('.visual_wrap', {
+  var visual = new Swiper('.visual_wrap', {
     slidesPerView: 1,
     loop: true,
     autoplay: true,
@@ -107,35 +107,103 @@ function slideInit(){
 
     reloadSlide(csInfo, pcOpt, moOpt);
   })();
-
-
-  var gallerythumb = new Swiper('.navi_thumb', {
-    slidesPerView: 1,
-    freeMode: true,
-    loop: true,
-    watchSlidesVisibility: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
+  var service_navi = new Swiper('.service_wrap .service_select', {
+    slidesPerView: 'auto',
+    autoplay: true,
+    direction: 'vertical',
+    thumbs: {
+      swiper: service_thumb
     }
   });
-  var galleryTop = new Swiper('.service_wrap .thumb', {
+
+  var service_thumb = new Swiper('.service_wrap .thumb', {
     slidesPerView: 'auto',
     spaceBetween: 30,
+    autoplay:true,
     loop: true,
-    loopFillGroupWithBlank: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    thumb: {
-      swiper: gallerythumb
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    thumbs: {
+      swiper: service_navi
     }
   });
 
 
+
 }
 $(document).ready(slideInit());
+
+
+//service select
+$.fn.setCustomizedSelectbox = function () {
+  var $selectbox = $(this),
+    $optionbox = $selectbox.children("ul.selectbox-options"),
+    $options = $optionbox.children("li");
+  var isOpened = false;
+
+  function _onToggleOptionBox(event) {
+    event.stopPropagation();
+
+    var target = event.target;
+
+    if ($.inArray(target, $options) !== -1) {
+      if (isOpened) return toggleOptionItem(target);
+      isOpened = true;
+    } else {
+      if (!isOpened) return;
+      isOpened = false;
+    }
+
+    $optionbox.toggleClass("opened");
+    
+  }
+
+  function _onCloseOptionBox(event) {
+    event.stopPropagation();
+
+    var $this = $(this),
+      $target = $(event.target);
+
+    if (($.inArray(event.target, $options) !== -1 || $target.is($this)) && isOpened) {
+      $optionbox.toggleClass("opened");
+      isOpened = false;
+    }
+  }
+
+  function toggleOptionItem(selected) {
+    var $selectedItem = $(selected),
+      value = $selectedItem.data();
+    value = value && value.value || null;
+
+    console.log(value);
+    // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
+    // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
+    // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
+
+    if (!$selectedItem.hasClass("swiper-slide-active")) {
+      $options.removeClass("swiper-slide-active");
+      $selectedItem.addClass("swiper-slide-active");
+      $selectedItem.trigger("onSorterSelected");
+    }
+
+    $selectbox.trigger("click");
+
+    return;
+  }
+
+  $selectbox.on("click", _onToggleOptionBox);
+  $optionbox.on("mouseleave", _onCloseOptionBox);
+}
+
+$(document).ready(function () {
+  $(".service_select").setCustomizedSelectbox();
+});
 
 
 
