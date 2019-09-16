@@ -94,23 +94,24 @@ function slideInit() {
 	})();
 
 
+
+	
 	// 상담상품
 	var galleryThumbs = new Swiper('.consult_tag.gallery-thumbs', {
 		direction: 'vertical',
 		slidesPerView: 'auto',
-		freeMode: false,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		allowTouchMove: false,
 		breakpoints: {
 			// when window width is >= ㅡ모바일 1024이하
 			1024: {
 				direction: 'horizontal',
 				slidesPerView: 'auto', 
-				slideToClickedSlide: true,
 				spaceBetween: 12,
-				centeredSlides:false,
-				roundLengths: true,
-				freeMode: false,
+				allowTouchMove: true,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true			
 			}
 		}
 	});
@@ -118,7 +119,6 @@ function slideInit() {
 		direction: 'vertical',
 		slidesPerView: 1,
 		spaceBetween: 30,
-		freeMode: true,
 		thumbs: {
 			swiper: galleryThumbs
 		},
@@ -126,8 +126,7 @@ function slideInit() {
 			// when window width is >= ㅡ모바일 1024이하
 			1024: {
 				direction: 'horizontal',
-				slidesPerView: 1, 
-				loop: true,
+				slidesPerView: 1,
 				centeredSlides:true,
 				roundLengths: true
 			}
@@ -140,6 +139,7 @@ function slideInit() {
 		freeMode: false,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		allowTouchMove: false
 	});
 	var bestGalleryTop = new Swiper('.best_item.gallery-top', {
 		slidesPerView: 'auto',
@@ -156,7 +156,7 @@ function slideInit() {
 			roundLengths: true,
 			slidesPerView: 'auto',
 			freeMode: true,
-			spaceBetween: 20
+			spaceBetween: 20,			
 		});
 	}
 }
