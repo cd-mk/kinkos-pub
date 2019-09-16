@@ -102,16 +102,14 @@ function slideInit() {
 		slidesPerView: 'auto',
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		freeMode: true,
 		allowTouchMove: false,
 		breakpoints: {
 			// when window width is >= ㅡ모바일 1024이하
 			1024: {
 				direction: 'horizontal',
-				slidesPerView: 'auto', 
 				spaceBetween: 12,
-				allowTouchMove: true,
-				watchSlidesVisibility: true,
-				watchSlidesProgress: true			
+				allowTouchMove: true		
 			}
 		}
 	});
@@ -136,15 +134,14 @@ function slideInit() {
 	// 베스트 상품
 	var bestGalleryThumbs = new Swiper('.best_name.gallery-thumbs', {
 		slidesPerView: 'auto',
-		freeMode: false,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		freeMode: true,
 		allowTouchMove: false
 	});
 	var bestGalleryTop = new Swiper('.best_item.gallery-top', {
 		slidesPerView: 'auto',
 		spaceBetween: 30,
-		freeMode: true,
 		thumbs: {
 			swiper: bestGalleryThumbs
 		}
