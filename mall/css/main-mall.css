@@ -103,12 +103,21 @@
   .speed_slide .swiper-slide .txt p {margin-top:8px; line-height:normal;}
 }
 
-.consultPrd_wrap {position:relative; overflow:hidden; margin-top:150px;}
+
+/* .consultPrd_wrap {position:relative; overflow:hidden; margin-top:150px;}
 .consultPrd_wrap .left {float:left;}
 .consultPrd_wrap .left .title h2 {color:#222; font-size:40px; font-weight:normal; line-height:1.1;}
 .consultPrd_wrap .left .title p {margin-top:10px; font-size:18px; color:#222; line-height:normal;}
 .consultPrd_wrap .right {float:right; padding:38px 65px; width:74.51%; max-height:385px; box-sizing:border-box; border:1px solid #dfdfdf;}
-.consultPrd_wrap .consult_tag {position:absolute; top:179px; left:0; text-align:center;}
+.consultPrd_wrap .consult_tag {position:absolute; top:179px; left:0; text-align:center;} */
+
+.consultPrd_wrap {position:relative; overflow: hidden; margin-top: 150px;}
+.consultPrd_wrap .left {float: left;}
+.consultPrd_wrap .left .title h2 {color: #222; font-size: 40px; font-weight: normal; line-height:1.1;}
+.consultPrd_wrap .left .title p {margin-top: 10px; font-size: 18px; color: #222; line-height: normal;}
+.consultPrd_wrap .right {float: right; padding: 38px 65px; width:74.51%; max-height:385px; box-sizing: border-box; border: 1px solid #dfdfdf;}
+.consultPrd_wrap .consult_tag {position:absolute; top:179px; left:0; width:137px; text-align:center;}
+
 .consultPrd_wrap .consult_tag > div > div {margin-top:23px;}
 .consultPrd_wrap .consult_tag > div > div:first-child {margin-top:0;}
 .consultPrd_wrap .consult_tag > div > div a {display:block; color:#000; font-size:18px;}

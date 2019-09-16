@@ -114,7 +114,6 @@ function slideInit() {
 		}
 	});
 	var galleryTop = new Swiper('.consult_slide.gallery-top', {
-		direction: 'vertical',
 		slidesPerView: 1,
 		spaceBetween: 30,
 		thumbs: {
