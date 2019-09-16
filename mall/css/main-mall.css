@@ -87,7 +87,7 @@
 .speed_slide {margin-top: 60px; padding: 0 195px;}
 .speed_slide .swiper-slide .thumb {overflow: hidden;}
 .speed_slide .swiper-slide .thumb:hover img {transform: scale(1.2);}
-.speed_slide .swiper-slide .thumb img {transition: transform .5s;}
+.speed_slide .swiper-slide .thumb img {display:block; width:100%; transition: transform .5s;}
 .speed_slide .swiper-slide .txt {position: relative; top: -12px; padding-left: 12px; box-sizing: border-box;}
 .speed_slide .swiper-slide .txt strong {font-size: 32px; color: #222;}
 .speed_slide .swiper-slide .txt p {font-size: 14px; color: #444; line-height:44px;}
@@ -98,7 +98,6 @@
   .speedPrd_wrap .title_box p {margin-top:0; font-size:14px; }
   .speed_slide {margin-top:30px; padding:0 15px;}
   .speed_slide .swiper-slide {width:255px;}
-  .speed_slide .swiper-slide .thumb img {width:100%;}
   .speed_slide .swiper-slide .txt {top:-7px; padding-left:10px;}
   .speed_slide .swiper-slide .txt strong {font-size:20px;}
   .speed_slide .swiper-slide .txt p {margin-top:8px; line-height:normal;}
@@ -149,9 +148,8 @@
 .bestPrd_wrap {margin-top: 120px;}
 .bestPrd_wrap .title_box {text-align: center;}
 .bestPrd_wrap .title_box h2 {font-weight: normal; font-size: 40px; color: #222;}
-.bestPrd_wrap .best_name {position: relative; margin-top: 15px;}
+.bestPrd_wrap .best_name {position: relative; left:50%; display:inline-block; margin-top: 15px; transform:translateX(-50%);}
 .bestPrd_wrap .best_name::after {content: ''; display: table; clear: both;}
-.bestPrd_wrap .best_name > div {margin:0 auto; width:184px; text-align:center;}
 .bestPrd_wrap .best_name > div > div {width:auto;}
 .bestPrd_wrap .best_name > div > div:first-child {padding-right:30px;}
 .bestPrd_wrap .best_name > div > div:last-child {padding-left:30px;}
@@ -165,8 +163,10 @@
 .bestPrd_wrap .best_item .item_box > div .thumb img  {display:block; width:100%;}
 .bestPrd_wrap .best_item .item_box > div .txt strong {display:block; margin-top:20px; color:#222; font-size:20px;}
 .bestPrd_wrap .best_item .item_box > div .txt .desc {color:#222; font-size:16px; line-height:normal;}
-.bestPrd_wrap .best_item .item_box > div .txt .price {display:block; color:#444; line-height:40px;}
+.bestPrd_wrap .best_item .item_box > div .txt .price {display:block; color:#444; line-height:40px; font-size:20px;}
 .bestPrd_wrap .best_item .item_box > div .txt .price b {color:#444; font-weight:bold; font-size:20px; line-height:40px;}
+.bestPrd_wrap .best_item .item_box > div .txt .price .tag {display:inline-block; vertical-align: middle;}
+.bestPrd_wrap .best_item .item_box > div .txt .price .tag img {display:block; width:100%;}
 
 
 @media screen and (max-width:1024px) {
