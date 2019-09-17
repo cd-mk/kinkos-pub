@@ -110,11 +110,11 @@
 .consultPrd_wrap .right {position: relative;padding-left:385px;}
 .consultPrd_wrap .consult_slide {padding: 38px 65px; width:1140px; max-height:385px;border: 1px solid #dfdfdf;}
 
-.consultPrd_wrap .consult_tag {position:absolute; top:130px; left:0; width:137px; text-align:center;}
+.consultPrd_wrap .consult_tag {position:absolute; top:130px; left:0; text-align:left;}
 
 .consultPrd_wrap .consult_tag > div > div {margin-top:2px;}
 .consultPrd_wrap .consult_tag > div > div:first-child {margin-top:0;}
-.consultPrd_wrap .consult_tag > div > div a {display:block; color:#000; font-size:18px;height:38px;line-height:38px;border:2px solid #fff; border-radius:18.5px;}
+.consultPrd_wrap .consult_tag > div > div a {display:inline-block; color:#000; font-size:18px;height:38px;line-height:38px;border:2px solid #fff; border-radius:18.5px;padding:0 20px;}
 .consultPrd_wrap .consult_tag > div > div.swiper-slide-thumb-active > a,
 .consultPrd_wrap .consult_tag > div > div a:hover
  { border:2px solid #03a2ea; color:#03a2ea; font-weight:bold;}
