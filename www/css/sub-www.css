@@ -145,11 +145,12 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .center_view_wrap .item4 .item ul > li {margin-top: 8px; font-size: 16px; color: #333;}
 .center_view_wrap .item4 .item ul > li:first-child {margin-top: 0;}
 .center_view_wrap .item5 .map_view {height: 510px;}
+.center_view_wrap .item5 .map_view img {display:block; width:100%;}
 .center_view_wrap .item5 .btn_wrap {text-align: center;}
 
 /* 센터안내 */
 .center_info_wrap {margin-bottom: 160px;}
-.center_info_wrap .sch_box {height: 172px; padding: 60px 240px; background: #f3f4f6; border-top: 2px solid #000; box-sizing: border-box;}
+.center_info_wrap .sch_box {height: 172px; padding: 60px 15.68%; background: #f3f4f6; border-top: 2px solid #000; box-sizing: border-box;}
 .center_info_wrap .sch_box .sch_item {float: left; width: 250px; margin-left: 10px;}
 .center_info_wrap .sch_box .sch_item:first-child {margin-left: 0;}
 .center_info_wrap .sch_box .sch_item:nth-child(3) {width: 400px;}
@@ -171,6 +172,10 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .center_info_wrap .bbs_list .hours_list > li {margin-top: 8px; font-size: 18px; color: #333;}
 .center_info_wrap .bbs_list .hours_list > li:first-child {margin-top: 0;}
 .center_info_wrap .bbs_list .hours_txt {margin-top: 10px; font-size: 14px;}
+@media screen and (max-width:1600px) { 
+  .center_info_wrap .sch_box .sch_item {width:22.69%;}
+  .center_info_wrap .sch_box .sch_item:nth-child(3) {width:33.61%;}
+}
 
 /* 공지사항 */
 .notice_wrap .search_box select {float:left; width:136px;}
@@ -216,7 +221,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 /* 직무소개 */
 .job_intro_wrap {margin-bottom: 156px;}
 .job_intro_wrap .item_list {margin-top: 60px;}
-.job_intro_wrap .item_list > li {float: left; width: 490px; margin-left: 30px;}
+.job_intro_wrap .item_list > li {float: left;width:calc((100% - 60px) / 3); margin-left: 30px;}
 .job_intro_wrap .item_list > li:first-child {margin-left: 0;}
 .job_intro_wrap .item_list > li:nth-child(4) {margin-left: 0;}
 .job_intro_wrap .item_list > li:nth-child(n + 4) {margin-top: 80px;}
@@ -225,6 +230,12 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .job_intro_wrap .item_list .txt strong {font-size: 24px;}
 .job_intro_wrap .item_list .txt .full_name {margin-left: 10px; font-size: 16px; font-weight: 400; color: #959595;}
 .job_intro_wrap .item_list .txt p {margin-top: 10px; font-size: 18px; color: #333; line-height: 1.44;}
+@media screen and (max-width:1600px) { 
+  .job_intro_wrap .item_list > li {min-height:396px;}
+}
+@media screen and (max-width:1200px) { 
+  .job_intro_wrap .item_list > li {min-height:auto;}
+}
 
 /* 채용안내 */
 .recruit_wrap {margin-bottom: 140px;}
@@ -242,10 +253,10 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .recruit_wrap .item_box .item .bbs_list th {font-size: 18px; font-weight: 500; border-top: 0;}
 .recruit_wrap .item_box .item .bbs_list th:nth-child(2) {width: 520px;}
 .recruit_wrap .item_box .item .bbs_list td {height: auto; padding: 28px 0 26px; font-size: 18px; color: #222; text-align: left;}
-.recruit_wrap .item_box .item .bbs_list td:first-child {padding-left: 97px; font-weight: 500;}
-.recruit_wrap .item_box .item .bbs_list td:nth-child(2) {padding-left: 60px; }
-.recruit_wrap .item_box .item .bbs_list td:nth-child(3) {padding-left: 34px; color: #222;}
-.recruit_wrap .item_box .item .bbs_list td:nth-child(4) {padding-left: 50px;}
+.recruit_wrap .item_box .item .bbs_list td:first-child {padding-left: 6.34%; font-weight: 500;}
+.recruit_wrap .item_box .item .bbs_list td:nth-child(2) {padding-left: 3.92%; }
+.recruit_wrap .item_box .item .bbs_list td:nth-child(3) {padding-left: 1.56%; color: #222;}
+.recruit_wrap .item_box .item .bbs_list td:nth-child(4) {padding-left: 3.26%;}
 .recruit_wrap .item_box .item .bbs_list td p {margin-top: 10px;}
 .recruit_wrap .item_box .item .bbs_list .list_type01 > li {line-height: 1.5;}
 .recruit_wrap .item_box .item .bbs_list .list_type02 > li {line-height: 1.5;}
@@ -301,7 +312,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .history_wrap .history_item .phi_list01 span {color:#fff; font-size:18px; font-weight:bold; line-height:normal;}
 .history_wrap .history_item .phi_list01 p {color:#fff; font-size:36px; font-weight:bold; line-height:normal;}
 .history_wrap .history_item .phi_list01 em {margin-top:11px; color:#fff; font-size:16px; font-weight:normal; font-style:normal; line-height:normal;}
-.history_wrap .history_item .phi_list01 > div:first-child {position:absolute; top:50%; left:50%; width:316px; transform:translate(-50% , -50%);}
+.history_wrap .history_item .phi_list01 > div:first-child {position:absolute; top:50%; left:50%; width:319px; transform:translate(-50% , -50%);}
 .history_wrap .history_item .phi_list01 > div:first-child:before {content:''; z-index:-1; position:absolute; top:50%; left:50%; width:224px; height:224px; transform:translate(-50%, -50%); border-radius:100%; background:rgba(0,117,194,0.3);}
 .history_wrap .history_item .phi_list01 > div:nth-child(2) {padding-top:20px;}
 .history_wrap .history_item .phi_list02 > strong {position:relative; display:block; margin:-24px auto 0; width:150px; color:#f7b500; border:2px dotted #f7b500; border-radius:100%; line-height:150px; font-size:24px; font-weight:bold;}
@@ -324,12 +335,12 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .history_wrap .history_item .phi_list02 ul li strong p  {font-size:18px; font-weight:normal; line-height:normal;}
 .history_wrap .history_item .phi_list02 ul li > span {display:block; margin-top:103px; font-size:18px; line-height:normal;}
 .history_wrap .history_item:last-child {margin-top:80px;}
-.history_wrap .history_item .history_list {position: relative; margin:0 auto 60px; width:1270px;}
+.history_wrap .history_item .history_list {position: relative; margin:0 auto 60px; max-width:1270px;}
 .history_wrap .history_item .history_list:before {content:''; z-index:-1; position:absolute; top:16px; bottom:-50px; left:50%; width:1px; transform:translateX(-50%); border-left:1px dotted #666;}
 .history_wrap .history_item .history_list:after {content:''; position:absolute; bottom:-50px; left:50%; width:8px; height:8px; transform:translateX(-50%); background:#03a2ea; border-radius:100%;}
 .history_wrap .history_item .history_list > li {position:relative; margin-top:60px; width:100%; box-sizing:border-box;}
-.history_wrap .history_item .history_list > li:nth-child(odd) {padding-left:50%; text-align:left;}
-.history_wrap .history_item .history_list > li:nth-child(even) {padding-right:50%; text-align:right;}
+.history_wrap .history_item .history_list > li:nth-child(odd) {padding-left:50%; padding-right:260px; text-align:left;}
+.history_wrap .history_item .history_list > li:nth-child(even) { padding-left:260px; padding-right:50%; text-align:right;}
 .history_wrap .history_item .history_list > li:before {content:''; position:absolute; top:15px; left:50%; width:8px; height:8px; transform:translateX(-50%); background:#03a2ea; border-radius:100%;}
 .history_wrap .history_item .history_list > li.point_bullet:before {width:14px; height:14px;}
 .history_wrap .history_item .history_list > li.point_bullet:after {content:''; position:absolute; top:9px; left:50%; width:24px; height:24px; transform:translateX(-50%); border:1px solid #03a2ea; border-radius:100%;}
@@ -342,6 +353,10 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .history_wrap .history_item .history_list > li.point_bullet img {z-index:-1; position:absolute; top:42px; width:260px; height:180px;}
 .history_wrap .history_item .history_list > li:nth-child(odd).point_bullet img {right:-15px;}
 .history_wrap .history_item .history_list > li:nth-child(even).point_bullet img {left:0;}
+@media screen and (max-width:1600px) { 
+  .history_wrap .history_item .history_list > li:nth-child(odd).point_bullet img {right:0;}
+}
+
 
 /* 고객지원 */
 .support_wrap .inner {margin-top: 34px;}
@@ -397,11 +412,9 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 
 @media screen and (max-width:1600px) { 
-        .sub #content {padding:0 15px}
+        .cont_wrap {padding:0 15px;}
         .breadcrumb_wrap {padding:0 15px;}
 }
 
 @media screen and (max-width:1024px) { 
-        .sub #content {padding:0}
-        .cont_wrap {padding:0 15px;}
 }
