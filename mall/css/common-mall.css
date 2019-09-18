@@ -272,13 +272,14 @@ h2 {font-weight: 700;font-size: 18px;}
 
   .center_list_wrap {padding: 50px 0 50px;}
   .center_list_wrap .inner {padding: 0 8%;}
-  .center_list_wrap .tit_box {float: none; width: 100%; margin-bottom: 40px; text-align: center;}
+  .center_list_wrap .tit_box {float: none; width: 100%; margin-bottom: 40px;}
   .center_list_wrap .tit_box br {display: none;}
   .center_list_wrap .list_box {width: 50%; margin-left: 0;}
   .center_list_wrap .list_box .list_item .locat_name {width: 90px;}
   .center_list_wrap .list_box .list_item .locat_list > li {width: 33.33%}
   .center_list_wrap .list_box .list_item .locat_list > li:nth-child(n + 5) {margin-top: 0;}
   .center_list_wrap .list_box .list_item .locat_list > li:nth-child(n + 4) {margin-top: 15px;}
+  .center_list_wrap .map_box {margin-top: -103px;}
 }
 
 @media screen and (max-width: 1024px) {
