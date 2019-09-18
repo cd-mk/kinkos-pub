@@ -71,7 +71,7 @@ body {
 .eng_wrap .item_box .tabcon .step>ul>li>dl {font-size:12px; color:#fff; height:70px; padding:5px; float:left;}
 .eng_wrap .item_box .tabcon .step>ul>li>dl>dt {font-size:12px; color:#fff; padding:0; margin:0 0 5px 0; text-align:center;}
 .eng_wrap .item_box .tabcon .step>ul>li>dl>dd {text-align:center; line-height: 14px}
-.eng_wrap .item_box #tab04>dl>dd>ul>li>dl dd ul li {list-style-image:url('/img/list_style.gif'); margin-left:15px;}
+.eng_wrap .item_box #tab04>dl>dd>ul>li>dl dd ul li {list-style-image:url('../image/eng/bull-eng.gif'); margin-left:15px;}
 }
 
 @media all and (max-width:1019px){
@@ -126,7 +126,7 @@ transition:all 0.5s ease .1s;
 .eng_wrap .item_box .tabcon .step>ul>li>dl {font-size:13px; color:#fff; width:108px; height:70px; padding:10px; float:left;}
 .eng_wrap .item_box .tabcon .step>ul>li>dl>dt {font-size:13px; color:#fff; padding:0; margin:0 0 10px 0; text-align:center;}
 .eng_wrap .item_box .tabcon .step>ul>li>dl>dd {text-align:center;}
-.eng_wrap .item_box iv#tab04>dl>dd>ul>li>dl dd ul li {list-style-image:url('/img/list_style.gif'); margin-left:15px;}
+.eng_wrap .item_box #tab04>dl>dd>ul>li>dl dd ul li {list-style-image:url('../image/eng/bull-eng.gif'); margin-left:15px;}
 }
 
 @media all and (max-width:567px){
