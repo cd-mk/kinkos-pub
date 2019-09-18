@@ -210,7 +210,7 @@ body.open {overflow:hidden;}
 .form_wrap .form_group .form_item .txt_vaild {display:none; float:left; margin-top:10px; color:#03a2ea;}
 .form_wrap .form_group .form_item.not_vaild .txt_vaild {display:block;}
 .form_wrap .form_group .form_item.is_vaild .txt_vaild {display:none;}
-.form_wrap .form_group .form_item .form_name {display:table-cell; width:114px; padding-top:14px; font-size:16px; font-weight:700; vertical-align:top;}
+.form_wrap .form_group .form_item .form_name {display:table-cell; padding-top:14px; width:7.32%; font-size:16px; font-weight:700; vertical-align:top;}
 .form_wrap .form_group .form_item .form_name.ver_mid {vertical-align:middle;}
 .form_wrap .form_group .form_item .form_inp {display:table-cell;}
 .form_wrap .form_group .form_item .form_inp.col2 > input,
@@ -225,9 +225,10 @@ body.open {overflow:hidden;}
 .form_wrap .form_group .form_item .form_inp[class*="col"] > select:first-child {margin-left:0;}
 
 .form_wrap .form_group.col2 .form_item {float:left;}
-.form_wrap .form_group.col2 .form_item {width:calc(100% - 674px);}
-.form_wrap .form_group.col2 .form_item:first-child {width:674px;}
-.form_wrap .form_group.col2 .form_item:nth-child(2) .form_name {width:236px; padding-left:120px;}
+.form_wrap .form_group.col2 .form_item {width:55.95%}
+.form_wrap .form_group.col2 .form_item:first-child {width:44.05%;}
+.form_wrap .form_group.col2 .form_item .form_name {width:16.61%;}
+.form_wrap .form_group.col2 .form_item:nth-child(2) .form_name {width:29.61%; padding-left:14.87%;}
 .form_group .form_item .form_inp .btn  {float:right; width:130px; height:44px; margin-left:10px; font-size:16px; font-weight:500; text-align:center; line-height:44px; cursor:pointer; border:0;}
 
 /* input file type */

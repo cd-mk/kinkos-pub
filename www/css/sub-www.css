@@ -405,6 +405,13 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 /* 회원 정보 입력 */
 .join_wrap .form_wrap {margin-top: 0;}
+.join_wrap .form_wrap .form_group.col2 .form_item:first-child {width:49.02%;}
+.join_wrap .form_wrap .form_group.col2 .form_item {width:50.98%;}
+.join_wrap .form_wrap .form_group .form_item .form_name {width:18.84%;}
+.join_wrap .form_wrap .form_group.col2 .form_item:nth-child(2) .form_name {padding-left:12%; width:29.33%;}
+@media screen and (max-width:1600px) { 
+  .join_wrap .form_wrap .form_group.col2 .form_item:nth-child(2) .form_name {padding-left:10.53%; width:30.20%;}
+}
 
 /* 개인정보 수집 및 이용안내 팝업 */
 .popup_wrap .privacy_txt {margin-top: 30px; height: 456px; max-height: 456px; overflow-y: auto;} 
