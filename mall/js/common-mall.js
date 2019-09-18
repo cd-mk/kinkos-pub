@@ -37,27 +37,23 @@ var setGnb = function() {
 	}
 	function gnbBar(flag, target) {
 		if (flag) {
-			var idx = target.index();
-			var width = target.outerWidth();
-			var move = target.position().left;
-			$('.gnb_bar').addClass('active');
-			$('.gnb_bar').width(width);
+      var mgl = parseInt(target.css('margin-left'));
+      var width = target.outerWidth();
+      var move = target.position().left;
+      $('.gnb_bar').addClass('active');
+      $('.gnb_bar').width(width);
 
-			if (idx !== 0) {
-				$('.gnb_bar').css('left', move + 110 + 'px');
-			} else {
-				$('.gnb_bar').css('left', move);
-			}
-		} else {
-			$('.gnb_bar').removeClass('active');
-		}
+      $('.gnb_bar').css('left', move + mgl + 'px');
+    } else {
+      $('.gnb_bar').removeClass('active');
+    }
 	}
 	function moveSnbBg(target) {
-		var width = 217;
-		var idx = target.index();
-		var move = idx * width + 427;
+		var w = target.outerWidth();
+    var left = target.offset().left;
 
-		$('.sub_gnb_bg').css('left', move);
+    $('.sub_gnb_bg').width(w);
+    $('.sub_gnb_bg').css('left', left + 'px');
 	}
 	function toggleGnb() {
 		$('.btn_toggle').on('click', function() {
