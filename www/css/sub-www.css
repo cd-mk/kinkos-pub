@@ -196,10 +196,10 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .magazine_wrap .photo_list > li:nth-child(5),
 .magazine_wrap .photo_list > li:last-child {margin-top:40px;}
 .magazine_wrap .photo_list .img_box {width:100%;}
-.magazine_wrap .photo_list .txt_box h4 {margin-top:30px; font-size:24px;}
+.magazine_wrap .photo_list .txt_box h4 {margin-top:28px; font-size:24px;}
 .magazine_wrap .photo_list .txt_box span {margin-top:15px; font-size:18px;}
-.magazine_wrap .photo_list .txt_box ul {overflow:hidden; margin-top:28px;}
-.magazine_wrap .photo_list .txt_box li {float:left; margin-left:10px; color:#545454; font-size:16px;}
+.magazine_wrap .photo_list .txt_box ul {overflow:hidden; margin-top:18px;}
+.magazine_wrap .photo_list .txt_box li {float:left; margin-left:10px; color:#545454; font-size:16px; line-height:normal;}
 .magazine_wrap .photo_list .txt_box li:first-child {margin-left:0;}
 .magazine_wrap .content_bbs .img_content {width:100%; height:660px;}
 .magazine_wrap .content_bbs p {margin-top:60px;}
