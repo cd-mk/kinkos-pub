@@ -43,17 +43,24 @@
     
     <!-- CONTENT -->
     <div id="content">
+      <div class="tit_sub type_bg">
+        <h2>이벤트/공지사항</h2>
+        <p>킨코스에서 고객님들에게 제공하는 특별한 소식입니다.</p>
+      </div>
+
+      <!-- breadcrumb  -->
       <div class="breadcrumb_wrap">
         <a href="./00.main-www.html" class="home">Home</a>
         <ul class="item_list">
-        <li><a href="./04-1.notice-list.html">제품</a></li>
+          <li><a href="./04-1.notice-list.html">이벤트/공지사항</a></li>
+          <li><a href="#url">공지사항</a></li>
         </ul>
-      </div>
-      <div class="tit_sub">
-        <h2>이벤트/공지사항</h2>
-        <p>킨코스 코리아에서 고객님들께 제공하는 특별한 소식입니다.</p>
-      </div>
-      <div class="notice_wrap cont_wrap tab_area">        
+      </div>     
+      <!-- //breadcrumb  -->
+
+      <!-- 콘텐츠 group "cont_wrap" 고정 -->
+      <div class="cont_wrap tab_area">                
+        <!-- page tab -->
         <div class="page_tab">
           <ul>
             <li class="active"><a href="./04-1.notice-list.html">공지사항</a></li>
@@ -61,20 +68,29 @@
             <li><a href="./04-4.k-magazine-list.html">K매거진</a></li>
           </ul>
         </div>
-        <div class="con_box">
-          <div class="search_box">
-            <form>
-              <fieldset>
-                <legend>리스트 검색을 위한 폼</legend>
-                <select>
-                  <option value>선택</option>
+        <!-- page tab -->
+
+        <!-- 본문 -->        
+        <div class="con_box notice_wrap">
+          <div class="tit_box">
+            <h3>공지사항</h3>
+          </div>
+          <div class="form_wrap type_select">
+            <div class="form_group">
+              <div class="form_item">
+                <select name="" id="" title="검색조건 선택">
+                  <option value="">선택</option>
+                  <option value="">제목</option>
+                  <option value="">번호</option>
                 </select>
-                <div class="search_inp">
-                  <input type="text" title="검색어를 입력하시오">
-                  <a href="#a">검색</a>
-                </div>
-              </fieldset>
-            </form>
+              </div>
+              <div class="form_inp">
+                <input type="text" title="검색어 입력">
+              </div>
+              <div class="btn_wrap">
+                <button type="button" class="btn type01">검색</button>
+              </div>
+            </div>
           </div>
           <div class="bbs_list">
             <table>
@@ -90,7 +106,7 @@
               <tbody>
                 <tr class="cell_notice">
                   <td>공지</td>
-                  <td class="cell_left"><a href="#url" class="title">[매장명 변경소식]여의도 지역 매장명 변경안내</a></td>
+                  <td class="cell_left"><a href="04-1.notice-view.html" class="title">[매장명 변경소식]여의도 지역 매장명 변경안내</a></td>
                   <td>66</td>
                   <td>2019.08.20</td>
                 </tr>
@@ -195,6 +211,7 @@
             <!-- Page navigation -->
           </div>
         </div>
+        <!-- 본문 -->
       </div>
     </div>
     <!-- CONTENT -->
