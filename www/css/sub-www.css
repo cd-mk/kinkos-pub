@@ -315,7 +315,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 /* 기업이념 및 연혁 */
 .history_wrap .history_item {position:relative; text-align:center;}
-.history_wrap .history_item h3 {position:absolute; left:0; top:0; font-size:24px; line-height:36px;}
+.history_wrap .history_item h3 {position:absolute; left:0; top:0; color:#222; font-size:24px; line-height:36px;}
 .history_wrap .history_item h4 {color:#222; font-size:36px; font-weight: 700; line-height:normal;}
 .history_wrap .history_item .stit {margin-top:20px; color:#222; font-size:24px; font-weight: 500; line-height:normal;}
 .history_wrap .history_item .philosophy_list {margin-top:60px;} 
@@ -430,7 +430,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 
 @media screen and (max-width:1600px) { 
-        .cont_wrap {padding:0 15px;}
+        .cont_wrap {padding:30px 15px 0;}
         .breadcrumb_wrap {padding:0 15px;}
 }
 
