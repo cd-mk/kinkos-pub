@@ -62,6 +62,7 @@ var setGnb = function() {
 			$('.sub_gnb_wrap, .center_list_wrap').stop().slideUp(400);
 			$(this).toggleClass('on');
 			$('.toggle_bg').toggleClass('on');
+      $('.dim').hide();
 
 			if ($gnbWrap.hasClass('company')) {
 				$('.mall_gnb').toggleClass('active');
