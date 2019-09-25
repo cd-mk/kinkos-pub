@@ -174,10 +174,8 @@ body.open {overflow:hidden;}
 .bbs_list table {width:100%;}
 .bbs_list th {height:54px; border-top:2px solid #000; border-bottom:1px solid #e7e7e7; color:#000; vertical-align:middle; font-size:16px; font-weight:bold;}
 .bbs_list td {height:70px; border-bottom:1px solid #e7e7e7; color:#333; vertical-align:middle; font-size:16px; font-weight:normal;}
-.bbs_list td .title {display:inline-block; width:100%; color:#333; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:16px; font-weight:normal;}
+.bbs_list td .title {display:inline-block; width:100%; color:#222; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:18px; font-weight:normal;}
 .bbs_list td {text-align:center;}
-.bbs_list .cell_notice td, 
-.bbs_list .cell_notice td .title {color:#000; font-weight:500;}
 .bbs_list .cell_new td, 
 .bbs_list .cell_new td .title {color:#ff0201; font-weight:500;}
 .bbs_list .cell_new img {margin:0 auto; display:block; width:18px; height:18px;}
