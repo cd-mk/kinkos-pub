@@ -10,7 +10,7 @@
 .tit_sub {margin-bottom:50px;text-align: center;}
 .tit_sub h2 {font-size:36px;font-weight:bold;}
 .tit_sub p {position:relative; font-size:16px;margin-top:20px;color:#333;}
-.tit_sub p:after {content:'';position:absolute;left:50%; bottom:-60px; transform:translateX(-50%); width:1px;height:32px; background:#e7e7e7;}
+.tit_sub.type_bg p:after {content:'';position:absolute;left:50%; bottom:-60px; transform:translateX(-50%); width:1px;height:32px; background:#e7e7e7;}
 .tit_sub.type_bg {height: 220px; margin-bottom: 0; background-size:cover; background-repeat:no-repeat;}
 .tit_sub.bg_info {background-image:url('../image/sub/bg_sub01.jpg');}
 .tit_sub.bg_event {background-image:url('../image/sub/bg_sub02.jpg');}
@@ -20,7 +20,7 @@
 @media screen and (max-width:1024px) { 
   .tit_sub h2 {font-size:28px;}
   .tit_sub p {font-size:14px; line-height:1.36;}
-  .tit_sub p:after {bottom:-25px; height:15px;}
+  .tit_sub.type_bg p:after {bottom:-25px; height:15px;}
   .tit_sub.type_bg h2 {padding-top:41px;}
   .tit_sub.type_bg p {margin-top:15px;}
   .tit_sub.type_bg {height:170px;}
@@ -262,14 +262,24 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 .event_wrap .content_bbs .img_content {margin:0 auto; width:67.97%;}
 .event_wrap .content_bbs .img_content img {display:block; width:100%;}
-.event_wrap .product_list {margin-top:56px; overflow:hidden;}
-.event_wrap .product_list li {float:left; margin-left:30px; width:230px;}
-.event_wrap .product_list li:first-child {margin-left:0;}
-.event_wrap .product_list li .img_box {width:100%; height:230px;}
-.event_wrap .product_list li .img_box img {display:block; width:100%; height:100%;}
-.event_wrap .product_list li .txt_box {margin-top:20px;}
-.event_wrap .product_list li strong {color:#777; font-size:20px; font-weight:normal;}
-.event_wrap .product_list li p {margin-top:11px; color:#777; font-size:20px;}
+.event_wrap .content_bbs .event_product {position:relative; margin-top:80px;}
+.event_wrap .content_bbs .event_product > p {padding-bottom:14px; border-bottom:1px solid #222; color:#222; font-size:24px; font-weight:bold; line-height:1;}
+.event_wrap .product_list {position:relative; margin-top:40px;}
+.event_wrap .product_list > div > div {width:230px;}
+.event_wrap .product_list > div > div .img_box {width:100%; height:230px;}
+.event_wrap .product_list > div > div .img_box img {display:block; width:100%; height:100%;}
+.event_wrap .product_list > div > div .txt_box {margin-top:20px;}
+.event_wrap .product_list > div > div strong {color:#222; font-size:20px; font-weight:normal;}
+.event_wrap .product_list > div > div p {margin-top:11px; color:#222; font-size:20px; font-weight:bold; line-height:1;}
+
+.event_wrap .event_product .pg_nav_wrap {position:absolute; top:0; right:0; width:112px;}
+.event_wrap .event_product .pg_nav_wrap .swiper-button-next,
+.event_wrap .event_product .pg_nav_wrap .swiper-button-prev {margin-top:0;}
+.event_wrap .event_product .pg_nav_wrap .swiper-button-next.swiper-button-disabled, 
+.event_wrap .event_product .pg_nav_wrap .swiper-button-prev.swiper-button-disabled {opacity:1;}
+.event_wrap .event_product .pg_nav_wrap .swiper-pagination-fraction {bottom:unset; font-size:18px;}
+
+
 
 /* 직무소개 */
 .job_intro_wrap {margin-bottom: 156px;}
@@ -416,7 +426,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .history_wrap .history_item .phi_list01 > div:nth-child(2) {padding-top:32px;}
 .history_wrap .history_item .phi_list02 > strong {position:relative; display:block; margin:-24px auto 0; width:150px; color:#f7b500; border:2px dotted #f7b500; border-radius:100%; line-height:150px; font-size:24px; font-weight:bold;}
 .history_wrap .history_item .phi_list02 ul {position:relative; margin:-15px auto 0 ; padding:48px 50px 0 50px; width:1010px; overflow:hidden;}
-.history_wrap .history_item .phi_list02 ul:before {content:''; position:absolute; top:0; left:0; width:100%; height:300px; box-sizing:border-box; border:2px dashed #666;  border-radius:160px; }
+.history_wrap .history_item .phi_list02 ul:before {content:''; position:absolute; top:0; left:0; width:100%; height:300px; box-sizing:border-box; border:2px dotted #666;  border-radius:160px; }
 .history_wrap .history_item .phi_list02 ul li {position:relative; float:left; margin-left:149px; width:calc((100% - 298px) / 3);}
 .history_wrap .history_item .phi_list02 ul li:first-child {margin-left:0;}
 .history_wrap .history_item .phi_list02 ul li strong  {position:relative; display:block; padding-top:71px; box-sizing:border-box; width:204px; height:204px; color:#222; font-size:24px; font-weight:bold; border-radius:100%;}
