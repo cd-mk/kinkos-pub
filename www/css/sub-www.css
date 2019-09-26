@@ -202,6 +202,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .center_info_wrap .bbs_list .hours_list > li {margin-top: 8px; font-size: 18px; color: #333;}
 .center_info_wrap .bbs_list .hours_list > li:first-child {margin-top: 0;}
 .center_info_wrap .bbs_list .hours_txt {margin-top: 10px; font-size: 14px;}
+.center_info_wrap .bbs_list .btn_wrap .btn {height: 44px; line-height: 44px; font-weight: 400;}
 @media screen and (max-width:1600px) { 
   .center_info_wrap .sch_box .sch_item {width:22.69%;}
   .center_info_wrap .sch_box .sch_item:nth-child(3) {width:33.61%;}
@@ -280,13 +281,13 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 /* 채용안내 */
 .recruit_wrap {margin-bottom: 140px;}
-.recruit_wrap .item_box {margin-top: 60px;}
-.recruit_wrap .item_box h4 {font-size: 24px; padding-bottom: 12px; border-bottom: 1px solid #000;}
+.recruit_wrap .item_box {margin-top: 75px;}
+.recruit_wrap .item_box h4 {font-size: 24px; padding-bottom: 17px; border-bottom: 1px solid #000;}
 .recruit_wrap .item_box h4.border_none {border: 0; padding: 0;}
 .recruit_wrap .item_box .item {margin-top: 80px;}
 .recruit_wrap .item_box .item:first-child {margin-top: 0;}
 .recruit_wrap .item_box .item .left {float: left;}
-.recruit_wrap .item_box .item .left p {margin-top: 14px; font-size: 18px; color: #222;}
+.recruit_wrap .item_box .item .left p {margin-top: 19px; font-size: 18px; color: #222;}
 .recruit_wrap .item_box .item .right {float: right;margin-top: 5px;}
 .recruit_wrap .item_box .item .right .btn_wrap {margin-top: 0;}
 .recruit_wrap .item_box .item .right .btn_wrap .btn {width: 200px;}
@@ -316,16 +317,16 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .talent_wrap .item_box .item:nth-child(3) {padding: 93px 247px 0 0 ;}
 .talent_wrap .item_box .item:nth-child(4) {padding: 93px 0 0 247px;}
 .talent_wrap .item_box .item:nth-child(odd) .txt_box {text-align: right;}
-.talent_wrap .item_box .item .txt_box strong {font-size: 24px; color: #222;}
+.talent_wrap .item_box .item .txt_box strong {font-size: 24px;}
 .talent_wrap .item_box .item .txt_box p {margin-top: 12px; font-size: 18px; color: #222; line-height: 1.44;}
 .talent_wrap .item_box .float_txt {position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%); font-size: 36px; font-weight: 700; color: #fff; text-align: center; line-height: 1.5;}
 .talent_wrap .item_list {margin-top: 60px; border-top: 2px solid #333; border-bottom: 1px solid #e7e7e7;}
 .talent_wrap .item_list > li {position: relative; float: left; width: 25%; height: 344px; box-sizing: border-box; border-left: 1px solid #e7e7e7; text-align: center;}
 .talent_wrap .item_list > li:first-child {border-left: 0;}
-.talent_wrap .item_list .ico {display: block; height: 140px;}
-.talent_wrap .item_list > li strong {font-size: 24px;}
-.talent_wrap .item_list > li p {margin-top: 20px; font-size: 18px; color: #222;}
-.talent_wrap .item_list .item_con {position: absolute; left: 0; bottom: 60px; width: 100%;}
+.talent_wrap .item_list .ico {display: block; height: 117px;}
+.talent_wrap .item_list > li strong {font-size: 20px;}
+.talent_wrap .item_list > li p {margin-top: 14px; font-size: 18px; color: #222;}
+.talent_wrap .item_list .item_con {position: absolute; left: 0; bottom: 93px; width: 100%;}
 /* Only Kinkos */
 .intro_wrap {max-width:1010px; margin:0 auto;}
 .intro_wrap .cont_img {margin-top:67px; width:100%; height:249px; overflow:hidden;}
