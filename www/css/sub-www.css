@@ -344,16 +344,17 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 @media screen and (max-width:1024px) {
   .talent_wrap {margin-bottom: 80px;}
   .talent_wrap .item_box {overflow: hidden; height: auto; margin-top: 50px; padding-top: 265px; padding-bottom: 40px; background: url('../image/sub/img-personmodel_mo.png') no-repeat center top; background-size: auto 225px;}
-  .talent_wrap .item_box::before {content: ''; position: absolute; left: 0; top: 71%; width: 100%; border-top: 2px dotted #bbb;}
-  .talent_wrap .item_box::after {content: ''; display: block; position: absolute; left: 50%; top: 33.5%; width: 2px; height: 100%; border-left: 2px dotted #bbb;}
+  .talent_wrap .item_box::before {content: ''; position: absolute; left: 0; top: 73%; width: 100%; border-top: 2px dotted #bbb;}
+  .talent_wrap .item_box::after {content: ''; display: block; position: absolute; left: 50%; top: 35.5%; width: 2px; height: 100%; border-left: 2px dotted #bbb;}
   .talent_wrap .item_box .float_txt {top: 112.5px; transform: translate(-50%, -50%); font-size: 18px;}
   .talent_wrap .item_box .item {height: auto;}
   .talent_wrap .item_box .item br {display: none;}
-  .talent_wrap .item_box .item:first-child {padding: 0 4.2% 40px 0;}
-  .talent_wrap .item_box .item:nth-child(2) {padding: 0 0 40px 4.2%;}
-  .talent_wrap .item_box .item:nth-child(3) {padding: 40px 4.2% 0 0;}
-  .talent_wrap .item_box .item:nth-child(4) {padding: 40px 0 0 4.2%;}
-  .talent_wrap .item_box .item .txt_box p {max-height: 75px;}
+  .talent_wrap .item_box .item:first-child {padding: 0 4.2% 40px 7.6%;}
+  .talent_wrap .item_box .item:nth-child(2) {padding: 0 7.6% 40px 4.2%;}
+  .talent_wrap .item_box .item:nth-child(3) {padding: 40px 4.2% 0 7.6%;}
+  .talent_wrap .item_box .item:nth-child(4) {padding: 40px 7.6% 0 4.2%;}
+  .talent_wrap .item_box .item .txt_box strong {font-size: 20px;}
+  .talent_wrap .item_box .item .txt_box p {font-size: 14px; max-height: 75px;}
   .talent_wrap .item_list > li {width: 50%; height: 190px;}
   .talent_wrap .item_list > li:first-child {border-bottom: 1px solid #e7e7e7;}
   .talent_wrap .item_list > li:nth-child(2) {border-bottom: 1px solid #e7e7e7;}

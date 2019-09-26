@@ -274,7 +274,7 @@ h2 {font-weight: 700;font-size: 18px;}
 
   .center_list_wrap {padding: 50px 0 50px;}
   .center_list_wrap .inner {padding: 0 8%;}
-  .center_list_wrap .tit_box {float: none; width: 100%; margin-bottom: 40px;}
+  .center_list_wrap .tit_box {float: none; width: 100%; margin-left: 0; margin-bottom: 40px;}
   .center_list_wrap .tit_box br {display: none;}
   .center_list_wrap .list_box {width: 50%; margin-left: 0;}
   .center_list_wrap .list_box .list_item .locat_name {width: 90px;}
