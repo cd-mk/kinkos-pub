@@ -131,6 +131,10 @@
 .consultPrd_wrap .consult_slide .item_box .txt .price {font-size:20px; color:#444;}
 .consultPrd_wrap .consult_slide .item_box .txt .price b {font-weight:bold;}
 
+@media screen and (max-width:1600px) { 
+  .consultPrd_wrap .right {padding-left:240px;}
+  .consultPrd_wrap .consult_slide {width:100%;}
+}
 
 
 @media screen and (max-width:1024px) { 
@@ -297,7 +301,7 @@
 .info_wrap .item_box.cs .item .desc {margin-top:10px; font-size:16px; color:#333; line-height:1.63;}
 .info_wrap .item_box.cs .item .ico {display:block; margin-top:35px; width:44px; height:44px; text-align:center;}
 .info_wrap .item_box.cs .item .ico img {display:inline-block;}
-.info_wrap .item_box.cs .item .center_info {margin-top:36px; height:68px;}
+.info_wrap .item_box.cs .item .center_info {margin-top:36px; margin-bottom:15px;}
 .info_wrap .item_box.cs .item .center_info > li {font-size:24px; margin-top:10px;}
 .info_wrap .item_box.cs .item .center_info > li:first-child {margin-top:0;}
 
