@@ -274,7 +274,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 
 .event_wrap .event_product .pg_nav_wrap {position:absolute; top:0; right:0; width:112px;}
 .event_wrap .event_product .pg_nav_wrap .swiper-button-next,
-.event_wrap .event_product .pg_nav_wrap .swiper-button-prev {margin-top:0;}
+.event_wrap .event_product .pg_nav_wrap .swiper-button-prev {top:0;margin-top:0;}
 .event_wrap .event_product .pg_nav_wrap .swiper-button-next.swiper-button-disabled, 
 .event_wrap .event_product .pg_nav_wrap .swiper-button-prev.swiper-button-disabled {opacity:1;}
 .event_wrap .event_product .pg_nav_wrap .swiper-pagination-fraction {bottom:unset; font-size:18px;}

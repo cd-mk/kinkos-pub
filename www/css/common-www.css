@@ -112,10 +112,11 @@ textarea {width:100%; height:190px; padding:20px; box-sizing:border-box; border:
 .pc_tablet {display:block;}
 .mo_only {display:none;}
 .dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:10;}
-.swiper-button-next {background-image:url(../image/common/next.png); right:20px; left:auto; width:84px; height:84px; background-size:84px;}
-.swiper-button-prev {background-image:url(../image/common/prev.png); left:20px; right:auto; width:84px; height:84px; background-size:84px;}
-.swiper-button-next.small {background-image:url(../image/common/next-small.png); right:0; left:auto; width:21px; height:18px; background-size:21px;}
-.swiper-button-prev.small {background-image:url(../image/common/prev-small.png); left:0; right:auto; width:21px; height:18px; background-size:21px;}
+.swiper-button-next {background-image:url(../image/common/next.png); top:161px; right:20px; left:auto; margin-top:0; width:83px; height:83px; background-size:83px;}
+.swiper-button-prev {background-image:url(../image/common/prev.png); top:161px; left:20px; right:auto; margin-top:0; width:83px; height:83px; background-size:83px;}
+.swiper-button-next.small {background-image:url(../image/common/next-small.png); top:0; right:0; left:auto; width:21px; height:18px; background-size:21px;}
+.swiper-button-prev.small {background-image:url(../image/common/prev-small.png); top:0; left:0; right:auto; width:21px; height:18px; background-size:21px;}
+.swiper-pagination {bottom:-8px;}
 body.open {overflow:hidden;}
 .bg_img {position:relative; display:inline-block; width:100%; height:100%; overflow:hidden;}
 .bg_img img {position:absolute; top:50%; left:50%; transform:translate(-50% , -50%); width:100%; height:100%; pointer-events:none; object-fit:cover;}
