@@ -519,6 +519,33 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 /* 고객지원 */
 .support_wrap .inner {margin-top: 34px;}
 
+/* 고객지원 > 자주묻는질문 */
+.faq_wrap {margin-top: 60px;}
+.faq_wrap .faq_desc {font-size: 18px; color: #222; text-align: center;}
+
+.faq_wrap .faq_tab_nav {margin-top: 18px; border-right: 1px solid #dedede; border-bottom: 1px solid #dedede;}
+.faq_wrap .faq_tab_nav > li {float: left; width: calc(100% / 6); height: 60px; border-top: 1px solid #dedede; border-left: 1px solid #dedede; text-align: center; box-sizing: border-box;}
+.faq_wrap .faq_tab_nav > li.on {background: #03a2ea;}
+.faq_wrap .faq_tab_nav > li.on > a {font-weight: 700; color: #fff;}
+.faq_wrap .faq_tab_nav > li > a {display: block; font-size: 18px; color: #777; line-height: 60px;}
+
+.faq_wrap .inner.faq_wrap {margin-top: 65px;}
+.faq_wrap .form_wrap {border-top: 0;}
+.faq_wrap .form_group .form_item {float:left; width:250px;}
+.faq_wrap .form_group .form_inp {float:left; margin-left:10px; width:calc(100% - 390px);}
+.faq_wrap .form_group .btn_wrap {float:left; margin:0 0 0 10px;}
+
+.faq_tab_con {margin-top: 60px;}
+.faq_tab_con .accor_wrap {display: none;}
+.faq_tab_con .accor_wrap.active {display: block;}
+.faq_tab_con .accor_wrap .accor_item .accor_title {background: url('../image/common/arr-bottom.png') no-repeat; background-position: right 30px center;}
+.faq_tab_con .accor_wrap .accor_item .accor_title::before {content: 'Q.'; margin-right: 16px; font-size: 24px; font-weight: 700; color: #03a2ea;}
+.faq_tab_con .accor_wrap .accor_item .accor_title .txt_title {font-size: 18px;}
+.faq_tab_con .accor_wrap .accor_item .accor_con {position: relative; height: auto; padding: 28px 72px;}
+.faq_tab_con .accor_wrap .accor_item .accor_con::before {content: 'A.'; position: absolute; left: 30px; top: 30px; font-size: 24px; font-weight: 700; color: #777;}
+.faq_tab_con .accor_wrap .accor_item .accor_con .ans_txt {font-size: 18px; color: #777; line-height: 1.56;}
+.faq_tab_con .accor_wrap .accor_item.active .accor_title {background: url('../image/common/arr-top-blue.png') no-repeat; background-position: right 30px center;}
+
 /* 회원가입 */
 .join_wrap .step_wrap {margin-bottom: 23px; padding-top: 40px; border-top: 1px solid #e7e7e7;}
 .join_wrap .step_wrap .inner {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
@@ -544,8 +571,7 @@ input { padding:0 20px; width: 100%; height:50px; color:#333; border:1px solid #
 .accor_wrap .accor_item {border-bottom: 1px solid #e7e7e7;}
 .accor_wrap .accor_item .accor_title {height: 70px; padding: 0 30px; line-height: 70px; cursor: pointer;}
 .accor_wrap .accor_item .accor_con {display: none; height: 245px; padding: 30px; overflow-y: auto; box-sizing: border-box; background: #f3f4f6;}
-.accor_wrap .accor_item .accor_con.active {display: block;}
-
+.accor_wrap .accor_item.active .accor_con {display: block;}
 .accor_wrap .accor_item .accor_con .tit_agree {font-size: 18px; font-weight: 700; color: #222;}
 .accor_wrap .accor_item .accor_con .desc_agree {font-size: 18px; color: #222; line-height: 1.56;}
 .accor_wrap .accor_item .accor_con .tit_agree + .desc_agree {margin-top: 30px;}

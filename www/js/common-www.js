@@ -121,12 +121,12 @@ var setInpFile = function() {
 
 // accordian 변경 예정
 var setAccordian = function() {
-  $('.accor_title label').on('click', function(e) {
-    var $target = $(this).closest('.accor_title').next('.accor_con');
+  $('.accor_title label').on('click', toggleContent);
+  $('.accor_title .txt_title').on('click', toggleContent);
 
-    $(this).closest('.accor_wrap').find('.accor_con').removeClass('active');
-    $target.addClass('active');
-  });
+  function toggleContent() {
+    $(this).closest('.accor_item').toggleClass('active');
+  }
 }
 
 // name으로 그룹핑된 체크박스 전체 체크 기능
@@ -154,6 +154,21 @@ var setPopup = function() {
     $('.dim').hide();
   });
 }
+
+// faq tab
+var setFaqTab = function() {
+  
+  $('.faq_tab_nav > li').on('click', function() {
+    var idx = $(this).index();
+    
+    $('.faq_tab_nav > li').removeClass('on');
+    $(this).addClass('on');
+
+    $('.faq_tab_con .accor_wrap').removeClass('active');
+    $('.faq_tab_con .accor_wrap').eq(idx).addClass('active');
+  });
+}
+setFaqTab();
 
 /// 브라우저별 스크롤바 넓이
 function getScrollbarWidth() {
