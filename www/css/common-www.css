@@ -290,20 +290,20 @@ input[type="radio"]:checked + label::before {background-position:0 -20px;}
 .gnb_wrap.mall .btn_toggle .ico_close {float:right; width:8px; height:14px; margin-right:14px; background:url('../image/common/arr-right.png') no-repeat 0 -14px;}
 .gnb_wrap.mall .btn_toggle.on .ico_close {width:14px; background:url('../image/common/ico-close.png') no-repeat 0 -14px;}
 
-.gnb_wrap.company .mall_gnb {display:inline-block; position:relative; left:50%; top:50%; transform:translate(-50%, -50%); z-index:30; opacity:0; visibility:hidden; transition:opacity .4s .4s;}
-.gnb_wrap.mall .mall_gnb {display:inline-block; margin:19px 0 0 292px;}
-.gnb_wrap .mall_gnb .link_item {float:left; margin-left:46px;}
-.gnb_wrap .mall_gnb .link_item:first-child {margin-left:0;}
-.gnb_wrap .mall_gnb .link_item > a {font-size:18px; color:#fff; opacity:.9;}
-.gnb_wrap .mall_gnb .link_item.on > a {opacity:1;}
-.gnb_wrap .mall_gnb.active {opacity:1; visibility:visible;}
-.gnb_wrap .mall_gnb.off {display:none;}
+.gnb_wrap.company .mall_gnb {position: absolute; z-index: 30; opacity: 0; visibility: hidden; transition: opacity .4s .4s;display: table;width:85%;left:50%;transform: translateX(-50%)}
+.gnb_wrap.mall .mall_gnb {display: table; margin:0 auto;width:100%;padding:0 90px 0 285px}
+.gnb_wrap .mall_gnb .link_item {display: table-cell;text-align: center;}
+.gnb_wrap .mall_gnb .link_item:first-child {margin-left: 0;}
+.gnb_wrap .mall_gnb .link_item > a {font-size: 18px; color: #fff; opacity: .9;height:57px;line-height:57px;display: inline-block;}
+.gnb_wrap .mall_gnb .link_item.on > a {opacity: 1;}
+.gnb_wrap .mall_gnb.active {opacity: 1; visibility: visible;}
+.gnb_wrap .mall_gnb.off {display: none;}
 
 
 
-.gnb_wrap.company .company_gnb {display: table; margin:0 auto;width:100%;padding:0 90px 0 285px;max-width:1380px;}
+.gnb_wrap.company .company_gnb {display: table; margin:0 auto;width:100%;padding:0 90px 0 330px;}
 .gnb_wrap.mall .company_gnb {position: absolute; z-index: 30; opacity: 0; visibility: hidden; transition: opacity .4s .4s;display: table;width:85%;left:50%;transform: translateX(-50%)}
-.gnb_wrap .company_gnb .link_item {display: table-cell;text-align: center;width: 20%;}
+.gnb_wrap .company_gnb .link_item {display: table-cell;width: 20%;padding:0 3%;}
 .gnb_wrap .company_gnb .link_item:first-child {margin-left: 0;}
 .gnb_wrap .company_gnb .link_item a {font-size: 20px;height: 57px;line-height: 57px;}
 .gnb_wrap .company_gnb .link_item.on a {color: #03a2ea;}
@@ -325,9 +325,9 @@ input[type="radio"]:checked + label::before {background-position:0 -20px;}
 .sub_gnb_wrap {display:none; position:absolute; left:0; top:129px; width:100%; z-index:99;}
 .sub_gnb_wrap .inner {max-width:1530px; margin:0 auto; overflow:hidden;}
 .sub_gnb_wrap.company {padding-bottom:45px; background:#fff; overflow:hidden;}
-.sub_gnb_wrap.company .inner {box-sizing: border-box;display: table;display: table;width:100%;}
-.sub_gnb_wrap.company .inner_box {max-width:1530px;padding:0 90px 0 285px;margin: 0 auto;}
-.sub_gnb_wrap.company .sub_gnb_list {position: relative; padding-top: 40px; z-index: 1;display: table-cell;width: 20%;padding-left:5%;}
+.sub_gnb_wrap.company .inner {box-sizing: border-box;display: table;width:100%;padding:0 90px 0 330px;}
+.sub_gnb_wrap.company .inner_box {max-width:1530px;margin:0 auto;}
+.sub_gnb_wrap.company .sub_gnb_list {position: relative; z-index: 1;display: table-cell;width: 20%;padding:40px 3% 0;}
 .sub_gnb_wrap.company .sub_gnb_list > li:first-child strong {font-size:16px;}
 .sub_gnb_wrap.company .sub_gnb_list > li {margin-top:14px;}
 .sub_gnb_wrap.company .sub_gnb_list > li:not(:first-child) > a:hover {color:#03a2ea;}
@@ -385,11 +385,14 @@ input[type="radio"]:checked + label::before {background-position:0 -20px;}
 @media screen and (max-width:1600px) {
   .lnb_wrap {padding: 0 15px;}
   .gnb_wrap.company .company_gnb {padding:0 45px 0 240px}
-  .sub_gnb_wrap.company .inner_box {padding:0 45px 0 240px}
   .gnb_wrap.mall .mall_gnb {padding:0 50px 0 230px}
   .gnb_wrap .mall_gnb .link_item > a {font-size: 15px;}
+  .gnb_wrap .company_gnb .link_item a {font-size: 18px;white-space:nowrap;}
+  .sub_gnb_wrap.company .sub_gnb_list > li:first-child strong {font-size: 14px;}
   .gnb_wrap .search_item {right:15px;}
-  
+  .gnb_wrap .company_gnb .link_item {padding:0 2%;}
+  .sub_gnb_wrap.company .sub_gnb_list {padding: 40px 2% 0;}
+  .sub_gnb_wrap.company .inner {padding:0 45px 0 240px;}
 
   .center_list_wrap {padding: 50px 0 50px;}
   .center_list_wrap .inner {padding: 0 8%;}
