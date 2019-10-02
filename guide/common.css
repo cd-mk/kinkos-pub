@@ -44,11 +44,11 @@ a:hover,a.on,a.active{color:#666; text-decoration:none;}
 
 h3.g_status_tit {width:100%; padding:5px 0; color:#000; font-size:16px; font-weight:bold; border-top:1px solid #111; background-color:#f3f3f3; text-align:center;}
 .g_status_board {width:100%; margin-bottom:20px; border-top:1px solid #111;border-bottom:1px solid #111; overflow-x:auto; }
-.g_status_board table{width:100%;border-spacing: 0;}
+.g_status_board table{width:100%;border-spacing: 0;text-align: center;font-size:11px;}
 .g_status_board table th {padding:3px 0;font-size:13px;color:#111;}
-.g_status_board table td {padding:5px 0 4px 10px; border-left:1px solid #ccc; border-top:1px solid #ccc;text-align: center;}
+.g_status_board table td {padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc;text-align: center;}
 .g_status_board select {border:0;font-size:13px;color:#111;}
-.g_status_board table td a:hover{color:#FF0080;}
+.g_status_board table td a{color:#FF0080;}
 .g_status_board table tr td:first-child {border-left:0;}
 .g_status_board table tbody tr:nth-child(2n) td{background-color:#f3f3f3;} 
 .g_status_board table td.g_ac,
@@ -58,7 +58,8 @@ h3.g_status_tit {width:100%; padding:5px 0; color:#000; font-size:16px; font-wei
 .g_status_board table td.g_status {text-align:center; padding-left:0; padding-right:0;}
 .g_status_board table td.g_screen,
 .g_status_board table td.g_num,
-.g_status_board table td.g_name{text-align: left;}
+.g_status_board table td.g_name,
+.g_status_board table td.g_remark{text-align: left;}
 tr.g_ing .g_url_link,
 tr.g_fin .g_url_link {color:#000;}
 tr.g_today .g_url_link{color:#FFF;}

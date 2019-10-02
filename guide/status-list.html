@@ -1,1360 +1,3002 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<title>퍼블리싱가이드 - 현황판 - 메인</title>
-
-	<link href="common.css" rel="stylesheet" type="text/css">
-	<link href="basic.css" rel="stylesheet" type="text/css">    
-	<link href="../www/css/common-www.css" rel="stylesheet" type="text/css">
-	<link href="../mall/css/common-mall.css" rel="stylesheet" type="text/css">
-	<link href="../biz/css/common-biz.css" rel="stylesheet" type="text/css">
-
-	<script src="../www/js/jquery/jquery-1.12.4.min.js"></script>
-
- 
+<meta charset="utf-8">
+<title>퍼블리싱가이드 - 현황판 - 메인</title>
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="basic.css" rel="stylesheet" type="text/css">
+<link href="../www/assets/css/common-www.css" rel="stylesheet" type="text/css">
+<link href="../www/assets/css/common-mall.css" rel="stylesheet" type="text/css">
+<link href="../www/assets/css/common-biz.css" rel="stylesheet" type="text/css">
+<script src="../www/assets/js/jquery/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
-	<div id="g_header">
-		<h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
-		<div id="g_navi">
-
-			<ul class="g_gnb">
-				<li class="g_on"><a href="status-list.html">Status Board</a></li>
-				<li><a href="guide-info.html">Info Guide</a></li>
-				<li><a href="code-txt.html">Code Guide</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="g_content">
-		<div id="gTabBox">
-			<ul id="gTab" class="g_tab">
-				<li class="g_on"><a href="status-list.html">WWW</a></li>
-				<li><a href="status-admin.html">관리자</a></li>
-			</ul>
-		</div>
-		<h2 class="g_m_tit">Front Status Board</h2>
-		<a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
-		<div class="g_main_description">
-			<ul>
-				<li><span style="background:#d8ebf6; color:#000;">진행 / 수정</span></li>
-				<li><span style="background:#efc96e; color:#000;">완료 / 수정완료</span></li>
-				<li><span style="background:#e00f0f;">오늘 날짜</span></li>
-				<li><span style="margin-top:20px;">상태 및 완료 예정일에 맞추어 색이 변경 됩니다.</span></li>
-			</ul>
-		</div>
-
-		<h3 class="g_status_tit">메인 현황판 <span class="g_finto"></span>/<span class="g_num">/</span></h3>
-		<div class="g_status_board">
-
-
-			<table id="table_format" class="table table-bordered">
-				<caption>현황표</caption>
-				<colgroup>
-					<col style="width: 40px;" />
-					<col />
-					<col />
-					<col style="width: 90px;" />
-					<col style="width: 90px;" />
-					<col style="width: 90px;" />
-					<col style="width: 90px;" />
-					<col style="width: 90px;" />
-					<col style="width: 90px;" />
-					<col style="width: 90px;" />
-					<col />
-				</colgroup>
-				<thead>
-					<tr>
-						<th>No</th>
-						<th class="g_screen">Screen Name</th>
-						<th class="g_name">파일명</th>
-						<th>Depth</th>
-						<th>www/mall</th>
-						<th class="g_start">시작일</th>
-						<th class="g_due_date">완료예정일</th>
-						<th class="g_fin">완료일</th>
-						<th>디자인<br />(O,X)</th>
-						<th class="g_status">상태</th>
-						<th class="g_ac">작성자</th>
-						<th>비고</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">공통</td>
-						<td class="g_name">common.html</td>
-						<td></td>
-						<td>www/include</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac">안홍선</td>
-						<td>include파일: header/footer<br>1차 완료 (현재버전까지)</td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">회원가입</td>
-						<td class="g_name">00.join-step1.html</td>
-						<td>common</td>
-						<td>www</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">회원가입-회원정보 입력</td>
-						<td class="g_name">00.join-step2.html</td>
-						<td>common</td>
-						<td>www</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td>일반 회원 가입, SNS간편 회원 가입(네이버, 카카오톡, 페이스북)</td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">회원가입-가입완료</td>
-						<td class="g_name">00.join-step3.html</td>
-						<td>common</td>
-						<td>www</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>x</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">로그인</td>
-						<td class="g_name">H01-1.login.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">장바구니</td>
-						<td class="g_name">H01-2.cart.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">주문/배송조회</td>
-						<td class="g_name">H01-3.order.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">마이 페이지</td>
-						<td class="g_name">H01-4.mypage.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">비회원 주문 조회</td>
-						<td class="g_name">H01-6.non-member.html</td>
-						<td>common</td>
-						<td>www</td>
-						<td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">ENGLISH</td>
-						<td class="g_name">H01-5.english.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-
-					
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">이용약관</td>
-						<td class="g_name">F01.terms.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">개인정보처리방침</td>
-						<td class="g_name">F01-1.privacy.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">저작권정책</td>
-						<td class="g_name">F01-2.licen.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">영상정보처리기기운영방침</td>
-						<td class="g_name">F01-3.cctv-policies.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">정보보호인증</td>
-						<td class="g_name">F01-4.info-protection.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">디자인템플릿</td>
-						<td class="g_name"></td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td>서브페이지</td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">SNS링크</td>
-						<td class="g_name">F01-6.sns.html</td>
-						<td>common</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">메인</td>
-						<td class="g_name">00.main-www.html</td>
-						<td></td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">진행</td>
-						<td class="g_ac">성민경</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">CEO인사말</td>
-						<td class="g_name">01-1.ceo.html</td>
-						<td>킨코스소개</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">진행</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">기업이념 및 연혁</td>
-						<td class="g_name">01-2.history.html</td>
-						<td>킨코스소개</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">Only 킨코스</td>
-						<td class="g_name">01-3.only-kinkos.html</td>
-						<td>킨코스소개</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">인재상</td>
-						<td class="g_name">01-4-1.person.html</td>
-						<td>킨코스소개>채용정보</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">직무소개</td>
-						<td class="g_name">01-4-2.joblist.html</td>
-						<td>킨코스소개>채용정보</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">채용안내</td>
-						<td class="g_name">01-4-3.recruit.html</td>
-						<td>킨코스소개>채용정보</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">센터 안내 목록</td>
-						<td class="g_name">02.center-info.html</td>
-						<td>센터 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td>서브메인있음</td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">가산디지털단지 센터</td>
-						<td class="g_name">02-1.gasan.html</td>
-						<td>센터 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">보안제작지원센터</td>
-						<td class="g_name">02-32.spc.html</td>
-						<td>센터 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">예약문의</td>
-						<td class="g_name">02-32-1.spc-reserve.html</td>
-						<td>센터 안내/보안제작지원센터</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">사인앤그래픽 센터</td>
-						<td class="g_name">02-33.sg-center.html</td>
-						<td>센터 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">상담 신청</td>
-						<td class="g_name">02-33-1.sg-center-reserve.html</td>
-						<td>센터 안내/사인앤그래픽 센터</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">service</td>
-						<td class="g_name">03.service_info.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td>서브메인있음</td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">디지털출력/복사</td>
-						<td class="g_name">03-1.print-copy.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">제본</td>
-						<td class="g_name">03-2.binding.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">후가공</td>
-						<td class="g_name">03-3.finishing.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">사인앤그래픽</td>
-						<td class="g_name">03-4.sg.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">S&G 일반상품</td>
-						<td class="g_name">03-4-1.sg-normal.html</td>
-						<td>서비스 안내/사인앤그래픽</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">S&G 패키지상품</td>
-						<td class="g_name">03-4-2.sg-package.html</td>
-						<td>서비스 안내/사인앤그래픽</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">S&G 제작사례</td>
-						<td class="g_name">03-4-3.sg-case.html</td>
-						<td>서비스 안내/사인앤그래픽</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">스캔투파일</td>
-						<td class="g_name">03-5.scan-file.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">디자인</td>
-						<td class="g_name">03-6.design.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">명함제작</td>
-						<td class="g_name">03-7.business-card.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">고객편의서비스</td>
-						<td class="g_name">03-8.customer-service.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">주요사례별서비스</td>
-						<td class="g_name">03-9.case-service.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">추천상품</td>
-						<td class="g_name">03-10.recommended-products.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">법인우대프로그램</td>
-						<td class="g_name">03-11.Corporation.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">DHL항공특송서비스</td>
-						<td class="g_name">03-12.dhl.html</td>
-						<td>서비스 안내</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">공지사항 목록</td>
-						<td class="g_name">04-1.notice-list.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">공지사항 보기</td>
-						<td class="g_name">04-1.notice-view.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">진행중인 이벤트 목록</td>
-						<td class="g_name">04-2.event.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-				<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">진행중인 이벤트 보기</td>
-						<td class="g_name">04-2.event-view.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">종료된 이벤트</td>
-						<td class="g_name">04-3.event-fin.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>X</td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">K매거진 목록</td>
-						<td class="g_name">04-4.k-magazine-list.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">K매거진 보기</td>
-						<td class="g_name">04-4.k-magazine-view.html</td>
-						<td>이벤트&공지사항</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">견적 및 서비스 문의</td>
-						<td class="g_name">05-1.estimate.html</td>
-						<td>고객지원</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">자주묻는 질문</td>
-						<td class="g_name">05-2.faq.html</td>
-						<td>고객지원</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">서비스 의견</td>
-						<td class="g_name">05-3.opinion.html</td>
-						<td>고객지원</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">제휴 문의 및 제안</td>
-						<td class="g_name">05-4.ally.html</td>
-						<td>고객지원</td>
-						<td>www</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td>O</td>
-						<td class="g_status">완료</td>
-						<td class="g_ac">안홍선</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">온라인몰 메인</td>
-						<td class="g_name">00.main-mall.html</td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status">진행</td>
-						<td class="g_ac">이송</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">즉석상품보기</td>
-						<td class="g_name">06-1.product-list.html</td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">명함</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">즉석명함</td>
-						<td class="g_name"></td>
-						<td>명함</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">상품 상세 페이지</td>
-						<td class="g_name">06-2.product-view.html</td>
-						<td>명함/즉석명함</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">주문서 작성</td>
-						<td class="g_name">06-3.order-sheet.html</td>
-						<td>명함/즉석명함</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">주문 완료 페이지</td>
-						<td class="g_name">06-4.order-end.html</td>
-						<td>명함/즉석명함</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">템플릿명함</td>
-						<td class="g_name"></td>
-						<td>명함</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">편집/상담/특수명함</td>
-						<td class="g_name"></td>
-						<td>명함</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">대형출력/보드</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">패키지</td>
-						<td class="g_name"></td>
-						<td>대형출력/보드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">컬러대형출력</td>
-						<td class="g_name"></td>
-						<td>대형출력/보드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">흑백대형출력</td>
-						<td class="g_name"></td>
-						<td>대형출력/보드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">현수막</td>
-						<td class="g_name"></td>
-						<td>대형출력/보드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">비규격상담문의</td>
-						<td class="g_name"></td>
-						<td>대형출력/보드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">디지털출력/스티커</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">즉석스티커</td>
-						<td class="g_name"></td>
-						<td>디지털출력/스티커</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">브로슈어/표지</td>
-						<td class="g_name"></td>
-						<td>디지털출력/스티커</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">포토퍼즐</td>
-						<td class="g_name"></td>
-						<td>디지털출력/스티커</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">메뉴판</td>
-						<td class="g_name"></td>
-						<td>디지털출력/스티커</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">하드커버</td>
-						<td class="g_name"></td>
-						<td>디지털출력/스티커</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">상담문의</td>
-						<td class="g_name"></td>
-						<td>디지털출력/스티커</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">배너/POP/등신대</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">POP</td>
-						<td class="g_name"></td>
-						<td>배너/POP/등신대</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">미니/대형등신대</td>
-						<td class="g_name"></td>
-						<td>배너/POP/등신대</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">배너</td>
-						<td class="g_name"></td>
-						<td>배너/POP/등신대</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">슬로건/인화/카드</td>
-						<td class="g_name"></td>
-						<td>슬로건/인화/카드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">슬로건</td>
-						<td class="g_name"></td>
-						<td>슬로건/인화/카드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">사진인화</td>
-						<td class="g_name"></td>
-						<td>슬로건/인화/카드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">포토카드</td>
-						<td class="g_name"></td>
-						<td>슬로건/인화/카드</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">이벤트소품/기타</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">투명부채</td>
-						<td class="g_name"></td>
-						<td>이벤트소품/기타</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">토퍼</td>
-						<td class="g_name"></td>
-						<td>이벤트소품/기타</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">박스</td>
-						<td class="g_name"></td>
-						<td>이벤트소품/기타</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">봉투</td>
-						<td class="g_name"></td>
-						<td>이벤트소품/기타</td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">이용가이드</td>
-						<td class="g_name">06-5.guide.html</td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td>유지여부 컴토</td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">검색</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td class="g_num"></td>
-						<td class="g_screen">퀵메뉴</td>
-						<td class="g_name"></td>
-						<td></td>
-						<td>mall</td><td class="g_start"></td>
-						<td class="g_due_date"></td>
-						<td class="g_fin"></td>
-						<td></td>
-						<td class="g_status"></td>
-						<td class="g_ac"></td>
-						<td></td>
-					</tr>			
-				
-				</tbody>
-			</table>
-		</div>
-	</div>
-<!-- SCRIPT -->
-<script src="../www/js/wow.min.js"></script>
-<script src="../www/js/swiper/swiper.min.js"></script>
-<script src="../www/js/common-www.js"></script>
-<script type="text/javascript" src="./common.js"></script>
-<script src="ddtf.js"></script>
-
-
-
-	<script>
+<div id="g_header">
+  <h1 id="g_logo"><a href="../index.html"><img src="./images/logo.png" alt="CIDOW" width="100" /></a></h1>
+  <div id="g_navi">
+    <ul class="g_gnb">
+      <li class="g_on"><a href="status-list.html">Status Board</a></li>
+      <li><a href="guide-info.html">Info Guide</a></li>
+      <li><a href="code-txt.html">Code Guide</a></li>
+    </ul>
+  </div>
+</div>
+<div id="g_content">
+  <div id="gTabBox">
+    <ul id="gTab" class="g_tab">
+      <li class="g_on"><a href="status-list.html">WWW</a></li>
+      <li><a href="status-admin.html">관리자</a></li>
+    </ul>
+  </div>
+  <h2 class="g_m_tit">Front Status Board</h2>
+  <a href="#none" class="g_main_description_btn"><img src="./images/help.png" alt="도움말"></a>
+  <div class="g_main_description">
+    <ul>
+      <li><span style="background:#d8ebf6; color:#000;">진행 / 수정</span></li>
+      <li><span style="background:#efc96e; color:#000;">완료 / 수정완료</span></li>
+      <li><span style="background:#e00f0f;">오늘 날짜</span></li>
+      <li><span style="margin-top:20px;">상태 및 완료 예정일에 맞추어 색이 변경 됩니다.</span></li>
+    </ul>
+  </div>
+  <h3 class="g_status_tit">메인 현황판 /<span class="g_num">/</span></h3>
+  <div class="g_status_board">
+    <table id="table_format" class="table table-bordered">
+      <caption>
+      현황표
+      </caption>
+      <colgroup>
+      <col style="width: 40px;" />
+      <col style="width: 90px;" />
+      <col style="width: 90px;" />
+      <col style="width: 60px;" />
+      <col style="width: 90px;" />
+      <col style="width: 90px;" />
+      <col style="width: 90px;" />
+      <col width="230" />
+      <col />
+      <col style="width: 90px;" />
+      <col style="width: 90px;" />
+    <col style="width: 90px;" />
+      <col style="width: 90px;" />
+      <col style="width: 90px;" />
+      <col style="width: 90px;" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="g_num">No</th>
+          <th>Screen ID</th>
+          <th>구분</th>
+          <th>로그인</th>
+          <th class="g_screen">Depth-01</th>
+          <th class="g_screen">Depth-02</th>
+          <th class="g_screen">Depth-03</th>
+          <th class="g_name">파일명</th>
+          <th class="g_remark">비고</th>
+          <th>D.<br>
+            PC</th>
+          <th>D.<br>
+            M</th>
+          <th>PUB.<br>
+            PC</th>
+          <th>PUB.<br>
+            M</th>
+          <th class="g_status">상태</th>
+          <th>root</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>H0.00.00.00</td>
+          <td>HEADER (MENU &amp; LINKS)</td>
+          <td></td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>H1.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인(공통)</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">login</td>
+          <td class="g_remark">PC 완료</td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">완료</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>H2.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">회원가입</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">join-step1</td>
+          <td class="g_remark">PC 완료</td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">완료</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>H3.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">마이페이지 &gt; 장바구니</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>H4.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">마이페이지 &gt; 주문배송조회</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>H5.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">EN</td>
+          <td class="g_screen">SERVICE GUIDE</td>
+          <td class="g_screen"></td>
+          <td class="g_name">english</td>
+          <td class="g_remark">레이어 팝업</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C0.00.00.00</td>
+          <td>공통(회원)</td>
+          <td></td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">일반 로그인</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">일반 회원 로그인, 아이디/암호</td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.02.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">SNS 로그인</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">네이버, 페이스북, 구글</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.03.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">아이디 찾기</td>
+          <td class="g_screen">회원정보로 찾기</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">아이디/이메일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.03.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">아이디 찾기</td>
+          <td class="g_screen">본인인증으로 찾기</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.03.03.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">아이디 찾기</td>
+          <td class="g_screen">아이디 결과 있음</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.03.04.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">아이디 찾기</td>
+          <td class="g_screen">아이디 결과 없음</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.04.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">비밀번호 찾기</td>
+          <td class="g_screen">회원정보로 찾기</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.04.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">비밀번호 찾기</td>
+          <td class="g_screen">본인인증으로 찾기</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.04.03.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">비밀번호 찾기</td>
+          <td class="g_screen">재설정 이메일 발송</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.04.04.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">비밀번호 찾기</td>
+          <td class="g_screen">비밀번호 재설정</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C1.04.05.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">로그인</td>
+          <td class="g_screen">비밀번호 찾기</td>
+          <td class="g_screen">비밀번호 재설정 완료</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C2.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">회원가입</td>
+          <td class="g_screen">STEP1)<br>
+            약관동의</td>
+          <td class="g_screen"></td>
+          <td class="g_name">join-step1</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C2.02.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">회원가입</td>
+          <td class="g_screen">STEP2)<br>
+            회원정보 입력</td>
+          <td class="g_screen"></td>
+          <td class="g_name">join-step2</td>
+          <td class="g_remark">PC완료</td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td>&nbsp;</td>
+          <td class="g_status">완료</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>C2.03.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">회원가입</td>
+          <td class="g_screen">STEP3)<br>
+            회원가입 완료</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp0.00.00.00</td>
+          <td>마이페이지<br>
+            (Mall에 해당)</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.01.00.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">장바구니 목록<br>
+            (일반 로그인)</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.01.01.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP1)<br>
+            구매자 정보(주소 등) 확인</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.01.02.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP2)<br>
+            구매상품 목록 확인</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.01.02.01-01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Optional</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.01.03.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP3)<br>
+            주문결제</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.01.04.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP4)<br>
+            결제완료</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.02.00.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">세션으로 처리</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.02.01.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP1)<br>
+            구매자 정보(주소 등) 확인</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">주문번호,이름,전화번호</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.02.02.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP2)<br>
+            주문결제</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp1.02.03.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">장바구니</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">STEP3)<br>
+            결제완료</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp2.01.00.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen">구매내역 리스트<br>
+            (일반 로그인)</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">주문번호,주문날짜,수량,배송추적,배송지정보</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp2.01.01.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">POPUP(PP)<br>
+            상세내역보기</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Reorder / 주문배송 조회 / 취소,교환,환불 신청</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp2.02.00.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp2.02.01.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">POPUP(PP)<br>
+            상세내역보기</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp2.03.00.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp2.03.01.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">주문/배송조회</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">POPUP(PP)<br>
+            상세내역보기</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">주문배송 조회 / 취소,교환,환불 신청</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.01.01.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">SUB Main<br>
+            마이페이지 대시보드</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.02.00.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">구매내역 리스트</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.02.01.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">구매내역 리스트</td>
+          <td class="g_screen">POPUP(PP)<br>
+            상세내역보기</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.03.01.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">회원정보</td>
+          <td class="g_screen">회원정보변경</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.03.02.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">회원정보</td>
+          <td class="g_screen">배송지정보관리</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.03.03.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">회원정보</td>
+          <td class="g_screen">회원탈퇴</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.04.00.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">이벤트참여내역</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.01.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen">TAB) 
+            견적 및 상품문의 내역</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.01.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.02.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen">TAB) 
+            서비스 의견 내역</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.02.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.03.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen">TAB) 
+            제휴 및 제안 내역</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.03.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.04.00</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen">TAB) 
+            파일 주문 내역</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Mp3.05.04.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">마이페이지</td>
+          <td class="g_screen">나의문의내역</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M0.00.00.00</td>
+          <td>MENU(GNB_홈페이지)</td>
+          <td></td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>MG.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">GNB</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">common</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">진행</td>
+          <td>common/include/</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>MH.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">메인 랜딩</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">main-www</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M1.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">킨코스 소개</td>
+          <td class="g_screen">CEO인사말</td>
+          <td class="g_screen"></td>
+          <td class="g_name">ceo</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M1.02.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">기업이념 및 연혁</td>
+          <td class="g_screen"></td>
+          <td class="g_name">history</td>
+          <td class="g_remark">연혁은 10호점 단위로 오픈 매장 소개</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M1.03.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">Only 킨코스</td>
+          <td class="g_screen"></td>
+          <td class="g_name">only-kinkos</td>
+          <td class="g_remark">기존 On demand solution 내용과 only 킨코스 내용 통합</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M1.04.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">채용정보</td>
+          <td class="g_screen">TAB) 
+            인재상</td>
+          <td class="g_name">person</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M1.04.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            직무소개</td>
+          <td class="g_name">joblist</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M1.04.03.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            채용안내</td>
+          <td class="g_name">recruit</td>
+          <td class="g_remark">입사지원서 다운로드</td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">서비스 안내</td>
+          <td class="g_screen">서비스 안내 랜딩</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">특정일의 영업 시간 설정 가능하도록</td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.02.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">디지털출력/복사</td>
+          <td class="g_screen">TAB) 흑백출력 &amp; 복사</td>
+          <td class="g_name">digital</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.02.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            컬러출력 &amp; 복사</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.02.03.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            대형사이즈출력 &amp; 복사</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.03.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제본</td>
+          <td class="g_screen">TAB) 
+            와이어제본</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.03.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제본</td>
+          <td class="g_screen">TAB) 
+            스크립제본</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.03.03.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제본</td>
+          <td class="g_screen">TAB) 
+            열제본</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.03.04.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제본</td>
+          <td class="g_screen">TAB) 
+            중철제본</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.04.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">후가공</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">사인앤그래픽</td>
+          <td class="g_screen">TAB) 
+            사인앤그래픽 소개</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            S&amp;G 일반상품</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.03.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            S&amp;G 패키지상품</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.01</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            S&amp;G 제작사례</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">게시판</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.02</td>
+          <td>MENU(GNB_홈페이지)</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.03</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.04</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.05</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.06</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.07</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.05.04.08</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.06.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">스캔투파일</td>
+          <td class="g_screen"></td>
+          <td class="g_name">scan-file</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.07.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">디자인</td>
+          <td class="g_screen"></td>
+          <td class="g_name">design</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.08.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">명함제작</td>
+          <td class="g_screen"></td>
+          <td class="g_name">business-card</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.09.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">고객편의서비스</td>
+          <td class="g_screen"></td>
+          <td class="g_name">customer-service</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.10.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">주요사례별서비스</td>
+          <td class="g_screen"></td>
+          <td class="g_name">case-service</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.11.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">추천상품</td>
+          <td class="g_screen"></td>
+          <td class="g_name">recommended-products</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.12.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">법인우대프로그램</td>
+          <td class="g_screen"></td>
+          <td class="g_name">corporation</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M2.13.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">DHL항공특송서비스</td>
+          <td class="g_screen"></td>
+          <td class="g_name">dhl</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M3.01.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">이벤트/공지사항</td>
+          <td class="g_screen">이벤트</td>
+          <td class="g_screen">리스트</td>
+          <td class="g_name">event</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M3.01.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">이벤트</td>
+          <td class="g_screen">상세보기</td>
+          <td class="g_name">event-view</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M3.02.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">K매거진</td>
+          <td class="g_screen">리스트</td>
+          <td class="g_name">k-magazine-list</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M3.02.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">K매거진</td>
+          <td class="g_screen">상세보기</td>
+          <td class="g_name">k-magazine-view</td>
+          <td class="g_remark">관련제품 링크</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M3.03.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">공지사항</td>
+          <td class="g_screen">리스트</td>
+          <td class="g_name">notice-list</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M3.03.02.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">공지사항</td>
+          <td class="g_screen">상세보기</td>
+          <td class="g_name">notice-view</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.01.01.00</td>
+          <td>MENU(GNB_홈페이지)</td>
+          <td></td>
+          <td class="g_screen">고객지원</td>
+          <td class="g_screen">TAB) 
+            견적 및 상품문의</td>
+          <td class="g_screen">견적 및 상품문의</td>
+          <td class="g_name">estimate</td>
+          <td class="g_remark">접수 시, 각 담당자에게 매일 발송이 되어야 함(접수 시 첨부 파일 포함)</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.01.02.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">견적 및 상품문의</td>
+          <td class="g_screen">URL Link)<br>
+            문의내역 확인하기</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">마이페이지로 이동</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.01.02.02</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">마이페이지로 이동</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.01.02.03</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">마이페이지로 이동</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.01.02.04</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">마이페이지로 이동</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.02.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            서비스 의견</td>
+          <td class="g_screen">서비스 의견 입력</td>
+          <td class="g_name">opinion</td>
+          <td class="g_remark">관리자 페이지에서 메일 지정</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.03.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            제휴 및 제안</td>
+          <td class="g_screen">제휴 및 제안 입력</td>
+          <td class="g_name">ally</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M4.04.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">TAB) 
+            자주묻는 질문</td>
+          <td class="g_screen"></td>
+          <td class="g_name">faq</td>
+          <td class="g_remark">TAB) 전체/복사,출력 서비스/셀프 서비스/대형 실사    출력/원도우 광고 출력(라텍스)/현수막 및 부스제작<br>
+            제본 및 기타 후가공/디자인 및 스캔 서비스/결제/데이터의 보안/기타 및 할인/불만사항</td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M5.01.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">센터 안내</td>
+          <td class="g_screen">센터안내</td>
+          <td class="g_screen">센터안내 리스트</td>
+          <td class="g_name">center-info</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M5.01.02.01</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">센터안내 상세보기</td>
+          <td class="g_name">gasan</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>company</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M5.01.02.02</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M5.01.02.03</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M5.02.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">보안제작지원센터(SPC)</td>
+          <td class="g_screen"></td>
+          <td class="g_name">spc</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>M5.03.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm0.00.00.00</td>
+          <td>MENU(GNB_쇼핑몰&amp;B2B)</td>
+          <td></td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>SmG.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">GNB</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">common</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>SmH.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">메인 랜딩</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">main-mall</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td class="g_status">수정</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">전체 카테고리</td>
+          <td class="g_screen">상품리스트(PLP)<br>
+            (1차 상품카테고리)</td>
+          <td class="g_screen"></td>
+          <td class="g_name">pdt-list</td>
+          <td class="g_remark">PC완료</td>
+          <td>O</td>
+          <td></td>
+          <td></td>
+          <td>O</td>
+          <td class="g_status">완료</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">pdt-detail</td>
+          <td class="g_remark"></td>
+          <td>O</td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.01</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.01-01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.01-02</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.01-02.01.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Optional</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.01-03</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.01-04</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.02-01</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.02-02</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.02-02.01.01</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Optional</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.02-03</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.02-04</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.03</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.03-01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.03-02</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.03-02.01.01</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Optional</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.03-03</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>sm1.01.01.03-04</td>
+          <td>&nbsp;</td>
+          <td>회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01,01.04</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.04-01</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.04-02</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.04-02.01.01</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Optional</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.04-03</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.04-04</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.05</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.05-01</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">상품정보 하단에 옵션별로 플로우 적용</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.06</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">리스트에서 바로 별표 평가 (안)하고, 내용 쓰고,    사진올리고, 어코디언으로 내용 보기(상품 1차카테고리 기준)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.07</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">리스트에서 바로 문의하고, 어코디언으로 내용 보기(상품별기준)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm1.01.01.08</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen">제품상세페이지(PDP)</td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm2.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">즉석상품</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm3.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">히트상품</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm4.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">추천상품</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm5.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">최신상품</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm6.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">인기상품</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm7.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">할인상품</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm8.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">센터안내</td>
+          <td class="g_screen">&nbsp;</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">전체 카테고리와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm9.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">이용가이드</td>
+          <td class="g_screen">리스트</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">Header에 들어감<br>
+            일반 게시판 --&gt; 전체, 기업몰, 기업단위로로 다 다르게 입력 가능하게….<br>
+            관리자 권한으로 통합(현재는 별도 되어있음)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Sm9.01.01.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">이용가이드</td>
+          <td class="g_screen">내용보기</td>
+          <td class="g_screen"></td>
+          <td class="g_name">guide</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Fr0.00.00.00</td>
+          <td>Footer</td>
+          <td></td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td>mall</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft1.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">이용약관</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">terms</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft2.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">개인정보처리방침</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">privacy</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft3.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">저작권정책</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">licen</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft4.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">영상정보처리기기운영방침</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">cctv-policies</td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td>O</td>
+          <td></td>
+          <td class="g_status">진행</td>
+          <td>common</td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft5.01.00.00</td>
+          <td>&nbsp;</td>
+          <td>비회원</td>
+          <td class="g_screen">디자인템플릿</td>
+          <td class="g_screen">리스트(앨벙)</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">*가까운 센터로 문의하시면 디자인템플릿을 확인할 수 있는    로그인 정보를 알려드립니다. ?<br>
+            유지하되 기존 컨텐츠는 상요하지 않음?</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft5.02.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">디자인템플릿</td>
+          <td class="g_screen">PP)<br>
+            이미지 확대 보기</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft6.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">SNS링크</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">인스타그램, 페이스북, 네이버블로그, 트위터(제외)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Ft7.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">정보보호인증</td>
+          <td class="g_screen">PP)<br>
+            정보보호인증</td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">레이어 팝업으로 구성 현재와 동일</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Et0.00.00.00</td>
+          <td>기타</td>
+          <td></td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">　</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Et1.01.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">검색</td>
+          <td class="g_screen">검색결과</td>
+          <td class="g_screen"></td>
+          <td class="g_name"></td>
+          <td class="g_remark"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Et2.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">팝업</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">상단 블라인드 팝업으로</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Et3.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">퀵메뉴</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">메인 와이어프레임에 반영</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Et4.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">최근본 상품</td>
+          <td class="g_screen"></td>
+          <td class="g_screen"></td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">메인 와이어프레임에 반영</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="g_num">&nbsp;</td>
+          <td>Et5.00.00.00</td>
+          <td>&nbsp;</td>
+          <td></td>
+          <td class="g_screen">메일</td>
+          <td class="g_screen">　</td>
+          <td class="g_screen">　</td>
+          <td class="g_name">&nbsp;</td>
+          <td class="g_remark">* 메일 폼<br>
+            견적 및 상품문의 한 내용 이메일로 / 답변용 이메일<br>
+            비회원 일 경우도 메일 발송</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="g_status">&nbsp;</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- SCRIPT --> 
+<script src="../www/assets/js/wow.min.js"></script> 
+<script src="../www/assets/js/swiper/swiper.min.js"></script> 
+<script src="../www/assets/js/common-www.js"></script> 
+<script type="text/javascript" src="./common.js"></script> 
+<script src="ddtf.js"></script> 
+<script>
 		// gTab();
 		$('.g_status_board tbody tr').each(function () {
 			var num = $(this).index() + 1;
 			$(this).find('td').eq(0).html(num);
-			var tdStr1 = $(this).find('td').eq(2).text();
-			var tdStr2 = $(this).find('td').eq(4).text();
-			$(this).find('td').eq(2).html('<a class="g_url_link" href="../' + tdStr2 + '/' + tdStr1 + '" target="_blank">' + tdStr2 + '/' + tdStr1 + '</a>');
+			var tdStr1 = $(this).find('td').eq(7).text();
+			var tdStr2 = $(this).find('td').eq(14).text();
+			var tdStr3 = $(this).find('td').eq(1).text();
+			$(this).find('td').eq(7).html('<a class="g_url_link" href="../www/' + tdStr2 + '/' + tdStr3 + '.' + tdStr1 + '.html" target="_blank">' + tdStr3 + '.' + tdStr1 + '.html</a>');
 		});
 	</script>
-	<script>
+<script>
 		jQuery('#table_format').ddTableFilter();
 	</script>
-
 </body>
-
 </html>

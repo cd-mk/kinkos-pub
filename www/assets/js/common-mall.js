@@ -1,0 +1,98 @@
+
+(function () {
+	$('.btn_list').on('click', function () {
+		$(this).next().slideToggle(300);
+	});
+	$('.opt_list > li > a').on('click', function () {
+		var selectText = $(this).text();
+		$(this).closest('.opt_list').prev('.btn_list').text(selectText);
+		$(this).closest('.opt_list').slideUp(300);
+	});
+})();
+
+
+// mobile
+(function () {
+	$('.btn_menu').on('click', function () {
+		$('.menu').addClass('open');
+		$('body').css('overflow', 'hidden');
+	});
+	$('.btn_close').on('click', function () {
+		$('.menu').removeClass('open');
+		$('body').css('overflow', 'auto');
+	});
+})();
+
+// main slide
+var mainSlide = new Swiper('.visual_wrap', {
+	direction: 'horizontal',
+	slidesPerView: 1,
+	spaceBetween: 30,
+	thumbs: {
+		swiper: {
+			el: '.consult_tag',
+			direction: 'horizontal',
+			spaceBetween: 12,
+			slidesPerView: 'auto',
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			allowTouchMove: true
+		}
+	},
+	centeredSlides: true,
+	roundLengths: true
+});
+
+
+
+
+
+// main slide
+var photoDetail = new Swiper('.photo_box', {
+	effect: 'fade',
+	speed: 500,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+});
+
+var galleryThumbs = new Swiper('.pdt_thumbs', {
+	spaceBetween: 10,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.photo_box', {
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: galleryThumbs
+	}
+});
+
+
+$(document).ready(function () {
+	// 임시 header, footer영역 로드
+	$("#header").load("../common/include/common.html header", function () {
+    // header 로드 후 header 관련 function 실행
+    setGnb();
+    mobileGnb();
+  });
+	$("#footer").load("../common/include/common.html .footer_inner", function () {
+    
+  });
+
+});
+
+
+
+
+
+
+
+
