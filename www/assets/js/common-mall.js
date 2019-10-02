@@ -27,43 +27,10 @@
 var mainSlide = new Swiper('.visual_wrap', {
 	direction: 'horizontal',
 	slidesPerView: 1,
-	spaceBetween: 30,
-	thumbs: {
-		swiper: {
-			el: '.consult_tag',
-			direction: 'horizontal',
-			spaceBetween: 12,
-			slidesPerView: 'auto',
-			watchSlidesVisibility: true,
-			watchSlidesProgress: true,
-			allowTouchMove: true
-		}
-	},
 	centeredSlides: true,
 	roundLengths: true
 });
 
-
-
-
-
-// main slide
-var photoDetail = new Swiper('.photo_box', {
-	effect: 'fade',
-	speed: 500,
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-});
-
-var galleryThumbs = new Swiper('.pdt_thumbs', {
-	spaceBetween: 10,
-	slidesPerView: 4,
-	freeMode: true,
-	watchSlidesVisibility: true,
-	watchSlidesProgress: true,
-});
 
 
 $(document).ready(function () {
