@@ -64,16 +64,6 @@ var galleryThumbs = new Swiper('.pdt_thumbs', {
 	watchSlidesVisibility: true,
 	watchSlidesProgress: true,
 });
-var galleryTop = new Swiper('.photo_box', {
-	spaceBetween: 10,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	thumbs: {
-		swiper: galleryThumbs
-	}
-});
 
 
 $(document).ready(function () {
