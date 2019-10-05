@@ -19,6 +19,7 @@
   <title>상품리스트 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../assets/css/lib/animate.css">
+<link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../assets/css/common-mall.css">
 
@@ -57,123 +58,477 @@
       </div>
       <!-- //breadcrumb  -->
 
-      <!-- 상품상세 -->
-      <div class="pdt_info_wrap layout_width">
-        <div class="pdt_photo">
-          <div class="photo_box swiper-container">
-            <div class="photoSlideV15 swiper-wrapper">
-              <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
-              <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
-              <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+      <div class="cont_wrap tab_area anchor">
+
+        <!-- 상품상세 option -->
+        <div class="pdt_info_wrap layout_width">
+          <!-- 상품사진 -->
+          <div class="photo_inner">
+            <div class="photo_box swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_thumb.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+                
+              </div>
+            </div>
+            <div class="pdt_thumbs swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_thumb.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_thumb.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_thumb.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_thumb.jpg" /></div>
+                <div class="swiper-slide"><img src="../assets/image/mall/product/pl_thumb.jpg" /></div>
+              </div>
+              <div class="swiper-button-next mid"></div>
+              <div class="swiper-button-prev mid"></div>
             </div>
           </div>
-          <div class="swiper-container pdt_thumbs">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
-              <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
-              <div class="swiper-slide"><img src="../assets/image/mall/product/pl_02.jpg" /></div>
+
+          <!-- 상품 옵션 -->
+          <div class="pdt_detail">
+            <div class="form_wrap">
+              <form name="sbagfrm" method="post" action="" style="margin:0px;">
+                <input type="hidden" name="mode" value="add">
+                <input type="hidden" name="itemid" value="1651260">
+                <input type="hidden" name="itemoption" value="">
+                <input type="hidden" name="itemPrice" value="15900">
+        
+                <div class="pdt_head">
+                  <p class="pdt_code">상품코드 : 000000</p>
+                  <h2><p class="pdt_name">즉석 포스터 출력 A2</p></h2>
+                  <p class="desc">4시간만에 완성되는 대형 인화 출력</p>
+                </div>
+
+                <div class="form_group pdt_price">
+                  <div class="form_item price01">
+                    <span class="form_name">가격</span>
+                    <div class="form_inp">
+                      <strong>7,200원</strong><em>(vat 포함)</em>
+                    </div>
+                  </div>
+                  <div class="form_item price02">
+                    <span class="form_name">할인가격</span>
+                    <div class="form_inp">
+                      (31%할인)<strong> 4,200원</strong><em>(vat 포함)</em>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form_group pdt_item">
+                  <div class="form_item opt_default">
+                    <span class="form_name">선택옵션</span>
+                    <div class="form_inp">
+                      <select name='' class="sel_opt">
+                        <option value='' selected>용지</option>
+                      </select>
+                      <select name='' class="sel_opt">
+                        <option value='' selected>재질</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form_item">
+                    <span class="form_name">추가옵션</span>
+                    <div class="form_inp">
+                      <select name='' class="sel_opt">
+                        <option value='' selected>추가옵션</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form_item">
+                    <span class="form_name">사이즈</span>
+                    <div class="form_inp">
+                      <input type="radio" name="sizeSe" id="sizeSel1">
+                      <label for="sizeSel1">사이즈 입력하기</label>
+                      <input type="text" class="inp" />
+                    </div>
+                    <div class="form_inp">
+                      <input type="radio" name="sizeSe" id="sizeSel12">
+                      <label for="sizeSel12">사이즈 선택하기</label>
+                      <select name='' class="sel_opt">
+                        <option value='' selected>90mm X 50mm</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form_item num">
+                    <span class="form_name">수량</span>
+                    <div class="form_inp">
+                      <input type="text" class="dtl_num inp" />
+                    </div>
+                  </div>
+
+                  <div class="form_item">
+                    <span class="form_name">배송비</span>
+                    <div class="form_inp">
+                      <select name='' class="sel_opt">
+                        <option value='' selected>선택</option>
+                      </select>
+                      <p class="desc">- 유료배송 상품입니다. 배송비 : 3,000원</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form_group pdt_btm">
+                  <div class="form_item">
+                    <span class="form_name">파일업로드</span>
+                    <div class="form_inp file_box">
+                      <div class="file_inp_box">
+                        <!-- 첨부 파일 이름 출력 요소 -->
+                        <input type="text" class="file_name js-file_name inp" readonly>
+                        <!-- 파일 첨부 시 hide 클래스 제거됨, 첨부 파일 삭제 시 hide클래스 추가됨 -->
+                        <button type="button" class="btn type03 btn_delete hide"><span>삭제</span></button>
+                        <input type="file" id="file1" class="file_inp" required>
+                        <label for="file1" class="btn type03">파일 찾기</label>
+                      </div>
+                      <a href="#" class="btn type01">작업가이드</a>
+                    </div>
+                    <p class="desc">- 100MB 이하 / 압축파일 권장</p>
+                  </div>
+
+                  <div class="form_item">
+                    <span class="form_name">센터선택</span>
+                    <div class="form_inp">
+                      <select name='' class="sel_opt">
+                        <option value='' selected>선택</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+                  <div class="form_item">
+                    <span class="form_name">메모</span>
+                    <div class="form_inp">
+                      <textarea></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 간편선택 바구니 -->
+                <div id="ly_bag">
+                  <div class="ease_cart">
+                    <!-- loop -->
+                    <div class="item">
+                      <ul>
+                        <li>
+                          <dl>
+                            <dt>재질</dt>
+                            <dd>
+                              스노우250g
+                              <br>
+                              엠보싱
+                            </dd>
+                          </dl>
+                          <dl>
+                            <dt>코팅</dt>
+                            <dd>
+                              양면/
+                              <br>
+                              수량 100매 (+10,000원)
+                            </dd>
+                          </dl>
+                      </li>
+                      <li>
+                        <div class="form_inp opt_ea">
+                          <div><input type="text" class="dtl_num" /></div>
+                          <button type="button" class="btn type03 btn_delete"><span>삭제</span></button>
+                        </div>
+                      </li>
+                      </ul>
+                      <p class="price"><strong>30,000원</strong></p>
+                    </div>
+                    <!-- //loop -->
+                    <div class="item">
+                      <ul>
+                        <li>
+                          <dl>
+                            <dt>재질</dt>
+                            <dd>
+                              스노우250g
+                              <br>
+                              엠보싱
+                            </dd>
+                          </dl>
+                          <dl>
+                            <dt>코팅</dt>
+                            <dd>
+                              양면/
+                              <br>
+                              수량 100매 (+10,000원)
+                            </dd>
+                          </dl>
+                        </li>
+                        <li>
+                          <div class="form_inp opt_ea">
+                            <div><input type="text" class="dtl_num" /></div>
+                            <button type="button" class="btn type03 btn_delete"><span>삭제</span></button>
+                          </div>
+                        </li>
+                      </ul>
+                      <p class="price"><strong>30,000원</strong></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- //간편선택 바구니 -->
+
+                <div class="price total">총금액<strong>30,000원</strong></div>
+
+                <div class="btn_wrap col3 center">
+                  <span><button type="submit" class="btn large type01">바로구매</button></span>
+                  <span><button type="button" class="btn large type02">장바구니</button></span>
+                  <span><button type="button" class="btn large type03">비회원구매</button></span>
+                </div>
+              </form>
             </div>
           </div>
         </div>
 
-        <div class="pdt_detail">
-          <div class="inner">
-            <form name="sbagfrm" method="post" action="" style="margin:0px;">
-              <input type="hidden" name="mode" value="add">
-              <input type="hidden" name="itemid" value="1651260">
-              <input type="hidden" name="itemoption" value="">
-              <input type="hidden" name="itemPrice" value="15900">
-      
-              <div class="pdt_head">
-                <p class="pdt_code">상품코드 : 000000</p>
-                <h2><p class="pdt_name">즉석 포스터 출력 A2</p></h2>
-                <p class="pdt_desc">4시간만에 완성되는 대형 인화 출력</p>
+
+        <!-- 상세설명 -->
+
+        <div class="pdt_tab_wrap layout_width">
+          <!-- page tab -->
+          <!-- tab-anchor.js 추가 -->
+          <div class="page_tab col5">
+            <ul>
+              <li id="tab1" onclick="goToByScroll('1');" class="active">상품정보</li>
+              <li id="tab2" onclick="goToByScroll('2');">리뷰 (3)</li>
+              <li id="tab3" onclick="goToByScroll('3');">상품문의</li>
+              <li id="tab4" onclick="goToByScroll('4');">배송 / 교환 / 상품</li>
+            </ul>
+          </div>
+          <!-- page tab -->
+          
+          <!-- 상세설명 탭 콘텐츠 -->
+          <div class="con_box">
+            <!-- 상품정보 -->
+            <div id="item1" class="item item1">
+
+            </div>
+
+            <!-- 리뷰-->
+            <div id="item2" class="item item2">
+              
+              <div class="bbs_list">
+                <h3>이 상품의 전체 리뷰</h3>
+                <table>
+                  <caption>공지사항의 정보를 나열한 표</caption>
+                  <!-- <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">제목</th>
+                      <th scope="col">작성자</th>
+                      <th scope="col">등록일</th>
+                    </tr>
+                  </thead> -->
+                  <tbody>
+                    <tr>
+                      <td class="num">3</td>
+                      <td class="subject"><a href="#url">킨코스에서 주문하길 정말 잘 한거 같아요!</a></td>
+                      <td>hancCoc***</td>
+                      <td>2019.08.20</td>
+                    </tr>
+                    <tr>
+                      <td class="num">2</td>
+                      <td class="subject"><a href="#url">킨코스에서 주문하길 정말 잘 한거 같아요!</a></td>
+                      <td>hancCoc***</td>
+                      <td>2019.06.24</td>
+                    </tr>
+                    <tr>
+                      <td class="num">1</td>
+                      <td class="subject"><a href="#url">킨코스에서 주문하길 정말 잘 한거 같아요!</a></td>
+                      <td>hancCoc***</td>
+                      <td>2019.08.06</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Page navigation -->
+                <div class="page_navi">
+                  <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+                  <ul class="navi_list">
+                    <li class="active"><a href="#url">1</a></li>
+                    <li><a href="#url">2</a></li>
+                    <li><a href="#url">3</a></li>
+                    <li><a href="#url">4</a></li>
+                    <li><a href="#url">5</a></li>
+                  </ul>
+                  <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                </div>
+                <!-- Page navigation -->
               </div>
-              <div class="detail_item pdt_price">
-                <dl class="item">
-                  <dt>가격</dt>
-                  <dd><strong>7,200원s</strong><em>(vat 포함)</em></dd>
-                </dl>
-                <dl class="item">
-                  <dt>할인가격</dt>
-                  <dd>(31%할인)<strong> 4,200원</strong><em>(vat 포함)</em></dd>
-                </dl>
-              </div>
-
-              <div class="detail_item opt_default">
-                <dl class="item">
-                  <dt>선택옵션</dt>
-                  <dd>
-                    <p class="itemoption">
-                      <select name='item_option' id='0' class='select'>
-                        <option value='' selected>용지</option>
-                      </select></p>
-                    <p class='tPad itemoption'>
-                      <select name='item_option' id='1' class='select'>
-                        <option value='' selected>재질</option>
-                      </select>
-                    </p>
-                  </dd>
-                </dl>
-              </div>
-
-              <div class="detail_item">
-                <dl class="item">
-                  <dt>추가옵션</dt>
-                  <dd>
-                    <p class="itemoption">
-                    <select name='item_option1' class='optSelect2 select'>
-                      <option value='' selected>추가옵션</option>
-                    </select>
-                    </p>
-                  </dd>
-                </dl>
-              </div>
-
-              <div class="detail_item">
-                <dl class="item">
-                  <dt>수량</dt>
-                  <dd>
-                    <input type="text" id="itemea" class="txtInp ct" />
-                    <span class="orderNumAtc"></span>
-                  </dd>
-                </dl>
-              </div>
-
-     
+            </div>
 
 
-              <!-- 간편선택 바구니 -->
-              <div id="ly_bag">
-                <div class="ease_cart">
-                  
-                  <div class="opt_sel_wrap">
-                    <dl class="item">
-                      <dt>수량</dt>
-                      <dd>
-                        <input type="text" id="itemea" class="txtInp ct" />
-                        <span class="orderNumAtc"></span>
-                      </dd>
-                    </dl>
+            <!-- 상품문의-->
+            <div id="item3" class="item item3">
+              <div class="form_wrap review_wt">
+                <div class="form_group">
+                  <div class="form_inp">
+                    <textarea placeholder="로그인 후 등록이 가능합니다.&#10;상품에 대해 궁금한 점을 물어보세요."></textarea>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn type01">리뷰<br>등록하기</button>
                   </div>
 
-                  <div class="totalPrice">
-                    <span>상품 금액 합계</span>
-                    <strong><span id="spTotalPrc">0원</span></strong>
+                  <div class="form_inp">
+                    <div class="form_inp file_box">
+                      <div class="file_inp_box">
+                        <input type="file" id="file2" class="file_inp" required>
+                        <label for="file2" class="btn large type02">파일 찾기</label>
+                      </div>
+                      <p class="desc">100MB 이하 / 압축파일 권장</p>
+                    </div>
+                    
                   </div>
+
                 </div>
               </div>
 
-            </form>
-          
+
+
+              <div class="accor_wrap">
+                <!-- repeat faq item list -->
+                <div class="accor_item">
+                  <div class="accor_title">
+                    <a href="#url" class="txt_title">
+                      <p class="num">3</p>
+                      <p class="writer"><span class="date">2019. 06. 24</span><span class="id">handc***</span></p>
+                      <p class="sjt">방문 수령 가능 시간은?</p>
+                      <p class="status finish">답변완료</p>
+                    </a>
+                  </div>
+                  <div class="accor_con">
+                    <dl class="txt_que">
+                      <dt>문의내용</dt>
+                      <dd>
+                        최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
+                        온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
+                      </dd>
+                    </dl>
+                    <dl class="txt_ans">
+                      <dt>답변</dt>
+                      <dd>
+                        최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
+                        온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="accor_item">
+                  <div class="accor_title">
+                    <a href="#url" class="txt_title">
+                      <p class="num">2</p>
+                      <p class="writer"><span class="date">2019. 06. 24</span><span class="id">handc***</span></p>
+                      <p class="sjt">방문 수령 가능 시간은?</p>
+                      <p class="status waiting">답변대기</p>
+                    </a>
+                  </div>
+                  <div class="accor_con">
+                    <p class="ans_txt">
+                      최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
+                      온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="accor_item">
+                  <div class="accor_title">
+                    <a href="#url" class="txt_title">
+                      <p class="num">1</p>
+                      <p class="writer"><span class="date">2019. 06. 24</span><span class="id">handc***</span></p>
+                      <p class="sjt">방문 수령 가능 시간은?</p>
+                      <p class="status waiting">답변대기</p>
+                    </a>
+                  </div>
+                  <div class="accor_con">
+                    <p class="ans_txt">
+                      최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
+                      온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- Page navigation -->
+                <div class="page_navi">
+                  <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+                  <ul class="navi_list">
+                    <li class="active"><a href="#url">1</a></li>
+                    <li><a href="#url">2</a></li>
+                  </ul>
+                  <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                </div>
+                <!-- Page navigation -->
+                <!-- //repeat faq item list -->
+              </div>
+
+              
+              <div class="pdt_other_wrap">
+                <h3>다른 고객이 함께 본 상품</h3>
+                <div class="pdt_other swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="../assets/image/mall/product/pl_thumb.jpg" />
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="price">18,000원</p>
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../assets/image/mall/product/pl_thumb.jpg" />
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="price">18,000원</p>
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../assets/image/mall/product/pl_thumb.jpg" />
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="price">18,000원</p>
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../assets/image/mall/product/pl_thumb.jpg" />
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="price">18,000원</p>
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../assets/image/mall/product/pl_thumb.jpg" />
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="price">18,000원</p>
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../assets/image/mall/product/pl_thumb.jpg" />
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="price">18,000원</p>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- <div class="swiper-button-next mid"></div>
+                  <div class="swiper-button-prev mid"></div> -->
+                </div>
+              </div>
+
+            </div>
+            <div id="item4" class="item item4">
+            </div>
           </div>
+          <!-- //상세설명 탭 콘텐츠 -->
         </div>
+        
+
       </div>
-
-
-    </div>
     <!-- //CONTENT -->
-
+  </div>
 
     <!-- FOOTER -->
     <div id="footer" class="layout_width">
@@ -188,18 +543,25 @@
 <!-- //WRAP -->
 
   <!-- SCRIPT -->
-
+  <!-- global -->
   <script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="../assets/js/jquery/jquery.placeholder.min.js"></script>
   <script src="../assets/js/wow.min.js"></script>
   <script src="../assets/js/swiper/swiper.min.js"></script>
   <script src="../assets/js/common.js"></script>
   <script src="../assets/js/common-mall.js"></script>
+  <!-- //global -->
+
   <script src="../assets/js/sub-mall.js"></script>
   <script src="../assets/js/jquery.numspinner.min.js"></script>
-  
+  <script src="../assets/js/tab-anchor.js"></script>
+  <!-- 수량 -->
   <script type="text/javascript">
-    $("#itemea").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
+    $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
   </script>
+
+
   
   <!-- //SCRIPT -->
 

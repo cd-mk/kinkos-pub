@@ -64,7 +64,8 @@ tr.g_ing .g_url_link,
 tr.g_fin .g_url_link {color:#000;}
 tr.g_today .g_url_link{color:#FFF;}
 .g_status_board table tr.g_ing td{background:#d8ebf6 !important; color:#000;}
-.g_status_board table tr.g_fin2 td{background:#efc96e !important; color:#000;}
+.g_status_board table tr.g_fin1 td{background:#efc96e !important; color:#000;}
+.g_status_board table tr.g_fin2 td{background:#dd8a52 !important; color:#000;}
 .g_status_board table tbody tr.g_today td{background:#e00f0f  !important; color:#FFF !important; font-weight:bold;}
 .g_finto,.g_num{font-size:13px;}
 

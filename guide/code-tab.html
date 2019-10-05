@@ -7,7 +7,7 @@
   <title>퍼블리싱가이드 > 코딩가이드 > Tab</title>
   <link href="common.css" rel="stylesheet" type="text/css">
   <link href="basic.css" rel="stylesheet" type="text/css">
-  <link href="../www/assets/css/common-www.css" rel="stylesheet" type="text/css">
+  <link href="../www/assets/css/common-www" rel="stylesheet" type="text/css">
   <link href="../www/assets/css/common-mall.css" rel="stylesheet" type="text/css">
   <link href="../www/assets/css/common-biz.css" rel="stylesheet" type="text/css">
   <link href="../www/assets/css/sub-www.css" rel="stylesheet" type="text/css">
@@ -40,6 +40,57 @@
       </ul>
     </div>
     
+
+
+        
+
+    <!-- 코드 추가-->
+    <div class="g_code_page">
+      <div class="g_header">
+        <h3 class="g_tit2">페이지 tab(페이지 링크)</h3>
+        <span>Update. 2019.09.03</span>
+      </div>
+      <div class="g_codebox">
+        <!-- source code -->
+        <div class="g_code_temp">
+
+          <div class="page_tab col4">
+            <ul class="" id="tab">
+              <li>상품정보</li>
+              <li>리뷰 (3)</li>
+              <li>상품문의 (13)</li>
+              <li>배송 / 교환 / 상품</li>
+            </ul>
+          </div>
+          
+          <div class="con_box" id="tab_con">
+            <!-- 상품정보 -->
+            <div>1st Contents</div>
+          
+            <!-- 리뷰 -->
+            <div>2nd Contents</div>
+          
+            <!-- 상품문의 -->
+            <div>3rd Contents</div>
+          
+            <!-- 배송 / 교환 / 상품 -->
+            <div>4rd Contents</div>
+          </div>
+    
+        </div>
+        <!-- //source code -->
+      </div>
+      <div class="g_code_description">
+        <div>
+          <h4>Description</h4>
+          <p>tab있는 영역 상위 요소에 'tab_area' 클래스 추가 ex : cont_wrap.tab_area</p>
+          <p>#tab_con #tab 필수</p>
+        </div>
+      </div>
+    </div>
+    <!-- //코드 추가 -->
+
+
     <!-- 코드 추가-->
     <div class="g_code_page">
       <div class="g_header">
@@ -71,39 +122,6 @@
     </div>
     <!-- //코드 추가 -->
 
-    <!-- 코드 추가-->
-    <div class="g_code_page">
-      <div class="g_header">
-        <h3 class="g_tit2">페이지 tab(페이지 내 링크)</h3>
-        <span>Update. 2019.09.10</span>
-      </div>
-      <div class="g_codebox">
-        <!-- source code -->
-        <div class="g_code_temp">
-          <!-- page tab -->
-          <div class="page_tab col5">
-            <ul>
-              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">센터 정보</a></li>
-              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">제공 서비스</a></li>
-              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">컴퓨터 및 프로그램</a></li>
-              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">보유장비</a></li>
-              <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">지도</a></li>
-            </ul>
-          </div>
-          <!-- page tab -->
-
-        </div>
-        <!-- //source code -->
-      </div>
-      <div class="g_code_description">
-        <div>
-          <h4>Description</h4>
-          <p>tab있는 영역 상위 요소에 'tab_area' 클래스 추가 ex : cont_wrap.tab_area</p>
-          <p>페이지 내 섹션 이동을 하는 tab</p>
-        </div>
-      </div>
-    </div>
-    <!-- //코드 추가 -->
 
     <!-- 코드 추가-->
     <div class="g_code_page">
@@ -114,25 +132,43 @@
         <div class="g_codebox">
           <!-- source code -->
           <div class="g_code_temp">
+          <!-- page tab -->
+          <div class="cont_wrap tab_area anchor">
+          
             <!-- page tab -->
-            <div class="page_tab col4">
+            <!-- tab-anchor.js 추가 -->
+            <div class="page_tab col5">
               <ul>
-                <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">센터 정보</a></li>
-                <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">제공 서비스</a></li>
-                <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">컴퓨터 및 프로그램</a></li>
-                <li><a href="#url" onclick="jumpto('이동할 섹션의 아이디');">보유장비</a></li>
+                <li id="tab1" onclick="goToByScroll('1');" class="active">센터 정보</li>
+                <li id="tab2" onclick="goToByScroll('2');">제공 서비스</li>
+                <li id="tab3" onclick="goToByScroll('3');">컴퓨터 및 프로그램</li>
+                <li id="tab4" onclick="goToByScroll('4');">보유장비</li>
+                <li id="tab5" onclick="goToByScroll('5');">지도</li>
               </ul>
             </div>
             <!-- page tab -->
-  
+          
+            <div class="con_box">
+              <div id="item1">
+              </div>
+              <div id="item2">
+              </div>
+              <div id="item3">
+              </div>
+              <div id="item4">
+              </div>
+              <div id="item5">
+              </div>
+            </div>
           </div>
           <!-- //source code -->
         </div>
         <div class="g_code_description">
           <div>
             <h4>Description</h4>
-            <p>tab있는 영역 상위 요소에 'tab_area' 클래스 추가 ex : cont_wrap.tab_area</p>
+            <p>tab있는 영역 상위 요소에 'anchor' 클래스 추가 ex : cont_wrap.anchor</p>
             <p>페이지 내 섹션 이동을 하는 tab</p>
+            <p>tab-anchor.js /common.css</p>
           </div>
         </div>
       </div>
@@ -140,7 +176,9 @@
   </div>
 <!-- SCRIPT -->
 <script src="../www/assets/js/wow.min.js"></script>
+<script src="../www/assets/js/jquery/jquery.placeholder.min.js"></script>
 <script src="../www/assets/js/swiper/swiper.min.js"></script>
+<script src="../www/assets/js/common.js"></script>
 <script src="../www/assets/js/common-www.js"></script>
 <script type="text/javascript" src="./common.js"></script>
 <script src="ddtf.js"></script>

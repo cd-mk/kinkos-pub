@@ -16,7 +16,7 @@
 <meta property="og:image" content="../assets/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-  <title>로그인 | 킨코스코리아</title>
+  <title>아이디찾기 | 로그인 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../assets/css/lib/animate.css">
 <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -57,64 +57,88 @@
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap layout_full"> 
-
+      <div class="cont_wrap layout_full tab_area"> 
+      
+        <!-- page tab -->
+        <div class="page_tab">
+          <ul>
+            <li class="active"><a href="#">아이디 찾기</a></li>
+            <li><a href="#">비밀번호 찾기</a></li>
+          </ul>
+        </div>
+        <!-- page tab -->
   
         <!-- 본문 -->
         <div class="con_box login_wrap">
           <div class="tit_box">
-            <h3>로그인</h3>
-
-
-
-            <div class="inner">
-              <form method="post" action="/" onsubmit="">
-                <fieldset>
-                  <legend class="blind">로그인 양식</legend>
-                  <div class="group_wrap">
-                    <div class="group_inp">
-                      <label for="login_id" class="blind">아이디 입력</label>
-                      <input type="text" name="" id="login_id" placeholder="아이디" required="">
-                    </div>
-                    <div class="group_inp">
-                      <label for="login_pw" class="blind">비밀번호 입력</label>
-                      <input type="password" name="" id="login_pw" placeholder="비밀번호" required="">
-                    </div>
-                    <div class="btn_wrap col2 center">
-                      <button type="submit" class="btn large type01">로그인</button>
-                      <button type="button" class="btn large type02">회원가입</button>
-                    </div>
-                    <div class="group_inp chk_inp_box">
-                      <span class="chk_inp">
-                        <input type="checkbox" name="" id="privacyAgree">
-                        <label for="privacyAgree"><span class="blind">로그인 정보 저장</span></label>
-                      </span>
-                      <span class="txt_label">아이디 저장</span>
-                    </div>
-
-                  </div>
-                </fieldset>
-              </form>
-              <div class="forgot_wrap">
-                <a href="">아이디 찾기</a>
-                <a href="">비밀번호 찾기</a>
-              </div>
-
-              <div class="btn_wrap easy">
-                <a href="#" class="btn btn_naver" title="새창열림"><i class="ico"></i>네이버로 시작하기</a>
-                <a href="#" class="btn btn_kakao" title="새창열림"><i class="ico"></i>카카오로 시작하기</a>
-                <a href="#" class="btn btn_fb" title="새창열림"><i class="ico"></i>페이스북으로 시작하기</a>
-              </div>
-
-            </div>
-
-
-
-
-
-
+            <h3>아이디 찾기</h3>
+            <p class="desc">회원정보 및 본인인증으로 아이디를 찾을 수 있습니다.</p>
           </div>
-        
+
+
+
+          <div class="inner">
+            <form method="post" action="/" onsubmit="">
+              <fieldset>
+                <legend class="blind">아이디 찾기 양식</legend>
+                
+                <!-- 회원정보로 찾기  
+                 <div class="group_wrap" style="display:none">
+                  <div class="group_wrap" style="display:block">
+                -->
+                <div class="group_wrap">
+
+
+                  <div class="inner user_info">
+                    <div class="group_inp">
+                      <div class="form_inp">
+                        <input type="radio" name="idFind" id="idFind1">
+                        <label for="idFind1" onchange="setDisplay()">회원정보로 찾기</label>
+                      </div>
+                    </div>
+                    <div class="group_inp">
+                      <label for="login_id" class="blind">이름 입력</label>
+                      <input type="text" name="" id="login_id" placeholder="이름" required="">
+                    </div>
+                    <div class="group_inp">
+                      <label for="login_pw" class="blind">이메일 주소 입력</label>
+                      <input type="password" name="" id="login_pw" placeholder="이메일 주소" required="">
+                    </div>
+                  </div>
+
+
+                <!-- 본인인증 찾기  
+                 <div class="group_wrap" style="display:none">
+                  <div class="group_wrap" style="display:block">
+                -->
+                <div class="inner auth">
+                            <input type="radio" name="idFind" id="idFin2">
+                            <label for="idFin2" onchange="setDisplay()">본인인증 찾기</label>
+                  <div class="group_inp">
+                    <div class="form_inp">
+            
+                    </div>
+                  </div>
+                
+                  <div class="group_inp">
+                    <label for="login_id" class="blind">이름 입력</label>
+                    <input type="text" name="" id="login_id" placeholder="이름" required="">
+                  </div>
+                  <div class="group_inp">
+                    <label for="login_pw" class="blind">이메일 주소 입력</label>
+                    <input type="password" name="" id="login_pw" placeholder="이메일 주소" required="">
+                  </div>
+                  <div class="btn_wrap col2 center">
+                    <button type="button" class="btn large type02">취소</button>
+                    <button type="button" class="btn large type01">다음</button>
+                  </div>
+                </div>
+              </div>
+
+
+              </fieldset>
+            </form>
+          </div>
 
 
 
@@ -152,7 +176,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-      
+
     </script>
   <!-- //SCRIPT -->
 

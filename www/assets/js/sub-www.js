@@ -66,15 +66,13 @@ function slideInit() {
     }
   });
 
-
 } 
 $(document).ready(slideInit());
 
 
 
 
-// anchor
-function jumpto(anchor) {
-  window.location.href = "#" + anchor;
-}
+
+
+
 

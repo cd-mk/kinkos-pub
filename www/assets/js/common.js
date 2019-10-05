@@ -105,6 +105,88 @@ var mobileGnb = function () {
   });
 };
 
+
+
+// input file
+var inpFile = {
+  inpWrap: '.file_inp_box',
+  fileNameClass: '.js-file_name',
+  targetLayerImg: $('#file_layer').find('.img_preview'),
+  setElement: function () {
+    var inpList = [];
+
+    $('.file_inp').each(function () {
+      inpList.push($(this));
+    });
+
+    return inpList;
+  },
+  fileChangeEvt: function () {
+    var inpList = this.setElement();
+
+    for (var i = 0; i < inpList.length; i++) {
+      inpList[i].on('change', this.setChangeEvt);
+    }
+  },
+  setChangeEvt: function () {
+    var fileName = inpFile.setFileName(this);
+
+    inpFile.insertFileName(this, fileName);
+  },
+  setFileName: function (target) {
+    var fileName;
+
+    if (window.FileReader) {
+      fileName = $(target)[0].files[0].name;
+    } else {
+      fileName = $(target).val().split('/').pop().split('\\').pop();
+    }
+
+    return fileName;
+  },
+  insertFileName: function (target, fileName) {
+    var wrap = this.inpWrap,
+      targetFileName = this.fileNameClass;
+
+    $(target).closest(wrap).find(targetFileName).attr('disabled', 'disabled').val(fileName);
+    $(target).siblings('label').addClass('hide');
+    $(target).siblings('.btn_delete').removeClass('hide');
+  },
+  setDeleteFile: function () {
+    var wrap = this.inpWrap,
+      targetFileName = this.fileNameClass;
+
+    $('.btn_delete').on('click', function () {
+      $(this).siblings('.file_inp').val('');
+      if ($(this).closest(wrap).find(targetFileName).hasClass('has_target')) {
+        $(this).closest(wrap).find(targetFileName).removeClass('has_target').removeAttr('data-img-src');
+        $(this).closest(wrap).find(targetFileName).off('click');
+      }
+      $(this).closest(wrap).find(targetFileName).attr('disabled', false).val('');
+      $(this).addClass('hide');
+      $(this).siblings('label').removeClass('hide');
+    });
+  },
+  setPopup: function () {
+    var imgSrc;
+    var target = this.targetLayerImg;
+    $('.has_target').on('click', function () {
+      imgSrc = $(this).attr('data-img-src');
+      target.attr('src', imgSrc);
+
+      $('#file_layer').addClass('open');
+      $('body').addClass('open');
+    });
+  },
+  init: function () {
+    this.setDeleteFile();
+    this.fileChangeEvt();
+    this.setPopup();
+  }
+};
+$(document).on('click', ".file_inp", function () {
+  inpFile.init();
+});
 // DatePicker
 var setDatePicker = function() {
   $.datepicker.setDefaults({
@@ -117,20 +199,6 @@ var setDatePicker = function() {
   $('.inp_date').datepicker();
 };
 
-// input file
-var setInpFile = function() {
-  $('.file_box').each(function() {
-    var target = $(this).find('.file_value');
-    var nameTarget = $(this).find('.file_name');
-
-    target.on('change', function() {
-      var filename = window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop();
-
-      nameTarget.val(filename);
-    });
-
-  });
-}
 
 // accordian 변경 예정
 var setAccordian = function() {
@@ -218,16 +286,22 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
   });
 }
 
+
+
+
+
+
 // TypeB Main page JS
 $(document).ready(function () {
-
-
-
   setGnb();
   mobileGnb();
   new WOW().init();
+  inpFile.init();
+  // placeholder
+  $('input, textarea').placeholder();
+
+
   if ($('.inp_date').length) setDatePicker();
-  if ($('.file_box').length) setInpFile();
   if ($('.btn_popup').length) setPopup();
   if ($('.inp_chk_all').length) setChkAll();
   if ($('.accor_wrap').length) setAccordian();
@@ -253,6 +327,9 @@ $(document).ready(function () {
   });
 
 
+
+
+
   // 임시 header, footer영역 로드
   $("#header").load("../common/include/common.html header", function () {
     // header 로드 후 header 관련 function 실행
@@ -263,6 +340,41 @@ $(document).ready(function () {
     
   });
 });
+
+
+
+//tab
+$(function () {
+  tab('#tab', 0);
+});
+
+function tab(e, num) {
+  var num = num || 0;
+  var menu = $(e).children();
+  var con = $(e + '_con').children();
+  var select = $(menu).eq(num);
+  var i = num;
+
+  select.addClass('active');
+  con.eq(num).show();
+
+  menu.click(function () {
+    if (select !== null) {
+      select.removeClass("active");
+      con.eq(i).hide();
+    }
+
+    select = $(this);
+    i = $(this).index();
+
+    select.addClass('active');
+    con.eq(i).show();
+  });
+}
+
+
+
+
 
 
 

@@ -19,6 +19,7 @@
 	<title>제휴 및 제안 | 고객지원 | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
 	<link rel="stylesheet" href="../assets/css/lib/animate.css">
+<link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
 	<link rel="stylesheet" href="../assets/css/common-www.css">
@@ -37,7 +38,7 @@
 	</div>
 	<!-- //접근성 바로가기 메뉴(숨김) -->
 
-	<!-- WRAP (main or sub css추가)-->
+	<!-- WRAP (mall or company css추가)-->
 	<div id="wrap" class="company">
 
 		<!-- HEADER -->
@@ -173,11 +174,15 @@
                   <div class="form_group top_line file_box">
                     <div class="form_item">
                       <span class="form_name">제안서</span>
-                      <div class="form_inp col2 with_btn">
-                        <input type="text" class="file_name" disabled>
-                        
-                        <label for="file1" class="btn type03">파일 찾기</label>
-                        <input type="file" id="file1" class="file_value">
+                      <div class="form_inp">
+                        <div class="file_inp_box">
+                          <!-- 첨부 파일 이름 출력 요소 -->
+                          <input type="text" class="file_name js-file_name inp" readonly>
+                          <!-- 파일 첨부 시 hide 클래스 제거됨, 첨부 파일 삭제 시 hide클래스 추가됨 -->
+                          <button type="button" class="btn type03 btn_delete hide"><span>삭제</span></button>
+                          <input type="file" id="file1" class="file_inp" required>
+                          <label for="file1" class="btn type03">파일 찾기</label>
+                        </div>
                       </div>
                     </div>
                     <ul class="file_notice">
@@ -266,6 +271,8 @@
 
 	<!-- SCRIPT -->
 	<script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="../assets/js/jquery/jquery.placeholder.min.js"></script>
 	<script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 	<script src="../assets/js/wow.min.js"></script>
 	<script src="../assets/js/swiper/swiper.min.js"></script>

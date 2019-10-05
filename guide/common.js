@@ -35,7 +35,7 @@ $(".g_status_board").each(function(){
 		var txt03 ="진행";
 		var txt04 ="수정";
 		if(vars==txt01){
-			$(this).parent('tr').addClass('g_fin2');
+			$(this).parent('tr').addClass('g_fin1');
 		} else if(vars==txt02){
 			$(this).parent('tr').addClass('g_fin2');
 		} else if(vars==txt03){
