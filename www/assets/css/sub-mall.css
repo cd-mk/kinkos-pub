@@ -79,7 +79,7 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .pdt_detail .btn_wrap {margin-top:0;width:100%;display: table;}
 .pdt_detail .btn_wrap span {display: table-cell;width:33.333%;padding-left:12px;}
 .pdt_detail .btn_wrap span:first-child {padding-left:0;}
-.pdt_detail .btn_wrap .btn {width:100%;margin:0;}
+.pdt_detail .btn_wrap span .btn {width:100% !important;margin:0;}
 .pdt_detail .form_wrap .form_group .form_item.opt_default {margin-bottom:40px;}
 
 .ease_cart {background-color:#f3f4f6; margin-top:20px;border-top:2px solid #000;}
