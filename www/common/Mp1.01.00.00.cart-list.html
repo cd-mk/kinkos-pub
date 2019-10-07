@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+	<meta name="Title" content="킨코스코리아" />
+	<meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+	<!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="킨코스코리아">
+	<meta property="og:url" content="http://www.kinkos.co.kr/">
+	<link rel="icon" type="image/x-icon" href="../assets/image/common/favicon.ico">
+<meta property="og:image" content="../assets/image/common/logo.png">
+	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<title>장바구니 목록 | 킨코스코리아</title>
+	<!-- CSS FILE LOAD -->
+	<link rel="stylesheet" href="../assets/css/lib/animate.css">
+<link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+
+	<link rel="stylesheet" href="../assets/css/common-www.css">
+	<!-- only sub -->
+	<link rel="stylesheet" href="../assets/css/sub-www.css">
+</head>
+
+<body>
+	<!-- 접근성 바로가기 메뉴(숨김) -->
+	<div id="accessibility">
+		<strong class="blind">컨텐츠바로가기</strong>
+		<ul>
+			<li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+			<li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+		</ul>
+	</div>
+	<!-- //접근성 바로가기 메뉴(숨김) -->
+
+	<!-- WRAP (mall or company css추가)-->
+	<div id="wrap" class="company">
+
+		<!-- HEADER -->
+		<div id="header">
+		</div>
+		<!-- //HEADER -->
+
+		<!-- CONTENT -->
+		<div id="content">
+			<!-- breadcrumb  -->
+			<div class="breadcrumb_wrap">
+				<a href="./00.main-www.html" class="home">Home</a>
+				<ul class="item_list">
+					<li><a href="#">장바구니 목록</a></li>
+				</ul>
+			</div>
+      <!-- //breadcrumb  -->
+      
+			<!-- 콘텐츠 group "cont_wrap" 고정 -->
+      <div class="cont_wrap layout_width">
+
+				<!-- 본문 -->
+				<!-- 콘텐츠 "con_box" 고정 -->
+				<div class="con_box cart_wrap bbs">
+          <div class="step_wrap">
+            <div class="inner clearfix">
+              <div class="step_item active">
+                <span class="ico_step"></span>
+                <span class="txt_step">
+                  <span class="number">STEP 01</span>
+                  <span class="desc">장바구니</span>
+                </span>
+              </div>
+              <div class="step_item">
+                <span class="ico_step"></span>
+                <span class="txt_step">
+                  <span class="number">STEP 02</span>
+                  <span class="desc">주문/결제</span>
+                </span>
+              </div>
+              <div class="step_item">
+                <span class="ico_step"></span>
+                <span class="txt_step">
+                  <span class="number">STEP 03</span>
+                  <span class="desc">결제완료</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bbs_list">
+            <table>
+              <caption>장바구니 목록</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="pdt_chk">
+                    <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 -->
+                    <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
+                    <label for="chk_all"></label>
+                    선택
+                  </th>
+                  <th scope="col">상품정보</th>
+                  <th scope="col">수량</th>
+                  <th scope="col">상품금액</th>
+                  <th scope="col">소계</th>
+                  <th scope="col">배송비</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- loop -->
+                <tr>
+                  <td class="pdt_chk">
+                    <input type="checkbox" id="chk1" name="pdt_chk">
+                    <label for="chk1"></label>
+                  </td>
+                  <td class="pdt_name">
+                    <div class="inner">
+                      <a href="#">
+                        <span class="img"><img src="../assets/image/mall/product/pl_01.jpg"></span>
+                      </a>
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="desc">13시 이전 접수- 당일 완성</p>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price">
+                    <div class="form_inp">
+                      <input type="text" class="dtl_num inp" />
+                    </div>
+                  </td>
+                  <td class="price">30,000</td>
+                  <td class="subTotal">30,000</td>
+                  <td class="ship_fee">
+                    <p>직접수령</p>
+                    (가산디지털 단지)
+                  </td>
+                </tr>
+                <!-- loop -->
+                <tr>
+                  <td class="pdt_chk">
+                    <input type="checkbox" id="chk2" name="pdt_chk">
+                    <label for="chk2"></label>
+                  </td>
+                  <td class="pdt_name">
+                    <div class="inner">
+                      <a href="#">
+                        <span class="img"><img src="../assets/image/mall/product/pl_01.jpg"></span>
+                      </a>
+                      <span class="item_info">
+                        <span class="title">즉석명함</span>
+                        <p class="desc">13시 이전 접수- 당일 완성</p>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price">
+                    <div class="form_inp">
+                      <input type="text" class="dtl_num inp" />
+                    </div>
+                  </td>
+                  <td class="price">30,000</td>
+                  <td class="subTotal">30,000</td>
+                  <td class="delivery">
+                    <p>직접수령</p>
+                    (가산디지털 단지)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="cart_chk_del">
+              <span class="desc">장바구니에 담긴 상품은 최대 10일까지 보관되며 상품 판매가 종료되는 경우 자동으로 삭제 됩니다.</span>
+              <button type="button" class="btn type03 btn_delete"><span>삭제</span></button>
+            </div>
+          </div>
+
+        <div class="cart_total">
+          <div class="box">
+            <span class="label">상품금액</span>
+            <span class="price"><strong>19,800</strong>원</span>
+          </div>
+        
+          <div class="math"><i class="ico img_plus"><span class="blind">더하기</span></i></div>
+
+          <div class="box">
+            <span class="label">배송비</span>
+            <span class="price"><strong>0</strong>원</span>
+          </div>
+
+          <div class="math"><i class="ico img_result"><span class="blind">계산값은</span></i></div>
+
+          <div class="box total">
+            <span class="label">총 주문 금액</span>
+            <span class="price"><strong>19,800</strong>원</span>
+          </div>
+
+          <div class="btn_wrap center"><button type="button" class="btn type01 large"><span>구매하기</span></button></div>
+
+
+				</div>
+				<!-- //본문 -->
+
+
+			</div>
+		</div>
+		<!-- CONTENT -->
+
+
+		<!-- FOOTER -->
+		<div id="footer" class="layout_width">
+		</div>
+    <!-- //FOOTER -->
+
+		<div class="dim">
+		</div>
+	</div>
+	<!-- //WRAP -->
+
+
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="../assets/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/js/wow.min.js"></script>
+  <script src="../assets/js/swiper/swiper.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/common-www.js"></script>
+  <!-- //global -->
+
+  <script src="../assets/js/sub-www.js"></script>
+  <script src="../assets/js/jquery.numspinner.min.js"></script>
+
+  <!-- 수량 -->
+  <script type="text/javascript">
+    $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
+  </script>
+
+	<!-- //SCRIPT -->
+
+
+</body>
+
+</html>
