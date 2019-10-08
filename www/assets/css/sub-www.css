@@ -466,25 +466,7 @@
 .join_wrap .step_wrap .step_item:nth-child(3) .ico_step {background-position: 0 -112px;}
 
 
-/* 장바구니 */
-.cart_wrap .step_wrap .step_item:first-child {margin-left: 0; padding-left: 0;}
-.cart_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background: url('../../assets/image/company/sub/ico-step.png') no-repeat;}
-.cart_wrap .step_wrap .step_item:first-child .ico_step {background-position: 0 0;}
-.cart_wrap .step_wrap .step_item:nth-child(2) .ico_step {background-position: 0 -56px;}
-.cart_wrap .step_wrap .step_item:nth-child(3) .ico_step {background-position: 0 -112px;}
 
-.cart_wrap .pdt_chk {width:80px;}
-.cart_wrap .pdt_name .inner {display: table;}
-.cart_wrap .pdt_name a {display: table-cell;}
-.cart_wrap .pdt_name a .img {display: inline-block;width:250px;height:172px;overflow: hidden;}
-.cart_wrap .pdt_name .item_info {display: table-cell;vertical-align:middle;text-align:left;padding-left:30px;}
-.cart_wrap .bbs_list td{vertical-align:middle;padding:20px;}
-.cart_wrap .spinner {max-width:185px;}
-
-.cart_wrap .cart_total .ico{background: url(//pics.gmarket.co.kr/pc/ko/pay/cart/sp_cart.png) no-repeat ; font-size:0; display:inline-block; vertical-align:middle}
-.cart_wrap .cart_total .ico.img_minus{width: 21px; height:21px; background-position:0 -60px  }
-.cart_wrap .cart_total .ico.img_plus{width: 21px; height:21px; background-position:-24px -60px  }
-.cart_wrap .cart_total .ico.img_result{width: 21px; height:21px; background-position:-48px -60px }
 
 
 
@@ -568,16 +550,18 @@
       로그인 area
  ------------------------- */
 .login_wrap .inner { width: 490px; margin: 0 auto; position: relative;}
-.login_wrap .inner .group_wrap { margin-top: 57px;padding-top:40px; border-top:2px solid #000;}
-.login_wrap .inner .group_wrap .group_inp { margin-top: 20px; }
-.login_wrap .inner .group_wrap .group_inp:first-child { margin-top: 0; }
-.login_wrap .inner .group_wrap .group_inp.chk_inp_box { margin-top: 20px; display: block;text-align: left;}
-.login_wrap .inner .group_wrap .group_inp.chk_inp_box .txt_label { margin-left: 8px; color: #222; font-size:18px;}
-.login_wrap .inner .group_wrap .btn_wrap { margin-top:20px; } 
-.login_wrap .inner .group_wrap .btn_wrap .btn {width:238px;}
-.login_wrap .inner .forgot_wrap { position: absolute; display: inline-block; right:0;top:300px;}
-.login_wrap .inner .forgot_wrap a { float: left; font-size: 18px;color: #444; }
-.login_wrap .inner .forgot_wrap a:last-child::before {content: "";clear: both;margin:0 10px;background:#ccc;display: inline-block;width:1px;height:18px;}
+.login_wrap .group_wrap { margin-top: 57px;padding-top:40px;padding-bottom:38px; border-top:2px solid #000;position: relative;}
+.login_wrap .group_wrap .group_inp { margin-top:20px;}
+.login_wrap .group_wrap .group_inp:first-child { margin-top: 0; }
+.login_wrap .group_wrap .group_inp.chk_inp_box { margin-top: 0; position: absolute; display: inline-block; left:0;bottom:0;}
+.login_wrap .group_wrap .group_inp.chk_inp_box .txt_label { margin-left: 8px; color: #222; font-size:18px;}
+.login_wrap .group_wrap .btn_wrap { margin-top:20px; } 
+.login_wrap .group_wrap .btn_wrap .btn {width:238px;}
+.login_wrap .forgot_wrap { position: absolute; display: inline-block; right:0;bottom:0;}
+.login_wrap .forgot_wrap a { float: left; font-size: 18px;color: #444; }
+.login_wrap .forgot_wrap a:last-child::before {content: "";clear: both;margin:0 10px;background:#ccc;display: inline-block;width:1px;height:18px;}
+.login_wrap .inner .inner {margin-top:20px;}
+
 
 @media screen and (max-width: 768px) {
   .login_wrap .inner { width: 100%; }
