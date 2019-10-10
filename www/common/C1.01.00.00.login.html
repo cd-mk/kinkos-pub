@@ -78,40 +78,36 @@
               <form method="post" action="/" onsubmit="">
                 <fieldset>
                   <legend class="blind">로그인 양식</legend>
-                  <div class="group_wrap">
-                    <div class="group_inp">
-                      <label for="login_id" class="blind">아이디 입력</label>
-                      <input type="text" name="" id="login_id" placeholder="아이디" required="">
+                  <div class="form_group">
+                    <div class="form_item">
+                      <input type="text" name="" id="" title="아이디 입력" placeholder="아이디" required="">
                     </div>
-                    <div class="group_inp">
-                      <label for="login_pw" class="blind">비밀번호 입력</label>
-                      <input type="password" name="" id="login_pw" placeholder="비밀번호" required="">
+                    <div class="form_item">
+                      <input type="password" name="" id="" title="비밀번호 입력" placeholder="비밀번호" required="">
                     </div>
                     <div class="btn_wrap col2 center">
                       <button type="submit" class="btn large type01">로그인</button>
                       <button type="button" class="btn large type02">회원가입</button>
                     </div>
-                    <div class="group_inp chk_inp_box">
-                      <span class="chk_inp">
-                        <input type="checkbox" name="" id="privacyAgree">
-                        <label for="privacyAgree"><span class="blind">로그인 정보 저장</span></label>
-                      </span>
-                      <span class="txt_label">아이디 저장</span>
+                    <div class="form_item chk_box">
+                      <input type="checkbox" name="" id="privacyAgree">
+                      <label for="privacyAgree"><span class="">아이디 저장</span></label>
+                      
+                      <div class="forgot_wrap">
+                        <a href="">아이디 찾기</a>
+                        <a href="">비밀번호 찾기</a>
+                      </div>
                     </div>
-
-                    <div class="forgot_wrap">
-                      <a href="">아이디 찾기</a>
-                      <a href="">비밀번호 찾기</a>
-                    </div>
+                    
                   </div>
                 </fieldset>
               </form>
 
 
               <div class="btn_wrap easy">
-                <a href="#" class="btn btn_naver" title="새창열림"><i class="ico"></i>네이버로 시작하기</a>
-                <a href="#" class="btn btn_kakao" title="새창열림"><i class="ico"></i>카카오로 시작하기</a>
-                <a href="#" class="btn btn_fb" title="새창열림"><i class="ico"></i>페이스북으로 시작하기</a>
+                <button type="button" class="btn btn_naver" title="새창열림"><i class="ico"></i>네이버로 시작하기</button>
+                <button type="button" class="btn btn_kakao" title="새창열림"><i class="ico"></i>카카오로 시작하기</button>
+                <button type="button" class="btn btn_fb" title="새창열림"><i class="ico"></i>페이스북으로 시작하기</button>
               </div>
 
             </div>

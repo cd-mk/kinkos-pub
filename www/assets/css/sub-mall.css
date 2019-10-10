@@ -68,7 +68,7 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .pdt_detail .form_wrap .form_group .form_item .form_inp label::before {top:5px;}
 .pdt_detail .form_wrap .form_group .form_item .form_inp label + .inp, .pdt_detail .form_wrap .form_group .form_item .form_inp label + .sel_opt{margin-top:8px;}
 .pdt_detail .form_wrap .form_group .form_item .form_inp + .form_inp{margin-top:10px;}
-.pdt_detail .sel_opt, .pdt_detail .inp {height:44px;line-height: 44px;color:#444;}
+.pdt_detail .sel_opt, .pdt_detail .inp {color:#444;}
 .pdt_detail textarea{height:120px;}
 .pdt_detail .form_item .desc {color:#999;line-height: 1.1;margin-top:10px;}
 

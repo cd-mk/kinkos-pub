@@ -54,10 +54,9 @@
       <col style="width: 90px;" />
       <col style="width: 90px;" />
       <col style="width: 90px;" />
-      <col width="230" />
+      <col/>
       <col />
-      <col style="width: 90px;" />
-      <col />
+      <col style="width:150px;" />
     <col style="width: 90px;" />
       <col style="width: 90px;" />
       <col style="width: 90px;" />
@@ -75,17 +74,12 @@
           <th class="g_screen">Depth-02</th>
           <th class="g_screen">Depth-03</th>
           <th class="g_screen">Depth-04</th>
-          <th class="g_screen">Depth-05</th>
-					<th><span class="g_name">파일명</span></th>
+          <th class="g_name">파일명</th>
           <th class="g_remark">비고</th>
-          <th>D.<br>
-            PC</th>
-          <th>D.<br>
-            M</th>
-          <th>PUB.<br>
-            PC</th>
-          <th>PUB.<br>
-            M</th>
+          <th>D.<br>PC</th>
+          <th>D.<br>M</th>
+          <th>PUB.<br>PC</th>
+          <th>PUB.<br>M</th>
           <th class="g_status">상태</th>
           <th>root</th>
         </tr>
@@ -100,7 +94,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -119,7 +112,6 @@
     <td>일반 로그인</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">login</td>
     <td class="g_remark">일반 회원 로그인, 아이디/암호</td>
     <td>O</td>
@@ -138,7 +130,6 @@
     <td>비회원 로그인</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">non-member-login</td>
     <td class="g_remark">일반 회원 로그인, 아이디/암호</td>
     <td>O</td>
@@ -157,9 +148,8 @@
     <td>SNS 로그인</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">&nbsp;</td>
-    <td class="g_remark">네이버, 페이스북, 구글</td>
+    <td class="g_remark">디자인 화면 없음- 네이버, 페이스북, 구글</td>
     <td></td>
     <td></td>
     <td></td>
@@ -176,7 +166,6 @@
     <td>아이디 찾기</td>
     <td>회원정보로 찾기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">idInquiry</td>
     <td class="g_remark">아이디/이메일</td>
     <td>O</td>
@@ -186,25 +175,7 @@
     <td class="g_status">완료</td>
     <td>common</td>
     </tr>
-  <tr>
-    <td class="g_num">&nbsp;</td>
-    <td>C1.03.02.00</td>
-    <td>공통(회원)</td>
-    <td></td>
-    <td>로그인</td>
-    <td>아이디 찾기</td>
-    <td>본인인증으로 찾기</td>
-    <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name">idInquiry</td>
-    <td class="g_remark"></td>
-    <td>O</td>
-    <td></td>
-    <td>O</td>
-    <td></td>
-    <td class="g_status">진행</td>
-    <td>common</td>
-    </tr>
+ 
   <tr>
     <td class="g_num">&nbsp;</td>
     <td>C1.03.03.00</td>
@@ -212,37 +183,18 @@
     <td></td>
     <td>로그인</td>
     <td>아이디 찾기</td>
-    <td>아이디 결과 있음</td>
+    <td>아이디 결과 있음/<br>아이디 결과 없음</td>
     <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
+    <td class="g_name">idInquiry-result</td>
     <td class="g_remark"></td>
     <td>O</td>
     <td></td>
     <td></td>
     <td></td>
-    <td class="g_status"></td>
-    <td>common　</td>
-    </tr>
-  <tr>
-    <td class="g_num">&nbsp;</td>
-    <td>C1.03.04.00</td>
-    <td>공통(회원)</td>
-    <td></td>
-    <td>로그인</td>
-    <td>아이디 찾기</td>
-    <td>아이디 결과 없음</td>
-    <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
-    <td class="g_remark"></td>
-    <td>O</td>
-    <td></td>
-    <td>O</td>
-    <td></td>
-    <td class="g_status">진행</td>
+    <td class="g_status">완료</td>
     <td>common</td>
     </tr>
+
   <tr>
     <td class="g_num">&nbsp;</td>
     <td>C1.04.01.00</td>
@@ -252,54 +204,16 @@
     <td>비밀번호 찾기</td>
     <td>회원정보로 찾기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">pwInquiry</td>
     <td class="g_remark"></td>
     <td>O</td>
     <td></td>
     <td>O</td>
     <td></td>
-    <td class="g_status">진행</td>
+    <td class="g_status">완료</td>
     <td>common</td>
     </tr>
-  <tr>
-    <td class="g_num">&nbsp;</td>
-    <td>C1.04.02.00</td>
-    <td>공통(회원)</td>
-    <td></td>
-    <td>로그인</td>
-    <td>비밀번호 찾기</td>
-    <td>본인인증으로 찾기</td>
-    <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
-    <td class="g_remark"></td>
-    <td>O</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="g_status"></td>
-    <td>common　</td>
-    </tr>
-  <tr>
-    <td class="g_num">&nbsp;</td>
-    <td>C1.04.03.00</td>
-    <td>공통(회원)</td>
-    <td></td>
-    <td>로그인</td>
-    <td>비밀번호 찾기</td>
-    <td>재설정 이메일 발송</td>
-    <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
-    <td class="g_remark"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="g_status"></td>
-    <td>common</td>
-    </tr>
+
   <tr>
     <td class="g_num">&nbsp;</td>
     <td>C1.04.04.00</td>
@@ -307,37 +221,18 @@
     <td></td>
     <td>로그인</td>
     <td>비밀번호 찾기</td>
-    <td>비밀번호 재설정</td>
+    <td>재설정 이메일 발송<br>비밀번호 재설정<br>비밀번호 재설정 완료</td>
     <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
-    <td class="g_remark"></td>
-    <td>O</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="g_status"></td>
-    <td>common</td>
-    </tr>
-  <tr>
-    <td class="g_num">&nbsp;</td>
-    <td>C1.04.05.00</td>
-    <td>공통(회원)</td>
-    <td></td>
-    <td>로그인</td>
-    <td>비밀번호 찾기</td>
-    <td>비밀번호 재설정 완료</td>
-    <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
+    <td class="g_name">pwInquiry-result</td>
     <td class="g_remark"></td>
     <td>O</td>
     <td></td>
     <td></td>
     <td></td>
     <td class="g_status">완료</td>
-    <td>common　</td>
+    <td>common</td>
     </tr>
+
   <tr>
     <td class="g_num">&nbsp;</td>
     <td>C2.01.00.00</td>
@@ -348,9 +243,8 @@
       약관동의</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">join-step1</td>
-    <td class="g_remark"></td>
+    <td class="g_remark">PC완료</td>
     <td>O</td>
     <td></td>
     <td>O</td>
@@ -368,14 +262,13 @@
       회원정보 입력</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">join-step2</td>
-    <td class="g_remark">본인인증은 이메일 인증으로만 진행</td>
+    <td class="g_remark">PC완료/<BR>본인인증은 이메일 인증으로만 진행</td>
     <td>O</td>
     <td></td>
     <td>O</td>
     <td></td>
-    <td class="g_status"></td>
+    <td class="g_status">완료</td>
     <td>common</td>
   </tr>
   <tr>
@@ -388,14 +281,13 @@
       회원가입 완료</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"></td>
+    <td class="g_name">join-step3</td>
     <td class="g_remark"></td>
     <td>O</td>
     <td></td>
     <td></td>
     <td></td>
-    <td class="g_status">&nbsp;</td>
+    <td class="g_status">완료</td>
     <td>common</td>
   </tr>
   <tr>
@@ -408,14 +300,13 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
     <td></td>
     <td></td>
     <td>&nbsp;</td>
-    <td class="g_status">진행</td>
+    <td class="g_status"></td>
     <td>mall</td>
   </tr>
   <tr>
@@ -429,14 +320,13 @@
       (일반 로그인)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
-    <td class="g_name"><span class="g_name">cart-list</span></td>
+    <td class="g_name">cart-list</td>
     <td class="g_remark"></td>
     <td>O</td>
     <td></td>
     <td></td>
     <td></td>
-    <td class="g_status">진행</td>
+    <td class="g_status">완료</td>
     <td>mall</td>
   </tr>
   <tr>
@@ -451,7 +341,6 @@
     <td>STEP1)<br>
       구매자 정보(주소 등) 확인</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -473,7 +362,6 @@
     <td>STEP2)<br>
       구매상품 목록 확인</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -494,7 +382,6 @@
       (일반 로그인)</td>
     <td></td>
     <td>상세정보보기</td>
-    <td>&nbsp;</td>
     <td class="g_name">정보 및 시안 확인</td>
     <td class="g_remark">Optional</td>
     <td>O</td>
@@ -516,7 +403,6 @@
     <td>STEP3)<br>
       주문결제</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -538,7 +424,6 @@
     <td>STEP4)<br>
       결제완료</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -559,7 +444,6 @@
       (비회원 로그인)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">세션으로 처리</td>
     <td>O</td>
@@ -581,7 +465,6 @@
     <td>STEP1)<br>
       구매자 정보(주소 등) 확인</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">주문번호,이름,전화번호</td>
     <td>O</td>
@@ -603,7 +486,6 @@
     <td>STEP2)<br>
       주문결제</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -625,7 +507,6 @@
     <td>STEP3)<br>
       결제완료</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -646,7 +527,6 @@
       (일반 로그인)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">주문번호,주문날짜,수량,배송추적,배송지정보</td>
     <td>O</td>
@@ -668,7 +548,6 @@
     <td>POPUP(PP)<br>
       상세내역보기</td>
     <td>정보 및 시안 확인</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">Reorder / 주문배송 조회 / 취소,교환,환불 신청</td>
     <td>O</td>
@@ -689,7 +568,6 @@
       (일반 로그인)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -711,7 +589,6 @@
     <td>POPUP(PP)<br>
       상세내역보기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -732,7 +609,6 @@
       (비회원 로그인)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -754,7 +630,6 @@
     <td>POPUP(PP)<br>
       상세내역보기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">주문배송 조회 / 취소,교환,환불 신청</td>
     <td>O</td>
@@ -775,7 +650,6 @@
       마이페이지 대시보드</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -795,7 +669,6 @@
     <td>구매내역 리스트</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -816,7 +689,6 @@
     <td>POPUP(PP)<br>
       상세내역보기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -836,7 +708,6 @@
     <td>회원정보</td>
     <td>회원정보변경</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -856,7 +727,6 @@
     <td>회원정보</td>
     <td>배송지정보관리</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -876,7 +746,6 @@
     <td>회원정보</td>
     <td>회원탈퇴</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -896,7 +765,6 @@
     <td>이벤트참여내역</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -917,7 +785,6 @@
     <td>TAB)<br>
       견적 및 상품문의 내역</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -937,7 +804,6 @@
     <td>나의문의내역</td>
     <td></td>
     <td>상세보기</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -958,7 +824,6 @@
     <td>TAB)<br>
       서비스 의견 내역</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -978,7 +843,6 @@
     <td>나의문의내역</td>
     <td></td>
     <td>상세보기</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -999,7 +863,6 @@
     <td>TAB)<br>
       제휴 및 제안 내역</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1019,7 +882,6 @@
     <td>나의문의내역</td>
     <td></td>
     <td>상세보기</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1040,7 +902,6 @@
     <td>TAB)<br>
       파일 주문 내역</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1060,7 +921,6 @@
     <td>나의문의내역</td>
     <td></td>
     <td>상세보기</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1079,7 +939,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">common</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1098,7 +957,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">main-www</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1117,7 +975,6 @@
     <td>CEO인사말</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">ceo</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1136,7 +993,6 @@
     <td>기업이념 및 연혁</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">history</td>
     <td class="g_remark">연혁은 10호점 단위로 오픈 매장 소개</td>
     <td>O</td>
@@ -1155,7 +1011,6 @@
     <td>Only 킨코스</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">only-kinkos</td>
     <td class="g_remark">기존 On demand solution 내용과 only 킨코스 내용 통합</td>
     <td>O</td>
@@ -1175,7 +1030,6 @@
     <td>TAB)<br>
       인재상</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">person</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1195,7 +1049,6 @@
     <td>TAB)<br>
       직무소개</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">joblist</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1215,7 +1068,6 @@
     <td>TAB)<br>
       채용안내</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">recruit</td>
     <td class="g_remark">입사지원서 다운로드</td>
     <td>O</td>
@@ -1234,7 +1086,6 @@
     <td>서비스 안내 랜딩</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">service-info</td>
     <td class="g_remark">특정일의 영업 시간 설정 가능하도록</td>
     <td>O</td>
@@ -1254,7 +1105,6 @@
     <td>TAB)<br>
       흑백출력 &amp; 복사</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">digital</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1274,7 +1124,6 @@
     <td>TAB)<br>
       컬러출력 &amp; 복사</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1294,7 +1143,6 @@
     <td>TAB)<br>
       대형사이즈출력 &amp; 복사</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1314,7 +1162,6 @@
     <td>TAB)<br>
       와이어제본</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1334,7 +1181,6 @@
     <td>TAB)<br>
       스크립제본</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1354,7 +1200,6 @@
     <td>TAB)<br>
       열제본</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1374,7 +1219,6 @@
     <td>TAB)<br>
       중철제본</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1393,7 +1237,6 @@
     <td>후가공</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -1413,7 +1256,6 @@
     <td>TAB)<br>
       사인앤그래픽 소개</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1433,7 +1275,6 @@
     <td>TAB)<br>
       S&amp;G 일반상품</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1454,7 +1295,6 @@
     <td>TAB)<br>
       S&amp;G 패키지상품</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -1474,7 +1314,6 @@
     <td>TAB)<br>
       S&amp;G 제작사례</td>
     <td>전체</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">게시판</td>
     <td>O</td>
@@ -1493,7 +1332,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>POP</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1512,7 +1350,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>인포메이션보드</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1531,7 +1368,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>현수막</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1550,7 +1386,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>전시부스</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1569,7 +1404,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>아크릴</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1588,7 +1422,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>백월</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1607,7 +1440,6 @@
     <td>사인앤그래픽</td>
     <td></td>
     <td>기타</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1626,7 +1458,6 @@
     <td>스캔투파일</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">scan-file</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1646,7 +1477,6 @@
     <td>디자인</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">design</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1665,7 +1495,6 @@
     <td>명함제작</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">business-card</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1684,7 +1513,6 @@
     <td>고객편의서비스</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">customer-service</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1703,7 +1531,6 @@
     <td>주요사례별서비스</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">case-service</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1722,7 +1549,6 @@
     <td>추천상품</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">recommended-products</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1741,7 +1567,6 @@
     <td>법인우대프로그램</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">corporation</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1760,7 +1585,6 @@
     <td>DHL항공특송서비스</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">dhl</td>
     <td class="g_remark"></td>
     <td></td>
@@ -1779,7 +1603,6 @@
     <td>이벤트</td>
     <td>리스트</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">event</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1798,7 +1621,6 @@
     <td>이벤트</td>
     <td>상세보기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">event-view</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1817,7 +1639,6 @@
     <td>K매거진</td>
     <td>리스트</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">k-magazine-list</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1836,7 +1657,6 @@
     <td>K매거진</td>
     <td>상세보기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">k-magazine-view</td>
     <td class="g_remark">관련제품 링크</td>
     <td>O</td>
@@ -1855,7 +1675,6 @@
     <td>공지사항</td>
     <td>리스트</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">notice-list</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1874,7 +1693,6 @@
     <td>공지사항</td>
     <td>상세보기</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">notice-view</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -1894,7 +1712,6 @@
       견적 및 상품문의</td>
     <td>견적 및 상품문의</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">estimate</td>
     <td class="g_remark">접수 시, 각 담당자에게 매일 발송이 되어야 함(접수 시 첨부 파일 포함)</td>
     <td>O</td>
@@ -1914,7 +1731,6 @@
     <td>URL Link)<br>
       문의내역 확인하기</td>
     <td>문의내역 리스트</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">마이페이지로 이동</td>
     <td></td>
@@ -1933,7 +1749,6 @@
     <td>견적 및 상품문의</td>
     <td></td>
     <td>문의내역 상세보기</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">마이페이지로 이동</td>
     <td></td>
@@ -1953,7 +1768,6 @@
     <td></td>
     <td>문의내역 리스트<br>
       (이릅/비밀번호 인증)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">마이페이지로 이동</td>
     <td></td>
@@ -1973,7 +1787,6 @@
     <td></td>
     <td>문의내역 상세보기<br>
       (이름/비밀번호 인증)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">마이페이지로 이동</td>
     <td></td>
@@ -1993,7 +1806,6 @@
       서비스 의견</td>
     <td>서비스 의견 입력</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">opinion</td>
     <td class="g_remark">관리자 페이지에서 메일 지정</td>
     <td>O</td>
@@ -2013,7 +1825,6 @@
       제휴 및 제안</td>
     <td>제휴 및 제안 입력</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">ally</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2033,7 +1844,6 @@
       자주묻는 질문</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">faq</td>
     <td class="g_remark">TAB) 전체/복사,출력 서비스/셀프 서비스/대형 실사    출력/원도우 광고 출력(라텍스)/현수막 및 부스제작<br>
       제본 및 기타 후가공/디자인 및 스캔 서비스/결제/데이터의 보안/기타 및 할인/불만사항</td>
@@ -2053,7 +1863,6 @@
     <td>센터안내</td>
     <td>센터안내 리스트</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">center-info</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2072,7 +1881,6 @@
     <td>센터안내</td>
     <td>센터안내 상세보기</td>
     <td>리스트</td>
-    <td>&nbsp;</td>
     <td class="g_name">gasan</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2091,7 +1899,6 @@
     <td>센터안내</td>
     <td></td>
     <td>파일주문</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -2110,7 +1917,6 @@
     <td>센터안내</td>
     <td></td>
     <td>견적보기</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -2129,7 +1935,6 @@
     <td>보안제작지원센터(SPC)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">spc</td>
     <td class="g_remark"></td>
     <td></td>
@@ -2148,7 +1953,6 @@
     <td>사인엔그래픽센터(S&amp;G)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -2167,7 +1971,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -2186,7 +1989,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">common</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2205,7 +2007,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">main-mall</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2225,7 +2026,6 @@
       (1차 상품카테고리)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">pdt-list</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2245,14 +2045,13 @@
       (1차 상품카테고리)</td>
     <td>제품상세페이지(PDP)</td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">pdt-detail</td>
-    <td class="g_remark"></td>
+    <td class="g_remark">pc완료</td>
     <td>O</td>
     <td></td>
+    <td>O</td>
     <td></td>
-    <td></td>
-    <td class="g_status"></td>
+    <td class="g_status">진행</td>
     <td>mall</td>
     </tr>
   <tr>
@@ -2265,7 +2064,6 @@
       (1차 상품카테고리)</td>
     <td>제품상세페이지(PDP)</td>
     <td>파일업로드</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2286,7 +2084,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP1)<br>
       구매자 정보(주소 등) 확인</td>
     <td class="g_remark"></td>
@@ -2308,7 +2105,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP2)<br>
       구매상품 목록 확인</td>
     <td class="g_remark"></td>
@@ -2330,7 +2126,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">Optional</td>
     <td>O</td>
@@ -2351,7 +2146,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP3)<br>
       주문결제</td>
     <td class="g_remark"></td>
@@ -2373,7 +2167,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP4)<br>
       결제완료</td>
     <td class="g_remark"></td>
@@ -2395,7 +2188,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP1)<br>
       구매자 정보(주소 등) 확인</td>
     <td class="g_remark"></td>
@@ -2417,7 +2209,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP2)<br>
       구매상품 목록 확인</td>
     <td class="g_remark"></td>
@@ -2439,7 +2230,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">Optional</td>
     <td>O</td>
@@ -2460,7 +2250,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP3)<br>
       주문결제</td>
     <td class="g_remark"></td>
@@ -2482,7 +2271,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>바로구매<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP4)<br>
       결제완료</td>
     <td class="g_remark"></td>
@@ -2504,7 +2292,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2525,7 +2312,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP1)<br>
       구매자 정보(주소 등) 확인</td>
     <td class="g_remark"></td>
@@ -2547,7 +2333,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP2)<br>
       구매상품 목록 확인</td>
     <td class="g_remark"></td>
@@ -2569,7 +2354,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">Optional</td>
     <td>O</td>
@@ -2590,7 +2374,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP3)<br>
       주문결제</td>
     <td class="g_remark"></td>
@@ -2612,7 +2395,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (일반 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP4)<br>
       결제완료</td>
     <td class="g_remark"></td>
@@ -2634,7 +2416,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2655,7 +2436,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP1)<br>
       구매자 정보(주소 등) 확인</td>
     <td class="g_remark"></td>
@@ -2677,7 +2457,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP2)<br>
       구매상품 목록 확인</td>
     <td class="g_remark"></td>
@@ -2699,7 +2478,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">Optional</td>
     <td>O</td>
@@ -2720,7 +2498,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP3)<br>
       주문결제</td>
     <td class="g_remark"></td>
@@ -2742,7 +2519,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>장바구니 목록<br>
       (비회원 로그인)</td>
-    <td>&nbsp;</td>
     <td class="g_name">STEP4)<br>
       결제완료</td>
     <td class="g_remark"></td>
@@ -2764,7 +2540,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>TAB)<br>
       상품정보</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2785,7 +2560,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>TAB)<br>
       상품정보</td>
-    <td>&nbsp;</td>
     <td class="g_name">주문및제작과정 아이콘</td>
     <td class="g_remark">상품정보 하단에 옵션별로 플로우 적용</td>
     <td>O</td>
@@ -2806,7 +2580,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>TAB)<br>
       리뷰</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">리스트에서 바로 별표 평가 (안)하고, 내용 쓰고,    사진올리고, 어코디언으로 내용 보기(상품 1차카테고리 기준)</td>
     <td>O</td>
@@ -2827,7 +2600,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>TAB)<br>
       상품문의</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">리스트에서 바로 문의하고, 어코디언으로 내용 보기(상품별기준)</td>
     <td>O</td>
@@ -2848,7 +2620,6 @@
     <td>제품상세페이지(PDP)</td>
     <td>TAB)<br>
       배송/교환/반품 안내</td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -2868,7 +2639,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -2888,7 +2658,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -2908,7 +2677,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -2928,7 +2696,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -2948,7 +2715,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -2968,7 +2734,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -2988,7 +2753,6 @@
       (해당카테고리상품)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">전체 카테고리와 동일</td>
     <td></td>
@@ -3007,7 +2771,6 @@
     <td>리스트</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">userguide-list</td>
     <td class="g_remark">Header에 들어감<br>
       일반 게시판 --&gt; 전체, 기업몰, 기업단위로로 다 다르게 입력 가능하게….<br>
@@ -3028,7 +2791,6 @@
     <td>내용보기</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">userguide-view</td>
     <td class="g_remark"></td>
     <td>O</td>
@@ -3047,7 +2809,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">userguide-write</td>
     <td class="g_remark"></td>
     <td></td>
@@ -3066,7 +2827,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">userguide-modify</td>
     <td class="g_remark"></td>
     <td></td>
@@ -3085,7 +2845,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">&nbsp;</td>
     <td class="g_remark"></td>
     <td></td>
@@ -3104,7 +2863,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">terms</td>
     <td class="g_remark"></td>
     <td></td>
@@ -3124,7 +2882,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">privacy</td>
     <td class="g_remark"></td>
     <td></td>
@@ -3143,7 +2900,6 @@
     <td>리스트(앨벙)</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">licen</td>
     <td class="g_remark">*가까운 센터로 문의하시면 디자인템플릿을 확인할 수 있는    로그인 정보를 알려드립니다. ?<br>
       유지하되 기존 컨텐츠는 상요하지 않음?</td>
@@ -3164,7 +2920,6 @@
       이미지 확대 보기</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name">cctv-policies</td>
     <td class="g_remark"></td>
     <td></td>
@@ -3183,7 +2938,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">인스타그램, 페이스북, 네이버블로그, 트위터(제외)</td>
     <td></td>
@@ -3203,7 +2957,6 @@
       정보보호인증</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">레이어 팝업으로 구성 현재와 동일</td>
     <td></td>
@@ -3222,7 +2975,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -3241,7 +2993,6 @@
     <td>검색결과</td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark"></td>
     <td></td>
@@ -3260,7 +3011,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">상단 블라인드 팝업으로</td>
     <td></td>
@@ -3279,7 +3029,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">메인 와이어프레임에 반영</td>
     <td></td>
@@ -3298,7 +3047,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">메인 와이어프레임에 반영</td>
     <td></td>
@@ -3317,7 +3065,6 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>&nbsp;</td>
     <td class="g_name"></td>
     <td class="g_remark">* 메일 폼<br>
       견적 및 상품문의 한 내용 이메일로 / 답변용 이메일<br>
@@ -3347,8 +3094,8 @@
 		$('.g_status_board tbody tr').each(function () {
 			var num = $(this).index() + 1;
 			$(this).find('td').eq(0).html(num);
-			var tdStr1 = $(this).find('td').eq(9).text();
-			var tdStr2 = $(this).find('td').eq(16).text();
+			var tdStr1 = $(this).find('td').eq(8).text();
+			var tdStr2 = $(this).find('td').eq(15).text();
 			var tdStr3 = $(this).find('td').eq(1).text();
 			$(this).find('td').eq(7).html('<a class="g_url_link" href="../www/' + tdStr2 + '/' + tdStr3 + '.' + tdStr1 + '.html" target="_blank">' + tdStr3 + '.' + tdStr1 + '.html</a>');
 		});

@@ -16,7 +16,7 @@
   <meta property="og:image" content="../assets/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-  <title>로그인 | 킨코스코리아</title>
+  <title>아이디찾기 결과 | 로그인 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../assets/css/lib/animate.css">
   <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -57,66 +57,43 @@
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap tab_area">
+      <div class="cont_wrap">
 
-        <!-- page tab -->
-        <div class="page_tab">
-          <ul>
-            <li><a href="C1.01.00.00.login.html">회원</a></li>
-            <li class="active"><a href="C1.01.00.00.non-member-login.html">비회원</a></li>
-          </ul>
-        </div>
-        <!-- page tab -->
+
         <!-- 본문 -->
         <div class="con_box login_wrap">
           <div class="tit_box">
-            <h3>비회원 로그인</h3>
-
-
-
-            <div class="inner">
-              <form method="post" action="/" onsubmit="">
-                <fieldset>
-                  <legend class="blind">비회원 로그인 양식</legend>
-                  <div class="form_group">
-                    <div class="form_item">
-                      <input type="text" name="" id="" title="이름 입력" placeholder="홍길동" required="">
-                    </div>
-                    <div class="form_item">
-                      <input type="text" name="" id="OrderNum" title="주문번호 입력" placeholder="주문번호" required="">
-                    </div>
-                    <div class="form_item">
-                      <input type="password" name="" id="login_pw" title="비밀번호 입력" placeholder="비밀번호" required="">
-                    </div>
-
-                    <div class="btn_wrap col2 center">
-                      <button type="submit" class="btn large type01" style="width:100%;">조회</button>
-                    </div>
-                  <div class="form_item chk_box">
-                  
-                    <div class="forgot_wrap">
-                      <a href="">비밀번호 찾기</a>
-                    </div>
-                  </div>
-                    
-                  </div>
-                </fieldset>
-              </form>
- 
-
-
-            </div>
-
-
-
-
-
-
+            <h3>아이디 찾기 결과입니다.</h3>
           </div>
 
 
-
-
+          <!-- 아이디찾기 결과 있음 -->
+          <div class="inner result" style="display: block">
+            <div class="form_group">
+              <p class="id_yes">고객님의 아이디는 <strong>Shining1234</strong> 입니다.</p>
+            </div>
+          
+            <div class="btn_wrap col2 center">
+              <button type="button" class="btn large type01">로그인 하기</button>
+              <button type="button" class="btn large type02">비밀번호 찾기</button>
+            </div>
+          </div>
+          
+          
+          <!-- 아이디찾기 결과 없음 -->
+          <div class="inner result" style="display: block">
+            <div class="form_group">
+              <p>
+                입력하신 정보로 등록된 회원이 없습니다. <br>
+                <strong>정보를 다시 확인</strong>하시고 시도해주세요.
+              </p>
+            </div>
+          
+            <div class="btn_wrap col2 center">
+              <button type="button" class="btn large type01">로그인 하기</button>
+              <button type="button" class="btn large type02">아이디 찾기</button>
+            </div>
+          </div>
 
 
 
