@@ -4,10 +4,13 @@
 /*  ---------------------
         commonm
  --------------------- */
+body {font-size: 18px; line-height: 1.3;}
 h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .page_navi {margin-top:60px;}
 .form_wrap {margin-top:50px;}
-
+.bbs_list th, .bbs_list td {font-size:18px}
+.bbs_list td {font-weight: 500;}
+select, input {font-size:18px;}
 .pdt_list {max-width: 1530px;margin:0 auto;}
 .pdt_list .inner .item_list { width:102%; overflow: hidden;margin-left:-30px;margin-top:20px;}
 .pdt_list .inner .item_list li { width:20%; padding-left:30px; margin-bottom:60px; float: left;min-height:365px;}
@@ -72,7 +75,7 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .pdt_detail textarea{height:120px;}
 .pdt_detail .form_item .desc {color:#999;line-height: 1.1;margin-top:10px;}
 
-.pdt_detail .price {font-size:18px;width:100%;text-align: right;margin-top:13px;}
+.pdt_detail .price {width:100%;text-align: right;margin-top:13px;}
 .pdt_detail .price strong {font-weight:700;color:#ed6c16;display: inline-block;}
 .pdt_detail .price.total {font-weight:500;padding:35px 30px;margin:0;}
 .pdt_detail .price strong {font-weight:700;color:#ed6c16;padding-left:37px;}
@@ -87,11 +90,11 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .ease_cart ul {position: relative; display:table; width: 100%;}
 .ease_cart ul li {display:table-cell;vertical-align: top;width:50%;}
 .ease_cart ul li:last-child {padding-left:23px;width:300px;}
-.ease_cart ul dt {position:absolute;top:0;left:0;font-size:18px;width:112px;line-height:44px;font-weight: 700;padding:0}
+.ease_cart ul dt {position:absolute;top:0;left:0;width:112px;line-height:44px;font-weight: 700;padding:0}
 .ease_cart ul dl {width:100%;padding-left:112px;position: relative;margin-top:20px;}
 .ease_cart ul dl:first-child{margin-top:0;}
-.ease_cart ul dt {position:absolute;top:0;left:0;font-size:18px;width:112px;line-height:1.3;font-weight: 700;padding:0}
-.ease_cart ul dd {font-size:18px;line-height: 1.3;vertical-align: top;color:#777;widtH:100%;}
+.ease_cart ul dt {position:absolute;top:0;left:0;width:112px;line-height:1.3;font-weight: 700;padding:0}
+.ease_cart ul dd {vertical-align: top;color:#777;widtH:100%;}
 .ease_cart .opt_ea {position: relative;padding-right:75px;}
 .ease_cart .opt_ea .btn_delete {width:65px;position: absolute;top:0;right:0;font-weight: 400;}
 
@@ -104,7 +107,7 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .pdt_tab_wrap {margin-top:100px;}
 .pdt_tab_wrap .item {padding-top:60px;}
 .pdt_tab_wrap .accor_wrap {margin-top:60px;}
-.pdt_tab_wrap .accor_wrap .accor_item {font-size:18px;}
+.pdt_tab_wrap .accor_wrap .accor_item {}
 .pdt_tab_wrap .accor_wrap .accor_item .accor_title {height:initial;line-height: initial;position: relative;padding:0 11.11%;}
 .pdt_tab_wrap .accor_wrap .accor_item .accor_title a {height:initial;line-height: initial;padding:17px  0;color:#333;}
 .pdt_tab_wrap .accor_wrap .accor_item .accor_title .writer span {display: inline-block;font-weight:700;}
@@ -154,20 +157,45 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 
 /* 장바구니 */
 .cart_wrap .step_wrap .step_item:first-child {margin-left: 0; padding-left: 0;}
-.cart_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background: url('../../assets/image/company/sub/ico-step.png') no-repeat;}
-.cart_wrap .step_wrap .step_item:first-child .ico_step {background-position: 0 0;}
-.cart_wrap .step_wrap .step_item:nth-child(2) .ico_step {background-position: 0 -56px;}
-.cart_wrap .step_wrap .step_item:nth-child(3) .ico_step {background-position: 0 -112px;}
+.cart_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background-image: url('../../assets/image/mall/product/ico-step-cart.png');}
 
-.cart_wrap .pdt_chk {width:80px;}
+
+.cart_wrap .bbs_list .pdt_chk {width:145px;text-align: left;padding-left:30px;}
 .cart_wrap .pdt_name .inner {display: table;}
 .cart_wrap .pdt_name a {display: table-cell;}
 .cart_wrap .pdt_name a .img {display: inline-block;width:250px;height:172px;overflow: hidden;}
-.cart_wrap .pdt_name .item_info {display: table-cell;vertical-align:middle;text-align:left;padding-left:30px;}
+.cart_wrap .pdt_name .item_info {display: table-cell;vertical-align:middle;text-align:left;padding-left:30px;font-weight:500;}
+.cart_wrap .pdt_name .item_info .title {}
+.cart_wrap .pdt_name .item_info ul {margin-top:30px;}
+.cart_wrap .pdt_name .item_info li {color:#999;}
 .cart_wrap .bbs_list td{vertical-align:middle;padding:20px;}
+.cart_wrap .bbs_list .ship_fee {color:#999;font-weight:400;}
+.cart_wrap .bbs_list .ship_fee p{color:#222;}
 .cart_wrap .spinner {max-width:185px;}
 
-.cart_wrap .cart_total .ico{background: url(//pics.gmarket.co.kr/pc/ko/pay/cart/sp_cart.png) no-repeat ; font-size:0; display:inline-block; vertical-align:middle}
-.cart_wrap .cart_total .ico.img_minus{width: 21px; height:21px; background-position:0 -60px  }
-.cart_wrap .cart_total .ico.img_plus{width: 21px; height:21px; background-position:-24px -60px  }
-.cart_wrap .cart_total .ico.img_result{width: 21px; height:21px; background-position:-48px -60px }
+.cart_wrap .cart_chk_del {margin-top:30px;position: relative;height:44px;}
+.cart_wrap .cart_chk_del .inp_chk_del {position: absolute;top:0;right:0;font-weight:400}
+
+.cart_wrap .cart_total {margin-top:60px;}
+.cart_wrap .cart_total .inner {border-top:2px solid #000;background:#f3f4f6;padding:45px 30px;position: relative;}
+.cart_wrap .cart_total .box {display: inline-block;}
+.cart_wrap .cart_total .math {display: inline-block;padding:0 100px;}
+.cart_wrap .cart_total .box.total {position: absolute;right:30px;top:45px;width:330px;text-align: right;}
+.cart_wrap .cart_total .box.total .price {color:#ed6c16}
+.cart_wrap .cart_total .label {font-size:16px;font-weight: 500;padding-right:65px;}
+.cart_wrap .cart_total .price {font-size:16px;font-weight: 400;}
+.cart_wrap .cart_total .price strong {font-size:24px;font-weight: 700;}
+
+.cart_wrap .pdt_non {padding:30px}
+.cart_wrap .pdt_non p strong{color:#03a2ea;font-weight: 700;}
+.cart_wrap .pdt_non p.tit{font-size:24px;margin-bottom:30px;font-weight: 400;}
+.cart_wrap .pdt_non .btn_wrap {margin-top:34px;}
+
+
+/* 주문/결제 */
+.cart_wrap .form_wrap {margin-top:0;border-bottom: 1px solid #e7e7e7;}
+.cart_wrap h3 {margin-top:50px;}
+.cart_wrap h3:first-child {margin-top:0;}
+.cart_wrap .form_item .form_name {padding-top:0;}
+
+.cart_wrap textarea {height:100px;}

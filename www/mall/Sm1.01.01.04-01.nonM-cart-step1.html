@@ -59,11 +59,12 @@
       <!-- //breadcrumb  -->
       
 			<!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap">
+      <div class="cont_wrap no_tit">
 
-				<!-- 본문 -->
-				<!-- 콘텐츠 "con_box" 고정 -->
-				<div class="con_box cart_wrap bbs">
+        <!-- 본문 -->
+        <!-- 콘텐츠 "con_box" 고정 -->
+        <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
+        <div class="con_box cart_wrap">
           <div class="step_wrap">
             <div class="inner clearfix">
               <div class="step_item active">
@@ -89,7 +90,9 @@
               </div>
             </div>
           </div>
+          <p class="form_alert">홍길동 님</p>
 
+          <!-- 장바구니 목록 테이블 -->
           <div class="bbs_list">
             <table>
               <caption>장바구니 목록</caption>
@@ -121,8 +124,16 @@
                         <span class="img"><img src="../assets/image/mall/product/pl_01.jpg"></span>
                       </a>
                       <span class="item_info">
-                        <span class="title">즉석명함</span>
-                        <p class="desc">13시 이전 접수- 당일 완성</p>
+                        <strong class="title">
+                          명함<br>
+                          즉석명함_100매<br>
+                          13시 이전 접수_당일 완성!
+                        </strong>
+                        <ul class="desc">
+                          <li>사이즈 90mm X55mm</li>
+                          <li>재질 : 스노우 259g 2개 (+0원)</li>
+                          <li>코너라운딩 : 3면 1개 (+5,000원)</li>
+                        </ul>
                       </span>
                     </div>
                   </td>
@@ -150,8 +161,16 @@
                         <span class="img"><img src="../assets/image/mall/product/pl_01.jpg"></span>
                       </a>
                       <span class="item_info">
-                        <span class="title">즉석명함</span>
-                        <p class="desc">13시 이전 접수- 당일 완성</p>
+                        <strong class="title">
+                          명함<br>
+                          즉석명함_100매<br>
+                          13시 이전 접수_당일 완성!
+                        </strong>
+                        <ul class="desc">
+                          <li>사이즈 90mm X55mm</li>
+                          <li>재질 : 스노우 259g 2개 (+0원)</li>
+                          <li>코너라운딩 : 3면 1개 (+5,000원)</li>
+                        </ul>
                       </span>
                     </div>
                   </td>
@@ -162,49 +181,76 @@
                   </td>
                   <td class="price">30,000</td>
                   <td class="subTotal">30,000</td>
-                  <td class="delivery">
+                  <td class="ship_fee">
                     <p>직접수령</p>
                     (가산디지털 단지)
                   </td>
                 </tr>
+
+
+
+
+
+
+                <!-- 담긴 상품이 없을 때 -->
+                <tr>
+                  <td colspan="6">
+                    <div class="pdt_non">
+                      <p class="tit">장바구니에 담긴 상품이 없습니다.</p>
+                      
+                      <p>
+                        <strong>회원이나 비회원 로그</strong>을 하시면<br>
+                      장바구니에 담긴 상품을 확인 할 수 있습니다.
+                      </p>
+
+                      <div class="btn_wrap">
+                        <button type="button" class="btn large type02"><span>로그인 하기</span></button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- //담긴 상품이 없을 때 -->
+
+
+
               </tbody>
             </table>
             <div class="cart_chk_del">
               <span class="desc">장바구니에 담긴 상품은 최대 10일까지 보관되며 상품 판매가 종료되는 경우 자동으로 삭제 됩니다.</span>
-              <button type="button" class="btn type03 btn_delete"><span>삭제</span></button>
+              <button type="button" class="btn type03 inp_chk_del"><span>선택 삭제</span></button>
             </div>
           </div>
+          <!-- //장바구니 목록 테이블 -->
 
-        <div class="cart_total">
-          <div class="box">
-            <span class="label">상품금액</span>
-            <span class="price"><strong>19,800</strong>원</span>
+          <!-- 총 주문금액 -->
+          <div class="cart_total">
+            <h3>총 주문금액</h3>
+            <div class="inner">
+              <div class="box">
+                <span class="label">상품 가격</span>
+                <span class="price"><strong>19,800</strong>원</span>
+              </div>
+          
+              <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
+          
+              <div class="box">
+                <span class="label">배송비</span>
+                <span class="price"><strong>0</strong>원</span>
+              </div>
+          
+              <div class="box total">
+                <span class="label">총 주문 금액</span>
+                <span class="price"><strong>19,800</strong>원</span>
+              </div>
+            </div>
+            <div class="btn_wrap center"><button type="button" class="btn type01 large"><span>구매하기</span></button></div>
           </div>
-        
-          <div class="math"><i class="ico img_plus"><span class="blind">더하기</span></i></div>
+          <!-- //총 주문금액 -->
 
-          <div class="box">
-            <span class="label">배송비</span>
-            <span class="price"><strong>0</strong>원</span>
-          </div>
-
-          <div class="math"><i class="ico img_result"><span class="blind">계산값은</span></i></div>
-
-          <div class="box total">
-            <span class="label">총 주문 금액</span>
-            <span class="price"><strong>19,800</strong>원</span>
-          </div>
-
-          <div class="btn_wrap center"><button type="button" class="btn type01 large"><span>구매하기</span></button></div>
-
-
-				</div>
-				<!-- //본문 -->
-
-
-			</div>
-		</div>
-		<!-- CONTENT -->
+        <!-- //본문 -->
+        </div>
+      </div>
+      <!-- CONTENT -->
 
 
 		<!-- FOOTER -->

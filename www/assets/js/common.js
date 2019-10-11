@@ -216,7 +216,11 @@ var setChkAll = function() {
     var name = $(this).attr('name');
     $("input[name=" + name + "").prop('checked', $(this).prop('checked'));
   });
+  $('.inp_chk_del').on('click', function () {
+    $('input[type=checkbox]').prop('checked', false);
+  });
 }
+
 
 // layer popup
 var setPopup = function() {

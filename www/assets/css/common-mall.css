@@ -78,7 +78,7 @@ h2 {font-weight: 700;font-size: 18px;}
 
 
  /* local menu */
-.breadcrumb_wrap {font-size:10px;color:#737373;max-width:1530px;padding:0 0 10px 0;margin:23px auto 50px;border-bottom:1px solid #e7e7e7;}
+.breadcrumb_wrap {font-size:10px;color:#737373;max-width:1530px;padding:0 0 10px 0;margin:23px auto 45px;border-bottom:1px solid #e7e7e7;}
 .breadcrumb_wrap .home {font-size:0;width:16px;height:16px;overflow: hidden;line-height: 999;display: inline-block;margin-top: 5px;vertical-align: top;}
 .breadcrumb_wrap .home:after{content:"";clear:both;display:inline-block;background:url(../image/common/ico-home.png) no-repeat 0 0;width:16px;height:16px;}
 .breadcrumb_wrap ul {display: inline-block;}
