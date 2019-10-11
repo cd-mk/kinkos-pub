@@ -199,3 +199,16 @@ select, input {font-size:18px;}
 .cart_wrap .form_item .form_name {padding-top:0;}
 
 .cart_wrap textarea {height:100px;}
+
+
+/* 결제완료 */
+.cart_wrap .tit_box {padding-top:50px;}
+.cart_wrap .tit_box strong {font-weight: 400;font-size:40px;}
+.cart_wrap .result {width:50%;margin:35px auto 0;background:#f3f4f6;padding:35px 30px;border-top:2px solid #000;}
+.cart_wrap .result dl {display: table;}
+.cart_wrap .result dt,
+.cart_wrap .result dd {display: inline-block;line-height: 43px;}
+.cart_wrap .result dt{width:30%;font-weight: 700;}
+.cart_wrap .result dd {width:70%;color:#999}
+.cart_wrap .result .order_num {color: #03a2ea}
+.cart_wrap .result .price {color: #ed6c16}
