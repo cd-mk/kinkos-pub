@@ -495,10 +495,6 @@
   .ceo_wrap div span {font-size:14px;}
   .ceo_wrap div span img {}
 }
-
-@media screen and (max-width:1024px) { 
-}
-
 /* 이용약관 */
 .terms_wrap {margin-bottom: 140px;}
 .terms_wrap .item_box {margin:60px auto 0; min-height:400px; max-height:550px; border:1px solid #c1c1c1; padding:5px; line-height:20px; overflow:auto;}
@@ -560,15 +556,13 @@
 .btn_wrap.easy .btn_naver .ico {background-image: url(../../assets/image/common/ico-easy-naver.png)}
 .btn_wrap.easy .btn_kakao .ico {background-image: url(../../assets/image/common/ico-easy-kakao.png)}
 .btn_wrap.easy .btn_fb .ico {background-image: url(../../assets/image/common/ico-easy-fb.png)}
-/* -------------------------
-      아이디 찾기, 비밀번호 초기화 area
- ------------------------- */
-.login_wrap .auth {}
-.login_wrap .auth .phone {}
 
 
 @media screen and (max-width: 768px) {
   .login_wrap .inner { width: 100%; }
 }
+
+
+
 
 

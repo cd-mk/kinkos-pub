@@ -8,6 +8,20 @@
  /* headings */
 h2 {font-weight: 700;font-size: 18px;}
 
+ /* side menu */
+.sidebar {padding-left:260px;position: relative;padding-top:0;}
+.sidebar .snb {widtH:230px;position: absolute;left:0;top:0;color:#222;}
+.sidebar .snb h2 {font-size:36px;font-weight: 700;}
+.sidebar .snb ul li a {display:inline-block;}
+.sidebar .snb ul li.active a,
+.sidebar .snb ul li a:hover {color:#03a2ea}
+.sidebar .snb ul li:first-child a {}
+.sidebar .snb > ul > li > a {padding-top:45px;font-size:18px;font-weight: 700;}
+.sidebar .snb > ul > li > ul li a {padding-top:15px;font-size:18px;font-weight: 400;color:#777;}
+
+@media screen and (max-width:1600px) {
+.sidebar .snb {left:15px;}
+}
 
 
 .sch_wrap {z-index:10; position:relative; top:-50px; margin:0 auto; width:1515px; height:100px; background:#fff; box-shadow:0 15px 20px 5px rgba(0, 0, 0, 0.1);}

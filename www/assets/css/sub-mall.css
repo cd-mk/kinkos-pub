@@ -28,9 +28,7 @@ select, input {font-size:18px;}
 .choice-option .selectbox select {float: left;margin-left:12px;width:180px;}
 .choice-option .selectbox select:first-child {margin-left: 0;}
 
-
-
-
+.bbs_list td a {color:#03a2ea;}
 
 /* product detail */
 .pdt_info_wrap {position:relative; margin-top:60px;display:table;width:100%;}
@@ -141,13 +139,13 @@ select, input {font-size:18px;}
 
 /* 다른 고객이 함께 본 상품 */
 .pdt_other_wrap {position: relative;margin-top:100px;}
-.pdt_other {padding: 40px 0 0;overflow: hidden;border-top:3px solid #000;}
-.pdt_other .swiper-wrapper {}
-.pdt_other .swiper-slide {width:230px;}
-.pdt_other .swiper-button-prev.mid  {top:70px; left:0;}
-.pdt_other .swiper-button-next.mid {top:70px;right:0;}
-.pdt_other .item_info {font-size: 20px;margin-top:20px;display: block;color:#444;}
-.pdt_other .item_info p {margin-top:20px;margin-top:10px;}
+.pdt_slide {padding: 40px 0 0;overflow: hidden;border-top:2px solid #000;}
+.pdt_slide .swiper-wrapper {}
+.pdt_slide .swiper-slide {width:230px;}
+.pdt_slide .swiper-button-prev.mid  {top:70px; left:0;}
+.pdt_slide .swiper-button-next.mid {top:70px;right:0;}
+.pdt_slide .item_info {font-size: 20px;margin-top:20px;display: block;color:#444;}
+.pdt_slide .item_info p {margin-top:20px;margin-top:10px;}
 
 
 
@@ -176,20 +174,20 @@ select, input {font-size:18px;}
 .cart_wrap .cart_chk_del {margin-top:30px;position: relative;height:44px;}
 .cart_wrap .cart_chk_del .inp_chk_del {position: absolute;top:0;right:0;font-weight:400}
 
-.cart_wrap .cart_total {margin-top:60px;}
-.cart_wrap .cart_total .inner {border-top:2px solid #000;background:#f3f4f6;padding:45px 30px;position: relative;}
-.cart_wrap .cart_total .box {display: inline-block;}
-.cart_wrap .cart_total .math {display: inline-block;padding:0 100px;}
-.cart_wrap .cart_total .box.total {position: absolute;right:30px;top:45px;width:330px;text-align: right;}
-.cart_wrap .cart_total .box.total .price {color:#ed6c16}
-.cart_wrap .cart_total .label {font-size:16px;font-weight: 500;padding-right:65px;}
-.cart_wrap .cart_total .price {font-size:16px;font-weight: 400;}
-.cart_wrap .cart_total .price strong {font-size:24px;font-weight: 700;}
 
-.cart_wrap .pdt_non {padding:30px}
-.cart_wrap .pdt_non p strong{color:#03a2ea;font-weight: 700;}
-.cart_wrap .pdt_non p.tit{font-size:24px;margin-bottom:30px;font-weight: 400;}
-.cart_wrap .pdt_non .btn_wrap {margin-top:34px;}
+.order_total .inner {border-top:2px solid #000;background:#f3f4f6;padding:45px 30px;position: relative;}
+.order_total .box {display: inline-block;}
+.order_total .math {display: inline-block;padding:0 100px;}
+.order_total .box.total {position: absolute;right:30px;top:45px;width:330px;text-align: right;}
+.order_total .box.total .price, .order_total .box.total strong {color:#ed6c16}
+.order_total .label {font-size:16px;font-weight: 500;padding-right:65px;}
+.order_total .price {font-size:16px;font-weight: 400;}
+.order_total .price strong {font-size:24px;font-weight: 700;}
+
+.pdt_non {padding:30px}
+.pdt_non p strong{color:#03a2ea;font-weight: 700;}
+.pdt_non p.tit{font-size:24px;margin-bottom:30px;font-weight: 400;}
+.pdt_non .btn_wrap {margin-top:34px;}
 
 
 /* 주문/결제 */
@@ -212,3 +210,70 @@ select, input {font-size:18px;}
 .cart_wrap .result dd {width:70%;color:#999}
 .cart_wrap .result .order_num {color: #03a2ea}
 .cart_wrap .result .price {color: #ed6c16}
+
+
+/* 마이페이지 */
+.mpg_wrap .bbs_list.typeB td {padding:30px 20px;}
+.mpg_wrap .my_wrap {background:#4866af;padding:30px 0;color:#fff;}
+.mpg_wrap .my_wrap ul {display: table;width:100%;}
+.mpg_wrap .my_wrap ul li {display: table-cell;text-align: left;padding-left:20px;border-left:1px solid #5a75b5;width:10%;vertical-align: top;}
+.mpg_wrap .my_wrap .my_info {font-size:18px;font-weight:700;padding-left:30px;border-left: 0;width:22%;position: relative;}
+.mpg_wrap .my_wrap .my_info strong {color:#d4eeff;font-size:28px;}
+.mpg_wrap .my_wrap .my_info .my_point {position: absolute;bottom:0;}
+.mpg_wrap .my_wrap .my_info .my_point i {font-weight: 700; display: inline-block; position: relative; height: 30px; text-align: center; font-size: 18px; width: 30px; margin-right: 10px; font-style: normal; line-height: 30px;}
+.mpg_wrap .my_wrap .my_info .my_point i:before {content: ""; display: inline-block; border: 2px solid #b6c2df; width: 26px; height: 26px; border-radius: 50%; position: absolute; top: 0; left: 0;}
+.mpg_wrap .my_wrap .my_status strong {color:#c3cbe1;font-weight:400;font-size:14px;}
+.mpg_wrap .my_wrap .my_status p {color:#fff;font-size:50px;font-weight:700;margin-top:40px;}
+
+.mpg_wrap .section {margin-top:60px;}
+.mpg_wrap .inner {border-top:2px solid #222; border-bottom:1px solid #e7e7e7;}
+.mpg_wrap .recently_item .inner {padding:40px 100px  35px;position: relative;}
+.mpg_wrap .recently_item .pdt_slide {border:0;padding:0;}
+.mpg_wrap .recently_item .pdt_slide.swiper-container {position: initial;}
+.mpg_wrap .recently_item .pdt_slide .swiper-button-next {top:100px;right:10px;}
+.mpg_wrap .recently_item .pdt_slide .swiper-button-prev {top:100px;left:10px;}
+
+.mpg_wrap .my_activity  {width: 100%;position: relative;padding-left:390px;}
+.mpg_wrap .my_activity .inner {padding:30px;height:145px;}
+.mpg_wrap .my_activity .inner h3 {padding-top:20px;}
+.mpg_wrap .my_activity .inner p {font-weight: 700;font-size:42px;padding-top:5px;}
+
+.mpg_wrap .my_activity .event_act {position: absolute;left:0;top:0;width:360px;}
+.mpg_wrap .my_activity .event_act h3,
+.mpg_wrap .my_activity .event_act p{display: table-cell;vertical-align: top;} 
+.mpg_wrap .my_activity .event_act p {position: absolute;right:30px;top:35px;}
+
+.mpg_wrap .my_activity .que_act {display: table;width:100%;}
+.mpg_wrap .my_activity .que_act h3,
+.mpg_wrap .my_activity .que_act ul{display: table-cell;vertical-align: top;}
+.mpg_wrap .my_activity .que_act h3 {width:25%;}
+.mpg_wrap .my_activity .que_act ul {width:75%;}
+.mpg_wrap .my_activity .que_act strong {color:#777;font-size:14px;font-weight: 400;white-space: nowrap;}
+.mpg_wrap .my_activity .que_act ul li {display: table-cell;text-align: center;vertical-align: top;padding:0 20px;border-left:1px solid #e7e7e7;width:25%;}
+.mpg_wrap .my_activity .que_act ul li:last-child {padding-right:0;}
+
+
+.mpg_wrap .btn_wrap{margin-top:40px;}
+.mpg_wrap .btn_wrap.right{margin-top:20px;}
+.mpg_wrap .bbs_list td {font-weight: 400;}
+.mpg_wrap .bbs_list td p {margin-top:10px;}
+.mpg_wrap .bbs_list td p:first-child {margin-top:0;}
+.mpg_wrap .bbs_list .pdt_chk {width:120px}
+.mpg_wrap .bbs_list .title {text-align: left;padding-left:0;}
+.mpg_wrap .bbs_list .unpaid {color:#999;}
+.mpg_wrap .bbs_list .ready .unpaid {color:#ed6c16;}
+.mpg_wrap .bbs_list .inner {border:0;margin:0;}
+.mpg_wrap .form_wrap {margin-top:0;}
+.mpg_wrap .my_order .btn_wrap{margin-top:40px;}
+
+/* 회원정보 변경 */
+.mpg_wrap .userinfo_wrap {margin-top:55px;}
+.mpg_wrap .userinfo_wrap .form_group .form_item .form_name {padding-top:0;width:220px;}
+.mpg_wrap .userinfo_wrap .form_group .form_item .form_inp {color:#777;}
+.mpg_wrap .userinfo_wrap .form_group .form_item { max-width: 800px;}
+
+/* 마이페이지 이벤트 참여내역 변경 */
+.mpg_wrap .mpg_bbs .status {color: #999;}
+.mpg_wrap .mpg_bbs .ing .status {color: #03a2ea;}
+.mpg_wrap .mpg_bbs .subject {text-align: center;width:40%}
+

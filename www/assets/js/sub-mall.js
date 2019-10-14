@@ -2,7 +2,7 @@
 function slideInit() {
   var isMobile = chkViewport();
   
-  var pdtOther = new Swiper('.pdt_other', {
+  var pdtOther = new Swiper('.pdt_slide', {
     slidesPerView: 'auto',
     spaceBetween: 30,
     loopFillGroupWithBlank: true,
