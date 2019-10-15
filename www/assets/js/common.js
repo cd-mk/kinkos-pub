@@ -350,7 +350,9 @@ $(document).ready(function () {
 //tab
 $(function () {
   tab('#tab', 0);
+  tab('#tab1', 0);
 });
+
 
 function tab(e, num) {
   var num = num || 0;
@@ -375,7 +377,6 @@ function tab(e, num) {
     con.eq(i).show();
   });
 }
-
 
 
 

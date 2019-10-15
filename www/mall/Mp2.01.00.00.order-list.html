@@ -16,13 +16,12 @@
   <meta property="og:image" content="../assets/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-  <title>구매내역리스트 | 마이페이지 | 킨코스코리아</title>
+  <title>주문/배송 조회 | 마이페이지 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../assets/css/lib/animate.css">
   <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-
   <link rel="stylesheet" href="../assets/css/common-mall.css">
   <!-- only sub -->
   <link rel="stylesheet" href="../assets/css/sub-mall.css">
@@ -30,8 +29,7 @@
 
 <body>
   <!-- 접근성 바로가기 메뉴(숨김) -->
-  <div id="accessibility">
-    <strong class="blind">컨텐츠바로가기</strong>
+  <div id="accessibility"> <strong class="blind">컨텐츠바로가기</strong>
     <ul>
       <li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
       <li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
@@ -43,95 +41,39 @@
   <div id="wrap" class="company">
 
     <!-- HEADER -->
-    <div id="header">
-    </div>
+    <div id="header"> </div>
     <!-- //HEADER -->
 
     <!-- CONTENT -->
     <div id="content">
       <!-- breadcrumb  -->
-      <div class="breadcrumb_wrap">
-        <a href="" class="home">Home</a>
+      <div class="breadcrumb_wrap"> <a href="" class="home">Home</a>
         <ul class="item_list">
-          <li><a href="#">마이페이지</a></li>
-          <li><a href="#">구매내역 리스트</a></li>
+          <li><a href="#">주문/배송 조회</a></li>
         </ul>
       </div>
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap sidebar">
+      <div class="cont_wrap tab_area">
 
-        <div class="snb">
-          <h2>마이페이지</h2>
+        <div class="page_tab col2">
           <ul>
-            <li class="active"><a href="#">구매내역리스트</a></li>
-            <li>
-              <a href="#">회원정보</a>
-              <ul>
-                <li><a href="#">회원정보 변경</a></li>
-                <li><a href="#">배송지 정보 관리</a></li>
-                <li><a href="#">회원탈퇴</a></li>
-              </ul>
-            </li>
-            <li><a href="#">이벤트 참여 내역</a></li>
-            <li>
-              <a href="#">나의 문의 내역</a>
-              <ul>
-                <li><a href="#">견적 및 상품 문의내역</a></li>
-                <li><a href="#">서비스 의견 내역</a></li>
-                <li><a href="#">제휴 및 제안 내역</a></li>
-                <li><a href="#">파일 주문 내역</a></li>
-              </ul>
-            </li>
+            <li class="active"><a href="#">구매내역</a></li>
+            <li><a href="#">취소/환불/교환 리스트</a></li>
           </ul>
         </div>
 
-
         <!-- 본문 -->
-        <div class="con_box mpg_wrap">
-
-          <div class="my_wrap">
-            <ul>
-              <li class="my_info">
-                <p><strong>shing1234</strong> 님의 킨코스</p>
-                <p class="my_point"><i>P</i>1,000</p>
-              </li>
-              <li class="my_status">
-                <strong>입금대기중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>결제 완료</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>배송준비중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>배송중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>배송완료</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>취소/환불/교환</strong>
-                <p>0</p>
-              </li>
-            </ul>
-          </div>
-
+        <div class="con_box">
           <!-- 구매내역 리스트 -->
           <div class="section my_order">
-            <div class="tit_h3">
+            <div class="tit_box center">
               <h3>구매내역</h3>
               <p>주문서 번호를 클릭 하시면 상품 구매 내역을 확인 할 수 있습니다.</p>
             </div>
 
-            <div class="bbs_list typeB">
+            <div class="section bbs_list typeB">
               <table>
                 <caption>장바구니 목록</caption>
                 <thead>
@@ -153,18 +95,18 @@
                 </thead>
                 <tbody>
                   <!-- loop -->
-                   <!-- 배송준비중일 때 
-                    <tr class="ready">
-                  -->
+                  <!-- 배송준비중일 때 
+                                <tr class="ready">
+                              -->
                   <tr>
                     <td class="pdt_chk">
                       <input type="checkbox" id="chk1" name="pdt_chk">
                       <label for="chk1"></label>
                     </td>
-                    <td class="ord_num">
-                      <p><a href="#">0000000000000</a></p>
-                      <p><button class="btn type03">다시 주문하기</button></p>
-                    </td>
+                  <td class="ord_num">
+                    <p><a href="#"><span class="img"><img src="../assets/image/mall/product/pl_01.jpg"></span></a></p>
+                    <p><a href="#">0000000000000</a></p>
+                  </td>
                     <td class="ord_date">
                       <p>17-03-24</p>
                       <p>14:58 (금)</p>
@@ -173,7 +115,6 @@
                     <td>30,000원</td>
                     <td>
                       <p>30,000</p>
-                      <p><button class="btn type03">증빙서류</button></p>
                     </td>
                     <td class="unpaid">0원</td>
                     <td>배송중</td>
@@ -187,8 +128,8 @@
                       <label for="chk2"></label>
                     </td>
                     <td class="ord_num">
+                      <p><a href="#"><span class="img"><img src="../assets/image/mall/product/pl_01.jpg"></span></a></p>
                       <p><a href="#">0000000000000</a></p>
-                      <p><button class="btn type03">다시 주문하기</button></p>
                     </td>
                     <td class="ord_date">
                       <p>17-03-24</p>
@@ -198,7 +139,6 @@
                     <td>30,000원</td>
                     <td>
                       <p>30,000</p>
-                      <p><button class="btn type03">증빙서류</button></p>
                     </td>
                     <td class="unpaid">30,000원</td>
                     <td>배송준비중</td>
@@ -227,46 +167,39 @@
           </div>
           <!-- //구매내역 리스트 -->
 
-
         </div>
         <!-- //본문 -->
       </div>
     </div>
     <!-- CONTENT -->
 
-
     <!-- FOOTER -->
-    <div id="footer" class="layout_width">
-    </div>
+    <div id="footer" class="layout_width"> </div>
     <!-- //FOOTER -->
 
-    <div class="dim">
-    </div>
+    <div class="dim"> </div>
   </div>
   <!-- //WRAP -->
 
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="../assets/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/js/wow.min.js"></script>
+  <script src="../assets/js/swiper/swiper.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/common-mall.js"></script>
+  <!-- //global -->
 
-    <!-- SCRIPT -->
-    <!-- global -->
-    <script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
-    <script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-    <script src="../assets/js/jquery/jquery.placeholder.min.js"></script>
-    <script src="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    <script src="../assets/js/wow.min.js"></script>
-    <script src="../assets/js/swiper/swiper.min.js"></script>
-    <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/common-mall.js"></script>
-    <!-- //global -->
+  <script src="../assets/js/sub-mall.js"></script>
+  <script type="text/javascript">
 
-    <script src="../assets/js/sub-mall.js"></script>
+  </script>
 
-
-    <script type="text/javascript">
-
-    </script>
-
-    <!-- //SCRIPT -->
-
+  <!-- //SCRIPT -->
 
 </body>
+
 </html>

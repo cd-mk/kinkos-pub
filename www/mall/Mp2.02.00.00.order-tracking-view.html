@@ -15,7 +15,7 @@
 <meta property="og:image" content="../assets/image/common/logo.png">
 <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-<title>구매 상세 내역 | 마이페이지 | 킨코스코리아</title>
+<title>주문/배송 조회 | 마이페이지 | 킨코스코리아</title>
 <!-- CSS FILE LOAD -->
 <link rel="stylesheet" href="../assets/css/lib/animate.css">
 <link rel="stylesheet" href="../assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -48,68 +48,31 @@
     <!-- breadcrumb  -->
     <div class="breadcrumb_wrap"> <a href="" class="home">Home</a>
       <ul class="item_list">
-        <li><a href="#">마이페이지</a></li>
-        <li><a href="#">구매내역 리스트</a></li>
+        <li><a href="#">주문/배송 조회</a></li>
       </ul>
     </div>
     <!-- //breadcrumb  --> 
     
     <!-- 콘텐츠 group "cont_wrap" 고정 -->
-    <div class="cont_wrap sidebar">
-      <div class="snb">
-        <h2>마이페이지</h2>
+    <div class="cont_wrap tab_area">
+    
+      <div class="page_tab col2">
         <ul>
-          <li class="active"><a href="#">구매 상세 내역</a></li>
-          <li> <a href="#">회원정보</a>
-            <ul>
-              <li><a href="#">회원정보 변경</a></li>
-              <li><a href="#">배송지 정보 관리</a></li>
-              <li><a href="#">회원탈퇴</a></li>
-            </ul>
-          </li>
-          <li><a href="#">이벤트 참여 내역</a></li>
-          <li> <a href="#">나의 문의 내역</a>
-            <ul>
-              <li><a href="#">견적 및 상품 문의내역</a></li>
-              <li><a href="#">서비스 의견 내역</a></li>
-              <li><a href="#">제휴 및 제안 내역</a></li>
-              <li><a href="#">파일 주문 내역</a></li>
-            </ul>
-          </li>
+          <li><a href="#">구매내역</a></li>
+          <li class="active"><a href="#">취소/환불/교환 리스트</a></li>
         </ul>
       </div>
+
       
       <!-- 본문 -->
-      <div class="con_box mpg_wrap">
-        <div class="my_wrap">
-          <ul>
-            <li class="my_info">
-              <p><strong>shing1234</strong> 님의 킨코스</p>
-              <p class="my_point"><i>P</i>1,000</p>
-            </li>
-            <li class="my_status"> <strong>입금대기중</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>결제 완료</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>배송준비중</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>배송중</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>배송완료</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>취소/환불/교환</strong>
-              <p>0</p>
-            </li>
-          </ul>
+      <div class="con_box">
+        <div class="tit_box center">
+          <h3>구매내역</h3>
+          <p>주문서 번호를 클릭 하시면 상품 구매 내역을 확인 할 수 있습니다.</p>
         </div>
+
         <div class="section my_order">
           <div class="tit_h3">
-            <h3>구매 상세 내역</h3>
             <p>주문번호 : <strong>2017032414574825</strong></p>
           </div>
           
@@ -212,66 +175,68 @@
           </div>
           <!-- //결제정보 --> 
       
-          <!-- 주문하는 분 -->
-          <div class="section bbs_detail typeA">
-            <h3>주문하신 분</h3>
-            <table>
-              <caption>
-                결제정보
-              </caption>
-              <tbody>
-                <tr>
-                  <th scope="row">이름</th>
-                  <td>홍길동</td>
-                </tr>
-                <tr>
-                  <th scope="row">전화번호</th>
-                  <td>010-1234-1234</td>
-                </tr>
-                <tr>
-                  <th scope="row">수령센터</th>
-                  <td>강남센터</td>
-                </tr>
-                <tr>
-                  <th scope="row">이메일</th>
-                  <td>shining1234@kinkos.com</td>
-                </tr>
-              </tbody>
-            </table>
-          
+          <div class="section div_col2">
+            <!-- 주문하는 분 -->
+            <div class="inner bbs_detail typeA">
+              <h3>주문하신 분</h3>
+              <table>
+                <caption>
+                  결제정보
+                </caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">이름</th>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">전화번호</th>
+                    <td>010-1234-1234</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">수령센터</th>
+                    <td>강남센터</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이메일</th>
+                    <td>shining1234@kinkos.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+            <!-- //주문하는 분 -->
+  
+  
+            <!-- 받으시는 분 -->
+            <div class="inner bbs_detail typeA">
+              <h3>받으시는 분</h3>
+              <table>
+                <caption>
+                  결제정보
+                </caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">이름</th>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">전화번호</th>
+                    <td>010-1234-1234</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">휴대폰</th>
+                    <td>010-1234-1234</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">주소</th>
+                    <td>서울 강남구 테헤란로, 130 (역삼동,호산빌딩 2층)</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+            <!-- //받으시는 분 --> 
           </div>
-          <!-- //주문하는 분 -->
-
-
-          <!-- 받으시는 분 -->
-          <div class="section bbs_detail typeA">
-            <h3>받으시는 분</h3>
-            <table>
-              <caption>
-                결제정보
-              </caption>
-              <tbody>
-                <tr>
-                  <th scope="row">이름</th>
-                  <td>홍길동</td>
-                </tr>
-                <tr>
-                  <th scope="row">전화번호</th>
-                  <td>010-1234-1234</td>
-                </tr>
-                <tr>
-                  <th scope="row">휴대폰</th>
-                  <td>010-1234-1234</td>
-                </tr>
-                <tr>
-                  <th scope="row">주소</th>
-                  <td>서울 강남구 테헤란로, 130 (역삼동,호산빌딩 2층)</td>
-                </tr>
-              </tbody>
-            </table>
-          
-          </div>
-          <!-- //받으시는 분 --> 
           
           <!--  배송 정보 -->
           <div class="section bbs_detail typeA">
@@ -283,7 +248,11 @@
               <tbody>
                 <tr>
                   <th scope="row">배송 상태</th>
-                  <td>주문</td>
+                  <td>
+                    <strong class="point_org">주문</strong>
+                  </td>
+                  <th scope="row">사유</th>
+                  <td>배송문제</td>
                 </tr>
               </tbody>
             </table>
@@ -292,7 +261,6 @@
           <!-- //배송 정보  -->
 
 
-          <div class="btn_wrap center"><button type="button" class="btn type01 large"><span>확인</span></button></div>
           
         </div>
       </div>
