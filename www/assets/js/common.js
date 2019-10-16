@@ -292,9 +292,6 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
 
 
 
-
-
-
 // TypeB Main page JS
 $(document).ready(function () {
   setGnb();
@@ -353,7 +350,6 @@ $(function () {
   tab('#tab1', 0);
 });
 
-
 function tab(e, num) {
   var num = num || 0;
   var menu = $(e).children();
@@ -380,6 +376,37 @@ function tab(e, num) {
 
 
 
+// mobile
+(function () {
+  $('.btn_menu').on('click', function () {
+    $('.menu').addClass('open');
+    $('body').css('overflow', 'hidden');
+  });
+  $('.btn_close').on('click', function () {
+    $('.menu').removeClass('open');
+    $('body').css('overflow', 'auto');
+  });
+})();
 
+
+
+(function () {
+  $('.btn_list').on('click', function () {
+    $(this).next().slideToggle(300);
+  });
+  $('.opt_list > li > a').on('click', function () {
+    var selectText = $(this).text();
+    $(this).closest('.opt_list').prev('.btn_list').text(selectText);
+    $(this).closest('.opt_list').slideUp(300);
+  });
+})();
+
+// main slide
+var mainSlide = new Swiper('.visual_wrap', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  centeredSlides: true,
+  roundLengths: true
+});
 
 
