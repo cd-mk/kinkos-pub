@@ -647,14 +647,13 @@
 .pdt_detail .pdt_price .price02 dd {font-weight: 400;color:#03a2ea;}
 
 .pdt_detail .pdt_item {border-bottom:1px solid #e7e7e7;border-top:1px solid #e7e7e7;padding-top:40px;padding-bottom:18px;margin-bottom:40px;margin-top:20px;}
-.pdt_detail .file_box {position: relative;padding-right: 32%;}
-.pdt_detail .file_box > .btn {position: absolute;right:0;top:0;width:30%;}
+
 
 
 
 .pdt_detail .form_wrap .form_group .form_item {padding-left:112px;position: relative;margin-bottom:20px;}
 .pdt_detail .form_wrap .form_group .form_item .form_name {position:absolute;top:0;left:0;font-size:18px;width:112px;line-height:44px;font-weight: 700;padding:0}
-.pdt_detail .form_wrap .form_group .form_item .form_inp {width:100%;font-size:18px;line-height: 44px;display: block;overflow: hidden;}
+.pdt_detail .form_wrap .form_group .form_item .form_inp {width:100%;display: block;overflow: hidden;}
 .pdt_detail .form_wrap .form_group .form_item .form_inp select + select{margin-top:20px;}
 .pdt_detail .form_wrap .form_group .form_item .form_inp label::before {top:5px;}
 .pdt_detail .form_wrap .form_group .form_item .form_inp label + .inp, .pdt_detail .form_wrap .form_group .form_item .form_inp label + .sel_opt{margin-top:8px;}
@@ -667,7 +666,7 @@
 .pdt_detail .price strong {font-weight:700;color:#ed6c16;display: inline-block;}
 .pdt_detail .price.total {font-weight:500;padding:35px 30px;margin:0;}
 .pdt_detail .price strong {font-weight:700;color:#ed6c16;padding-left:37px;}
-.pdt_detail .btn_wrap {margin-top:0;width:100%;display: table;}
+/* .pdt_detail .btn_wrap {margin-top:0;width:100%;display: table;} */
 .pdt_detail .btn_wrap span {display: table-cell;width:33.333%;padding-left:12px;}
 .pdt_detail .btn_wrap span:first-child {padding-left:0;}
 .pdt_detail .btn_wrap span .btn {width:100% !important;margin:0;}

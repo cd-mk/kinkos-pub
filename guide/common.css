@@ -97,7 +97,7 @@ tr.g_today .g_url_link{color:#FFF;}
 .g_code_page .g_header h3:before{content:""; display:block; position:absolute; top:8px;; left:0; width:8px; height:8px; background-color:#FF0080;}
 .g_codebox {padding:10px;}
 
-.g_code_veiw {width:100%; height:350px; margin-top:10px; border:1px solid #bfbfbf; background-color:#f6f6f6; overflow:hidden; overflow-y:auto;}
+.g_code_veiw {width:100%; height:350px; margin-top:10px; border:1px solid #bfbfbf; background-color:#f6f6f6; overflow:hidden; overflow-y:auto;font-size:12px;}
 .g_code_description {padding:20px; padding-top:3px; color:#999; font-size:11px; }
 .g_code_description h4{color:#4C4C4C; font-size:12px; margin-bottom:5px;}
 .g_code_description p{color:#000000;}
