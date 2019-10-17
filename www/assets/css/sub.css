@@ -4,6 +4,17 @@
 /*  ---------------------
         commonm
  --------------------- */
+.mall .cont_wrap {padding-top:45px;}
+.mall .form_wrap {margin-top:50px;}
+
+/* divison */
+.div_col2 {display: table;width:100%;}
+.div_col2 .inner {display: table-cell;width:50%}
+.div_col2 .inner:last-child {padding-left:30px;}
+.section {margin-top:60px;}
+.section .form_wrap {margin-top:0;}
+
+
 .pg_nav_wrap {position: relative;width:112px;height:18px;}
 .pg_nav_wrap .pg_nav { width: 112px;}
 .pg_nav_wrap .swiper-button-next,
@@ -41,6 +52,19 @@
   .tit_sub.type_bg p {margin-top:15px;}
   .tit_sub.type_bg {height:170px;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -577,8 +601,6 @@
 /*  ---------------------
         mall
  --------------------- */
-.mall .cont_wrap {padding-top:45px;}
-.mall .form_wrap {margin-top:50px;}
 
 .pdt_list {max-width: 1530px;margin:0 auto;}
 .pdt_list .inner .item_list { width:102%; overflow: hidden;margin-left:-30px;margin-top:20px;}

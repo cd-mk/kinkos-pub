@@ -155,13 +155,6 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 .width100 .form_item {max-width:100% !important;width:100% !important;}
 
 
-/* divison */
-.div_col2 {display: table;width:100%;}
-.div_col2 .inner {display: table-cell;width:50%}
-.div_col2 .inner:last-child {padding-left:30px;}
-.section {margin-top:60px;}
-.section .form_wrap {margin-top:0;}
-
 /* color */
 .point_blue {color: #03a2ea;}
 .point_yellow {color: #fffd9b;}
@@ -694,7 +687,7 @@ body.open {overflow:hidden;}
 .form_group .form_item .txt_vaild {display:none; float:left; margin-top:10px; color:#03a2ea;}
 .form_group .form_item.not_vaild .txt_vaild {display:block;}
 .form_group .form_item.is_vaild .txt_vaild {display:none;}
-.form_group .form_item .form_name {display:table-cell;width:7.32%; font-size:16px; font-weight:700; vertical-align:middle;}
+.form_group .form_item .form_name {display:table-cell;width:7.32%; font-size:16px; font-weight:700; vertical-align:middle;line-height: 1.3;}
 .form_group .form_item .form_name.ver_mid {vertical-align:middle;}
 .form_group .form_item .form_name.ver_top {vertical-align:top;}
 /* .form_group .form_item .form_text {padding-top:14px; } */
@@ -1047,6 +1040,9 @@ common mall
 
 .step_wrap .step_item.active .txt_step .number,
 .step_wrap .step_item.active .txt_step .desc {color: #03a2ea;}
+
+/* dext file form */
+.dext_box[id*="dext"] {width:100%;}
 
 
 
