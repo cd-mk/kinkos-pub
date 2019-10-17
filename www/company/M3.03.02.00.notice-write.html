@@ -103,7 +103,7 @@
                     </div>
                   </div>
                  
-                  <div class="form_group">
+                  <div class="form_group top_line">
                     <div class="form_item">
                       <span class="form_name ver_mid">내용</span>
                       <div class="form_inp">
@@ -113,38 +113,41 @@
                   </div>
                   <div class="form_group">
                     <div class="form_item">
-                      <span class="form_name ver_mid">링크1#</span>
+                      <span class="form_name ver_mid">링크 #1</span>
                       <div class="form_inp">
                         <input type="text" title="링크 입력" placeholder="링크">
                       </div>
                     </div>
                   </div>
-                  <div class="form_group">
+                  <div class="form_group btm_line">
                     <div class="form_item">
-                      <span class="form_name ver_mid">링크2#</span>
+                      <span class="form_name ver_mid">링크 #2</span>
                       <div class="form_inp">
                         <input type="text" title="링크 입력" placeholder="링크">
                       </div>
                     </div>
                   </div>
 
-                  <div class="form_group top_line btm_line">
+                
+                  <div class="form_group top_line">
                     <div class="form_item">
-                      <span class="form_name">파일 첨부#1</span>
+                      <strong class="form_name">파일 첨부 #1</strong>
                       <div class="form_inp">
-                        <div class="file_inp_box">
-                          <!-- 첨부 파일 이름 출력 요소 -->
-                          <input type="text" class="file_name js-file_name inp" readonly>
-                          <!-- 파일 첨부 시 hide 클래스 제거됨, 첨부 파일 삭제 시 hide클래스 추가됨 -->
-                          <button type="button" class="btn type03 btn_delete hide"><span>삭제</span></button>
-                          <input type="file" id="file1" class="file_inp" required>
-                          <label for="file1" class="btn type03">첨부</label>
+                        <div class="dext_box">
+                          <div id="dext5-container"></div>
+                          <div cdlass="btn_wrap">
+                            <button id="btn-add-files" class="btn type03">파일추가</button>
+                            <button id="btn-upload" class="btn type04">전송하기</button>
+                            <button id="btn-delete-files" class="btn type04" onclick="btnDeleteItem_Onclick()">삭제</button>
+                          </div>
                         </div>
                       </div>
-                      
                     </div>
                   </div>
-                  <div class="form_group top_line btm_line">
+
+
+
+                  <div class="form_group btm_line">
                     <div class="form_item">
                       <span class="form_name">파일 첨부#2</span>
                       <div class="form_inp">

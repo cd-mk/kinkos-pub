@@ -880,7 +880,7 @@
 .my_order .bbs_list .ord_num img{border: 1px solid #e0e0e0;width:120px;height:80px;}
 
 
-
+/* 파일주문 */
 .visual_box {height:240px;background-repeat:no-repeat;background-position: 50%;background-size: cover;font-size:32px;padding:60px;text-align:left;}
 .visual_box strong {font-weight: 700;color:#222;}
 .visual_box strong span {font-weight: 700;color:#e52135;}
@@ -892,3 +892,28 @@
 .guide_box p {margin-top:15px;}
 .guide_box strong {color:#03a2ea}
 .file_order_wrap .visual_box  {background-image: url(../image/mall/common/file-order-vs.jpg);}
+
+
+.terms_box textarea {
+	position:relative;
+	overflow:auto;
+	height:240px;
+	margin-bottom:15px;
+	padding:20px;
+	border:1px solid #dedede;
+	background:#f3f4f6;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	scrollbar-base-color:#d9d9d9;
+	scrollbar-arrow-color:#8e8e8e;
+	scrollbar-3dlight-color:#d9d9d9;
+	scrollbar-darkshadow-color:#d9d9d9;
+	scrollbar-face-color:#d9d9d9;
+	scrollbar-highlight-color:#d9d9d9;
+	scrollbar-shadow-color:#d9d9d9;
+	scrollbar-track-color:#f2f2f2;
+	-webkit-overflow-scrolling:touch
+}
+
+.terms_box+.terms_box { margin-top: 45px; }
