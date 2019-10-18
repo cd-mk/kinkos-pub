@@ -302,6 +302,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:0 -40p
 .bbs_list .cell_center {text-align:center;}
 .bbs_list .ico_new {display:inline-block; width:18px; height:18px; background:url('../../assets/image/common/ico-new.png') no-repeat 0 0;}
 .bbs_list td .btn_wrap {margin-top:0;}
+p+.btn_wrap {margin-top:40px !important;}
 .bbs_list .btn_wrap.center {margin-top:60px;}
 
 .bbs_list.typeB td {padding:30px 20px;}
@@ -376,7 +377,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:0 -40p
 .anchor .page_tab {top:0;background:#fff;z-index:9;}
 .anchor .page_tab.fixed {position: fixed;} 
 .anchor.cont_wrap {position: relative;}
-.anchor .con_box > div {min-height:400px;}
+.anchor .con_box > div {min-height:200px;}
 
 .tit_box+.page_tab {margin-top:100px;}
 .tit_box+.page_tab.fixed {margin-top:0;}
@@ -885,16 +886,47 @@ input[type="radio"]:checked:disabled + label::before {background-position:0 -40p
 .service_info_list .item_list .box {position: relative;max-width:1530px;margin:80px auto;}
 .service_info_list .item_list .box .img_box {float:left;width:490px;}
 .service_info_list .item_list .box .txt_box {float:left;padding-left:80px;padding-top:40px}
-.service_info_list .item_list .box .txt_box strong {font-size:24px;font-weight:700;}
-.service_info_list .item_list .box .txt_box .features {font-size:18px;color:#222;margin-top:28px;line-height: 1.5;}
+.service_info_list .item_list .box .txt_box > strong {font-size:24px;font-weight:700;}
+.service_info_list .item_list .box .txt_box .features {font-size:18px;color:#222;margin-top:28px;line-height: 1.7;}
 .service_info_list .toggle_view {font-size:18px;color:#03a2ea;font-weight:700;position: absolute;bottom:40px;}
-.service_info_list .service_info_view {background:#f3f4f6;padding:80px 0;margin-top:80px;position: relative;}
+
+.service_info_list .toggle_view i {background: #03a2ea;border-radius: 50%; height: 20px; width: 20px;position: relative;display:inline-block; margin-left: 13px; vertical-align: middle;}
+.service_info_list .toggle_view i:before { height:2px; top:9px; left:4px; width: 12px;background: #fff; content: ""; position: absolute;}
+.service_info_list .toggle_view i:after { height: 12px; left:9px; top: 4px; width: 2px;background: #fff; content: ""; position: absolute;}
+.service_info_list .link_view {font-size:18px;color:#03a2ea;font-weight:700;position: absolute;bottom:40px; text-decoration: underline;}
+
+.service_info_list .service_info_view {background:#f3f4f6;position: relative;overflow:hidden;height:0;opacity: 0;transition:all 0.5s;}
+.service_info_list .item_list.on .service_info_view {opacity: 1;height:auto;padding:80px 0;margin-top:80px;}
 .service_info_list .swiper-wrapper{max-width:1530px; margin:0 auto;}
 .service_info_list .swiper-slide {width:490px;}
 .service_info_list .service_info_view .txt {margin-top:40px;}
 .service_info_list .service_info_view .txt strong {font-size:20px;font-weight:700;}
 .service_info_list .service_info_view .txt p {font-size:18px;line-height:1.7;margin-top:15px;}
 .service_info_list .pg_nav_wrap {margin-top:60px;}
+.service_info_list .item_list p strong {color:#03a2ea;font-weight: 400;;}
+.service_info_list .service_info_view .thumb {display: block;overflow: hidden;}
+
+.landing_list {margin:0 auto;max-width:1230px;text-align: center;font-size:0;border-top:1px solid #e7e7e7;border-right:1px solid #e7e7e7;}
+.landing_list li {display:inline-block;width:16.6666%;max-width:212px;font-size:18px;border-left:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;}
+.landing_list li a {display:block;height:212px;width:100%;position: relative;overflow: hidden;}
+.landing_list li a span {display:table;width:100%;height:100%;text-align: center;}
+.landing_list li span:first-child {opacity: 1;top:0;transition:all 0.5s;position: absolute;}
+.landing_list li.active span:first-child, .landing_list li a:hover span:first-child {opacity: 0;top:-200px;}
+.landing_list li span:last-child {background-position: 50%;background-size: cover;background-repeat: no-repeat;top:200px;transition:all 0.5s;opacity: 0;position:absolute;}
+.landing_list li.active a span:last-child, .landing_list li a:hover span:last-child {top:0;opacity: 1;color:#fff;font-weight:700;}
+.landing_list li em {vertical-align: middle;display: table-cell;font-style: normal;}
+.landing_list li.item_01 span:last-child {background-image: url(../image/company/sub/landing-1@3x.png);}
+.landing_list li.item_02 span:last-child {background-image: url(../image/company/sub/landing-2@3x.png);}
+.landing_list li.item_03 span:last-child {background-image: url(../image/company/sub/landing-3@3x.png);}
+.landing_list li.item_04 span:last-child {background-image: url(../image/company/sub/landing-4@3x.png);}
+.landing_list li.item_05 span:last-child {background-image: url(../image/company/sub/landing-5@3x.png);}
+.landing_list li.item_06 span:last-child {background-image: url(../image/company/sub/landing-6@3x.png);}
+.landing_list li.item_07 span:last-child {background-image: url(../image/company/sub/landing-7@3x.png);}
+.landing_list li.item_08 span:last-child {background-image: url(../image/company/sub/landing-8@3x.png);}
+.landing_list li.item_09 span:last-child {background-image: url(../image/company/sub/landing-9@3x.png);}
+.landing_list li.item_10 span:last-child {background-image: url(../image/company/sub/landing-10@3x.png);}
+.landing_list li.item_11 span:last-child {background-image: url(../image/company/sub/landing-11@3x.png);}
+.landing_list li.item_12 span:last-child {background-image: url(../image/company/sub/landing-12@3x.png);}
 
 
 
@@ -902,7 +934,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:0 -40p
       로그인 area
  ------------------------- */
 .login_wrap .inner { width: 490px; margin: 0 auto; position: relative;}
-.login_wrap .form_group { margin-top: 57px;padding:40px 0 38px; border-top:2px solid #000;position: relative;border-bottom:1px solid #e7e7e7;}
+.login_wrap .form_group { margin-top: 57px;padding:40px 0 38px; border-top:2px solid #000;position: relative;border:1px solid #e7e7e7;}
 .login_wrap .form_group .form_item { margin-top:20px;position: relative;}
 .login_wrap .form_group .form_item:first-child input { border-color: #03a2ea; }
 .login_wrap .form_group .form_item:first-child { margin-top: 0; }
