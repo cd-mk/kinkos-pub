@@ -477,6 +477,7 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 /* side menu */
 .sidebar {padding-left:260px;position: relative;padding-top:0;}
 .sidebar .snb {widtH:230px;position: absolute;left:0;top:0;color:#222;}
+.mall .sidebar .snb {top:45px;}
 .sidebar .snb h2 {font-size:36px;font-weight: 700;}
 .sidebar .snb ul li a {display:inline-block;}
 .sidebar .snb ul li.active a,
@@ -495,7 +496,7 @@ h3 {font-size:24px;font-weight: 700;margin-bottom:20px;}
 
 
  /* local menu */
-.breadcrumb_wrap {font-size:10px;color:#737373;max-width:1530px;margin:30px auto 50px;}
+.breadcrumb_wrap {font-size:10px;color:#737373;max-width:1530px;margin:20px auto 18px;}
 .breadcrumb_wrap .home {font-size:0;width:16px;height:16px;overflow: hidden;line-height: 999;display: inline-block;margin-top: 5px;vertical-align: top;}
 .breadcrumb_wrap .home:after{content:"";clear:both;display:inline-block;background:url(../image/common/ico-home.png) no-repeat 0 0;width:16px;height:16px;}
 .breadcrumb_wrap ul {display: inline-block;}

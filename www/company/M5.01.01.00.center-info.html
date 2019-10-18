@@ -47,6 +47,11 @@
 
   <!-- CONTENT -->
   <div id="content">
+    <div class="tit_sub type_bg bg_center">
+      <h2>Kinko’s 센터 찾기</h2>
+      <p>고객님이 계신 곳에서 가까운 지역을 선택하시면, 센터를 쉽게 찾을 수 있습니다.</p>
+    </div>
+ 
     <!-- breadcrumb  -->
     <div class="breadcrumb_wrap">
       <a href="./00.main-www.html" class="home">Home</a>
@@ -56,40 +61,44 @@
     </div>
     <!-- //breadcrumb  -->
 
-    <div class="tit_sub">
-      <h2>Kinko’s 센터 찾기</h2>
-      <p>고객님이 계신 곳에서 가까운 지역을 선택하시면, 센터를 쉽게 찾을 수 있습니다.</p>
-    </div>
-
     <!-- 콘텐츠 group "cont_wrap" 고정, tab 유무에 따라 "tab_area"추가 -->
     <div class="cont_wrap no_pdt">
       <div class="con_box center_info_wrap">
-        <div class="sch_box clearfix">
-          <div class="sch_item">
-            <select>
-              <option value="">지역</option>
-              <option value="">서울</option>
-              <option value="">경기</option>
-            </select>
-          </div>
-          <div class="sch_item">
-            <select>
-              <option value="">지하철역 명으로 찾기</option>
-              <option value="">서울역</option>
-              <option value="">강남역</option>
-            </select>
-          </div>
-          <div class="sch_item">
-            <select>
-              <option value="">영업시간/서비스로 찾기</option>
-              <option value="">서비스1</option>
-              <option value="">서비스2</option>
-            </select>
-          </div>
-          <div class="btn_wrap">
-            <button type="button" class="btn type01">조회</button>
+        <div class="tit_box">
+          <h3>Kinko’s 센터 찾기</h3>
+        </div>
+
+
+        <div class="form_wrap type_select">
+          <div class="form_group col3">
+            <div class="form_item">
+              <select name="" id="" title="지역 선택">
+                <option value="">지역</option>
+                <option value="">서울</option>
+                <option value="">경기</option>
+              </select>
+            </div>
+            <div class="form_item">
+              <select>
+                <option value="">지하철역 명으로 찾기</option>
+                <option value="">서울역</option>
+                <option value="">강남역</option>
+              </select>
+            </div>
+            <div class="form_item">
+              <select>
+                <option value="">영업시간/서비스로 찾기</option>
+                <option value="">서비스1</option>
+                <option value="">서비스2</option>
+              </select>
+            </div>
+            <div class="btn_wrap">
+              <button type="button" class="btn type01">조회</button>
+            </div>
           </div>
         </div>
+
+
 
         <div class="bbs_list">
           <div class="head_item clearfix">
@@ -121,12 +130,19 @@
                     <li>토 9:00 ~ 18:00</li>
                     <li>일 9:00 ~</li>
                   </ul>
-                  <p class="hours_txt point_blue">주말, 공휴일 점심 휴게 시간 : 13:00 ~ 14:00</p>
+                  <p class="hours_txt">주말, 공휴일 점심 휴게 시간 : 13:00 ~ 14:00</p>
                 </td>
-                <td></td>
+                <td>
+                  <ul class="offer_service clearfix">
+                    <li><span class="offer_1">24시간 운영</span></li>
+                    <li><span class="offer_2">대형출력</span></li>
+                    <li><span class="offer_3">즉석상품</span></li>
+                    <li><span class="offer_4">CAD 출력</span></li>
+                  </ul>
+                </td>
                 <td>
                   <div class="btn_wrap">
-                    <a href="#url" class="btn type03">파일 주문</a>
+                    <a href="#url" class="btn type01">파일 주문</a>
                   </div>
                 </td>
               </tr>
