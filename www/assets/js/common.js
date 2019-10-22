@@ -82,11 +82,24 @@ var setGnb = function() {
         $('.company_gnb').toggleClass('active');
         $('.mall_gnb').toggleClass('off');
       }
-
       
     });
   }
   toggleGnb();
+
+
+  //map link
+  $('ul.locat_list li').on('mouseleave focusout', function () {
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.locat_list li').removeClass('active');
+    $('.map-content').removeClass('active');
+
+    $(this).addClass('active');
+    $("#" + tab_id).addClass('active');
+  })
+
+
 }
 
 // MOBILE GNB
@@ -99,11 +112,14 @@ var mobileGnb = function () {
 		$('body').removeClass('open');
     $('.mo_gnb_wrap').removeClass('active');
   });
-  $('.menu_item .title').on('click', function() {
-    $('.menu_item .menu_list').stop().slideUp(300);
-    $(this).next('.menu_list').stop().slideDown(300);
+
+
+  $('.menu_item .title').on('click', function () {
+    $(this).closest('.menu_item .title').toggleClass('active');
+    $(this).closest('.menu_item').find('.menu_list').slideToggle();
   });
 };
+
 
 
 
