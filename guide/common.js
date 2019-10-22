@@ -34,6 +34,7 @@ $(".g_status_board").each(function(){
 		var txt02 ="수정완료";
 		var txt03 ="진행";
 		var txt04 ="수정";
+		var txt05 = "동일페이지";
 		if(vars==txt01){
 			$(this).parent('tr').addClass('g_fin1');
 		} else if(vars==txt02){
@@ -41,7 +42,9 @@ $(".g_status_board").each(function(){
 		} else if(vars==txt03){
 			$(this).parent('tr').addClass('g_ing');
 		} else if(vars==txt04){
-			$(this).parent('tr').addClass('g_ing');
+			$(this).parent('tr').addClass('g_modi');
+		} else if (vars == txt05) {
+			$(this).parent('tr').addClass('g_same');
 		}
 	});
 	var lengthtatal =$('.g_status_board tbody tr').length;
