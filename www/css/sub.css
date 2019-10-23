@@ -39,11 +39,11 @@
 .tit_sub p {position:relative; font-size:16px;margin-top:20px;color:#333;}
 .tit_sub.type_bg p:after {content:'';position:absolute;left:50%; bottom:-60px; transform:translateX(-50%); width:1px;height:32px; background:#e7e7e7;}
 .tit_sub.type_bg {height: 220px; margin-bottom: 0; background-size:cover; background-repeat:no-repeat;}
-.tit_sub.bg_info {background-image:url('../../image/company/sub/bg_sub01.jpg');}
-.tit_sub.bg_event {background-image:url('../../image/company/sub/bg_sub02.jpg');}
-.tit_sub.bg_cs {background-image:url('../../image/company/sub/bg_sub03.jpg');}
-.tit_sub.bg_center {background-image:url('../../image/company/sub/bg_center.jpg');}
-.tit_sub.bg_service {background-image:url('../../image/company/sub/bg_service.jpg');}
+.tit_sub.bg_info {background-image:url('../image/company/sub/bg_sub01.jpg');}
+.tit_sub.bg_event {background-image:url('../image/company/sub/bg_sub02.jpg');}
+.tit_sub.bg_cs {background-image:url('../image/company/sub/bg_sub03.jpg');}
+.tit_sub.bg_center {background-image:url('../image/company/sub/bg_center.jpg');}
+.tit_sub.bg_service {background-image:url('../image/company/sub/bg_service.jpg');}
 .tit_sub.type_bg h2 {padding-top: 65px; color: #fff;}
 .tit_sub.type_bg p {margin-top: 18px; font-size: 18px; color: #fff;}
 @media screen and (max-width:1024px) { 
