@@ -196,8 +196,8 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 
 @media screen and (max-width:1024px) {
   .btn_wrap {margin-top:25px;}
-  .btn_wrap[class*="col"] .btn {display:block; margin-left:0;width:100%;max-width: 100%;}
-  .btn_wrap[class*="col"] .btn:last-child {margin-top:10px;}
+  .btn_wrap[class*="col"] .btn {display:block; margin-left:0;margin-top:10px;width:100%;max-width: 100%;}
+  .btn_wrap[class*="col"] .btn:first-child {margin-top:0;}
 
   .btn_wrap .left, .btn_wrap .right {overflow:hidden;}
   .btn_wrap .left {}
@@ -546,6 +546,10 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 .sidebar .snb {left:15px;}
 }
 
+@media screen and (max-width:1024px) {
+.sidebar .snb {display: none;}
+.sidebar {padding:0 15px;margin-top:0;}
+}
 
 .sch_wrap {z-index:10; position:relative; top:-50px; margin:0 auto; width:1515px; height:100px; background:#fff; box-shadow:0 15px 20px 5px rgba(0, 0, 0, 0.1);}
 .sch_wrap::after {content:''; display:table; clear:both;}
@@ -602,7 +606,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
   .breadcrumb_wrap li:before {font-size:16px;}
   .mall .tit_sub.type_bg + .breadcrumb_wrap {margin-top:17px; padding-bottom:17px; border-bottom:1px solid #e7e7e7;}
   .mall .breadcrumb_wrap + .tab_area {margin-top:0;}
-  .mall .breadcrumb_wrap { padding:0 0 15px; }
+  .mall .breadcrumb_wrap { padding:0 15px 15px; }
 
 }
 

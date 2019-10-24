@@ -16,6 +16,11 @@
 .section {margin-top:60px;}
 .section .form_wrap {margin-top:0;}
 
+@media screen and (max-width:1024px) {
+  .section {margin-top:30px;}
+  .section .form_wrap+.form_wrap {margin-top:30px;}
+}
+
 /* global */
 .top_line {padding-top:40px; border-top:1px solid #e7e7e7;}
 .btm_line {border-bottom:1px solid #e7e7e7;}
@@ -111,12 +116,17 @@ h3+.form_alert { /* float: right; */ position: absolute; top: 0; right: 0; }
 .noti strong {color:#03a2ea} 
 
 @media screen and (max-width:1024px) {
-  .form_wrap {margin-top:30px; padding:30px 0;}
+  .form_wrap {margin-top:30px; padding:0;}
   .tab_area .type_select {margin-top:0;position: relative;}
   .type_select {height:auto; padding:27px 15px;border-top:0;}
   .tit_box+.type_select {margin-top:30px}
   .type_select .form_group.col2 .form_item {width:100% !important;margin-left:0;}
   .type_select .form_group.col2 .form_item:last-child {margin-top:10px;}
+  .type_select .form_group.col3 {padding:0;}
+  .type_select .form_group.col3 .form_item {width:100% !important;margin-left:0;margin-top:10px;}
+  .type_select .form_group.col3 .form_item:first-child {margin-top:0;}
+
+
 
   .type_select .form_group .form_item {float:left; width:30%;margin-top: 0;}
   .type_select .form_group .form_inp {width: calc(100% - 34%);}
@@ -583,16 +593,28 @@ p+.btn_wrap {margin-top:40px !important;}
 .center_info_wrap .bbs_list tr td:first-child {padding-left: 50px;}
 .center_info_wrap .bbs_list tr td:nth-child(3) {padding-left: 55px;}
 .center_info_wrap .bbs_list .btn_more {display: inline-block; width: 98px; height: 36px; border: 1px solid #dedede; color: #160000; line-height: 35px; text-align: center;}
-.center_info_wrap .bbs_list .hours_list > li {margin-top: 8px; font-size: 18px; color: #333;}
+.center_info_wrap .bbs_list .hours_list > li {margin-top: 8px; font-size: 1em; color: #333;}
 .center_info_wrap .bbs_list .hours_list > li:first-child {margin-top: 0;}
 .center_info_wrap .bbs_list .hours_txt {margin-top: 10px; font-size: 14px;color:#03a2ea}
 .center_info_wrap .bbs_list .btn_wrap .btn {height: 44px; line-height: 44px; font-weight: 400;}
 
+@media screen and (max-width:1024px) {
+  .center_info_wrap .bbs_list tr td {display: block;height:auto;padding-left:0;}
+  .center_info_wrap .bbs_list tr td:first-child {font-size:20px;font-weight: 700;padding-bottom:20px;}
+  .center_info_wrap .bbs_list .head_item .txt {font-size:14px;}
+  .center_info_wrap .bbs_list tr {padding:33px 0;}
+  .center_info_wrap .bbs_list tr td:first-child { padding-left: 0; }
+  .center_info_wrap .bbs_list tr td:nth-child(3) {padding-left:0;}
+  .center_info_wrap .bbs_list .hours_list > li {display: inline-block;}
+  .center_info_wrap .bbs_list .hours_list > li:nth-child(2) {width:50%;}
+  .center_info_wrap .bbs_list .hours_list > li:nth-child(2)::before {content: "/";display: inline-block}
+}
+
 .offer_service {display: inline-block;}
 .offer_service li {display:table-cell;padding-left:10px;}
 .offer_service li:first-child {padding-left:0;}
-.offer_service li span {display: inline-block;widtH:87px;height:93px;letter-spacing: -1px;text-align: center;}
-.offer_service li span:before {display:block;widtH:61px;height:61px;background-position:50%;background-repeat: no-repeat;content:"";clear: both;margin: 0 auto 14px;}
+.offer_service li span {display: inline-block;width:87px;height:93px;letter-spacing: -1px;text-align: center;}
+.offer_service li span:before {display:block;width:61px;height:61px;background-position:50%;background-repeat: no-repeat;content:"";clear: both;margin: 0 auto 14px;}
 .offer_service li span.offer_1:before {background-image: url(../image/company/sub/offer-1.png);}
 .offer_service li span.offer_2:before {background-image: url(../image/company/sub/offer-2.png);}
 .offer_service li span.offer_3:before {background-image: url(../image/company/sub/offer-3.png);}
@@ -604,6 +626,17 @@ p+.btn_wrap {margin-top:40px !important;}
   .center_info_wrap .sch_box .sch_item {width:22.69%;}
   .center_info_wrap .sch_box .sch_item:nth-child(3) {width:33.61%;}
 }
+
+@media screen and (max-width:1024px) { 
+  .offer_service {width:100%;}
+  .offer_service li {display:inline-block;padding-left:4px;width:31%;text-align: center;margin-top:20px;}
+  .offer_service li span {width:auto;letter-spacing: -1px;text-align: center;}
+  .offer_service li span:before {display:block;width:50px;height:55px;background-size:50px auto;}
+  .center_info_wrap .bbs_list .btn_wrap {margin-top:40px;}
+  .center_info_wrap .bbs_list .btn_wrap .btn {width:100%}
+  .center_info_wrap .bbs_list .head_item .sort_item .sort_opt {font-size:14px;}
+}
+
 /* 공지사항 */
 .notice_wrap .bbs_list {margin-top:58px;}
 .notice_wrap .bbs_list .cell_new td {color:#222; font-weight:bold;}
@@ -964,7 +997,7 @@ p+.btn_wrap {margin-top:40px !important;}
 }
 @media screen and (max-width:1024px) { 
   .join_wrap .form_wrap .form_group.col2 .form_item {width:100%;}
-  .join_wrap .txt {padding-top:0;}
+  .join_wrap .txt {}
   .join_wrap .txt > strong{font-size:24px;}
   .join_wrap .txt p {margin-top:30px;}
 }
@@ -1068,13 +1101,13 @@ p+.btn_wrap {margin-top:40px !important;}
 .login_wrap .result .id_yes {text-align: left;}
 .login_wrap .result .id_yes strong {font-size: 24px;font-weight:400;display: inline-block;padding:0 20px;}
 .login_wrap .result .btn_wrap {margin-top:20px;}
-.login_wrap .result .btn {widtH:240px;}
+.login_wrap .result .btn {width:240px;}
 
 .login_wrap .result .form_group .form_item .form_name {width:170px;padding-left:20px;text-align:left;color:#222;}
 
 @media screen and (max-width:1024px) {
   .login_wrap .form_group .btn_wrap .btn {width:100%;}
-  .login_wrap .result .btn {widtH:100%;}
+  .login_wrap .result .btn {width:100%;}
   .login_wrap .result .id_yes {text-align:center;}
   .login_wrap .inner { width: 490px; margin: 0 auto; position: relative;}
   .login_wrap .form_group { margin-top: 30px;padding:30px 0 30px; }
@@ -1216,7 +1249,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .ease_cart ul dt {position:absolute;top:0;left:0;width:112px;line-height:44px;font-weight: 700;padding:0}
 .ease_cart ul dl {width:100%;padding-left:112px;position: relative;margin-top:20px;}
 .ease_cart ul dl:first-child{margin-top:0;}
-.ease_cart ul dd {vertical-align: top;color:#777;widtH:100%;}
+.ease_cart ul dd {vertical-align: top;color:#777;width:100%;}
 .ease_cart .opt_ea {position: relative;padding-right:75px;}
 .ease_cart .opt_ea .btn_delete {width:65px;position: absolute;top:0;right:0;font-weight: 400;}
 
@@ -1460,7 +1493,9 @@ p+.btn_wrap {margin-top:40px !important;}
 /* 회원정보 변경 */
 .userinfo_wrap {margin-top:60px;}
 .userinfo_wrap .form_group .form_item .form_name {padding-top:0;width:220px;}
-
+@media screen and (max-width:1024px) {
+  .userinfo_wrap {margin-top:30px;}
+}
 
 /* 마이페이지 이벤트 참여내역 변경 */
 .mpg_bbs .status {color: #999;}
