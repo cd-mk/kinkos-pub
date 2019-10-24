@@ -138,6 +138,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 }
 @media screen and (max-width:1024px) { 
   .cont_wrap {padding-top:30px;}
+  .cont_wrap.layout_full {padding-left:0;padding-right:0;}
   h2 {font-weight:500;}
   h3 {font-size:16px;margin-bottom:10px;}
 }
@@ -195,7 +196,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 .btn.fileup i {margin-right:12px;}
 
 @media screen and (max-width:1024px) {
-  .btn_wrap {margin-top:25px;}
+  .btn_wrap {margin-top:25px;font-size:1em;}
   .btn_wrap[class*="col"] .btn {display:block; margin-left:0;margin-top:10px;width:100%;max-width: 100%;}
   .btn_wrap[class*="col"] .btn:first-child {margin-top:0;}
 
@@ -207,7 +208,6 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
   .dext_box .btn_wrap[class*="col"] .btn {display:inline-block; margin-left:10px;}
   .dext_box .btn_wrap[class*="col"] .btn:last-child {margin-top:0;}
   .dext_box .btn_wrap[class*="col"] .btn:first-child {margin-left:0;}
-  
 
   .btn {font-size:16px;}
 }
