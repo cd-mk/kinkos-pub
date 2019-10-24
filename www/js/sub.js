@@ -45,19 +45,16 @@ function slideInit() {
   var pdtOther = new Swiper('.pdt_slide', {
     slidesPerView: 'auto',
     spaceBetween: 30,
-    loopFillGroupWithBlank: true,
-    slideToClickedSlide: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
   });
 
 
-  var detailThumb = new Swiper('.pdt_thumbs', {
+  var detailThumb = new Swiper('.pdt_thumbs .inner', {
+    slidesPerView: 'auto',
     spaceBetween: 15,
-    slidesPerView: 6,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
   var detailPhoto = new Swiper('.photo_box', {
     slidesPerView: 1,

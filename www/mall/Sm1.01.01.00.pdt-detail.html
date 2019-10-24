@@ -16,7 +16,7 @@
 <meta property="og:image" content="../image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-  <title>상품리스트 | 킨코스코리아</title>
+  <title>상품상세보기 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../css/lib/animate.css">
 <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -58,7 +58,7 @@
       </div>
       <!-- //breadcrumb  -->
 
-      <div class="cont_wrap tab_area anchor">
+      <div class="cont_wrap tab_area">
 
         <!-- 상품상세 option -->
         <div class="pdt_info_wrap layout_width">
@@ -75,14 +75,16 @@
                 
               </div>
             </div>
-            <div class="pdt_thumbs swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
-                <div class="swiper-slide"><img src="../image/mall/product/pl_02.jpg" /></div>
-                <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
-                <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
-                <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
-                <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
+            <div class="pdt_thumbs">
+              <div class="inner swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
+                  <div class="swiper-slide"><img src="../image/mall/product/pl_02.jpg" /></div>
+                  <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
+                  <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
+                  <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
+                  <div class="swiper-slide"><img src="../image/mall/product/pl_thumb.jpg" /></div>
+                </div>
               </div>
               <div class="swiper-button-next mid"></div>
               <div class="swiper-button-prev mid"></div>
@@ -92,12 +94,7 @@
           <!-- 상품 옵션 -->
           <div class="pdt_detail">
             <div class="form_wrap">
-              <form name="sbagfrm" method="post" action="" style="margin:0px;">
-                <input type="hidden" name="mode" value="add">
-                <input type="hidden" name="itemid" value="1651260">
-                <input type="hidden" name="itemoption" value="">
-                <input type="hidden" name="itemPrice" value="15900">
-        
+              <form name="sbgfrm" method="" action="">
                 <div class="pdt_head">
                   <p class="pdt_code">상품코드 : 000000</p>
                   <h2><p class="pdt_name">즉석 포스터 출력 A2</p></h2>
@@ -123,10 +120,10 @@
                   <div class="form_item opt_default">
                     <strong class="form_name">선택옵션</strong>
                     <div class="form_inp">
-                      <select name='' class="sel_opt">
+                      <select name='' class="sel_opt" title="용지 선택하기">
                         <option value='' selected>용지</option>
                       </select>
-                      <select name='' class="sel_opt">
+                      <select name='' class="sel_opt" title="재질 선택하기">
                         <option value='' selected>재질</option>
                       </select>
                     </div>
@@ -135,39 +132,47 @@
                   <div class="form_item">
                     <strong class="form_name">추가옵션</strong>
                     <div class="form_inp">
-                      <select name='' class="sel_opt">
+                      <select name='' class="sel_opt" title="추가옵션 선택하기">
                         <option value='' selected>추가옵션</option>
                       </select>
                     </div>
                   </div>
 
-                  <div class="form_item">
+                  <div class="form_item opt_size">
                     <strong class="form_name">사이즈</strong>
+                    <!-- 
+                      사이즈 입력하기 
+                      상품에 따라 사이즈를 집적 입력하는 기능 필요 시 노출
+                    -->
                     <div class="form_inp">
-                      <input type="radio" name="sizeSe" id="sizeSel1">
-                      <label for="sizeSel1">사이즈 입력하기</label>
                       <input type="text" class="inp" />
                     </div>
+                    <!-- //사이즈 입력하기 -->
+
+                    <!-- 사이즈 선택하기 -->
                     <div class="form_inp">
-                      <input type="radio" name="sizeSe" id="sizeSel12">
-                      <label for="sizeSel12">사이즈 선택하기</label>
-                      <select name='' class="sel_opt">
+                      <select name='' class="sel_opt" title="사이즈 선택하기">
                         <option value='' selected>90mm X 50mm</option>
                       </select>
                     </div>
+                    <!-- //사이즈 선택하기 -->
+
+
+                    <!-- 사이즈 샘플 이미지 -->
+                    <p class="size_sample"><img src="../image/common/pdt-size-sample.png" alt="사이즈 샘플 이미지"></p>
                   </div>
 
                   <div class="form_item num">
                     <strong class="form_name">수량</strong>
                     <div class="form_inp">
-                      <input type="text" class="dtl_num inp" />
+                      <input type="text" class="dtl_num inp" title="수량 입력" />
                     </div>
                   </div>
 
                   <div class="form_item">
                     <strong class="form_name">배송비</strong>
                     <div class="form_inp">
-                      <select name='' class="sel_opt">
+                      <select name='' class="sel_opt" title="배송비 선택하기">
                         <option value='' selected>선택</option>
                       </select>
                       <p class="desc">- 유료배송 상품입니다. 배송비 : 3,000원</p>
@@ -179,8 +184,6 @@
                   <div class="form_item">
                     <strong class="form_name">파일업로드</strong>
                     <div class="form_inp file_box">
-              
-
                       <!-- 파일 멀티 업로드 -->
                       <div class="dext_box">
                         <!-- upload box -->
@@ -190,7 +193,8 @@
                           <div class="left">
                             <button id="btn-add-files" class="btn type03">파일선택</button>
                             <!-- <button id="btn-upload" class="btn type04">전송하기</button> -->
-                            <a href="#" class="btn type01">작업가이드</a>
+                            <button type="button" class="btn type01" onclick="javascript:location.href='//www.kinkos.co.kr/data/item/1453452202/ 템플릿_V160805.zip';">작업
+                              가이드</button>
                           </div>
                           <div class="right">
                             <button id="btn-delete-files" class="btn ico_del" onclick="btnDeleteItem_Onclick()">선택삭제</button>
@@ -301,30 +305,56 @@
         </div>
 
 
+      <div class="con_box">
         <!-- 상세설명 -->
         <div class="pdt_tab_wrap layout_width">
           <!-- page tab -->
-          <!-- tab-anchor.js 추가 -->
-          <div class="page_tab col5">
-            <ul>
-              <li id="tab1" onclick="goToByScroll('1');" class="active">상품정보</li>
-              <li id="tab2" onclick="goToByScroll('2');">리뷰 (3)</li>
-              <li id="tab3" onclick="goToByScroll('3');">상품문의</li>
-              <li id="tab4" onclick="goToByScroll('4');">배송 / 교환 / 상품</li>
+          <div class="page_tab col4">
+            <ul id="tab">
+              <li class="active">상품정보</li>
+              <li>리뷰 (3)</li>
+              <li>상품문의</li>
+              <li>배송 / 교환 / 상품</li>
             </ul>
           </div>
           <!-- page tab -->
           
           <!-- 상세설명 탭 콘텐츠 -->
-          <div class="con_box">
+          <div class="con_box" id="tab_con">
             <!-- 상품정보 -->
             <div id="item1" class="item item1">
-
+                <div class="inner">상품정보</div>
             </div>
 
             <!-- 리뷰-->
             <div id="item2" class="item item2">
+              <div class="form_wrap review_wt">
+                <div class="form_group">
+                  <div class="form_inp">
+                    <textarea placeholder="로그인 후 등록이 가능합니다.&#10;상품리뷰를 등록해주세요! 포토 리뷰는 5개까지 등록이 가능합니다."></textarea>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn type01">리뷰<br>등록하기</button>
+                  </div>
               
+                  <div class="form_inp">
+                    <div class="form_inp file_box">
+                      <div class="file_inp_box">
+                        <input type="file" id="file2" class="file_inp" required>
+                        <label for="file2" class="btn type02 fileup"><i class="plus type02"></i>파일 찾기</label>
+                      </div>
+                      <p class="desc">100MB 이하 / 압축파일 권장</p>
+                    </div>
+              
+                    <ul class="file_list">
+                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
+                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
+                    </ul>
+                  </div>
+              
+                </div>
+              </div>
+
               <div class="bbs_list">
                 <h3>이 상품의 전체 리뷰</h3>
                 <table>
@@ -383,18 +413,22 @@
                     <textarea placeholder="로그인 후 등록이 가능합니다.&#10;상품에 대해 궁금한 점을 물어보세요."></textarea>
                   </div>
                   <div class="btn_wrap">
-                    <button type="button" class="btn type01">리뷰<br>등록하기</button>
+                    <button type="button" class="btn type01">문의하기</button>
                   </div>
 
                   <div class="form_inp">
                     <div class="form_inp file_box">
                       <div class="file_inp_box">
-                        <input type="file" id="file2" class="file_inp" required>
-                        <label for="file2" class="btn large type02">파일 찾기</label>
+                        <input type="file" id="file3" class="file_inp" required>
+                        <label for="file3" class="btn type02 fileup"><i class="plus type02"></i>파일 찾기</label>
                       </div>
                       <p class="desc">100MB 이하 / 압축파일 권장</p>
                     </div>
                     
+                    <ul class="file_list">
+                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
+                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
+                    </ul>
                   </div>
 
                 </div>
@@ -529,7 +563,47 @@
               </div>
 
             </div>
+
+
+            <!-- 배송/교환/상품 -->
             <div id="item4" class="item item4">
+              <div class="production_pro">
+                <h3>주문 및 제작 과정</h3>
+                <div class="inner">
+                  <!-- 기본 - 선택 방문 or택배(2~3일) -->
+                  <div class="pro pro_1"><img src="../image/mall/product/pro_1.png" alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.상품제작-4.선택 방문 or택배(2~3일)"></div>
+
+                  <!-- 13시 이전 접수시 당일 완성 - 센터방문 수령 -->
+                  <div class="pro pro_2"><img src="../image/mall/product/pro_2.png"
+                      alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.13시 이전 접수시 당일 완성-4.센터방문 수령"></div>
+
+                  <!-- 상품 제작 2시간 이내 - 센터방문수령 -->
+                  <div class="pro pro_3"><img src="../image/mall/product/pro_3.png"
+                      alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.상품 제작 2시간 이내-4.센터방문 수령"></div>
+
+                  <!-- 익일 또는 평일 09시주문확인 - 상품 제작 2시간 이내 -센터방문수령 -->
+                  <div class="pro pro_4"><img src="../image/mall/product/pro_4.png"
+                      alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.익일 또는 평일 09시주문확인-4.센터방문 수령"></div>
+
+
+                      
+                  <!-- 데이터가 있는 경우 - 상품 제작 4시간 이내 -->
+                  <div class="pro pro_5">
+                    <h4><span>1.</span> 데이터가 있는 경우</h4>
+                    <img src="../image/mall/product/pro_5.png"
+                      alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.상품 제작 4시간 이내-4.센터방문 수령"></div>
+
+                  
+                  <!-- 데이터가 없거나 방문이 불가 경우 - 센터 방문 or 주문 접수 및 제작 - 담당자 상담 -  제작 - 센터 방문 or 택배 수령 -->
+                  
+                  <div class="pro pro_6">
+                    <h4><span>1.</span> 데이터가 없거나 방문이 불가능한 경우</h4>
+                    <img src="../image/mall/product/pro_6.png"
+                      alt="주문 및 제작 과정-1.상담 신청 및 요청 사항 기재-2.담당자 상담 (유선 및 이메일)-3.센터 방문 or 주문 접수 및 제작-4.센터 방문 or 택배 수령"></div>
+
+
+                  </div>
+              </div>
             </div>
           </div>
           <!-- //상세설명 탭 콘텐츠 -->
@@ -564,7 +638,6 @@
 
   <script src="../js/sub.js"></script>
   <script src="../js/jquery.numspinner.min.js"></script>
-  <script src="../js/tab-anchor.js"></script>
   <!-- 수량 -->
   <script type="text/javascript">
     $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });

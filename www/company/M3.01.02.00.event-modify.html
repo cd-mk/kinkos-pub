@@ -16,7 +16,7 @@
   <meta property="og:image" content="../image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-  <title>공지사항 등록 | 킨코스코리아</title>
+  <title>이벤트 수정 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../css/lib/animate.css">
   <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -61,7 +61,7 @@
         <a href="./00.main-www.html" class="home">Home</a>
         <ul class="item_list">
           <li><a href="./04-1.notice-list.html">이벤트&공지사항</a></li>
-          <li><a href="#url">공지사항</a></li>
+          <li><a href="#url">이벤트</a></li>
         </ul>
       </div>
       <!-- //breadcrumb  -->
@@ -71,9 +71,9 @@
         <!-- page tab -->
         <div class="page_tab">
           <ul>
-            <li class="active"><a href="./04-1.notice-list.html">공지사항</a></li>
-            <li><a href="./04-2.event.html">이벤트</a></li>
-            <li><a href="./04-4.k-magazine-list.html">K매거진</a></li>
+            <li><a href="">공지사항</a></li>
+            <li class="active"><a href="">이벤트</a></li>
+            <li><a href="">K매거진</a></li>
           </ul>
         </div>
         <!-- page tab -->
@@ -83,24 +83,25 @@
         <!-- 콘텐츠 "con_box" 고정 -->
         <div class="con_box userguide_wrap">
           <div class="tit_box">
-            <h3>공지사항</h3>
+            <h3>이벤트</h3>
           </div>
 
           <div class="section bbs_write width100">
             <form action="">
               <fieldset>
-                <legend>공지사항 작성 양식</legend>
+                <legend>이벤트 수정 양식</legend>
 
-
+                <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
                 <div class="form_wrap">
+
                   <div class="form_group">
                     <div class="form_item chk_box">
                       <span class="form_name">옵션 <sup class="require">*</sup></span>
                       <div class="form_inp">
                         <input type="checkbox" id="chk1" name="pdt_chk">
                         <label for="chk1">공지</label>
-                        <input type="checkbox" id="chk2" name="pdt_chk">
-                        <label for="chk2">New</label>
+                        <!-- <input type="checkbox" id="chk2" name="pdt_chk">
+                        <label for="chk2">New</label> -->
                       </div>
                     </div>
                   </div>
@@ -109,7 +110,7 @@
                     <div class="form_item">
                       <span class="form_name">제목 <sup class="require">*</sup></span>
                       <div class="form_inp">
-                        <input type="text" title="제목 입력" readonly>
+                        <input type="text" title="제목 입력" value="#대형컬러출력 이벤트 다양한 혜택, 놓치지 마세요!">
                       </div>
                     </div>
                   </div>
@@ -118,31 +119,46 @@
                     <div class="form_item">
                       <span class="form_name">내용 <sup class="require">*</sup></span>
                       <div class="form_inp">
-                        <textarea name="" id="" title="내용 입력" readonly></textarea>
+                        <textarea name="" id="" title="내용 입력">
+대형컬러출력 이벤트!
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form_group col2 top_line">
+                    <div class="form_item">
+                      <span class="form_name">이벤트 기간</span>
+                      <div class="form_inp date_sel">
+                        <input type="text" class="inp_date" title="이벤트 시작 날짜 선택">
+                        <span>~</span>
+                        <input type="text" class="inp_date" title="이벤트 종료 날짜 선택">
+                      </div>
+                    </div>
+
+                    <div class="form_item chk_box">
+                      <span class="form_name">진행구분</span>
+                      <div class="form_inp">
+                        <input type="radio" id="progressIng" name="progressChk">
+                        <label for="progressIng">진행중</label>
+                        <input type="radio" id="progressFin" name="progressChk">
+                        <label for="progressFin">종료</label>
                       </div>
                     </div>
                   </div>
 
                   <div class="form_group top_line">
                     <div class="form_item">
-                      <span class="form_name">링크 #1</span>
+                      <span class="form_name">배너링크</span>
                       <div class="form_inp">
-                        <input type="text" title="링크 입력" placeholder="링크">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group">
-                    <div class="form_item">
-                      <span class="form_name">링크 #2</span>
-                      <div class="form_inp">
-                        <input type="text" title="링크 입력" placeholder="링크">
+                        <input type="text" title="링크 입력" value="http://www.kinkos.co.kr">
                       </div>
                     </div>
                   </div>
 
                   <div class="form_group top_line btm_line">
                     <div class="form_item">
-                      <strong class="form_name">이미지 첨부 <sup class="require">*</sup></strong>
+                      <strong class="form_name">이미지 첨부</strong>
                       <div class="form_inp">
                         <!-- 파일 멀티 업로드 -->
                         <div class="dext_box">
