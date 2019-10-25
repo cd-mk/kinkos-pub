@@ -68,7 +68,7 @@
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap layout_full"> 
+      <div class="cont_wrap layout_width"> 
 
       
 
@@ -90,8 +90,136 @@
             </ul>
           </div>
           <!-- page tab -->
+          <div class="noti top big">다양한 제작사례를 알고 싶을 때!</div>
+    <div style="display:none;">
+      <div id="ninja-slider">
+        <div class="slider-inner">
+          <ul>
+            <li>
+              <div class="caption"><h3>제목1</h3></div>
+              <a class="ns-img" href="../image/company/sub/img-magazine01.jpg"></a>
+            </li>
+            <li>
+              <div class="caption"><h3>제목1</h3></div>
+              <a class="ns-img" href="../image/company/sub/img-magazine01.jpg"></a>
+            </li>
+            <li>
+              <div class="caption"><h3>제목1</h3></div>
+              <a class="ns-img" href="../image/company/sub/img-magazine01.jpg"></a>
+            </li>
+            <li>
+              <div class="caption"><h3>제목1</h3></div>
+              <a class="ns-img" href="../image/company/sub/img-magazine01.jpg"></a>
+            </li>
+            <li>
+              <div class="caption"><h3>제목1</h3></div>
+              <a class="ns-img" href="../image/company/sub/img-magazine01.jpg"></a>
+            </li>
+          </ul>
+          <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+        </div>
+      </div>
+    </div>
+          <div class="con_box">
+          전체 POP 인포메이션보드 현수막 전시부스 아크릴 백월 기타
+            <ul class="photo_list pop gallery">
+              <li>
+                <a href="#" onclick="lightbox(0)" >
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#" onclick="lightbox(1)">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="img_box"><img src="../image/company/sub/img-magazine01.jpg" alt=""></div>
+                </a>
+              </li>
+            </ul>
 
-전체 POP 인포메이션보드 현수막 전시부스 아크릴 백월 기타
+
+            <!-- Page navigation -->
+            <div class="page_navi">
+              <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+              <ul class="navi_list">
+                <li class="active"><a href="#url">1</a></li>
+                <li><a href="#url">2</a></li>
+                <li><a href="#url">3</a></li>
+                <li><a href="#url">4</a></li>
+                <li><a href="#url">5</a></li>
+              </ul>
+              <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+            </div>
+            <!-- Page navigation -->
+          </div>
 
         </div>
         <!-- 본문 -->
@@ -123,28 +251,30 @@
 <!-- //global -->
 <script src="../js/sub.js"></script>
 
-<!-- photo zoom -->
-<script src="//www.kinkos.co.kr/js/jquery.zoom.min.js"></script>
+<!-- photo popup -->
+<script src="../js/ninja-slider.js"></script>
 <script>
-     $(document).ready(function () {
-        $(".toggle_view").click(function () {
-          $(this).parents(".item_list").toggleClass("on");
-        });
+  
+  function lightbox(idx) {
+    //Show the slider wrapper
+    var ninjaSldr = document.getElementById("ninja-slider");
+    ninjaSldr.parentNode.style.display = "block";
 
-       // 제품확대보기
-       if ($('.service_info_view .thumb').length > 0) { $('.service_info_view .thumb').zoom(); }
-       /*
-       $('#ex1').zoom();
-       $('#ex2').zoom();
-       $('#ex3').zoom({ on:'click' });			 
-       $('#ex4').zoom({ on:'toggle' });
-       */
-       $(".service_info_view>div").css({ backgroundSize: "cover" });
+    nslider.init(idx);
 
+    //Then mimic clicking the fullscreen button to popup the modal
+    var fsBtn = document.getElementById("fsBtn");
+    fsBtn.click();
+  }
 
-      });
+  function fsIconClick(isFullscreen, ninjaSldr) {
+    //Note: fsIconClick is the default event handler of the fullscreen button
+    if (isFullscreen) {
+      ninjaSldr.parentNode.style.display = "none";
+    }
+  }
 </script>
-<!-- //photo zoom -->
+<!-- //photo popup -->
 
 
 </body>

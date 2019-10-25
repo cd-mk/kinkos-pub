@@ -25,6 +25,7 @@
 .top_line {padding-top:40px; border-top:1px solid #e7e7e7;}
 .btm_line {border-bottom:1px solid #e7e7e7;}
 .left_line {border-left:1px solid #e7e7e7;}
+.right_line {border-right:1px solid #e7e7e7;}
 .width100 {max-width:100% !important;width:100% !important;}
 .width100 .form_item {max-width:100% !important;width:100% !important;}
 .width100 .form_group.col2 .form_item {max-width:50% !important;width:50% !important;}
@@ -85,6 +86,7 @@
 .date_sel .inp_date {width: 45%;}
 .date_sel span {display: inline-block;width:7%;text-align: center;}
 .form_alert {margin-bottom:12px; text-align:right; color:#222;}
+.user_alert {margin-bottom:12px; text-align:right; color:#222;}
 h3+.form_alert { /* float: right; */ position: absolute; top: 0; right: 0; }
 .form_wrap input {width:100%; height:44px; line-height:44px;background-color:#fff; color:#222; padding:0 20px; border:1px solid #dedede; box-sizing:border-box; font-size:16px;}
 .form_wrap input::placeholder {color:#999;}
@@ -113,7 +115,9 @@ h3+.form_alert { /* float: right; */ position: absolute; top: 0; right: 0; }
 .noti+.type_select {margin-top:18px;}
 
 .noti {text-align: center;}
-.noti.top {margin-top:65px;line-height: 1.3;;}
+.noti.top {margin-top:65px;line-height: 1.3;}
+.noti.top.big {margin-top:80px;margin-bottom:60px;line-height: 1.3;font-weight: 400;font-size: 36px;}
+.noti.top.mid {margin-top:30px;margin-bottom:30px;line-height: 1.3;font-weight: 400;font-size: 24px;}
 .noti.right {text-align: right;}
 .noti strong {color:#03a2ea} 
 
@@ -431,6 +435,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .cont_wrap .tit_box {text-align: center; max-width:1100px; margin:0 auto;}
 .cont_wrap .tit_box h3 {color:#222; font-size:36px; font-weight: 700; line-height:1;}
 .cont_wrap .tit_box .stit {margin-top:25px; color:#222; font-size:24px; font-weight:normal; line-height:1.5;}
+.cont_wrap .tit_box .stit strong {color:#03a2ea;font-weight: 700;}
 .cont_wrap .tit_box .summary {margin-top:52px; color:#222; font-size:18px; line-height:normal; text-align:left;}
 .cont_wrap .tit_box .summary p:first-child {margin-bottom:25px;}
 .cont_wrap .tit_box .desc {font-size:18px;color:#222; margin-top:20px;}
@@ -448,6 +453,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .cont_wrap .tit_box h3 {font-size:24px;}
   .cont_wrap.tab_area .tit_box {display: none;;}
   .cont_wrap .tit_box .stit {margin-top:12px; font-size:14px; line-height:1.36;}
+  .cont_wrap .tit_box .stit strong {color:#03a2ea;font-weight: 700;}
   .cont_wrap .tit_box .summary {margin-top:35px; font-size:14px; line-height:1.36;}
   .cont_wrap .tit_box .summary p:first-child {margin-bottom:19px;}
 
@@ -712,12 +718,12 @@ p+.btn_wrap {margin-top:40px !important;}
 
 /* K매거진 */
 .magazine_wrap .photo_list {margin-top:47px;}
-.magazine_wrap .photo_list > li {margin-left:30px; margin-bottom:40px; width:calc((100% - 60px) / 3);}
+.magazine_wrap .photo_list > li {margin-left:30px; margin-top:40px; width:calc((100% - 60px) / 3);}
 .magazine_wrap .photo_list > li:first-child,
 .magazine_wrap .photo_list > li:nth-child(4) {margin-left:0;}
-.magazine_wrap .photo_list > li:nth-child(4),
-.magazine_wrap .photo_list > li:nth-child(5),
-.magazine_wrap .photo_list > li:last-child {margin-top:40px;}
+.magazine_wrap .photo_list > li:nth-child(1),
+.magazine_wrap .photo_list > li:nth-child(2),
+.magazine_wrap .photo_list > li:nth-child(3){margin-top:0;}
 .magazine_wrap .photo_list .img_box {width:100%;}
 .magazine_wrap .photo_list .txt_box h4 {margin-top:28px; font-size:24px;}
 .magazine_wrap .photo_list .txt_box span {margin-top:15px; font-size:1em;}
@@ -730,10 +736,29 @@ p+.btn_wrap {margin-top:40px !important;}
   .magazine_wrap .photo_list > li {margin-left:0; margin-bottom:40px; width:100%;}
   .magazine_wrap .photo_list .txt_box h4 {margin-top:15px; font-size:16px;}
   .magazine_wrap .photo_list > li:nth-child(4),
-.magazine_wrap .photo_list > li:nth-child(5),
-.magazine_wrap .photo_list > li:last-child {margin-top:0;}
+  .magazine_wrap .photo_list > li:nth-child(5),
+  .magazine_wrap .photo_list > li:last-child {margin-top:0;}
 }
 
+
+/* K매거진 */
+.service_info_wrap .photo_list {margin-top:47px; }
+.service_info_wrap .photo_list > li {margin-left:30px; margin-top:40px; width:calc((100% - 90px) / 4);}
+.service_info_wrap .photo_list > li:first-child,
+.service_info_wrap .photo_list > li:nth-child(5),
+.service_info_wrap .photo_list > li:nth-child(9),
+.service_info_wrap .photo_list > li:nth-child(13) {margin-left:0;}
+.service_info_wrap .photo_list > li:nth-child(1),
+.service_info_wrap .photo_list > li:nth-child(2),
+.service_info_wrap .photo_list > li:nth-child(3),
+.service_info_wrap .photo_list > li:nth-child(4)
+ {margin-top:0;}
+
+.service_info_wrap .photo_list .img_box {width:100%;}
+
+@media screen and (max-width:1024px) { 
+  .service_info_wrap .photo_list > li {margin-left:0; margin-bottom:40px; width:100%;}
+}
 
 /* 이벤트 */
 .event_wrap .head_item {border-bottom:1px solid #222;}
@@ -1479,7 +1504,7 @@ p+.btn_wrap {margin-top:40px !important;}
 /* 장바구니 */
 .cart_wrap .step_wrap .step_item:first-child {margin-left: 0; padding-left: 0;}
 .cart_wrap .step_wrap .step_item .ico_step {display: table-cell; width: 56px; height: 56px; background-image: url('../image/mall/product/ico-step-cart.png');}
-
+.cart_wrap .tit_box {padding-top:50px;margin-bottom:40px;}
 
 .cart_wrap .bbs_list .pdt_chk {width:145px;text-align: left;padding-left:30px;}
 .cart_wrap .pdt_name .inner {display: table;}
@@ -1523,9 +1548,8 @@ p+.btn_wrap {margin-top:40px !important;}
 
 
 /* 결제완료 */
-.cart_wrap .tit_box {padding-top:50px;}
-.cart_wrap .tit_box strong {font-weight: 400;font-size:40px;}
-.cart_wrap .result {width:50%;margin:35px auto 0;background:#f3f4f6;padding:35px 30px;border-top:2px solid #000;}
+.cart_wrap .tit_box > strong {font-weight: 400;font-size:40px;}
+.cart_wrap .result {width:50%;margin:0 auto;background:#f3f4f6;padding:35px 30px;border-top:2px solid #000;}
 .cart_wrap .result dl {display: table;}
 .cart_wrap .result dt,
 .cart_wrap .result dd {display: inline-block;line-height: 43px;}
@@ -1670,3 +1694,37 @@ p+.btn_wrap {margin-top:40px !important;}
 .terms_box ol > li li {vertical-align: top;padding-left:12px;position: relative;}
 .terms_box ol > li li::before {width:5px;height:1px;display: inline-block;content: "";background:#777;vertical-align: top;position: absolute;top:13px;left:0;}
 
+
+
+
+#ninja-slider { width:100%; background:rgba(0, 0, 0, 0.6); padding: 0; margin:0 auto; overflow:hidden; box-sizing:border-box; }
+#ninja-slider .fs-icon { top:15px; right:15px;     width: 44px; height: 44px; background: url(../image/common/mo_menu_close.svg) no-repeat 50% / 24px; padding: 10px; }
+#ninja-slider .slider-inner:hover .fs-icon,
+#ninja-slider.fullscreen .fs-icon { opacity: 1; }
+#ninja-slider .fs-icon::before { content:"EXPAND"; display:block; }
+#ninja-slider.fullscreen .fs-icon::before { content:"+"; display:block; font-weight:bold; font-size:3em; transform: rotate(-45deg); }
+#ninja-slider .slider-inner { margin:0 auto;font-size:0px; box-sizing:border-box; padding-bottom:100px!important; }
+#ninja-slider.fullscreen .slider-inner { width:99%; max-width:750px;padding:43px 50px 100px;background-color:#fff;position: relative;height:700px !important;}
+#ninja-slider ul { position:relative; list-style:none; padding:0; box-sizing:border-box; overflow:visible!important; /*For showing captions outside the slider when transitionType is "fade". */ }
+#ninja-slider li { width:100%; height:100%; top:0; left:0; position: absolute; font-size:12px; list-style:none; margin:0; padding:0; opacity:0; box-sizing:border-box; margin-bottom:100px!important; }
+#ninja-slider li.ns-show { opacity:1; }
+
+/* --------- slider image ------- */  
+#ninja-slider .ns-img { background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/ cursor:default; display:block; /*position: absolute;*/ width:100%; height:100%; background-repeat:no-repeat; background-position:center center; }
+
+
+/*---------- Captions -------------------*/
+#ninja-slider .caption {margin-bottom:40px;border-bottom:1px solid #222; margin:auto; width:100%; font-size:24px; color:#222; box-sizing:border-box; text-align: left;}
+
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+#ninja-slider-prev, #ninja-slider-next {position: relative; display:inline-block; width:60px; height:20px; line-height:20px; margin-top:32px; backface-visibility:hidden; color:#222; white-space:nowrap; -webkit-user-select: none; user-select:none; /* border-radius:2px; */ z-index:10; cursor:pointer; }
+#ninja-slider-prev {text-align: left;}
+#ninja-slider-next {text-align: right;}
+#ninja-slider-prev div {font-size:18px;position: absolute;top:0;left:40px}
+#ninja-slider-next div {display: none;}
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before { content: ""; display: inline-block; width:21px; height:18px; background-size:21px; }
+#ninja-slider-next::before {background-image:url(../image/common/next-small.png); top:0; right:0; left:auto;}
+#ninja-slider-prev::before {background-image:url(../image/common/prev-small.png); top:0; left:0; right:auto;}

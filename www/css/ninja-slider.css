@@ -1,0 +1,85 @@
+/* Visit http://www.menucool.com/responsive-slider for instructions */
+
+#ninja-slider { width:100%; background:rgba(0, 0, 0, 0.6); padding: 0; margin:0 auto; overflow:hidden; box-sizing:border-box; }
+#ninja-slider .fs-icon { top:25px; right:25px; width:19px; height:19px; z-index:2; color:#222; text-align:center; font:8px/36px arial; opacity:0; -webkit-transition:opacity 0.8s; transition:opacity 0.8s; }
+#ninja-slider .slider-inner:hover .fs-icon,
+#ninja-slider.fullscreen .fs-icon { opacity: 1; }
+#ninja-slider .fs-icon::before { content:"EXPAND"; display:block; }
+#ninja-slider.fullscreen .fs-icon::before { content:"+"; display:block; font-weight:bold; font-size:3em; transform: rotate(-45deg); }
+
+#ninja-slider .slider-inner { margin:0 auto;font-size:0px; box-sizing:border-box; padding-bottom:100px!important; }
+
+#ninja-slider.fullscreen .slider-inner { width:99%; max-width:750px;padding:127px 50px 100px;background-color:#fff;position: relative;height:700px !important;}
+#ninja-slider ul { position:relative; list-style:none; padding:0; box-sizing:border-box; overflow:visible!important; /*For showing captions outside the slider when transitionType is "fade". */ }
+#ninja-slider li { width:100%; height:100%; top:0; left:0; position: absolute; font-size:12px; list-style:none; margin:0; padding:0; opacity:0; box-sizing:border-box; margin-bottom:100px!important; }
+#ninja-slider li.ns-show { opacity:1; }
+
+
+/* --------- slider image ------- */  
+#ninja-slider .ns-img { background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/ cursor:default; display:block; position: absolute; width:100%; height:100%; background-repeat:no-repeat; background-position:center center; }
+
+
+/*---------- Captions -------------------*/
+#ninja-slider .caption { position:absolute; top:40px; padding:0 40px; margin:auto; width:100%; text-align:center; font-family:sans-serif; font-size:24px; color:#222; box-sizing:border-box; }
+
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+#ninja-slider-pause-play { display:none;}  
+
+#ninja-slider-prev, #ninja-slider-next
+{
+    /* position: absolute; */
+    display:inline-block;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    margin-top:32px;
+    backface-visibility:hidden;
+    color:#222;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    /* border-radius:2px; */
+    z-index:10;
+    /* opacity:0.3;  */
+    cursor:pointer;
+}
+
+.slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
+    opacity:1;
+}
+
+
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    content: "";
+    display: inline-block;
+   width:21px; height:18px;
+   background-size:21px;
+}
+#ninja-slider-next {background-image:url(../image/common/next-small.png); top:0; right:0; left:auto;}
+
+#ninja-slider-prev {background-image:url(../image/common/prev-small.png); top:0; left:0; right:auto;}
+
+
+
+/*pagination num within the arrow buttons*/
+/* #ninja-slider-prev:hover, #ninja-slider-next:hover {width:80px;}
+#ninja-slider-prev div {margin-right:8px;white-space:nowrap;opacity:1;float:right;color:#222}
+#ninja-slider-next div {margin-left:8px;white-space:nowrap;opacity:1;float:left;}
+#ninja-slider-prev:hover div, #ninja-slider-next:hover div {opacity:1;}
+ */
+
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider-pager { display:block;}   
+
+#ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+

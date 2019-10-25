@@ -16,7 +16,7 @@
 <meta property="og:image" content="../image/common/logo.png">
 	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-	<title>결제완료 | 장바구니 | 킨코스코리아</title>
+	<title>결제완료 | 바로구매(비회원) | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
 	<link rel="stylesheet" href="../css/lib/animate.css">
   <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -52,7 +52,7 @@
 			<div class="breadcrumb_wrap">
 				<a href="" class="home">Home</a>
 				<ul class="item_list">
-					<li><a href="#">장바구니 목록</a></li>
+					<li><a href="#">바로구매</a></li>
 				</ul>
 			</div>
       <!-- //breadcrumb  -->
@@ -64,61 +64,43 @@
         <!-- 콘텐츠 "con_box" 고정 -->
         <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
         <div class="con_box cart_wrap">
-          <!-- step -->
           <div class="step_wrap">
             <div class="inner clearfix">
-              <div class="step_item user">
+              <div class="step_item order active">
                 <span class="ico_step"></span>
                 <span class="txt_step">
                   <span class="number">STEP 01</span>
-                  <span class="desc">주문자 정보</span>
+                  <span class="desc">바로구매</span>
                 </span>
               </div>
-              <div class="step_item confirm">
+              <div class="step_item finish">
                 <span class="ico_step"></span>
                 <span class="txt_step">
                   <span class="number">STEP 02</span>
-                  <span class="desc">주문상품 확인</span>
-                </span>
-              </div>
-              <div class="step_item order">
-                <span class="ico_step"></span>
-                <span class="txt_step">
-                  <span class="number">STEP 03</span>
-                  <span class="desc">주문결제</span>
-                </span>
-              </div>
-              <div class="step_item finish active">
-                <span class="ico_step"></span>
-                <span class="txt_step">
-                  <span class="number">STEP 04</span>
                   <span class="desc">결제완료</span>
                 </span>
               </div>
+             
             </div>
           </div>
-          <!-- //step -->
-
-          <div class="noti top big">
-            주문이 정상적으로 완료되었습니다.
-          </div>
-
+          
+          <div class="noti top big">주문이 정상적으로 완료되었습니다.</div>
+          
           <div class="inner result">
             <dl>
               <dt>이름</dt>
               <dd>홍길동</dd>
-
+          
               <dt>주문 번호</dt>
               <dd><span class="order_num">23023012313</span></dd>
-
+          
               <dt>결제 금액</dt>
               <dd><span class="price">15,000원</span></dd>
-
+          
               <dt>결제 방법</dt>
               <dd>계좌이체(결제 확인중)</dd>
             </dl>
           </div>
-
         <!-- //본문 -->
         </div>
       </div>
