@@ -89,7 +89,6 @@
 
         <!-- 본문 -->
         <div class="con_box mpg_wrap">
-
           <div class="my_wrap">
             <ul>
               <li class="my_info">
@@ -172,10 +171,10 @@
                     <td>30,000원</td>
                     <td>
                       <p>30,000</p>
-                      <p><button class="btn type03">증빙서류</button></p>
+                      <p><a href="#popup1" class="btn type03 btn_popup">증빙서류</a></p>
                     </td>
                     <td class="unpaid">0원</td>
-                    <td>배송중</td>
+                    <td><a href="#popup2" class="btn_popup">배송완료</a></td>
                   </tr>
                   <!-- loop -->
 
@@ -238,6 +237,48 @@
     <div id="footer" class="layout_width">
     </div>
     <!-- //FOOTER -->
+
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap small">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">증빙서류</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          <ul>
+            <li><a href="#">>영수증 출력</a></li>
+            <li><a href="#">>매출전표 출력</a></li>
+            <li><a href="#">>제출서류 다운로드</a></li>
+          </ul>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+
+
+    <div id="popup2" class="popup_wrap small">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">배송 현황</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          <dl>
+            <dt>송장번호</dt> 
+            <dd>로젠택배 <strong>123456789</strong></dd>
+          </dl>
+          
+          <p>현 배송상태는 <strong>"배송완료"</strong> 입니다.</p>
+
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    
+    
+    <!-- //popup area -->
+
 
     <div class="dim">
     </div>
