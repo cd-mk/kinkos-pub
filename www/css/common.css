@@ -145,7 +145,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 
 .pc {display:block;}
 .mo {display:none;}
-.pc_tablet {display:block;}
+.pc_tablet {display:inline-block;}
 .mo_only {display:none;}
 .dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:10;}
 
