@@ -122,76 +122,54 @@
           <!-- //step -->
 
           <p class="user_alert"><strong>홍길동님</strong></p>
-
-          <div class="noti top mid">
+          
+          <div class="noti top big">
             <p>주문자 (<strong>홍길동 님</strong>)의 정보를 확인합니다.</p>
           </div>
+          
           <!-- 주문하는 분 -->
           <h3>주문하는 분</h3>
-          <div class="form_wrap">
+          <div class="form_wrap ver_top">
             <div class="form_group col2">
               <div class="form_item">
-                <strong class="form_name">배송지 선택</strong>
+                <strong class="form_name ver-mid">배송지 선택</strong>
                 <div class="form_inp col2 with_btn">
                   <select name="" id="" title="휴대전화 앞 3자리 선택">
                     <option value="">우리집</option>
                     <option value="">회사</option>
                   </select>
-                  <a href="#url" class="btn type03">배송지 확인</a>
+                  <a href="#popup1" class="btn type03 btn_popup">배송지 관리</a>
                 </div>
               </div>
+              <p class="desc right">* 인쇄 준비상태 이후에는 변경 불가능합니다.</p>
             </div>
           
-            <div class="form_group col2">
+            <div class="form_group col2 top_line">
               <div class="form_item">
                 <strong class="form_name">성함</strong>
                 <div class="form_inp">
-                  <input type="text" title="성함 입력">
+                  홍길동
                 </div>
               </div>
             </div>
           
-            <div class="form_group col2">
+            <div class="form_group">
               <div class="form_item">
                 <strong class="form_name">연락처</strong>
-                <div class="form_inp">02-123-3456</div>
-              </div>
-              <div class="form_item">
-                <strong class="form_name">휴대폰</strong>
-                <div class="form_inp">010-1234-4567</div>
+                <div class="form_inp">
+                  <span class="tel1">일반전화 : 02-123-3456</span> <span class="tel2">휴대폰 : 010-1234-4567</span>
+                </div>
               </div>
             </div>
             <div class="form_group col2">
               <div class="form_item">
                 <strong class="form_name">이메일</strong>
                 <div class="form_inp">
-                  <input type="text" title="이메일 주소 입력">
+                  hong@cidow.com
                 </div>
-
-                <div class="form_inp email">
-                  <input type="text" id="Email_1" name="Email_1" placeholder="이메일 아이디" value="이메일 아이디">
-                  <span class="txt_at">@</span>
-                  <input type="text" id="Email_2" name="Email_2" placeholder="" value="">
-                  <select id="email_list" name="Email_3" class="user_email">
-                    <option value="" selected="selected">이메일을 선택하세요.</option>
-                    <option value="gmail.com">gmail.com</option>
-                    <option value="naver.com">naver.com</option>
-                    <option value="daum.net">daum.net</option>
-                    <option value="hanmail.net">hanmail.net</option>
-                    <option value="empal.com">empal.com</option>
-                    <option value="hotmail.com">hotmail.com</option>
-                    <option value="nate.com">nate.com</option>
-                    <option value="paran.com">paran.com</option>
-                    <option value="yahoo.co.kr">yahoo.co.kr</option>
-                    <option value="yahoo.com">yahoo.com</option>
-                    <option value="">직접 입력</option>
-                  </select>
-                  <div class="txt_vaild" id="email_msg">각종혜택을 위해 이메일을 정확하게 입력해 주세요.</div>
-                </div>
-
               </div>
             </div>
-            
+
             <div class="form_group col2">
               <div class="form_item">
                 <strong class="form_name">배송지</strong>
@@ -204,7 +182,7 @@
               <div class="form_item">
                 <strong class="form_name">배송 메모</strong>
                 <div class="form_inp">
-                 ㄹㅇㄹㅇㄹㅇㄹㅇㄹㅇ
+                  <textarea></textarea>
                 </div>
               </div>
             </div>
@@ -224,7 +202,8 @@
               </div>
             </div>
           
-            <div class="form_group col2">
+          
+            <div class="form_group col2 top_line">
               <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
               <div class="form_item">
                 <strong class="form_name">성함</strong>
@@ -234,41 +213,48 @@
                 </div>
               </div>
             </div>
+
             <div class="form_group col2">
               <div class="form_item">
                 <strong class="form_name">연락처</strong>
-                <div class="form_inp col3">
-                  <select name="" id="" title="휴대전화 앞 3자리 선택">
-                    <option value="">010</option>
-                    <option value="">017</option>
-                    <option value="">019</option>
-                  </select>
-                  <input type="number" title="휴대전화 중간 자리 입력">
-                  <input type="number" title="휴대전화 마지막 자리 입력">
+                <div class="form_inp tel">
+                  <strong>일반전화</strong>
+                  <div class="form_inp col3">
+                    <select name="" id="" title="일반전화 국번 선택">
+                      <option value="">02</option>
+                      <option value="">031</option>
+                      <option value="">032</option>
+                    </select>
+                    <input type="number" title="일반전화 중간 자리 입력">
+                    <input type="number" title="일반전화 마지막자리 입력">
+                    <p class="txt_vaild">일반전화 번호를 입력해주세요</p>
+                  </div>
+                </div>
+                <div class="form_inp tel">
+                  <strong>휴대폰</strong>
+                  <div class="form_inp col3">
+                    <select name="" id="" title="휴대폰 앞 3자리 선택">
+                      <option value="">010</option>
+                      <option value="">017</option>
+                      <option value="">019</option>
+                    </select>
+                    <input type="number" title="휴대폰 중간 3자리 입력">
+                    <input type="number" title="휴대폰 마지막3자리 입력">
+                    <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
+                  </div>
                 </div>
               </div>
               <div class="form_item">
-                <strong class="form_name">휴대폰</strong>
-                <div class="form_inp col3">
-                  <select name="" id="" title="국번 선택">
-                    <option value="">02</option>
-                    <option value="">031</option>
-                    <option value="">032</option>
-                  </select>
-                  <input type="number" title="전화번호 중간 입력">
-                  <input type="number" title="전화번호 마지막자리 4개 입력">
-                </div>
-              </div>
-            </div>
-            <div class="form_group col2">
-              <div class="form_item email">
                 <strong class="form_name">이메일</strong>
-                <div class="form_inp email">
-                  <input type="text" id="Email_1" name="Email_1" placeholder="이메일 아이디" value="이메일 아이디">
-                  <span class="txt_at">@</span>
-                  <input type="text" id="Email_2" name="Email_2" placeholder="" value="">
-                  <select id="email_list" name="Email_3" class="user_email">
-                    <option value="" selected="selected">이메일을 선택하세요.</option>
+                <div class="form_inp with_btn email">
+                  <span>
+                    <input type="text" name="" title="이메일 아이디" placeholder="이메일 아이디" class="email_1">
+                    <span class="txt_at">@</span>
+                    <input type="text" name="" title="이메일 도메인 입력" placeholder="" value="" class="email_2">
+                  </span>
+              
+                  <select name="" class="email_select" onChange="selectEmail(this)">
+                    <option value="" selected="selected">선택하세요.</option>
                     <option value="gmail.com">gmail.com</option>
                     <option value="naver.com">naver.com</option>
                     <option value="daum.net">daum.net</option>
@@ -279,10 +265,10 @@
                     <option value="paran.com">paran.com</option>
                     <option value="yahoo.co.kr">yahoo.co.kr</option>
                     <option value="yahoo.com">yahoo.com</option>
-                    <option value="">직접 입력</option>
+                    <option value="1">직접 입력</option>
                   </select>
-                  <div class="txt_vaild">각종혜택을 위해 이메일을 정확하게 입력해 주세요.</div>
                 </div>
+                <p class="txt_vaild">이메일 주소를 확인해주세요</p>
               </div>
             </div>
             <div class="form_group col2">
@@ -294,8 +280,6 @@
                   <input type="text" title="상세 주소" placeholder="상세 주소">
                 </div>
               </div>
-            </div>
-            <div class="form_group col2">
               <div class="form_item">
                 <strong class="form_name">배송 메모</strong>
                 <div class="form_inp">
@@ -307,7 +291,7 @@
           <!-- //받으시는 분 -->
 
           <div class="btn_wrap center col2">
-            <button type="button" class="btn type03 large"><span>취소</span></button>
+            <button type="button" class="btn type02 large"><span>취소</span></button>
             <button type="button" class="btn type01 large"><span>확인</span></button>
           </div>
 
@@ -316,7 +300,23 @@
       </div>
     </div>
       <!-- CONTENT -->
-
+      
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">배송지 관리</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          디자인 진행중
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    
+    
+    <!-- //popup area -->
 
       <!-- FOOTER -->
       <div id="footer" class="layout_width">

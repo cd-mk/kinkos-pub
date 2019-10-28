@@ -26,26 +26,6 @@
 	<!-- only sub -->
   <link rel="stylesheet" href="../css/sub.css">
   
-
-  <!-- SCRIPT -->
-  <!-- global -->
-  <script src="../js/jquery/jquery-1.12.4.min.js"></script>
-  <script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-  <script src="../js/jquery/jquery.placeholder.min.js"></script>
-  <script src="../js/wow.min.js"></script>
-  <script src="../js/swiper/swiper.min.js"></script>
-  <script src="../js/common.js"></script>
-  <!-- //global -->
-  
-  <script src="../js/sub.js"></script>
-  <script src="../js/jquery.numspinner.min.js"></script>
-  
-  <!-- 수량 -->
-  <script type="text/javascript">
-    $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
-  </script>
-  
-  <!-- //SCRIPT -->
 </head>
 
 <body>
@@ -180,33 +160,7 @@
                     (가산디지털 단지)
                   </td>
                 </tr>
-
-
-
-
-
-
-                <!-- 담긴 상품이 없을 때 -->
-                <tr>
-                  <td colspan="6">
-                    <div class="pdt_non">
-                      <p class="tit">장바구니에 담긴 상품이 없습니다.</p>
-                      
-                      <p>
-                        <strong>회원이나 비회원 로그</strong>을 하시면<br>
-                      장바구니에 담긴 상품을 확인 할 수 있습니다.
-                      </p>
-
-                      <div class="btn_wrap">
-                        <button type="button" class="btn large type02"><span>로그인 하기</span></button>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <!-- //담긴 상품이 없을 때 -->
-
-
-
+              
               </tbody>
             </table>
             <div class="cart_chk_del">
@@ -215,6 +169,7 @@
             </div>
           </div>
           <!-- //장바구니 목록 테이블 -->
+
 
           <!-- 총 주문금액 -->
           <div class="order_total">
@@ -243,6 +198,30 @@
           </div>
           <!-- //총 주문금액 -->
 
+
+
+
+          <!-- 담긴 상품이 없을 때 -->
+          <div class="pdt_non">
+            <p class="noti top big">장바구니에 담긴 상품이 없습니다.</p>
+          
+            <p>
+              <strong>회원이나 비회원 로그</strong>을 하시면<br>
+              장바구니에 담긴 상품을 확인 할 수 있습니다.
+            </p>
+          
+            <div class="btn_wrap">
+              <button type="button" class="btn large type02"><span>로그인 하기</span></button>
+            </div>
+          </div>
+          <!-- //담긴 상품이 없을 때 -->
+
+
+
+
+
+
+
         <!-- //본문 -->
         </div>
       </div>
@@ -259,7 +238,25 @@
 	</div>
 	<!-- //WRAP -->
 
+<!-- SCRIPT -->
+<!-- global -->
+<script src="../js/jquery/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="../js/jquery/jquery.placeholder.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/swiper/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+<!-- //global -->
 
+<script src="../js/sub.js"></script>
+<script src="../js/jquery.numspinner.min.js"></script>
+
+<!-- 수량 -->
+<script type="text/javascript">
+  $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
+</script>
+
+<!-- //SCRIPT -->
 
 
 </div>
