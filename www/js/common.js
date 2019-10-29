@@ -122,87 +122,47 @@ var mobileGnb = function () {
 
 
 
+var setInputFile = function () {
+  $('.file_inp').each(function () {
+    $(this).on('change', function () {
+      var filename = window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop();
 
-// input file
-var inpFile = {
-  inpWrap: '.file_inp_box',
-  fileNameClass: '.js-file_name',
-  targetLayerImg: $('#file_layer').find('.img_preview'),
-  setElement: function () {
-    var inpList = [];
-
-    $('.file_inp').each(function () {
-      inpList.push($(this));
+      $(this).siblings('.js-file-name').val(filename).attr('disabled', true);
+      $(this).siblings('.js-file-label').addClass('hide');
+      $(this).siblings('.js-file-del').addClass('on');
     });
+  });
+  $('.js-file-label').on('click', function () {
+    $(this).siblings('.file_inp').trigger('click');
+  });
+  $('.js-file-del').on('click', function () {
+    $(this).siblings('.js-file-name').val('');
+    $(this).siblings('.file_inp').val('');
+    $(this).siblings('.js-file-label').removeClass('hide');
+    $(this).removeClass('on');
+  });
+};
 
-    return inpList;
-  },
-  fileChangeEvt: function () {
-    var inpList = this.setElement();
+var setCustomList = function () {
+  $('.js-list-add').on('click', function () {
+    var listClone = $(this).closest('.file_inp_box').clone(true);
 
-    for (var i = 0; i < inpList.length; i++) {
-      inpList[i].on('change', this.setChangeEvt);
-    }
-  },
-  setChangeEvt: function () {
-    var fileName = inpFile.setFileName(this);
-
-    inpFile.insertFileName(this, fileName);
-  },
-  setFileName: function (target) {
-    var fileName;
-
-    if (window.FileReader) {
-      fileName = $(target)[0].files[0].name;
-    } else {
-      fileName = $(target).val().split('/').pop().split('\\').pop();
-    }
-
-    return fileName;
-  },
-  insertFileName: function (target, fileName) {
-    var wrap = this.inpWrap,
-      targetFileName = this.fileNameClass;
-
-    $(target).closest(wrap).find(targetFileName).attr('disabled', 'disabled').val(fileName);
-    $(target).siblings('label').addClass('hide');
-    $(target).siblings('.btn_delete').removeClass('hide');
-  },
-  setDeleteFile: function () {
-    var wrap = this.inpWrap,
-      targetFileName = this.fileNameClass;
-
-    $('.btn_delete').on('click', function () {
-      $(this).siblings('.file_inp').val('');
-      if ($(this).closest(wrap).find(targetFileName).hasClass('has_target')) {
-        $(this).closest(wrap).find(targetFileName).removeClass('has_target').removeAttr('data-img-src');
-        $(this).closest(wrap).find(targetFileName).off('click');
-      }
-      $(this).closest(wrap).find(targetFileName).attr('disabled', false).val('');
-      $(this).addClass('hide');
-      $(this).siblings('label').removeClass('hide');
+    listClone.find('.js-file-label').removeClass('hide');
+    listClone.find('.js-file-del').removeClass('on');
+    listClone.find('input').val('');
+    listClone.find('.status').text('');
+    listClone.find('.js-list-add').off('click').removeClass('js-list-add plus').addClass('js-list-del minus');
+    $(this).closest('.js-list-item').append(listClone);
+    setListRemove();
+  });
+  function setListRemove() {
+    $('.js-list-del').on('click', function () {
+      $(this).closest('.file_inp_box').remove();
     });
-  },
-  setPopup: function () {
-    var imgSrc;
-    var target = this.targetLayerImg;
-    $('.has_target').on('click', function () {
-      imgSrc = $(this).attr('data-img-src');
-      target.attr('src', imgSrc);
-
-      $('#file_layer').addClass('open');
-      $('body').addClass('open');
-    });
-  },
-  init: function () {
-    this.setDeleteFile();
-    this.fileChangeEvt();
-    this.setPopup();
   }
 };
-$(document).on('click', ".file_inp", function () {
-  inpFile.init();
-});
+
+
 // DatePicker
 var setDatePicker = function() {
   $.datepicker.setDefaults({
@@ -313,15 +273,16 @@ $(document).ready(function () {
   setGnb();
   mobileGnb();
   new WOW().init();
-  inpFile.init();
+
   // placeholder
   $('input, textarea').placeholder();
-
-
   if ($('.inp_date').length) setDatePicker();
   if ($('.btn_popup').length) setPopup();
   if ($('.inp_chk_all').length) setChkAll();
   if ($('.accor_wrap').length) setAccordian();
+  if ($('.file_inp').length) setInputFile();
+  if ($('.js-list-add').length) setCustomList();
+
 
   $('body').on('mousewheel DOMMouseScroll', function(e){
     if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
