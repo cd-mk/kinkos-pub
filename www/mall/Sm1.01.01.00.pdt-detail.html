@@ -179,34 +179,23 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="form_group pdt_btm">
                   <div class="form_item">
                     <strong class="form_name">파일업로드</strong>
-                    <div class="form_inp file_box">
-                      <!-- 파일 멀티 업로드 -->
-                      <div class="dext_box">
-                        <!-- upload box -->
-                        <div id="dext5-container"></div>
-                        <!-- //upload box -->
-                        <div class="btn_wrap col2">
-                          <div class="left">
-                            <button id="btn-add-files" class="btn type03">파일선택</button>
-                            <!-- <button id="btn-upload" class="btn type04">전송하기</button> -->
-                            <button type="button" class="btn type01" onclick="javascript:location.href='//www.kinkos.co.kr/data/item/1453452202/ 템플릿_V160805.zip';">작업
-                              가이드</button>
-                          </div>
-                          <div class="right">
-                            <button id="btn-delete-files" class="btn ico_del" onclick="btnDeleteItem_Onclick()">선택삭제</button>
-                          </div>
-                        </div>
+                    <div class="form_inp js-list-item">
+                      <div class="file_inp_box">
+                        <!-- 첨부 파일 이름 출력 요소 -->
+                        <input type="text" class="js-file-name" readonly>
+                        <button type="button" class="btn type03 js-file-label">파일 찾기</button>
+                        <button type="button" class="btn type03 js-file-del">파일 삭제</button>
+                        <input type="file" class="file_inp">
+                        <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
                       </div>
-                      <!-- //파일 멀티 업로드 -->
                     </div>
-
-                    
-
-                    <p class="desc">- 100MB 이하 / 압축파일 권장</p>
+                   
+                    <button type="button" class="btn type01 btn_guide"
+                      onclick="javascript:location.href='//www.kinkos.co.kr/data/item/1453452202/ 템플릿_V160805.zip';">작업 가이드</button>
+                    <p class="desc">- 100MB 이하/ 압축파일 권장</p>
                   </div>
 
                   <div class="form_item">
@@ -340,21 +329,19 @@
                     <button type="button" class="btn type01">리뷰<br>등록하기</button>
                   </div>
               
-                  <div class="form_inp">
-                    <div class="form_inp file_box">
-                      <div class="file_inp_box">
-                        <input type="file" id="file2" class="file_inp" required>
-                        <label for="file2" class="btn type02 fileup"><i class="plus type02"></i>파일 찾기</label>
-                      </div>
-                      <p class="desc">100MB 이하 / 압축파일 권장</p>
+  
+                  <div class="form_inp js-list-item">
+                    <div class="file_inp_box">
+                      <!-- 첨부 파일 이름 출력 요소 -->
+                      <input type="text" class="js-file-name" readonly>
+                      <button type="button" class="btn type03 js-file-label">파일 찾기</button>
+                      <button type="button" class="btn type03 js-file-del">파일 삭제</button>
+                      <input type="file" class="file_inp">
+                  
+                      <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
                     </div>
-              
-                    <ul class="file_list">
-                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
-                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
-                    </ul>
                   </div>
-              
+                  <p class="desc">- 100MB 이하/ 압축파일 권장</p>
                 </div>
               </div>
 
@@ -419,20 +406,18 @@
                     <button type="button" class="btn type01">문의하기</button>
                   </div>
 
-                  <div class="form_inp">
-                    <div class="form_inp file_box">
-                      <div class="file_inp_box">
-                        <input type="file" id="file3" class="file_inp" required>
-                        <label for="file3" class="btn type02 fileup"><i class="plus type02"></i>파일 찾기</label>
-                      </div>
-                      <p class="desc">100MB 이하 / 압축파일 권장</p>
+                  <div class="form_inp js-list-item">
+                    <div class="file_inp_box">
+                      <!-- 첨부 파일 이름 출력 요소 -->
+                      <input type="text" class="js-file-name" readonly>
+                      <button type="button" class="btn type03 js-file-label">파일 찾기</button>
+                      <button type="button" class="btn type03 js-file-del">파일 삭제</button>
+                      <input type="file" class="file_inp">
+                  
+                      <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
                     </div>
-                    
-                    <ul class="file_list">
-                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
-                      <li><a href="#">파일삭제</a>즉석포스터 리뷰 사진 1.jpg</li>
-                    </ul>
                   </div>
+                  <p class="desc">- 100MB 이하/ 압축파일 권장</p>
 
                 </div>
               </div>

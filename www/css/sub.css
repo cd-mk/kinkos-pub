@@ -1386,9 +1386,11 @@ p+.btn_wrap {margin-top:40px !important;}
 .ease_cart .opt_ea {position: relative;padding-right:75px;}
 .ease_cart .opt_ea .btn_delete {width:65px;position: absolute;top:0;right:0;font-weight: 400;}
 
-.pdt_detail .file_inp_box {padding-right:32%;position: relative;width:100%;background: #fff;}
-.pdt_detail .file_inp_box .btn {width:30%;position:absolute;top:0;right:0;top:0;}
-.pdt_detail .file_inp_box .file_name {width: 100%;}
+.pdt_detail .file_inp_box {padding-right:164px;position: relative;width:100%;background: #fff;}
+.pdt_detail .file_inp_box .btn {width:100px;position:absolute;top:0;right:54px;top:0;}
+.pdt_detail .btn_guide {margin-top:10px;}
+.btn_guide+.desc {width:auto;float:right;margin-top:15px;}
+
 
 
 @media screen and (max-width:1400px) { 
@@ -1474,7 +1476,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .form_wrap.review_wt .file_box {display: inline-block;overflow: hidden;margin-top:20px;font-size:1em;}
 .form_wrap.review_wt .file_inp_box {padding:0;float:left;width:127px;}
 .form_wrap.review_wt .desc {float:left;line-height: 44px;color:#999;padding-left:20px;font-size:0.778em;}
-.form_wrap.review_wt .file_inp_box .btn {width:127px;color:#03a2ea;border:1px solid #03a2ea;position: relative;background: #fff;}
+.form_wrap.review_wt .file_inp_box .btn {width:127px;color:#03a2ea;border:1px solid #03a2ea;position: relative;background: #fff;right:0;margin-left:0;}
 .form_wrap.review_wt .file_list {overflow: hidden;margin-top:25px;}
 .form_wrap.review_wt .file_list li {float:left;line-height: 44px;white-space: nowrap;margin-left:30px;}
 .form_wrap.review_wt .file_list li:first-child{margin-left:0}
@@ -1647,8 +1649,7 @@ p+.btn_wrap {margin-top:40px !important;}
  .cart_wrap .form_wrap {padding-bottom:30px;}
  .cart_wrap .btn_wrap.col2 .btn {width: calc((100% - 14px)/2);min-width: auto; display: inline-block;margin-top:0;}
  .cart_wrap .btn_wrap.col2 .btn:last-child {margin-left:10px; }
-
-
+}
 /* 마이페이지 */
 .mpg_wrap .my_wrap {background:#4866af;padding:30px 0;color:#fff;}
 .mpg_wrap .my_wrap ul {display: table;width:100%;}
