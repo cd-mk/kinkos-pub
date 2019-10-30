@@ -203,23 +203,16 @@
                   <div class="form_group top_line">
                     <div class="form_item">
                       <strong class="form_name">이미지 첨부</strong>
-                      <div class="form_inp">
-                        <!-- 파일 멀티 업로드 -->
-                        <div class="dext_box">
-                          <!-- upload box -->
-                          <div id="dext5-container"></div>
-                          <!-- //upload box -->
-                          <div class="btn_wrap col2">
-                            <div class="left">
-                              <button id="btn-add-files" class="btn type03">파일추가</button>
-                              <button id="btn-upload" class="btn type04">전송하기</button>
-                            </div>
-                            <div class="right">
-                              <button id="btn-delete-files" class="btn ico_del" onclick="btnDeleteItem_Onclick()">선택삭제</button>
-                            </div>
-                          </div>
+                      <div class="form_inp js-list-item">
+                        <div class="file_inp_box">
+                          <!-- 첨부 파일 이름 출력 요소 -->
+                          <input type="text" class="js-file-name" readonly="">
+                          <button type="button" class="btn type03 js-file-label">파일 찾기</button>
+                          <button type="button" class="btn type03 js-file-del">파일 삭제</button>
+                          <input type="file" class="file_inp">
+                      
+                          <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
                         </div>
-                          <!-- //파일 멀티 업로드 -->
                       </div>
                     </div>
                  
