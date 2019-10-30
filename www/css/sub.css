@@ -1334,6 +1334,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 
 .pdt_detail .pdt_price .form_item .form_inp em {color:#666;font-style: normal}
+.pdt_detail .pdt_price .form_inp {min-height:22px;}
 .pdt_detail .pdt_price .price01 .form_inp strong {font-weight: 700;color:#ed6c16;}
 .pdt_detail .pdt_price .price02 .form_inp strong {font-weight: 700;color:#03a2ea;}
 .pdt_detail .pdt_price .price02 .form_inp {font-weight: 400;color:#03a2ea;}
