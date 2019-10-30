@@ -368,10 +368,10 @@ function tab(e, num) {
 
 
 (function () {
-  $('.btn_list').on('click', function () {
+  $('.btn_list').on('click focusin', function () {
     $(this).next().slideToggle(300);
   });
-  $('.opt_list > li > a').on('click', function () {
+  $('.opt_list > li > a').on('click focusin', function () {
     var selectText = $(this).text();
     $(this).closest('.opt_list').prev('.btn_list').text(selectText);
     $(this).closest('.opt_list').slideUp(300);

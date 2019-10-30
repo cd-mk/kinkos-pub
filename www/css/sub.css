@@ -1537,17 +1537,20 @@ p+.btn_wrap {margin-top:40px !important;}
 .cart_wrap .pdt_name .item_info .title {}
 .cart_wrap .pdt_name .item_info ul {margin-top:30px;}
 .cart_wrap .pdt_name .item_info li {color:#999;}
-.cart_wrap .bbs_list td{vertical-align:middle;padding:20px;}
+.cart_wrap .bbs_list td{vertical-align:middle;padding:20px;line-height: 1.3;}
 .cart_wrap .bbs_list td.title {text-align: left;}
 .cart_wrap .bbs_list .ship_fee {color:#999;font-weight:400;}
 .cart_wrap .bbs_list .ship_fee p{color:#222;}
 .cart_wrap .spinner {max-width:185px;}
 
-.cart_wrap .bbs_list.typeB .pdt_chk {width:100px;text-align: center;padding-left:0;}
+.cart_wrap .bbs_list.typeB .pdt_chk {width:80px;text-align: center;padding-left:0;padding-right:0;}
 .cart_wrap .bbs_list.typeB .td_ct_info {text-align: left;width:180px;padding-left:0}
 .cart_wrap .bbs_list.typeB .td_ct_odrnum {width:120px;word-break: break-all;}
 .cart_wrap .bbs_list.typeB .img {max-width:200px;}
-.cart_wrap .bbs_list.typeB .td_ct_num {width:180px;}
+.cart_wrap .bbs_list.typeB .td_ct_num {width:180px;border-left:1px solid #e7e7e7;border-right:1px solid #e7e7e7;}
+.cart_wrap .bbs_list.typeB .td_ct_stotal {border-left:1px solid #e7e7e7;} 
+.cart_wrap .bbs_list.typeB .td_ct_title {width:200px;text-align: left;padding-left:0;}
+.cart_wrap .bbs_list.typeB .td_ct_opt {text-align: left;padding-left:0;}
 
 @media screen and (max-width:1024px) { 
   .cart_wrap .bbs_list.typeB {margin-top:30px !important;}
@@ -1567,7 +1570,7 @@ p+.btn_wrap {margin-top:40px !important;}
   
   .cart_wrap .bbs_list.typeB .td_ct_info {width:100%}
   .cart_wrap .bbs_list.typeB .img {    max-width: 90px;}
-  .cart_wrap .bbs_list.typeB .td_ct_title {font-size:18px;color:#222;margin-bottom:20px;}
+  .cart_wrap .bbs_list.typeB .td_ct_title {font-size:18px;color:#222;margin-bottom:20px;width:100%;}
   .cart_wrap .bbs_list.typeB .pdt_chk {text-align: left;margin-top:0;}
 	/*
 	Label the data
@@ -1583,7 +1586,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .cart_wrap .bbs_list.typeB td.td_ct_status {margin-bottom:20px;}
   .cart_wrap .bbs_list.typeB td.td_ct_status br {display: none;}
   .cart_wrap .bbs_list.typeB td.td_ct_status::before { content: "상태 : "; }
-  .cart_wrap .bbs_list.typeB td.td_ct_opt {background:#f1f1f1;margin:0;padding:30px 15px;color:#222;}
+  .cart_wrap .bbs_list.typeB td.td_ct_opt {background:#f1f1f1;margin:0;padding:30px 15px 20px;color:#222;}
   .cart_wrap .bbs_list.typeB td.td_ct_opt::before  { content: "옵션";display: block;margin-bottom:10px;color:#777;}
   .cart_wrap .bbs_list.typeB td.td_ct_opt_price {background:#f1f1f1;color:#ed6c16;margin:0;padding:0 15px 30px 15px;}
   .cart_wrap .bbs_list.typeB td.td_ct_sian  { padding-left:50%;height:44px;line-height: 44px;text-align: right;}
@@ -1610,14 +1613,17 @@ p+.btn_wrap {margin-top:40px !important;}
 
 @media screen and (max-width:1024px) {
   .order_total {margin-top:35px;}
-  .order_total .inner {border-top:3px solid #000;background:#f3f4f6;padding:30px 15px;}
+  .order_total h3 {display: none;}
+  .order_total .inner {border-top:3px solid #000;background:#f3f4f6;padding:30px 0;text-align:center;}
   .order_total .box {display: inline-block;}
   .order_total .math {display: inline-block;padding:0 100px;}
-  .order_total .box.total {position: relative;right:0;top:0;width:100%;text-align: left;}
+  .order_total .box.total {position: relative;right:0;top:0;width:100%;text-align: left;padding: 30px 15px 0; margin-top: 30px; border-top: 1px solid #fff;}
   .order_total .box.total .price, .order_total .box.total strong {color:#ed6c16}
-  .order_total .label {font-size:16px;font-weight: 500;padding-right:0;display: block;}
-  .order_total .price {font-size:16px;font-weight: 400;}
-  .order_total .price strong {font-size:24px;font-weight: 700;}
+  .order_total .label {font-size:14px;padding-right:0;display: block;font-weight: 400;color:#777;}
+  .order_total .price {font-size:14px;margin-top:10px;display: inline-block;}
+  .order_total .price strong {font-size:20px;}
+  .order_total .box.total .label {display:block;color:#222;font-weight: 700;float:right;}
+  .order_total .box.total .price {margin-top:0;display: inline-block;}
 }
 
 .pdt_non {padding:30px;line-height: 1.3;text-align: center;}
