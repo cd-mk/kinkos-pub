@@ -65,110 +65,94 @@
         <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
         <div class="con_box cart_wrap">
 
-          <!-- 장바구니 목록 테이블 -->
-          <div class="bbs_list">
-            <p class="form_alert">홍길동 님</p>
-            <table>
-              <caption>장바구니 목록</caption>
-              <thead>
-                <tr>
-                  <th scope="col" class="pdt_chk">
-                    <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 -->
-                    <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
-                    <label for="chk_all"></label>
-                    선택
-                  </th>
-                  <th scope="col">상품정보</th>
-                  <th scope="col">수량</th>
-                  <th scope="col">상품금액</th>
-                  <th scope="col">소계</th>
-                  <th scope="col">배송비</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- loop -->
-                <tr>
-                  <td class="pdt_chk">
-                    <input type="checkbox" id="chk1" name="pdt_chk">
-                    <label for="chk1"></label>
-                  </td>
-                  <td class="pdt_name">
-                    <div class="inner">
-                      <a href="#">
-                        <span class="img"><img src="../image/mall/product/pl_01.jpg"></span>
-                      </a>
-                      <span class="item_info">
-                        <strong class="title">
-                          명함<br>
-                          즉석명함_100매<br>
-                          13시 이전 접수_당일 완성!
-                        </strong>
-                        <!-- <ul class="desc">
-                          <li>사이즈 90mm X55mm</li>
-                          <li>재질 : 스노우 259g 2개 (+0원)</li>
-                          <li>코너라운딩 : 3면 1개 (+5,000원)</li>
-                        </ul> -->
-                      </span>
-                    </div>
-                  </td>
-                  <td class="price">
-                    <div class="form_inp">
-                      <input type="text" class="dtl_num inp" title="수량 입력" />
-                    </div>
-                  </td>
-                  <td class="price">30,000</td>
-                  <td class="subTotal">30,000</td>
-                  <td class="ship_fee">
-                    <p>직접수령</p>
-                    (가산디지털 단지)
-                  </td>
-                </tr>
-                <!-- loop -->
-                <tr>
-                  <td class="pdt_chk">
-                    <input type="checkbox" id="chk2" name="pdt_chk">
-                    <label for="chk2"></label>
-                  </td>
-                  <td class="pdt_name">
-                    <div class="inner">
-                      <a href="#">
-                        <span class="img"><img src="../image/mall/product/pl_01.jpg"></span>
-                      </a>
-                      <span class="item_info">
-                        <strong class="title">
-                          명함<br>
-                          즉석명함_100매<br>
-                          13시 이전 접수_당일 완성!
-                        </strong>
-                        <!-- <ul class="desc">
-                          <li>사이즈 90mm X55mm</li>
-                          <li>재질 : 스노우 259g 2개 (+0원)</li>
-                          <li>코너라운딩 : 3면 1개 (+5,000원)</li>
-                        </ul> -->
-                      </span>
-                    </div>
-                  </td>
-                  <td class="price">
-                    <div class="form_inp">
-                      <input type="text" class="dtl_num inp" />
-                    </div>
-                  </td>
-                  <td class="price">30,000</td>
-                  <td class="subTotal">30,000</td>
-                  <td class="ship_fee">
-                    <p>직접수령</p>
-                    (가산디지털 단지)
-                  </td>
-                </tr>
+              <!-- 장바구니 목록 테이블 -->
+              <div class="bbs_list typeB">
+                <table>
+                  <caption>
+                    구매 상세 목록
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="pdt_chk">
+                        <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 
+                                      추가 수정부분
+                                      th: 체크박스 class만 남겨놓고 class삭제
+                                      td: 모바일에서 제목값 구분으로 각각 class명 지정
+                                      -->
+                        <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
+                        <label for="chk_all"></label>선택
+                      </th>
+                      <th scope="col">주문번호</th>
+                      <th scope="col" colspan="2">상품정보</th>
+                      <th scope="col">수량</th>
+                      <th scope="col">상품금액</th>
+                      <th scope="col">배송비</th>
+                      <th scope="col">소계</th>
+                      <th scope="col">센터선택</th>
+                      <th scope="col">상태</th>
+                      <th scope="col">시안</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- loop -->
+                    <tr class="line_start">
+                      <td rowspan="2" class="pdt_chk"><input type="checkbox" id="chk1" name="pdt_chk"><label for="chk1"></label></td>
+                      <td rowspan="2" class="td_ct_odrnum">123342343434</td>
+                      <td rowspan="2" class="td_ct_img"><a href="#" class="td_ct_info"> <span class="img"><img
+                              src="../image/mall/product/pl_01.jpg"></span></a></td>
+                      <td class="td_ct_title">즉석명함_100매</td>
+                      <td rowspan="2" class="td_ct_num">
+                        <div class="form_inp"><input type="text" class="dtl_num inp" title="수량 입력" /></div>
+                      </td>
+                      <td class="td_ct_price">30,000원</td>
+                      <td rowspan="2" class="td_ct_stotal">30,000원</td>
+                      <td rowspan="2" class="td_ct_delivery">무료</td>
+                      <td rowspan="2" class="td_ct_center">홍대</td>
+                      <td rowspan="2" class="td_ct_status">배송<br>완료</td>
+                      <td rowspan="2" class="td_ct_sian"><a href="#popup1" class="btn_popup">시안보기</a></td>
+                    </tr>
+                    <tr>
+                      <td class="td_ct_opt">
+                        사이즈 90mm X 55 mm /
+                        재질 마쉬멜로우 233g +코너라운딩 3면
+                      </td>
+                      <td class="td_ct_opt_price">4,500원</td>
+                    </tr>
+                    <!-- loop -->
               
-              </tbody>
-            </table>
-            <div class="cart_chk_del">
-              <span class="desc">장바구니에 담긴 상품은 최대 10일까지 보관되며 상품 판매가 종료되는 경우 자동으로 삭제 됩니다.</span>
-              <button type="button" class="btn type03 inp_chk_del"><span>선택 삭제</span></button>
-            </div>
-          </div>
-          <!-- //장바구니 목록 테이블 -->
+              
+                    <tr class="line_start">
+                      <td rowspan="2" class="pdt_chk"><input type="checkbox" id="chk1" name="pdt_chk"><label for="chk1"></label></td>
+                      <td rowspan="2" class="td_ct_odrnum">123342343434</td>
+                      <td rowspan="2" class="td_ct_img"><a href="#" class="td_ct_info"> <span class="img"><img
+                              src="../image/mall/product/pl_01.jpg"></span></a></td>
+                      <td class="td_ct_title">즉석명함_100매</td>
+                      <td rowspan="2" class="td_ct_num">
+                        <div class="form_inp"><input type="text" class="dtl_num inp" title="수량 입력" /></div>
+                      </td>
+                      <td class="td_ct_price">30,000원</td>
+                      <td rowspan="2" class="td_ct_stotal">30,000원</td>
+                      <td rowspan="2" class="td_ct_delivery">무료</td>
+                      <td rowspan="2" class="td_ct_center">홍대</td>
+                      <td rowspan="2" class="td_ct_status">배송<br>완료</td>
+                      <td rowspan="2" class="td_ct_sian"><a href="#popup1" class="btn_popup">시안보기</a></td>
+                    </tr>
+                    <tr>
+                      <td class="td_ct_opt">
+                        사이즈 90mm X 55 mm /
+                        재질 마쉬멜로우 233g +코너라운딩 3면
+                      </td>
+                      <td class="td_ct_opt_price">4,500원</td>
+                    </tr>
+              
+                  </tbody>
+                </table>
+                <div class="cart_chk_del">
+                  <span class="desc">장바구니에 담긴 상품은 최대 10일까지 보관되며 상품 판매가 종료되는 경우 자동으로 삭제 됩니다.</span>
+                  <button type="button" class="btn type03 inp_chk_del"><span>선택 삭제</span></button>
+                </div>
+              </div>
+              <!-- //장바구니 목록 테이블 -->
 
 
           <!-- 총 주문금액 -->
