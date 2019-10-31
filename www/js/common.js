@@ -5,9 +5,11 @@
 var setGnb = function() {
   if ($("#wrap").is(".company") === true) {
     $(".gnb_wrap").addClass("company");
+    $(".btn_toggle span:first-child").text("온라인몰 바로가기");
   }
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
+    $(".btn_toggle span:first-child").text("Kindo's 바로가기");
   }
   var $gnb, chkGnb;
 
@@ -71,6 +73,7 @@ var setGnb = function() {
       $('.sub_gnb_wrap, .center_list_wrap').stop().slideUp(400);
       $(this).toggleClass('on');
       $('.toggle_bg').toggleClass('on');
+      $('.search_item').toggleClass('on');
       $('.dim').hide();
 
 
@@ -368,10 +371,10 @@ function tab(e, num) {
 
 
 (function () {
-  $('.btn_list').on('click focusin', function () {
+  $('.btn_list').on('click', function () {
     $(this).next().slideToggle(300);
   });
-  $('.opt_list > li > a').on('click focusin', function () {
+  $('.opt_list > li > a').on('click', function () {
     var selectText = $(this).text();
     $(this).closest('.opt_list').prev('.btn_list').text(selectText);
     $(this).closest('.opt_list').slideUp(300);
