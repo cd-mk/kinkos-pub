@@ -368,7 +368,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 .center_list_wrap .list_box .list_item .locat_list.etc > li > a {display:block; width:220px; height:40px; line-height:39px; border-radius:30px; border:1px solid #d9d9d9; text-align:center;}
 .center_list_wrap .list_box .list_item .locat_list.etc > li:hover > a {border-color:#03a2ea;}
 .center_list_wrap .map_box {float:right; padding:18px 18px 20px; background:#fff;width:495px;height:495px}
-.center_list_wrap .map_box .map_view {width:400px; height:300px;overflow: hidden;}
+.center_list_wrap .map_box .map_view {height:300px;overflow: hidden;}
 .center_list_wrap .map_box .map_info {margin-top:20px;font-size:14px;overflow: hidden;}
 .center_list_wrap .map_box .map_info strong {display:block; font-size:20px; color:#222;}
 .center_list_wrap .map_box .map_info [class*="info_"] {float:left; width:50%; margin-top:20px;}
