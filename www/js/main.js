@@ -338,9 +338,6 @@ function slideInit() {
       swiper: service_navi
     }
   });
-
-
-
 }
 $(document).ready(slideInit());
 

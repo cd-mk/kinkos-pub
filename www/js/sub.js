@@ -60,18 +60,19 @@ function slideInit() {
     }
   });
 
+  // visual section
+  var visual = new Swiper('.visual_wrap', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+
+
 } 
 $(document).ready(slideInit());
 
-//이메일 선택
-function selectEmail(ele) {
-  var $ele = $(ele); var $email_2 = $('input[class=email_2]');
-  // '1'인 경우 직접입력 
-  if ($ele.val() == "1") {
-    $email_2.attr('readonly', false); $email_2.val('');
-  } else {
-    $email_2.attr('readonly', true);
-    $email_2.val($ele.val());
-  }
-}
 

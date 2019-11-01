@@ -568,28 +568,48 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 .sidebar {padding:0 15px;margin-top:0;}
 }
 
-.sch_wrap {z-index:10; position:relative; top:-50px; margin:0 auto; width:1515px; height:100px; background:#fff; box-shadow:0 15px 20px 5px rgba(0, 0, 0, 0.1);}
+.sch_wrap {z-index:10; position:relative; top:-50px; padding-right:200px;margin:0 auto; max-width:1515px; height:100px; background:#fff; box-shadow:0 15px 20px 5px rgba(0, 0, 0, 0.1);font-size:24px;}
 .sch_wrap::after {content:''; display:table; clear:both;}
-.sch_wrap .item_box {position:relative; float:left; height:100%; box-sizing:border-box; border-right:1px solid #cacaca;}
-.sch_wrap .item_box > strong {display:inline-block; margin-top:22px; font-size:19px; font-weight:bold; text-decoration:underline; line-height:1.6;}
-.sch_wrap .item_box:first-child {width:360px; padding-left:50px;}
+.sch_wrap .item_box {position:relative; float:left; height:100%; box-sizing:border-box; border-right:1px solid #cacaca;vertical-align: middle;font-size:1em;padding:0 35px;}
+.sch_wrap .item_box > strong {display:inline-block; font-weight:bold; font-size:1em;line-height:100px;}
+.sch_wrap .item_box:first-child {width:23%; padding-left:50px;}
 .sch_wrap .item_box:nth-child(2),
-.sch_wrap .item_box:nth-child(3) {width:300px; padding:0 31px 0 45px; line-height:100px;}
-.btn_list {display:block; font-size:24px; color:#6d7278; background:url('../image/company/main/arr-btm-gray.png') no-repeat 100% 50%;}
-.opt_list {display:none; position:absolute; left:0; top:100px; width:100%; padding:35px 31px 35px 45px; box-sizing:border-box; background:#fff; z-index:10; line-height:1; box-shadow:0 15px 12px 5px rgba(0, 0, 0, 0.1);}
-.opt_list > li {margin-top:20px;}
+.sch_wrap .item_box:nth-child(3) {width:20%;}
+.sch_wrap .item_box:nth-child(4) {width:37%;}
+.btn_list {display:block; font-size:1em; color:#6d7278; background:url('../image/common/arr-btm-gray.png') no-repeat 100% 50%;line-height:100px;}
+.opt_list {display:none; position:absolute; left:0; top:100px; width:100%; padding:15px 30px 35px 35px; box-sizing:border-box; background:#fff; z-index:10; line-height:1; box-shadow:0 15px 12px 5px rgba(0, 0, 0, 0.1);overflow-y: scroll;height:0;opacity: 0;}
+.opt_list.active {display:block;height:300px;opacity: 1;transition:all 0.5s;}
 .opt_list > li:first-child {margin-top:0;}
-.opt_list > li > a {font-size:20px; color:#6d7278;}
-.opt_list > li > a:hover {color:#03a2ea;}
-.sch_wrap .item_box:nth-child(4) {width:340px; padding:0 45px; border-right:0;}
+.opt_list > li a {font-size:20px; color:#222;padding:10px 0;display: block;}
+.opt_list > li ul li a {font-size:18px; color:#6d7278;padding:5px 0;}
+.opt_list > li a:hover {color:#03a2ea;}
+
 .sch_wrap .item_box input {width:100%; border:0; background:none; font-size:24px; color:#6d7278; line-height:100px;height: 100px;}
 .sch_wrap .item_box input::placeholder {color:#6d7278;}
 .sch_wrap .item_box:last-child {width:215px; border-right:0;}
-.sch_wrap .item_box .btn_sch {width:100%; height:100%; background:#03a2ea; border:0; font-size:24px; color:#fff; cursor:pointer; text-align:center;}
+.sch_wrap .item_box .btn_sch {width:200px; height:100%; background:#03a2ea; border:0; font-size:1em; color:#fff; cursor:pointer; text-align:center;padding:0;font-weight: 400;;}
+.sch_wrap .item_box:last-child {position: absolute;top:0;right:20px}
+
+@media screen and (max-width:1500px) {
+  .sch_wrap {font-size:20px}
+  .sch_wrap .item_box {padding:0 25px;}
+  .sch_wrap .item_box:first-child {padding-left:25px;}
+  .sch_wrap .item_box > strong {font-size:0.8em}
+  .sch_wrap .item_box:last-child {right:10px}
+}
+
+@media screen and (max-width:1300px) {
+  .sch_wrap {font-size:18px}
+  
+}
+
+
 @media screen and (max-width:1024px) {
-  /* 임시 디자인 추후 수정*/
-  .sch_wrap {width:100%; overflow:hidden;}
-  /* 임시 디자인 추후 수정 */
+  .sch_wrap {padding:0;height:55px}
+  .sch_wrap .item_box {padding:0 25px;width:50% !important;line-height:55px;}
+  .sch_wrap .item_box > strong {line-height:100px;}
+  .sch_wrap .item_box:first-child {width:100% !important;}
+  .sch_wrap .item_box:last-child {position: relative;}
 }
 
 

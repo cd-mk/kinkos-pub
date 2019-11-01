@@ -207,31 +207,7 @@ h3+.form_alert { /* float: right; */ position: absolute; top: 0; right: 0; }
 .form_inp[class*="col"] > input:first-child,
 .form_inp[class*="col"] > select:first-child {margin-left:0;}
 
-.form_inp.email {padding-right:160px;position: relative;}
-.form_inp.email > span {width:100%;display: inline-block;font-size:0}
-.form_inp.email input, .form_inp.email select {font-size:18px}
-.form_inp.email .email_1 {width:42%;}
-.form_inp.email .txt_at {display: inline-block;text-align: center;width:16%;font-size:18px;}
-.form_inp.email .email_2 {width:42%;}
-.form_inp.email > select {width:150px;position: absolute;top:0;right:0}
-.form_inp.email .btn {margin-left:0;margin-top:10px;}
 
-
-.form_inp.email.with_btn {padding-right:160px;position: relative;}
-.form_inp.email.with_btn > span {width:100%;display: inline-block;font-size:0}
-.form_inp.email.with_btn input, .form_inp.email select {font-size:18px}
-.form_inp.email.with_btn .email_1 {width:42%;}
-.form_inp.email.with_btn .txt_at {display: inline-block;text-align: center;width:16%;font-size:18px;}
-.form_inp.email.with_btn .email_2 {width:42%;}
-.form_inp.email.with_btn > select {width:150px;position: absolute;top:0;right:0}
-.form_inp.email.with_btn .btn {margin-left:0;margin-top:10px;}
-
-
-
-@media screen and (max-width:1024px) {
-  .form_inp.email {padding-right:90px;position: relative;}
-  .form_inp.email > select {width:80px;position: absolute;top:0;right:0}
-}
 /* 인증번호 */
 .auth_phone {position: relative;padding-right:140px;padding-left:110px;}
 .auth_phone select {width:100px;position: absolute;top:0;left:0;}

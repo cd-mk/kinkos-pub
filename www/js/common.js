@@ -309,8 +309,6 @@ $(document).ready(function () {
 
 
 
-
-
   // 임시 header, footer영역 로드
   $("#header").load("../common/include/common.html header", function () {
     // header 로드 후 header 관련 function 실행
@@ -320,6 +318,8 @@ $(document).ready(function () {
   $("#footer").load("../common/include/common.html .footer_inner", function () {
     
   });
+
+  
 });
 
 
@@ -369,24 +369,23 @@ function tab(e, num) {
 })();
 
 
-
 (function () {
-  $('.btn_list').on('click', function () {
-    $(this).next().slideToggle(300);
+  var target = $('.btn_list');
+  var targetLayer = $('.sch_wrap .item_box');
+  
+  target.on('click mouseleave', function () {
+    $(this).next().addClass("active");
+    target.not($(this)).next().removeClass("active");
   });
-  $('.opt_list > li > a').on('click', function () {
+  targetLayer.on('mouseleave', function () {
+    $(".opt_list").removeClass("active");
+  });
+
+
+  $('.opt_list > li a').on('click', function () {
     var selectText = $(this).text();
     $(this).closest('.opt_list').prev('.btn_list').text(selectText);
     $(this).closest('.opt_list').slideUp(300);
   });
 })();
-
-// main slide
-var mainSlide = new Swiper('.visual_wrap', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  centeredSlides: true,
-  roundLengths: true
-});
-
 
