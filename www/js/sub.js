@@ -20,8 +20,8 @@ function slideInit() {
     }
   });
 
-
-  var aa = new Swiper('.product_list', {
+  //상품 리스트 슬라이드
+  var ptList = new Swiper('.product_list', {
     roundLengths: true,
     spaceBetween: 30,
     clickable: true,
@@ -38,7 +38,6 @@ function slideInit() {
   });
 
   //상품 상세보기 슬라이드
-
   var pdtOther = new Swiper('.pdt_slide', {
     slidesPerView: 'auto',
     spaceBetween: 30,
@@ -57,17 +56,6 @@ function slideInit() {
     slidesPerView: 1,
     thumbs: {
       swiper: detailThumb
-    }
-  });
-
-  // visual section
-  var visual = new Swiper('.visual_wrap', {
-    slidesPerView: 1,
-    loop: true,
-    autoplay: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
     }
   });
 
