@@ -37,7 +37,7 @@
   <!-- //접근성 바로가기 메뉴(숨김) -->
 
   <!-- WRAP (mall or company css추가)-->
-  <div id="wrap" class="mall">
+  <div id="wrap" class="company">
 
     <!-- HEADER -->
     <div id="header"> </div>
@@ -48,25 +48,19 @@
       <!-- breadcrumb  -->
       <div class="breadcrumb_wrap"> <a href="" class="home">Home</a>
         <ul class="item_list">
+          <li>센터안내</li>
+          <li>홍대센터</li>
           <li><a href="#">파일주문</a></li>
         </ul>
       </div>
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap sidebar">
-        <div class="snb typeA">
-          <h2>이용안내</h2>
-          <ul>
-            <li><a href="#">파일주문 안내</a></li>
-            <li><a href="#">회원정보</a></li>
-            <li><a href="#">작업시 유의사항</a></li>
-            <li><a href="#">인쇄 주의사항</a></li>
-          </ul>
-        </div>
-
+      <div class="cont_wrap no_pdt">
+    
         <!-- 본문 -->
         <div class="con_box file_order_wrap">
+
         <!-- 파일주문 비주얼 -->
         <div class="visual_box">
           <p
@@ -76,6 +70,10 @@
           </p>
         </div>
         <!-- //파일주문 비주얼 -->
+
+        <!-- <div class="tit_box">
+          <h3>파일주문</h3>
+        </div> -->
 
         <!-- 파일주문 안내사항 -->
         <div class="guide_box">
@@ -88,113 +86,142 @@
         <!-- //파일주문 안내사항 -->
 
           <div class="section bbs_write">
-            <h3>파일 주문서 작성</h3>
-
             <form action="">
               <fieldset>
-                <legend>파일 주문서 작성 양식</legend>
-
-                <!-- 회원정보 확인 -->
-                <div class="form_wrap">
-                  <div class="form_group">
+                <legend>파일주문 입력 양식</legend>
+                <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
+                <div class="form_wrap width100">
+            
+                  <div class="form_group col2">
+                    <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
                     <div class="form_item">
-                      <strong class="form_name">신청인 <sup class="require">*</sup></strong>
+                      <strong class="form_name">성함 <sup class="require">*</sup></strong>
                       <div class="form_inp">
-                        <input type="password" title="비밀번호 입력">
+                        <input type="text" title="이름 입력">
+                        <p class="txt_vaild">이름을 입력해주세요</p>
                       </div>
                     </div>
                   </div>
-                  <div class="form_group">
+                  <div class="form_group col2">
                     <div class="form_item">
-                      <strong class="form_name">업체명</strong>
-                      <div class="form_inp">
-                        <input type="password" title="비밀번호 입력">
+                      <strong class="form_name">연락처 <sup class="require">*</sup></strong>
+                      <div class="form_inp tel">
+                        <strong>일반전화</strong>
+                        <div class="form_inp col3">
+                          <select name="" id="" title="일반전화 국번 선택">
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                          </select>
+                          <input type="number" title="일반전화 중간 자리 입력">
+                          <input type="number" title="일반전화 마지막자리 입력">
+                          <p class="txt_vaild">일반전화 번호를 입력해주세요</p>
+                        </div>
+                      </div>
+                      <div class="form_inp tel">
+                        <strong>휴대폰</strong>
+                        <div class="form_inp col3">
+                          <select name="" id="" title="휴대폰 앞 3자리 선택">
+                            <option value="">010</option>
+                            <option value="">017</option>
+                            <option value="">019</option>
+                          </select>
+                          <input type="number" title="휴대폰 중간 3자리 입력">
+                          <input type="number" title="휴대폰 마지막3자리 입력">
+                          <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="form_group">
                     <div class="form_item">
-                      <strong class="form_name">핸드폰 <sup class="require">*</sup></strong>
-                      <div class="form_inp">
-                        <input type="password" title="비밀번호 입력">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group">
-                    <div class="form_item">
-                      <strong class="form_name">연락처</strong>
-                      <div class="form_inp">
-                        <input type="text" value="Shining1234@kinkos.com" title="이메일 입력">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group">
-                    <div class="form_item">
-                      <strong class="form_name">이메일</strong>
+                      <strong class="form_name">이메일 <sup class="require">*</sup></strong>
                       <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
+                      <p class="txt_vaild">이메일 주소를 확인해주세요</p>
                     </div>
                   </div>
-                  <div class="form_group">
+                  <div class="form_group col2">
                     <div class="form_item">
-                      <strong class="form_name">배송지</strong>
+                      <strong class="form_name">회사명 <sup class="require">*</sup></strong>
                       <div class="form_inp">
-                        <input type="text" value="010-1214-2134" title="배송지 입력">
+                        <input type="text" title="회사명 입력">
+                        <p class="txt_vaild">회사명 입력해주세요</p>
+                      </div>
+                    </div>
+                    <div class="form_item">
+                      <strong class="form_name">센터선택 <sup class="require">*</sup></strong>
+                      <div class="form_inp">
+                        <input type="text" title="센터 입력">
+                        <p class="txt_vaild">센터를 입력해주세요</p>
                       </div>
                     </div>
                   </div>
                   <div class="form_group">
                     <div class="form_item">
-                      <strong class="form_name">보안코드</strong>
-                      <div class="form_inp">
-                        <input type="text" value="010-1214-2134" title="보안코드 입력">
+                      <strong class="form_name">회사주소</strong>
+                      <div class="form_inp address">
+                        <input type="text" title="기본 주소" placeholder="기본 주소">
+                        <a href="#url" class="btn type03">주소 검색</a>
+                        <input type="text" title="상세 주소" placeholder="상세 주소">
                       </div>
                     </div>
+                  
                   </div>
-                  <div class="form_group top_line width100">
+                  <div class="form_group">
                     <div class="form_item">
                       <strong class="form_name">제목</strong>
                       <div class="form_inp">
-                        <input type="text" value="010-1214-2134" title="제목 입력">
+                        <input type="text" title="제목 입력">
                       </div>
                     </div>
                   </div>
-                  <div class="form_group width100">
-                    <div class="form_item">
-                      <strong class="form_name ver_top">의뢰서</strong>
-                      <div class="form_inp">
-                        <textarea title="의뢰 내용 입력"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  
 
-                  <div class="form_group top_line btm_line chk_box width100">
+                  <div class="form_group">
+                    <div class="form_item">
+                      <strong class="form_name">의뢰서</strong>
+                      <div class="form_inp">
+                        <textarea></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form_group top_line file_box">
+                    <div class="form_item">
+                      <span class="form_name">파일 첨부</span>
+                      <div class="form_inp js-list-item">
+                        <div class="file_inp_box">
+                          <!-- 첨부 파일 이름 출력 요소 -->
+                          <input type="text" class="js-file-name" readonly>
+                          <button type="button" class="btn type03 js-file-label">파일 찾기</button>
+                          <button type="button" class="btn type03 js-file-del">파일 삭제</button>
+                          <input type="file" class="file_inp">
+                  
+                          <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
+                        </div>
+                      </div>
+                      <p class="desc">- 100MB 이하/ 압축파일 권장</p>
+                    </div>
+                  
+                  </div>
+            
+                  <div class="form_group top_line chk_box">
                     <div class="form_item">
                       <div class="form_inp">
                         <input type="checkbox" id="chk1">
-                        <label for="chk1">개인정보 수집 및 이용에 대한 안내에 동의합니다. <span class="point_blue">[필수]</span></label>
+                        <label for="chk1">개인정보 수집 및 이용에 대한 안내에 동의합니다. [필수]</label>
                       </div>
-                      <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
                     </div>
                     <div class="form_item">
                       <div class="form_inp">
                         <input type="checkbox" id="chk2">
-                        <label for="chk2">이벤트 등 광고성 정보 수신에 동의합니다. <span class="point_blue">[필수]</span></label>
+                        <label for="chk2">이벤트 등 광고성 정보 수신에 동의합니다. [필수]</label>
                       </div>
-                      <a href="#popup2" class="btn_popup txt_underline">내용 보기</a>
                     </div>
                   </div>
-
-
+            
                   <div class="btn_wrap col2 center">
-                    <a href="#url" class="btn large type01" style="width:275px">주문 저장 및 웹하드 업로드 실행</a>
-                    <a href="#url" class="btn large type02" style="width:275px">주문 저장 (웹하드 업로드 안함)</a>
-                    <a href="#url" class="btn large type03" style="width:275px">돌아가기</a>
+                    <a href="#url" class="btn large type02">취소</a>
+                    <a href="#url" class="btn large type01">주문 저장</a>
                   </div>
-                
                 </div>
-
-
               </fieldset>
             </form>
 
