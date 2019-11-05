@@ -265,7 +265,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 [class*="on"] .point_marker.black::before {background-position:0 -36px;}
 
 .link_dot {position: relative;width:8px;display: inline-block !important;}
-.link_dot::before {content:"";background:#03a2ea;width:3px;height:3px;display: inline-block;margin-right:4px;border-radius: 50%;vertical-align: middle;}
+.link_dot::before {content:"";background:#03a2ea;width:5px;height:5px;margin-bottom:3px;display: inline-block;margin-right:4px;border-radius: 50%;vertical-align: middle;}
 .mall .gnb_wrap .link_dot::before {background:#fff;}
 .mall .btn_wrap .link_dot::before {background:#fff;}
 

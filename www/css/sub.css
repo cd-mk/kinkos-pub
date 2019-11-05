@@ -416,7 +416,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 /* 이미지형 리스트 */
 .photo_list {overflow:hidden;}
 .photo_list li {float:left;}
-.photo_list li a {display:block;border:1px solid #e7e7e7}
+.photo_list li a {display:block;}
 .photo_list .img_box img {display:block; width:100%; height:100%;}
 .photo_list .txt_box h4 {color:#000; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .photo_list .txt_box span {display:block; color:#545454;}
@@ -789,7 +789,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 /* K매거진 */
 .magazine_wrap .photo_list {margin-top:47px;}
-.magazine_wrap .photo_list > li {margin-left:30px; margin-top:40px; width:calc((100% - 60px) / 3);}
+.magazine_wrap .photo_list > li {margin-left:30px; margin-top:40px; width:calc((100% - 60px) / 3);min-height: 500px;}
 .magazine_wrap .photo_list > li:first-child,
 .magazine_wrap .photo_list > li:nth-child(4) {margin-left:0;}
 .magazine_wrap .photo_list > li:nth-child(1),
@@ -1255,6 +1255,7 @@ p+.btn_wrap {margin-top:40px !important;}
 /* S&G 제작 사례 */
 .service_info_wrap .photo_list {margin-top:47px;}
 .service_info_wrap .photo_list > li {margin-left:30px; margin-top:40px; width:calc((100% - 90px) / 4);}
+.service_info_wrap .photo_list li a{border:1px solid #e7e7e7}
 .service_info_wrap .photo_list > li:first-child,
 .service_info_wrap .photo_list > li:nth-child(5),
 .service_info_wrap .photo_list > li:nth-child(9),
