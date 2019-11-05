@@ -64,3 +64,12 @@ function slideInit() {
 $(document).ready(slideInit());
 
 
+// layer popup
+var toggleV = function () {
+  $(".toggle_view").click(function () {
+    $(this).parents(".item_list").toggleClass("on");
+    $(this).toggleClass("on");
+  });
+}
+toggleV();
+

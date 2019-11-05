@@ -1,6 +1,41 @@
 
 
 
+/// 브라우저별 스크롤바 넓이
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+// 페이지 로드시 viewport 체크
+function chkViewport() {
+  var scrollW = getScrollbarWidth();
+  var winW = $(window).outerWidth();
+  var viewport = winW + scrollW;
+
+  return viewport <= 1024 ? true : false;
+}
+// 리사이즈 이벤트에 따른 슬라이드 리로드
+function reloadSlide(slideTarget, pcOpt, moOpt) {
+  var flag = true;
+  var viewport;
+  var el = slideTarget.params.el;
+  var scrollW = getScrollbarWidth();
+
+  $(window).resize(function () {
+    var winW = $(this).outerWidth();
+    viewport = winW + scrollW;
+
+    if (viewport <= 1024 && flag) {
+      slideTarget.destroy(true, true);
+      slideTarget = new Swiper(el, moOpt);
+      flag = false;
+    } else if (viewport > 1024 && !flag) {
+      slideTarget.destroy(true, true);
+      slideTarget = new Swiper(el, pcOpt);
+      flag = true;
+    }
+  });
+}
+
 // GNB
 var setGnb = function() {
   if ($("#wrap").is(".company") === true) {
@@ -125,41 +160,6 @@ var mobileGnb = function () {
   });
 };
 
-/// 브라우저별 스크롤바 넓이
-function getScrollbarWidth() {
-  return window.innerWidth - document.documentElement.clientWidth;
-}
-// 페이지 로드시 viewport 체크
-function chkViewport() {
-  var scrollW = getScrollbarWidth();
-  var winW = $(window).outerWidth();
-  var viewport = winW + scrollW;
-
-  return viewport <= 1024 ? true : false;
-}
-// 리사이즈 이벤트에 따른 슬라이드 리로드
-function reloadSlide(slideTarget, pcOpt, moOpt) {
-  var flag = true;
-  var viewport;
-  var el = slideTarget.params.el;
-  var scrollW = getScrollbarWidth();
-
-  $(window).resize(function () {
-    var winW = $(this).outerWidth();
-    viewport = winW + scrollW;
-
-    if (viewport <= 1024 && flag) {
-      slideTarget.destroy(true, true);
-      slideTarget = new Swiper(el, moOpt);
-      flag = false;
-    } else if (viewport > 1024 && !flag) {
-      slideTarget.destroy(true, true);
-      slideTarget = new Swiper(el, pcOpt);
-      flag = true;
-    }
-  });
-}
-
 var setInputFile = function () {
   $('.file_inp').each(function () {
     $(this).on('change', function () {
@@ -200,7 +200,6 @@ var setCustomList = function () {
   }
 };
 
-
 // DatePicker
 var setDatePicker = function() {
   $.datepicker.setDefaults({
@@ -212,7 +211,6 @@ var setDatePicker = function() {
   });
   $('.inp_date').datepicker();
 };
-
 
 // accordian 변경 예정
 var setAccordian = function() {
@@ -267,7 +265,6 @@ var setFaqTab = function() {
     $('.faq_tab_con .accor_wrap').eq(idx).addClass('active');
   });
 }
-setFaqTab();
 
 
 
@@ -277,7 +274,7 @@ $(document).ready(function () {
   setGnb();
   mobileGnb();
   new WOW().init();
-
+  setFaqTab();
   // placeholder
   $('input, textarea').placeholder();
   if ($('.inp_date').length) setDatePicker();
@@ -393,7 +390,7 @@ function tab(e, num) {
 
 
 
-// visual section
+// (swiper)visual section slide
 var visual = new Swiper('.visual_wrap', {
   slidesPerView: 1,
   loop: true,
