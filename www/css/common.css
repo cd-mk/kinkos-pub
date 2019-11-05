@@ -264,7 +264,7 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 .gnb_wrap.company .point_marker::before {background-position:0 -18px;}
 [class*="on"] .point_marker.black::before {background-position:0 -36px;}
 
-.link_dot {position: relative;width:8px;display: inline-block;}
+.link_dot {position: relative;width:8px;display: inline-block !important;}
 .link_dot::before {content:"";background:#03a2ea;width:3px;height:3px;display: inline-block;margin-right:4px;border-radius: 50%;vertical-align: middle;}
 .mall .gnb_wrap .link_dot::before {background:#fff;}
 .mall .btn_wrap .link_dot::before {background:#fff;}
