@@ -110,7 +110,7 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .type_select input, .type_select .btn {height:50px; line-height:50px;}
 .type_select .form_group.col2 .form_item {width:calc((100% - 10px) / 2) !important; margin-left:10px;}
 .type_select .form_group.col3 {position:relative;padding-right:130px;}
-.type_select .form_group.col3 .btn {position:absolute;right:0;top:0;width:120px;}
+.type_select .form_group.col3 .btn_wrap {position:absolute;right:0;top:0;width:120px;}
 .type_select .form_group.col3 .form_item {margin-left:10px;}
 .type_select .form_group.col3 .form_item:nth-child(1) {width:24%;}
 .type_select .form_group.col3 .form_item:nth-child(2) {width:29%;}
