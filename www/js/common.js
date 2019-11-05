@@ -37,38 +37,38 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
 }
 
 // GNB
-var setGnb = function() {
+var setGnb = function () {
   if ($("#wrap").is(".company") === true) {
     $(".gnb_wrap").addClass("company");
-    $(".btn_toggle span:first-child").text("온라인몰 바로가기");
-    $(".logo").attr('href','/www/company/MH.00.00.00.main-www.html');
+    $(".btn_toggle strong").text("온라인몰");
+    $(".logo").attr('href', '/www/company/MH.00.00.00.main-www.html');
   }
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
-    $(".btn_toggle span:first-child").text("Kindo's 바로가기");
+    $(".btn_toggle strong").text("Kindo's");
     $(".logo").attr('href', '/www/mall/SmH.00.00.00.main-mall.html');
   }
   var $gnb, chkGnb;
 
-  $('.js_gnb .link_item').on('mouseenter focusin', function() {
+  $('.gnb_wrap .link_item').on('mouseenter focusin', function () {
     $gnb = $(this).closest('.js_gnb');
     chkGnb = $gnb.attr('data-gnb');
 
     $('.dim').show();
-    $('.js_gnb .link_item').removeClass('on');
+    $('.gnb_wrap .link_item').removeClass('on');
     $(this).addClass('on');
 
     if (chkGnb === 'company') {
       gnbBar(true, $(this));
       moveSnbBg($(this));
     }
-    
+
     dropSubGnb($(this), chkGnb);
   });
-  
-  $('#header').on('mouseleave focusout', function() {
+
+  $('#header').on('mouseleave focusout', function () {
     $('.dim').hide();
-    $('.js_gnb .link_item').removeClass('on');
+    $('.gnb_wrap .link_item').removeClass('on');
     $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
     $('.center_list_wrap').stop().slideUp(400);
     gnbBar(false);
@@ -104,25 +104,25 @@ var setGnb = function() {
     $('.sub_gnb_bg').css('left', left + 'px');
   }
   function toggleGnb() {
-    $('.btn_toggle').on('click', function() {
+    $('.btn_toggle').on('click', function () {
       var $gnbWrap = $(this).closest('.gnb_wrap');
-      
+
       $('.sub_gnb_wrap, .center_list_wrap').stop().slideUp(400);
       $(this).toggleClass('on');
       $('.toggle_bg').toggleClass('on');
-      $('.search_item').toggleClass('on');
+      // $('.search_item').toggleClass('on');
       $('.dim').hide();
 
 
 
       if ($gnbWrap.hasClass('company')) {
-        $('.mall_gnb').toggleClass('active');
-        $('.company_gnb').toggleClass('off');
+        $('.gnb_quick.mall').toggleClass('active');
+        $('.gnb_quick.company').toggleClass('off');
       } else {
-        $('.company_gnb').toggleClass('active');
-        $('.mall_gnb').toggleClass('off');
+        $('.gnb_quick.company').toggleClass('active');
+        $('.gnb_quick.mall').toggleClass('off');
       }
-      
+
     });
   }
   toggleGnb();
@@ -144,12 +144,12 @@ var setGnb = function() {
 
 // MOBILE GNB
 var mobileGnb = function () {
-  $('.btn_mo_gnb').on('click', function() {
+  $('.btn_mo_gnb').on('click', function () {
     $('body').addClass('open');
     $('.mo_gnb_wrap').addClass('active');
   });
-  $('.mo_gnb_wrap .btn_close').on('click', function() {
-		$('body').removeClass('open');
+  $('.mo_gnb_wrap .btn_close').on('click', function () {
+    $('body').removeClass('open');
     $('.mo_gnb_wrap').removeClass('active');
   });
 
@@ -201,19 +201,19 @@ var setCustomList = function () {
 };
 
 // DatePicker
-var setDatePicker = function() {
+var setDatePicker = function () {
   $.datepicker.setDefaults({
     dateFormat: 'yy-mm-dd',
     dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
     dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
-    monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
     monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
   });
   $('.inp_date').datepicker();
 };
 
 // accordian 변경 예정
-var setAccordian = function() {
+var setAccordian = function () {
   $('.accor_title label').on('click', toggleContent);
   $('.accor_title .txt_title').on('click', toggleContent);
 
@@ -223,8 +223,8 @@ var setAccordian = function() {
 }
 
 // name으로 그룹핑된 체크박스 전체 체크 기능
-var setChkAll = function() {
-  $('.inp_chk_all').on('change', function() {
+var setChkAll = function () {
+  $('.inp_chk_all').on('change', function () {
     var name = $(this).attr('name');
     $("input[name=" + name + "").prop('checked', $(this).prop('checked'));
   });
@@ -235,8 +235,8 @@ var setChkAll = function() {
 
 
 // layer popup
-var setPopup = function() {
-  $('.btn_popup').on('click', function() {
+var setPopup = function () {
+  $('.btn_popup').on('click', function () {
     var popupTarget = $(this).attr('href').slice(1);
 
     if ($("#" + popupTarget + "").length) {
@@ -245,7 +245,7 @@ var setPopup = function() {
       $('.dim').show();
     }
   });
-  $('.btn_pop_close').on('click', function() {
+  $('.btn_pop_close').on('click', function () {
     $('body').removeClass('open');
     $(this).closest('.popup_wrap').removeClass('active');
     $('.dim').hide();
@@ -253,11 +253,11 @@ var setPopup = function() {
 }
 
 // faq tab
-var setFaqTab = function() {
-  
-  $('.faq_tab_nav > li').on('click', function() {
+var setFaqTab = function () {
+
+  $('.faq_tab_nav > li').on('click', function () {
     var idx = $(this).index();
-    
+
     $('.faq_tab_nav > li').removeClass('on');
     $(this).addClass('on');
 
@@ -285,20 +285,20 @@ $(document).ready(function () {
   if ($('.js-list-add').length) setCustomList();
 
 
-  $('body').on('mousewheel DOMMouseScroll', function(e){
-    if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
-      if(e.originalEvent.detail > 0) {
+  $('body').on('mousewheel DOMMouseScroll', function (e) {
+    if (typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
+      if (e.originalEvent.detail > 0) {
         $('.mo_quick').removeClass('up');
         $('.mo_quick').addClass('down');
-      } else if(e.originalEvent.detail < 0){
+      } else if (e.originalEvent.detail < 0) {
         $('.mo_quick').removeClass('down');
         $('.mo_quick').addClass('up');
       }
     } else if (typeof e.originalEvent.wheelDelta == 'number') {
-      if(e.originalEvent.wheelDelta < 0) {
+      if (e.originalEvent.wheelDelta < 0) {
         $('.mo_quick').removeClass('up');
         $('.mo_quick').addClass('down');
-      } else if(e.originalEvent.wheelDelta > 0) {
+      } else if (e.originalEvent.wheelDelta > 0) {
         $('.mo_quick').removeClass('down');
         $('.mo_quick').addClass('up');
       }
@@ -314,10 +314,10 @@ $(document).ready(function () {
     mobileGnb();
   });
   $("#footer").load("../common/include/common.html .footer_inner", function () {
-    
+
   });
 
-  
+
 });
 
 
@@ -370,7 +370,7 @@ function tab(e, num) {
 (function () {
   var target = $('.btn_list');
   var targetLayer = $('.sch_wrap .item_box');
-  
+
   target.on('click mouseleave', function () {
     $(this).next().addClass("active");
     target.not($(this)).next().removeClass("active");

@@ -11,42 +11,57 @@
         <li><a href="/www/company/H5.00.00.00.en_guide.html">EN</a></li>
       </ul>
     </div>
+
+
+
     <!-- 홈페이지 타입에 따라 gnb_wrap에 클래스 추가 회사소개 : company, 쇼핑몰: mall -->
     <div class="gnb_wrap clearfix">
       <div class="inner">
-        <button type="button" class="btn_toggle"><span>온라인몰 바로가기</span><span class="ico_close"></span></button>
-        <div class="company_gnb js_gnb" data-gnb="company">
-          <span class="link_item"><a href="#url">킨코스 소개</a></span>
-          <span class="link_item"><a href="#url">서비스 안내</a></span>
-          <span class="link_item"><a href="#url">이벤트&amp;공지사항</a></span>
-          <span class="link_item"><a href="#url" class="point_circle">고객지원</a></span>
-          <span class="link_item js_center"><a href="#url" class="point_marker black">센터안내</a></span>
-          
-          <span class="gnb_bar"></span>
-        </div>
-        <div class="mall_gnb js_gnb" data-gnb="mall">
-          <span class="link_item all_menu">
-            <a href="#url">
-              <i class="btn_mo_gnb">
-                <span></span>
-                <span></span>
-                <span></span>
-              </i>
-              전체카테고리
-            </a></span>
+        <button type="button" class="btn_toggle">
+          <strong>온라인몰 바로가기</strong>
+        </button>
+
+        
+        <div class="gnb_quick company js_gnb" data-gnb="company">
+          <button type="button" class="link_item all_menu">
+            <i>
+              <span></span>
+              <span></span>
+              <span></span>
+            </i>
+            <span class="blind">전체카테고리</span>
+          </button>
           <ul>
-            <li><a href="#url">즉석상품</a></li>
-            <li><a href="#url">히트상품</a></li>
-            <li><a href="#url">추천상품</a></li>
-            <li><a href="#url">최신상품</a></li>
-            <li><a href="#url">인기상품</a></li>
-            <li><a href="#url">할인상품</a></li>
-            <li class="link_item js_center"><a href="#url" class="point_marker white">센터안내</a></li>
+            <li><a href="/www/company/M4.01.01.00.estimate.html">견적문의</a></li>
+            <li><a href="/www/company/M4.03.01.00.ally.html">제휴 및 제안</a></li>
+            <li><a href="/www/company/M5.01.02.02.file_order.html">파일주문</a></li>
+            <li><a href="/www/company/M4.02.01.00.opinion.html">서비스 의견</a></li>
+            <li><a href="/mall/Sm9.01.00.00.userguide-list.html">이용안내</a></li>
           </ul>
         </div>
-        <div class="search_item">
-          <button type="button" class="btn_sch black"><span class="blind">검색창 열기</span></button>
+        <div class="gnb_quick mall js_gnb" data-gnb="mall">
+          <button type="button" class="link_item all_menu">
+            <i>
+              <span></span>
+              <span></span>
+              <span></span>
+            </i>
+            <span class="blind">전체카테고리</span>
+          </button>
+          <ul>
+            <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">즉석상품</a></li>
+            <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">히트상품</a></li>
+            <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">추천상품</a></li>
+            <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">최신상품</a></li>
+            <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">인기상품</a></li>
+            <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">할인상품</a></li>
+            
+          </ul>
         </div>
+        <!-- <div class="search_item">
+          <button type="button" class="btn_sch black"><span class="blind">검색창 열기</span></button>
+        </div> -->
+        <div class="link_item js_center"><a href="#url" class="point_marker">센터안내</a></div>
         <div class="toggle_bg"></div>
       </div>
     </div>
@@ -55,33 +70,34 @@
     <div class="sub_gnb_wrap company" data-snb="company">
       <div class="inner_box">
         <div class="inner">
-          <ul class="sub_gnb_list">
-            <li><a href="/www/company/M1.01.00.00.ceo.html"><strong>킨코스 소개</strong></a></li>
-            <li><a href="/www/company/M1.01.00.00.ceo.html">CEO인사말</a></li>
-            <li><a href="/www/company/M1.02.00.00.history.html">기업이념 및 연혁</a></li>
-            <li><a href="	M1.03.00.00.only-kinkos.html">Only 킨코스</a></li>
-            <li>
-              <a href="/www/company/M1.04.01.00.person.html">채용정보</a>
-              <ul class="link_list">
-                <li><a href="/www/company/M1.04.01.00.person.html">인재상</a></li>
-                <li><a href="/www/company/M1.04.02.00.joblist.html">직무소개</a></li>
-                <li><a href="/www/company/M1.04.03.00.recruit.html">채용안내</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="sub_gnb_list">
-            <li><a href="	M2.01.00.00.service-info.html"><strong>서비스 안내</strong></a></li>
+        <div class="gnb_box">
+          <!-- loop -->
+          <div class="gnb_item">
+            <!-- 1depth -->
+            <div class="tit_box">
+              <a href="/www/company/M1.01.00.00.ceo.html"><strong>킨코스 소개</strong></a>
+            </div>
+            <!-- //1depth -->
+            <!-- 2depth -->
+            <ul class="menu_list">
+              <li><a href="/www/company/M1.01.00.00.ceo.html">CEO인사말</a></li>
+              <li><a href="/www/company/M1.02.00.00.history.html">기업이념 및 연혁</a></li>
+              <li><a href="	M1.03.00.00.only-kinkos.html">Only 킨코스</a></li>
+              <li><a href="/www/company/M1.04.01.00.person.html">채용정보</a></li>
+            </ul>
+            <!-- //2depth -->
+          </div>
+          <!-- //loop -->
+        
+          <div class="gnb_item">
+            <div class="tit_box">
+              <a href="	M2.01.00.00.service-info.html"><strong>서비스 안내</strong></a>
+            </div>
+            <ul class="menu_list">
             <li><a href="/www/company/M2.02.01.00.digital.html">디지털출력/복사</a></li>
             <li><a href="/www/company/M2.03.01.00.binding.html">제본</a></li>
             <li><a href="/www/company/M2.04.00.00.finishing.html">후가공</a></li>
-            <li>
-              <a href="/www/company/M2.05.01.00.signsGraphics-main.html">사인앤그래픽</a>
-              <ul class="link_list">
-                <li><a href="/www/company/M2.05.02.00.signsGraphics-1.html">S&amp;G 일반상품</a></li>
-                <li><a href="/www/company/M2.05.03.00.signsGraphics-2.html">S&amp;G 패키지상품</a></li>
-                <li><a href="/www/company/M2.05.04.01.signsGraphics-3.html">S&amp;G 제작사례</a></li>
-              </ul>
-            </li>
+            <li><a href="/www/company/M2.05.01.00.signsGraphics-main.html">사인앤그래픽</a></li>
             <li><a href="/www/company/M2.06.00.00.scan-file.html">스캔투파일</a></li>
             <li><a href="/www/company/M2.07.00.00.design.html">디자인</a></li>
             <li><a href="/www/company/M2.08.00.00.business-card.html">명함제작</a></li>
@@ -90,21 +106,34 @@
             <li><a href="/www/company/M2.11.00.00.recommended-products.html">추천상품</a></li>
             <li><a href="/www/company/M2.12.00.00.corporation.html">법인우대프로그램</a></li>
             <li><a href="/www/company/M2.13.00.00.dhl.html	">DHL항공특송서비스</a></li>
-          </ul>
-          <ul class="sub_gnb_list">
-            <li><a href="/www/company/M3.01.01.00.event.html"><strong>이벤트&공지사항</strong></a></li>
-            <li><a href="/www/company/M3.03.01.00.notice-list.html">공지사항</a></li>
-            <li><a href="/www/company/M3.01.01.00.event.html" class="new_update">진행중인 이벤트</a></li>
-            <li><a href="/www/company/M3.01.01.00.event.html">종료된 이벤트</a></li>
-            <li><a href="/www/company/M3.02.01.00.k-magazine-list.html">K매거진</a></li>
-          </ul>
-          <ul class="sub_gnb_list">
-            <li><a href="/www/company/M4.01.01.00.estimate.html"><strong>고객지원</strong></a></li>
-            <li><a href="/www/company/M4.01.01.00.estimate.html">견적 및 서비스 문의</a></li>
-            <li><a href="/www/company/M4.04.00.00.faq.html">자주묻는 질문</a></li>
-            <li><a href="/www/company/M4.02.01.00.opinion.html">서비스 의견</a></li>
-            <li><a href="/www/company/M4.03.01.00.ally.html">제후 문의 및 제안</a></li>
-          </ul>
+            </ul>
+          </div>
+
+          <div class="gnb_item">
+            <div class="tit_box">
+              <a href="/www/company/M3.01.01.00.event.html"><strong>이벤트&공지사항</strong></a>
+            </div>
+            <ul class="menu_list">
+              <li><a href="/www/company/M3.03.01.00.notice-list.html">공지사항</a></li>
+              <li><a href="/www/company/M3.01.01.00.event.html" class="new_update">진행중인 이벤트</a></li>
+              <li><a href="/www/company/M3.01.01.00.event.html">종료된 이벤트</a></li>
+              <li><a href="/www/company/M3.02.01.00.k-magazine-list.html">K매거진</a></li>
+            </ul>
+          </div>
+
+          <div class="gnb_item">
+            <div class="tit_box">
+              <a href="/www/company/M4.01.01.00.estimate.html"><strong>센터안내</strong></a>
+            </div>
+            <ul class="menu_list">
+              <li><a href="/www/company/M4.01.01.00.estimate.html">견적 및 서비스 문의</a></li>
+              <li><a href="/www/company/M4.04.00.00.faq.html">자주묻는 질문</a></li>
+              <li><a href="/www/company/M4.02.01.00.opinion.html">서비스 의견</a></li>
+              <li><a href="/www/company/M4.03.01.00.ally.html">제후 문의 및 제안</a></li>
+            </ul>
+          </div>
+        </div>
+        
           <div class="sub_gnb_bg"></div>
         </div>
       </div>
