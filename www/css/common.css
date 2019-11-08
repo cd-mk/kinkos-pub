@@ -78,7 +78,7 @@ table {border-collapse:collapse; border-spacing:0;}
 img {vertical-align:middle;max-width:100%;}
 b, strong {font-weight:700;}
 pre, .pre{line-height:1.7em; white-space:pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;}
-
+em {font-style:normal}
 input,select,textarea {box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
 /* default input */
 button {
@@ -798,6 +798,25 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 
 
 
+body.open {overflow:hidden;}
+.bg_img {position:relative; display:inline-block; width:100%; height:100%; overflow:hidden;}
+.bg_img img {position:absolute; top:50%; left:50%; transform:translate(-50% , -50%); width:100%; height:100%; pointer-events:none; object-fit:cover;}
+
+
+
+
+.pg_nav_wrap {position:relative;width:112px;height:18px;}
+.pg_nav_wrap .pg_nav {width:112px;}
+.pg_nav_wrap .swiper-button-next,
+.pg_nav_wrap .swiper-button-prev {top:0;margin-top:0;}
+/* .pg_nav_wrap .swiper-button-next.swiper-button-disabled, 
+.pg_nav_wrap .swiper-button-prev.swiper-button-disabled {opacity:1;} */
+
+.pg_nav_wrap.scroll {padding-right:130px;width:100%; padding-top:6px;max-width:1530px;margin:0 auto;}
+.pg_nav_wrap.scroll .swiper-scrollbar {width:100%;height:4px;background:#dfe2ed;}
+.pg_nav_wrap.scroll .swiper-scrollbar-drag {background:#000;}
+.pg_nav_wrap.scroll .pg_nav {position:absolute;right:0;top:0;}
+
 .swiper-slide {cursor:pointer;}
 .swiper-button-next {background-image:url(../image/common/next-blue.png);top:161px; right:20px; left:auto; margin-top:0; width:83px; height:83px; background-size:83px;}
 .swiper-button-prev {background-image:url(../image/common/prev-blue.png);top:161px; left:20px; right:auto; margin-top:0; width:83px; height:83px; background-size:83px;}
@@ -815,18 +834,18 @@ h3 {font-size:24px;font-weight:700;margin-bottom:20px;}
 .swiper-button-next.mid {right:10px;background-image:url(../image/common/next-detail.png);}
 .swiper-button-prev.mid {left:10px;background-image:url(../image/common/prev-detail.png);}
 
-.swiper-pagination {bottom:-8px;}
-
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {opacity:0.2;}
-
-body.open {overflow:hidden;}
-.bg_img {position:relative; display:inline-block; width:100%; height:100%; overflow:hidden;}
-.bg_img img {position:absolute; top:50%; left:50%; transform:translate(-50% , -50%); width:100%; height:100%; pointer-events:none; object-fit:cover;}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:-14px;font-size:18px}
 
 @media screen and (max-width:1024px) {
  .swiper-button-next {background-image:url(../image/common/next-mo.svg); right:20px; left:auto; width:21px; height:18px; background-size:21px;}
  .swiper-button-prev {background-image:url(../image/common/prev-mo.svg); left:20px; right:auto; width:21px; height:18px; background-size:21px;}
+	.mall .swiper-button-next {right:0;}
+  .mall .swiper-button-prev {left:0;}
 }
+
+
+
 
 
 
@@ -860,25 +879,29 @@ common mall
 #footer .footer_inner .pb > li:first-child {margin-left:0;}
 #footer .footer_inner .pb > li > a {font-size:16px;}
 #footer .footer_inner .info {margin-top:18px;}
-#footer .footer_inner .info span {margin-left:34px; font-size:14px; line-height:1.71; color:#545454;}
-#footer .footer_inner .info span:first-child {margin-left:0;}
-#footer .footer_inner .info span:nth-of-type(3) {margin-left:0;}
+#footer .footer_inner .info span {margin-left:12px; font-size:14px; line-height:1.71; color:#777;}
+#footer .footer_inner .info p span:first-child {margin-left:0;}
 #footer .footer_inner .social {overflow:hidden; float:right;}
 #footer .footer_inner .social > li {float:left; margin-left:16px;}
 #footer .footer_inner .social > li:first-child {margin-left:0;}
 #footer .footer_inner .social li a {padding:4px;}
-#footer .footer_inner .cpr {position:absolute; right:0; bottom:48px; font-size:14px; line-height:1.57; color:#bebebe;}
-
+#footer .footer_inner .cpr {}
+#footer .footer_inner .mark {position:absolute; right:0; bottom:48px; font-size:14px; line-height:1.57; color:#999;font-size:14px;}
+#footer .footer_inner .mark em strong {font-weight:400;color:#222}
+#footer .footer_inner .mark em {margin-right:14px;color:#999;text-align: right;display: inline-block;vertical-align: middle;}
 @media screen and (max-width:1024px) {
  #footer {margin-top:80px;}
- #footer .footer_inner {padding:35px 0 64px;}
+ #footer .footer_inner {padding:30px 0 20px;}
  #footer .footer_inner .pb {float:none; text-align:center;}
  #footer .footer_inner .pb > li {float:none; margin-left:0; display:inline-block;}
- #footer .footer_inner .pb > li > a {font-size:14px; display:block; padding:5px 10px;}
+ #footer .footer_inner .pb > li > a {font-size:14px; display:block; padding:5px 7px;}
+  #footer .footer_inner .info {margin-top:30px}
  #footer .footer_inner .info span {margin-left:0; font-size:14px; display:block; text-align:center;}
- #footer .footer_inner .social {float:none; margin-top:38px; text-align:center;}
+ #footer .footer_inner .social {float:none; margin-top:25px; text-align:center;}
  #footer .footer_inner .social > li {float:none; margin-left:16px; display:inline-block;}
- #footer .footer_inner .cpr {right:50%; bottom:30px; font-size:13px; transform:translateX(50%); width:273px;}
+ #footer .footer_inner .cpr {margin-top:25px}
+ #footer .footer_inner .mark  {position: relative;bottom:auto;right:auto;text-align: center;margin-top:12px}
+  #footer .footer_inner .mark img {width:23px;}
 }
 
 /* 바로가기 메뉴 (숨김) */
@@ -908,15 +931,6 @@ common mall
  .mo img {max-width:100%;}
  .pc_tablet {display:block;}
  .mo_only {display:none;}
-	.pg_nav_wrap {position:relative;margin-top:40px;padding-right:30%;width:100%;height:18px;}
-	.swiper-scrollbar {background:#e7e7e7;height:3px;}
-	.pg_nav_wrap .pg_nav {width:25%;padding:0 40px;position:relative;position:absolute;right:0;top:12px;}
-	.swiper-scrollbar-drag {background:#000}
-	.swiper-button-next {right:0;}
-	.swiper-button-prev {left:0;}
-	.swiper-button-next.swiper-button-disabled, 
-	.swiper-button-prev.swiper-button-disabled {opacity:1;}
-
 }
 
 
