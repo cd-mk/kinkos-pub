@@ -36,6 +36,8 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
   });
 }
 
+
+
 // GNB
 var setGnb = function () {
   if ($("#wrap").is(".company") === true) {
@@ -45,7 +47,7 @@ var setGnb = function () {
   }
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
-    $(".btn_toggle strong").text("Kindo's");
+    $(".btn_toggle strong").text("Kinko's");
     $(".logo").attr('href', '/www/mall/SmH.00.00.00.main-mall.html');
   }
   var $gnb, chkGnb;
@@ -58,21 +60,28 @@ var setGnb = function () {
     $('.gnb_wrap .link_item').removeClass('on');
     $(this).addClass('on');
 
-    if (chkGnb === 'company') {
-      gnbBar(true, $(this));
-      moveSnbBg($(this));
-    }
-
     dropSubGnb($(this), chkGnb);
   });
 
-  $('#header').on('mouseleave focusout', function () {
+  $('.gnb_wrap').on('mouseleave focusout', function () {
     $('.dim').hide();
     $('.gnb_wrap .link_item').removeClass('on');
     $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
     $('.center_list_wrap').stop().slideUp(400);
-    gnbBar(false);
   });
+  $('.js_gnb').on('mouseleave focusout', function () {
+    $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
+    $('.dim').hide();
+  });
+  $('.sub_gnb_wrap').on('mouseenter focusin', function () {
+    $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
+    $('.dim').show();
+  });
+  $('.sub_gnb_wrap').on('mouseleave focusout', function () {
+    $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
+    $('.dim').hide();
+  });
+
 
   function dropSubGnb(target, chkGnb) {
     if (target.hasClass('js_center')) {
@@ -83,26 +92,8 @@ var setGnb = function () {
       $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
     }
   }
-  function gnbBar(flag, target) {
-    if (flag) {
-      var mgl = parseInt(target.css('margin-left'));
-      var width = target.outerWidth();
-      var move = target.position().left;
-      $('.gnb_bar').addClass('active');
-      $('.gnb_bar').width(width);
 
-      $('.gnb_bar').css('left', move + mgl + 'px');
-    } else {
-      $('.gnb_bar').removeClass('active');
-    }
-  }
-  function moveSnbBg(target) {
-    var w = target.outerWidth();
-    var left = target.offset().left;
 
-    $('.sub_gnb_bg').width(w);
-    $('.sub_gnb_bg').css('left', left + 'px');
-  }
   function toggleGnb() {
     $('.btn_toggle').on('click', function () {
       var $gnbWrap = $(this).closest('.gnb_wrap');
@@ -129,15 +120,15 @@ var setGnb = function () {
 
 
   //map link
-  $('ul.locat_list li').on('mouseleave focusout', function () {
-    var tab_id = $(this).attr('data-tab');
+  // $('ul.locat_list li').on('mouseleave focusout', function () {
+  //   var tab_id = $(this).attr('data-tab');
 
-    $('ul.locat_list li').removeClass('active');
-    $('.map-content').removeClass('active');
+  //   $('ul.locat_list li').removeClass('active');
+  //   $('.map-content').removeClass('active');
 
-    $(this).addClass('active');
-    $("#" + tab_id).addClass('active');
-  })
+  //   $(this).addClass('active');
+  //   $("#" + tab_id).addClass('active');
+  // })
 
 
 }
@@ -307,6 +298,7 @@ $(document).ready(function () {
 
 
 
+
   // 임시 header, footer영역 로드
   $("#header").load("../common/include/common.html header", function () {
     // header 로드 후 header 관련 function 실행
@@ -317,6 +309,8 @@ $(document).ready(function () {
 
   });
 
+
+  
 
 });
 
@@ -390,6 +384,7 @@ function tab(e, num) {
 
 
 
+
 // (swiper)visual section slide
 var visual = new Swiper('.visual_wrap', {
   slidesPerView: 1,
@@ -400,3 +395,14 @@ var visual = new Swiper('.visual_wrap', {
     clickable: true,
   }
 });
+
+function clickshow(elem, ID) {
+  var menu = document.getElementById(ID);
+  if (elem.id != 'closed') {
+    elem.id = 'closed';
+    menu.className = "closed";
+  } else {
+    elem.id = 'opened';
+    menu.className = "opened";
+  }
+}
