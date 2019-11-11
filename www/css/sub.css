@@ -565,7 +565,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 @media screen and (max-width:1024px) {
   .page_tab {height:auto; margin-bottom:0;}
-  .page_tab > ul {position:static; transform:none; line-height:50px;border-right:1px solid #dedede;border-top:1px solid #dedede;overflow:hidden;}
+  .page_tab > ul {position:static; transform:none; line-height:50px;border-right:1px solid #dedede;border-top:1px solid #dedede;overflow:hidden;width:100%;}
   .page_tab > ul > li {font-size:14px;border-left:1px solid #dedede;border-bottom:1px solid #dedede;  height:50px;line-height:50px}
   .page_tab > ul > li > a {line-height:50px;}
 
@@ -1623,7 +1623,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 @media screen and (max-width:1024px) {
   .cart_wrap .bbs_list.typeB {margin-top:30px !important;}
-  .bbs_list .num, .bbs_list td:nth-child(3) {display:block;}
+  .cart_wrap .bbs_list .num, .cart_wrap .bbs_list td:nth-child(3) {display:block;}
 
 
 	/* Force table to not be like tables anymore */
