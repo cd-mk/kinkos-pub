@@ -44,11 +44,11 @@
 .tit_sub h2 {font-size:36px;font-weight:bold;}
 .tit_sub p {position:relative; font-size:1em;margin-top:20px;color:#333;}
 /* .tit_sub.type_bg p:after {content:'';position:absolute;left:50%; bottom:-60px; transform:translateX(-50%); width:1px;height:32px; background:#e7e7e7;} */
-.tit_sub.type_bg {height:220px; margin-bottom:0; background-size:cover; background-repeat:no-repeat;background-position: 50% 50%;max-width:1530px;}
-.tit_sub.bg_info {background-image:url('../image/company/sub/bg-sub01.jpg');}
-.tit_sub.bg_event {background-image:url('../image/company/sub/bg-sub02.jpg');}
-.tit_sub.bg_cs {background-image:url('../image/company/sub/bg-sub03.jpg');}
-.tit_sub.bg_center {background-image:url('../image/company/sub/bg-center.jpg');}
+.tit_sub.type_bg {height:220px; margin-bottom:0; background-size:cover; background-repeat:no-repeat;background-position: 50% 50%;/*max-width:1530px;*/max-width: 100%;}
+.tit_sub.bg_info {background-image:url('../image/company/sub/bg-info.png');}
+.tit_sub.bg_event {background-image:url('../image/company/sub/bg-event.png');}
+.tit_sub.bg_cs {background-image:url('../image/company/sub/bg-cs.png');}
+.tit_sub.bg_center {background-image:url('../image/company/sub/bg-center.png');}
 .tit_sub.bg_service {background-image:url('../image/company/sub/bg-service.png');}
 .tit_sub.bg_en {background-image:url('../image/company/sub/bg-en.png');}
 .tit_sub.type_bg h2 {padding-top:74px; color:#fff;}
@@ -62,8 +62,10 @@
   .tit_sub.type_bg h2 {padding-top:41px;}
   .tit_sub.type_bg p {margin-top:15px;}
   .tit_sub.type_bg {height:170px;}
-  .tit_sub.bg_cs {background-image:url('../image/company/sub/bg-sub03-mo.jpg');}
-  .tit_sub.bg_center {background-image:url('../image/company/sub/bg-center-mo.jpg');}
+  .tit_sub.bg_info {background-image:url('../image/company/sub/bg-info-mo.png');}
+  .tit_sub.bg_event {background-image:url('../image/company/sub/bg-event-mo.png');}
+  .tit_sub.bg_cs {background-image:url('../image/company/sub/bg-cs-mo.png');}
+  .tit_sub.bg_center {background-image:url('../image/company/sub/bg-center-mo.png');}
   .tit_sub.bg_service {background-image:url('../image/company/sub/bg-service-mo.png');}
   .tit_sub.bg_en {background-image:url('../image/company/sub/bg-en-mo.png');}
 }
@@ -554,7 +556,8 @@ p+.btn_wrap {margin-top:40px !important;}
 .page_tab.sub_type1{height:auto;position:relative;max-width:1530px;margin:0 auto 40px;border-top:1px solid #dedede;border-bottom:1px solid #dedede;border-right:1px solid #dedede;}
 .page_tab.sub_type1 > ul{position:relative;top:0;left:0;transform:none;display:table;width:100%}
 .page_tab.sub_type1 > ul > li{cursor:pointer;display:table-cell;padding-top:0;height:auto;line-height:1,3;box-sizing:border-box;font-size:1em;color:#fff;text-align:center;overflow:hidden;font-weight:normal;border-left:1px solid #dedede;}
-.page_tab.sub_type1 > ul > li.active {background:#03a2ea;border:0;}
+.page_tab.sub_type1 > ul > li.active {position:relative;border:0;background:#03a2ea;}
+.page_tab.sub_type1 > ul > li.active::before {width:100%;height:100%;display:block;position:absolute;background:#03a2ea;top:-1px;left:-1px;}
 .page_tab.sub_type1 > ul > li:hover {background:#03a2ea;}
 .page_tab.sub_type1 > ul > li a {padding:15px 0;color:#777;height:auto;line-height:1.3;width:100%;}
 .page_tab.sub_type1 > ul > li.active a, 
@@ -570,7 +573,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .page_tab > ul > li > a {line-height:50px;}
 
   .page_tab.col2 ul li {width:50%;}
-  .page_tab.col4 ul li {width:50%;}
+  .page_tab.col4 ul li {}
   .page_tab.col5 ul li {width:33.33%;}
   .page_tab.col5 ul li:nth-child(1) {width:50%;}
   .page_tab.col5 ul li:nth-child(2) {width:50%;}
