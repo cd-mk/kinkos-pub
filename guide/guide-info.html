@@ -44,13 +44,12 @@
             <h3 id="g_info01" class="g_tit_info">Basic</h3>
             <h4>CSS 파일 네이밍</h4>
             <dl>
-                <dt>common.css/common.css</dt>
-                <dd>리셋, 모든 요소의 공통적인 스타일을 정의 / 추가되는 css는 common.css에 import한다. </dd>
+                <dt>common.css/sub.css</dt>
+                <dd>리셋, 모든 요소의 공통적인 스타일을 정의 </dd>
                 <dt>main.css</dt>
                 <dd>메인 페이지의 스타일을 정의</dd>
-               
-                <dt>content폴더 css</dt>
-                <dd>서브 페이지 내의 콘텐츠 영역의 특정 스타일을 정의 (추후 병합예정)</dd>
+                <dt>sub.css</dt>
+                <dd>메인 페이지의 스타일을 정의</dd>
             </dl>
             <h4>영문 소문자, 숫자, 언더스코어 조합</h4>
             <ul>
@@ -58,15 +57,20 @@
                 <li>언더스코어(_)는 2개 이상의 단어를 조합할 때만 사용한다.</li>
                 <li>단어와 숫자를 조합하는 경우 언더스코어(_)를 생략한다.</li>
                 <li>언더스코어(_)를 이용하여 3단계를 초과하여 조합할 수 없다.</li>
-                <li>layout_width(디자인에서 정해진 맥시멈 width), layout_full(100%의 width)</li>
-                <li>".pc"데스크톱에서만 노출,".mo" 모바일에서만 노출</li>
                 <li>한 섹션의 그룹명은 _wrap, 하위를 감싸는 그룹은 item_box(여려 블록을 나열할 때- 안에 리스트는 "item"으로..), inner(하위를 그룹할 때), item_list(ul을 나열할 때), 로 이름은 통일하고 css선택자에서 구분한다.
                     <br>예).
                     .aa_wrap .item_box<br>
                     .bb_wrap .item_box<br>
                     .cc_wrap .item_box </li>
                 <li>각 섹션의 타이틀은 2개이상의 조합일 때"tit_box"로 그룹하며, "title", "stit" 일반제목, 서브제목으로 네이밍한다. </li>
+                <li>단락 마진값은 top에 값을 준다.</li>
 
+            </ul>
+            <ul style="margin-top:40px;font-size:20px;color:blue">
+                <li>layout_width(디자인에서 정해진 맥시멈 width), layout_full(100%의 width)</li>
+                <li>".pc"데스크톱에서만 노출,".mo" 모바일에서만 노출</li>
+                <li>section, form_wrap : 큰 그룹 묶음 (margin-top:100)</li>
+                <li>section, form_wrap 안에 table감싸는 div (bbs_list, bbs_detail)에는 margin-top:20px</li>
             </ul>
 
 
@@ -116,6 +120,10 @@
                         <td>아이콘</td>
                     </tr>
                     <tr>
+                        <td class="correct">arr_</td>
+                        <td>화살표</td>
+                    </tr>
+                    <tr>
                         <td class="correct">line_</td>
                         <td>선</td>
                     </tr>
@@ -162,7 +170,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>7/8/9/10/11/12</td>
+                        <td>10/11/12</td>
                         <td>최신버전</td>
                         <td>최신버전</td>
                         <td>최신버전</td>
@@ -174,11 +182,9 @@
             <ul>
                 <li>전체적인 마크업은 HTML5 을 기본으로 한다.</li>
                 <li>Tag는 각각의 의미에 맞는 마크업을 하여 StyleSheet가 적용되지 않더라도 내용이 제대로 전달될 수 있게 작성한다.</li>
-                <li>모든 태그는 반드시 닫아준다. br, img, input 처럼 닫기 태그가 없는 것은 태그 끝에서 닫아준다.</li>
                 <li>각 태그 속성 값은 항상 &quot; &quot; (따옴표)로 묶는다.</li>
                 <li>inline 스타일(&lt; div style=&quot;.....&quot; &gt; )은 되도록이면 자제한다.</li>
                 <li>img Tag는 해당 요소를 대체하기 위해 alt 속성을 기본적으로 사용한다. (border는 css에서 정의한다.)</li>
-                <li>font 태그 대신 span 태그를 사용한다.</li>
                 <li>강조표현은 strong 태그를 사용한다.</li>
             </ul>
             <h3 id="g_info03" class="g_tit_info">CSS</h3>
