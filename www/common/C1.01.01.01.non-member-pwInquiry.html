@@ -16,7 +16,7 @@
   <meta property="og:image" content="../image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-  <title>비밀번호 찾기 결과 | 로그인 | 킨코스코리아</title>
+  <title>비회원 비밀번호 찾기 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
   <link rel="stylesheet" href="../css/lib/animate.css">
   <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -59,54 +59,38 @@
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
       <div class="cont_wrap">
 
-
         <!-- 본문 -->
         <div class="con_box login_wrap">
           <div class="tit_box">
-            <h3>비밀번호 재설정</h3>
+            <h3>비회원 비밀번호 찾기</h3>
+            <p class="small">주문 시 등록하신 정보로 비밀번호를 찾으실 수 있습니다.</p>
           </div>
 
-          
-          <!-- 비밀번호 재설정 -->
-          <div class="inner" style="display: block">
-            <div class="form_wrap">
-             <div class="form_group">
-                <div class="form_item">
-                  <strong class="form_name">비밀번호</strong>
-                  <div class="form_inp">
-                    <input type="password" name="" id="" title="비밀번호 입력" required="">
+            <div class="inner">
+              <form method="post" action="/" onsubmit="">
+                <fieldset>
+                  <legend class="blind">비회원 비밀번호 찾기 양식</legend>
+                  <div class="form_wrap">
+                    <div class="form_group">
+                      <div class="form_item">
+                        <input type="text" name="" id="" title="이름 입력" placeholder="주문 시 등록하신 이름을 입력해주세요" required="">
+                      </div>
+                      <div class="form_item">
+                        <input type="text" name="" id="OrderNum" title="주문번호 입력" placeholder="주문번호를 입력해주세요" required="">
+                      </div>
+                      <div class="form_item">
+                        <input type="password" name="" id="login_pw" title="비밀번호 입력" placeholder="주문 시 등록하신 휴대전화 번호를 입력해주세요.(-제외)" required="">
+                      </div>
+                    </div>
                   </div>
-                </div>
-               
-                <div class="form_item">
-                  <strong class="form_name">비밀번호 재확인</strong>
-                  <div class="form_inp">
-                    <input type="password" name="" id="" title="비밀번호 재확인 입력" placeholder="영문 3자리이상 + 숫자 5자리 이상 " required="">
+                  <div class="btn_wrap col2 center">
+                    <button type="submit" class="btn large type02">취소</button>
+                    <button type="submit" class="btn large type01">다음</button>
                   </div>
-                </div>
-             </div>
-
+                  <p class="txt_guide bottom">비회원 주문정보를 분실하신 경우 <strong>고객센터(02-557-0225)</strong>로 문의해주세요.</p>
+                </fieldset>
+              </form>
             </div>
-          
-            <div class="btn_wrap col2 center">
-              <button type="button" class="btn large type02">취소</button>
-              <button type="button" class="btn large type01">확인</button>
-            </div>
-          </div>
-
-
-          <!-- 비밀번호 재설정 -->
-          <div class="inner result" style="display: block">
-            <div class="form_wrap">
-              <p>
-                <strong>비밀번호가 재설정</strong>되었습니다.<br>
-                재설정된 비밀번호로 다시 한번 로그인해 주세요.
-              </p>
-            </div>
-            <div class="btn_wrap center login">
-              <button type="button" class="btn large type01">로그인 하기</button>
-            </div>
-          </div>
 
 
         </div>

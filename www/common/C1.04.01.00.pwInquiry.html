@@ -49,8 +49,8 @@
       
       <!-- breadcrumb  -->
       <div class="breadcrumb_wrap">
-        <a href="./00.main-www.html" class="home">Home</a>
         <ul class="item_list">
+          <li><a href="#url" class="home">Home</a></li>
           <li><a href="#url">로그인</a></li>
         </ul>
       </div>
@@ -59,79 +59,81 @@
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
       <div class="cont_wrap tab_area"> 
       
-        <!-- page tab -->
-        <div class="page_tab col2">
-          <ul>
-            <li><a href="C1.03.01.00.idInquiry.html">아이디 찾기</a></li>
-            <li class="active"><a href="C1.04.01.00.pwInquiry.html">비밀번호 찾기</a></li>
-          </ul>
-        </div>
-        <!-- page tab -->
   
         <!-- 본문 -->
         <div class="con_box login_wrap">
-          <div class="tit_box">
-            <h3>비밀번호 찾기</h3>
-            <p class="desc">회원정보 및 본인인증으로 비밀번호를 찾을 수 있습니다.</p>
-          </div>
-        
-        
-        
+
           <div class="inner">
+
+            <div class="tit_box">
+              <h3>비밀번호 찾기</h3>
+              <p class="desc">회원정보 및 본인인증으로 비밀번호를 찾을 수 있습니다.</p>
+            </div>
+
+            <!-- page tab -->
+            <div class="page_tab col2">
+              <ul>
+                <li><a href="C1.03.01.00.idInquiry.html">아이디 찾기</a></li>
+                <li class="active"><a href="C1.04.01.00.pwInquiry.html">비밀번호 찾기</a></li>
+              </ul>
+            </div>
+            <!-- page tab -->
             <form method="post" action="/" onsubmit="">
               <fieldset>
                 <legend class="blind">비밀번호 찾기 양식</legend>
-                <div class="form_group">
-                  <div class="form_item chk_box top">
-                    <input type="radio" name="idFind" id="idFind1" checked onclick="chkView('user_info');">
-                    <label for="idFind1">회원정보로 찾기</label>
-        
-                    <input type="radio" name="idFind" id="idFin2" onclick="chkView('auth');">
-                    <label for="idFin2">본인인증 찾기</label>
+                <div class="section form_wrap">
+                  <div class="form_group">
+                    <div class="form_item chk_box top">
+                      <input type="radio" name="idFind" id="idFind1" checked onclick="chkView('user_info');">
+                      <label for="idFind1">회원정보로 찾기</label>
+                  
+                      <input type="radio" name="idFind" id="idFin2" onclick="chkView('auth');">
+                      <label for="idFin2">본인인증 찾기</label>
+                    </div>
+                    <!-- 회원정보로 찾기 -->
+                    <div id="user_info" class="box">
+                      <div class="form_item">
+                        <input type="text" name="" id="" title="이름 입력" placeholder="홍길동">
+                      </div>
+                      <div class="form_item">
+                        <input type="text" name="" id="" title="아이디 입력" placeholder="아이디">
+                      </div>
+                      <div class="form_item">
+                        <input type="password" name="" id="" title="이메일 주소 입력" placeholder="이메일 주소">
+                      </div>
+                    </div>
+                    <!-- //회원정보로 찾기 -->
+                  
+                  
+                    <!-- 본인인증으로 찾기 -->
+                    <div id="auth" class="box" style="display: none;">
+                      <div class="form_item">
+                        <input type="text" name="" id="" title="이름 입력" placeholder="이름">
+                      </div>
+                  
+                  
+                      <div class="form_item auth_phone">
+                        <select name="" id="" title="휴대전화 앞 3자리 선택">
+                          <option value="">010</option>
+                          <option value="">017</option>
+                          <option value="">019</option>
+                        </select>
+                        <input type="text" name="" id="" title="핸드폰 번호 입력" placeholder="-없이 입력">
+                        <button type="button" class="btn type03">인증번호</button>
+                      </div>
+                  
+                      <div class="form_item">
+                        <input type="password" name="" id="" title="인증번호 숫자 입력" placeholder="인증번호 숫자를 입력하세요">
+                      </div>
+                    </div>
+                    <!-- //본인인증으로 찾기 -->
+                  
+                    <div class="btn_wrap col2 center">
+                      <button type="button" class="btn large type02">취소</button>
+                      <button type="button" class="btn large type01">다음</button>
+                    </div>
+                  
                   </div>
-                  <!-- 회원정보로 찾기 -->
-                  <div id="user_info" class="inner">
-                    <div class="form_item">
-                      <input type="text" name="" id="" title="이름 입력" placeholder="홍길동">
-                    </div>
-                    <div class="form_item">
-                      <input type="text" name="" id="" title="아이디 입력" placeholder="아이디">
-                    </div>
-                    <div class="form_item">
-                      <input type="password" name="" id="" title="이메일 주소 입력" placeholder="이메일 주소">
-                    </div>
-                  </div>
-                  <!-- //회원정보로 찾기 -->
-        
-        
-                  <!-- 본인인증으로 찾기 -->
-                  <div id="auth" class="inner" style="display: none;">
-                    <div class="form_item">
-                      <input type="text" name="" id="" title="이름 입력" placeholder="이름">
-                    </div>
-        
-        
-                    <div class="form_item auth_phone">
-                      <select name="" id="" title="휴대전화 앞 3자리 선택">
-                        <option value="">010</option>
-                        <option value="">017</option>
-                        <option value="">019</option>
-                      </select>
-                      <input type="text" name="" id="" title="핸드폰 번호 입력" placeholder="-없이 입력">
-                      <button type="button" class="btn type03">인증번호</button>
-                    </div>
-        
-                    <div class="form_item">
-                      <input type="password" name="" id="" title="인증번호 숫자 입력" placeholder="인증번호 숫자를 입력하세요">
-                    </div>
-                  </div>
-                  <!-- //본인인증으로 찾기 -->
-        
-                  <div class="btn_wrap col2 center">
-                    <button type="button" class="btn large type02">취소</button>
-                    <button type="button" class="btn large type01">다음</button>
-                  </div>
-        
                 </div>
               </fieldset>
             </form>
