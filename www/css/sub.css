@@ -1360,16 +1360,16 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 }
 
 @media screen and (max-width:1024px) {
-   .pdt_list .inner .item_list {padding-right:15px;margin-top:25px;width:100%;margin-left:0;}
- .pdt_list .inner .item_list li {width:50%; padding-left:15px; margin-bottom:40px; float:left;margin-right:0;}
+  .pdt_list .inner .item_list {padding-right:15px;margin-top:25px;width:100%;margin-left:0;}
+  .pdt_list .inner .item_list li {width:50%; padding-left:15px; margin-bottom:40px; float:left;margin-right:0;}
   .pdt_list .inner .item_list li:nth-child(2n)::before {content:"";display:block;}
- .choice-option {padding:0 15px;}
- .pdt_list .item_info .title {font-size:16px;}
- .pdt_list .item_info .desc {font-size:14px;}
- .choice-option .result {float:none; font-size:20px; line-height:1.2;margin:20px 0 40px;display:block;width:100%;}
- .choice-option .selectbox {width:100%;float:none;display:block;}
- .choice-option .selectbox select {width:48%}
- .sch_wrap + .breadcrumb_wrap {top:0;margin:0 15px;}
+  .choice-option {padding:0 15px;}
+  .pdt_list .item_info .title {font-size:16px;}
+  .pdt_list .item_info .desc {font-size:14px;}
+  .choice-option .result {float:none; font-size:20px; line-height:1.2;margin:20px 0 40px;display:block;width:100%;}
+  .choice-option .selectbox {width:100%;float:none;display:block;}
+  .choice-option .selectbox select {width:48%}
+  .sch_wrap + .breadcrumb_wrap {top:0;margin:0 15px;}
 }
 
 
