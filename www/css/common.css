@@ -185,7 +185,7 @@ p+.btn_wrap {margin-top:40px !important;}
 /* 회색라운드 (팝업존버튼)*/
 .btn.type06 {background:#e7e7e7; color:#222;font-size:14px; border-radius:20px;padding:0 12px;height:25px;line-height:25px;width:auto;font-weight:400;}
 
-.btn.large {min-width:200px;height:50px; line-height:50px;white-space:nowrap;}
+.btn.large {min-width:230px;height:60px; line-height:60px;white-space:nowrap;font-weight:700;}
 .btn.btn_delete {font-weight:400;}
 
 
@@ -239,7 +239,6 @@ p+.btn_wrap {margin-top:40px !important;}
 .arr_small { border: solid #222; border-width: 0 2px 2px 0; display: inline-block; padding: 3px;margin-left:6px;}
 .arr_small.right { transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
 .arr_small.left { transform: rotate(135deg); -webkit-transform: rotate(135deg); }
-
 
 .arr_small.up, #closed .arr_small.up { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); }
 .arr_small.down, #opened .arr_small.down { transform: rotate(45deg); -webkit-transform: rotate(45deg); vertical-align: top;margin-top:7px}
@@ -670,7 +669,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .mall .breadcrumb_wrap.mid {margin-top:30px;}
 
 @media screen and (max-width:1600px) {
-  .breadcrumb_wrap {padding:20px 15px;}
+  .breadcrumb_wrap {padding:24px 15px;}
   .sch_wrap + .breadcrumb_wrap {top:0;margin:0 15px;}
 }
 
