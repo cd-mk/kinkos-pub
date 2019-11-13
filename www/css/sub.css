@@ -142,8 +142,8 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 
 
 
-.form_group .form_item .form_name {display:table-cell;width:7.32%; font-size:16px; font-weight:700; vertical-align:middle;line-height:1.3;}
-.form_group .form_item .form_inp {display:block;overflow:hidden;line-height:1.3;min-height:44px;}
+.form_group .form_item .form_name {display:table-cell;width:7.32%; font-weight:700; vertical-align:middle;line-height:1.3;}
+.form_group .form_item .form_inp {display:block;overflow:hidden;line-height:44px;min-height:44px;}
 .form_group .form_item .form_name.ver_mid {vertical-align:middle !important;}
 .form_group .form_item .form_name.ver_top {vertical-align:top;}
 .ver_top .form_name {vertical-align:top !important;}
