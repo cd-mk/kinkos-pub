@@ -135,13 +135,22 @@ var setGnb = function () {
 
 // MOBILE GNB
 var mobileGnb = function () {
-  $('.btn_mo_gnb').on('click', function () {
-    $('body').addClass('open');
-    $('.mo_gnb_wrap').addClass('active');
+  $('.btn_mo_gnb').on('click', function(e) {
+    e.preventDefault();
+
+    var obj = $(this);
+    var target = obj.attr('data-target');
+    if( target )
+    {
+      $('body').addClass('open');
+      $('.mo_gnb_wrap').addClass('active').find('.menu_box.' + target).addClass('show');
+    }
   });
+
   $('.mo_gnb_wrap .btn_close').on('click', function () {
     $('body').removeClass('open');
     $('.mo_gnb_wrap').removeClass('active');
+    $('.mo_gnb_wrap').find('.menu_box').removeClass('show');;
   });
 
 
