@@ -86,9 +86,9 @@
 				<!-- 콘텐츠 "con_box" 고정 -->
 				<div class="con_box support_wrap">
 					<div class="tit_box">
-            <h3>제휴 및 제안</h3>
+            <h3 class="pc">제휴 및 제안</h3>
             <p>고객님이 작성하신 문의사항의 답변은<br class="mo"> 마이페이지 &gt; <a class="txt_underline"
-                href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a> 에서 확인 가능합니다.</p>
+                href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">나의 문의 내역</a> 에서 확인 가능합니다.</p>
           </div>
 
           <div class="section clearfix">
@@ -107,11 +107,6 @@
                         <input type="text" title="이름 입력">
                         <p class="txt_vaild">이름을 입력해주세요</p>
                       </div>
-                    </div>
-                    <div class="form_item email not_vaild">
-                      <strong class="form_name">이메일</strong>
-                      <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
-                      <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
                     </div>
                   </div>
 
@@ -141,7 +136,14 @@
                       </div>
                     </div>
                   </div>
+                  
                   <div class="form_group col2">
+                    <div class="form_item email not_vaild">
+                      <strong class="form_name">이메일</strong>
+                      <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
+                      <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
+                    </div>
+
                     <div class="form_item">
                       <span class="form_name">회사명 <sup class="require">*</sup></span>
                       <div class="form_inp">
@@ -149,6 +151,14 @@
                         <p class="txt_vaild">회사명을 입력해주세요</p>
                       </div>
                     </div>
+                  </div>
+                  <div class="form_group col2">
+                    <div class="form_item email not_vaild">
+                      <strong class="form_name">회사 이메일</strong>
+                      <div class="form_inp email"><input type="text" name="" title="회사 이메일 주소 입력" placeholder="회신 받으실 메일 주소를 입력해주세요."></div>
+                      <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
+                    </div>
+                  
                     <div class="form_item">
                       <span class="form_name">홈페이지</span>
                       <div class="form_inp">
@@ -159,17 +169,6 @@
 
                   <div class="form_group top_line">
                     <div class="form_item">
-                      <span class="form_name">문의유형 <sup class="require">*</sup></span>
-                      <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">문의유형을 선택하세요.</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="form_group">
-                    <div class="form_item">
                       <span class="form_name">제목</span>
                       <div class="form_inp">
                         <input type="text" title="제목 입력">
@@ -178,7 +177,7 @@
                   </div>
                   <div class="form_group">
                     <div class="form_item">
-                      <span class="form_name ver_top">내용</span>
+                      <span class="form_name ver_top">제안 내용</span>
                       <div class="form_inp">
                         <textarea name="" id="" title="내용 입력"></textarea>
                       </div>
@@ -186,7 +185,7 @@
                   </div>
                   <div class="form_group top_line file_box">
                     <div class="form_item">
-                      <span class="form_name">파일 첨부</span>
+                      <span class="form_name">파일 첨부<br>(제안서)</span>
                       <div class="form_inp js-list-item">
                         <div class="file_inp_box">
                           <!-- 첨부 파일 이름 출력 요소 -->
@@ -201,7 +200,7 @@
                       <p class="desc">- 100MB 이하/ 압축파일 권장</p>
                     </div>
                   </div>
-                  <div class="form_group top_line chk_box">
+                  <div class="form_group top_line chk_box pop">
                     <div class="form_item">
                       <div class="form_inp">
                         <input type="checkbox" id="chk1">
@@ -210,7 +209,7 @@
                       <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
                     </div>
                   </div>
-                  <div class="form_group top_line btm_line">
+                  <div class="form_group top_line">
                     <div class="form_item">
                       <span class="form_name">자동등록방지</span>
                       <div class="form_inp">
@@ -219,11 +218,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="btn_wrap col2 center">
-                    <button type="submit" class="btn large type01">작성완료</button>
-                    <button type="button" class="btn large type02">취소</button>
-                  </div>
                 </div>
+                  <div class="btn_wrap col2 center">
+                    <button type="button" class="btn large type02">취소</button>
+                    <button type="submit" class="btn large type01">작성완료</button>
+                  </div>
               </fieldset>
             </form>
           </div>

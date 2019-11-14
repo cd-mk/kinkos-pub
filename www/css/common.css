@@ -207,12 +207,15 @@ p+.btn_wrap {margin-top:40px !important;}
  .btn_wrap {margin-top:25px;font-size:1em;}
  .btn_wrap[class*="col"] .btn {display:block; margin-left:0;margin-top:10px;width:100%;max-width:100%;}
  .btn_wrap[class*="col"] .btn:first-child {margin-top:0;}
+ .btn_wrap.col2 .btn:last-child {margin-left:10px;}
+ .btn_wrap.col2 .btn {margin-top:0; float: left; width: calc((100% - 10px) / 2); max-width: 100%; min-width: initial;}
 
  .btn_wrap .left, .btn_wrap .right {overflow:hidden;}
- .btn_wrap .left {}
  .btn_wrap .left .btn {width:45%;padding:0 10px;}
- .btn_wrap .right {}
- 
+ .btn.small {height:36px;line-height:36px;font-size:1em;padding: 0 15px;}
+ .btn.large {height:50px; line-height:50px;font-size:16px;}
+.btn.mid_large {height:50px;line-height:50px;}
+
  .dext_box .btn_wrap[class*="col"] .btn {display:inline-block; margin-left:10px;}
  .dext_box .btn_wrap[class*="col"] .btn:last-child {margin-top:0;}
  .dext_box .btn_wrap[class*="col"] .btn:first-child {margin-left:0;}
