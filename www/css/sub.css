@@ -674,10 +674,10 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .tit_box+.page_tab.fixed {margin-top:0;}
 
 @media screen and (max-width:1024px) {
-  .page_tab {position:relative; top:0; width:calc(100% + 30px); height:auto; margin-left:-15px; margin-bottom:0; transition: position }
+  .page_tab {position:relative; top:0; width:calc(100% + 30px); height:auto; margin-left:-15px; margin-bottom:0; border-bottom:0; background:rgb(38, 38, 38);}
   .page_tab > ul {position:static; display:inline-block; width:100%; max-width:1400px; margin:0; padding:0; white-space:nowrap; transform:none; overflow-x:scroll; overflow-y:hidden; -webkit-overflow-scrolling:touch; -ms-overflow-style:none;}
-  .page_tab > ul > li {display:inline-block; width:auto !important; height:50px; padding:0 20px; font-size:14px; line-height:50px;}
-  .page_tab > ul > li > a {line-height:50px; height:50px;}
+  .page_tab > ul > li {display:inline-block; width:auto !important; height:50px; padding:0 20px; font-size:14px; line-height:50px; color:#999999;}
+  .page_tab > ul > li > a {width:100%; height:50px; padding-top:0; font-size:14px; line-height:50px; color:#999999;}
 
   .page_tab.col2 ul li {width:50%;}
   .page_tab.col4 ul li {}
@@ -688,15 +688,16 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .page_tab.col5 ul li:nth-child(4) {width:25%;}
   .page_tab.col5 ul li:nth-child(5) {width:25%;}
 
-  .page_tab > ul > li.active {position:relative; border-bottom:0; box-shadow:inset 0 3px 0 #000; -webkit-box-shadow:inset 0 3px 0 #000;}
-  .page_tab > ul > li > a {width:100%; height:100%; padding-top:0; font-size:14px;}
+  .page_tab > ul > li.active {position:relative; border-bottom:0; color:#ffffff;}
+  .page_tab > ul > li.active > a {color:#ffffff;}
   .tit_box+.page_tab {margin-top:30px;}
   .page_tab.sub_type1 {border:0;}
   .page_tab.sub_type1 > ul > li.active::before {display:none;}
 
+  .anchor .page_tab {background:#262626;}
   .anchor .page_tab.fixed {left:0;}
 
-  .page_tab.fixed {position:fixed; top:0 !important; left:15px !important; width:100%; background:#fff; z-index:999;}
+  .page_tab.fixed {position:fixed; top:0 !important; left:15px !important; width:100%; background:rgb(38, 38, 38, 0.9); z-index:999;}
 }
  /* layer tab */
  #tab_con > div {display:none; min-height:300px; background:#fff;}
@@ -2010,6 +2011,10 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .popup_wrap .pop_con {overflow-y:auto;height:460px;padding-right:30px;}
 .popup_wrap .inner .title {padding-bottom:20px; font-size:24px; font-weight:500; border-bottom:1px solid #222;margin-bottom:25px;}
 .popup_wrap .inner .btn_pop_close {position:absolute; top:15px; right:15px; width:44px; height:44px; background:url(../image/common/mo_menu_close.svg) no-repeat 50% / 24px; padding:10px;} .popup_wrap.active {display:block;}
+
+@media screen and (max-width:1024px) {
+  .popup_wrap .inner {width:100%;}
+}
 
 .pop_sian {padding:0;}
 .pop_sian .form_item {padding-left:112px;position:relative;padding-bottom:20px;padding-top:20px;border-bottom:1px solid #e7e7e7;}
