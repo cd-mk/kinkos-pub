@@ -217,7 +217,7 @@ p+.btn_wrap {margin-top:40px !important;}
  .dext_box .btn_wrap[class*="col"] .btn:last-child {margin-top:0;}
  .dext_box .btn_wrap[class*="col"] .btn:first-child {margin-left:0;}
 
- .btn {font-size:16px;}
+ .btn {font-size:14px;}
 }
 
 /* ---------------------
