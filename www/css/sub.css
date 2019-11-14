@@ -33,11 +33,9 @@
 .section {margin-top:95px;}
 .inner .section {margin-top:60px;}
 @media screen and (max-width:1024px) {
-  .section {margin-top:30px;}
-  .section .form_wrap+.form_wrap {margin-top:30px;}
+  .section {margin-top:40px;}
+  .section .form_wrap+.form_wrap {margin-top:40px;}
   .inner .section {margin-top:30px;}
-
-  .section.faq_wrap
 }
 
 /* global */
@@ -379,7 +377,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 
 @media screen and (max-width:1024px) {
-  .title_bbs {}
+  .title_bbs {padding:20px 15px;}
   .title_bbs strong {font-size:20px;line-height:1.}
   .title_bbs span {margin-top:9px}
   .content_bbs {margin-top:20px;padding-top:30px;}
