@@ -110,8 +110,6 @@
                       <p class="txt_vaild">아이디를 입력해주세요</p>
                     </div>
                   </div>
-                </div>
-                <div class="form_group col2">
                   <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
                   <div class="form_item">
                     <strong class="form_name">이름 <sup class="require">*</sup></strong>
@@ -121,6 +119,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="form_group col2">
                   <div class="form_item">
                     <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
@@ -146,28 +145,24 @@
                       <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
                     </div>
                   </div>
-                  <div class="form_item not_vaild">
-                    <strong class="form_name">이메일 <sup class="require">*</sup></strong>
-                    <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
-                    <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
-                  </div>
                 </div>
                 <div class="form_group col2">
+                  <div class="form_item not_vaild">
+                    <strong class="form_name">이메일 <sup class="require">*</sup></strong>
+                    <div class="form_inp col2 with_btn email"><input type="text" name="" title="이메일 주소 입력"><a href="#url" class="btn type03">중복확인</a></div>
+                    <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
+                  </div>
                   <div class="form_item">
-                    <strong class="form_name">배송지</strong>
+                    <strong class="form_name">주소</strong>
                     <div class="form_inp address">
-                      <input type="text" title="기본 주소" placeholder="기본 주소">
+                      <input type="text" title="기본 주소" placeholder="우편 번호">
                       <a href="#url" class="btn type03">주소 검색</a>
+                      <input type="text" title="기본 주소" placeholder="기본 주소">
                       <input type="text" title="상세 주소" placeholder="상세 주소">
                     </div>
                   </div>
-                  <div class="form_item">
-                    <strong class="form_name">배송 메모</strong>
-                    <div class="form_inp">
-                      <textarea></textarea>
-                    </div>
-                  </div>
                 </div>
+ 
 
                 <div class="form_group col2">
                   <div class="form_item">
@@ -186,18 +181,20 @@
                   </div>
                 </div>
 
-                <div class="form_group top_line chk_box">
+                <div class="form_group top_line chk_box pop">
                   <div class="form_item">
                     <div class="form_inp">
                       <input type="checkbox" id="chk1">
-                      <label for="chk1">이메일을 통한 상품 및 이벤트 정보 수신 동의 [선택]</label>
+                      <label for="chk1">이메일을 통한 상품 및 이벤트 정보 수신 동의 <span class="point_blue">[필수]</span></label>
                     </div>
+                    <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
                   </div>
                   <div class="form_item">
                     <div class="form_inp">
                       <input type="checkbox" id="chk2">
-                      <label for="chk2">SMS를 통한 상품 및 이벤트 정보 수신 동의 [선택]</label>
+                      <label for="chk2">SMS를 통한 상품 및 이벤트 정보 수신 동의 <span class="point_blue">[필수]</span></label>
                     </div>
+                    <a href="#popup2" class="btn_popup txt_underline">내용 보기</a>
                   </div>
                   <div class="form_item">
                     <div class="form_inp">
@@ -206,10 +203,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="btn_wrap col2 center">
-                  <a href="#url" class="btn large type02">취소</a>
-                  <a href="#url" class="btn large type01">다음</a>
-                </div>
+              </div>
+              <div class="btn_wrap col2 center">
+                <a href="#url" class="btn large type02">취소</a>
+                <a href="#url" class="btn large type01">다음</a>
               </div>
             </fieldset>
           </form>
@@ -227,6 +224,66 @@
 		<div id="footer" class="layout_width">
 		</div>
     <!-- //FOOTER -->
+
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">개인정보 수집 및 이용안내</h3>
+        <!-- popup content -->
+        <div class="privacy_txt">
+          <p class="tit">제1조 개인정보의 처리 목적</p>
+          <p class="desc">
+            •킨코스 코리아㈜<br>
+            는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br>
+            1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
+            - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송<br>
+            2. 서비스 이용을 위한 이용 안내<br>
+            - 원할한 이용을 위한 안내 및 고객불만사항 등의 처리<br>
+            - 고객에 대한 서비스 제공에 따른 본인 식별.인증, 물품 또는 서비스 공급에 따른 금액 결제, 물품 또는 서비스의 공급.배송 등
+          </p>
+          <p class="tit">제2조 개인정보 수집 및 이용에 대한 안내</p>
+          <p class="desc">
+            • 킨코스 코리아㈜는 작업물의 진행을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+            1. 수집항목<br>
+            - 필수 항목: 성명, 회사명, 유선전화번호, 휴대전화번호, 이메일<br>
+            - 선택 항목: 부서명, 주소, 관심정보
+          </p>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <div id="popup2" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">개인정보 수집 및 이용안내</h3>
+        <!-- popup content -->
+        <div class="privacy_txt">
+          <p class="tit">제1조 개인정보의 처리 목적</p>
+          <p class="desc">
+            •킨코스 코리아㈜<br>
+            는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br>
+            1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
+            - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송<br>
+            2. 서비스 이용을 위한 이용 안내<br>
+            - 원할한 이용을 위한 안내 및 고객불만사항 등의 처리<br>
+            - 고객에 대한 서비스 제공에 따른 본인 식별.인증, 물품 또는 서비스 공급에 따른 금액 결제, 물품 또는 서비스의 공급.배송 등
+          </p>
+          <p class="tit">제2조 개인정보 수집 및 이용에 대한 안내</p>
+          <p class="desc">
+            • 킨코스 코리아㈜는 작업물의 진행을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+            1. 수집항목<br>
+            - 필수 항목: 성명, 회사명, 유선전화번호, 휴대전화번호, 이메일<br>
+            - 선택 항목: 부서명, 주소, 관심정보
+          </p>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
+
 
 		<div class="dim">
 		</div>

@@ -86,27 +86,17 @@
 				<!-- 콘텐츠 "con_box" 고정 -->
 				<div class="con_box support_wrap">
 					<div class="tit_box">
-						<h3>제휴 및 제안</h3>
+            <h3>제휴 및 제안</h3>
+            <p>고객님이 작성하신 문의사항의 답변은<br class="mo"> 마이페이지 &gt; <a class="txt_underline"
+                href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a> 에서 확인 가능합니다.</p>
           </div>
 
-          <div class="inner clearfix">
+          <div class="section clearfix">
             
             <form action="">
               <fieldset>
                 <legend>제휴 및 제안 입력 양식</legend>
                 
-                <div class="form_wrap type_select">
-                  <div class="form_group">
-                    <div class="form_item">
-                      <select name="" id="" title="문의 유형 선택">
-                        <option value="">문의 유형을 선택 하세요.</option>
-                        <option value="">문의 유형1</option>
-                        <option value="">문의 유형2</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
                 <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
                 <div class="form_wrap">
                   <div class="form_group col2">
@@ -116,6 +106,38 @@
                       <div class="form_inp">
                         <input type="text" title="이름 입력">
                         <p class="txt_vaild">이름을 입력해주세요</p>
+                      </div>
+                    </div>
+                    <div class="form_item email not_vaild">
+                      <strong class="form_name">이메일</strong>
+                      <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
+                      <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
+                    </div>
+                  </div>
+
+                  <div class="form_group col2">
+                    <div class="form_item">
+                      <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
+                      <div class="form_inp tel">
+                        <select name="" id="" title="휴대폰 앞자리 선택">
+                          <option value="">010</option>
+                          <option value="">017</option>
+                          <option value="">019</option>
+                        </select>
+                        <input type="number" title="휴대폰 나머지 번호 입력" placeholder="-없이 입력">
+                        <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
+                      </div>
+                    </div>
+                    <div class="form_item">
+                      <strong class="form_name">일반전화 <sup class="require">*</sup></strong>
+                      <div class="form_inp tel">
+                        <select name="" id="" title="일반전화 국번 선택">
+                          <option value="">02</option>
+                          <option value="">031</option>
+                          <option value="">032</option>
+                        </select>
+                        <input type="number" title="일반전화 나머지 번호 입력" placeholder="-없이 입력">
+                        <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
                       </div>
                     </div>
                   </div>
@@ -128,52 +150,43 @@
                       </div>
                     </div>
                     <div class="form_item">
-                      <span class="form_name">회사주소</span>
-                      <div class="form_inp">
-                        <input type="text" title="회사주소 입력">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group col2">
-                    <div class="form_item">
                       <span class="form_name">홈페이지</span>
                       <div class="form_inp">
                         <input type="text" title="홈페이지 입력">
                       </div>
                     </div>
-              
-                    <div class="form_item">
-                      <strong class="form_name">이메일 <sup class="require">*</sup></strong>
-                      <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
-                      <p class="txt_vaild">이메일 주소를 입력해주세요</p>
-                    </div>
                   </div>
-                  <div class="form_group col2">
+
+                  <div class="form_group top_line">
                     <div class="form_item">
-                      <span class="form_name">연락처 <sup class="require">*</sup></span>
-                      <div class="form_inp col3">
-                        <select name="" id="" title="전화번호 앞 3자리 선택">
-                          <option value="">010</option>
-                          <option value="">017</option>
-                          <option value="">019</option>
+                      <span class="form_name">문의유형 <sup class="require">*</sup></span>
+                      <div class="form_inp">
+                        <select name="" id="">
+                          <option value="">문의유형을 선택하세요.</option>
                         </select>
-                        <input type="number" title="전화번호 중간 3자리 입력">
-                        <input type="number" title="전화번호 마지막 3자리 입력">
-                        <p class="txt_vaild">전화번호를 입력해주세요</p>
                       </div>
                     </div>
                   </div>
-                  <div class="form_group top_line">
+                  
+                  <div class="form_group">
                     <div class="form_item">
-                      <span class="form_name ver_mid">제안 내용</span>
+                      <span class="form_name">제목</span>
                       <div class="form_inp">
-                        <textarea name="" id="" title="제안 내용 입력"></textarea>
+                        <input type="text" title="제목 입력">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <div class="form_item">
+                      <span class="form_name ver_top">내용</span>
+                      <div class="form_inp">
+                        <textarea name="" id="" title="내용 입력"></textarea>
                       </div>
                     </div>
                   </div>
                   <div class="form_group top_line file_box">
                     <div class="form_item">
-                      <span class="form_name">제안서</span>
+                      <span class="form_name">파일 첨부</span>
                       <div class="form_inp js-list-item">
                         <div class="file_inp_box">
                           <!-- 첨부 파일 이름 출력 요소 -->
@@ -187,10 +200,6 @@
                       </div>
                       <p class="desc">- 100MB 이하/ 압축파일 권장</p>
                     </div>
-                    <ul class="file_notice">
-                      <li>파일이 여러 개인 경우 압축하여 업로드 부탁드립니다.</li>
-                      <li>파일첨부 용량은 10MB 이하면 업로드 가능합니다.</li>
-                    </ul>
                   </div>
                   <div class="form_group top_line chk_box">
                     <div class="form_item">

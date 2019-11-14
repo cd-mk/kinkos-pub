@@ -86,25 +86,11 @@
 				<!-- 콘텐츠 "con_box" 고정 -->
 				<div class="con_box support_wrap">
 					<div class="tit_box">
-            <h3>자주 묻는 질문</h3>
+            <h3 class="pc">자주 묻는 질문</h3>
             <p>자주묻는 질문과 답변을 확인하실 수 있습니다.</p>
           </div>
           <div class="section faq_wrap">
-            <ul class="faq_tab_nav clearfix">
-              <li class="on"><a href="#url">Top 10</a></li>
-              <li><a href="#url">복사,출력 서비스</a></li>
-              <li><a href="#url">셀프 서비스</a></li>
-              <li><a href="#url">대형 실사 출력</a></li>
-              <li><a href="#url">윈도우 광고 출력(라텍스)</a></li>
-              <li><a href="#url">현수막 및 부스 제작</a></li>
-              <li><a href="#url">제본 및 기타 후가공</a></li>
-              <li><a href="#url">디자인 및 스캔 서비스</a></li>
-              <li><a href="#url">결제</a></li>
-              <li><a href="#url">데이터의 보안</a></li>
-              <li><a href="#url">기타 및 할인</a></li>
-              <li><a href="#url">불만사항</a></li>
-            </ul>
-
+            <div class="form_wrap type_select">
             <div class="faq_tab_nav_select">
               <select name="" class="">
                 <option value="">Top 10</option>
@@ -122,7 +108,6 @@
               </select>
             </div>
 
-            <div class="type_select">
               <div class="form_group">
                 <div class="form_item">
                   <select name="" id="" title="검색조건 선택">
@@ -131,8 +116,8 @@
                     <option value="">내용</option>
                   </select>
                 </div>
-              </div>
-              <div class="form_group">
+
+              
                 <div class="form_inp">
                   <input type="text" title="검색어 입력">
                 </div>
@@ -141,8 +126,22 @@
                 </div>
               </div>
             </div>
+            <ul class="faq_tab_nav clearfix">
+              <li class="on"><a href="#url">Top 10</a></li>
+              <li><a href="#url">복사,출력 서비스</a></li>
+              <li><a href="#url">셀프 서비스</a></li>
+              <li><a href="#url">대형 실사 출력</a></li>
+              <li><a href="#url">윈도우 광고 출력(라텍스)</a></li>
+              <li><a href="#url">현수막 및 부스 제작</a></li>
+              <li><a href="#url">제본 및 기타 후가공</a></li>
+              <li><a href="#url">디자인 및 스캔 서비스</a></li>
+              <li><a href="#url">결제</a></li>
+              <li><a href="#url">데이터의 보안</a></li>
+              <li><a href="#url">기타 및 할인</a></li>
+              <li><a href="#url">불만사항</a></li>
+            </ul>
 
-            <div class="section faq_tab_con">
+            <div class="faq_tab_con">
               <!-- faq_nav > li의 index와 일치하는 accor_wrap을 보여줌(active 클래스 추가) -->
               <!-- ex: Top 10 Tab Content -->
               <div class="accor_wrap active">
