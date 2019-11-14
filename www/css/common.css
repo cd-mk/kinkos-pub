@@ -176,7 +176,7 @@ a.txt_underline.black,
 p+.btn_wrap {margin-top:40px !important;}
 
 .btn_wrap ul li {display:inline-block;padding:0 5px;}
-.btn {display:inline-block; min-width:120px;padding: 0 30px; height:50px; line-height:50px; text-align:center; font-size:18px; font-weight:400;}
+.btn {display:inline-block; min-width:120px;padding: 0 30px; height:44px; line-height:44px; text-align:center; font-size:18px; font-weight:400;}
 .bbs .btn_wrap.center .btn.large {width:120px;}
 
 .btn.type01 {background:#03a2ea; color:#fff;}
