@@ -473,7 +473,7 @@ p+.btn_wrap {margin-top:40px !important;}
  .company .header_wrap .nav .btn_mo_gnb > span:first-child {margin-top:0;}
  .company .header_wrap .nav .btn_mo_gnb > span:nth-child(2) {width:12px; margin-left:6px; background:#000;}
  .company .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:15px; color:#000;}
- .company .header_wrap .nav .btn_back:before {content: '';display: inline-block;width: 9px;height: 16px;margin-right: 21px;background: url("../image/common/arr-mo-gnb-back.png") 50% 50% no-repeat;background-size: cover;vertical-align: middle;text-indent: -99999px;}
+ .company .header_wrap .nav .btn_back:before {content:''; display:inline-block; width:9px; height:16px; margin-top:-2px; margin-right:21px; background:url("../image/common/arr-mo-gnb-back.png") 50% 50% no-repeat; background-size:cover; vertical-align:middle; text-indent:-99999px;}
  .company .header_wrap .nav .logo {display:none; width:152px; height:30px; margin-top:16px;}
  .company .header_wrap .nav .logo img {width:100%;}
  .company .header_wrap .nav .btn_link {float:right; width:60px; height:60px; margin-right:1%;}
