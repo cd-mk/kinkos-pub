@@ -591,9 +591,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .tit_sub.bg_en {background-image:url('../image/company/sub/bg-en-mo.png');}
 }
  /* page_tab */
-.page_tab{height:66px;position:relative;width:100%;border-top:0;max-width:1530px;margin:0 auto;   border-bottom:1px solid #e7e7e7;}
-.page_tab > ul{position:absolute;top:-1px;left:50%;transform:translateX(-50%);display:table;max-width:1530px;}
-.page_tab > ul > li{cursor:pointer;display:table-cell;padding-top:0;font-size:20px;color:#222;text-align:center;overflow:hidden;font-weight:normal;}
+.page_tab{height:66px;position:relative;width:100%;border-top:0;max-width:1530px;margin:0 auto;border-bottom:1px solid #e7e7e7;}
+.page_tab > ul{position:absolute;top:-1px;left:50%;display:table;max-width:1530px;height:100%;transform:translateX(-50%);}
+.page_tab > ul > li{cursor:pointer;display:table-cell;height:100%;padding-top:0;font-size:20px;color:#222;text-align:center;vertical-align:middle;overflow:hidden;font-weight:normal;}
 .page_tab > ul > li > a{width:306px;height:64px;line-height:64px;display:block;}
 .page_tab > ul > li.active a, .page_tab > ul > li a:hover{font-weight:700;color:#222;}
 .page_tab > ul > li.active{font-weight:700; border-bottom:3px solid #222;color:#222;}
@@ -607,7 +607,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .page_tab.col5 ul li a {width:100%;text-align:center;}
 
 .anchor .page_tab {top:0;background:#fff;z-index:9;}
-.anchor .page_tab.fixed {position:fixed;} 
+.anchor .page_tab.fixed {position:fixed; margin-left:-15px; margin-right:-15px;}
 .anchor.cont_wrap {position:relative;}
 .anchor .con_box > div {min-height:200px;}
 
