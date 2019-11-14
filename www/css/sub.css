@@ -568,7 +568,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .tit_box.h_combo h4 {color:#222; font-size:36px; font-weight:700; line-height:1;}
 .tit_box.left {text-align:left;}
 .txt_message {font-size:1em;color:#03a2ea;margin-top:10px;font-weight:400 !important;display:block;}
-
+ .tit_box.mid {padding:0}
   .tit_box.mid h3 {font-size:20px;}
   .tit_box.mid h4 {font-size:20px;}
   .tit_box.mid h4.up_size {font-size:20px;}
