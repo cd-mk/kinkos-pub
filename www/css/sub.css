@@ -297,7 +297,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   input[type="checkbox"] + label,
   input[type="radio"] + label {padding-left:30px;display:inline-block;line-height: 1.3;min-height: 20px;}
   .form_group.chk_box.pop .point_blue {display: block;margin-top:4px}
-  input[type="checkbox"] + label::before, input[type="radio"] + label::before {left:0;}
+  .form_group.chk_box.pop input[type="checkbox"] + label::before, .form_group.chk_box.pop input[type="radio"] + label::before {left:0;top:10px;}
+  
 }
 /* -------------------------
       로그인 area
