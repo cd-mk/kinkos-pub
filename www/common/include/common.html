@@ -12,7 +12,7 @@
         <li><a href="/www/common/C2.01.00.00.join-step1.html">회원가입</a></li>
         <li><a href="/www/mall/sm1.01.01.03-01.cart-list.html">장바구니 <span class="point_blue">(0)</span></a></li>
         <li><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">주문/배송조회</a></li>
-        <li><a href="/www/mall/Mp3.01.01.00.mypage-main.html">마이페이지</a></li>
+        <li><a href="/www/mall/sm9.01.00.00.userguide-list.html">이용가이드</a></li>
         <li><a href="/www/company/H5.00.00.00.en_guide.html">EN</a></li>
         <li><a href="#url" class="btn type06 btn_popZone" onclick="clickshow(this,'popupzone')" id="opened"><span>팝업존</span><i class="arr_small up"></i><i class="arr_small down"></i></a></li>
       </ul>
@@ -43,7 +43,7 @@
               <span></span>
               <span></span>
             </i>
-            <span>전체카테고리</span>
+            <!--<span>전체카테고리</span>-->
           </button>
           <ul>
             <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">즉석상품</a></li>
@@ -55,10 +55,14 @@
             
           </ul>
         </div>
-        <!-- <div class="search_item">
-          <button type="button" class="btn_sch black"><span class="blind">검색창 열기</span></button>
-        </div> -->
         <div class="link_item js_center"><a href="#url" class="point_marker">센터안내</a></div>
+        <div class="search_item">
+          <button type="button" class="btn_sch black btn_search_form"><i class="ico_sch"></i><span class="blind">검색창 열기</span></button>
+          <div class="gnb_search_form">
+            <input type="text" class="inp_sch" placeholder="검색어를 입력해주세요." />
+            <button type="button" class="btn_sch"><i class="ico_sch"></i><span class="blind">검색하기</span></button>
+          </div>
+        </div>
         <div class="toggle_bg"></div>
       </div>
 
@@ -68,6 +72,11 @@
         <div class="inner">
           <div class="tit_1depth">
             <a href="/company/MH.00.00.00.main-www.html"><strong class="title">Kinko’s 소개</strong></a>
+            <p class="tit_2depth">
+              고객님의 "행복"을<br />
+              출력하는 킨코스코리아<br />
+              입니다.
+            </p>
           </div>
           
           <div class="gnb_box">
@@ -94,18 +103,18 @@
                 <a href="	M2.01.00.00.service-info.html"><strong>서비스 안내</strong></a>
               </div>
               <ul class="menu_list">
-                <li><a href="/www/company/M2.02.01.00.digital.html">디지털출력/복사</a></li>
+                <li><a href="/www/company/M2.02.01.00.digital.html">디지털 출력/복사</a></li>
                 <li><a href="/www/company/M2.03.01.00.binding.html">제본</a></li>
                 <li><a href="/www/company/M2.04.00.00.finishing.html">후가공</a></li>
-                <li><a href="/www/company/M2.05.01.00.signsGraphics-main.html">사인앤그래픽</a></li>
+                <li><a href="/www/company/M2.05.01.00.signsGraphics-main.html">사인그래픽</a></li>
                 <li><a href="/www/company/M2.06.00.00.scan-file.html">스캔투파일</a></li>
                 <li><a href="/www/company/M2.07.00.00.design.html">디자인</a></li>
                 <li><a href="/www/company/M2.08.00.00.business-card.html">명함제작</a></li>
-                <li><a href="/www/company/M2.09.00.00.customer-service.html">고객편의서비스</a></li>
-                <li><a href="/www/company/M2.10.00.00.case-service.html">주요사례별서비스</a></li>
+                <li><a href="/www/company/M2.10.00.00.case-service.html">주요사례별 서비스</a></li>
+                <li><a href="/www/company/M2.09.00.00.customer-service.html">고객편의 서비스</a></li>
                 <li><a href="/www/company/M2.11.00.00.recommended-products.html">추천상품</a></li>
-                <li><a href="/www/company/M2.12.00.00.corporation.html">법인우대프로그램</a></li>
-                <li><a href="/www/company/M2.13.00.00.dhl.html	">DHL항공특송서비스</a></li>
+                <li><a href="/www/company/M2.12.00.00.corporation.html">법인우대 프로그램</a></li>
+                <li><a href="/www/company/M2.13.00.00.dhl.html">DHL항공특송 서비스</a></li>
               </ul>
             </div>
     
@@ -116,6 +125,7 @@
               <ul class="menu_list">
                 <li><a href="/www/company/M3.03.01.00.notice-list.html">공지사항</a></li>
                 <li><a href="/www/company/M3.01.01.00.event.html">진행중인 이벤트</a></li>
+                <li><a href="#">종료된 이벤트</a></li>
                 <li><a href="/www/company/M3.02.01.00.k-magazine-list.html">K매거진</a></li>
               </ul>
             </div>
@@ -128,7 +138,7 @@
                 <li><a href="/www/company/M4.01.01.00.estimate.html">견적 및 서비스 문의</a></li>
                 <li><a href="/www/company/M4.04.00.00.faq.html">자주묻는 질문</a></li>
                 <li><a href="/www/company/M4.02.01.00.opinion.html">서비스 의견</a></li>
-                <li><a href="/www/company/M4.03.01.00.ally.html">제후 문의 및 제안</a></li>
+                <li><a href="/www/company/M4.03.01.00.ally.html">제휴 문의 및 제안</a></li>
               </ul>
             </div>
           </div>
@@ -145,6 +155,11 @@
       <div class="inner">
         <div class="tit_1depth">
           <a href="/www/mall/SmH.00.00.00.main-mall.html"><strong class="title">온라인몰</strong></a>
+          <p class="tit_2depth">
+            고객님의 "행복"을<br />
+            출력하는 킨코스코리아<br />
+            입니다.
+          </p>
         </div>
         <div class="gnb_box">
           <!-- loop -->
@@ -237,59 +252,59 @@
       <div class="inner clearfix">
         <div class="tit_1depth">
           <a href="/www/company/M5.01.01.00.center-info.html"><strong class="title">센터 안내</strong></a>
-          <p>Kinko’s는<br>편리함을 위해 여러분 곁에 좀 더 다가가고 있습니다.</p>
+          <p class="tit_2depth">Kinko’s는 편리함을 위해<br />여러분 곁에 좀 더<br />다가가고 있습니다.</p>
         </div>
         <div class="list_box">
           <div class="list_item">
             <strong class="locat_name">서울지역</strong>
             <ul class="locat_list">
-              <li class="active" data-tab="map-1"><a href="/www/company/M5.01.02.01.gasan.html">가산디지털단지센터</a></li>
-              <li data-tab="map-2"><a href="/www/company/M5.01.02.01.gasan.html">강남역센터</a></li>
-              <li data-tab="map-3"><a href="/www/company/M5.01.02.01.gasan.html">경복궁센터</a></li>
-              <li data-tab="map-4"><a href="/www/company/M5.01.02.01.gasan.html">교대센터</a></li>
-              <li data-tab="map-5"><a href="/www/company/M5.01.02.01.gasan.html">구로센터</a></li>
-              <li data-tab="map-6"><a href="/www/company/M5.01.02.01.gasan.html">논현센터</a></li>
-              <li data-tab="map-7"><a href="/www/company/M5.01.02.01.gasan.html">동여의도센터</a></li>
-              <li data-tab="map-8"><a href="/www/company/M5.01.02.01.gasan.html">분당센터</a></li>
-              <li data-tab="map-9"><a href="/www/company/M5.01.02.01.gasan.html">남대문센터</a></li>
-              <li data-tab="map-10"><a href="/www/company/M5.01.02.01.gasan.html">삼성센터</a></li>
-              <li data-tab="map-11"><a href="/www/company/M5.01.02.01.gasan.html">시청센터</a></li>
-              <li data-tab="map-12"><a href="/www/company/M5.01.02.01.gasan.html">송파센터</a></li>
-              <li data-tab="map-13"><a href="/www/company/M5.01.02.01.gasan.html">신사센터</a></li>
-              <li data-tab="map-14"><a href="/www/company/M5.01.02.01.gasan.html">서여의도센터</a></li>
-              <li data-tab="map-15"><a href="/www/company/M5.01.02.01.gasan.html">선릉센터</a></li>
-              <li data-tab="map-16"><a href="/www/company/M5.01.02.01.gasan.html">양재센터</a></li>
-              <li data-tab="map-17"><a href="/www/company/M5.01.02.01.gasan.html">을지로센터</a></li>
-              <li data-tab="map-18"><a href="/www/company/M5.01.02.01.gasan.html">신촌센터</a></li>
-              <li data-tab="map-19"><a href="/www/company/M5.01.02.01.gasan.html">압구정센터</a></li>
-              <li data-tab="map-20"><a href="/www/company/M5.01.02.01.gasan.html">역삼센터</a></li>
-              <li data-tab="map-21"><a href="/www/company/M5.01.02.01.gasan.html">포스코센터</a></li>
-              <li data-tab="map-22"><a href="/www/company/M5.01.02.01.gasan.html">종로센터</a></li>
-              <li data-tab="map-23"><a href="/www/company/M5.01.02.01.gasan.html">충무로센터</a></li>
-              <li data-tab="map-24"><a href="/www/company/M5.01.02.01.gasan.html">홍대센터</a></li>
-              <li data-tab="map-25"><a href="/www/company/M5.01.02.01.gasan.html">홍대입구역센터</a></li>
+              <li class="active" data-tab="map-1"><a href="/www/company/M5.01.02.01.gasan.html">가산디지털단지 센터</a></li>
+              <li data-tab="map-2"><a href="/www/company/M5.01.02.01.gasan.html">강남역 센터</a></li>
+              <li data-tab="map-3"><a href="/www/company/M5.01.02.01.gasan.html">경복궁 센터</a></li>
+              <li data-tab="map-4"><a href="/www/company/M5.01.02.01.gasan.html">교대 센터</a></li>
+              <li data-tab="map-5"><a href="/www/company/M5.01.02.01.gasan.html">구로 센터</a></li>
+              <li data-tab="map-6"><a href="/www/company/M5.01.02.01.gasan.html">논현 센터</a></li>
+              <li data-tab="map-7"><a href="/www/company/M5.01.02.01.gasan.html">동여의도 센터</a></li>
+              <li data-tab="map-8"><a href="/www/company/M5.01.02.01.gasan.html">분당 센터</a></li>
+              <li data-tab="map-9"><a href="/www/company/M5.01.02.01.gasan.html">남대문 센터</a></li>
+              <li data-tab="map-10"><a href="/www/company/M5.01.02.01.gasan.html">삼성 센터</a></li>
+              <li data-tab="map-11"><a href="/www/company/M5.01.02.01.gasan.html">시청 센터</a></li>
+              <li data-tab="map-12"><a href="/www/company/M5.01.02.01.gasan.html">송파 센터</a></li>
+              <li data-tab="map-13"><a href="/www/company/M5.01.02.01.gasan.html">신사 센터</a></li>
+              <li data-tab="map-14"><a href="/www/company/M5.01.02.01.gasan.html">서여의도 센터</a></li>
+              <li data-tab="map-15"><a href="/www/company/M5.01.02.01.gasan.html">선릉 센터</a></li>
+              <li data-tab="map-16"><a href="/www/company/M5.01.02.01.gasan.html">양재 센터</a></li>
+              <li data-tab="map-17"><a href="/www/company/M5.01.02.01.gasan.html">을지로 센터</a></li>
+              <li data-tab="map-18"><a href="/www/company/M5.01.02.01.gasan.html">신촌 센터</a></li>
+              <li data-tab="map-19"><a href="/www/company/M5.01.02.01.gasan.html">압구정 센터</a></li>
+              <li data-tab="map-20"><a href="/www/company/M5.01.02.01.gasan.html">역삼 센터</a></li>
+              <li data-tab="map-21"><a href="/www/company/M5.01.02.01.gasan.html">포스코 센터</a></li>
+              <li data-tab="map-22"><a href="/www/company/M5.01.02.01.gasan.html">종로 센터</a></li>
+              <li data-tab="map-23"><a href="/www/company/M5.01.02.01.gasan.html">충무로 센터</a></li>
+              <li data-tab="map-24"><a href="/www/company/M5.01.02.01.gasan.html">홍대 센터</a></li>
+              <li data-tab="map-25"><a href="/www/company/M5.01.02.01.gasan.html">홍대입구역 센터</a></li>
             </ul>
           </div>
           <div class="list_item">
             <strong class="locat_name">경기지역</strong>
             <ul class="locat_list">
-              <li><a href="/www/company/M5.01.02.01.gasan.html">분당센터</a></li>
-              <li><a href="/www/company/M5.01.02.01.gasan.html">일산센터</a></li>
-              <li><a href="/www/company/M5.01.02.01.gasan.html">판교센터</a></li>
-              <li><a href="/www/company/M5.01.02.01.gasan.html">평촌센터</a></li>
+              <li><a href="/www/company/M5.01.02.01.gasan.html">분당 센터</a></li>
+              <li><a href="/www/company/M5.01.02.01.gasan.html">일산 센터</a></li>
+              <li><a href="/www/company/M5.01.02.01.gasan.html">판교 센터</a></li>
+              <li><a href="/www/company/M5.01.02.01.gasan.html">평촌 센터</a></li>
             </ul>
           </div>
           <div class="list_item">
             <strong class="locat_name">부산지역</strong>
             <ul class="locat_list">
-              <li><a href="/www/company/M5.01.02.01.gasan.html">서면센터</a></li>
-              <li><a href="/www/company/M5.01.02.01.gasan.html">센텀시티센터</a></li>
+              <li><a href="/www/company/M5.01.02.01.gasan.html">서면 센터</a></li>
+              <li><a href="/www/company/M5.01.02.01.gasan.html">센텀시티 센터</a></li>
             </ul>
           </div>
           <div class="list_item">
             <ul class="locat_list etc">
-              <li><a href="	M5.02.00.00.spc.html">보안제작지원센터(SPC)</a></li>
-              <li><a href="/www/company/M5.03.00.00.sng.html">사인앤그래픽센터(S&amp;G)</a></li>
+              <li><a href="	M5.02.00.00.spc.html">보안제작지원 센터(SPC)</a></li>
+              <li><a href="/www/company/M5.03.00.00.sng.html">사인앤그래픽 센터(S&amp;G)</a></li>
             </ul>
           </div>
         </div>
@@ -532,7 +547,7 @@
 
 
 
-<div class="footer_inner">
+<div class="container footer_inner">
     <div class="top">
         <ul class="pb">
             <li><a href="Ft1.00.00.00.terms_use.html">이용약관</a></li>

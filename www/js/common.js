@@ -82,6 +82,11 @@ var setGnb = function () {
     $('.dim').hide();
   });
 
+  $('.btn_search_form').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).closest('.search_item').toggleClass('on');
+  });
 
   function dropSubGnb(target, chkGnb) {
     if (target.hasClass('js_center')) {
