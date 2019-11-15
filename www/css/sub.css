@@ -220,6 +220,11 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
   .form_inp.tel:first-child {margin-top:0;}
   .form_group.col2 .form_item:last-child {padding-left:0;}
   .form_group.col2 .form_item:first-child {padding-right:0;}
+  .form_inp .btn  {width:80px;min-width:80px;padding:0 10px;}
+  .form_inp.col2.with_btn > input,
+  .form_inp.col2.with_btn > select,
+  .form_inp.address > input:first-child {width:calc(100% - 90px);}
+  .form_inp.tel.with_btn > input {width: calc((100% - 200px));}
 }
 
 
