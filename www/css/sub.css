@@ -282,7 +282,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 .form_group.chk_box .form_item {margin-top:0;}
 .form_group.chk_box .form_item:first-child {margin-top:0;}
-.form_group.chk_box .form_item .btn_popup {float:right; font-size:1em;font-weight:700; color:#222 !important;}
+.form_group.chk_box .form_item .btn_popup {float:right; font-size:1em;font-weight:700; color:#222 !important;margin-top:8px;}
 .form_group.chk_box.pop .form_item {overflow: hidden;}
 .form_group.chk_box.pop .form_item .form_inp {float:left;}
 @media screen and (max-width:1024px) {
@@ -291,7 +291,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .form_group.chk_box.pop .form_item:first-child {border-top:0}
   .form_group.chk_box.pop .form_item:last-child {padding-bottom:0;}
   .form_group.chk_box.pop .form_item .form_inp {min-height: initial;}
-  .form_group.chk_box .form_item .btn_popup {font-size:0;position:absolute;top:3px;padding:20px 0 20px 20px;right:0;line-height: 0;border:0;}
+  .form_group.chk_box .form_item .btn_popup {font-size:0;position:absolute;top:3px;padding:20px 0 20px 20px;right:0;line-height: 0;border:0;margin-top:0;}
   .form_group.chk_box .form_item .btn_popup::before {content:"";width:9px;height:16px;display:block;background: url(../image/common/arr-mo-popview.png) 50% 50% no-repeat;background-size: cover;text-indent: -99999px;}
   
   input[type="checkbox"] + label,
