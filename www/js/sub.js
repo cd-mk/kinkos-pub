@@ -24,8 +24,8 @@ function slideInit() {
   var ptList = new Swiper('.product_list', {
     roundLengths: true,
     spaceBetween: 30,
-    clickable: true,
-    allowTouchMove: false,
+    // clickable: true,
+    // allowTouchMove: true,
     slidesPerView: 'auto',
     navigation: {
       nextEl: '.swiper-button-next',
