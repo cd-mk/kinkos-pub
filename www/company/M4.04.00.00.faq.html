@@ -23,7 +23,12 @@
   <link rel="stylesheet" href="../css/lib/swiper.min.css">
 	<link rel="stylesheet" href="../css/common.css">
 	<!-- only sub -->
-<link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/sub.css">
+
+  <!-- olny page -->
+  <link rel="stylesheet" href="../css/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/lib/bootstrap/bootstrap-select.min.css">
+  <!-- //olny page -->
 </head>
 
 <body>
@@ -91,9 +96,27 @@
           </div>
           <div class="section faq_wrap">
             <div class="form_wrap type_select">
-            <div class="faq_tab_nav_select">
-              <select name="" class="">
-                <option value="">Top 10</option>
+              <div class="form_group">
+                <div class="form_item">
+                  <select name="" id="" title="검색조건 선택">
+                    <option value="">제목 + 내용</option>
+                    <option value="">제목</option>
+                    <option value="">내용</option>
+                  </select>
+                </div>
+
+                <div class="form_inp">
+                  <input type="text" title="검색어 입력">
+                </div>
+                <div class="btn_wrap">
+                  <button type="button" class="btn type01">검색</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq_tab_nav select">
+              <select name="" class="selectpicker faq_tab_nav_select">
+                <option value="">TOP 10</option>
                 <option value="">복사,출력 서비스</option>
                 <option value="">셀프 서비스</option>
                 <option value="">대형 실사 출력</option>
@@ -108,26 +131,8 @@
               </select>
             </div>
 
-              <div class="form_group">
-                <div class="form_item">
-                  <select name="" id="" title="검색조건 선택">
-                    <option value="">제목 + 내용</option>
-                    <option value="">제목</option>
-                    <option value="">내용</option>
-                  </select>
-                </div>
-
-              
-                <div class="form_inp">
-                  <input type="text" title="검색어 입력">
-                </div>
-                <div class="btn_wrap">
-                  <button type="button" class="btn type01">검색</button>
-                </div>
-              </div>
-            </div>
             <ul class="faq_tab_nav clearfix">
-              <li class="on"><a href="#url">Top 10</a></li>
+              <li class="on"><a href="#url">TOP 10</a></li>
               <li><a href="#url">복사,출력 서비스</a></li>
               <li><a href="#url">셀프 서비스</a></li>
               <li><a href="#url">대형 실사 출력</a></li>
@@ -243,17 +248,14 @@
                 <!-- //repeat faq item list -->
               </div>
               <!-- ex: //복사,출력 서비스 Tab Content -->
-              
             </div>
           </div>
 				</div>
 				<!-- //본문 -->
 
-
 			</div>
 		</div>
 		<!-- CONTENT -->
-
 
 		<!-- FOOTER -->
 		<div id="footer" class="layout_width">
@@ -278,8 +280,17 @@
 
 <script src="../js/sub.js"></script>
 
+<!-- page -->
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap/bootstrap-select.min.js"></script>
+<!-- //page -->
+
 <script>
-  
+  $(function () {
+    $('.faq_tab_nav_select').selectpicker({
+        selectOnTab: true
+    });
+  });
 </script>
  <!-- //SCRIPT -->
 

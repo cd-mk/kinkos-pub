@@ -492,6 +492,8 @@ p+.btn_wrap {margin-top:40px !important;}
 
  .company .header_wrap .nav {height:60px; text-align:left; padding-left:2.73%; border-bottom:1px solid #e7e7e7; box-sizing:border-box;}
  .company .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:18px; font-weight:500; color:#000;}
+ .company.is-main .header_wrap .nav .btn_back {display:none;}
+ .company.is-main .header_wrap .nav .logo {display:inline-block;}
  .company .header_wrap .nav .btn_back:before {content:''; display:inline-block; width:9px; height:16px; margin-top:-4px; margin-right:21px; background:url("../image/common/arr-mo-gnb-back.png") 50% 50% no-repeat; background-size:cover; vertical-align:middle; text-indent:-99999px;}
  .company .header_wrap .nav .logo {display:none; width:152px; height:30px; margin-top:16px;}
  .company .header_wrap .nav .logo img {width:100%;}

@@ -271,6 +271,28 @@ var setFaqTab = function () {
   });
 }
 
+var mobileSetFaqTab = function() {
+  if( $('select.faq_tab_nav_select').length )
+  {
+    $('select.faq_tab_nav_select').find('option').each(function(idx) {
+      $(this).attr('data-idx', idx+1);
+    });
+
+    $('select.faq_tab_nav_select').on('change', function() {
+      var select = $(this);
+      var selectedOption = select.find('option:selected');
+      var selectedOptionIndex = selectedOption.attr('data-idx');
+
+      var targetObj = $('.faq_tab_con .accor_wrap').eq(selectedOptionIndex-1);
+      if( targetObj.length )
+      {
+        $('.faq_tab_con .accor_wrap').removeClass('active');
+        targetObj.addClass('active');
+      }
+    });
+  }
+};
+
 
 
 
@@ -280,6 +302,7 @@ $(document).ready(function () {
   mobileGnb();
   new WOW().init();
   setFaqTab();
+  mobileSetFaqTab();
   // placeholder
   $('input, textarea').placeholder();
   if ($('.inp_date').length) setDatePicker();
