@@ -878,15 +878,19 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_info_wrap .bbs_list .hours_txt {margin-top:10px;margin-bottom:20px; font-size:14px;color:#03a2ea}
 .center_info_wrap .bbs_list .btn_wrap .btn {height:44px; line-height:44px; font-weight:400;}
 
+.center_info_wrap .center_info_list {}
 .center_info_wrap .center_info_list h3 {font-size:24px; font-weight:700;}
 .center_info_wrap .center_info_list h4 {margin-top:20px; font-size:18px; font-weight:400;}
 .center_info_wrap .center_info_list .item_list {display:flex; flex-direction:row; flex-wrap:wrap; width:100%; height:auto; margin-top:40px;}
-.center_info_wrap .center_info_list .item_list li {flex:0 0 16.6666%; border:1px solid #e7e7e7; box-sizing:border-box;}
-.center_info_wrap .center_info_list .item_list.grid3 li {flex:0 0 33.3333%;}
+.center_info_wrap .center_info_list .item_list li {flex:0 0 25%; box-sizing:border-box;}
+.center_info_wrap .center_info_list .item_list.grid_3 li {flex:0 0 33.3333%;}
+.center_info_wrap .center_info_list .item_list.grid_6 li {flex:1 1 16%; border-bottom:1px solid #e7e7e7; border-right:1px solid #e7e7e7; box-sizing:border-box;}
+.center_info_wrap .center_info_list .item_list.grid_6 li:nth-child(-n+6) {border-top:1px solid #e7e7e7;}
+.center_info_wrap .center_info_list .item_list.grid_6 li:nth-child(6n+1) {border-left:1px solid #e7e7e7;}
 .center_info_wrap .center_info_list .item_list.center li {display:flex; flex-direction:column; align-items:center; justify-content:center;}
 .center_info_wrap .center_info_list .item_list li a {position:relative;display:inline-block;width:100%;height:100%;}
 .center_info_wrap .center_info_list .item_list li a .img_box {}
-.center_info_wrap .center_info_list .item_list li a .img_box_over {display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgb(3,162,234,0.9); opacity:0; transition: opacity 0.2s ease-in;}
+.center_info_wrap .center_info_list .item_list li a .img_box_over {display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(3,162,234,0.9); opacity:0; transition: opacity 0.2s ease-in; z-index:9;}
 .center_info_wrap .center_info_list .item_list li a .img_box_over .img_box_over_txt {position:absolute; top:50%; left:50%; display:inline-block; width:auto; height:auto; color:#fff; font-size:18px; font-weight:500; line-height:100%; transform:translate(-50%,-50%);}
 .center_info_wrap .center_info_list .item_list li a:hover .img_box_over {opacity:1;}
 
@@ -939,7 +943,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_info_wrap .center_explanation_wrap .tit_box h3 {font-size:24px; font-weight:700;}
 .center_info_wrap .center_explanation_wrap .tit_box h4 {margin-top:20px; font-size:18px; font-weight:400;}
 .center_info_wrap .center_explanation_wrap .item_list {display:flex; flex-direction:row; flex-wrap:wrap; width:100%; height:auto;}
-.center_info_wrap .center_explanation_wrap .item_list.grid_2 li {flex:0 0 50%; padding-left:15px;}
+.center_info_wrap .center_explanation_wrap .item_list.grid_2 li {flex:0 0 calc(50% - 15px); padding-left:15px;}
 .center_info_wrap .center_explanation_wrap .item_list.grid_2 li:nth-child(1) {padding-left:0; padding-right:15px;}
 .center_info_wrap .center_explanation_wrap .item_list.grid_2 li .img_box {}
 .center_info_wrap .center_explanation_wrap .item_list.grid_2 li .txt_box {margin-top:20px; font-size:20px; font-weight:500; color:#222222; text-align:center;}
@@ -1309,6 +1313,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .faq_tab_nav.select .faq_tab_nav_select .dropdown-toggle {font-size:1em; color:#03a2ea; height:50px; border:1px solid #03a2ea; border-radius:0; box-sizing:border-box; background:#fff; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
   .faq_tab_nav.select .faq_tab_nav_select .dropdown-toggle:hover,
   .faq_tab_nav.select .faq_tab_nav_select .dropdown-toggle:focus {color:#03a2ea;}
+  .faq_tab_nav.select .faq_tab_nav_select .dropdown-toggle .filter-option .filter-option-inner {display:flex; align-items:center; justify-content:flex-start; width:100%; height:100%;}
   .faq_tab_nav.select .faq_tab_nav_select > .dropdown-menu {border:1px solid #03a2ea; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
   .faq_tab_nav.select .faq_tab_nav_select .dropdown-menu .dropdown-item {
     padding:15px 15px;
