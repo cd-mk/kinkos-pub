@@ -52,7 +52,7 @@
         이벤트/공지사항 : bg_event
         고객지원 : bg_cs -->
       <div class="tit_sub type_bg bg_cs">
-        <h2>고객지원</h2>
+        <h2>센터안내</h2>
         <p>언제나 고객을 생각하는 킨코스입니다.</p>
       </div>
 
@@ -60,8 +60,8 @@
 			            <div class="breadcrumb_wrap">
         <ul class="item_list">
           <li><a href="#url" class="home">Home</a></li>
-					<li><a href="#url">고객지원</a></li>
-					<li><a href="#url">서비스 의견</a></li>
+          <li><a href="#url">보안제작지원(SPC) 센터</a></li>
+					<li><a href="#url">방문예약</a></li>
 				</ul>
 			</div>
 			<!-- //breadcrumb  -->
@@ -71,28 +71,17 @@
 			<!-- 콘텐츠 group "cont_wrap" 고정 -->
 			<div class="cont_wrap tab_area">
 
-				<!-- page tab -->
-				<div class="page_tab col4">
-					<ul>
-            <li><a href="/www/company/M4.01.01.00.estimate.html">견적 및 상품문의</a></li>
-            <li class="active"><a href="/www/company/M4.02.01.00.opinion.html">서비스 의견</a></li>
-            <li><a href="/www/company/M4.03.01.00.ally.html">제휴 및 제안</a></li>
-            <li><a href="/www/company/M4.04.00.00.faq.html">자주묻는질문</a></li>
-					</ul>
-				</div>
-				<!-- page tab -->
-
 				<!-- 본문 -->
 				<!-- 콘텐츠 "con_box" 고정 -->
 				<div class="con_box support_wrap">
 					<div class="tit_box">
             <h3>보안제작지원(SPC) 센터 방문예약</h3>
-            <p>고객 정보 보안과 대량 제작을 지원하기 위해 운영되는 SPC 센터!<br>
+            <p>고객 정보 보안과 대량 제작을 지원하기 위해<br class="mo_only"> 운영되는 SPC 센터!<br>
             방문을 원하시면 예약해주세요!</p>
           </div>
-          <div class="section guide_box">방문예약 요청내용은 마이페이지에서 확인이 불가하며, 담당자를 통해 전화 또는 이메일 연락드리겠습니다.</div>
+          <div class="section guide_box"><p>방문예약 요청내용은 마이페이지에서 확인이 불가하며,<br class="mo_only"> 담당자를 통해 전화 또는 이메일 연락드리겠습니다.</p></div>
 
-          <div class="section">
+          <div class="section mid">
             <form action="">
               <fieldset>
                 <legend>서비스의견 입력 양식</legend>
@@ -143,37 +132,23 @@
 
                   <div class="form_group col2">
                     <div class="form_item">
-                      <span class="form_name">답변방법</span>
+                      <span class="form_name">회사명 <sup class="require">*</sup></span>
                       <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">답변 방법 선택</option>
-                          <option value="">방법1</option>
-                          <option value="">방법2</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form_item">
-                      <span class="form_name">방문매장 <sup class="require">*</sup></span>
-                      <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">매장 선택</option>
-                          <option value="">매장1</option>
-                          <option value="">매장2</option>
-                        </select>
-                        <p class="txt_vaild">방문매장을 선택해주세요</p>
+                      <input type="number" title="회사명 입력">
                       </div>
                     </div>
                   </div>
+
+
                   <div class="form_group col2">
                     <div class="form_item">
-                      <span class="form_name">방문일 <sup class="require">*</sup></span>
+                      <span class="form_name">방문 예정 일자 <sup class="require">*</sup></span>
                       <div class="form_inp">
                         <input type="text" class="inp_date" title="방문 날짜 선택">
-                        <p class="txt_vaild">방문일을 입력해주세요</p>
                       </div>
                     </div>
                     <div class="form_item">
-                      <span class="form_name">방문시간 <sup class="require">*</sup></span>
+                      <span class="form_name">방문 예정 시간 <sup class="require">*</sup></span>
                       <div class="form_inp">
                         <select name="" id="">
                           <option value="">시간 선택</option>
@@ -186,17 +161,6 @@
                   </div>
 
                   <div class="form_group top_line">
-                    <div class="form_item">
-                      <span class="form_name">문의유형 <sup class="require">*</sup></span>
-                      <div class="form_inp">
-                        <select name="" id="">
-                          <option value="">문의유형을 선택하세요.</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form_group">
                     <div class="form_item">
                       <span class="form_name">제목</span>
                       <div class="form_inp">
@@ -286,52 +250,8 @@
         <!-- popup title -->
         <h3 class="title">개인정보 수집 및 이용안내</h3>
         <!-- popup content -->
-        <div class="privacy_txt">
-          <p class="tit">제1조 개인정보의 처리 목적</p>
-          <p class="desc">
-            •킨코스 코리아㈜<br>
-            는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br>
-            1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
-            - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송<br>
-            2. 서비스 이용을 위한 이용 안내<br>
-            - 원할한 이용을 위한 안내 및 고객불만사항 등의 처리<br>
-            - 고객에 대한 서비스 제공에 따른 본인 식별.인증, 물품 또는 서비스 공급에 따른 금액 결제, 물품 또는 서비스의 공급.배송 등
-          </p>
-          <p class="tit">제2조 개인정보 수집 및 이용에 대한 안내</p>
-          <p class="desc">
-            • 킨코스 코리아㈜는 작업물의 진행을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
-            1. 수집항목<br>
-            - 필수 항목: 성명, 회사명, 유선전화번호, 휴대전화번호, 이메일<br>
-            - 선택 항목: 부서명, 주소, 관심정보
-          </p>
-        </div>
-        <!-- //popup content -->
-        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
-      </div>
-    </div>
-    <div id="popup2" class="popup_wrap">
-      <div class="inner">
-        <!-- popup title -->
-        <h3 class="title">개인정보 수집 및 이용안내</h3>
-        <!-- popup content -->
-        <div class="privacy_txt">
-          <p class="tit">제1조 개인정보의 처리 목적</p>
-          <p class="desc">
-            •킨코스 코리아㈜<br>
-            는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br>
-            1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
-            - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송<br>
-            2. 서비스 이용을 위한 이용 안내<br>
-            - 원할한 이용을 위한 안내 및 고객불만사항 등의 처리<br>
-            - 고객에 대한 서비스 제공에 따른 본인 식별.인증, 물품 또는 서비스 공급에 따른 금액 결제, 물품 또는 서비스의 공급.배송 등
-          </p>
-          <p class="tit">제2조 개인정보 수집 및 이용에 대한 안내</p>
-          <p class="desc">
-            • 킨코스 코리아㈜는 작업물의 진행을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
-            1. 수집항목<br>
-            - 필수 항목: 성명, 회사명, 유선전화번호, 휴대전화번호, 이메일<br>
-            - 선택 항목: 부서명, 주소, 관심정보
-          </p>
+        <div class="terms_box">
+    
         </div>
         <!-- //popup content -->
         <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
@@ -339,6 +259,22 @@
     </div>
     <!-- //popup area -->
     
+    
+    
+    <!-- popup area -->
+    <div id="popup2" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">개인정보 마케팅 활용 방침</h3>
+        <!-- popup content -->
+        <div class="terms_box">
+    
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
 
 		<div class="dim">
 		</div>

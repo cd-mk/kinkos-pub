@@ -140,10 +140,10 @@ textarea:-mos-input-placeholder, input:-mos-input-placeholder {
 
 
 /* color */
-.point_blue {color:#03a2ea;}
-.point_yellow {color:#fffd9b;}
-.point_org {color:#ed6c16;}
-.point_red {color:#e52135;}
+.point_blue {color:#03a2ea !important;}
+.point_yellow {color:#fffd9b !important;}
+.point_org {color:#ed6c16 !important;}
+.point_red {color:#e52135 !important;}
 
 .img {display:inline-block;}
 
@@ -209,7 +209,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .btn.fileup i {margin-right:12px;}
 
 @media screen and (max-width:1024px) {
- .btn_wrap {margin-top:25px;font-size:1em;}
+ .btn_wrap {margin-top:40px;font-size:1em;}
  .btn_wrap[class*="col"] .btn {display:block; margin-left:0;margin-top:10px;width:100%;max-width:100%;}
  .btn_wrap[class*="col"] .btn:first-child {margin-top:0;}
  .btn_wrap.col2 .btn:last-child {margin-left:10px;}
