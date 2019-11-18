@@ -75,7 +75,7 @@
 
 				<!-- page tab -->
 				<!-- tab-anchor.js 추가 -->
-				<div class="page_tab col5">
+				<!-- <div class="page_tab col5">
 						<ul>
 						<li id="tab1" onclick="goToByScroll('1');" class="active">센터 정보</li>
 						<li id="tab2" onclick="goToByScroll('2');">제공 서비스</li>
@@ -83,31 +83,35 @@
 						<li id="tab4" onclick="goToByScroll('4');">보유장비</li>
 						<li id="tab5" onclick="goToByScroll('5');">지도</li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- page tab -->
 
 				<!-- 본문 -->
-				<div class="con_box center_view_wrap">
+				<div class="center_view_wrap">
 					<div id="item1" class="item_box item1">
+						<div class="tit_box mid btm_line">
+							<h3>센터 안내</h3>
+						</div>
 						<div class="inner clearfix">
 							<div class="left"><img src="../image/company/sub/center-img.jpg" alt="가산디지털 전경"></div>
 							<div class="right">
-								<h3 class="border_none">센터 정보</h3>
 								<div class="info_tbl">
 									<table>
 										<caption>센터 상세 정보를 제공하는 표</caption>
 										<tbody>
 											<tr>
 												<th scope="row">위치</th>
-												<td>서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</td>
+												<td>
+													서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호<br>
+													(서울특별시 중구 칠패로 46 우남빌딩1층)
+												</td>
 											</tr>
 											<tr>
 												<th scope="row">전화</th>
-												<td>02-837-0020</td>
-											</tr>
-											<tr>
-												<th scope="row">팩스</th>
-												<td>02-837-0030</td>
+												<td>
+													02-837-0020
+													<span class="fax"><strong>팩스</strong>02-837-0030</span>
+												</td>
 											</tr>
 											<tr>
 												<th scope="row">센터메일</th>
@@ -116,8 +120,9 @@
 											<tr>
 												<th scope="row">운영시간</th>
 												<td>
-													월 ~ 목 24시간 /  금 ~22:00 / 토 9:00 ~ 18:00 / 일 9:00 ~
-													<p class="txt_holiday point_blue">주말, 공휴일 점심 휴게 시간 : 13:00 ~ 14:00</p>
+													월 ~ 목 24시간 /  금 ~22:00<br>
+													토 9:00 ~ 18:00 / 일 9:00 ~14:00
+													<p class="txt_holiday">주말, 공휴일 점심 휴게 시간 : 13:00 ~ 14:00</p>
 												</td>
 											</tr>
 											<tr>
@@ -131,15 +136,17 @@
 										</tbody>
 									</table>
 									<div class="btn_wrap">
-										<a href="/www/company/M5.01.02.02.file_order.html" class="btn type01">파일 주문</a>
-										<a href="/www/company/M4.01.01.00.estimate.html" class="btn type02">견적 문의</a>
+										<a href="/www/company/M5.01.02.02.file_order.html" class="btn large type01">파일 주문</a>
+										<a href="/www/company/M4.01.01.00.estimate.html" class="btn large type02">파일 주문 안내</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div id="item2" class="item_box item2">
-						<h3>제공 서비스</h3>
+						<div class="tit_box mid btm_line">
+							<h3>제공 서비스</h3>
+						</div>
 						<ul class="offer_service clearfix">
 							<li><span class="offer_1">24시간 운영</span></li>
 							<li><span class="offer_2">대형출력</span></li>
@@ -149,7 +156,9 @@
 						</ul>
 					</div>
 					<div id="item3" class="item_box item3">
-						<h3>컴퓨터 및 프로그램<span class="title_alert point_blue">빠르고 정확한 출력을 원하신다면, PDF 접수를 권장합니다.</span></h3>
+						<div class="tit_box mid btm_line">
+						<h3>컴퓨터 및 프로그램<span class="title_alert">빠르고 정확한 출력을 원하신다면, PDF 접수를 권장합니다.</span></h3>
+						</div>
 						<div class="item_list clearfix">
 							<div class="item">
 								<strong>컴퓨터</strong>
@@ -213,7 +222,9 @@
 						</div>
 					</div>
 					<div id="item4" class="item_box item4">
-						<h3>보유장비</h3>
+						<div class="tit_box mid btm_line">
+							<h3>보유장비</h3>
+						</div>
 						<div class="item_list clearfix">
 							<div class="item">
 								<strong>칼라출력 장비</strong>
@@ -241,7 +252,9 @@
 						</div>
 					</div>
 					<div id="item5" class="item_box item5">
-						<h3>지도</h3>
+						<div class="tit_box mid btm_line">
+							<h3>지도</h3>
+						</div>
 						<div class="inner">
 							<!-- 지도 삽입 영역 -->
 	
@@ -253,7 +266,7 @@
 
 
 							<div class="btn_wrap">
-								<a href="#url" class="btn type01">목록</a>
+								<a href="#url" class="btn large type01">목록</a>
 							</div>
 						</div>
 					</div>
@@ -288,7 +301,7 @@
 <script src="../js/sub.js"></script>
 	<!-- //global -->
 
-	<script src="../js/tab-anchor.js"></script>
+	<!-- <script src="../js/tab-anchor.js"></script> -->
 	<!-- Initialize Swiper -->
   <!-- //SCRIPT -->
 

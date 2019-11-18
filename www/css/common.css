@@ -274,7 +274,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .gnb_wrap.mall {background:#03a2ea;}
 .gnb_wrap.company {background:#fff;}
 
-.gnb_wrap .js_center {position:absolute; right:56px; top:50%; transform:translateY(-50%);width:145px;background:#fff; text-align:center;z-index:999}
+.gnb_wrap .js_center {position:absolute; right:56px; /*top:50%; transform:translateY(-50%);*/top:0;width:145px;background:#fff; text-align:center;z-index:999}
 .gnb_wrap .js_center .point_marker {width:auto;position:relative;color:#0075c2;height:57px;line-height:57px;display:inline-block;padding-left:23px;}
 .gnb_wrap .js_center .point_marker::before {content:''; position:absolute; left:0; top:50%; width:14px; height:18px; background:url('../image/common/ico-marker.png') no-repeat; transform:translateY(-50%);}
 
