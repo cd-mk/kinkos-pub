@@ -1672,7 +1672,7 @@ h3.pc + p {margin-top:0}
 
 
 @media screen and (max-width:1024px) {
-  #wrap .layout_width {padding:0;}
+  #wrap .layout_width {}
   .pdt_info_wrap {width:100%;max-width:100%;margin-top:0;}
   .pdt_info_wrap .photo_inner {display:block;width:auto;max-width:320px;margin:0 auto}
   .pdt_info_wrap .photo_inner .photo_box {height:235px;}
