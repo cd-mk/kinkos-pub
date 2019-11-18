@@ -1334,10 +1334,9 @@ h3.pc + p {margin-top:0}
   }
 
 
-  .faq_tab_con .accor_wrap .accor_item .accor_title, .faq_tab_con .accor_wrap .accor_item .accor_con {padding-left:45px}
+  .faq_tab_con .accor_wrap .accor_item .accor_title, .faq_tab_con .accor_wrap .accor_item .accor_con {padding-left:30px}
   .faq_tab_con .accor_wrap .accor_item .accor_title::before,
-  .faq_tab_con .accor_wrap .accor_item .accor_con::before {left:15px;font-size: 18px;}
-
+  .faq_tab_con .accor_wrap .accor_item .accor_con::before {left:0;font-size: 18px;}
   .faq_wrap .type_select .form_item {width:100% !important;}
 }
 
@@ -1520,9 +1519,16 @@ h3.pc + p {margin-top:0}
 
 
 
+.service_info_wrap .scan .item_box {padding-top:235px;position:relative;text-align:left;}
+.service_info_wrap .scan .item_box::before {z-index:-1;content:"";width:100%;height:250px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;background-image:url(../image/company/sub/scan-main-1.png);}
+.service_info_wrap .scan .item_box > strong {font-size:36px;line-height:1.2;}
+.service_info_wrap .scan .item_box > p {font-size:1em;line-height:1.4;margin-top:40px;}
+.service_info_wrap .scan .item_box > ul {margin-top:40px;padding-right:37%}
+.service_info_wrap .scan .item_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.5;}
+.service_info_wrap .scan .item_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
+.service_info_wrap .scan .item_box > ul li strong {color:#03a2ea;font-weight: 400;}
 
-
-
+.service_info_wrap .scan .faq_tab_con {margin-top:0;}
 
 
 
