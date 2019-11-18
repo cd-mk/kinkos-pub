@@ -80,7 +80,10 @@ toggleV();
     function init() {
       if( $('.page_tab').length )
       {
-        pageTabInit();
+        if( $('.page_tab').is('[class*="sub_type"]') === false )
+        {
+          pageTabInit();
+        }
       }
 
       if( $('.tab_area.anchor').length )
@@ -239,7 +242,7 @@ toggleV();
       }
     }
 
-    $(window).on('load', function() {
+    $(document).ready(function() {
       init();
     });
   });

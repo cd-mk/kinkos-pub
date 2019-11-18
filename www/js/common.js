@@ -43,7 +43,7 @@ var setGnb = function () {
   if ($("#wrap").is(".company") === true) {
     $(".gnb_wrap").addClass("company");
     $(".btn_toggle strong").text("온라인몰");
-    $(".logo").attr('href', '/www/company/MH.00.00.00.main-www.html');
+    $(".logo").attr('href', '/www/company/M4.02.01.00.main-www.html');
   }
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
@@ -416,6 +416,32 @@ function tab(e, num) {
     $(this).closest('.opt_list').prev('.btn_list').text(selectText);
     $(this).closest('.opt_list').slideUp(300);
   });
+
+  function mo_sub_type_menu()
+  {
+    var btnObj = $('.btn_mo_sub_type');
+    var parentObj = btnObj.closest('div[class*="sub_type"]');
+
+    if( parentObj.length )
+    {
+      var targetObj = parentObj.find('>ul');
+      if( targetObj.length )
+      {
+        btnObj.on('click', function() {
+          targetObj.toggleClass('active');
+        });
+
+        parentObj.on('mouseleave', function() {
+          targetObj.removeClass('active');
+        });
+      }
+    }
+  }
+
+  if( $('.btn_mo_sub_type').length )
+  {
+    mo_sub_type_menu();
+  }
 })();
 
 
