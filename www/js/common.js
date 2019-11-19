@@ -43,7 +43,7 @@ var setGnb = function () {
   if ($("#wrap").is(".company") === true) {
     $(".gnb_wrap").addClass("company");
     $(".btn_toggle strong").text("온라인몰");
-    $(".logo").attr('href', '/www/company/M4.02.01.00.main-www.html');
+    $(".logo").attr('href', '/www/company/MH.00.00.00.main-www.html');
   }
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
