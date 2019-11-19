@@ -107,34 +107,22 @@
                   </div>
       
 
-                  <div class="form_group col2">
-                    <div class="form_item">
-                      <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
-                      <div class="form_inp tel">
-                        <select name="" id="" title="휴대폰 앞자리 선택">
-                          <option value="">010</option>
-                          <option value="">017</option>
-                          <option value="">019</option>
-                        </select>
-                        <input type="number" title="휴대폰 나머지 번호 입력" placeholder="-없이 입력">
-                        <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
-                      </div>
-                    </div>
-                    <div class="form_item">
-                      <strong class="form_name">일반전화 <sup class="require">*</sup></strong>
-                      <div class="form_inp tel">
-                        <select name="" id="" title="일반전화 국번 선택">
-                          <option value="">02</option>
-                          <option value="">031</option>
-                          <option value="">032</option>
-                        </select>
-                        <input type="number" title="일반전화 나머지 번호 입력" placeholder="-없이 입력">
-                        <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
-                      </div>
+                <div class="form_group col2">
+                  <div class="form_item">
+                    <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
+                    <div class="form_inp tel">
+                      <input type="number" title="휴대폰 번호 입력" disabled="disabled">
+                      <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
                     </div>
                   </div>
-
-
+                  <div class="form_item">
+                    <strong class="form_name">일반전화 <sup class="require">*</sup></strong>
+                    <div class="form_inp tel">
+                      <input type="number" title="일반전화 번호 입력" placeholder="-없이 입력">
+                      <p class="txt_vaild">일반전화 번호를 입력해주세요</p>
+                    </div>
+                  </div>
+                </div>
 
                   <div class="form_group col2">
                     <div class="form_item">
@@ -198,14 +186,14 @@
                     <div class="form_item">
                       <div class="form_inp">
                         <input type="checkbox" id="chk1">
-                        <label for="chk1">개인정보 수집 및 이용에 대한 안내에 동의합니다. <span class="point_blue">[필수]</span></label>
+                        <label for="chk1">개인정보 수집 및 이용에 대한 안내 <span class="point_blue">[필수]</span></label>
                       </div>
                       <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
                     </div>
                     <div class="form_item">
                       <div class="form_inp">
                         <input type="checkbox" id="chk2">
-                        <label for="chk2">이벤트 등 광고성 정보 수신에 동의합니다. <span class="point_blue">[필수]</span></label>
+                        <label for="chk2">이벤트 등 광고성 정보 수신 <span class="point_blue">[필수]</span></label>
                       </div>
                       <a href="#popup2" class="btn_popup txt_underline">내용 보기</a>
                     </div>
@@ -240,13 +228,14 @@
     <div id="footer" class="layout_width"> </div>
     <!-- //FOOTER -->
 
+
     <!-- popup area -->
     <div id="popup1" class="popup_wrap">
       <div class="inner">
         <!-- popup title -->
         <h3 class="title">개인정보 수집 및 이용안내</h3>
         <!-- popup content -->
-        <div class="terms_box">
+        <div class="pop_con">
     
         </div>
         <!-- //popup content -->
@@ -263,7 +252,7 @@
         <!-- popup title -->
         <h3 class="title">개인정보 마케팅 활용 방침</h3>
         <!-- popup content -->
-        <div class="terms_box">
+        <div class="pop_con">
     
         </div>
         <!-- //popup content -->
@@ -271,6 +260,7 @@
       </div>
     </div>
     <!-- //popup area -->
+    
     
     
     

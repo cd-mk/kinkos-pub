@@ -82,7 +82,7 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 
 .form_wrap {padding:40px 0; border-top:2px solid #000;border-bottom:1px solid #ccc;}
 .type_select + .form_alert {margin-top:60px;}
-.form_wrap.type_select {margin-top:95px;}
+.form_wrap.type_select {margin-top:95px;position: relative;}
 .type_select {margin-bottom:0; padding:30px 11.11%; background:#f3f4f6; box-sizing:border-box;border:1px solid #e6e9ef;}
 .type_select .form_group {padding:0;}
 .type_select select {}
@@ -175,10 +175,10 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .form_inp.tel > select,
 .form_inp.tel > input {float:left;}
 .form_inp.tel > select {width:100px;}
-.form_inp.tel > input {width:calc((100% - 110px));margin-left:10px}
+.form_inp.tel > input {}
 
 .form_inp.tel.with_btn {}
-.form_inp.tel.with_btn > input {width:calc((100% - 250px));margin-left:10px}
+.form_inp.tel.with_btn > input {width:calc((100% - 140px));}
 
 .form_inp.address > select {width:calc(100% - 140px);}
 .form_inp.address > input {width:100%;margin-top:10px;}
@@ -245,7 +245,8 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .file_inp_box {padding-right:214px;position:relative;width:100%;}
 .file_inp_box .btn {width:150px;position:absolute;top:0;right:54px;}
 .file_inp_box + .file_inp_box {margin-top:20px;}
-
+.file_inp_box.no_add {padding-right:160px;position:relative;width:100%;}
+.file_inp_box.no_add .btn {width:150px;position:absolute;top:0;right:0;}
 .btn_list_custom {position:absolute;top:0;right:0;width:44px;height:44px;border:1px solid #dedede;background:#fff;}
 .js-file-del {display:none;}
 .js-file-del.hide, .js-file-label.hide {display:none}
