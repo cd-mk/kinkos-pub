@@ -388,28 +388,53 @@
       <a href="/www/company/MH.00.00.00.main-www.html" class="btn_link"><img src="../image/common/ico-kinkos.png" alt="GO TO Kinkos PAGE"></a>
     </div>
 
-
     <div class="mo_gnb_wrap">
       <div class="lnb_box">
         <div class="login_item">
-          <!-- 비로그인 상태 -->
-          <p class="status_logout" style="display: none;"><a href="#url">로그인</a> 하고 다양한 혜택받으세요.</p>
-          <!-- //비로그인 상태 -->
-          
-          <!-- 로그인 상태 -->
-          <p class="status_login"><strong>킨코스</strong>님 안녕하세요</p>
-          <!-- //로그인 상태 -->
+          <div class="login_item_depth1">
+            <!-- 비로그인 상태 -->
+            <p class="status_logout">다양한 혜택받으세요.</p>
+            <!-- //비로그인 상태 -->
+
+            <!-- 로그인 상태 -->
+            <p class="status_login" style="display: none;"><a href="#">킨코스</a>님 안녕하세요</p>
+            <!-- //로그인 상태 -->
+          </div>
+
+          <div class="login_item_depth2">
+            <!-- 비로그인 상태 -->
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+            <!-- //비로그인 상태 -->
+
+            <!-- 로그인 상태 -->
+            <a href="#" style="display: none;">마이페이지</a>
+            <!-- //로그인 상태 -->
+
+            <a href="#" class="lnb_btn_usage_guide">이용가이드</a>
+          </div>
         </div>
-        <div class="mymenu_box clearfix">
-          <a href="/www/mall/Mp3.01.01.00.mypage-main.html" class="my_link mypage">마이페이지</a>
-          <a href="/www/mall/Mp3.02.00.00.mypage-1-list.html" class="my_link delivery">주문/배송조회</a>
-          <a href="/www/mall/sm1.01.01.03-01.cart-list.html" class="my_link order">장바구니 <span class="point">(<strong>0</strong>)</span></a>
+
+        <div class="mymenu_box company clearfix">
+          <a href="/www/mall/Mp3.01.01.00.mypage-main.html" class="my_link online_mall">온라인몰</a>
+          <a href="/www/mall/Mp3.02.00.00.mypage-1-list.html" class="my_link center_information">센터안내</a>
+          <a href="/www/mall/sm1.01.01.03-01.cart-list.html" class="my_link cart">장바구니 <span class="point">(<strong>0</strong>)</span></a>
+          <a href="javascript:void(0);" class="my_link order">주문/배송조회</a>
+        </div>
+
+        <div class="mymenu_box mall clearfix">
+          <a href="/www/mall/Mp3.01.01.00.mypage-main.html" class="my_link kinkos">Kinko's</a>
+          <a href="/www/mall/Mp3.02.00.00.mypage-1-list.html" class="my_link center_information">센터안내</a>
+          <a href="/www/mall/sm1.01.01.03-01.cart-list.html" class="my_link cart">장바구니 <span class="point">(<strong>0</strong>)</span></a>
+          <a href="javascript:void(0);" class="my_link order">주문/배송조회</a>
         </div>
       </div>
+
       <div class="search_box">
-        <input type="text" class="inp_sch">
+        <input type="text" class="inp_sch" placeholder="검색어를 입력해주세요." />
         <button type="button" class="btn_sch"><span class="blind">검색하기</span></button>
       </div>
+
       <div class="menu_box company">
         <div class="menu_item">
           <a href="#url" class="title"><strong>킨코스 소개</strong></a>
@@ -459,10 +484,6 @@
           <a href="/www/company/M5.01.01.00.center-info.html" class="title point_marker black"><strong>센터안내</strong></a>
         </div>
       </div>
-
-
-
-
 
 
       <div class="menu_box mall">
@@ -541,6 +562,8 @@
       </div>
       <button type="button" class="btn_close"><span class="blind">메뉴 닫기</span></button>
     </div>
+
+    <div class="mo_gnb_wrap_back mo"></div>
   </div>
   <!-- //company mobile gnb -->
 </header>
@@ -555,6 +578,7 @@
             <li><a href="Ft2.00.00.00.privacy.html">개인정보처리방침</a></li>
             <li><a href="Ft3.00.00.00.licen.html">저작권정책</a></li>
             <li><a href="Ft4.00.00.00.imageInformation.html">영상정보처리기기운영방침</a></li>
+            <li><a href="javascript:void(0);">정보보호인증</a></li>
             <li><a href="Ft5.01.00.00.designTm_list.html">디자인템플릿</a></li>
             <li><a href="/www/company/M1.04.03.00.recruit.html">채용정보</a></li>
             <li><a href="/www/company/M4.01.01.00.estimate.html">고객센터</a></li>
@@ -569,7 +593,7 @@
     <div class="info">
       <p><span>킨코스코리아㈜</span><span>대표이사 박정수 사업자등록번호 129-81-17306</span><span>통신판매업신고번호 2019-서울서초-1279</span></p>
       <p><span>서울시 서초구 강남대로 291 남강빌딩 8층</span><span>견적문의 02-557-0225 개인정보관리책임 고원준</span></p>
-      <p class="mark"><em><strong>정보보호인증</strong><br class="pc">(ISO/IEC27001)</em><img src="../image/common/mark-iec.png" alt="정보보호인증 (ISO/IEC27001)"></p>
       <p><span class="cpr">COPYRIGHT © 1995 - 2019 Kinko's Korea Ltd.</span></p>
+      <p class="mark"><em><strong>정보보호인증</strong><br class="pc">(ISO/IEC27001)</em><img src="../image/common/mark-iec.png" alt="정보보호인증 (ISO/IEC27001)"></p>
     </div>
 </div>

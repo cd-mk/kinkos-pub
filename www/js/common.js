@@ -148,14 +148,20 @@ var mobileGnb = function () {
     if( target )
     {
       $('body').addClass('open');
-      $('.mo_gnb_wrap').addClass('active').find('.menu_box.' + target).addClass('show');
+      $('.mo_gnb_wrap').addClass('active ' + target).find('.menu_box.' + target).addClass('show');
+      $('.mo_gnb_wrap_back').addClass('active');
     }
   });
 
   $('.mo_gnb_wrap .btn_close').on('click', function () {
     $('body').removeClass('open');
     $('.mo_gnb_wrap').removeClass('active');
-    $('.mo_gnb_wrap').find('.menu_box').removeClass('show');;
+    $('.mo_gnb_wrap_back').removeClass('active');
+
+    setTimeout(function() {
+      $('.mo_gnb_wrap').find('.menu_box').removeClass('show');;
+      $('.mo_gnb_wrap').removeClass('company').removeClass('mall');
+    }, 400);
   });
 
 
