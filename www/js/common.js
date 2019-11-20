@@ -448,6 +448,7 @@ function tab(e, num) {
           var parentLiText = $(this).text();
           targetObj.removeClass('active');
           btnObj.text(parentLiText);
+          btnObj.addClass('active');
         });
       }
     }

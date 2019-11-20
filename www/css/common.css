@@ -165,7 +165,7 @@ a.txt_underline.black,
 .btn_wrap {margin-top:60px; font-size:0;position:relative;overflow:hidden;}
 .btn_wrap.center {position:relative; display:block; width:100%;text-align:center;}
 .btn_wrap.right {text-align:right;margin-top:20px;}
-
+.btn_wrap.top {margin-top:40px;}
 
 .bbs_list td .btn_wrap {margin-top:0;}
 p+.btn_wrap {margin-top:40px !important;}
