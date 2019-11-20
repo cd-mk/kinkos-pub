@@ -871,6 +871,9 @@ body.open {overflow:hidden;}
 
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {opacity:0.2;}
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:0;font-size:18px}
+.swiper-pagination {color:#777;}
+.swiper-pagination-total {color:#777;}
+.swiper-pagination-current {color:#222;font-weight:700;}
 
 @media screen and (max-width:1024px) {
  .swiper-button-next {background-image:url(../image/common/next-mo.svg); right:20px; left:auto; width:21px; height:18px; background-size:21px;}

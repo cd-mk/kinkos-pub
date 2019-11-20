@@ -14,7 +14,7 @@
 
 
 @media screen and (max-width:1600px) {
- .cont_wrap {padding-left:15px;padding-right:15px;}
+ .layout_width {padding-left:15px;padding-right:15px;}
 }
 @media screen and (max-width:1024px) {
  .cont_wrap {margin-top:30px;}
@@ -812,10 +812,6 @@ h3.pc + p {margin-top:0}
 }
 
 
-  
-
-
-
  /* layer tab */
  #tab_con > div {display:none; min-height:300px; background:#fff;}
 .ly_tab ul {display:table;border-right:1px solid #e7e7e7;border-top:1px solid #e7e7e7;}
@@ -1557,14 +1553,15 @@ h3.pc + p {margin-top:0}
 /* 서비스안내 */
 .service_info_list {}
 .service_info_list .item_list {border-bottom:1px solid #e7e7e7;}
-.service_info_list .item_list .box {position:relative;max-width:1530px;margin:80px auto;}
+.service_info_list .item_list:last-child {border-bottom:0;}
+.service_info_list .item_list .box {position:relative;max-width:1530px;margin:60px auto;}
 .service_info_list .item_list .box .img_box {width:490px;display:table-cell;vertical-align:top;}
 .service_info_list .item_list .box .txt_box {display:table-cell;vertical-align:top;padding-left:80px;padding-top:40px;max-width:60%}
 .service_info_list .item_list .box .txt_box > strong {font-size:24px;font-weight:700;}
 
-.service_info_list .item_list .box .txt_box > p {font-size:1em;margin-top:28px;line-height:1.7;}
+.service_info_list .item_list .box .txt_box > p {font-size:1em;line-height:1.5;}
 .service_info_list .item_list .box .txt_box > p + .features {margin-top:0}
-.service_info_list .item_list .box .txt_box .features {font-size:1em;color:#222;margin-top:28px;line-height:1.7;}
+.service_info_list .item_list .box .txt_box .features {font-size:1em;color:#222;margin-top:12px;line-height:1.7;}
 .service_info_list .item_list .box .txt_box .features li {padding-left:10px;position:relative;font-size:1em;line-height:1.5;}
 .service_info_list .item_list .box .txt_box .features li::before {content:"-";position:absolute;top:0;left:0;}
 
@@ -1576,32 +1573,32 @@ h3.pc + p {margin-top:0}
 
 .service_info_list .toggle_view.on i:after {display:none;}
 
-.service_info_list .link_view {font-size:1em;color:#03a2ea;font-weight:700;position:absolute;bottom:40px; text-decoration:underline;}
+.service_info_list .link_view {font-size:1em;color:#03a2ea;font-weight:700;position:absolute;bottom:40px;padding-bottom: 3px;border-bottom: 1px solid #03a2ea;}
 
 .service_info_list .service_info_view {background:#f3f4f6;position:relative;overflow:hidden;height:0;opacity:0;transition:all 0.5s;}
-.service_info_list .item_list.on .service_info_view {opacity:1;height:auto;padding:80px 0;margin-top:80px;}
+.service_info_list .item_list.on .service_info_view {opacity:1;height:auto;padding:60px 0;margin-top:60px;}
 .service_info_list .swiper-wrapper{max-width:1530px; margin:0 auto;}
 .service_info_list .swiper-slide {width:490px;}
-.service_info_list .service_info_view .txt {margin-top:40px;}
+.service_info_list .service_info_view .txt {margin-top:25px;}
 .service_info_list .service_info_view .txt strong {font-size:20px;font-weight:700;}
-.service_info_list .service_info_view .txt p {font-size:1em;line-height:1.7;margin-top:15px;}
-.service_info_list .pg_nav_wrap {margin-top:60px;}
+.service_info_list .service_info_view .txt p {font-size:1em;line-height:1.5;margin-top:15px;}
+.service_info_list .pg_nav_wrap {margin-top:45px;}
 .service_info_list .item_list p strong {color:#03a2ea;font-weight:400;;}
 .service_info_list .service_info_view .thumb {display:block;overflow:hidden;}
 
 
 @media screen and (max-width:1024px) {
-  .service_info_list {margin-top:50px;}
+  .service_info_list {margin-top:40px;}
   .service_info_list .item_list {padding-top:40px;}
   .service_info_list .item_list:first-child {padding-top:0;}
   .service_info_list .item_list .box {max-width:100%;margin:0;padding:0 15px;}
   .service_info_list .item_list .box .img_box {display:block;width:100%;height:220px;overflow:hidden;}
   .service_info_list .item_list .box .img_box img {width:100%}
-  .service_info_list .item_list .box .txt_box {display:block;padding-left:0;padding-top:30px;margin-bottom:40px;max-width:100%;}
+  .service_info_list .item_list .box .txt_box {display:block;padding-left:0;padding-top:20px;margin-bottom:40px;max-width:100%;}
   .service_info_list .item_list .box .txt_box > strong {font-size:20px;}
-  .service_info_list .item_list .box .txt_box .features {font-size:1em;margin-top:20px;margin-bottom:40px;}
+  .service_info_list .item_list .box .txt_box .features {font-size:1em;margin-top:10px;}
   .service_info_list .toggle_view,
-  .service_info_list .link_view {position:relative;bottom:0;}
+  .service_info_list .link_view {position:relative;bottom:0;margin-top:20px;display:inline-block;}
   .service_info_list .swiper-slide {width:285px;}
   .service_info_list .item_list.on .service_info_view {padding:40px 15px;margin-top:0;margin-bottom:40px;}
    
