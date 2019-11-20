@@ -173,8 +173,8 @@
             </a>
           </div>
         </div>
-        <!-- Add Pagination -->
 
+        <!-- Add Pagination -->
         <div class="pg_nav_wrap scroll mo">
           <div class="swiper-scrollbar"></div>
           <div class="pg_nav">
@@ -185,9 +185,6 @@
             <div class="swiper-button-prev small"></div>
           </div>
         </div>
-
-
-
       </div>
       <!-- //베스트 상품군 Swiper -->
 
@@ -281,7 +278,6 @@
               </ul>
             </div>
           </div>
-        
 
           <div class="swiper-container thumb">
             <div class="swiper-wrapper">
@@ -291,28 +287,28 @@
                 </div>
                 <img src="../image/company/main/service-1.png">
               </div>
-              <div class="swiper-slide"><div class="txt">
-                와이어제본, 스트립제본, 열제본, 중철제본 등 고객님이 원하시는 용도에 맞게 다양한 용지 및 제본방법을 갖추고 있습니다.
-              </div>
+              <div class="swiper-slide">
+                <div class="txt">
+                  와이어제본, 스트립제본, 열제본, 중철제본 등 고객님이 원하시는 용도에 맞게 다양한 용지 및 제본방법을 갖추고 있습니다.
+                </div>
                 <img src="../image/company/main/service-2.png">
               </div>
-              <div class="swiper-slide"><div class="txt">
-                와이어제본, 스트립제본, 열제본, 중철제본 등 고객님이 원하시는 용도에 맞게 다양한 용지 및 제본방법을 갖추고 있습니다.
-              </div>
+              <div class="swiper-slide">
+                <div class="txt">
+                  와이어제본, 스트립제본, 열제본, 중철제본 등 고객님이 원하시는 용도에 맞게 다양한 용지 및 제본방법을 갖추고 있습니다.
+                </div>
                 <img src="../image/company/main/service-3.png">
               </div>
             </div>
-            <!-- Add Arrows -->
 
-
-            <div class="pg_nav">
-              <!-- Add Pagination -->
-              <div class="swiper-pagination">
-              </div>
-              <!-- Add Arrows -->
-              <div class="swiper-button-next small">
-              </div>
-              <div class="swiper-button-prev small">
+            <!-- Add Pagination -->
+            <div class="pg_nav_wrap mo">
+              <div class="pg_nav">
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next small"></div>
+                <div class="swiper-button-prev small"></div>
               </div>
             </div>
           </div>
@@ -552,7 +548,7 @@
 
         $selectbox.on("click", _onToggleOptionBox);
         $optionbox.on("mouseleave", _onCloseOptionBox);
-    }
+  };
 
   function slideInit() {
     var isMobile = chkViewport();
@@ -668,7 +664,6 @@
 
     var service_thumb = new Swiper('.service_wrap .thumb', {
       slidesPerView: 'auto',
-      spaceBetween: 30,
       autoplay: true,
       loop: true,
       navigation: {

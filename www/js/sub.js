@@ -80,10 +80,14 @@ toggleV();
     function init() {
       if( $('.page_tab').length )
       {
-        if( $('.page_tab').is('[class*="sub_type"]') === false )
-        {
-          pageTabInit();
-        }
+        $('.page_tab').each(function() {
+          var obj = $(this);
+
+          if( obj.is('[class*="sub_type"]') === false )
+          {
+            pageTabInit( obj );
+          }
+        });
       }
 
       if( $('.tab_area.anchor').length )
@@ -92,30 +96,32 @@ toggleV();
       }
     }
 
-    function pageTabInit() {
-      var obj = $('.page_tab');
-      var objOffset = obj.offset();
-      var objOffsetTop = parseInt( objOffset.top, 10 );
-
-      var eventBind = obj.attr('data-event-bind');
-      if( eventBind !== 'Y' )
+    function pageTabInit( obj ) {
+      if( obj )
       {
-        obj.attr('data-event-bind', 'Y');
+        var objOffset = obj.offset();
+        var objOffsetTop = parseInt( objOffset.top, 10 );
 
-        $(window).on('scroll', function() {
-          var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
+        var eventBind = obj.attr('data-event-bind');
+        if( eventBind !== 'Y' )
+        {
+          obj.attr('data-event-bind', 'Y');
 
-          if( objOffsetTop < windowScrollTop )
-          {
-            obj.addClass('fixed');
-          }
-          else
-          {
-            obj.removeClass('fixed');
-          }
-        });
+          $(window).on('scroll', function() {
+            var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
 
-        pageTabAnchorActiveFunc( obj );
+            if( objOffsetTop < windowScrollTop )
+            {
+              obj.addClass('fixed');
+            }
+            else
+            {
+              obj.removeClass('fixed');
+            }
+          });
+
+          pageTabAnchorActiveFunc( obj );
+        }
       }
     }
 
