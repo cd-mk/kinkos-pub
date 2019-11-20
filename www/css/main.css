@@ -151,7 +151,7 @@
 .service_wrap .thumb .swiper-slide-active {opacity:1;transition:all 0.5s;}
 .service_wrap .thumb .txt {width:336px;overflow:hidden;position:absolute;left:-290px;top:260px;color:#545454;font-size:16px;line-height:24px;opacity:0;transition:all 0.5s;}
 .service_wrap .thumb .swiper-slide-active .txt {opacity:1;top:260px;left:-390px;transition:all 0.5s;transition-delay:0.3s;}
-.service_wrap .pg_nav {position:absolute;top:413px;left:-390px;display:block;width:120px;}
+.service_wrap .pg_nav {position:absolute;top:413px;left:-390px;display:block;width:120px;height:18px;}
 .service_wrap .thumb .swiper-slide.swiper-slide-prev {opacity:0;transition:all 0.1s;transition-delay:-0.9s;}
 @media screen and (max-width:1600px) {
 	.service_wrap {padding:0 0 0 15px !important;}
