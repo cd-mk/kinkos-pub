@@ -124,16 +124,16 @@ var setGnb = function () {
   toggleGnb();
 
 
-  //map link
-  // $('ul.locat_list li').on('mouseleave focusout', function () {
-  //   var tab_id = $(this).attr('data-tab');
+  // map link (2019.11/20)
+  $('ul.locat_list li').on('mouseleave focusout', function () {
+    var tab_id = $(this).attr('data-tab');
 
-  //   $('ul.locat_list li').removeClass('active');
-  //   $('.map-content').removeClass('active');
+    $('ul.locat_list li').removeClass('active');
+    $('.map-content').removeClass('active');
 
-  //   $(this).addClass('active');
-  //   $("#" + tab_id).addClass('active');
-  // })
+    $(this).addClass('active');
+    $("#" + tab_id).addClass('active');
+  })
 
 
 }
@@ -266,10 +266,10 @@ var setPopup = function () {
 // faq tab
 var setFaqTab = function () {
 
-  $('.faq_tab_nav > li').on('click', function () {
+  $('.faq_tab_nav ul > li').on('click', function () {
     var idx = $(this).index();
 
-    $('.faq_tab_nav > li').removeClass('on');
+    $('.faq_tab_nav ul > li').removeClass('on');
     $(this).addClass('on');
 
     $('.faq_tab_con .accor_wrap').removeClass('active');
@@ -427,6 +427,9 @@ function tab(e, num) {
   {
     var btnObj = $('.btn_mo_sub_type');
     var parentObj = btnObj.closest('div[class*="sub_type"]');
+    var parentLi = $('div[class*="sub_type"] ul li a');
+    
+    
 
     if( parentObj.length )
     {
@@ -439,6 +442,12 @@ function tab(e, num) {
 
         parentObj.on('mouseleave', function() {
           targetObj.removeClass('active');
+        });
+        // 11/20 추가
+        parentLi.on('click', function () {
+          var parentLiText = $(this).text();
+          targetObj.removeClass('active');
+          btnObj.text(parentLiText);
         });
       }
     }
