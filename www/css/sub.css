@@ -1636,7 +1636,6 @@ position: absolute;top:30px;right:40px;}
 /* 서비스안내 */
 .service_info_list {}
 .service_info_list .item_list {border-top:1px solid #e7e7e7;position: relative;}
-.service_info_list .item_list:last-child {border-bottom:1px solid #e7e7e7;}
 .service_info_list .item_list .box {position:relative;max-width:1530px;margin:60px auto;overflow: hidden;padding:0 15px;}
 .service_info_list .item_list .box .img_box {width:490px;display:block;float:left;overflow: hidden;}
 .package_wrap .pg_nav_wrap {position: absolute;bottom:40px;left: 570px;}
