@@ -14,11 +14,14 @@
 
 
 @media screen and (max-width:1600px) {
- .layout_width {padding-left:15px;padding-right:15px;}
+
+ .cont_wrap, .cont_wrap.layout_width {padding-left:15px;padding-right:15px;}
+
+ .cont_wrap.layout_full {padding-left:0;padding-right:0;}
+ 
 }
 @media screen and (max-width:1024px) {
- .cont_wrap {margin-top:30px;padding-left:15px;padding-right:15px;}
- .cont_wrap.layout_full {padding-left:0;padding-right:0;}
+ /* .cont_wrap {margin-top:30px;padding-left:15px;padding-right:15px;} */
 }
 
 
@@ -149,7 +152,7 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .form_group .form_item .txt_vaild {display:none; float:left; margin-top:10px;font-size:14px;}
 .form_group .form_item.not_vaild .txt_vaild {display:block;color:#ee0018;}
 .form_group .form_item.is_vaild .txt_vaild {display:none;color:#03a2ea;}
-
+.form_group .form_item .txt_checked {color:#ee0018;margin-top:10px;font-size:14px;}
 
 
 .form_group .form_item .form_name {display:table-cell;width:140px; font-weight:700; vertical-align:middle;line-height:1.3;}
@@ -483,7 +486,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .bbs_list td {padding:10px;border-bottom:1px solid #e7e7e7; color:#777; vertical-align:middle; font-weight:normal;}
 .bbs_list td.num {width:100px;} 
 .bbs_list td.subject {text-align:left;}
-.bbs_list td.subject a {padding:11px 0 12px 0;color:#222;line-height:1.5;overflow:hidden; text-overflow:ellipsis; -webkit-box-orient:vertical; word-wrap:break-word; white-space:nowrap; display:inline-block; display:-webkit-box; -webkit-line-clamp:2; white-space:normal;position: relative;}
+.bbs_list td.subject a {padding:11px 0 12px 0;color:#222;line-height:1.5;overflow:hidden; display:inline-block; display:-webkit-box; position: relative;}
 
 
 .bbs_list .notice td, 
@@ -587,13 +590,13 @@ position: absolute;top:30px;right:40px;}
 .tit_box.left {text-align:left;}
 .txt_message {font-size:18px;color:#03a2ea;margin-top:13px;font-weight:400 !important;display:block;}
 
-.tit_box.mid {max-width:100%;text-align:left;overflow: hidden;margin-bottom:20px}
+.tit_box.mid {max-width:100%;text-align:left;overflow: hidden;margin-bottom:20px;display: table;width:100%;}
 .tit_box.mid h3 {font-size:24px;}
-.tit_box.mid h4 {font-size:20px;}
+.tit_box.mid h4 {font-size:24px;}
 .tit_box.mid h4.up_size {font-size:24px;}
 .tit_box.mid p {margin-top:15px; font-size:1em;}
-.tit_box.mid .left {float:left;text-align:left;}
-.tit_box.mid .right {float:right;margin-top:5px;}
+.tit_box.mid .left {text-align:left;display: table-cell;}
+.tit_box.mid .right {text-align:right;margin-top:5px;display: table-cell;}
 .tit_box.mid .right .btn_wrap {margin-top:0;}
 .tit_box.mid .right .btn_wrap .btn {width:200px;}
 .tit_box.mid.btn_with {line-height: 36px;margin-bottom:12px;}
@@ -727,7 +730,6 @@ h3.pc + p {margin-top:0}
 
 
 .tit_box+.page_tab {margin-top:100px;}
-.tit_box+.page_tab.sub_type1 {margin-top:60px;}
 .tit_box+.page_tab.fixed {margin-top:0;}
 
 .page_tab.sub_type1.sort {margin-top:60px; background: #f1f7f9;}
@@ -760,6 +762,7 @@ h3.pc + p {margin-top:0}
   .page_tab > ul > li.active a:hover {font-weight:700;color:#ffffff;}
   .tit_box+.page_tab {margin-top:30px;}
   .layout_full  .page_tab.sub_type1 {padding-left:15px;padding-right:15px;}
+
   .page_tab.sub_type1 {
     position: relative;
     display: block;
@@ -854,7 +857,6 @@ h3.pc + p {margin-top:0}
 .page_tab.sub_type1.sort .btn_mo_sub_type.active {color:#03a2ea;font-weight:700;background:#fff;border:1px solid #03a2ea;}
 .page_tab.sub_type1.sort ul > li a{color:#222;}
 /* .page_tab.sub_type1.sort ul > li.active a::before, .page_tab.sub_type1.sort > ul > li a:hover::before {display: none;} */
-
 
   .anchor .page_tab {background:#262626;}
   .anchor .page_tab.fixed {left:0;}
@@ -1278,7 +1280,6 @@ h3.pc + p {margin-top:0}
 
 /* 직무소개 */
 .job_intro_wrap {margin-bottom:156px;}
-.job_intro_wrap .item_list {margin-top:60px;}
 .job_intro_wrap .item_list > li {float:left;width:calc((100% - 60px) / 3); margin-left:30px;}
 .job_intro_wrap .item_list > li:first-child {margin-left:0;}
 .job_intro_wrap .item_list > li:nth-child(4) {margin-left:0;}
@@ -1286,13 +1287,17 @@ h3.pc + p {margin-top:0}
 .job_intro_wrap .item_list .thumb img {width:100%;}
 .job_intro_wrap .item_list .txt {margin-top:23px;}
 .job_intro_wrap .item_list .txt strong {font-size:24px;}
-.job_intro_wrap .item_list .txt .full_name {margin-left:10px; font-size:16px; font-weight:400; color:#959595;}
-.job_intro_wrap .item_list .txt p {margin-top:10px; font-size:18px; color:#333; line-height:1.44;}
+.job_intro_wrap .item_list .txt .full_name {margin-left:10px; font-size:16px; font-weight:400; color:#959595;display: inline-block;}
+.job_intro_wrap .item_list .txt p {margin-top:6px; font-size:1em; color:#333; line-height:1.44;}
 @media screen and (max-width:1600px) {
   .job_intro_wrap .item_list > li {min-height:396px;}
 }
-@media screen and (max-width:1200px) {
-  .job_intro_wrap .item_list > li {min-height:auto;}
+@media screen and (max-width:1024px) {
+  .job_intro_wrap .item_list .txt {margin-top:20px;}
+  .job_intro_wrap .item_list > li {min-height:223px;width:100%;margin-left:0;margin-bottom:40px;margin-top: 0 !important;}
+  .job_intro_wrap .item_list .txt strong {font-size:20px;}
+  .job_intro_wrap .item_list .txt .full_name {margin-left:0; font-size:14px; width:100%;display: block;margin-top:6px;}
+  .job_intro_wrap .item_list .txt p {margin-top:13px;}
 }
 
 /* 채용안내 */
@@ -1319,7 +1324,7 @@ h3.pc + p {margin-top:0}
 
 /* 인재상 */
 .talent_wrap {margin-bottom:140px;}
-.talent_wrap .item_box {position:relative; height:476px; margin-top:60px; background:url('../image/company/sub/img-personmodel.png') no-repeat center;}
+.talent_wrap .item_box {position:relative; height:476px; margin-top:80px; background:url('../image/company/sub/img-personmodel.png') no-repeat center;}
 .talent_wrap .item_box .item {float:left; width:50%; height:234px; box-sizing:border-box;}
 .talent_wrap .item_box .item:first-child {padding:40px 247px 0 0;}
 .talent_wrap .item_box .item:nth-child(2) {padding:40px 0 0 247px;}
@@ -1603,7 +1608,7 @@ h3.pc + p {margin-top:0}
 .service_info_list {}
 .service_info_list .item_list {border-top:1px solid #e7e7e7;position: relative;}
 .service_info_list .item_list:last-child {border-bottom:1px solid #e7e7e7;}
-.service_info_list .item_list .box {position:relative;max-width:1530px;margin:60px auto;overflow: hidden;}
+.service_info_list .item_list .box {position:relative;max-width:1530px;margin:60px auto;overflow: hidden;padding:0 15px;}
 .service_info_list .item_list .box .img_box {width:490px;display:block;float:left;overflow: hidden;}
 .package_wrap .pg_nav_wrap {position: absolute;bottom:40px;left: 570px;}
 
