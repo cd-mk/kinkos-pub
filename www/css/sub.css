@@ -699,7 +699,7 @@ position: absolute;top:30px;right:40px;}
   .tit_sub.bg_guide {background-image:url('../image/company/sub/bg-guide-mo.png');}
 }
  /* page_tab */
-.page_tab{height:66px;position:relative;width:100%;max-width:1530px;border-bottom:1px solid #e7e7e7;}
+.page_tab{height:66px;position:relative;width:100%;max-width:1530px;margin-right:auto;margin-left:auto;border-bottom:1px solid #e7e7e7;}
 .page_tab > ul{position:absolute;top:-1px;left:50%;display:table;max-width:1530px;height:100%;transform:translateX(-50%);}
 .page_tab > ul > li{cursor:pointer;display:table-cell;height:100%;padding-top:0;font-size:20px;color:#222;text-align:center;vertical-align:middle;overflow:hidden;font-weight:normal;}
 .page_tab > ul > li > a{width:306px;height:64px;line-height:64px;display:block;}
