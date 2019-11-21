@@ -538,10 +538,11 @@ p+.btn_wrap {margin-top:40px !important;}
  .mo_gnb_wrap.company .lnb_box .login_item .status_logout, .mall .lnb_box .login_item .status_login {color:#222;}
  .mo_gnb_wrap.company .lnb_box .login_item a, .company .lnb_box .login_item .status_login strong {color:#03a2ea;}
 
- .mall .lnb_box .login_item .login_item_depth2 {background:#0079c6;}
+ .mall .lnb_box .login_item .login_item_depth2 {background:#0079c6 !important;}
  .mall .lnb_box .login_item .login_item_depth2 a {color:#fff !important;}
  .mall .lnb_box .login_item .login_item_depth2 a:hover {color:#fffd9b !important; text-decoration:underline;}
 
+ .mo_gnb_wrap.company .lnb_box .login_item .login_item_depth2 {background:#f3f3f3 !important;}
  .mo_gnb_wrap.company .lnb_box .login_item .login_item_depth2 a {color:#222 !important;}
  .mo_gnb_wrap.company .lnb_box .login_item .login_item_depth2 a:hover {color:#03a2ea !important;}
 
