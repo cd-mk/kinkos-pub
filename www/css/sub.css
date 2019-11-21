@@ -483,11 +483,13 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .bbs_list table {width:100%;border-top:2px solid #222;border-collapse:separate;text-align:center;}
 .bbs_list th {padding:20px 10px;border-bottom:1px solid #e7e7e7; color:#222; vertical-align:middle; font-weight:700;}
 .bbs_list td {padding:10px;border-bottom:1px solid #e7e7e7; color:#777; vertical-align:middle; font-weight:normal;}
-.bbs_list td.num {width:100px;} 
+.bbs_list td.num,
+.bbs_list td.status,
+.bbs_list td.date {width:130px;} 
 .bbs_list td.subject {text-align:left;}
 .bbs_list td.subject a {padding:11px 0 12px 0;color:#222;line-height:1.5;overflow:hidden; display:inline-block; display:-webkit-box; position: relative;}
 .tit_box.mid + .bbs_list{margin-top:0 !important;}
-
+.fin td.status {color:#03a2ea;}
 .bbs_list .notice td, 
 .bbs_list .notice td.subject a {color:#222; font-weight:700;}
 .bbs_list .cell_new img {margin:0 auto; display:block; width:18px; height:18px;}
@@ -932,6 +934,7 @@ position: absolute;top:30px;right:40px;}
 .center_view_wrap .info_tbl td .fax strong {padding-right:60px;}
 .center_view_wrap .info_tbl td {padding-left:20px;}
 .center_view_wrap .info_tbl td .txt_holiday {margin-top:0;color:#777;}
+.center_view_wrap .info_tbl td a {color: #03a2ea;}
 .center_view_wrap .item3 .item {float:left; width:74%;}
 .center_view_wrap .item3 .item:first-child {width:26%;}
 .center_view_wrap .item3 .item strong {font-size:1em;}
