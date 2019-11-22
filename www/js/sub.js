@@ -37,12 +37,7 @@ function slideInit() {
     }
   });
 
-  //상품 상세보기 슬라이드
-  var pdtOther = new Swiper('.pdt_slide', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-  });
-
+ 
 
   var detailThumb = new Swiper('.pdt_thumbs .inner', {
     slidesPerView: 'auto',
