@@ -59,7 +59,7 @@
       <ul class="item_list">
         <li><a href="#url" class="home">Home</a></li>
         <li><a href="#">서비스 안내</a></li>
-        <li><a href="#url">스캔 투 파일</a></li>
+        <li><a href="#url">추천상품</a></li>
       </ul>
     </div>
     <!-- //breadcrumb  -->
@@ -184,49 +184,6 @@
 <!-- photo zoom -->
 <script src="//www.kinkos.co.kr/js/jquery.zoom.min.js"></script>
 <script>
-    function slideInit() {
-        var isMobile = chkViewport();
-
-        (function () {
-            var pcOpt = {
-                slidesPerView: 'auto',
-                spaceBetween: 160,
-                loop: true,
-                centeredSlides: true,
-                loopFillGroupWithBlank: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
-            };
-            var moOpt = {
-                slidesPerView: 'auto',
-                spaceBetween: 15,
-                centeredSlides: false,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    hide: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'fraction',
-                }
-            };
-
-            var recommendProSlide = isMobile
-                ? new Swiper('.recommendPro_wrap', moOpt)
-                : new Swiper('.recommendPro_wrap', pcOpt);
-
-            reloadSlide(recommendProSlide, pcOpt, moOpt);
-        })();
-    }
-
     $(document).ready(function () {
 
         // 제품확대보기
@@ -238,8 +195,6 @@
         $('#ex4').zoom({ on:'toggle' });
         */
         $(".service_info_view>div").css({ backgroundSize: "cover" });
-
-        slideInit();
     });
 </script>
 <!-- //photo zoom -->
