@@ -277,39 +277,6 @@
 <!-- //global -->
 <script src="../js/sub.js"></script>
 
-<!-- photo zoom -->
-<script src="//www.kinkos.co.kr/js/jquery.zoom.min.js"></script>
-<script>
-     $(document).ready(function () {
-
-       // 제품확대보기
-       if ($('.service_info_view .thumb').length > 0) { $('.service_info_view .thumb').zoom(); }
-       /*
-       $('#ex1').zoom();
-       $('#ex2').zoom();
-       $('#ex3').zoom({ on:'click' });			 
-       $('#ex4').zoom({ on:'toggle' });
-       */
-       $(".service_info_view>div").css({ backgroundSize: "cover" });
-
-       var package = new Swiper('.package', {
-         slidesPerView: '1',
-         navigation: {
-           nextEl: '.swiper-button-next',
-           prevEl: '.swiper-button-prev',
-         },
-         pagination: {
-           el: '.swiper-pagination',
-           type: 'fraction',
-         }
-       });
-
-     });
-
-      
-</script>
-<!-- //photo zoom -->
-
 
 </body>
 
