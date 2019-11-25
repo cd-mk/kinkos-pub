@@ -72,8 +72,7 @@
         
         <!-- 콘텐츠 "con_box" 고정 -->
         <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
-				<div class="con_box service_wrap">
-
+				<div class="con_box service_info_wrap">
 
         <div class="tit_box">
           <h3>법인 우대 프로그램</h3>
@@ -83,21 +82,21 @@
         
         <!-- page tab -->
         <div class="page_tab sub_type1 col2">
+          <a href="javascript:;" class="btn_mo_sub_type">법인 우대 서비스</a>
           <ul>
-            <li class="active"><a href="#url">법인 우대 서비스</a></li>
-            <li><a href="#url">법인 상담 요청</a></li>
+            <li><a href="/www/company/M2.12.00.00.corporation.html">법인 우대 서비스</a></li>
+            <li class="active"><a href="/www/company/M2.12.00.00.corporation-bs.html">법인 상담 요청</a></li>
           </ul>
         </div>
         <!-- page tab -->
 
-        <div class="noti top mid">킨코스의 법인우대서비스가 더 궁금하시다면, 상담신청 바랍니다.<br>
-        법인 상담 요청내용은 마이페이지에서 확인이 불가하며, 담당자를 통해 전화 또는 이메일 연락드리겠습니다.</div>
-
+        <div class="noti small"><p>킨코스의 법인우대서비스가<br class="mo_only"> 더 궁금하시다면, 상담신청 바랍니다.<br>
+        법인 상담 요청내용은<br class="mo_only"> 마이페이지에서 확인이 불가하며,<br class="mo_only"> 담당자를 통해 전화 또는 이메일 연락드리겠습니다.</p></div>
 
           <form action="">
             <fieldset>
               <legend>회원정보 입력 양식</legend>
-              <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
+              <p class="form_alert section mid"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
               <div class="form_wrap ver_top">
               
                 <div class="form_group col2">
@@ -132,11 +131,13 @@
                   </div>
                 </div>
                 <div class="form_group col2">
-                  <div class="form_item">
-                    <strong class="form_name">회사명 <sup class="require">*</sup></strong>
+                  <div class="form_item chk_box">
+                    <strong class="form_name ver_mid">S&G센터</strong>
                     <div class="form_inp">
-                      <input type="text" title="회사명 입력">
-                      <p class="txt_vaild">회사명 입력해주세요</p>
+                      <input type="checkbox" id="sgChk1" name="">
+                      <label for="sgChk1">방문 희망</label>
+                      <input type="checkbox" id="sgChk2" name="">
+                      <label for="sgChk2">방문 비희망</label>
                     </div>
                   </div>
                   <div class="form_item">
@@ -147,18 +148,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="form_group">
-                  <div class="form_item chk_box">
-                    <span class="form_name">S&G센터</span>
+                <div class="form_group top_line">
+                  <div class="form_item">
+                    <strong class="form_name">제목</strong>
                     <div class="form_inp">
-                      <input type="checkbox" id="sgChk1" name="">
-                      <label for="sgChk1">방문 희망</label>
-                      <input type="checkbox" id="sgChk2" name="">
-                      <label for="sgChk2">방문 비희망</label>
+                      <input type="text" title="제목 입력" value="">
                     </div>
                   </div>
                 </div>
-
                 <div class="form_group">
                   <div class="form_item">
                     <strong class="form_name">내용</strong>
@@ -168,26 +165,39 @@
                   </div>
                 </div>
 
-               
                 <div class="form_group top_line chk_box">
                   <div class="form_item">
                     <div class="form_inp">
                       <input type="checkbox" id="chk1">
                       <label for="chk1">개인정보 수집 및 이용에 대한 안내 <span class="point_blue">[필수]</span></label>
                     </div>
+                    <a href="#popup1" class="btn_popup txt_underline">내용 보기</a>
                   </div>
                   <div class="form_item">
                     <div class="form_inp">
                       <input type="checkbox" id="chk2">
                       <label for="chk2">이벤트 등 광고성 정보 수신 <span class="point_blue">[필수]</span></label>
                     </div>
+                    <a href="#popup2" class="btn_popup txt_underline">내용 보기</a>
                   </div>
                 </div>
 
-                <div class="btn_wrap col2 center">
-                  <a href="#url" class="btn large type01">작성완료</a>
-                  <a href="#url" class="btn large type02">취소</a>
+                <div class="form_group top_line">
+                  <div class="form_item">
+                    <strong class="form_name">자동등록방지</strong>
+                    <div class="form_inp">
+                      <!-- 자동등록방지 영역 -->
+                
+                      <!-- //자동등록방지 영역 -->
+                    </div>
+                  </div>
                 </div>
+
+
+              </div>
+              <div class="btn_wrap col2 center">
+                <a href="#url" class="btn large type01">작성완료</a>
+                <a href="#url" class="btn large type02">취소</a>
               </div>
             </fieldset>
           </form>
@@ -205,6 +215,40 @@
 		<div id="footer" class="layout_width">
 		</div>
     <!-- //FOOTER -->
+
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">개인정보 수집 및 이용안내</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+    
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
+    
+    
+    
+    <!-- popup area -->
+    <div id="popup2" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">개인정보 마케팅 활용 방침</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+    
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
+
+
 
 		<div class="dim">
 		</div>

@@ -72,7 +72,7 @@
         
         <!-- 콘텐츠 "con_box" 고정 -->
         <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
-				<div class="con_box service_wrap">
+				<div class="con_box service_info_wrap">
 
 
         <div class="tit_box">
@@ -83,114 +83,89 @@
         
         <!-- page tab -->
         <div class="page_tab sub_type1 col2">
+          <a href="javascript:;" class="btn_mo_sub_type">법인 우대 서비스</a>
           <ul>
-            <li class="active"><a href="#url">법인 우대 서비스</a></li>
-            <li><a href="#url">법인 상담 요청</a></li>
+            <li class="active"><a href="/www/company/M2.12.00.00.corporation.html">법인 우대 서비스</a></li>
+            <li><a href="/www/company/M2.12.00.00.corporation-bs.html">법인 상담 요청</a></li>
           </ul>
         </div>
         <!-- page tab -->
 
-        <div class="noti top mid">킨코스의 법인우대서비스가 더 궁금하시다면, 상담신청 바랍니다.<br>
-        법인 상담 요청내용은 마이페이지에서 확인이 불가하며, 담당자를 통해 전화 또는 이메일 연락드리겠습니다.</div>
-
-
-          <form action="">
-            <fieldset>
-              <legend>회원정보 입력 양식</legend>
-              <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
-              <div class="form_wrap ver_top">
-              
-                <div class="form_group col2">
-                  <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
-                  <div class="form_item">
-                    <strong class="form_name">이름 <sup class="require">*</sup></strong>
-                    <div class="form_inp">
-                      <input type="text" title="이름 입력">
-                      <p class="txt_vaild">이름을 입력해주세요</p>
-                    </div>
-                  </div>
-                  <div class="form_item">
-                    <strong class="form_name">이메일 <sup class="require">*</sup></strong>
-                    <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
-                    <p class="txt_vaild">이메일 주소를 확인해주세요</p>
-                  </div>
-                </div>
-                <div class="form_group col2">
-                  <div class="form_item">
-                    <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
-                    <div class="form_inp tel">
-                      <input type="number" title="휴대폰 번호 입력">
-                      <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
-                    </div>
-                  </div>
-                  <div class="form_item">
-                    <strong class="form_name">일반전화</strong>
-                    <div class="form_inp tel">
-                      <input type="number" title="일반전화 번호 입력" placeholder="-없이 입력">
-                      <p class="txt_vaild">일반전화 번호를 입력해주세요</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form_group col2">
-                  <div class="form_item">
-                    <strong class="form_name">회사명 <sup class="require">*</sup></strong>
-                    <div class="form_inp">
-                      <input type="text" title="회사명 입력">
-                      <p class="txt_vaild">회사명 입력해주세요</p>
-                    </div>
-                  </div>
-                  <div class="form_item">
-                    <strong class="form_name">센터선택 <sup class="require">*</sup></strong>
-                    <div class="form_inp">
-                      <input type="text" title="센터 입력">
-                      <p class="txt_vaild">센터를 입력해주세요</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form_group">
-                  <div class="form_item chk_box">
-                    <span class="form_name">S&G센터</span>
-                    <div class="form_inp">
-                      <input type="checkbox" id="sgChk1" name="">
-                      <label for="sgChk1">방문 희망</label>
-                      <input type="checkbox" id="sgChk2" name="">
-                      <label for="sgChk2">방문 비희망</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form_group">
-                  <div class="form_item">
-                    <strong class="form_name">내용</strong>
-                    <div class="form_inp">
-                      <textarea></textarea>
-                    </div>
-                  </div>
-                </div>
-
-               
-                <div class="form_group top_line chk_box">
-                  <div class="form_item">
-                    <div class="form_inp">
-                      <input type="checkbox" id="chk1">
-                      <label for="chk1">개인정보 수집 및 이용에 대한 안내 [필수]</label>
-                    </div>
-                  </div>
-                  <div class="form_item">
-                    <div class="form_inp">
-                      <input type="checkbox" id="chk2">
-                      <label for="chk2">이벤트 등 광고성 정보 수신 [필수]</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="btn_wrap col2 center">
-                  <a href="#url" class="btn large type01">작성완료</a>
-                  <a href="#url" class="btn large type02">취소</a>
-                </div>
-              </div>
-            </fieldset>
-          </form>
+        <ul class="item_list clearfix section mid">
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp02.png" alt=""></div>
+            <div class="txt">
+              <strong>철저한 내/외부 보안 시스템</strong>
+              <p>
+                국제 최상위 보안 표준 규격<a href="/www/common/Ft7.00.00.00.security-policy.html" class="txt_underline">(ISO27001 인증)</a>을
+                획득한 기업, 법인 고객님의 소중한 데이터
+                관리를 위해 CCTV, 작업 공간의 고객 출입 금지,
+                보안 각서 등, 직원 외에는 출입 자체가 불가능한
+                <a href="/www/company/M5.02.00.00.spc.html" class="txt_underline">보안 제작지원 센터</a>를 운영하고 있습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp04.png" alt=""></div>
+            <div class="txt">
+              <strong>고객사 전용 컨설팅 전문가 배정</strong>
+              <p>
+                출력/인쇄/디자인 각 분야 최고의 전문가가
+                법인고객님을 전담으로 관리해 드립니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp07.png" alt=""></div>
+            <div class="txt">
+              <strong>신용거래</strong>
+              <p>
+                연간 계약을 통해 월 단위로
+                선납품 후결제 서비스를 제공해 드립니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp03.png" alt=""></div>
+            <div class="txt">
+              <strong>가격 할인</strong>
+              <p>
+                법인 고객을 위한 약정 가격 할인 혜택을
+                제공해 드립니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp05.png" alt=""></div>
+            <div class="txt">
+              <strong>샘플 무료 제공</strong>
+              <p>
+                대량 작업 진행시 샘플 및 디자인시안을
+                무료로 제공해 드립니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp06.png" alt=""></div>
+            <div class="txt">
+              <strong>무료 픽업/배송 서비스</strong>
+              <p>
+                계약된 법인고객에게 픽업 및 배송 서비스를
+                제공해 드립니다.
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <div class="thumb"><img src="../image/company/sub/img-corp01.png" alt=""></div>
+            <div class="txt">
+              <strong>독립적인 주문사이트 구축</strong>
+              <p>법인 고객과 상담을 통해 다양한 인쇄물들을
+                쉽게 주문하고, 이용 내역 집계까지 가능한
+                온라인 주문 사이트를 구축 해 드립니다.</p>
+            </div>
+          </li>
+        </ul>
           
 				</div>
 				<!-- //본문 -->
