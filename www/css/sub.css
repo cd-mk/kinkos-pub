@@ -1769,6 +1769,29 @@ position: absolute;top:30px;right:40px;}
 
 
 
+/* 서비스안내 기본 비주얼 */
+.service_info_wrap .visual_box {padding-top:405px;position:relative;text-align:left;}
+.service_info_wrap .visual_box::before {z-index:-1;content:"";width:100%;height:380px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;}
+.service_info_wrap .visual_box.item1::before {background-image:url(../image/company/sub/signs-main-1.png);}
+.service_info_wrap .visual_box.item2::before {background-image:url(../image/company/sub/signs-main-2.png);}
+
+.service_info_wrap .visual_box > strong {font-size:36px;line-height:1.2;}
+.service_info_wrap .visual_box > p {font-size:1em;line-height:1.4;margin-top:25px;}
+
+.service_info_wrap .visual_box > ul {margin-top:30px;}
+.service_info_wrap .visual_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.3;margin-top:15px;}
+.service_info_wrap .visual_box > ul li:first-child {margin-top:0;}
+.service_info_wrap .visual_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
+
+
+@media screen and (max-width:1024px) {
+  .service_info_wrap .visual_box {padding-top:210px;}
+  .service_info_wrap .visual_box::before {height:189px}
+  .service_info_wrap .visual_box > strong {font-size:20px;}
+  .service_info_wrap .visual_box > p {font-size:1em;margin-top:25px;}
+  .service_info_wrap .visual_box > ul {margin-top:15px;}
+}
+
 
 /* S&G 제작 사례 */
 .service_info_wrap .noti.big {color:#0075c2;}
@@ -1781,18 +1804,13 @@ position: absolute;top:30px;right:40px;}
 }
 
 .service_info_wrap .signs {margin-right:auto;margin-left:auto;}
-.service_info_wrap .signs .item_box {padding-top:405px;position:relative;text-align:left;}
-.service_info_wrap .signs .item_box::before {z-index:-1;content:"";width:100%;height:380px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;}
-.service_info_wrap .signs .item_box.item1::before {background-image:url(../image/company/sub/signs-main-1.png);}
-.service_info_wrap .signs .item_box.item2::before {background-image:url(../image/company/sub/signs-main-2.png);}
+.service_info_wrap .signs .visual_box.item1::before {background-image:url(../image/company/sub/signs-main-1.png);}
+.service_info_wrap .signs .visual_box.item2::before {background-image:url(../image/company/sub/signs-main-2.png);}
 
-.service_info_wrap .signs .item_box > strong {font-size:36px;line-height:1.2;}
-.service_info_wrap .signs .item_box > p {font-size:1em;line-height:1.4;margin-top:25px;}
-
-.service_info_wrap .signs .item_box > ul {margin-top:30px;}
-.service_info_wrap .signs .item_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.3;margin-top:15px;}
-.service_info_wrap .signs .item_box > ul li:first-child {margin-top:0;}
-.service_info_wrap .signs .item_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
+.service_info_wrap .signs .visual_box > ul {margin-top:30px;}
+.service_info_wrap .signs .visual_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.3;margin-top:15px;}
+.service_info_wrap .signs .visual_box > ul li:first-child {margin-top:0;}
+.service_info_wrap .signs .visual_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
 
 .service_info_wrap .signs .item_list {text-align:center;border:1px solid #e7e7e7;padding:60px 0;}
 .service_info_wrap .signs .item_list ul {width:100%;display: table;}
@@ -1807,25 +1825,17 @@ position: absolute;top:30px;right:40px;}
 .service_info_wrap .signs .item_list strong {font-size:20px;}
 .service_info_wrap .signs .item_list p {font-size:1em;margin-top:15px;line-height:1.4;}
 
-.service_info_wrap .scan .item_box {padding-top:405px;padding-bottom:60px;position:relative;text-align:left;border-bottom:1px solid #e7e7e7;}
-.service_info_wrap .scan .item_box::before {z-index:-1;content:"";width:100%;height:250px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;background-image:url(../image/company/sub/scan-main-1.png);}
-.service_info_wrap .scan .item_box > strong {font-size:36px;line-height:1.2;}
-.service_info_wrap .scan .item_box > p {font-size:1em;line-height:1.4;margin-top:40px;}
-.service_info_wrap .scan .item_box > ul {margin-top:40px;padding-right:37%}
-.service_info_wrap .scan .item_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.5;}
-.service_info_wrap .scan .item_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
-.service_info_wrap .scan .item_box > ul li strong {color:#03a2ea;font-weight: 400;}
+.service_info_wrap .scan .visual_box {padding-top:405px;padding-bottom:60px;position:relative;text-align:left;border-bottom:1px solid #e7e7e7;}
+.service_info_wrap .scan .visual_box::before {background-image:url(../image/company/sub/scan-main-1.png);}
+
+.service_info_wrap .scan .visual_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.5;}
+.service_info_wrap .scan .visual_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
+.service_info_wrap .scan .visual_box > ul li strong {color:#03a2ea;font-weight: 400;}
 .service_info_wrap .scan .faq_tab_con {margin-top:0;}
 
 @media screen and (max-width:1024px) {
-  .service_info_wrap .signs .item_box {padding-top:210px;}
-  .service_info_wrap .signs .item_box::before {height:189px}
-  .service_info_wrap .signs .item_box.item1::before {background-image:url(../image/company/sub/signs-main-1-mo.png);}
-  .service_info_wrap .signs .item_box.item2::before {background-image:url(../image/company/sub/signs-main-2-mo.png);}
- 
-  .service_info_wrap .signs .item_box > strong {font-size:20px;}
-  .service_info_wrap .signs .item_box > p {font-size:1em;margin-top:25px;}
-  .service_info_wrap .signs .item_box > ul {margin-top:15px;}
+  .service_info_wrap .signs .visual_box.item1::before {background-image:url(../image/company/sub/signs-main-1-mo.png);}
+  .service_info_wrap .signs .visual_box.item2::before {background-image:url(../image/company/sub/signs-main-2-mo.png);}
 
   .service_info_wrap .signs .item_list {padding:0}
   .service_info_wrap .signs .item_list ul {width:100%;display: block;padding:0 40px;}
@@ -1837,11 +1847,11 @@ position: absolute;top:30px;right:40px;}
   .service_info_wrap .signs .item_list p {font-size:1em;margin-top:15px;line-height:1.4;}
 }
 
-.service_info_wrap .item_box {position:relative;padding-top:310px;padding-bottom:60px;text-align:left;border-bottom:1px solid #e7e7e7;}
-.service_info_wrap .item_box::before {z-index:-1;content:"";width:100%;height:250px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;}
-.service_info_wrap .item_box.item1::before {background-image:url(../image/company/sub/recommended-products-main-1.png);}
-.service_info_wrap .item_box > p {font-size:18px;line-height:28px;}
-.service_info_wrap .btn_wrap .btn_wrap_title {margin-bottom:25px; font-size:24px; font-weight:normal; line-height:28px; color:#03a2ea;}
+.service_info_wrap.recommend_products .item_box {position:relative;padding-top:310px;padding-bottom:60px;text-align:left;border-bottom:1px solid #e7e7e7;}
+.service_info_wrap.recommend_products .item_box::before {z-index:-1;content:"";width:100%;height:250px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;}
+.service_info_wrap.recommend_products .item_box.item1::before {background-image:url(../image/company/sub/recommended-products-main-1.png);}
+.service_info_wrap.recommend_products .item_box > p {font-size:18px;line-height:28px;}
+.service_info_wrap.recommend_products .btn_wrap .btn_wrap_title {margin-bottom:25px; font-size:24px; font-weight:normal; line-height:28px; color:#03a2ea;}
 
 .service_info_wrap.recommend_products .item_list {border-top:0 !important;}
 .service_info_wrap.recommend_products .item_list .txt_box strong {display:block; margin-bottom:30px; font-size:24px; line-height:28px; color:#222222;}
