@@ -953,6 +953,7 @@ position: absolute;top:30px;right:40px;}
 .center_view_wrap .info_tbl td {padding-left:20px;}
 .center_view_wrap .info_tbl td .txt_holiday {margin-top:0;color:#777;}
 .center_view_wrap .info_tbl td a {color: #03a2ea;}
+.center_view_wrap .info_tbl td a[href*="tel"]{color: #222;}
 .center_view_wrap .item3 .item {float:left; width:74%;}
 .center_view_wrap .item3 .item:first-child {width:26%;}
 .center_view_wrap .item3 .item strong {font-size:1em;}
