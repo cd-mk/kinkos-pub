@@ -1800,7 +1800,7 @@ position: absolute;top:30px;right:40px;}
 .service_info_wrap .visual_box > ul.col2 li:nth-child(2) {margin-top:0;}
 .service_info_wrap .visual_box > ul li strong {color:#03a2ea;font-weight: 400;}
 @media screen and (max-width:1600px) {
-  .service_info_wrap .visual_box::before {width: calc(100% - 30px);}
+  .layout_full .service_info_wrap .visual_box::before {width: calc(100% - 30px);}
 }
 
 @media screen and (max-width:1024px) {
