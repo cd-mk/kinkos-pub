@@ -481,14 +481,14 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .bbs_list td.status,
 .bbs_list td.date {width:130px;} 
 .bbs_list td.subject {text-align:left;}
-.bbs_list td.subject a {padding:11px 0 12px 0;color:#222;line-height:1.5;overflow:hidden; display:inline-block; display:-webkit-box; position: relative;}
+.bbs_list td.subject a {padding:11px 0 12px 0;color:#222;line-height:1.5;overflow:hidden; display:inline-block; /*display:-webkit-box;*/ position: relative;}
 .tit_box.mid + .bbs_list{margin-top:0 !important;}
 .fin td.status {color:#03a2ea;}
 .bbs_list .notice td, 
 .bbs_list .notice td.subject a {color:#222; font-weight:700;}
 .bbs_list .cell_new img {margin:0 auto; display:block; width:18px; height:18px;}
 .bbs_list .cell_left {text-align:left;}
-.bbs_list .cell_center {text-align:center;}
+.bbs_list .cell_center {text-align:center !important;}
 .bbs_list .ico_new {display:inline-block; width:18px; height:18px; background:#03a2ea;text-align: center;vertical-align: middle;border-radius: 50%;margin-left:10px;}
 .bbs_list .ico_new::before {content: "N";font-size:11px;color:#fff;line-height: 18px;display: block;font-weight: 400;font-family: arial;}
 .bbs_list .btn_wrap.center {margin-top:60px;}
@@ -1850,6 +1850,33 @@ position: absolute;top:30px;right:40px;}
 .service_info_wrap .business .item_list {border-bottom:1px solid #e7e7e7;}
 .service_info_wrap.recommend_products .visual_box::before {background-image:url(../image/company/sub/recommended-products-main-1.png);}
 .service_info_wrap.recommend_products .btn_wrap_title {color: #03a2ea;margin-top:10px;}
+
+.service_info_wrap .dhl .visual_box::before {background-image:url(../image/company/sub/dhl-main.png);}
+.service_info_wrap .dhl .visual_box_col2 {display:flex; flex-direction:row; flex-wrap:wrap; width:100%; height:auto;}
+.service_info_wrap .dhl .visual_box_col2 > li {width:calc((100% - 30px) /2);float:left;}
+.service_info_wrap .dhl .visual_box_col2 > li:nth-child(2) {margin-left:30px;}
+.service_info_wrap .dhl .visual_box_col2> li .img_box img {width:100%;}
+.service_info_wrap .dhl .txt_box > strong {font-size:24px;margin-top:30px;display: block;line-height: 1.7;}
+.service_info_wrap .dhl .txt_box > ul {margin-top:10px;color:#777;}
+.service_info_wrap .dhl .txt_box > ul li {padding-left:10px;position:relative;font-size:1em;line-height:1.3;margin-top:10px;}
+.service_info_wrap .dhl .txt_box > ul li:first-child {margin-top:0;}
+.service_info_wrap .dhl .txt_box > ul li::before {content:"-";position:absolute;top:0;left:0;}
+
+.service_info_wrap .dhl .item_list {text-align:left;border:1px solid #e7e7e7;}
+.service_info_wrap .dhl .item_list ul {width:100%;display: flex;flex-wrap: wrap;padding:40px 0;}
+.service_info_wrap .dhl .item_list ul:last-child {border-top:2px dotted #f2f2f2;}
+.service_info_wrap .dhl .item_list li {position: relative;width:50%;padding:0 40px;}
+.service_info_wrap .dhl .item_list li:last-child::before{content:"";width:1px;height:100%;background-position:0 0;background-repeat:no-repeat;display:block;position:absolute;top:0;left:0;background:#e7e7e7;}
+.service_info_wrap .dhl .item_list li div {position:relative;display:inline-block;padding-left:110px;}
+.service_info_wrap .dhl .item_list li div::before{content:"";width:80px;height:80px;background-position:0 0;background-repeat:no-repeat;display:block;position:absolute;top:0;left:0;}
+.service_info_wrap .dhl .item_list .item1::before{display: none;}
+.service_info_wrap .dhl .item_list .item1 div::before{background-image:url(../image/company/sub/ico-dhl-1.png);}
+.service_info_wrap .dhl .item_list .item2 div::before{background-image:url(../image/company/sub/ico-dhl-2.png);}
+.service_info_wrap .dhl .item_list .item3 div::before{background-image:url(../image/company/sub/ico-dhl-3.png);}
+.service_info_wrap .dhl .item_list .item4 div::before{background-image:url(../image/company/sub/ico-dhl-4.png);}
+.service_info_wrap .dhl .item_list strong {font-size:20px;}
+.service_info_wrap .dhl .item_list p {font-size:1em;margin-top:15px;line-height:1.5;}
+
 @media screen and (max-width:1024px) {
   .service_info_wrap .signs .visual_box.item1::before {background-image:url(../image/company/sub/signs-main-1-mo.png);}
   .service_info_wrap .signs .visual_box.item2::before {background-image:url(../image/company/sub/signs-main-2-mo.png);}
@@ -1867,6 +1894,28 @@ position: absolute;top:30px;right:40px;}
   .service_info_wrap .scan .accor_wrap .accor_item .accor_title a {padding:19px 0;}
   .service_info_wrap .scan .accor_wrap .accor_item ul.col2 li {float:none;width:100%;}
   .service_info_wrap .design .visual_box::before {background-image:url(../image/company/sub/design-main-mo.png);}
+
+  .service_info_wrap .dhl .visual_box::before {background-image:url(../image/company/sub/dhl-main-mo.png);}
+  .service_info_wrap .dhl .visual_box_col2 {display:block; flex-direction:initial; flex-wrap:initial; width:100%; height:auto;}
+  .service_info_wrap .dhl .visual_box_col2 > li {width:100%;float:none;}
+  .service_info_wrap .dhl .visual_box_col2 > li:nth-child(2) {margin-left:0;margin-top:30px;}
+  .service_info_wrap .dhl .txt_box > strong {font-size:20px;margin-top:10px;display: block;line-height: 1.3;}
+
+  .service_info_wrap .dhl .item_list {text-align:left;border:1px solid #e7e7e7;}
+  .service_info_wrap .dhl .item_list li:first-child {border-top:0;}
+  .service_info_wrap .dhl .item_list ul {width:100%;display: block;flex-wrap: initial;padding:0;}
+  .service_info_wrap .dhl .item_list li {border-top:2px dotted #f2f2f2;width:100%;padding:15px;}
+  .service_info_wrap .dhl .item_list li:last-child::before{display: none;}
+  .service_info_wrap .dhl .item_list li div {padding-left:70px;}
+  .service_info_wrap .dhl .item_list li div::before{content:"";width:55px;height:55px;}
+  .service_info_wrap .dhl .item_list .item1::before{display: none;}
+  .service_info_wrap .dhl .item_list .item1 div::before{background-size:50px;}
+  .service_info_wrap .dhl .item_list .item2 div::before{background-size:50px;}
+  .service_info_wrap .dhl .item_list .item3 div::before{background-size:50px;}
+  .service_info_wrap .dhl .item_list .item4 div::before{background-size:50px;}
+  .service_info_wrap .dhl .item_list strong {font-size:16px;}
+  .service_info_wrap .dhl .item_list p {margin-top:5px;}
+
 }
 
 /* 법인 우대 */
@@ -1888,7 +1937,6 @@ position: absolute;top:30px;right:40px;}
   .service_info_wrap .item_photo_list > li {min-height:250px;width:100%;margin-left:0;margin-bottom:40px;margin-top: 0 !important;}
   .service_info_wrap .item_photo_list .txt strong {font-size:16px;}
   .service_info_wrap .item_photo_list .txt p {margin-top:10px;line-height: 1.3;}
-
   .service_info_wrap .item_photo_list .txt ul li {margin-top:6px; padding-left:10px;}
 }
 
