@@ -1693,6 +1693,7 @@ position: absolute;top:30px;right:40px;}
 
 /* 서비스안내 */
 .service_info_list {}
+.slash::before {content: "/";color:#e7e7e7;display: inline-block;padding:0 8px;}
 .service_info_list .item_list {border-top:1px solid #e7e7e7;position: relative;}
 .service_info_list .item_list:last-child {border-bottom:1px solid #e7e7e7;}
 .service_info_list .item_list .box {position:relative;margin:60px auto;overflow: hidden;padding:0 15px;max-width:1530px;}
@@ -1707,12 +1708,12 @@ position: absolute;top:30px;right:40px;}
 .service_info_list .item_list .box .txt_box > p.txt_message + .features {margin-top:25px;}
 .service_info_list .item_list .box .txt_box .features {font-size:1em;color:#222;margin-top:12px;line-height:1.7;}
 .service_info_list .item_list .box .txt_box .features li {position:relative;font-size:1em;line-height:1.5;position: relative;}
-.service_info_list .item_list .box .txt_box .features li .slash::before {content: "/";color:#e7e7e7;display: inline-block;padding:0 8px;}
 .service_info_list .item_list .box .txt_box .features.dash {margin-top:25px;}
 .service_info_list .item_list .box .txt_box .features.dash li {padding-left:17px;margin-top:13px;}
 .service_info_list .item_list .box .txt_box .features.dash li:first-child {margin-top:0;}
 .service_info_list .item_list .box .txt_box .features.dash li::before {content:"-";position:absolute;top:0;left:0;}
 .service_info_list .item_list .box .txt_box .features + .features.dash {margin-top:8px;}
+.service_info_list .item_list .box .txt_box .features + p {margin-top:20px;}
 
 .service_info_list .toggle_view {font-size:1em;color:#03a2ea;font-weight:700;position:absolute;bottom:40px;}
 .service_info_list .toggle_view i {background:#03a2ea;border-radius:50%; height:20px; width:20px;position:relative;display:inline-block; margin-left:13px; vertical-align:middle;}
@@ -2648,3 +2649,8 @@ position: absolute;top:30px;right:40px;}
 @media screen and (max-width:1024px) {
   .design_tm .txt_box {padding:15px 0;}
 }
+
+/* 영문가이드 */
+.en_wrap .img {display: block;text-align: center;}
+.en_wrap .dash li {padding-left:10px !important;position: relative;margin-top:10px;}
+.en_wrap .dash li::before {content: "-";position: absolute;top:0;left:0;}
