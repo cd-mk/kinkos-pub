@@ -767,6 +767,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
  .popup_wrap .inner .item_box .btn_list {padding:0 15px; font-size:16px; font-weight:400; line-height:55px; color:#ffffff; background:#0079c6;}
  .popup_wrap .inner .item_box .btn_list::after {content: ""; position: absolute; top: 24px; right: 15px; width: 12px; height: 7px; background: url(../image/common/arr-btm-white.png) no-repeat 100% 50% /cover;}
+ .popup_wrap .inner .item_box .btn_list.active::after {background: url(../image/common/arr-up-white.png) no-repeat 100% 50% /cover;}
  .popup_wrap .inner .item_box .opt_list {display:none; position:absolute; left:0; top:55px; width:100%; padding:15px 30px 35px 35px; box-sizing:border-box; background:#fff; z-index:10; line-height:1; box-shadow:0 15px 12px 5px rgba(0, 0, 0, 0.1); overflow-y:scroll; height:0; opacity:0;}
  .popup_wrap .inner .item_box .opt_list.active {display:block; height:300px; opacity:1; transition:all 0.5s;}
  .popup_wrap .inner .item_box .btn_sch {display:block; width:100%; height:100%; margin:15px 0 0 0; padding:0; font-size:16px; font-weight:700; line-height:16px; color:#0079c6; cursor:pointer; text-align:center; border:0; box-sizing:border-box; background:#fff;}

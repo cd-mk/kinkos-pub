@@ -430,7 +430,7 @@ function tab(e, num) {
 
   mo_target.on('click', function(e) {
     e.preventDefault();
-    $(this).next().toggleClass("active");
+    $(this).toggleClass('active').next().toggleClass("active");
   });
   mo_targetLayer.on('mouseleave', function () {
     $('.popup_wrap.sch .opt_list').removeClass('active');
