@@ -8,12 +8,13 @@
   <!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
   <meta name="Title" content="킨코스코리아" />
   <meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+<meta name="format-detection" content="telephone=no">
   <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
   <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-<meta property="og:image" content="../image/common/logo.png">
+  <meta property="og:image" content="../image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>메인 | 킨코스코리아</title>
@@ -417,9 +418,9 @@
           </ul>
         </div>
         <div class="item_box cs">
-          <div class="swiper-wrapper">
+          <div>
             <!-- loop (리스트 2개 노출 고정)-->
-            <div class="item item1 swiper-slide">
+            <div class="item item1">
               <h3 class="title">FAQ</h3>
               <p class="sub_title">
                 kinko’s<br class="pc">
@@ -432,32 +433,20 @@
               <span class="ico"><img src="../image/company/main/ico-note.png" alt=""></span>
             </div>
             <!-- //loop (리스트 2개 노출 고정)-->
-
-            <div class="item item2 swiper-slide">
+      
+            <div class="item item2">
               <h3 class="title">CALL</h3>
               <p class="sub_title">
-                견적문의 전화<br>
-                <strong>02. 557. 0225</strong>
+                전화문의 <strong><a href="tel:02-557-0225">02.557.0225</a></strong>
               </p>
               <p class="desc">
-                평일 9:00-19:00<br>
+                평일 평일 9:00-18:00<br>
                 휴일 공휴일/토/일
               </p>
               <span class="ico"><img src="../image/company/main/ico-pc.png" alt=""></span>
             </div>
           </div>
-          <!-- Add Pagination -->
- 
-        <div class="pg_nav_wrap scroll mo">
-          <div class="swiper-scrollbar"></div>
-          <div class="pg_nav">
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next small"></div>
-            <div class="swiper-button-prev small"></div>
-          </div>
-        </div>
+      
         </div>
       </div>
       <!-- //NOTICE & FAQ & CALL -->
@@ -556,35 +545,35 @@
     //common
     ////////////////////
     // cs문의 슬라이드
-    (function () {
-      var pcOpt = {
-        slidesPerView: false,
-        allowTouchMove: false
-      };
-      var moOpt = {
-        roundLengths: true,
-        slidesPerView: 1,
-        allowTouchMove: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          hide: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        }
-      };
+    // (function () {
+    //   var pcOpt = {
+    //     slidesPerView: false,
+    //     allowTouchMove: false
+    //   };
+    //   var moOpt = {
+    //     roundLengths: true,
+    //     slidesPerView: 1,
+    //     allowTouchMove: true,
+    //     navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //     },
+    //     scrollbar: {
+    //       el: '.swiper-scrollbar',
+    //       hide: false,
+    //     },
+    //     pagination: {
+    //       el: '.swiper-pagination',
+    //       type: 'fraction',
+    //     }
+    //   };
 
-      var csInfo = isMobile
-        ? new Swiper('.info_wrap .cs', moOpt)
-        : new Swiper('.info_wrap .cs', pcOpt);
+    //   var csInfo = isMobile
+    //     ? new Swiper('.info_wrap .cs', moOpt)
+    //     : new Swiper('.info_wrap .cs', pcOpt);
 
-      reloadSlide(csInfo, pcOpt, moOpt);
-    })();
+    //   reloadSlide(csInfo, pcOpt, moOpt);
+    // })();
 
     ////////////////////
     //www
