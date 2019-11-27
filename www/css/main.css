@@ -600,6 +600,7 @@
 .info_wrap .item_box.cs .item {float:left; position:relative; width:50%;}
 .info_wrap .item_box.cs .item .title {font-size:18px;}
 .info_wrap .item_box.cs .item .sub_title {margin-top:36px; font-size:24px; line-height:1.42;}
+.info_wrap .item_box.cs .item.item2 .sub_title {margin-top:70px;}
 .info_wrap .item_box.cs .item .desc {margin-top:20px; margin-bottom:79px; line-height:1.63;}
 /* .info_wrap .item_box.cs .item .ico {display:block; margin-top:35px; width:44px; height:44px; text-align:center;} */
 .info_wrap .item_box.cs .item .ico {display:block; position:absolute; bottom:0; left:0; margin:0; width:44px; height:44px; text-align:center;}
