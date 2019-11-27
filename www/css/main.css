@@ -333,6 +333,7 @@
   .hitPrd_wrap .hit_item .item_box > div .txt .desc {font-size:14px;}
   .hitPrd_wrap .hit_item .item_box > div .txt .price {font-size:16px;}
   .hitPrd_wrap .hit_item .item_box > div .txt .price b {font-size:16px;}
+	.hitPrd_wrap .hit_item .swiper-slide {width:255px;}
 }
 
 .recommendPrd_wrap {margin-top:120px;overflow:hidden;}
@@ -371,6 +372,7 @@
   .recommendPrd_wrap .recommend_item .item_box > div .txt .desc {font-size:14px;}
   .recommendPrd_wrap .recommend_item .item_box > div .txt .price {font-size:16px;}
   .recommendPrd_wrap .recommend_item .item_box > div .txt .price b {font-size:16px;}
+	.recommendPrd_wrap .recommend_item .swiper-slide {width:255px;}
 }
 
 .latestPrd_wrap {margin-top:120px;overflow:hidden;}
@@ -409,6 +411,7 @@
   .latestPrd_wrap .latest_item .item_box > div .txt .desc {font-size:14px;}
   .latestPrd_wrap .latest_item .item_box > div .txt .price {font-size:16px;}
   .latestPrd_wrap .latest_item .item_box > div .txt .price b {font-size:16px;}
+	.latestPrd_wrap .latest_item .swiper-slide {width:255px;}
 }
 
 .popularPrd_wrap {margin-top:120px;overflow:hidden;}
@@ -447,6 +450,7 @@
   .popularPrd_wrap .popular_item .item_box > div .txt .desc {font-size:14px;}
   .popularPrd_wrap .popular_item .item_box > div .txt .price {font-size:16px;}
   .popularPrd_wrap .popular_item .item_box > div .txt .price b {font-size:16px;}
+	.popularPrd_wrap .popular_item .swiper-slide {width:255px;}
 }
 
 .discountPrd_wrap {margin-top:120px;overflow:hidden;}
@@ -485,8 +489,8 @@
   .discountPrd_wrap .discount_item .item_box > div .txt .desc {font-size:14px;}
   .discountPrd_wrap .discount_item .item_box > div .txt .price {font-size:16px;}
   .discountPrd_wrap .discount_item .item_box > div .txt .price b {font-size:16px;}
+	.discountPrd_wrap .discount_item .swiper-slide {width:255px;}
 }
-
 
 .process_wrap {overflow:hidden; margin-top:120px;}
 .process_wrap .title {display:inline-block; font-size:20px; padding:9px 14px 6px; border:2px solid #444; border-radius:20px;}
