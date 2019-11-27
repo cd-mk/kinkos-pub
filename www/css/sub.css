@@ -1760,7 +1760,7 @@ position: absolute;top:30px;right:40px;}
   .package_wrap .img_box {margin-bottom: 40px;}
 }
 
-.landing_list {margin:0 auto;max-width:1230px;text-align:center;font-size:0;border-top:1px solid #e7e7e7;border-right:1px solid #e7e7e7;}
+/*.landing_list {margin:0 auto;max-width:1230px;text-align:center;font-size:0;border-top:1px solid #e7e7e7;border-right:1px solid #e7e7e7;}
 .landing_list li {display:inline-block;width:16.6666%;max-width:212px;font-size:18px;border-left:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;}
 .landing_list li a {display:block;height:212px;width:100%;position:relative;overflow:hidden;}
 .landing_list li a span {display:table;width:100%;height:100%;text-align:center;}
@@ -1780,8 +1780,27 @@ position: absolute;top:30px;right:40px;}
 .landing_list li.item_09 span:last-child {background-image:url(../image/company/sub/landing-9@3x.png);}
 .landing_list li.item_10 span:last-child {background-image:url(../image/company/sub/landing-10@3x.png);}
 .landing_list li.item_11 span:last-child {background-image:url(../image/company/sub/landing-11@3x.png);}
-.landing_list li.item_12 span:last-child {background-image:url(../image/company/sub/landing-12@3x.png);}
+.landing_list li.item_12 span:last-child {background-image:url(../image/company/sub/landing-12@3x.png);}*/
 
+.landing_list {display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:flex-start; max-width:1260px; margin:100px auto 0 auto; text-align:center; font-size:0; box-sizing:border-box;}
+.landing_list li {flex:0 0 16.6666%; display:flex; align-items:center; justify-content:center; width:16.6666%; height:auto; margin:0; padding:1px; font-size:0; box-sizing:border-box;}
+.landing_list li a {display:inline-block; position:relative; width:100%; height:auto; overflow:hidden;}
+.landing_list li a .landing_list_item_dimed {display:inline-block; position:absolute; width:100%; height:50%; background:#000000; opacity:0.5; z-index:9; -webkit-transition:all 0.6s ease; -moz-transition:all 0.6s ease; -o-transition:all 0.6s ease; transition:all 0.6s ease;}
+.landing_list li a .landing_list_item_dimed.up {top:-80%; transform:scale(3) skew(-75deg);}
+.landing_list li a .landing_list_item_dimed.down {top:130%; transform:scale(3) skew(-75deg);}
+.landing_list li a:hover .landing_list_item_dimed.up {top:-40%;}
+.landing_list li a:hover .landing_list_item_dimed.down {top:90%;}
+.landing_list li a .landing_list_item_title {display:block; position:absolute; top:50%; left:0; width:100%; height:auto; font-size:18px; font-weight:700; line-height:18px; color: #ffffff; transform:translateY(-50%); z-index:10; text-shadow:0 1px 1px #3c3c3c; -moz-text-shadow:0 1px 1px #3c3c3c; -webkit-text-shadow:0 1px 1px #3c3c3c; -o-text-shadow:0 1px 1px #3c3c3c;}
+.landing_list li a .landing_list_item_img {position:relative; width:100%; max-width:100%; height:auto; z-index:8; -webkit-transition:all 0.6s ease; -moz-transition:all 0.6s ease; -o-transition:all 0.6s ease; transition:all 0.6s ease;}
+
+@media screen and (max-width:1024px) {
+  .landing_list {margin-top:80px;}
+  .landing_list li {flex:0 0 25%;}
+}
+
+@media screen and (max-width:768px) {
+  .landing_list li {flex:0 0 50%;}
+}
 
 
 /* 서비스안내 기본 비주얼 */
