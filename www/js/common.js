@@ -420,7 +420,7 @@ function tab(e, num) {
   $('.sch_wrap .opt_list > li a').on('click', function () {
     var selectText = $(this).text();
     $(this).closest('.opt_list').prev('.btn_list').text(selectText);
-    $(this).closest('.opt_list').slideUp(300);
+    $(this).closest('.opt_list').removeClass('active');
   });
 
   // search MOBULE
