@@ -885,7 +885,7 @@ position: absolute;top:30px;right:40px;}
   
 }
 .page_tab.sub_type1 > ul > li.active a, 
-.page_tab.sub_type1 > ul > li a:hover{border:0;}
+.page_tab.sub_type1 > ul > li a:hover{border:0;padding: 0 30px;}
 
 
 .page_tab.sub_type1.sort .btn_mo_sub_type{margin-top:30px; background:#f1f7f9;color:#222;font-weight:400;}
