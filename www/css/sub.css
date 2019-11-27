@@ -602,6 +602,10 @@ position: absolute;top:30px;right:40px;}
 .tit_box.mid.border_none {border:0;padding:0;}
 .tit_box.mid h3 .title_alert {position:relative; top:8px; float:right; color:#777;font-size:18px;font-weight: 400;}
 
+.tit_box.small {margin-bottom:30px;text-align: left;margin-top:0;max-width:100%;}
+.tit_box.small h5 {font-weight:700;font-size:1em;}
+.tit_box.small p {font-size:14px;color:#777;margin-top:10px;}
+
 .noti + .tit_box.mid {margin-top:50px;}
 .tit_box.numbering {margin-top:0}
 .tit_box.numbering h4 {font-size:24px;text-align: left;position: relative;padding-left:60px;letter-spacing: -1px;line-height: 1.3;}
@@ -649,6 +653,10 @@ position: absolute;top:30px;right:40px;}
   .tit_box.mid.btn_with .left {float:left;}
   .tit_box.mid.btn_with .right {float:right;}
   .tit_box.mid h3 .title_alert {top:initial; font-size:14px;width:100%;margin-top:10px;}
+
+  .tit_box.small {margin-bottom:20px;margin-top:20px;text-align: left;padding:0}
+  .tit_box.small h5 {font-size:1em;}
+  .tit_box.small p {font-size:12px;margin-top:10px;}
 
   .tit_box.sub {padding:30px 20px;}
   .tit_box.sub h4 {}
@@ -2680,3 +2688,8 @@ position: absolute;top:30px;right:40px;}
 .en_wrap .img {display: block;text-align: center;}
 .en_wrap .dash li {padding-left:10px !important;position: relative;margin-top:10px;}
 .en_wrap .dash li::before {content: "-";position: absolute;top:0;left:0;}
+.en_wrap .payment .btn {width:490px;}
+
+@media screen and (max-width:1024px) {
+  .en_wrap .payment .btn {width:100%;}
+}
