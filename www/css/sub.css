@@ -1954,6 +1954,9 @@ position: absolute;top:30px;right:40px;}
   .service_info_wrap .dhl .item_list strong {font-size:16px;}
   .service_info_wrap .dhl .item_list p {margin-top:5px;}
 
+  .service_info_wrap .dhl .bbs_list tr {padding:15px 0;}
+  .service_info_wrap .dhl .bbs_list td.subject a {padding: 0 0 10px 0;}
+ .service_info_wrap .dhl .bbs_list td.time {    padding-left: 8px;}
 }
 
 /* 법인 우대 */
