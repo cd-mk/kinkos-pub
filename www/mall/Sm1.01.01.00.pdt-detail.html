@@ -339,12 +339,11 @@
           <!-- 상세설명 -->
           <div class="pdt_tab_wrap">
             <!-- page tab -->
-            <div class="page_tab col4 ly_tab">
+            <div class="page_tab col3 ly_tab">
               <ul id="tab">
                 <li class="active"><span>상품정보</span></li>
-                <li><span>리뷰 <em>(3)</em></span></li>
+                <li><span>상품평  <em>(3)</em></span></li>
                 <li><span>상품문의</span></li>
-                <li><span>배송 / 교환 / 상품</span></li>
               </ul>
             </div>
             <!-- page tab -->
@@ -353,15 +352,358 @@
             <div class="con_box" id="tab_con">
               <!-- 상품정보 -->
               <div id="item1" class="item item1">
-                <div class="inner">
+                <!-- 상품 상세 이미지 및 정보 -->
+                <div class="pdt_dtl_explain">
                   <img src="../image/mall/product/temp_dtl_01.png">
                   <img src="../image/mall/product/temp_dtl_02.png">
                   <img src="../image/mall/product/temp_dtl_03.png">
                 </div>
+                <!-- //상품 상세 이미지 및 정보 -->
+
+                <!-- 주문 및 제작 과정 -->
+                <div class="production_pro">
+                  <div class="tit_box mid"><h3>주문 및 제작 과정</h3></div>
+                  
+                  <!-- 아이콘 리스트
+                  ico_order_1 주문접수
+                  ico_order_2 상담신청 및 요청사항 기재
+                  ico_order_3 담당자 상담
+
+                  ico_payment_1 결제
+                  ico_payment_2 익일또는 평일 09시 주문확인
+
+                  ico_making_1 제작
+                  ico_making_2 당일완성
+                  ico_making_3 2시간 이내 제작
+                  ico_making_4 4시간 이내 제작
+
+                  ico_delivery_1 택배
+                  ico_delivery_2 방문수령
+                  ico_delivery_3 택배 or 방문수령 -->
+                  
+
+                  <!-- 기본 - 선택 방문 or택배(2~3일) -->
+                  <div class="pro_step col4">
+                    <ul>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_1"></i>
+                          <strong>STEP 01</strong><p>주문 접수 및 파일 업로드</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_payment_1"></i>
+                          <strong>STEP 02</strong><p>상품 결제</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_making_1"></i>
+                          <strong>STEP 03</strong><p>상품 제작</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_delivery_1"></i>
+                          <strong>STEP 04</strong><p>센터 방문 or 택배(2~3일)</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <!-- 13시 이전 접수시 당일 완성 - 센터방문 수령 -->
+                  <div class="pro_step col4">
+                    <ul>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_1"></i>
+                          <strong>STEP 01</strong>
+                          <p>주문접수 및 파일 업로드</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_payment_1"></i>
+                          <strong>STEP 02</strong>
+                          <p>상품 결제</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_making_2"></i>
+                          <strong>STEP 03</strong>
+                          <p>13시 이전 접수시 당일 완성</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_delivery_2"></i>
+                          <strong>STEP 04</strong>
+                          <p>센터방문 수령</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <!-- 상품 제작 2시간 이내 - 센터방문수령 -->
+                  <div class="pro_step col4">
+                    <ul>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_1"></i>
+                          <strong>STEP 01</strong>
+                          <p>주문접수 및 파일 업로드</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_payment_1"></i>
+                          <strong>STEP 02</strong>
+                          <p>상품 결제</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_making_3"></i>
+                          <strong>STEP 03</strong>
+                          <p>상품 제작 2시간 이내</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_delivery_2"></i>
+                          <strong>STEP 04</strong>
+                          <p>센터방문 수령</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //상품 제작 2시간 이내 - 센터방문수령 -->
+                  
+                  <!-- 익일 또는 평일 09시주문확인 - 상품 제작 2시간 이내 -센터방문수령 -->
+                  <div class="pro_step col5">
+                    <ul>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_1"></i>
+                          <strong>STEP 01</strong>
+                          <p>주문접수 및 파일 업로드</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_payment_1"></i>
+                          <strong>STEP 02</strong>
+                          <p>상품 결제</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_payment_2"></i>
+                          <strong>STEP 03</strong>
+                          <p>익일 또는 평일 09시주문확인</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_making_3"></i>
+                          <strong>STEP 04</strong>
+                          <p>상품 제작 2시간 이내</p>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_delivery_2"></i>
+                          <strong>STEP 05</strong>
+                          <p>센터방문 수령</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //익일 또는 평일 09시주문확인 - 상품 제작 2시간 이내 -센터방문수령 -->
+
+
+
+
+
+                  <!-- 데이터가 있는 경우 - 상품 제작 4시간 이내 -->
+                  <div class="pro_step col4 dataY">
+                    <h4><span>01.</span> 데이터가 있는 경우</h4>
+                    <ul>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_1"></i>
+                          <strong>STEP 01</strong>
+                          <p>주문접수 및 파일 업로드</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_payment_1"></i>
+                          <strong>STEP 02</strong>
+                          <p>상품 결제</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_making_4"></i>
+                          <strong>STEP 03</strong>
+                          <p>상품 제작 4시간 이내</p>
+                        </div>
+                      </li>
+                  
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_delivery_2"></i>
+                          <strong>STEP 04</strong>
+                          <p>센터방문 수령</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //데이터가 있는 경우 - 상품 제작 4시간 이내 -->
+                  <!-- 데이터가 없거나 방문이 불가 경우 - 센터 방문 or 주문 접수 및 제작 - 담당자 상담 -  제작 - 센터 방문 or 택배 수령 -->
+                  <div class="pro_step col4 dataN">
+                    <h4><span>02.</span> 데이터가 없거나 방문이 불가능한 경우</h4>
+                    <ul>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_2"></i>
+                          <strong>STEP 01</strong>
+                          <p>상담 신청 및 요청사항 기재</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_3"></i>
+                          <strong>STEP 02</strong>
+                          <p>담당자 상담(유선 및 이메일)</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_order_1"></i>
+                          <strong>STEP 03</strong>
+                          <p>센터 방문 or 주문 접수 및 제작</p>
+                        </div>
+                      </li>
+                  
+                      <li>
+                        <div class="item_box">
+                          <i class="ico_delivery_3"></i>
+                          <strong>STEP 04</strong>
+                          <p>센터방문 or 택배수령</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //데이터가 없거나 방문이 불가 경우 - 센터 방문 or 주문 접수 및 제작 - 담당자 상담 -  제작 - 센터 방문 or 택배 수령 -->
+
+
+                </div>
+                <!-- //주문 및 제작 과정 -->
+              
               </div>
         
-              <!-- 리뷰-->
+              <!-- 상품평-->
               <div id="item2" class="item item2">
+                <div class="review_wrap">
+                  <!-- 상품평 목록 -->
+                  <ul class="pdt_review">
+                    <!-- loop -->
+                    <li class="review_item">
+                      <!---->
+                      <div class="inner">
+                        <!-- head 보여지는 부분 -->
+                        <div class="review_head">
+                          <a class="infoinner" href="#url">
+                            <div class="writer"><strong class="id">handc***</strong><span class="date">2019. 06. 24</span></div>
+                            <div class="sjt"><strong>즉석 소량 명함 10매(양면) [용지]</strong>스노우250g + [코팅] 유광(+0원)</div>
+
+                            <!-- 리뷰내용 -->
+                            <strong class="blind">리뷰내용</strong>
+                           <div class="txt_view">
+                              <div class="ellipsis">
+                                2시간 만에 완성되는 스피드 명함! 너무 좋아요!!! 킨코스 최고예요! 2시간 만에 완성되는 스피드 명함! 너무 좋아요!!! 킨코스 최고예요! 2시간 만에 완성되는 스피드 명함!
+                                <br>
+                                좋아여~너무 좋아요~
+                                <br>
+                                2시간 만에 완성되는 스피드 명함! 너무 좋아요!!! 킨코스 최고예요! 2시간 만에 완성되는 스피드 명함! 
+                                <br>
+                                좋아여~너무 좋아요~
+                              </div>
+                           </div>
+                            <!-- //리뷰내용 -->
+
+                            <!-- img preview thumb -->
+                            <div class="photo_pre">
+                              <div class="img_box">
+                                <div class="imgin"
+                                  style="background-image: url(http://www.kinkos.co.kr/data/item/1453452202/thumb-66qF7ZWo_1066ek_500x500.png);">
+                                </div>
+                              </div>
+                            </div>
+                            <!-- //img preview thumb -->
+                          </a>
+                        </div>
+                        <!-- //head 보여지는 부분 -->
+
+                        <!-- 상품평 내용 + 이미지 (가려진 부분) -->
+                        <div class="review_row">
+                          <div class="review_detail">
+                            <ul class="img_list">
+                              <!-- loop -->
+                              <li>
+                                <div class="img_box">
+                                  <div class="imgin"
+                                    style="background-image: url(http://www.kinkos.co.kr/data/item/1453452202/thumb-66qF7ZWo_1066ek_500x500.png);">
+                                  </div>
+                                </div>
+                              </li>
+                             <!-- loop -->
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- //상품평 내용 + 이미지 (가려진 부분) -->
+                      </div>
+                      <!---->
+                    </li>
+                     <!-- //loop -->
+
+                     <!-- 등록된 상품평이 없습니다. -->
+                    <li class="review_item">
+                      <!---->
+                      <div class="inner">
+                        <p class="non_review">등록된 상품평이 없습니다.</p>
+                      </div>
+                      <!---->
+                    </li>
+                    <!-- 등록된 상품평이 없습니다. -->
+
+                  </ul>
+                  <!-- //상품평 목록 -->
+
+                  <!-- Page navigation -->
+                  <div class="page_navi">
+                    <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+                    <ul class="navi_list">
+                      <li class="active"><a href="#url">1</a></li>
+                      <li><a href="#url">2</a></li>
+                    </ul>
+                    <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                  </div>
+                  <!-- Page navigation -->
+                  <!-- //repeat faq item list -->
+                </div>
+              </div>
+              <!-- //상품평-->
+        
+        
+              <!-- 상품문의-->
+              <div id="item3" class="item item3">
                 <div class="form_wrap review_wt">
                   <div class="form_group">
                     <div class="form_inp">
@@ -387,97 +729,15 @@
                     <p class="desc">- 100MB 이하/ 압축파일 권장</p>
                   </div>
                 </div>
-        
-                <div class="bbs_list">
-                  <div class="tit_box mid">
-                    <h3>이 상품의 전체 리뷰</h3>
-                  </div>
-                  <table>
-                    <caption>공지사항의 정보를 나열한 표</caption>
-                    <!-- <thead>
-                              <tr>
-                                <th scope="col">번호</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">등록일</th>
-                              </tr>
-                            </thead> -->
-                    <tbody>
-                      <tr>
-                        <td class="num">3</td>
-                        <td class="subject"><a href="#url">킨코스에서 주문하길 정말 잘 한거 같아요!</a></td>
-                        <td>hancCoc***</td>
-                        <td>2019.08.20</td>
-                      </tr>
-                      <tr>
-                        <td class="num">2</td>
-                        <td class="subject"><a href="#url">킨코스에서 주문하길 정말 잘 한거 같아요!</a></td>
-                        <td>hancCoc***</td>
-                        <td>2019.06.24</td>
-                      </tr>
-                      <tr>
-                        <td class="num">1</td>
-                        <td class="subject"><a href="#url">킨코스에서 주문하길 정말 잘 한거 같아요!</a></td>
-                        <td>hancCoc***</td>
-                        <td>2019.08.06</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <!-- Page navigation -->
-                  <div class="page_navi">
-                    <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
-                    <ul class="navi_list">
-                      <li class="active"><a href="#url">1</a></li>
-                      <li><a href="#url">2</a></li>
-                      <li><a href="#url">3</a></li>
-                      <li><a href="#url">4</a></li>
-                      <li><a href="#url">5</a></li>
-                    </ul>
-                    <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
-                  </div>
-                  <!-- Page navigation -->
-                </div>
-              </div>
-        
-        
-              <!-- 상품문의-->
-              <div id="item3" class="item item3">
-                <div class="form_wrap review_wt">
-                  <div class="form_group">
-                    <div class="form_inp">
-                      <textarea placeholder="로그인 후 등록이 가능합니다.&#10;상품에 대해 궁금한 점을 물어보세요."></textarea>
-                    </div>
-                    <div class="btn_wrap">
-                      <button type="button" class="btn type01">문의하기</button>
-                    </div>
-        
-                    <div class="form_inp js-list-item">
-                      <div class="file_inp_box">
-                        <!-- 첨부 파일 이름 출력 요소 -->
-                        <input type="text" class="js-file-name" readonly>
-                        <button type="button" class="btn type03 js-file-label">파일 찾기</button>
-                        <button type="button" class="btn type03 js-file-del">파일 삭제</button>
-                        <input type="file" class="file_inp">
-        
-                        <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼
-                            추가/삭제</span></button>
-                      </div>
-                    </div>
-                    <p class="desc">- 100MB 이하/ 압축파일 권장</p>
-        
-                  </div>
-                </div>
-        
-        
-        
+              
                 <div class="accor_wrap">
                   <!-- repeat faq item list -->
                   <div class="accor_item">
                     <div class="accor_title">
                       <a href="#url" class="txt_title">
-                        <p class="num">3</p>
-                        <p class="writer"><span class="date">2019. 06. 24</span><span class="id">handc***</span></p>
-                        <p class="sjt">방문 수령 가능 시간은?</p>
+                        <p class="writer"><strong class="id">handc***</strong><span class="date">2019. 06. 24</span></p>
+                        <p class="sjt">즉석 소량 명함 10매(양면) <span>[용지] 스노우250g + [코팅] 유광(+0원)</span></p>
+                        <p class="ellipsis">2시간 만에 완성되는 스피드 명함! 너무 좋아요!!! 킨코스 최고예요! 2시간 만에 완성되는 스피드 명함! 너무 좋아요!!! 킨코스 최고예요! 2시간 만에 완성되는 스피드 명함!</p>
                         <p class="status finish">답변완료</p>
                       </a>
                     </div>
@@ -485,8 +745,9 @@
                       <dl class="txt_que">
                         <dt>문의내용</dt>
                         <dd>
-                          최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
-                          온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
+                          2시간 만에 완성되는 스피드 명함! 너무 좋아요!!!
+                          킨코스 최고예요! 2시간 만에 완성되는 스피드 명함! 너무 좋아요!!! 2시간 만에 완성되는 스피드 명함! 함께여서 행복한 발리여행~ 너무 좋아요!!!
+                          킨코스 최고예요! 킨코스 최고예요! 2시간 만에 완성되는 스피드 명함! 이쁘네요.
                         </dd>
                       </dl>
                       <dl class="txt_ans">
@@ -498,38 +759,7 @@
                       </dl>
                     </div>
                   </div>
-                  <div class="accor_item">
-                    <div class="accor_title">
-                      <a href="#url" class="txt_title">
-                        <p class="num">2</p>
-                        <p class="writer"><span class="date">2019. 06. 24</span><span class="id">handc***</span></p>
-                        <p class="sjt">방문 수령 가능 시간은?</p>
-                        <p class="status waiting">답변대기</p>
-                      </a>
-                    </div>
-                    <div class="accor_con">
-                      <p class="ans_txt">
-                        최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
-                        온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="accor_item">
-                    <div class="accor_title">
-                      <a href="#url" class="txt_title">
-                        <p class="num">1</p>
-                        <p class="writer"><span class="date">2019. 06. 24</span><span class="id">handc***</span></p>
-                        <p class="sjt">방문 수령 가능 시간은?</p>
-                        <p class="status waiting">답변대기</p>
-                      </a>
-                    </div>
-                    <div class="accor_con">
-                      <p class="ans_txt">
-                        최소량 제한은 없습니다. 킨코스는 단 1장의 출력복사 서비스를 포함하여 기타 서비스도 수량에 관계없이 주문/의뢰가 가능합니다.<br>
-                        온라인 주문의 경우 주문 내용에 따라 최소 수량이 정해질 수 있습니다.
-                      </p>
-                    </div>
-                  </div>
+     
                   <!-- Page navigation -->
                   <div class="page_navi">
                     <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
@@ -545,55 +775,16 @@
               </div>
         
         
-              <!-- 배송/교환/상품 -->
-              <div id="item4" class="item item4">
-                <div class="production_pro">
-                  <div class="tit_box mid">
-                    <h3>주문 및 제작 과정</h3>
-                  </div>
-                  <div class="inner">
-                    <!-- 기본 - 선택 방문 or택배(2~3일) -->
-                    <div class="pro pro_1"><img src="../image/mall/product/pro_1.png"
-                        alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.상품제작-4.선택 방문 or택배(2~3일)"></div>
-        
-                    <!-- 13시 이전 접수시 당일 완성 - 센터방문 수령 -->
-                    <div class="pro pro_2" style="display: none;"><img src="../image/mall/product/pro_2.png"
-                        alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.13시 이전 접수시 당일 완성-4.센터방문 수령"></div>
-        
-                    <!-- 상품 제작 2시간 이내 - 센터방문수령 -->
-                    <div class="pro pro_3" style="display: none;"><img src="../image/mall/product/pro_3.png"
-                        alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.상품 제작 2시간 이내-4.센터방문 수령"></div>
-        
-                    <!-- 익일 또는 평일 09시주문확인 - 상품 제작 2시간 이내 -센터방문수령 -->
-                    <div class="pro pro_4" style="display: none;"><img src="../image/mall/product/pro_4.png"
-                        alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.익일 또는 평일 09시주문확인-4.센터방문 수령"></div>
-        
-        
-        
-                    <!-- 데이터가 있는 경우 - 상품 제작 4시간 이내 -->
-                    <div class="pro pro_5" style="display: none;">
-                      <h4><span>1.</span> 데이터가 있는 경우</h4>
-                      <img src="../image/mall/product/pro_5.png"
-                        alt="주문 및 제작 과정-1.주문접수 및 파일 업로드-2.상품결제-3.상품 제작 4시간 이내-4.센터방문 수령">
-                    </div>
-        
-        
-                    <!-- 데이터가 없거나 방문이 불가 경우 - 센터 방문 or 주문 접수 및 제작 - 담당자 상담 -  제작 - 센터 방문 or 택배 수령 -->
-        
-                    <div class="pro pro_6" style="display: none;">
-                      <h4><span>1.</span> 데이터가 없거나 방문이 불가능한 경우</h4>
-                      <img src="../image/mall/product/pro_6.png"
-                        alt="주문 및 제작 과정-1.상담 신청 및 요청 사항 기재-2.담당자 상담 (유선 및 이메일)-3.센터 방문 or 주문 접수 및 제작-4.센터 방문 or 택배 수령">
-                    </div>
-        
-        
-                  </div>
-                </div>
-              </div>
+         
             </div>
             <!-- //상세설명 탭 콘텐츠 -->
+
+
+
           </div>
           <!-- //상세설명 -->
+
+
 
           <!-- 다른 고객이 함께 본 상품 -->
           <div class="product_list_wrap">

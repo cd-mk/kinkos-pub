@@ -68,6 +68,14 @@ var toggleV = function () {
 }
 toggleV();
 
+// 상품상세 리뷰
+var toggleReview = function () {
+  $(".review_item").click(function () {
+    $(this).toggleClass("review_view");
+  });
+}
+toggleReview();
+
 (function($) {
   "use strict";
 
@@ -248,3 +256,6 @@ toggleV();
     });
   });
 })(jQuery);
+
+
+
