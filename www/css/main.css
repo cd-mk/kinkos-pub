@@ -622,6 +622,7 @@
   .info_wrap .item_box.cs .item.item2 {margin-top:45px;}
   .info_wrap .item_box.cs .item .desc {margin-bottom:0;margin-top:10px;}
   .info_wrap .item_box.cs .item .sub_title {margin-top:20px;}
+  .info_wrap .item_box.cs .item.item2 .sub_title {margin-top:20px;}
   .info_wrap .item_box.cs .item .ico {position:absolute;bottom:0;right:0;left:auto;}
   .info_wrap .item_box.cs .swiper-slide-next {margin-left:-12%; opacity:0.2;}  
   .info_wrap .pg_nav_wrap.scroll {margin-top:45px;}
