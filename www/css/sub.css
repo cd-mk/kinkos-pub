@@ -87,7 +87,7 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 
 .form_wrap {padding:40px 0; border-top:2px solid #000;border-bottom:1px solid #ccc;}
 .type_select + .form_alert {margin-top:60px;}
-.form_wrap.type_select {margin-top:95px;position: relative;}
+.form_wrap.type_select {margin-top:95px;position:relative;}
 .type_select {margin-bottom:0; padding:30px 11.11%; background:#f3f4f6; box-sizing:border-box;border:1px solid #e6e9ef;}
 .type_select .form_group {padding:0;}
 .type_select select, .type_select input, .type_select button {height:50px; line-height:50px;}
@@ -99,7 +99,6 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .type_select .form_group.col3 .form_item:nth-child(2) {width:29%;}
 .type_select .form_group.col3 .form_item:nth-child(3) {width:44%}
 
-
 .type_select .form_group .form_item:first-child {margin-left:0;width:250px;}
 .type_select .form_group .form_item {float:left; }
 .type_select .form_group .form_inp {float:left; margin-left:10px; width:calc(100% - 390px);}
@@ -107,6 +106,26 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 
 .form_alert+.form_wrap {margin-top:18px;}
 .noti+.type_select {margin-top:18px;}
+
+.search_result .form_wrap {position:relative; margin-top:60px; margin-bottom:0; padding:30px 11.11%; border:1px solid #e6e9ef; box-sizing:border-box; background:#f3f4f6;}
+.search_result .form_wrap .form_group {padding:0;}
+.search_result .form_wrap .form_group.col2 .form_item {width:calc((100% - 10px) / 2) !important; margin-left:10px;}
+.search_result .form_wrap .form_group.col3 {position:relative;padding-right:130px;}
+.search_result .form_wrap .form_group.col3 .btn_wrap {position:absolute;right:0;top:0;width:120px;}
+.search_result .form_wrap .form_group.col3 .form_item {margin-left:10px;}
+.search_result .form_wrap .form_group.col3 .form_item:nth-child(1) {width:24%;}
+.search_result .form_wrap .form_group.col3 .form_item:nth-child(2) {width:29%;}
+.search_result .form_wrap .form_group.col3 .form_item:nth-child(3) {width:44%}
+
+.search_result .form_wrap .form_group .form_item:first-child {margin-left:0;width:250px;}
+.search_result .form_wrap .form_group .form_item {float:left; }
+.search_result .form_wrap .form_group .form_inp {float:left; width:calc(100% - 130px);}
+.search_result .form_wrap .form_group .btn_wrap {float:left; margin:0 0 0 10px;}
+
+.search_result .tit_box {position:relative;}
+.search_result .tit_box h3 .search_result_count {position:relative; margin-left:30px; color:#777777;}
+.search_result .tit_box h3 .search_result_count::before {content:''; position:absolute; top:50%; left:-15px; height:80%; border-left:1px solid #dfdfdf; transform:translateY(-50%);}
+.search_result .tit_box h3 .search_result_count .number {color:#03a2ea;}
 
 
 @media screen and (max-width:1024px) {
@@ -122,9 +141,6 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
   .type_select .form_group.col3 {padding:0;}
   .type_select .form_group.col3 .form_item {width:100% !important;margin-left:0;margin-top:10px;}
   .type_select .form_group.col3 .form_item:first-child {margin-top:0;}
-  
-
-
 
   .type_select .form_group .form_item {float:none; width:100% !important;margin-top:0;margin-bottom:10px}
   .type_select .form_group .form_inp {width:calc(100% - 95px)  !important;margin-left:0}
@@ -382,8 +398,10 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 /* 페이지 네비게이션 */
 .page_navi {position:relative; left:50%; display:inline-block; margin-top:60px; overflow:hidden; transform:translateX(-50%);}
 .page_navi .btn_navi {float:left; margin-left:4px; width:36px; height:36px; border:1px solid #dedede;}
+.page_navi .btn_navi.first {margin-left:0; background:url('../image/company/sub/btn-first-last-arrow.png') no-repeat; background-position:0 center;}
 .page_navi .btn_navi.prev {margin-left:0; background:url('../image/company/sub/btn-arrow.png') no-repeat; background-position:0 center;}
 .page_navi .btn_navi.next {background:url('../image/company/sub/btn-arrow.png') no-repeat; background-position:-34px center;}
+.page_navi .btn_navi.last {background:url('../image/company/sub/btn-first-last-arrow.png') no-repeat; background-position:-34px center;}
 .page_navi .navi_list {float:left; overflow:hidden;}
 .page_navi .navi_list > li {float:left; margin-left:4px; width:36px; height:36px; border:1px solid #dedede;}
 .page_navi .navi_list > li.active > a {background:#03a2ea; color:#fff;}
@@ -614,6 +632,8 @@ position: absolute;top:30px;right:40px;}
 
 .tit_box.sub {width:100%;max-width:100%;height:auto;padding:40px 40px;text-align:left;overflow:hidden;background:#f3f4f6;}
 .tit_box.sub h4 {font-size:1em;font-weight:normal;line-height:1.3;letter-spacing:-0.5px;color:#222222;}
+
+.tit_box.faq_list {margin-bottom:0 !important;}
 
 .noti {text-align:center;line-height:1.3;font-weight:400;}
 .noti h4 {font-size:24px;}
@@ -1570,6 +1590,9 @@ position: absolute;top:30px;right:40px;}
 .faq_tab_con .accor_wrap .accor_item .accor_con::before {content:'A.'; position:absolute; left:40px; top:40px; font-size:24px; font-weight:700; color:#777;}
 .faq_tab_con .accor_wrap .accor_item .accor_con .ans_txt {font-size:1em; color:#777; line-height:1.56;}
 
+.search_result .faq_tab_con {margin-top:0;}
+.search_result .faq_tab_con .accor_wrap {border-top:0;}
+
 
 @media screen and (max-width:1024px) {
   /* .sort.select {display:block; margin-top:30px; border:0; background:transparent;}
@@ -2017,6 +2040,10 @@ position: absolute;top:30px;right:40px;}
 .pdt_list .item_info{line-height:1.3;}
 .pdt_list .item_info .title {font-size:20px;font-weight:700;margin-top:20px;display:block;}
 .pdt_list .item_info .desc {font-size :16px;margin-top:10px;display:block;min-height:30px;}
+
+.search_result .pdt_list .item_list li .item_info .desc {display:block; min-height:40px; font-size:16px; line-height:20px; margin-top:10px; color:#222222;}
+.search_result .pdt_list .item_list li .item_info .price {display:block; margin-top:30px;}
+.search_result .no_search_result {display:block; width:100%; padding:50px 0; font-size:18px; font-weight:normal; line-heigt:18px; color:#222222; text-align:center;}
 
 .choice-option {overflow:hidden;}
 .choice-option .result {float:left;font-size:24px;line-height:50px;}
