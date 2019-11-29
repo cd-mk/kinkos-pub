@@ -2028,7 +2028,7 @@ position: absolute;top:30px;right:40px;}
  --------------------- */
 
 .pdt_list {max-width:1530px;margin:0 auto;}
-.pdt_list .inner .item_list {width:100%; margin-top:20px;align-content:flex-start;overflow:hidden;display:flex;flex-wrap:wrap;}
+.pdt_list .inner .item_list {width:100%; margin-top:40px;align-content:flex-start;overflow:hidden;display:flex;flex-wrap:wrap;}
 .pdt_list .inner .item_list li {width:calc((100% - 120px)/5);display:inline-block; margin-right:30px; margin-bottom:50px;}
 .pdt_list .inner .item_list li:nth-child(5n) {margin-right:0;}
 
@@ -2039,13 +2039,12 @@ position: absolute;top:30px;right:40px;}
 .pdt_list .pdt_thumb:hover .thumb_flag {background-color:#03a2ea;}
 .pdt_list .item_info{line-height:1.3;}
 .pdt_list .item_info .title {font-size:20px;font-weight:700;margin-top:20px;display:block;}
-.pdt_list .item_info .desc {font-size :16px;margin-top:10px;display:block;min-height:30px;}
+.pdt_list .item_info .desc {display:block; min-height:40px; font-size :16px; line-height:20px; margin-top:10px; color:#222222;}
+.pdt_list .item_info .price {display:block; margin-top:30px;}
 
-.search_result .pdt_list .item_list li .item_info .desc {display:block; min-height:40px; font-size:16px; line-height:20px; margin-top:10px; color:#222222;}
-.search_result .pdt_list .item_list li .item_info .price {display:block; margin-top:30px;}
 .search_result .no_search_result {display:block; width:100%; padding:50px 0; font-size:18px; font-weight:normal; line-heigt:18px; color:#222222; text-align:center;}
 
-.choice-option {overflow:hidden;}
+.choice-option {padding-top:60px; padding-bottom:20px; border-bottom:2px solid #222222; overflow:hidden;}
 .choice-option .result {float:left;font-size:24px;line-height:50px;}
 .choice-option .result strong {color:#03a2ea;}
 .choice-option .selectbox {float:right;overflow:hidden;}
