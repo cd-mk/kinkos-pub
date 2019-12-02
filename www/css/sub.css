@@ -2011,7 +2011,7 @@ position: absolute;top:30px;right:40px;}
         mall
  --------------------- */
 
-.pdt_list {max-width:1530px;margin:0 auto;}
+.pdt_list {position:relative; max-width:1530px; margin:0 auto;}
 .pdt_list .inner .item_list {width:100%; margin-top:40px;align-content:flex-start;overflow:hidden;display:flex;flex-wrap:wrap;}
 .pdt_list .inner .item_list li {width:calc((100% - 120px)/5);display:inline-block; margin-right:30px; margin-bottom:50px;}
 .pdt_list .inner .item_list li:nth-child(5n) {margin-right:0;}
@@ -2042,6 +2042,9 @@ position: absolute;top:30px;right:40px;}
   .pdt_list .inner .item_list li {width:50%; padding-left:15px; margin-bottom:40px; float:left;margin-right:0;}
   .pdt_list .inner .item_list li:nth-child(2n)::before {content:"";display:block;}
   .choice-option {padding:0 15px;}
+  .pdt_list .choice-option {width:96%; margin:0 2%; padding:40px 0 20px 0; box-sizing:border-box;}
+  .pdt_list .choice-option .selectbox {display:flex; align-items:center; justify-content:center;}
+  .pdt_list .choice-option .selectbox select {width:49%; box-sizing:border-box;}
   .pdt_list .item_info .title {font-size:16px;}
   .pdt_list .item_info .desc {font-size:14px;}
   .choice-option .result {float:none; font-size:20px; line-height:1.2;margin:20px 0 40px;display:block;width:100%;}
