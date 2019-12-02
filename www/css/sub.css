@@ -1927,8 +1927,7 @@ position: absolute;top:30px;right:40px;}
 .service_info_wrap .dhl .item_list .item4 div::before{background-image:url(../image/company/sub/ico-dhl-4.png);}
 .service_info_wrap .dhl .item_list strong {font-size:20px;}
 .service_info_wrap .dhl .item_list p {font-size:1em;margin-top:15px;line-height:1.5;}
-.service_info_wrap .dhl .div_col2 .inner:last-child table thead {display:none;}
-.service_info_wrap .dhl .div_col2 .inner:last-child table {border-top:0;}
+
 @media screen and (max-width:1024px) {
   .service_info_wrap .signs .visual_box.item1::before {background-image:url(../image/company/sub/signs-main-1-mo.png);}
   .service_info_wrap .signs .visual_box.item2::before {background-image:url(../image/company/sub/signs-main-2-mo.png);}
@@ -1971,6 +1970,8 @@ position: absolute;top:30px;right:40px;}
   .service_info_wrap .dhl .bbs_list tr {padding:15px 0;}
   .service_info_wrap .dhl .bbs_list td.subject a {padding: 0 0 10px 0;}
  .service_info_wrap .dhl .bbs_list td.time {    padding-left: 8px;}
+ .service_info_wrap .dhl .div_col2 .inner:last-child table thead {display:none;}
+.service_info_wrap .dhl .div_col2 .inner:last-child table {border-top:0;}
 }
 
 /* 법인 우대 */
