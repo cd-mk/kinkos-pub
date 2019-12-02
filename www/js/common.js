@@ -493,7 +493,7 @@ var visual = new Swiper('.visual_wrap', {
   loop: true,
   autoplay: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.visual_wrap .swiper-pagination',
     clickable: true,
   }
 });
