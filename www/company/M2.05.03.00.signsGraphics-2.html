@@ -276,7 +276,24 @@
 <script src="../js/common.js"></script>
 <!-- //global -->
 <script src="../js/sub.js"></script>
+<script>
+     $(document).ready(function () {
+       var package = new Swiper('.package', {
+         slidesPerView: '1',
+         navigation: {
+           nextEl: '.swiper-button-next',
+           prevEl: '.swiper-button-prev',
+         },
+         pagination: {
+           el: '.swiper-pagination',
+           type: 'fraction',
+         }
+       });
 
+     });
+
+      
+</script>
 
 </body>
 
