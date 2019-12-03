@@ -61,6 +61,7 @@
           <h2>마이페이지</h2>
           <ul>
             <li><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">구매내역리스트</a></li>
+            <li><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">취소/환불/교환 리스트</a></li>
             <li> <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
               <ul>
                 <li class="active"><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
@@ -82,34 +83,9 @@
 
         <!-- 본문 -->
         <div class="con_box mpg_wrap">
-          <div class="my_wrap">
-            <ul>
-              <li class="my_info">
-                <p><strong>shing1234</strong> 님의 킨코스</p>
-                <p class="my_point"><i>P</i>1,000</p>
-              </li>
-              <li class="my_status"> <strong>입금대기중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status"> <strong>결제 완료</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status"> <strong>배송준비중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status"> <strong>배송중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status"> <strong>배송완료</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status"> <strong>취소/환불/교환</strong>
-                <p>0</p>
-              </li>
-            </ul>
-          </div>
+         
           <div class="bbs_write userinfo_wrap">
-            <div class="tit_box mid">
+            <div class="tit_box section mid">
               <h3>회원정보 변경</h3>
             </div>
             <form action="">
@@ -118,7 +94,17 @@
 
                 <!-- 회원정보 확인 -->
                 <div class="form_wrap">
-                  <div class="form_group">
+
+                  <div class="form_group mo_inline">
+                    <div class="form_item">
+                      <strong class="form_name">아이디</strong>
+                      <div class="form_inp">
+                        <span class="point_blue">dfsfdfs</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form_group mo_inline">
                     <div class="form_item">
                       <strong class="form_name">이름</strong>
                       <div class="form_inp">
@@ -126,101 +112,59 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form_group">
-                    <div class="form_item">
-                      <strong class="form_name">아이디</strong>
-                      <div class="form_inp">
-                        dfsfdfs
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="form_group top_line">
                     <div class="form_item">
-                      <strong class="form_name">비밀번호</strong>
-                      <div class="form_inp">
-                        <input type="password" title="비밀번호 입력">
+                      <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
+                      <div class="form_inp tel">
+                        <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력" value="01012345678">
+                        <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form_group">
+                    <div class="form_item">
+                      <strong class="form_name">일반전화</strong>
+                      <div class="form_inp tel">
+                        <input type="number" title="일반전화 번호 입력" placeholder="-없이 입력">
+                        <p class="txt_vaild">일반전화 번호를 입력해주세요</p>
                       </div>
                     </div>
                   </div>
                   <div class="form_group">
-                    <div class="form_item">
-                      <strong class="form_name">이메일</strong>
-                      <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
+                    <div class="form_item not_vaild">
+                      <strong class="form_name">이메일 <sup class="require">*</sup></strong>
+                      <div class="form_inp col2 with_btn email">
+                        <input type="text" name="" title="이메일 주소 입력" value="recruit@kinkos.co.kr">
+                        <button type="button" class="btn type02" disabled>이메일 인증</button>
+                        <!-- <button type="button" class="btn type02">재전송</button> -->
+                      </div>
+                      <div class="form_inp col2 with_btn email_auth">
+                        <input type="text" name="" title="인증번호 입력" placeholder="인증번호 입력">
+                        <button type="button" class="btn type01">확인</button>
+                        <span id="timer" class="timer" style="display: block;">10:00</span>
+                      </div>
+                      <p class="txt_vaild">입력하신 메일 형식이 맞지 않습니다.</p>
                     </div>
                   </div>
                   <div class="form_group">
                     <div class="form_item">
-                      <strong class="form_name">휴대폰번호</strong>
-                      <div class="form_inp">
-                        <input type="text" value="010-1214-2134" title="휴대폰번호 입력">
+                      <strong class="form_name">주소</strong>
+                      <div class="form_inp address">
+                        <input type="text" title="기본 주소" placeholder="우편 번호">
+                        <a href="#popup1" class="btn type03 btn_popup">주소 검색</a>
+                        <input type="text" title="기본 주소" placeholder="기본 주소" value="서울시 서초구 강남대로 219">
+                        <input type="text" title="상세 주소" placeholder="상세 주소" value="남경빌딩 8층">
                       </div>
                     </div>
                   </div>
-                
-                
-                  <div class="form_group top_line">
-                    <div class="form_item chk_box">
-                      <strong class="form_name">SMS 수신여부</strong>
-                      <div class="form_inp">
-                        <input type="radio" name="chkSMS" id="chkSMS_1" disabled>
-                        <label for="chkSMS_1">수신동의</label>
-                
-                        <input type="radio" name="chkSMS" id="chkSMS_2" checked disabled>
-                        <label for="chkSMS_2">수신 동의안함</label>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="form_group btm_line">
-                    <div class="form_item chk_box">
-                      <strong class="form_name">이메일 수신여부</strong>
-                      <div class="form_inp">
-                        <input type="radio" name="chkemail" id="chkemail_1" checked disabled>
-                        <label for="chkemail_1">수신동의</label>
-                
-                        <input type="radio" name="chkemail" id="chkemail_2" disabled>
-                        <label for="chkemail_2">수신 동의안함</label>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="btn_wrap col2 center">
-                    <a href="#url" class="btn large type03">수정하기</a>
-                    <a href="#url" class="btn large type01">확인</a>
-                    <a href="#url" class="btn large type02">취소</a>
-                  </div>
-                
-                </div>
 
-
-
-
-
-
-
-                <!-- 회원정보 수정하기 -->
-                <div class="form_wrap">
-                  <div class="form_group">
-                    <div class="form_item">
-                      <strong class="form_name">이름</strong>
-                      <div class="form_inp">
-                        홍길동
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_group">
-                    <div class="form_item">
-                      <strong class="form_name">아이디</strong>
-                      <div class="form_inp">
-                        dfsfdfs
-                      </div>
-                    </div>
-                  </div>
                   <div class="form_group top_line">
                     <div class="form_item">
                       <strong class="form_name">현재 비밀번호</strong>
                       <div class="form_inp">
-                        <input type="password" title="현재 비밀번호 입력" placeholder="현재 비밀번호">
+                        <input type="password" title="비밀번호 입력" value="1234567890">
                       </div>
                     </div>
                   </div>
@@ -228,7 +172,7 @@
                     <div class="form_item">
                       <strong class="form_name">신규 비밀번호</strong>
                       <div class="form_inp">
-                        <input type="password" title="신규 비밀번호 입력" placeholder="신규 비밀번호">
+                        <input type="password" title="비밀번호 입력">
                       </div>
                     </div>
                   </div>
@@ -236,69 +180,44 @@
                     <div class="form_item">
                       <strong class="form_name">신규 비밀번호 확인</strong>
                       <div class="form_inp">
-                        <input type="password" title="신규 비밀번호 확인 입력" placeholder="신규 비밀번호 확인">
+                        <input type="password" title="비밀번호 입력">
                       </div>
                     </div>
                   </div>
-                  <div class="form_group top_line">
-                    <div class="form_item">
-                      <strong class="form_name">이메일</strong>
-                      
-                      <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
-                      <p class="txt_vaild">이메일 주소를 확인해주세요</p>
 
-                    </div>
-                  </div>
-                  <div class="form_group top_line">
-                    <div class="form_item">
-                      <strong class="form_name">휴대폰번호</strong>
-                      <div class="form_inp col3">
-                        <select name="" id="" title="휴대전화 앞 3자리 선택">
-                          <option value="">010</option>
-                          <option value="">017</option>
-                          <option value="">019</option>
-                        </select>
-                        <input type="number" title="휴대전화 중간 3자리 입력">
-                        <input type="number" title="휴대전화 마지막3자리 입력">
-                        <p class="txt_vaild">휴대전화 번호를 입력해주세요</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                
                   <div class="form_group top_line">
                     <div class="form_item chk_box">
                       <strong class="form_name">SMS 수신여부</strong>
                       <div class="form_inp">
-                        <input type="radio" name="chkSMS_1-1" id="chkSMS_1_1">
-                        <label for="chkSMS_1_1">수신동의</label>
+                        <input type="radio" name="chkSMS" id="chkSMS_1">
+                        <label for="chkSMS_1">수신동의</label>
                 
-                        <input type="radio" name="chkSMS_1" id="chkSMS_2_1" checked>
-                        <label for="chkSMS_2_1">수신 동의안함</label>
+                        <input type="radio" name="chkSMS" id="chkSMS_2" checked>
+                        <label for="chkSMS_2">수신 동의안함</label>
                       </div>
                     </div>
                   </div>
                 
-                  <div class="form_group btm_line">
+                  <div class="form_group">
                     <div class="form_item chk_box">
                       <strong class="form_name">이메일 수신여부</strong>
                       <div class="form_inp">
-                        <input type="radio" name="chkemail_1" id="chkemail_1_1" checked>
-                        <label for="chkemail_1_1">수신동의</label>
+                        <input type="radio" name="chkemail" id="chkemail_1" checked>
+                        <label for="chkemail_1">수신동의</label>
                 
-                        <input type="radio" name="chkemail_1" id="chkemail_2_1">
-                        <label for="chkemail_2_1">수신 동의안함</label>
+                        <input type="radio" name="chkemail" id="chkemail_2">
+                        <label for="chkemail_2">수신 동의안함</label>
                       </div>
                     </div>
                   </div>
-                
-                  <div class="btn_wrap col2 center">
-                    <a href="#url" class="btn large type01">저장</a>
-                    <a href="#url" class="btn large type02">취소</a>
-                  </div>
-                
+
+
                 </div>
 
+                <div class="btn_wrap col2 center">
+                  <a href="#url" class="btn large type02">취소</a>
+                  <a href="#url" class="btn large type01">확인</a>
+                </div>
 
               </fieldset>
             </form>

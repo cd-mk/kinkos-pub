@@ -60,6 +60,7 @@
         <h2>마이페이지</h2>
         <ul>
           <li><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">구매내역리스트</a></li>
+          <li><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">취소/환불/교환 리스트</a></li>
           <li> <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
             <ul>
               <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
@@ -81,58 +82,28 @@
       
       <!-- 본문 -->
       <div class="con_box mpg_wrap">
-        <div class="my_wrap">
-          <ul>
-            <li class="my_info">
-              <p><strong>shing1234</strong> 님의 킨코스</p>
-              <p class="my_point"><i>P</i>1,000</p>
-            </li>
-            <li class="my_status"> <strong>입금대기중</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>결제 완료</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>배송준비중</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>배송중</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>배송완료</strong>
-              <p>0</p>
-            </li>
-            <li class="my_status"> <strong>취소/환불/교환</strong>
-              <p>0</p>
-            </li>
-          </ul>
-        </div>
+       
         <div class="userinfo_wrap">
-          <div class="tit_box mid">
+          <div class="tit_box section mid">
             <h3>배송지 정보 관리</h3>
           </div>
           
 
-          <div class="ly_tab">
+          <div class="page_tab col2 ly_tab">
             <ul class="" id="tab1">
-              <li>국내 배송 주소</li>
-              <li>해외 배송 주소</li>
+              <li><span>국내 배송 주소</span></li>
+              <li><span>해외 배송 주소</span></li>
             </ul>
           </div>
 
           <div class="con_box" id="tab1_con">
             <!-- 국내 -->
-            <div class="basket_list">
+            <div class="basket_list top_line_none">
               <table>
                 <caption>장바구니 목록</caption>
                 <thead>
                   <tr>
-                    <th scope="col" class="pdt_chk">
-                      <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 -->
-                      <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
-                      <label for="chk_all"></label>
-                      선택
-                    </th>
+                    <th scope="col">선택</th>
                     <th scope="col">배송지 이름</th>
                     <th scope="col">받는 사람</th>
                     <th scope="col">주소</th>
@@ -147,11 +118,11 @@
                       <input type="checkbox" id="chk1" name="pdt_chk">
                       <label for="chk1"></label>
                     </td>
-                    <td>[기본배송지] 킨스코리아</td>
+                    <td class="subject"><a href="#url" class="txt_underline">[기본배송지] 킨스코리아</a></td>
                     <td>홍길동</td>
                     <td>서울시 금천구 가산동 </td>
                     <td>010-7655-8932</td>
-                    <td><button class="btn type03" style="width:70px;">삭제</button></td>
+                    <td><button class="btn type03 small">삭제</button></td>
                   </tr>
                   <!-- loop -->
             
@@ -165,17 +136,12 @@
             
 
             <!-- 해외 -->
-            <div class="basket_list" style="display: none;">
+            <div class="basket_list top_line_none" style="display: none;">
               <table>
                 <caption>장바구니 목록</caption>
                 <thead>
                   <tr>
-                    <th scope="col" class="pdt_chk">
-                      <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 -->
-                      <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
-                      <label for="chk_all"></label>
-                      선택
-                    </th>
+                    <th scope="col">선택</th>
                     <th scope="col">배송지 이름</th>
                     <th scope="col">받는 사람</th>
                     <th scope="col">주소</th>
@@ -187,14 +153,14 @@
                   <!-- loop -->
                   <tr>
                     <td class="pdt_chk">
-                      <input type="checkbox" id="chk1" name="pdt_chk">
-                      <label for="chk1"></label>
+                      <input type="checkbox" id="chk2" name="pdt_chk">
+                      <label for="chk2"></label>
                     </td>
-                    <td>[기본배송지] 킨스코리아</td>
+                    <td class="subject"><a href="#url" class="txt_underline">[기본배송지] 킨스코리아</a></td>
                     <td>홍길동</td>
                     <td>서울시 금천구 가산동 </td>
                     <td>010-7655-8932</td>
-                    <td><button class="btn type03" style="width:70px;">삭제</button></td>
+                    <td><button class="btn type03 small">삭제</button></td>
                   </tr>
                   <!-- loop -->
             

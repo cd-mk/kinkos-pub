@@ -87,7 +87,7 @@
 
 
         <!-- 본문 -->
-        <div class="con_box mpg_wrap">
+        <div class="con_box mpg_main">
 
           <div class="my_wrap">
             <ul>
@@ -242,7 +242,16 @@
 
 
     <script type="text/javascript">
-
+    var service_thumb = new Swiper('.pdt_slide', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      autoplay: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
     </script>
 
     <!-- //SCRIPT -->
