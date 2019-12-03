@@ -57,7 +57,7 @@
       <!-- //breadcrumb  -->
 
       <!-- visual area Swiper -->
-      <div class="visual_wrap swiper-container layout_full">
+      <div class="prdList_visual_wrap swiper-container layout_full">
         <div class="swiper-wrapper">
           <!-- loop (리스트 추가 가능) -->
           <!-- color option:  color_black/color_white 중 선택 할 수 있게  -->
@@ -274,7 +274,17 @@
 <script src="../js/sub.js"></script>
 
 <script>
-  
+  (function () {
+    var prdList_visual = new Swiper('.prdList_visual_wrap', {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: true,
+      pagination: {
+        el: '.prdList_visual_wrap .swiper-pagination',
+        clickable: true,
+      }
+    });
+  })();
 </script>
  <!-- //SCRIPT -->
 </body>
