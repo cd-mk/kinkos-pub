@@ -715,6 +715,10 @@
                     </div>
                   </div>
                 </div> -->
+
+                <div class="btn_wrap top right">
+                  <a href="#popup1" class="btn type01 mid btn_popup">문의하기</a>
+                </div>
               
                 <div class="accor_wrap">
                   <!-- repeat faq item list -->
@@ -874,6 +878,50 @@
     <div id="footer" class="layout_width">
     </div>
 
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">상품 문의하기</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+  
+          <!--  -->
+          <div class="pop_qna_wrap">
+            <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
+            <div class="form_wrap">
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">제목 <sup class="require">*</sup></strong>
+                  <div class="form_inp">
+                    <input type="text" title="제목 입력">
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name ver_top">내용 <sup class="require">*</sup></strong>
+                  <div class="form_inp">
+                    <textarea name="" id="" title="내용 입력"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_wrap col2 center top">
+              <button type="button" class="btn large type02">취소</button>
+              <button type="submit" class="btn large type01">작성완료</button>
+            </div>
+          </div>
+          <!--  -->
+
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
+
+
     <!-- //FOOTER -->
 
     <div class="dim">
@@ -897,6 +945,7 @@
     <script src="../js/jquery.numspinner.min.js"></script>
   <script type="text/javascript">
     $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
+    
   </script>
 
 

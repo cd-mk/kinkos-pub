@@ -723,9 +723,10 @@ p+.btn_wrap {margin-top:40px !important;}
 .sch_wrap .item_box .btn_sch {width:200px; height:100%; background:#03a2ea; border:0; font-size:1em; color:#fff; cursor:pointer; text-align:center;padding:0;font-weight:400;;}
 .sch_wrap .item_box:last-child {position:absolute;top:0;right:20px}
 
+
 .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:99;}
-.popup_wrap .inner {position:absolute; left:50%; top:50%; width:800px; height:675px; box-sizing:border-box; background:#fff; transform:translate(-50%, -50%);}
-.popup_wrap .pop_con {overflow-y:auto;height:460px;margin:60px 40px;}
+.popup_wrap .inner {position:absolute; left:50%; top:50%; width:800px; box-sizing:border-box; background:#fff; transform:translate(-50%, -50%);}
+.popup_wrap .pop_con {overflow-y:auto;min-height:460px;margin:60px 40px;}
 .popup_wrap .inner .title {font-size:24px; font-weight:700; color:#fff;background:#03a2ea;padding:40px 60px;}
 .popup_wrap .inner .btn_pop_close {position:absolute; top:30px; right:30px; width:44px; height:44px; background:url(../image/common/mo_menu_close.svg) no-repeat 50% / 24px; padding:10px;} .popup_wrap.active {display:block;}
 .popup_wrap.small .inner {width:490px; height:606px;}
@@ -737,6 +738,26 @@ p+.btn_wrap {margin-top:40px !important;}
 .popup_wrap .result .form_wrap{background:#f3f4f6;padding: 60px 40px;}
 .popup_wrap .result p {padding:0;}
 .popup_wrap .result .btn {width:100%;}
+
+@media screen and (max-width:1024px) {
+ .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:999;}
+ .popup_wrap .inner {position:absolute; left:0; top:0; width:100%;height:100%;transform: translateX(0);}
+ .popup_wrap.sch .inner {padding:0 15px; background:#03a2ea;}
+ .popup_wrap .pop_con {overflow-y:auto;height:100%;margin:40px 15px;}
+ .popup_wrap .inner .title {font-size:20px; padding:20px 25px;text-align:left;}
+ .popup_wrap.sch .inner .title {padding:80px 0 45px 0; font-size:28px; font-weight:400; line-height:28px; text-align:center;}
+ .popup_wrap .inner .btn_pop_close {position:absolute; top:9px; right:3px;}
+ .popup_wrap .inner .item_box {display:inline-block; position:relative; width:100%; height:55px; margin:15px 0 0 0; padding:0; line-height:55px; border:0; box-sizing:border-box;}
+
+ .popup_wrap .inner .item_box .btn_list {padding:0 15px; font-size:16px; font-weight:400; line-height:55px; color:#ffffff; background:#0079c6;}
+ .popup_wrap .inner .item_box .btn_list::after {content: ""; position: absolute; top: 24px; right: 15px; width: 12px; height: 7px; background: url(../image/common/arr-btm-white.png) no-repeat 100% 50% /cover;}
+ .popup_wrap .inner .item_box .btn_list.active::after {background: url(../image/common/arr-up-white.png) no-repeat 100% 50% /cover;}
+ .popup_wrap .inner .item_box .opt_list {display:none; position:absolute; left:0; top:55px; width:100%; padding:15px 30px 35px 35px; box-sizing:border-box; background:#fff; z-index:10; line-height:1; box-shadow:0 15px 12px 5px rgba(0, 0, 0, 0.1); overflow-y:scroll; height:0; opacity:0;}
+ .popup_wrap .inner .item_box .opt_list.active {display:block; height:300px; opacity:1; transition:all 0.5s;}
+ .popup_wrap .inner .item_box .btn_sch {display:block; width:100%; height:100%; margin:15px 0 0 0; padding:0; font-size:16px; font-weight:700; line-height:16px; color:#0079c6; cursor:pointer; text-align:center; border:0; box-sizing:border-box; background:#fff;}
+}
+
+
 
 @media screen and (max-width:1500px) {
  .sch_wrap {font-size:20px}
@@ -750,8 +771,6 @@ p+.btn_wrap {margin-top:40px !important;}
  .sch_wrap {font-size:18px}
  
 }
-
-
 @media screen and (max-width:1024px) {
  .sch_wrap {top:-30px;padding:0;background:#fff;border-top:1px solid #e6e6e6;height:auto;margin:0 15px;}
  .sch_wrap .item_box {padding:0 15px;width:50% !important;height:60px;line-height:60px;border-right:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}
@@ -767,22 +786,6 @@ p+.btn_wrap {margin-top:40px !important;}
  .mall .sch_wrap .item_box {text-align:center;}
  .mall .sch_wrap .item_box .btn_popup {display:inline-block; font-size:18px; font-weight:700; line-height:18px; color:#03a2ea;}
  .mall .sch_wrap .item_box .mark {display:inline-block; position:relative; top:3px; width:14px; height:19px; margin-right:10px; background:url(../image/mall/main/ico-mark-blue.png) no-repeat center; box-sizing:border-box;}
-
- .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:999;}
- .popup_wrap .inner {position:absolute; left:0; top:0; width:100%;height:100%;transform: translateX(0);}
- .popup_wrap.sch .inner {padding:0 15px; background:#03a2ea;}
- .popup_wrap .pop_con {overflow-y:auto;height:100%;margin:40px 15px;}
- .popup_wrap .inner .title {padding:80px 0 45px 0; font-size:28px; font-weight:400; line-height:28px; text-align:center;}
- .popup_wrap .inner .btn_pop_close {position:absolute; top:9px; right:3px;}
-
- .popup_wrap .inner .item_box {display:inline-block; position:relative; width:100%; height:55px; margin:15px 0 0 0; padding:0; line-height:55px; border:0; box-sizing:border-box;}
-
- .popup_wrap .inner .item_box .btn_list {padding:0 15px; font-size:16px; font-weight:400; line-height:55px; color:#ffffff; background:#0079c6;}
- .popup_wrap .inner .item_box .btn_list::after {content: ""; position: absolute; top: 24px; right: 15px; width: 12px; height: 7px; background: url(../image/common/arr-btm-white.png) no-repeat 100% 50% /cover;}
- .popup_wrap .inner .item_box .btn_list.active::after {background: url(../image/common/arr-up-white.png) no-repeat 100% 50% /cover;}
- .popup_wrap .inner .item_box .opt_list {display:none; position:absolute; left:0; top:55px; width:100%; padding:15px 30px 35px 35px; box-sizing:border-box; background:#fff; z-index:10; line-height:1; box-shadow:0 15px 12px 5px rgba(0, 0, 0, 0.1); overflow-y:scroll; height:0; opacity:0;}
- .popup_wrap .inner .item_box .opt_list.active {display:block; height:300px; opacity:1; transition:all 0.5s;}
- .popup_wrap .inner .item_box .btn_sch {display:block; width:100%; height:100%; margin:15px 0 0 0; padding:0; font-size:16px; font-weight:700; line-height:16px; color:#0079c6; cursor:pointer; text-align:center; border:0; box-sizing:border-box; background:#fff;}
 }
 
 
