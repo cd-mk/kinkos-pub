@@ -31,7 +31,7 @@ $(".g_status_board").each(function(){
 	$('td.g_status').each(function(){
 		var vars=$(this).text();
 		var txt01 ="완료";
-		var txt02 ="수정완료";
+		var txt02 ="추가완료";
 		var txt03 ="진행";
 		var txt04 ="수정";
 		var txt05 = "동일페이지";

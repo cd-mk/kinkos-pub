@@ -21,7 +21,6 @@
 	<link rel="stylesheet" href="../css/lib/animate.css">
   <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../css/lib/swiper.min.css">
-
 	<link rel="stylesheet" href="../css/common.css">
 	<!-- only sub -->
 	<link rel="stylesheet" href="../css/sub.css">
@@ -71,27 +70,20 @@
                 <span class="ico_step"></span>
                 <span class="txt_step">
                   <span class="number">STEP 01</span>
-                  <span class="desc">주문자 정보</span>
-                </span>
-              </div>
-              <div class="step_item confirm">
-                <span class="ico_step"></span>
-                <span class="txt_step">
-                  <span class="number">STEP 02</span>
-                  <span class="desc">주문상품 확인</span>
+                  <span class="desc">장바구니</span>
                 </span>
               </div>
               <div class="step_item order">
                 <span class="ico_step"></span>
                 <span class="txt_step">
                   <span class="number">STEP 03</span>
-                  <span class="desc">주문결제</span>
+                  <span class="desc">주문/결제</span>
                 </span>
               </div>
               <div class="step_item finish active">
                 <span class="ico_step"></span>
                 <span class="txt_step">
-                  <span class="number">STEP 04</span>
+                  <span class="number">STEP 03</span>
                   <span class="desc">결제완료</span>
                 </span>
               </div>
@@ -103,27 +95,51 @@
 
           
 
-          <div class="noti top big">
+          <div class="tit_box">
             <p class="ico_area mo"><img src="../image/mall/product/ico-result.png" alt=""></p>
-            주문이 정상적으로 완료되었습니다.
+            <h3>주문이 정상적으로 완료되었습니다.</h3>
           </div>
 
-          <div class="inner result">
+          <!-- loop -->
+          <div class="result">
             <dl>
-              <dt>이름</dt>
-              <dd>홍길동</dd>
-
               <dt>주문 번호</dt>
               <dd><span class="order_num">23023012313</span></dd>
 
-              <dt>결제 금액</dt>
-              <dd><span class="price">15,000원</span></dd>
+              <dt>받으시는 분</dt>
+              <dd>킨코스</dd>
 
-              <dt>결제 방법</dt>
-              <dd>계좌이체(결제 확인중)</dd>
+              <dt>주소</dt>
+              <dd>
+                (06729)<br>
+                서울특별시 서초구 강남대로 291 남강빌딩 8층
+              </dd>
+              <dt>휴대전화</dt>
+              <dd>010-1234-5678</dd>
+
+              <dt>일반전화</dt>
+              <dd>02-1234-5678</dd>
+              
+              <dt>결제정보</dt>
+              <dd>
+                <!-- Case1 – ARS 카드결제, 에스크로 계좌이체, 신용카드 -->
+                <strong>신용카드</strong>(1234-1234-****-1234)
+                <p class="desc">결제일시 2019.11.28 11:18</p>
+
+                <!-- Case2 – 1-1 무통장 입금 -->
+                <!-- <strong>무통장 입금</strong><br>
+                KEB 하나은행 0000-0000-0000-0000
+                <p class="desc">결제일시 2019.11.28 11:18</p> -->
+              </dd>
             </dl>
           </div>
+          <!-- loop -->
 
+
+          <div class="btn_wrap col2 center">
+            <button type="button" class="btn large type02">온라인몰 메인</button>
+            <button type="button" class="btn large type01">주문내역 보기</button>
+          </div>
         <!-- //본문 -->
         </div>
       </div>
