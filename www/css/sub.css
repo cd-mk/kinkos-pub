@@ -2567,14 +2567,17 @@ position: absolute;top:30px;right:40px;}
 .cart_wrap .result p {padding:0;font-weight: 400;}
 
 @media screen and (max-width:1024px) {
- .cart_wrap .form_wrap {padding-bottom:30px;}
- .cart_wrap .btn_wrap.col2 .btn {width:calc((100% - 14px)/2);min-width:auto; display:inline-block;margin-top:0;}
- .cart_wrap .btn_wrap.col2 .btn:last-child {margin-left:10px;}
- .cart_wrap .form_item .form_name {color:#777;font-weight:400;}
+  .cart_wrap .form_wrap {padding-bottom:30px;}
+  .cart_wrap .tit_box h3 {font-size:24px;}
+  .cart_wrap .btn_wrap.col2 .btn {width:calc((100% - 14px)/2);min-width:auto; display:inline-block;margin-top:0;}
+  .cart_wrap .btn_wrap.col2 .btn:last-child {margin-left:10px;}
+  .cart_wrap .form_item .form_name {color:#777;font-weight:400;}
 
-  .cart_wrap .result {width:100%;margin:40px auto 0;padding:35px 30px;margin-top:25px}
-  .cart_wrap .result dt{width:30%;font-weight:400;color:#777;}
-  .cart_wrap .result dd{color:#222;}
+  .cart_wrap .result {width:100%;margin:40px auto 0;padding:20px 25px 40px;}
+  .cart_wrap .result dt{width:30%;}
+  .cart_wrap .result dd strong {display: block;}
+  .cart_wrap .result dt,
+  .cart_wrap .result dd {margin-top:15px;}
 }
 /* 마이페이지 */
 .my_wrap {background:#4866af;padding:30px 0;color:#fff;}
