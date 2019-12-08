@@ -2,584 +2,748 @@
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
-	<meta name="Title" content="킨코스코리아" />
-	<meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
-	<!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="킨코스코리아">
-	<meta property="og:url" content="http://www.kinkos.co.kr/">
-	<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-<meta property="og:image" content="../image/common/logo.png">
-	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
-	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-	<title>주문상품 확인 | 장바구니 | 킨코스코리아</title>
-	<!-- CSS FILE LOAD -->
-	<link rel="stylesheet" href="../css/lib/animate.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+  <meta name="Title" content="킨코스코리아" />
+  <meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+  <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="킨코스코리아">
+  <meta property="og:url" content="http://www.kinkos.co.kr/">
+  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
+  <meta property="og:image" content="../image/common/logo.png">
+  <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+  <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <title>장바구니 | 킨코스코리아</title>
+  <!-- CSS FILE LOAD -->
+  <link rel="stylesheet" href="../css/lib/animate.css">
   <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="../css/lib/swiper.min.css">
 
-	<link rel="stylesheet" href="../css/common.css">
-	<!-- only sub -->
-	<link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- only sub -->
+  <link rel="stylesheet" href="../css/sub.css">
+
 </head>
 
 <body>
-	<!-- 접근성 바로가기 메뉴(숨김) -->
-	<div id="accessibility">
-		<strong class="blind">컨텐츠바로가기</strong>
-		<ul>
-			<li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
-			<li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
-		</ul>
-	</div>
-	<!-- //접근성 바로가기 메뉴(숨김) -->
+<!-- 접근성 바로가기 메뉴(숨김) -->
+<div id="accessibility">
+  <strong class="blind">컨텐츠바로가기</strong>
+  <ul>
+    <li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+    <li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+  </ul>
+</div>
+<!-- //접근성 바로가기 메뉴(숨김) -->
 
-	<!-- WRAP (mall or company css추가)-->
-	<div id="wrap" class="mall">
+<!-- WRAP (mall or company css추가)-->
+<div id="wrap" class="mall">
 
-		<!-- HEADER -->
-		<div id="header">
-		</div>
-		<!-- //HEADER -->
+  <!-- HEADER -->
+  <div id="header">
+  </div>
+  <!-- //HEADER -->
 
-		<!-- CONTENT -->
-		<div id="content">
-			<!-- breadcrumb  -->
-			<div class="breadcrumb_wrap">
-        <ul class="item_list">
-          <li><a href="#url" class="home">Home</a></li>
-					<li><a href="#">장바구니</a></li>
-				</ul>
-			</div>
-      <!-- //breadcrumb  -->
-      
-			<!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap no_tit">
+  <!-- CONTENT -->
+  <div id="content">
+    <!-- breadcrumb  -->
+    <div class="breadcrumb_wrap">
+      <ul class="item_list">
+        <li><a href="#url" class="home">Home</a></li>
+        <li><a href="#">장바구니</a></li>
+      </ul>
+    </div>
+    <!-- //breadcrumb  -->
 
-        <!-- 본문 -->
-        <!-- 콘텐츠 "con_box" 고정 -->
-        <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
-        <div class="con_box cart_wrap">
-          <!-- step -->
-          <div class="step_wrap">
-            <div class="inner clearfix">
-              <div class="step_item user">
-                <span class="ico_step"></span>
-                <span class="txt_step">
+    <!-- 콘텐츠 group "cont_wrap" 고정 -->
+    <div class="cont_wrap">
+      <!-- 본문 -->
+      <!-- 콘텐츠 "con_box" 고정 -->
+      <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
+      <div class="con_box cart_wrap">
+        <!-- step -->
+        <div class="step_wrap">
+          <div class="inner clearfix">
+            <div class="step_item user">
+              <span class="ico_step"></span>
+              <span class="txt_step">
                   <span class="number">STEP 01</span>
                   <span class="desc">장바구니</span>
                 </span>
-              </div>
-              <div class="step_item order active">
-                <span class="ico_step"></span>
-                <span class="txt_step">
+            </div>
+            <div class="step_item order active">
+              <span class="ico_step"></span>
+              <span class="txt_step">
                   <span class="number">STEP 03</span>
                   <span class="desc">주문/결제</span>
                 </span>
-              </div>
-              <div class="step_item finish">
-                <span class="ico_step"></span>
-                <span class="txt_step">
+            </div>
+            <div class="step_item finish">
+              <span class="ico_step"></span>
+              <span class="txt_step">
                   <span class="number">STEP 03</span>
                   <span class="desc">결제완료</span>
                 </span>
+            </div>
+          </div>
+        </div>
+        <!-- //step -->
+
+        <div class="section pc">
+          <div class="section mid guide_box">
+            <ul>
+              <li>상품수량 및 옵션변경은 상품화면 또는 장바구니에서 가능합니다.</li>
+            </ul>
+          </div>
+
+          <!-- 장바구니 목록 테이블 -->
+          <div class="section mid basket_list confirm">
+            <h3 class="title">주문상품 확인</h3>
+            <table>
+              <caption>
+                구매 상세 목록
+              </caption>
+              <colgroup>
+                <col width="*" />
+                <col width="5%" />
+                <col width="15%" />
+                <col width="15%" />
+                <col width="30%" />
+              </colgroup>
+              <thead>
+              <tr>
+                <th>상품/옵션정보</th>
+                <th>수량</th>
+                <th>상품금액</th>
+                <th>배송</th>
+                <th>배송비 안내</th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- loop -->
+              <tr class="line_start">
+                <td class="td_ct_img">
+                  <div class="pdt_info">
+                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
+                    <div class="pdt_info_title">
+                      <span class="pdt_info_title_txt">100100100</span>
+                      <span class="pdt_info_title_name">즉석명함 100매</span>
+                    </div>
+                  </div>
+                  <div class="pdt_info_option">
+                    <p><span>[사이즈] 90mm X 55mm</span></p>
+                    <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                    <p class="add_option">
+                      <i class="ico cramp"><span class="blind"></span></i>
+                      <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                    </p>
+                  </div>
+                </td>
+                <td class="td_ct_num">
+                  <span class="font_weight_bold">1</span>개
+                </td>
+                <td class="td_ct_price">
+                  <div class="pdt_price_info">
+                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                    <div class="pdt_sale_price"><span>판매금액</span><span>9,000,000원</span></div>
+                  </div>
+                </td>
+                <td class="td_ct_delivery">
+                  <div class="pdt_delivery_select">직접수령</div>
+                  <div class="pdt_delivery_select other_select">가산디지털단지</div>
+                  <div class="pdt_delivery_price"><span>배송비 <span class="font_weight_bold">0</span>원</span></div>
+                </td>
+                <td class="td_ct_file">
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>100,000원 이상 구매 시 배송비 무료</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>제주도 3,000원 추가</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>제주도 외 도서산간 6,000원 추가</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="line_end"> <!-- 등록된 파일 리스트 -->
+                <td colspan="5" class="td_ct_regist_files">
+                  <div class="td_ct_regist_files_wrap">
+                    <div class="td_ct_regist_files_title">등록파일</div>
+                    <div class="td_ct_regist_files_name">
+                      <span>즉석명함_디자인.png</span>
+                      <span>즉석명함_디자인(앞면).jpg</span>
+                      <span>즉석명함_디자인(뒷면).jpg</span>
+                      <span>즉석명함_디자인.xlxs</span>
+                      <span>즉석명함_디자인.pptx</span>
+                      <span>즉석명함_디자인.doc</span>
+                    </div>
+                  </div>
+                </td>
+              </tr> <!-- //등록된 파일 리스트 -->
+              <!-- loop -->
+
+              <tr class="line_start">
+                <td class="td_ct_img">
+                  <div class="pdt_info">
+                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
+                    <div class="pdt_info_title">
+                      <span class="pdt_info_title_txt">100100100</span>
+                      <span class="pdt_info_title_name">템플릿 명함_기업 가로형</span>
+                    </div>
+                  </div>
+                  <div class="pdt_info_option">
+                    <p><span>[템플릿 선택] 기업 가로형-9</span><span>[수량] 100매</span></p>
+                    <p><span>[재질] 하모니 198g</span><span>1개 (+55,000원)</span></p>
+                    <p class="add_option">
+                      <i class="ico cramp"><span class="blind"></span></i>
+                      <span>[코너라운딩] 2면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                    </p>
+                  </div>
+                </td>
+                <td class="td_ct_num">
+                  <span class="font_weight_bold">2</span>개
+                </td>
+                <td class="td_ct_price">
+                  <div class="pdt_price_info">
+                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                    <div class="pdt_sale_price"><span>판매금액</span><span>9,000,000원</span></div>
+                  </div>
+                </td>
+                <td class="td_ct_delivery">
+                  <div class="pdt_delivery_select">택배수령</div>
+                  <div class="pdt_delivery_price"><span>배송비 <span class="font_weight_bold">2,500</span>원</span></div>
+                </td>
+                <td class="td_ct_file">
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>100,000원 이상 구매 시 배송비 무료</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="line_end">
+                <td colspan="5" class="td_ct_regist_files">
+                  <div class="td_ct_regist_files_wrap">
+                    <div class="td_ct_regist_files_title">등록파일</div>
+                    <div class="td_ct_regist_files_name">
+                      <span>즉석명함_디자인.png</span>
+                      <span>즉석명함_디자인(앞면).jpg</span>
+                      <span>즉석명함_디자인(뒷면).jpg</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="line_start">
+                <td class="td_ct_img">
+                  <div class="pdt_info">
+                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
+                    <div class="pdt_info_title">
+                      <span class="pdt_info_title_txt">100100100</span>
+                      <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
+                    </div>
+                  </div>
+                  <div class="pdt_info_option">
+                    <p><span>[사이즈 (긴쪽)] ⑦ 7m</span></p>
+                    <p class="after_content_plus"><span>[마감방식] 각목+노끈(10M)</span><span>113,000원 (+131,000원)</span></p>
+                    <p class="add_option">
+                      <i class="ico cramp"><span class="blind"></span></i>
+                      <span>[끈추가] 10m</span><span>1개 (+2,000원)</span>
+                    </p>
+                  </div>
+                </td>
+                <td class="td_ct_num">
+                  <span class="font_weight_bold">1</span>개
+                </td>
+                <td class="td_ct_price">
+                  <div class="pdt_price_info">
+                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                    <div class="pdt_sale_price"><span>판매금액</span><span>9,000,000원</span></div>
+                  </div>
+                </td>
+                <td class="td_ct_delivery">
+                  <div class="pdt_delivery_select">직접수령</div>
+                  <div class="pdt_delivery_select other_select">가산디지털단지</div>
+                  <div class="pdt_delivery_price"><span>배송비 <span class="font_weight_bold">0</span>원</span></div>
+                </td>
+                <td class="td_ct_file">
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
+                  </div>
+                  <div class="pdt_shipping_info">
+                    <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="line_end">
+                <td colspan="5" class="td_ct_regist_files">
+                  <div class="td_ct_regist_files_wrap">
+                    <div class="td_ct_regist_files_title">등록파일</div>
+                    <div class="td_ct_regist_files_name">
+                      <span>즉석명함_디자인.png</span>
+                      <span>즉석명함_디자인(앞면).jpg</span>
+                      <span>즉석명함_디자인(뒷면).jpg</span>
+                      <span>즉석명함_디자인.xlxs</span>
+                      <span>즉석명함_디자인.pptx</span>
+                      <span>즉석명함_디자인.doc</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //장바구니 목록 테이블 -->
+
+          <!-- 배송지 정보, 주문자 정보 -->
+          <div class="shipping_info">
+            <div class="box">
+              <div class="box_item">
+                <h3 class="title">배송지 정보</h3>
+
+                <div class="shipping_info_items">
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">배송지 선택</div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp">
+                        <input type="radio" class="shipping_address_radio" id="shipping_info_radio1" name="shipping_info_radio_dummy" data-target="shipping_address_default" checked="checked" />
+                        <label for="shipping_info_radio1">기본배송지</label>
+
+                        <input type="radio" class="shipping_address_radio" id="shipping_info_radio2" name="shipping_info_radio_dummy" data-target="shipping_address_new">
+                        <label for="shipping_info_radio2">신규배송지</label>
+                      </div>
+
+                      <a href="#" class="btn type03 small btn_popup">배송지 목록</a>
+                    </div>
+                  </div>
+
+                  <div class="shipping_address_item shipping_address_default">
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">받으시는 분</div>
+                      <div class="shipping_info_item_content">킨코스</div>
+                    </div>
+
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">주소</div>
+                      <div class="shipping_info_item_content">(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</div>
+                    </div>
+
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">휴대전화</div>
+                      <div class="shipping_info_item_content">010-1234-5678</div>
+                    </div>
+
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">일반전화</div>
+                      <div class="shipping_info_item_content">02-1234-5678</div>
+                    </div>
+
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">요청사항</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp">
+                          <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
+                        </div>
+                        <div class="inp_word_count"><span>0</span>/<span>100</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="shipping_address_item shipping_address_new hide">
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">받으시는 분</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp">
+                          <input type="text" title="요청사항" placeholder="20자 이내로 입력해주세요." />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">배송지명</div>
+                      <div class="shipping_info_item_content">
+                        <input type="text" title="요청사항" placeholder="20자 이내로 입력해주세요." />
+                      </div>
+                    </div>
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">휴대전화</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp tel">
+                          <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">일반전화</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp tel">
+                          <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">주소</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp address">
+                          <input type="text" title="기본 주소" placeholder="우편 번호">
+                          <a href="#popup1" class="btn type03 btn_popup">주소 찾기</a>
+                          <input type="text" title="기본 주소" placeholder="기본 주소">
+                          <input type="text" title="상세 주소" placeholder="상세 주소">
+                        </div>
+                        <div class="form_inp shipping_address_select">
+                          <input type="checkbox" id="shipping_address_chk_1" name="shipping_address_checkbox_dummy" checked="checked">
+                          <label for="shipping_address_chk_1">배송지 목록 추가</label>
+
+                          <input type="checkbox" id="shipping_address_chk_2" name="shipping_address_checkbox_dummy">
+                          <label for="shipping_address_chk_2">기본배송지로 선택</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shipping_info_item request">
+                      <div class="shipping_info_item_title">요청사항</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp">
+                          <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
+                        </div>
+                        <div class="inp_word_count"><span>0</span>/<span>100</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box_item">
+                <h3 class="title">주문자 정보</h3>
+
+                <div class="shipping_info_items orderer">
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">이름</div>
+                    <div class="shipping_info_item_content">킨코스</div>
+                  </div>
+
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">이메일</div>
+                    <div class="shipping_info_item_content">kinkos@kinkos.co.kr</div>
+                  </div>
+
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">휴대전화</div>
+                    <div class="shipping_info_item_content">010-1234-5678</div>
+                  </div>
+
+                  <div class="shipping_info_item info">
+                    <span>주문자 정보로 결제관련 정보가 제공됩니다.</span>
+                    <span>정확한 정보로 등록되어 있는지 확인해주세요.</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <!-- //step -->
-
-          <!-- <p><strong class="user_alert"><strong>홍길동님</strong></p> --><strong>홍길동</strong>님</p>
-
-          <div class="noti top big">
-          <p>장바구니 상품을 확인해주세요.</p>
-          </div>
-
-
-            <!-- 장바구니 목록 테이블 -->
-            <div class="basket_list">
-              <table>
-                <caption>
-                  구매 상세 목록
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col" class="pdt_chk">
-                      <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 
-                      추가 수정부분
-                      th: 체크박스 class만 남겨놓고 class삭제
-                      td: 모바일에서 제목값 구분으로 각각 class명 지정
-                      -->
-                      <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
-                      <label for="chk_all"></label>선택
-                    </th>
-                    <th scope="col">주문번호</th>
-                    <th scope="col" colspan="2">상품정보</th>
-                    <th scope="col">수량</th>
-                    <th scope="col">상품금액</th>
-                    <th scope="col">배송비</th>
-                    <th scope="col">소계</th>
-                    <th scope="col">센터선택</th>
-                    <th scope="col">상태</th>
-                    <th scope="col">시안</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- loop -->
-                  <tr class="line_start">
-                    <td rowspan="2" class="pdt_chk"><input type="checkbox" id="chk1" name="pdt_chk"><label for="chk1"></label></td>
-                    <td rowspan="2" class="td_ct_odrnum">123342343434</td>
-                    <td rowspan="2" class="td_ct_img"><a href="#" class="td_ct_info"> <span class="img"><img src="../image/mall/product/pl_01.jpg"></span></a></td>
-                    <td class="td_ct_title">즉석명함_100매</td>
-                    <td rowspan="2" class="td_ct_num"><div class="form_inp"><input type="text" class="dtl_num inp" title="수량 입력" /></div></td>
-                    <td class="td_ct_price">30,000원</td>
-                    <td rowspan="2" class="td_ct_stotal">30,000원</td>
-                    <td rowspan="2" class="td_ct_delivery">무료</td>
-                    <td rowspan="2" class="td_ct_center">홍대</td>
-                    <td rowspan="2" class="td_ct_status">배송<br>완료</td>
-                    <td rowspan="2" class="td_ct_sian"><a href="#popup1" class="btn_popup">시안보기</a></td>
-                  </tr>
-                  <tr>
-                    <td class="td_ct_opt">
-                      사이즈 90mm X 55 mm /
-                    재질 마쉬멜로우 233g +코너라운딩 3면
-                    </td>
-                    <td class="td_ct_opt_price">4,500원</td>
-                  </tr>
-                  <!-- loop -->
-
-
-                  <tr class="line_start">
-                    <td rowspan="2" class="pdt_chk"><input type="checkbox" id="chk1" name="pdt_chk"><label for="chk1"></label></td>
-                    <td rowspan="2" class="td_ct_odrnum">123342343434</td>
-                    <td rowspan="2" class="td_ct_img"><a href="#" class="td_ct_info"> <span class="img"><img src="../image/mall/product/pl_01.jpg"></span></a></td>
-                    <td class="td_ct_title">즉석명함_100매</td>
-                    <td rowspan="2" class="td_ct_num"><div class="form_inp"><input type="text" class="dtl_num inp" title="수량 입력" /></div></td>
-                    <td class="td_ct_price">30,000원</td>
-                    <td rowspan="2" class="td_ct_stotal">30,000원</td>
-                    <td rowspan="2" class="td_ct_delivery">무료</td>
-                    <td rowspan="2" class="td_ct_center">홍대</td>
-                    <td rowspan="2" class="td_ct_status">배송<br>완료</td>
-                    <td rowspan="2" class="td_ct_sian"><a href="#popup1" class="btn_popup">시안보기</a></td>
-                  </tr>
-                  <tr>
-                    <td class="td_ct_opt">
-                      사이즈 90mm X 55 mm /
-                    재질 마쉬멜로우 233g +코너라운딩 3면
-                    </td>
-                    <td class="td_ct_opt_price">4,500원</td>
-                  </tr>
-            
-                </tbody>
-              </table>
-              <div class="cart_chk_del">
-                <span class="desc">장바구니에 담긴 상품은 최대 10일까지 보관되며 상품 판매가 종료되는 경우 자동으로 삭제 됩니다.</span>
-                <button type="button" class="btn type03 inp_chk_del"><span>선택 삭제</span></button>
-              </div>
-            </div>
-            <!-- //장바구니 목록 테이블 -->
-
-   
-
-            <!-- 총 주문금액 -->
-            <div class="order_total">
-              <div class="tit_box mid"><h3>총 주문금액</h3></div>
-              <div class="inner">
-                <div class="box">
-                  <span class="label">상품 가격</span>
-                  <span class="price"><strong>19,800</strong>원</span>
-                </div>
-
-                <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
-
-                <div class="box">
-                  <span class="label">배송비</span>
-                  <span class="price"><strong>0</strong>원</span>
-                </div>
-
-                <div class="box total">
-                  <span class="label">총 주문 금액</span>
-                  <span class="price"><strong>19,800</strong>원</span>
-                </div>
-              </div>
-
-              <div class="btn_wrap center col2">
-                <button type="button" class="btn type02 large"><span>취소</span></button>
-                <button type="button" class="btn type01 large"><span>결제하기</span></button>
-              </div>
-            </div>
-            <!-- //총 주문금액 -->
-
-
-          <!-- 주문하는 분 -->
-          <div class="tit_box mid">
-            <h3>주문하는 분</h3>
-          </div>
-          <div class="form_wrap ver_top">
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name ver-mid">배송지 선택</strong>
-                <div class="form_inp col2 with_btn">
-                  <select name="" id="" title="휴대전화 앞 3자리 선택">
-                    <option value="">우리집</option>
-                    <option value="">회사</option>
-                  </select>
-                  <a href="#popup1" class="btn type03 btn_popup">배송지 관리</a>
-                </div>
-              </div>
-              <p class="desc right">* 인쇄 준비상태 이후에는 변경 불가능합니다.</p>
-            </div>
-          
-            <div class="form_group col2 top_line">
-              <div class="form_item">
-                <strong class="form_name">이름</strong>
-                <div class="form_inp">
-                  홍길동
-                </div>
-              </div>
-            </div>
-          
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">연락처</strong>
-                <div class="form_inp">
-                  <span class="tel1">일반전화 : 02-123-3456</span> <span class="tel2">휴대폰 : 010-1234-4567</span>
-                </div>
-              </div>
-            </div>
-          
-          
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">이메일</strong>
-                <div class="form_inp">
-                  hong@cidow.com
-                </div>
-              </div>
-            </div>
-          
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">배송지</strong>
-                <div class="form_inp">
-                  (00000) 서울특별시 강남구 테헤란로 121 원빌딩 2층
-                </div>
-              </div>
-            </div>
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">배송 메모</strong>
-                <div class="form_inp">
-                  <textarea></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- //주문하는 분 -->
-          
-          <!-- 받으시는 분 -->
-          <div class="tit_box mid">
-            <h3>받으시는 분</h3>
-          </div>
-          <div class="form_wrap ver_top">
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">배송지 선택</strong>
-                <div class="form_inp">
-                  <input type="checkbox" id="chkSame">
-                  <label for="chkSame">주문자와 동일</label>
-                </div>
-              </div>
-            </div>
-          
-            <div class="form_group col2 top_line">
-              <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
-              <div class="form_item">
-                <strong class="form_name">이름</strong>
-                <div class="form_inp">
-                  <input type="text" title="성함 입력" placeholder="우리집">
-                  <p class="txt_vaild">성함을 입력해주세요</p>
-                </div>
-              </div>
-              <div class="form_item">
-                <strong class="form_name">이메일</strong>
-                <div class="form_inp email"><input type="text" name="" title="이메일 주소 입력"></div>
-                <p class="txt_vaild">이메일 주소를 확인해주세요</p>
-              </div>
-            </div>
-          
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">휴대폰 <sup class="require">*</sup></strong>
-                <div class="form_inp tel">
-                  <input type="number" title="휴대폰 번호 입력">
-                  <p class="txt_vaild">휴대폰 번호를 입력해주세요</p>
-                </div>
-              </div>
-              <div class="form_item">
-                <strong class="form_name">일반전화</strong>
-                <div class="form_inp tel">
-                  <input type="number" title="일반전화 번호 입력" placeholder="-없이 입력">
-                  <p class="txt_vaild">일반전화 번호를 입력해주세요</p>
-                </div>
-              </div>
-            </div>
-            <div class="form_group col2">
-              <div class="form_item">
-                <strong class="form_name">주소</strong>
-                <div class="form_inp address">
-                  <input type="text" title="기본 주소" placeholder="우편 번호">
-                  <a href="#popup1" class="btn type03 btn_popup">주소 검색</a>
-                  <input type="text" title="기본 주소" placeholder="기본 주소">
-                  <input type="text" title="상세 주소" placeholder="상세 주소">
-                </div>
-              </div>
-              <div class="form_item">
-                <strong class="form_name">배송 메모</strong>
-                <div class="form_inp">
-                  <textarea></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- //받으시는 분 -->
-
+          <!-- //배송지 정보, 주문자 정보 -->
 
           <!-- 총 주문금액 -->
           <div class="order_total">
-            <div class="tit_box mid">
-              <h4>총 주문금액</h4>
-            </div>
+            <h3 class="title">결제 정보</h3>
+
             <div class="inner">
               <div class="box">
-                <span class="label">상품 가격</span>
-                <span class="price"><strong>19,800</strong>원</span>
+                <div class="box_item title">
+                  <h3>합계</h3>
+                </div>
+
+                <div class="box child">
+                  <div class="box_item">
+                    <span class="label">총 상품금액</span>
+                    <span class="price">298,000원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">총 할인금액</span>
+                    <span class="price">100,000원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">배송비</span>
+                    <span class="price">5,000원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">추가 배송비</span>
+                    <span class="price">0원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="box total">
+                      <span class="label">결제금액</span>
+                      <span class="price"><strong>303,000</strong>원</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-          
-              <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
-          
-              <div class="box">
-                <span class="label">배송비</span>
-                <span class="price"><strong>0</strong>원</span>
+            </div>
+
+            <div class="order_total_desc">
+              <span><i class="order_total_desc_ico"></i>추가배송비는 지역에 따라 추가되는 도선료 등의 배송비 입니다.</span>
+            </div>
+
+            <div class="order_checkout_wrap order_payment_select">
+              <h3 class="title">결제방법 선택</h3>
+
+              <div class="order_payment_select_wrap">
+                <div class="form_inp">
+                  <input type="radio" id="radio1" name="radio_dummy" checked="checked">
+                  <label for="radio1">ARS 카드결제</label>
+
+                  <input type="radio" id="radio2" name="radio_dummy">
+                  <label for="radio2">무통장입금</label>
+
+                  <input type="radio" id="radio3" name="radio_dummy">
+                  <label for="radio3">에스크로 계좌이체</label>
+
+                  <input type="radio" id="radio4" name="radio_dummy">
+                  <label for="radio4">신용카드</label>
+
+                  <input type="radio" id="radio5" name="radio_dummy">
+                  <label for="radio5">후불결제</label>
+                </div>
               </div>
-          
-              <div class="box total">
-                <span class="label">총 주문 금액</span>
-                <span class="price"><strong>19,800</strong>원</span>
+            </div>
+
+            <div class="order_checkout_wrap order_payment_terms">
+              <h3 class="title">약관동의</h3>
+
+              <div class="order_payment_terms_wrap">
+                <div class="form_inp">
+                  <input type="checkbox" id="terms_chk_all">
+                  <label for="terms_chk_all">전체 동의</label>
+                </div>
+
+                <div class="order_payment_terms_items">
+                  <div class="order_payment_terms_item">
+                    <div class="form_inp">
+                      <input type="checkbox" id="terms_chk_1">
+                      <label for="terms_chk_1">이용약관에 동의합니다.<span class="require">&nbsp;[필수]</span></label>
+                    </div>
+                  </div>
+                  <div class="order_payment_terms_item">
+                    <div class="form_inp">
+                      <input type="checkbox" id="terms_chk_2">
+                      <label for="terms_chk_2">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소/환불 규정에 동의합니다.<span>&nbsp;[선택]</span></label>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div class="order_checkout_wrap order_payment_budget">
+              <h3 class="title">예산 선택</h3>
+
+              <div class="order_payment_budget_wrap">
+                <div class="form_inp">
+                  <input type="checkbox" id="budget_chk_1" name="budget_checkbox_dummy" checked="checked">
+                  <label for="budget_chk_1">마케팅 1팀(처음처럼)</label>
+
+                  <input type="checkbox" id="budget_chk_2" name="budget_checkbox_dummy">
+                  <label for="budget_chk_2">마케팅 2팀(클라우드)</label>
+
+                  <input type="checkbox" id="budget_chk_3" name="budget_checkbox_dummy">
+                  <label for="budget_chk_3">마케팅 3팀(파츠)</label>
+
+                  <input type="checkbox" id="budget_chk_4" name="budget_checkbox_dummy">
+                  <label for="budget_chk_4">지점예산</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="order_info">
+              <p>상품수량 및 옵션변경은 상품화면 또는 장바구니에서 가능합니다.</p>
+              <p>주문취소는 결제 1시간 내에만 가능하며, 시안작업이 시작된 이후에는 취소가 불가능합니다.</p>
+            </div>
+
+            <div class="btn_wrap center">
+              <button type="button" class="btn type02 large"><span>장바구니 이동</span></button>
+              <button type="button" class="btn type01 large"><span>결제하기</span></button>
             </div>
           </div>
           <!-- //총 주문금액 -->
-          
-          
-          <!-- 결제수단 -->
-          <div class="tit_box mid">
-            <h4>결제수단</h4>
-          </div>
-          <div class="form_wrap">
-            <div class="form_group">
-              <div class="form_item">
-                <strong class="form_name">결제 방법</strong>
-                <div class="chk_box">
-                  <input type="radio" name="payment" id="pay_1">
-                  <label for="pay_1"><span class="">ARS 카드 결제</span></label>
-          
-                  <input type="radio" name="payment" id="pay_2">
-                  <label for="pay_2"><span class="">무통장 입금</span></label>
-          
-                  <input type="radio" name="payment" id="pay_3">
-                  <label for="pay_3"><span class="">에스크로계좌이체</span></label>
-          
-                  <input type="radio" name="payment" id="pay_4">
-                  <label for="pay_4"><span class="">신용카드</span></label>
-          
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- //결제수단 -->
-          
-          <!-- 약관동의 -->
-          <div class="tit_box mid">
-            <h4>약관동의</h4>
-          </div>
-          <div class="accor_wrap">
-            <div class="accor_item">
-              <div class="accor_title">
-                <input type="checkbox" id="chk1" name="agree_chk">
-                <label for="chk1">이용약관에 동의합니다. <span class="point_blue">[필수]</span></label>
-              </div>
-              <div class="accor_con">
-                <p class="tit_agree">제1조 개인정보의 처리 목적</p>
-                <p class="desc_agree">
-                  •킨코스 코리아㈜<br>
-                  는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br>
-                  1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
-                  - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송<br>
-                  2. 서비스 이용을 위한 이용 안내<br>
-                </p>
-              </div>
-            </div>
-            <div class="accor_item">
-              <div class="accor_title">
-                <input type="checkbox" id="chk2" name="agree_chk">
-                <label for="chk2">주문할 상품 설명에 명시된 내용과 사용 조건을 확인 하였으며, 취소, 환불 규정에 동의합니다.</label>
-              </div>
-              <div class="accor_con">
-                <p class="tit_agree">제1조 개인정보의 처리 목적</p>
-                <p class="desc_agree">
-                  •킨코스 코리아㈜<br>
-                  는 수집한 개인정보를 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br>
-                  1. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
-                  - 구매 및 요금 결제, 물품배송 또는 청구지 등 발송<br>
-                  2. 서비스 이용을 위한 이용 안내<br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="agree_box">
-            <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 -->
-            <input type="checkbox" id="chk_all" class="inp_chk_all" name="agree_chk">
-            <label for="chk_all"><strong>전체 동의하기</strong></label>
-          </div>
-          <!-- 약관동의 -->
-          
-          <div class="btn_wrap center"><button type="button" class="btn type01 large"><span>결제하기</span></button></div>
+        </div>
+
         <!-- //본문 -->
-        </div>
       </div>
-      <!-- CONTENT -->
-      <!-- popup area -->
-      <div id="popup1" class="popup_wrap">
-        <div class="inner">
-          <!-- popup title -->
-          <h3 class="title">교정시안 확인</h3>
-          <!-- popup content -->
-          <div class="pop_con">
-
-            <!-- 팝업 본문 -->
-            <div class="form_group pop_sian">
-              <div class="form_item">
-                <strong class="form_name">주문자</strong>
-                <div class="form_inp">홍길동</div>
-              </div>
-
-              <div class="form_item">
-                <strong class="form_name">주문번호</strong>
-                <div class="form_inp">00000000000</div>
-              </div>
-
-              <div class="form_item">
-                <strong class="form_name">상품명</strong>
-                <div class="form_inp">즉석소형명함 100맹(양면)</div>
-              </div>
-              
-                <div class="form_item opt_default">
-                  <strong class="form_name">옵션명</strong>
-                  <div class="form_inp">사이즈 90mm X 50mm 마쉬멜로우 23g</div>
-                  <!-- 사이즈 샘플 이미지 -->
-                  <p class="size_sample"><img src="../image/common/pdt-size-sample.png" alt="사이즈 샘플 이미지"></p>
-                </div>
-
-                <div class="form_item">
-                  <strong class="form_name">수량</strong>
-                  <div class="form_inp">1</div>
-                </div>
-
-                <div class="form_item">
-                  <strong class="form_name">상태</strong>
-                  <div class="form_inp">진행중</div>
-                </div>
-
-                <div class="form_item request">
-                  <strong class="form_name">시안 수정 요청</strong>
-                  <div class="form_inp">
-                    <img src="../image/mall/product/pl_01.jpg" alt="">
-                    <!-- 파일첨부 -->
-                    <div class="form_inp js-list-item">
-                      <div class="file_inp_box">
-                        <!-- 첨부 파일 이름 출력 요소 -->
-                        <input type="text" class="js-file-name" readonly="">
-                        <button type="button" class="btn type03 js-file-label">파일 찾기</button>
-                        <button type="button" class="btn type03 js-file-del">파일 삭제</button>
-                        <input type="file" class="file_inp">
-                    
-                        <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
-                      </div>
-                    </div>
-                    <!-- //파일첨부 -->
-                    <!-- button area -->
-                    <div class="btn_wrap center col2">
-                      <button type="button" class="btn type02"><span>수정 요청</span></button>
-                      <button type="button" class="btn type01"><span>이 시안으로 결정하기</span></button>
-                    </div>
-                    <!-- //button area -->
-                  </div>
-                </div>
-
-                <div class="ly_qna">
-                   <!-- loop -->
-                  <div class="box">
-                    
-                    <img src="../image/mall/product/pl_01.jpg" alt="">
-                    <div class="text_que">
-                      <spna class="date">2019.08.17 10:11</spna>
-                      <p>이름 부분을 파란색으로 바꿔주세요.</p>
-                    </div>
-                  
-                    <div class="text_ans">
-                      <strong>킨코스 멘트</strong>
-                      <p>
-                        안녕하세요 고객님, 파란색으로 바꾸었습니다.
-                      </p>
-                    </div>
-                  </div>
-                  <!-- //loop -->
-                  <div class="box">
-                    <img src="../image/mall/product/pl_01.jpg" alt="">
-                    <div class="text_que">
-                      <spna class="date">2019.08.17 10:11</spna>
-                      <p>이름 부분을 파란색으로 바꿔주세요.</p>
-                    </div>
-
-                    <div class="text_ans">
-                      <strong>킨코스 멘트</strong>
-                      <p>
-                        안녕하세요 고객님, 파란색으로 바꾸었습니다.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-
-
-
-              </div>
-              <!-- //팝업 본문 -->
-
-          </div>
-          <!-- //popup content -->
-          <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
-        </div>
-      </div>
-    
-      <!-- //popup area -->
     </div>
+    <!-- CONTENT -->
 
-		<!-- FOOTER -->
-		<div id="footer" class="layout_width">
-		</div>
+
+    <!-- FOOTER -->
+    <div id="footer" class="layout_width">
+    </div>
     <!-- //FOOTER -->
 
-		<div class="dim">
+    <!-- S: popup area -->
+    <div id="popup1" class="mall popup_wrap cart_pdt_change">
+      <div class="inner">
+        <h3 class="title">옵션 추가/변경</h3>
+
+        <div class="popup_content">
+          <div class="pdt_info">
+            <div class="pdt_info_img"><img src="../image/mall/product/cart_option_change_pdt.jpg" /></div>
+            <div class="pdt_info_title">
+              <span class="pdt_info_title_txt">100100100</span>
+              <span class="pdt_info_title_name">즉석명함 100매</span>
+              <span class="pdt_info_title_price">10,000,000<span class="font_weight_normal">원</span></span>
+
+              <div class="pdt_info_option">
+                <p><span>[사이즈] 90mm X 55mm</span></p>
+                <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                <p class="add_option">
+                  <i class="ico cramp"><span class="blind"></span></i>
+                  <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pdt_option_select">
+            <div class="pdt_option_select_item">
+              <span>사이즈</span>
+              <select name="" id="" title="사이즈 선택">
+                <option value="">사이즈 선택</option>
+                <option value="">사이즈 1</option>
+                <option value="">사이즈 2</option>
+              </select>
+            </div>
+
+            <div class="pdt_option_select_item">
+              <span>재질</span>
+              <select name="" id="" title="재질 선택">
+                <option value="">재질 선택</option>
+                <option value="">재질 1</option>
+                <option value="">재질 2</option>
+              </select>
+            </div>
+
+            <div class="pdt_option_select_item">
+              <span>추가옵션</span>
+              <select name="" id="" title="추가옵션 선택">
+                <option value="">추가옵션 선택</option>
+                <option value="">추가옵션 1</option>
+                <option value="">추가옵션 2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pdt_price">
+            <div class="box pdt_price_calc">
+              <div class="box_item">
+                <span class="label">상품금액</span>
+                <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+              </div>
+
+              <div class="box_item">
+                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+              </div>
+
+              <div class="box_item">
+                <span class="label">할인금액</span>
+                <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+              </div>
+            </div>
+
+            <div class="box pdt_price_total">
+              <div class="box_item">
+                <span class="label">판매금액</span>
+                <span class="price">27,000,000<span class="font_weight_normal">원</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap center">
+            <button type="button" class="btn type02 large"><span>취소</span></button>
+            <button type="button" class="btn type01 large"><span>확인</span></button>
+          </div>
+        </div>
+
+
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
     </div>
+    <!-- E: popup area -->
 
-	</div>
-	<!-- //WRAP -->
+    <!-- S: popup area -->
+    <div id="popup2" class="mall popup_wrap cart_pdt_file">
+      <div class="inner">
+        <h3 class="title">요청사항 및 파일확인</h3>
 
+        <div class="popup_content">
+          <h4>요청사항</h4>
+
+          <div class="box pdt_request">
+            <div class="box_item">
+              <p>
+                시안수정사항 시안수정사항시안수정사항 시안수정사항시안수
+                정사항 시안수정사항시안수정사항 시안수정사항시안수정사항
+                시안수정사항 시안수정사항 시안수정사항 시안수정사항시안수
+                정사항 시안수정사항
+              </p>
+
+              <p>
+                시안수정사항 시안수정사항시안수정사항 시안수정사항시
+              </p>
+            </div>
+          </div>
+
+          <h4>파일확인</h4>
+
+          <div class="box pdt_files">
+            <div class="box_item">
+              <span>파일1</span>
+              <a href="#">123456.jpg</a>
+            </div>
+            <div class="box_item">
+              <span>파일2</span>
+              <a href="#">123456.jpg</a>
+            </div>
+            <div class="box_item">
+              <span>파일3</span>
+              <a href="#">123456.jpg</a>
+            </div>
+          </div>
+
+          <div class="btn_wrap center">
+            <button type="button" class="btn type02 large"><span>닫기</span></button>
+          </div>
+        </div>
+
+
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- E: popup area -->
+
+    <div class="dim">
+    </div>
+  </div>
+  <!-- //WRAP -->
 
   <!-- SCRIPT -->
   <!-- global -->
@@ -597,11 +761,67 @@
   <!-- 수량 -->
   <script type="text/javascript">
     $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
+
+    (function () {
+      function delivert_select_change()
+      {
+        var deliverySelect = $('.delivery_select');
+
+        deliverySelect.on('change', function() {
+          var obj = $(this);
+
+          var selectedOptionValue = obj.find('option:selected').attr('data-value');
+
+          if( selectedOptionValue === 'self' )
+          {
+            $('.pdt_delivery_select.other_select').removeClass('hide');
+            $('.pdt_delivery_price').addClass('hide');
+          }
+          else if( selectedOptionValue === 'delivery' )
+          {
+            $('.pdt_delivery_select.other_select').addClass('hide');
+            $('.pdt_delivery_price').removeClass('hide');
+          }
+        });
+      }
+
+      function shipping_address_select_change()
+      {
+        var shippingAddressSelect = $('.shipping_address_radio');
+
+        shippingAddressSelect.on('change', function() {
+          var obj = $(this);
+          var name = obj.attr('name');
+
+          var checkedRadio = $('input[name="' + name + '"]:checked');
+          var target = checkedRadio.attr('data-target');
+
+          if( $('.' + target).length )
+          {
+            var targetObj = $('.' + target);
+
+            $('.shipping_address_item').addClass('hide');
+            targetObj.removeClass('hide');
+          }
+        });
+      }
+
+      if( $('.delivery_select').length )
+      {
+        delivert_select_change();
+      }
+
+      if( $('.shipping_address_radio').length )
+      {
+        shipping_address_select_change();
+      }
+    })();
   </script>
 
-	<!-- //SCRIPT -->
+  <!-- //SCRIPT -->
 
 
+</div>
 </body>
 
 </html>
