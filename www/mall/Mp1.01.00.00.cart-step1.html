@@ -144,7 +144,7 @@
                         <div class="pdt_info_title">
                           <span class="pdt_info_title_txt">100100100</span>
                           <span class="pdt_info_title_name">즉석명함 100매</span>
-                          <button type="button" class="btn type03 small inp_chk_del"><span>옵션 추가/변경</span></button>
+                          <a href="#popup1" class="btn type03 small btn_popup">옵션 추가/변경</a>
                         </div>
                       </div>
                       <div class="pdt_info_option">
@@ -196,8 +196,7 @@
                       </div>
                     </td>
                     <td class="td_ct_file">
-                      <a href="#popup1" class="btn_popup">
-                        <span>요청사항</span><span>/파일확인</span></a>
+                      <a href="#popup2" class="btn_popup"><span>요청사항</span><span>/파일확인</span></a>
                     </td>
                     <td class="td_ct_order">
                       <div class="btn_wrap center">
@@ -216,7 +215,7 @@
                         <div class="pdt_info_title">
                           <span class="pdt_info_title_txt">100100100</span>
                           <span class="pdt_info_title_name">템플릿 명함_기업 가로형</span>
-                          <button type="button" class="btn type03 small inp_chk_del"><span>옵션 추가/변경</span></button>
+                          <a href="#popup1" class="btn type03 small btn_popup">옵션 추가/변경</a>
                         </div>
                       </div>
 
@@ -269,8 +268,7 @@
                       </div>
                     </td>
                     <td class="td_ct_file">
-                      <a href="#popup1" class="btn_popup active">
-                        <span>요청사항</span><span>/파일확인</span></a>
+                      <a href="#popup2" class="btn_popup active"><span>요청사항</span><span>/파일확인</span></a>
                     </td>
                     <td class="td_ct_order">
                       <div class="btn_wrap center">
@@ -279,6 +277,7 @@
                       </div>
                     </td>
                   </tr>
+
                   <tr class="line_start">
                     <td class="pdt_chk"><input type="checkbox" id="chk1" name="pdt_chk"><label for="chk1"></label></td>
                     <td class="td_ct_img">
@@ -287,7 +286,7 @@
                         <div class="pdt_info_title">
                           <span class="pdt_info_title_txt">100100100</span>
                           <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
-                          <button type="button" class="btn type03 small inp_chk_del"><span>옵션 추가/변경</span></button>
+                          <a href="#popup1" class="btn type03 small btn_popup">옵션 추가/변경</a>
                         </div>
                       </div>
                       <div class="pdt_info_option">
@@ -339,8 +338,7 @@
                       </div>
                     </td>
                     <td class="td_ct_file">
-                      <a href="#popup1" class="btn_popup">
-                        <span>요청사항</span><span>/파일확인</span></a>
+                      <a href="#popup2" class="btn_popup"><span>요청사항</span><span>/파일확인</span></a>
                     </td>
                     <td class="td_ct_order">
                       <div class="btn_wrap center">
@@ -422,6 +420,147 @@
       <div id="footer" class="layout_width">
       </div>
       <!-- //FOOTER -->
+
+      <!-- S: popup area -->
+      <div id="popup1" class="mall popup_wrap cart_pdt_change">
+        <div class="inner">
+          <h3 class="title">옵션 추가/변경</h3>
+
+          <div class="popup_content">
+            <div class="pdt_info">
+              <div class="pdt_info_img"><img src="../image/mall/product/cart_option_change_pdt.jpg" /></div>
+              <div class="pdt_info_title">
+                <span class="pdt_info_title_txt">100100100</span>
+                <span class="pdt_info_title_name">즉석명함 100매</span>
+                <span class="pdt_info_title_price">10,000,000<span class="font_weight_normal">원</span></span>
+
+                <div class="pdt_info_option">
+                  <p><span>[사이즈] 90mm X 55mm</span></p>
+                  <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                  <p class="add_option">
+                    <i class="ico cramp"><span class="blind"></span></i>
+                    <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pdt_option_select">
+              <div class="pdt_option_select_item">
+                <span>사이즈</span>
+                <select name="" id="" title="사이즈 선택">
+                  <option value="">사이즈 선택</option>
+                  <option value="">사이즈 1</option>
+                  <option value="">사이즈 2</option>
+                </select>
+              </div>
+
+              <div class="pdt_option_select_item">
+                <span>재질</span>
+                <select name="" id="" title="재질 선택">
+                  <option value="">재질 선택</option>
+                  <option value="">재질 1</option>
+                  <option value="">재질 2</option>
+                </select>
+              </div>
+
+              <div class="pdt_option_select_item">
+                <span>추가옵션</span>
+                <select name="" id="" title="추가옵션 선택">
+                  <option value="">추가옵션 선택</option>
+                  <option value="">추가옵션 1</option>
+                  <option value="">추가옵션 2</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pdt_price">
+              <div class="box pdt_price_calc">
+                <div class="box_item">
+                  <span class="label">상품금액</span>
+                  <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+                </div>
+
+                <div class="box_item">
+                  <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                </div>
+
+                <div class="box_item">
+                  <span class="label">할인금액</span>
+                  <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+                </div>
+              </div>
+
+              <div class="box pdt_price_total">
+                <div class="box_item">
+                  <span class="label">판매금액</span>
+                  <span class="price">27,000,000<span class="font_weight_normal">원</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap center">
+              <button type="button" class="btn type02 large"><span>취소</span></button>
+              <button type="button" class="btn type01 large"><span>확인</span></button>
+            </div>
+          </div>
+
+
+          <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+        </div>
+      </div>
+      <!-- E: popup area -->
+
+      <!-- S: popup area -->
+      <div id="popup2" class="mall popup_wrap cart_pdt_file">
+        <div class="inner">
+          <h3 class="title">요청사항 및 파일확인</h3>
+
+          <div class="popup_content">
+            <h4>요청사항</h4>
+
+            <div class="box pdt_request">
+              <div class="box_item">
+                <p>
+                  시안수정사항 시안수정사항시안수정사항 시안수정사항시안수
+                  정사항 시안수정사항시안수정사항 시안수정사항시안수정사항
+                  시안수정사항 시안수정사항 시안수정사항 시안수정사항시안수
+                  정사항 시안수정사항
+                </p>
+
+                <p>
+                  시안수정사항 시안수정사항시안수정사항 시안수정사항시
+                </p>
+              </div>
+            </div>
+
+            <h4>파일확인</h4>
+
+            <div class="box pdt_files">
+              <div class="box_item">
+                <span>파일1</span>
+                <a href="#">123456.jpg</a>
+              </div>
+              <div class="box_item">
+                <span>파일2</span>
+                <a href="#">123456.jpg</a>
+              </div>
+              <div class="box_item">
+                <span>파일3</span>
+                <a href="#">123456.jpg</a>
+              </div>
+            </div>
+
+            <div class="btn_wrap center">
+              <button type="button" class="btn type02 large"><span>닫기</span></button>
+            </div>
+          </div>
+
+
+          <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+        </div>
+      </div>
+      <!-- E: popup area -->
 
       <div class="dim">
       </div>

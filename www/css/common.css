@@ -727,7 +727,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .sch_wrap .item_box:last-child {position:absolute;top:0;right:20px}
 
 
-.popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:99;}
+.popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:9999;}
 .popup_wrap .inner {position:absolute; left:50%; top:50%; width:800px; box-sizing:border-box; background:#fff; transform:translate(-50%, -50%);}
 .popup_wrap .pop_con {overflow-y:auto;min-height:460px;margin:60px 40px;}
 .popup_wrap .inner .title {font-size:24px; font-weight:700; color:#fff;background:#03a2ea;padding:40px 60px;}
@@ -1085,7 +1085,7 @@ common mall
 .mo {display:none !important;}
 .pc_tablet {display:inline-block !important;}
 .mo_only {display:none !important;}
-.dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:10;}
+.dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9998;}
 
 .layout_width {max-width:1530px; margin:0 auto;}
 
