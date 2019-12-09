@@ -244,24 +244,71 @@ var setChkAll = function () {
   });
 }
 
+var popupSizeSetObj = null;
+var popupSizeSetDelay = 100;
+
+var popupSizeInit = function( obj ) {
+  if( obj )
+  {
+    var inner = obj.find('.inner');
+    if( inner.length )
+    {
+      var winHeight = parseInt( window.innerHeight, 10 );
+      var innerHeight = parseInt( inner.outerHeight( true ), 10 );
+
+      inner.css({'height': '', 'overflow-y': ''});
+
+      if( winHeight < innerHeight )
+      {
+        inner.css({'height': winHeight + 'px', 'overflow-y': 'scroll'});
+      }
+    }
+  }
+};
+
 
 // layer popup
 var setPopup = function () {
   $('.btn_popup').on('click', function () {
     var popupTarget = $(this).attr('href').slice(1);
+    var popupTargetObj = $('#' + popupTarget);
 
-    if ($("#" + popupTarget + "").length) {
+    if( popupTargetObj.length )
+    {
       $('body').addClass('open');
       $("#" + popupTarget + "").addClass('active');
+
+      popupSizeInit( popupTargetObj );
+
       $('.dim').show();
     }
   });
+
   $('.btn_pop_close').on('click', function () {
     $('body').removeClass('open');
     $(this).closest('.popup_wrap').removeClass('active');
     $('.dim').hide();
   });
-}
+
+  $('.btn_pop_close_btn').on('click', function () {
+    $('body').removeClass('open');
+    $(this).closest('.popup_wrap').removeClass('active');
+    $('.dim').hide();
+  });
+
+  $(window).on('resize', function() {
+    clearTimeout( popupSizeSetObj );
+
+    var popupActiveObj = $('.popup_wrap.active');
+
+    if( popupActiveObj.length )
+    {
+      popupSizeSetObj = setTimeout(function() {
+        popupSizeInit( popupActiveObj );
+      }, popupSizeSetDelay);
+    }
+  });
+};
 
 // faq tab
 var setFaqTab = function () {
