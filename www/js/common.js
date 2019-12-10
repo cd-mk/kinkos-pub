@@ -292,7 +292,11 @@ var setPopup = function () {
 
   $('.btn_pop_close_btn').on('click', function () {
     $('body').removeClass('open');
-    $(this).closest('.popup_wrap').removeClass('active');
+
+    var popup = $(this).closest('.popup_wrap');
+    popup.find('.inner').css({'height': '', 'overflow-y': ''});
+
+    popup.removeClass('active');
     $('.dim').hide();
   });
 

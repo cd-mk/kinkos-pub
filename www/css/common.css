@@ -179,7 +179,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .btn {display:inline-block; min-width:120px;padding: 0 20px; height:44px; line-height:44px; text-align:center; font-size:18px; font-weight:400;}
 .bbs .btn_wrap.center .btn.large {width:120px;}
 
-.btn.type01 {background:#03a2ea; color:#fff;}
+.btn.type01 {background:#03a2ea; border:1px solid #03a2ea; color:#fff;}
 .btn.type02 {background:#fff; border:1px solid #03a2ea; color:#03a2ea;}
 .btn.type03 {background:#777; color:#fff; border:1px solid transparent;}
 .btn.type04 {background:#fff; color:#777; border:1px solid #777;}
@@ -743,7 +743,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .popup_wrap .result .btn {width:100%;}
 
 @media screen and (max-width:1024px) {
- .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:999;}
+ .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:9999;}
  .popup_wrap .inner {position:absolute; left:0; top:0; width:100%;height:100%;transform: translateX(0);}
  .popup_wrap.sch .inner {padding:0 15px; background:#03a2ea;}
  .popup_wrap .pop_con {overflow-y:auto;height:100%;margin:40px 15px;}
