@@ -1085,7 +1085,8 @@ common mall
 .mo {display:none !important;}
 .pc_tablet {display:inline-block !important;}
 .mo_only {display:none !important;}
-.dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9998;}
+.dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:998;}
+.dim_layer {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9998;}
 
 .layout_width {max-width:1530px; margin:0 auto;}
 

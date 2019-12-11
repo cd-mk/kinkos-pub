@@ -280,14 +280,19 @@ var setPopup = function () {
 
       popupSizeInit( popupTargetObj );
 
-      $('.dim').show();
+      if( !$('.dim_layer').length )
+      {
+        $('#content').append('<div class="dim_layer"></div>');
+      }
+
+      $('.dim_layer').show();
     }
   });
 
   $('.btn_pop_close').on('click', function () {
     $('body').removeClass('open');
     $(this).closest('.popup_wrap').removeClass('active');
-    $('.dim').hide();
+    $('.dim_layer').hide();
   });
 
   $('.btn_pop_close_btn').on('click', function () {
@@ -297,7 +302,7 @@ var setPopup = function () {
     popup.find('.inner').css({'height': '', 'overflow-y': ''});
 
     popup.removeClass('active');
-    $('.dim').hide();
+    $('.dim_layer').hide();
   });
 
   $(window).on('resize', function() {
