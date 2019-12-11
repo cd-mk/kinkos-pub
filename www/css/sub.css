@@ -3048,7 +3048,7 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 .cart_wrap.mo .order_total .box .box_item.total .price {font-size:27px; color:#ed6c16;}
 
 .cart_wrap.mo .btn_wrap {display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:center; width:100%;}
-.cart_wrap.mo .btn_wrap .btn {flex:0 0 calc(50% - 5px); margin-left:5px; box-sizing:border-box;}
+.cart_wrap.mo .btn_wrap .btn {flex:0 0 calc(50% - 5px); width:calc(50% - 5px); margin-left:5px; box-sizing:border-box;}
 .cart_wrap.mo .btn_wrap .btn:nth-child(1) {margin-left:0; margin-right:5px;}
 
 @media screen and (max-width:1024px) {
