@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+  <meta name="Title" content="킨코스코리아" />
+  <meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+  <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="킨코스코리아">
+  <meta property="og:url" content="http://www.kinkos.co.kr/">
+  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
+  <meta property="og:image" content="../image/common/logo.png">
+  <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+  <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <title>장바구니 | 킨코스코리아</title>
+  <!-- CSS FILE LOAD -->
+  <link rel="stylesheet" href="../css/lib/animate.css">
+  <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="../css/lib/swiper.min.css">
+
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- only sub -->
+  <link rel="stylesheet" href="../css/sub.css">
+
+</head>
+
+<!--
+  PC 일 경우 : fix_pc
+  MOBILE 일 경우 : fix_mobile
+-->
+<body class="fix_mobile">
+  <!-- 접근성 바로가기 메뉴(숨김) -->
+  <div id="accessibility">
+    <strong class="blind">컨텐츠바로가기</strong>
+    <ul>
+      <li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+      <li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+    </ul>
+  </div>
+  <!-- //접근성 바로가기 메뉴(숨김) -->
+
+  <!-- WRAP (mall or company css추가)-->
+  <div id="wrap" class="mall">
+
+    <!-- HEADER -->
+    <div id="header">
+    </div>
+    <!-- //HEADER -->
+
+    <!-- CONTENT -->
+    <div id="content">
+      <!-- breadcrumb  -->
+      <div class="breadcrumb_wrap">
+        <ul class="item_list">
+          <li><a href="#url" class="home">Home</a></li>
+          <li><a href="#">장바구니</a></li>
+        </ul>
+      </div>
+      <!-- //breadcrumb  -->
+
+      <!-- 콘텐츠 group "cont_wrap" 고정 -->
+      <div class="cont_wrap">
+        <!-- 본문 -->
+        <!-- 콘텐츠 "con_box" 고정 -->
+        <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
+
+        <!-- MOBILE 버전 -->
+        <div class="con_box cart_wrap mo">
+          <div class="section">
+            <!-- 장바구니 목록 테이블 -->
+            <div class="section mid basket_list">
+              <div class="pdt_chk_all">
+                <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk" />
+                <label for="chk_all">전체선택</label>
+              </div>
+
+              <div class="box basket_list_item">
+                <div class="pdt_chk">
+                  <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
+                  <label for="chk_all"></label>
+                </div>
+                <div class="pdt_delete_btn">
+                  <button type="button" class="btn type02 small"><span>삭제</span></button>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_info">
+                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
+                    <div class="pdt_info_content">
+                      <span class="pdt_info_content_code">100100100</span>
+                      <span class="pdt_info_content_pdt_name">즉석명함 100매</span>
+                      <div class="pdt_info_option">
+                        <p><span>[사이즈] 90mm X 55mm</span></p>
+                        <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                        <p class="add_option">
+                          <i class="ico cramp"><span class="blind"></span></i>
+                          <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_num">
+                    <div class="form_inp"><input type="text" class="dtl_num inp" title="수량 입력" /></div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_delivery_select">
+                    <select class="delivery_select" name="" id="">
+                      <option value="" data-value="self" selected="selected">직접수령</option>
+                      <option value="" data-value="delivery">택배수령</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_delivery_select other_select">
+                    <select name="" id="">
+                      <option value="">지역선택</option>
+                      <option value="">서울</option>
+                      <option value="">경기</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_delivery_select other_select">
+                    <select name="" id="">
+                      <option value="">가산디지털단지</option>
+                      <option value="">강남역</option>
+                      <option value="">경복궁</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box_item">
+                    <div class="pdt_file">
+                      <a href="#popup2" class="btn_popup"><span>요청사항</span><span>/파일확인</span></a>
+
+                      <div class="pdt_delivery_price hide">
+                        <span>배송비</span>
+                        <span>0원</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_price_info">
+                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                    <div class="pdt_sale_price"><span>판매금액</span><span><span class="font_weight_bold">9,000,000</span>원</span></div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="btn_wrap center">
+                    <a href="#popup1" class="btn type02 mid btn_popup">주문수정</a>
+                    <button type="button" class="btn type01 mid"><span>주문하기</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box basket_list_item">
+                <div class="pdt_chk">
+                  <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
+                  <label for="chk_all"></label>
+                </div>
+                <div class="pdt_delete_btn">
+                  <button type="button" class="btn type02 small"><span>삭제</span></button>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_info">
+                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
+                    <div class="pdt_info_content">
+                      <span class="pdt_info_content_code">100100100</span>
+                      <span class="pdt_info_content_pdt_name">탬플릿 명함_기업 가로형</span>
+                      <div class="pdt_info_option">
+                        <p><span>[템플릿 선택] 기업 가로형-9</span><span>[수량] 100매</span></p>
+                        <p><span>[재질] 하모니 198g</span><span>1개 (+55,000원)</span></p>
+                        <p class="add_option">
+                          <i class="ico cramp"><span class="blind"></span></i>
+                          <span>[코너라운딩] 2면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_num">
+                    <div class="form_inp"><input type="text" class="dtl_num inp" title="수량 입력" /></div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_delivery_select">
+                    <select class="delivery_select" name="" id="">
+                      <option value="" data-value="self" selected="selected">직접수령</option>
+                      <option value="" data-value="delivery">택배수령</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_delivery_select other_select">
+                    <select name="" id="">
+                      <option value="">지역선택</option>
+                      <option value="">서울</option>
+                      <option value="">경기</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_delivery_select other_select">
+                    <select name="" id="">
+                      <option value="">가산디지털단지</option>
+                      <option value="">강남역</option>
+                      <option value="">경복궁</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_file">
+                    <a href="#popup2" class="btn_popup"><span>요청사항</span><span>/파일확인</span></a>
+
+                    <div class="pdt_delivery_price hide">
+                      <span>배송비</span>
+                      <span>2,500원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="pdt_price_info">
+                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                    <div class="pdt_sale_price"><span>판매금액</span><span><span class="font_weight_bold">9,000,000</span>원</span></div>
+                  </div>
+                </div>
+                <div class="box_item">
+                  <div class="btn_wrap center">
+                    <a href="#popup1" class="btn type02 mid btn_popup">주문수정</a>
+                    <button type="button" class="btn type01 mid"><span>주문하기</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pdt_chk_all bottom">
+                <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk" />
+                <label for="chk_all">전체선택</label>
+
+                <div class="cart_chk_del">
+                  <button type="button" class="btn type02 small inp_chk_del"><span>선택 삭제</span></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="section mid guide_box">
+              <ul>
+                <li>
+                  <span></span>
+                  <span>장바구니 보관 기간은 00일 입니다.</span>
+                </li>
+                <li>
+                  <span></span>
+                  <span>선택하신 상품의 가격, 옵션 등 상품정보가 변경된 경우 주문이 불가할 수 있습니다.</span>
+                </li>
+                <li>
+                  <span></span>
+                  <span>장바구니 배송비는 기본 배송비이며, 배송지에 따라 추가비용이 발생할 수 있습니다.</span>
+                </li>
+                <li>
+                  <span></span>
+                  <span>결제금액은 최종 배송비에 따라 변경될 수 있습니다.</span>
+                </li>
+              </ul>
+            </div>
+            <!-- //장바구니 목록 테이블 -->
+
+            <!-- 총 주문금액 -->
+            <div class="section mid order_total">
+              <div class="inner">
+                <div class="box">
+                  <div class="box_item">
+                    <span class="label">상품금액</span>
+                    <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+                  </div>
+                  <div class="box_item mo_minus">
+                    <span class="label">할인금액</span>
+                    <span class="price"><span class="font_weight_bold">1,000,000</span>원</span>
+                  </div>
+
+                  <div class="box_item mo_plus">
+                    <span class="label">배송비</span>
+                    <span class="price"><span class="font_weight_bold">5,000</span>원</span>
+                  </div>
+                  <div class="box_item total">
+                    <span class="label">예상 결제금액</span>
+                    <span class="price"><span class="font_weight_bold">303,000</span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_wrap center">
+                <button type="button" class="btn type02 large"><span>선택 주문</span></button>
+                <button type="button" class="btn type01 large"><span>전체상품 주문</span></button>
+              </div>
+            </div>
+            <!-- //총 주문금액 -->
+
+          </div>
+
+          <!-- //본문 -->
+        </div>
+        <!-- //MOBILE 버전 -->
+      </div>
+      <!-- CONTENT -->
+
+
+      <!-- FOOTER -->
+      <div id="footer" class="layout_width">
+      </div>
+      <!-- //FOOTER -->
+
+      <!-- S: popup area -->
+      <div id="popup1" class="mall popup_wrap cart_pdt_change">
+        <div class="inner">
+          <h3 class="title">옵션 추가/변경</h3>
+
+          <div class="popup_content">
+            <div class="pdt_info">
+              <div class="pdt_info_img"><img src="../image/mall/product/cart_option_change_pdt.jpg" /></div>
+              <div class="pdt_info_title">
+                <span class="pdt_info_title_txt">100100100</span>
+                <span class="pdt_info_title_name">즉석명함 100매</span>
+                <span class="pdt_info_title_price">10,000,000<span class="font_weight_normal">원</span></span>
+
+                <div class="pdt_info_option">
+                  <p><span>[사이즈] 90mm X 55mm</span></p>
+                  <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                  <p class="add_option">
+                    <i class="ico cramp"><span class="blind"></span></i>
+                    <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pdt_option_select">
+              <div class="pdt_option_select_item">
+                <span>사이즈</span>
+                <select name="" id="" title="사이즈 선택">
+                  <option value="">사이즈 선택</option>
+                  <option value="">사이즈 1</option>
+                  <option value="">사이즈 2</option>
+                </select>
+              </div>
+
+              <div class="pdt_option_select_item">
+                <span>재질</span>
+                <select name="" id="" title="재질 선택">
+                  <option value="">재질 선택</option>
+                  <option value="">재질 1</option>
+                  <option value="">재질 2</option>
+                </select>
+              </div>
+
+              <div class="pdt_option_select_item">
+                <span>추가옵션</span>
+                <select name="" id="" title="추가옵션 선택">
+                  <option value="">추가옵션 선택</option>
+                  <option value="">추가옵션 1</option>
+                  <option value="">추가옵션 2</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pdt_price">
+              <div class="box pdt_price_calc">
+                <div class="box_item">
+                  <span class="label">상품금액</span>
+                  <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+                </div>
+
+                <div class="box_item pc">
+                  <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                </div>
+
+                <div class="box_item mo_minus">
+                  <span class="label">할인금액</span>
+                  <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+                </div>
+              </div>
+
+              <div class="box pdt_price_total">
+                <div class="box_item">
+                  <span class="label">판매금액</span>
+                  <span class="price">27,000,000<span class="font_weight_normal">원</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap center">
+              <button type="button" class="btn type02 large btn_pop_close_btn"><span>취소</span></button>
+              <button type="button" class="btn type01 large"><span>확인</span></button>
+            </div>
+          </div>
+
+
+          <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+        </div>
+      </div>
+      <!-- E: popup area -->
+
+      <!-- S: popup area -->
+      <div id="popup2" class="mall popup_wrap cart_pdt_file">
+        <div class="inner">
+          <h3 class="title">요청사항 및 파일확인</h3>
+
+          <div class="popup_content">
+            <h4>요청사항</h4>
+
+            <div class="box pdt_request">
+              <div class="box_item">
+                <p>
+                  시안수정사항 시안수정사항시안수정사항 시안수정사항시안수
+                  정사항 시안수정사항시안수정사항 시안수정사항시안수정사항
+                  시안수정사항 시안수정사항 시안수정사항 시안수정사항시안수
+                  정사항 시안수정사항
+                </p>
+
+                <p>
+                  시안수정사항 시안수정사항시안수정사항 시안수정사항시
+                </p>
+              </div>
+            </div>
+
+            <h4>파일확인</h4>
+
+            <div class="box pdt_files">
+              <div class="box_item">
+                <span>파일1</span>
+                <a href="#">123456.jpg</a>
+              </div>
+              <div class="box_item">
+                <span>파일2</span>
+                <a href="#">123456.jpg</a>
+              </div>
+              <div class="box_item">
+                <span>파일3</span>
+                <a href="#">123456.jpg</a>
+              </div>
+            </div>
+
+            <div class="btn_wrap center">
+              <button type="button" class="btn type02 large btn_pop_close_btn"><span>닫기</span></button>
+            </div>
+          </div>
+
+
+          <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+        </div>
+      </div>
+      <!-- E: popup area -->
+
+      <div class="dim">
+      </div>
+    </div>
+    <!-- //WRAP -->
+
+    <!-- SCRIPT -->
+    <!-- global -->
+    <script src="../js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery/jquery.placeholder.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/swiper/swiper.min.js"></script>
+    <script src="../js/common.js"></script>
+    <!-- //global -->
+
+    <script src="../js/sub.js"></script>
+    <script src="../js/jquery.numspinner.min.js"></script>
+
+    <!-- 수량 -->
+    <script type="text/javascript">
+      $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
+
+      (function () {
+        function delivert_select_change()
+        {
+          var deliverySelect = $('.delivery_select');
+
+          deliverySelect.on('change', function() {
+            var obj = $(this);
+
+            var selectedOptionValue = obj.find('option:selected').attr('data-value');
+
+            if( selectedOptionValue === 'self' )
+            {
+              $('.pdt_delivery_select.other_select').removeClass('hide');
+              $('.pdt_delivery_price').addClass('hide');
+            }
+            else if( selectedOptionValue === 'delivery' )
+            {
+              $('.pdt_delivery_select.other_select').addClass('hide');
+              $('.pdt_delivery_price').removeClass('hide');
+            }
+          });
+        }
+
+        if( $('.delivery_select').length )
+        {
+          delivert_select_change();
+        }
+      })();
+    </script>
+
+    <!-- //SCRIPT -->
+
+
+  </div>
+</body>
+
+</html>
