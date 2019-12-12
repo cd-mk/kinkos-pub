@@ -258,6 +258,12 @@ p+.btn_wrap {margin-top:40px !important;}
 /* .arr_small.up, #closed .arr_small.up { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); }
 .arr_small.down, #opened .arr_small.down { transform: rotate(45deg); -webkit-transform: rotate(45deg); vertical-align: top;margin-top:7px} */
 
+/* swiper */
+.swiper-pagination.swiper-pagination-fraction {
+  bottom:0;
+}
+/* //swiper */
+
 /* ---------------------
   header
  --------------------- */
