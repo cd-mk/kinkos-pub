@@ -110,6 +110,8 @@ textarea {width:100%; height:190px; padding:15px; box-sizing:border-box; border:
 input:focus,select:focus,textarea:focus,
 input:active,select:active,textarea:active {border:1px solid #222}
 
+input {-webkit-appearance:none; -webkit-border-radius:0;}
+
 /* placeholder */
 .placeholder {color:#999;}
 textarea::placeholder, input::placeholder {
