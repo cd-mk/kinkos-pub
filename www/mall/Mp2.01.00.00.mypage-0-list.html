@@ -27,7 +27,11 @@
   <link rel="stylesheet" href="../css/sub.css">
 </head>
 
-<body>
+<!--
+  PC 일 경우 : fix_pc
+  MOBILE 일 경우 : fix_mobile
+-->
+<body class="fix_pc">
   <!-- 접근성 바로가기 메뉴(숨김) -->
   <div id="accessibility">
     <strong class="blind">컨텐츠바로가기</strong>
@@ -59,176 +63,359 @@
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap sidebar">
-
-        <div class="snb">
-          <h2>마이페이지</h2>
-          <ul>
-            <li class="active"><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">구매내역리스트</a></li>
-            <li>
-              <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
-              <ul>
-                <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
-                <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
-                <li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
-              </ul>
-            </li>
-            <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
-            <li>
-              <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.htmll">나의 문의 내역</a>
-              <ul>
-                <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
-                <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
-                <li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
-                <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- 본문 -->
-        <div class="con_box mpg_wrap">
-          <div class="my_wrap">
+      <!-- PC 버전 -->
+      <div class="cont_wrap sidebar pc">
+        <div class="section mid">
+          <div class="snb">
+            <h2>마이페이지</h2>
             <ul>
-              <li class="my_info">
-                <p><strong>shing1234</strong> 님의 킨코스</p>
-                <p class="my_point"><i>P</i>1,000</p>
+              <li class="active"><a href="/www/mall/Mp2.01.00.00.mypage-0-list.html">주문/배송조회</a></li>
+              <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list.html">시안보기</a></li>
+              <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+              <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+              <li>
+                <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.htmll">나의 문의 내역</a>
+                <ul>
+                  <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
+                  <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+                  <li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+                  <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+                </ul>
               </li>
-              <li class="my_status">
-                <strong>입금대기중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>결제 완료</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>배송준비중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>배송중</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>배송완료</strong>
-                <p>0</p>
-              </li>
-              <li class="my_status">
-                <strong>취소/환불/교환</strong>
-                <p>0</p>
+              <li>
+                <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
+                <ul>
+                  <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
+                  <li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
+                </ul>
               </li>
             </ul>
           </div>
 
-          <!-- 구매내역 리스트 -->
-          <div class="section my_order">
-            <div class="tit_box mid">
-              <h3 class="left">구매내역</h3>
-              <p class="right">주문서 번호를 클릭 하시면 상품 구매 내역을 확인 할 수 있습니다.</p>
-            </div>
-
-            <div class="basket_list">
-              <table>
-                <caption>장바구니 목록</caption>
-                <thead>
-                  <tr>
-                    <th scope="col" class="pdt_chk">
-                      <!-- 전체 체크 컨트롤 class는 inp_chk_all , name=""으로 그룹핑된 체크박스를 일괄 체크 -->
-                      <input type="checkbox" id="chk_all" class="inp_chk_all" name="pdt_chk">
-                      <label for="chk_all"></label>
-                      선택
-                    </th>
-                    <th scope="col">주문번호</th>
-                    <th scope="col">주문일시</th>
-                    <th scope="col">상품수</th>
-                    <th scope="col">주문 금액</th>
-                    <th scope="col">결제액</th>
-                    <th scope="col">미결제액</th>
-                    <th scope="col">상태</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- loop -->
-                   <!-- 배송준비중일 때 
-                    <tr class="ready">
-                  -->
-                  <tr>
-                    <td class="pdt_chk">
-                      <input type="checkbox" id="chk1" name="pdt_chk">
-                      <label for="chk1"></label>
-                    </td>
-                    <td class="ord_num">
-                      <p><a href="#">0000000000000</a></p>
-                      <p><button class="btn type03">다시 주문하기</button></p>
-                    </td>
-                    <td class="ord_date">
-                      <p>17-03-24</p>
-                      <p>14:58 (금)</p>
-                    </td>
-                    <td>1</td>
-                    <td>30,000원</td>
-                    <td>
-                      <p>30,000</p>
-                      <p><a href="#popup1" class="btn type03 btn_popup">증빙서류</a></p>
-                    </td>
-                    <td class="unpaid">0원</td>
-                    <td><a href="#popup2" class="btn_popup">배송완료</a></td>
-                  </tr>
-                  <!-- loop -->
-
-
-                  <tr class="ready">
-                    <td class="pdt_chk">
-                      <input type="checkbox" id="chk2" name="pdt_chk">
-                      <label for="chk2"></label>
-                    </td>
-                    <td class="ord_num">
-                      <p><a href="#">0000000000000</a></p>
-                      <p><button class="btn type03">다시 주문하기</button></p>
-                    </td>
-                    <td class="ord_date">
-                      <p>17-03-24</p>
-                      <p>14:58 (금)</p>
-                    </td>
-                    <td>1</td>
-                    <td>30,000원</td>
-                    <td>
-                      <p>30,000</p>
-                      <p><button class="btn type03">증빙서류</button></p>
-                    </td>
-                    <td class="unpaid">30,000원</td>
-                    <td>배송준비중</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="btn_wrap right">
-                <button type="button" class="btn type03 large" style="width:240px;"><span>취소/환불/교환 요청하기</span></button>
+          <!-- 본문 -->
+          <div class="con_box mpg_wrap">
+            <!-- 구매내역 리스트 -->
+            <div class="my_order">
+              <div class="tit_box mid">
+                <h3>주문/배송조회</h3>
               </div>
 
-              <!-- Page navigation -->
-              <div class="page_navi">
-                <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
-                <ul class="navi_list">
-                  <li class="active"><a href="#url">1</a></li>
-                  <li><a href="#url">2</a></li>
-                  <li><a href="#url">3</a></li>
-                  <li><a href="#url">4</a></li>
-                  <li><a href="#url">5</a></li>
-                </ul>
-                <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
-              </div>
-              <!-- Page navigation -->
+              <div class="order_list_pc">
+                <table>
+                  <caption>주문/배송조회 목록</caption>
+                  <colgroup>
+                    <col width="20%" />
+                    <col width="*" />
+                    <col width="10%" />
+                    <col width="18%" />
+                    <col width="14%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">주문일자</th>
+                      <th scope="col">상품/옵션정보</th>
+                      <th scope="col">수량</th>
+                      <th scope="col">배송</th>
+                      <th scope="col">주문상태</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- loop -->
+                     <!-- 배송준비중일 때
+                      <tr class="ready">
+                    -->
+                    <!-- 주문 1의 해당 주문의 상품 1 -->
+                    <tr>
+                      <!--
+                        <td class="td_ord_date" rowspan=" 해당주문의 상품 갯수 * 2 ">
+                      -->
+                      <td class="td_ord_date" rowspan="6">
+                        <p>2019-11-30</p>
+                        <p><strong>(2019091613453087)</strong></p>
+                        <p><a href="/www/mall/Mp2.01.01.00.mypage-0-view.html" class="btn type03 small">자세히 보기</a></p>
+                      </td>
+                      <td class="td_pdt_info">
+                        <div class="pdt_info">
+                          <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
+                          <div class="pdt_info_title">
+                            <span class="pdt_info_title_txt">100100100</span>
+                            <span class="pdt_info_title_name">즉석명함 100매</span>
+                          </div>
+                        </div>
+                        <div class="pdt_info_option">
+                          <p><span>[사이즈] 90mm X 55mm</span></p>
+                          <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                          <p class="add_option">
+                            <i class="ico cramp"><span class="blind"></span></i>
+                            <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="td_ord_amount">
+                        <p><strong>1000</strong>개</p>
+                      </td>
+                      <td class="td_ord_delivery">
+                        <p><strong>직접수령</strong></p>
+                        <p><strong class="ord_delivery_point">가산디지털단지 센터</strong></p>
+                        <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
+                      </td>
+                      <td class="td_ord_status">
+                        <p>접수대기</p>
+                        <p><a href="#popup1" class="btn type02 small btn_popup">시안보기</a></p>
+                        <p><a href="#" class="btn type07 small">주문취소</a></p>
+                        <p><a href="#" class="btn type01 small">재주문</a></p>
+                      </td>
+                    </tr>
+                    <tr><!-- 개별 상품의 금액 -->
+                      <td colspan="4" class="td_ord_pdt_total">
+                        <div class="td_ord_pdt_total_wrap">
+                          <div class="td_ord_pdt_total_regist_files"><a href="#popup2" class="btn_popup">요청사항/파일확인</a></div>
+                          <div class="td_ord_pdt_total_price">
+                            <div class="box">
+                              <div class="box_item">
+                                <span class="label">상품금액</span>
+                                <span class="price">10,000,000원</span>
+                              </div>
+                              <div class="box_item">
+                                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                              </div>
+                              <div class="box_item">
+                                <span class="label">할인금액</span>
+                                <span class="price">1,000,000원</span>
+                              </div>
+                              <div class="box_item total">
+                                <span class="label"><strong>판매금액</strong></span>
+                                <span class="price"><strong>9,000,000</strong>원</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- //주문 1의 해당 주문의 상품 1 -->
+                    <!-- 주문 1의  주문의 상품 2 -->
+                    <tr>
+                      <td class="td_pdt_info">
+                        <div class="pdt_info">
+                          <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
+                          <div class="pdt_info_title">
+                            <span class="pdt_info_title_txt">100100100</span>
+                            <span class="pdt_info_title_name">즉석명함 100매</span>
+                          </div>
+                        </div>
+                        <div class="pdt_info_option">
+                          <p><span>[사이즈] 90mm X 55mm</span></p>
+                          <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                          <p class="add_option">
+                            <i class="ico cramp"><span class="blind"></span></i>
+                            <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="td_ord_amount">
+                        <p><strong>1000</strong>개</p>
+                      </td>
+                      <td class="td_ord_delivery">
+                        <p><strong>택배수령</strong></p>
+                        <p>배송비<strong class="ord_delivery_price">2500</strong>원</p>
+                        <p><a href="#" class="btn type04 small">배송조회</a></p>
+                      </td>
+                      <td class="td_ord_status">
+                        <p>접수대기</p>
+                        <p><a href="#popup1" class="btn type02 small btn_popup">시안보기</a></p>
+                        <p><a href="#" class="btn type07 small">주문취소</a></p>
+                        <p><a href="#" class="btn type01 small">재주문</a></p>
+                      </td>
+                    </tr>
+                    <tr><!-- 개별 상품의 금액 -->
+                      <td colspan="4" class="td_ord_pdt_total">
+                        <div class="td_ord_pdt_total_wrap">
+                          <div class="td_ord_pdt_total_regist_files"><a href="#popup2" class="btn_popup">요청사항/파일확인</a></div>
+                          <div class="td_ord_pdt_total_price">
+                            <div class="box">
+                              <div class="box_item">
+                                <span class="label">상품금액</span>
+                                <span class="price">100,000원</span>
+                              </div>
+                              <div class="box_item">
+                                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                              </div>
+                              <div class="box_item">
+                                <span class="label">할인금액</span>
+                                <span class="price">10,000원</span>
+                              </div>
+                              <div class="box_item total">
+                                <span class="label"><strong>판매금액</strong></span>
+                                <span class="price"><strong>90,000</strong>원</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- //주문 1의  주문의 상품 2 -->
+                    <!-- 주문 1의  주문의 상품 3 -->
+                    <tr>
+                      <td class="td_pdt_info">
+                        <div class="pdt_info">
+                          <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
+                          <div class="pdt_info_title">
+                            <span class="pdt_info_title_txt">100100100</span>
+                            <span class="pdt_info_title_name">템플릿 명함_기업 가로형</span>
+                          </div>
+                        </div>
+                        <div class="pdt_info_option">
+                          <p><span>[템플릿 선택] 기업 가로형-9</span><span>[수량] 100매</span></p>
+                          <p><span>[재질] 하모니 198g</span><span>1개 (+55,000원)</span></p>
+                          <p class="add_option">
+                            <i class="ico cramp"><span class="blind"></span></i>
+                            <span>[코너라운딩] 2면</span><span>1개 (+5,000원)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="td_ord_amount">
+                        <p><strong>1000</strong>개</p>
+                      </td>
+                      <td class="td_ord_delivery">
+                        <p><strong>택배수령</strong></p>
+                        <p>배송비<strong class="ord_delivery_price">2500</strong>원</p>
+                        <p><a href="#" class="btn type04 small">배송조회</a></p>
+                      </td>
+                      <td class="td_ord_status">
+                        <p>접수대기</p>
+                        <p><a href="#popup1" class="btn type02 small btn_popup">시안보기</a></p>
+                        <p><a href="#" class="btn type07 small">주문취소</a></p>
+                        <p><a href="#" class="btn type01 small">재주문</a></p>
+                      </td>
+                    </tr>
+                    <tr><!-- 개별 상품의 금액 -->
+                      <td colspan="4" class="td_ord_pdt_total">
+                        <div class="td_ord_pdt_total_wrap">
+                          <div class="td_ord_pdt_total_regist_files"><a href="#popup2" class="btn_popup">요청사항/파일확인</a></div>
+                          <div class="td_ord_pdt_total_price">
+                            <div class="box">
+                              <div class="box_item">
+                                <span class="label">상품금액</span>
+                                <span class="price">10,000,000원</span>
+                              </div>
+                              <div class="box_item">
+                                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                              </div>
+                              <div class="box_item">
+                                <span class="label">할인금액</span>
+                                <span class="price">1,000,000원</span>
+                              </div>
+                              <div class="box_item total">
+                                <span class="label"><strong>판매금액</strong></span>
+                                <span class="price"><strong>9,000,000</strong>원</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- 주문 1의  주문의 상품 3 -->
+                    <!-- loop -->
 
+                    <!-- 주문 2의 해당 주문의 상품 1 -->
+                    <tr>
+                      <!--
+                        <td class="td_ord_date" rowspan=" 해당주문의 상품 갯수 * 2 ">
+                      -->
+                      <td class="td_ord_date" rowspan="2">
+                        <p>2019-11-30</p>
+                        <p><strong>(2019091613453087)</strong></p>
+                        <p><a href="/www/mall/Mp2.01.01.00.mypage-0-view.html" class="btn type03 small">자세히 보기</a></p>
+                      </td>
+                      <td class="td_pdt_info">
+                        <div class="pdt_info">
+                          <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_03.png"></div>
+                          <div class="pdt_info_title">
+                            <span class="pdt_info_title_txt">100100100</span>
+                            <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
+                          </div>
+                        </div>
+                        <div class="pdt_info_option">
+                          <p><span>[사이즈 (긴쪽)] ⑦ 7m</span></p>
+                          <p><span>[마감방식] 각목+노끈(10M) + 113,000원 (+131,000원)</span></p>
+                          <p class="add_option">
+                            <i class="ico cramp"><span class="blind"></span></i>
+                            <span>[끈추가] 10m</span><span>1개 (+2,000원)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="td_ord_amount">
+                        <p><strong>1000</strong>개</p>
+                      </td>
+                      <td class="td_ord_delivery">
+                        <p><strong>직접수령</strong></p>
+                        <p><strong class="ord_delivery_point">강남역 센터</strong></p>
+                        <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
+                      </td>
+                      <td class="td_ord_status">
+                        <p>접수대기</p>
+                        <p><a href="#popup1" class="btn type02 small btn_popup">시안보기</a></p>
+                        <p><a href="#" class="btn type07 small">주문취소</a></p>
+                        <p><a href="#" class="btn type01 small">재주문</a></p>
+                      </td>
+                    </tr>
+                    <tr><!-- 개별 상품의 금액 -->
+                      <td colspan="4" class="td_ord_pdt_total">
+                        <div class="td_ord_pdt_total_wrap">
+                          <div class="td_ord_pdt_total_regist_files"><a href="#popup2" class="btn_popup">요청사항/파일확인</a></div>
+                          <div class="td_ord_pdt_total_price">
+                            <div class="box">
+                              <div class="box_item">
+                                <span class="label">상품금액</span>
+                                <span class="price">10,000,000원</span>
+                              </div>
+                              <div class="box_item">
+                                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                              </div>
+                              <div class="box_item">
+                                <span class="label">할인금액</span>
+                                <span class="price">1,000,000원</span>
+                              </div>
+                              <div class="box_item total">
+                                <span class="label"><strong>판매금액</strong></span>
+                                <span class="price"><strong>9,000,000</strong>원</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- //해당 주문의 상품 1 -->
+
+                  </tbody>
+                </table>
+
+                <!-- Page navigation -->
+                <div class="page_navi">
+                  <a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+                  <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+                  <ul class="navi_list">
+                    <li class="active"><a href="#url">1</a></li>
+                    <li><a href="#url">2</a></li>
+                    <li><a href="#url">3</a></li>
+                    <li><a href="#url">4</a></li>
+                    <li><a href="#url">5</a></li>
+                  </ul>
+                  <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                  <a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+                </div>
+                <!-- Page navigation -->
+
+              </div>
             </div>
+            <!-- //구매내역 리스트 -->
+
+
           </div>
-          <!-- //구매내역 리스트 -->
-
-
+          <!-- //본문 -->
         </div>
-        <!-- //본문 -->
       </div>
+      <!-- //PC 버전 -->
     </div>
     <!-- CONTENT -->
 
