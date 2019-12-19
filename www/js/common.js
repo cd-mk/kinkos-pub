@@ -548,6 +548,10 @@ var visual = new Swiper('.visual_wrap', {
   slidesPerView: 1,
   loop: true,
   autoplay: true,
+  navigation: {
+    nextEl: '.service_wrap .swiper-button-next',
+    prevEl: '.service_wrap .swiper-button-prev',
+  },
   pagination: {
     el: '.visual_wrap .swiper-pagination',
     clickable: true,
