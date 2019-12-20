@@ -546,8 +546,8 @@ function tab(e, num) {
 // (swiper)visual section slide
 var visual = new Swiper('.visual_wrap', {
   slidesPerView: 1,
-  loop: true,
-  autoplay: true,
+  loop: false,
+  autoplay: false,
   navigation: {
     nextEl: '.service_wrap .swiper-button-next',
     prevEl: '.service_wrap .swiper-button-prev',

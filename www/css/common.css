@@ -844,7 +844,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .mall .visual_wrap .color_black {color:#444;}
 .mall .visual_wrap .txt_inner {position:absolute; top:0; right:100px;text-align:left;}
 .mall .visual_wrap .txt_inner em {display:block; font-style:normal; font-size:20px; font-weight:300; line-height:0.9;}
-.mall .visual_wrap .txt_inner .title {display:block; margin-top:39px; font-size:48px; font-weight:bold; line-height:1.1;}
+.mall .visual_wrap .txt_inner .title {display:block; margin-top:39px; font-size:48px; font-weight:bold; line-height:1.2;}
 .mall .visual_wrap .txt_inner p {margin-top:38px; margin-bottom:55px; font-size:18px; font-weight:400; line-height:1.5;}
 .mall .visual_wrap .txt_inner .btn_txt.more {display:block;width:150px;font-size:18px;line-height:50px; text-align:center;}
 .mall .visual_wrap .color_white .btn_txt.more {color:#fff; border:1px solid rgba(255,255,255,0.5);}

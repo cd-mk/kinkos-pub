@@ -240,6 +240,9 @@
 .speed_slide .swiper-slide .txt strong {font-size:32px; color:#222;}
 .speed_slide .swiper-slide .txt p {font-size:14px; color:#444; line-height:44px;}
 
+.speed_slide .pg_nav.pc .swiper-button-next, .speed_slide .pg_nav.pc .swiper-button-prev {opacity: 0.8;}
+.speed_slide .pg_nav.pc .swiper-button-next:hover, .speed_slide .pg_nav.pc .swiper-button-prev:hover {opacity: 1;}
+
 @media screen and (max-width:1024px) { 
   .speedPrd_wrap {margin-top:28px;}
   .speedPrd_wrap .title_box h2 {font-size:30px; line-height:44px;}
