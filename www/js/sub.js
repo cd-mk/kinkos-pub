@@ -21,30 +21,56 @@ function slideInit() {
   });
 
   //상품 리스트 슬라이드
-  var ptList = new Swiper('.product_list', {
-    roundLengths: true,
-    spaceBetween: 30,
-    // clickable: true,
-    // allowTouchMove: true,
+  var pcPtList = {
+    roundLengths: false,
     slidesPerView: 'auto',
+    spaceBetween: 30,
+    speed: 500,
+    loop: false,
+    grabCursor: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.product_list_wrap .swiper-button-next',
+      prevEl: '.product_list_wrap .swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.product_list_wrap .swiper-scrollbar',
+      hide: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.product_list_wrap .swiper-pagination',
       type: 'fraction',
     }
-  });
+  };
+  var moPtList = {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    speed: 500,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.product_list_wrap .swiper-button-next',
+      prevEl: '.product_list_wrap .swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.product_list_wrap .swiper-scrollbar',
+      hide: false,
+    },
+    pagination: {
+      el: '.product_list_wrap .swiper-pagination',
+      type: 'fraction',
+    }
+  };
+  var ptList = isMobile
+      ? new Swiper('.product_list_wrap .product_list', moPtList)
+      : new Swiper('.product_list_wrap .product_list', pcPtList);
 
- 
+  //reloadSlide(speedSlide, pcPtList, moPtList);
 
   var detailThumb = new Swiper('.pdt_thumbs .inner', {
     slidesPerView: 'auto',
     spaceBetween: 15,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.pdt_thumbs .swiper-button-next',
+      prevEl: '.pdt_thumbs .swiper-button-prev',
     },
   });
   var detailPhoto = new Swiper('.photo_box', {
@@ -88,6 +114,8 @@ toggleReview();
 
           if( obj.is('[class*="sub_type"]') === false )
           {
+            console.log('aaa');
+
             pageTabInit( obj );
           }
         });

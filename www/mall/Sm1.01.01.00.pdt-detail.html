@@ -109,7 +109,7 @@
 
               <!-- 상품명 -->
               <div class="pdt_head">
-                <p class="pdt_code">상품코드 : <strong>000000</strong></p>
+                <p class="pdt_code">상품코드 : <strong>00000000</strong></p>
                 <h2><p class="pdt_name">굿즈 토퍼 4종</p></h2>
                 <p class="desc">4시간만에 완성되는 대형 인화 출력</p>
               </div>
@@ -223,7 +223,7 @@
                       <strong class="form_name">추가옵션</strong>
                       <div class="form_inp">
                         <select class="sel_opt" title="재질 선택하기">
-                          <option selected>재질</option>
+                          <option selected>재질선택</option>
                         </select>
                       </div>
                     </div>
@@ -247,16 +247,26 @@
                       <div class="form_inp js-list-item">
                         <div class="file_inp_box">
                           <!-- 첨부 파일 이름 출력 요소 -->
-                          <input type="text" class="js-file-name" readonly>
+                          <input type="text" class="js-file-name" readonly />
+
+                          <!-- MOBILE 에서만 노출 -->
+                          <p class="right desc mo">- 100MB 이하/ 압축파일 권장</p>
+                          <!-- //MOBILE 에서만 노출 -->
+
                           <button type="button" class="btn type03 js-file-label">파일 찾기</button>
                           <button type="button" class="btn type03 js-file-del">파일 삭제</button>
-                          <input type="file" class="file_inp">
+
+                          <input type="file" class="file_inp" />
+
                           <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
                         </div>
 
                         <div class="txt_info">
                           <button type="button" class="btn type01 btn_guide" onclick="javascript:location.href='//www.kinkos.co.kr/data/item/1453452202/ 템플릿_V160805.zip';">작업 가이드</button>
-                          <p class="right desc">- 100MB 이하/ 압축파일 권장</p>
+
+                          <!-- PC 에서만 노출 -->
+                          <p class="right desc pc">- 100MB 이하/ 압축파일 권장</p>
+                          <!-- //PC 에서만 노출 -->
                         </div>
                       </div>
                       <!-- //file upload box -->
@@ -304,7 +314,7 @@
                       <strong class="form_name">추가옵션</strong>
                       <div class="form_inp">
                         <select class="sel_opt" title="재질 선택하기">
-                          <option selected>재질</option>
+                          <option selected>재질선택</option>
                         </select>
                       </div>
                     </div>
@@ -328,16 +338,26 @@
                       <div class="form_inp js-list-item">
                         <div class="file_inp_box">
                           <!-- 첨부 파일 이름 출력 요소 -->
-                          <input type="text" class="js-file-name" readonly>
+                          <input type="text" class="js-file-name" readonly />
+
+                          <!-- MOBILE 에서만 노출 -->
+                          <p class="right desc mo">- 100MB 이하/ 압축파일 권장</p>
+                          <!-- //MOBILE 에서만 노출 -->
+
                           <button type="button" class="btn type03 js-file-label">파일 찾기</button>
                           <button type="button" class="btn type03 js-file-del">파일 삭제</button>
-                          <input type="file" class="file_inp">
+
+                          <input type="file" class="file_inp" />
+
                           <button type="button" class="btn_list_custom plus js-list-add"><span class="blind">파일폼 추가/삭제</span></button>
                         </div>
 
                         <div class="txt_info">
                           <button type="button" class="btn type01 btn_guide" onclick="javascript:location.href='//www.kinkos.co.kr/data/item/1453452202/ 템플릿_V160805.zip';">작업 가이드</button>
-                          <p class="right desc">- 100MB 이하/ 압축파일 권장</p>
+
+                          <!-- PC 에서만 노출 -->
+                          <p class="right desc pc">- 100MB 이하/ 압축파일 권장</p>
+                          <!-- //PC 에서만 노출 -->
                         </div>
                       </div>
                       <!-- //file upload box -->
@@ -372,7 +392,7 @@
               <!-- //옵션별 추가 사항 -->
 
               <div class="delivery_price">
-                <div class="left">기본 배송비</div>
+                <div class="left"><strong>기본 배송비</strong></div>
                 <div class="right"><strong>20,000</strong>원</div>
               </div>
 
@@ -705,7 +725,7 @@
                         <div class="review_head">
                           <a class="infoinner" href="#url">
                             <div class="writer"><strong class="id">abc***</strong><span class="date">2019. 11. 18</span></div>
-                            <div class="sjt"><strong>즉석 소량 명함 10매(양면)</strong><span>[용지] 스노우250g + [코팅] 유광(+0원)</span></div>
+                            <div class="sjt"><strong>즉석 소량 명함 10매(양면)</strong><span>[용지] 스노우250g + [코팅] 유광(+0원) + 스노우 250g(엠보싱) + 양면명함 + [코팅] 유광(+0원) + 스노우 250g(엠보싱) + 양면명함</span></div>
 
                             <!-- 리뷰내용 -->
                             <strong class="blind">리뷰내용</strong>
@@ -859,7 +879,7 @@
 
                   <!-- Page navigation -->
                   <div class="page_navi">
-                    <a href="#url" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+                    <a href="#url" class="btn_navi first pc"><span class="blind">처음 리스트로 이동</span></a>
                     <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
                     <ul class="navi_list">
                       <li class="active"><a href="#url">1</a></li>
@@ -869,7 +889,7 @@
                       <li><a href="#url">5</a></li>
                     </ul>
                     <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
-                    <a href="#url" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+                    <a href="#url" class="btn_navi last pc"><span class="blind">마지막 리스트로 이동</span></a>
                   </div>
                   <!-- Page navigation -->
                   <!-- //repeat faq item list -->
@@ -974,7 +994,7 @@
      
                   <!-- Page navigation -->
                   <div class="page_navi">
-                    <a href="#url" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+                    <a href="#url" class="btn_navi first pc"><span class="blind">처음 리스트로 이동</span></a>
                     <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
                     <ul class="navi_list">
                       <li class="active"><a href="#url">1</a></li>
@@ -984,24 +1004,16 @@
                       <li><a href="#url">5</a></li>
                     </ul>
                     <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
-                    <a href="#url" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+                    <a href="#url" class="btn_navi last pc"><span class="blind">마지막 리스트로 이동</span></a>
                   </div>
                   <!-- Page navigation -->
                   <!-- //repeat faq item list -->
                 </div>
               </div>
-        
-        
-         
             </div>
             <!-- //상세설명 탭 콘텐츠 -->
-
-
-
           </div>
           <!-- //상세설명 -->
-
-
 
           <!-- 다른 고객이 함께 본 상품 -->
           <div class="product_list_wrap">
@@ -1077,8 +1089,11 @@
                 <!-- end 이벤트 관련 상품 리스트 -->
               </div>
             </div>
+
             <!-- Add Pagination -->
-            <div class="pg_nav_wrap">
+            <div class="pg_nav_wrap scroll">
+              <div class="swiper-scrollbar mo"></div>
+
               <div class="pg_nav">
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -1092,9 +1107,6 @@
      
         </div>
         <!-- E : 상품상세 정보 -->
-
-
-
       </div>
     </div>
     <!-- //CONTENT -->
