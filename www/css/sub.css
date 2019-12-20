@@ -2721,6 +2721,8 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap .basket_list_pc input[type="radio"] + label::before {background-position:-20px 0;}
 .cart_wrap .basket_list_pc input[type="radio"]:checked + label::before {background-position:-20px -20px;}
 .cart_wrap .basket_list_pc input[type="radio"]:checked:disabled + label::before {background-position:-20px -40px;}
+
+.cart_wrap .basket_list_pc .pdt_info_option p span.no-slash::before {content:"" !important; padding-left:0 !important; padding-right:0 !important;}
 /* //PC, MOBILE 공통 */
 
 .cart_wrap.pc .basket_list_pc .pdt_info {display:flex; flex-direction:row; flex-wrap:nowrap; align-items:flex-start; justify-content:flex-start; width:100%;}
@@ -2731,7 +2733,7 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap.pc .basket_list_pc .pdt_info .pdt_info_title .pdt_info_title_name {display:block; width:100%; margin-top:15px; font-size:20px; font-weight:bold; line-height:100%; color:#222222; text-align:left; word-break:keep-all;}
 .cart_wrap.pc .basket_list_pc .pdt_info .pdt_info_title .btn_popup {margin-top:20px; font-size:14px; line-height:32px; white-space:nowrap;}
 .cart_wrap.pc .basket_list_pc .pdt_info_option {display:block; width:100%; text-align:left;}
-.cart_wrap.pc .basket_list_pc .pdt_info_option p {display:inline-block; position:relative; margin-top:10px; line-height:120%; text-align:left;}
+.cart_wrap.pc .basket_list_pc .pdt_info_option p {display:block; position:relative; margin-top:10px; line-height:120%; text-align:left;}
 .cart_wrap.pc .basket_list_pc .pdt_info_option p:nth-child(1) {margin-top:20px;}
 .cart_wrap.pc .basket_list_pc .pdt_info_option p span {display:inline-block;}
 .cart_wrap.pc .basket_list_pc .pdt_info_option p span:last-child::after {content:""; padding-left:0;}
@@ -3002,11 +3004,13 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_content_code {width:100%; font-size:16px; font-weight:bold; line-height:100%; color:#03a2ea;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_content_pdt_name {width:100%; margin-top:10px; font-size:16px; font-weight:bold; line-height:100%; color:#222;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option {width:100%; margin-top:10px;}
-.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p {margin-top:8px; line-height:140%; word-break:break-word;}
+.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p {display:block; margin-top:8px; line-height:140%; word-break:break-word;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p.add_option {position:relative; width:100%; padding-left:20px; padding-right:10%;}
 .cart_wrap.mo .basket_list.confirm .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p {margin-top:10px; padding-right:0;}
-.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p span::after {content:"/"; padding-left:5px; padding-right:5px;}
-.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p span:last-child::after {content:""; padding-left:0; padding-right:0;}
+.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p span::before {content:"/"; padding-left:5px; padding-right:5px;}
+.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p span:first-child::before {content:""; padding-left:0; padding-right:0;}
+.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p.add_option span:nth-child(2)::before {content:""; padding-left:0; padding-right:0;}
+.cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p span.no-slash::before {content:""; padding-left:0; padding-right:0;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p.add_option span {color:#777777; word-break:break-all;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p.add_option .btn_delete {display:inline-block; position:absolute; top:-2px; right:0; width:20px; height:20px; margin-left:5px; background:url(../image/common/ico-ly-close.png) no-repeat 50% 50%; vertical-align:middle;}
 .cart_wrap.mo .basket_list_item .pdt_info .pdt_info_content .pdt_info_option p .ico.cramp {position:absolute; display:inline-block; top:0; left:0; width:20px; height:10px;}
