@@ -264,16 +264,6 @@
                       <div class="shipping_info_item_title">일반전화</div>
                       <div class="shipping_info_item_content">02-1234-5678</div>
                     </div>
-
-                    <div class="shipping_info_item request">
-                      <div class="shipping_info_item_title">요청사항</div>
-                      <div class="shipping_info_item_content">
-                        <div class="form_inp">
-                          <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
-                        </div>
-                        <div class="inp_word_count"><span>0</span>/<span>100</span></div>
-                      </div>
-                    </div>
                   </div>
 
                   <div class="shipping_address_item mobile_shipping_address_new hide">
@@ -337,15 +327,15 @@
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div class="shipping_info_item request">
-                      <div class="shipping_info_item_title">요청사항</div>
-                      <div class="shipping_info_item_content">
-                        <div class="form_inp">
-                          <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
-                        </div>
-                        <div class="inp_word_count"><span>0</span>/<span>100</span></div>
+                  <div class="shipping_request_wrap">
+                    <div class="shipping_request_title">요청사항</div>
+                    <div class="shipping_request_content">
+                      <div class="form_inp">
+                        <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
                       </div>
+                      <div class="inp_word_count"><span>0</span>/<span>100</span></div>
                     </div>
                   </div>
                 </div>
@@ -366,15 +356,20 @@
                       <span class="label">총 상품금액</span>
                       <span class="price"><strong>298,000</strong>원</span>
                     </div>
-                    <div class="box_item">
+                    <!--
+                      <div class="box_item"> 에
+                      mo_plus 추가시 금액앞에 (+) 기호 추가
+                      mo_minus 추가시 금액앞에 (-) 기호 추가
+                    -->
+                    <div class="box_item mo_minus">
                       <span class="label">총 할인금액</span>
                       <span class="price"><strong>100,000</strong>원</span>
                     </div>
-                    <div class="box_item">
+                    <div class="box_item mo_plus">
                       <span class="label">배송비</span>
                       <span class="price"><strong>5,000</strong>원</span>
                     </div>
-                    <div class="box_item">
+                    <div class="box_item mo_plus">
                       <span class="label">추가 배송비</span>
                       <span class="price"><strong>0</strong>원</span>
                     </div>
