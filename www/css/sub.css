@@ -3238,7 +3238,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 
 .cont_wrap.pc .order_list_pc th {padding:20px 0; color:#000; border-bottom:1px solid #e7e7e7; vertical-align:middle; font-weight:700;}
 .cont_wrap.pc .order_list_pc td {padding:25px 30px; border:0; border-top:1px solid #e7e7e7; color:#222; vertical-align:middle; font-weight:normal;}
-.cont_wrap.pc .order_list_pc td.blank_botter_bottom {height:1px; padding:0; background:#ccc;}
+.cont_wrap.pc .order_list_pc td.blank_botter_bottom {height:1px; padding:0; border-top:0; background:#ccc;}
 .cont_wrap.pc .order_list_pc .td_ord_date {border-top:0; border-right:1px solid #e7e7e7; vertical-align:top;}
 .cont_wrap.pc .order_list_pc .td_ord_date + .td_pdt_info {border-top:0;}
 .cont_wrap.pc .order_list_pc .td_ord_date + .td_pdt_info + .td_ord_amount {border-top:0;}
