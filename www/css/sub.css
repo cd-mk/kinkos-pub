@@ -3231,7 +3231,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .guide_box_pc .right {float:right;}
 .cont_wrap.pc .guide_box_pc p span {display:inline-block; padding-left:30px;}
 .cont_wrap.pc .guide_box_pc p span:first-child {padding-left:0;}
-.cont_wrap.pc .guide_box_pc p strong {font-weight:700; color:#222;}
+.cont_wrap.pc .guide_box_pc p strong {font-size:18px; font-weight:700; color:#222;}
 
 .cont_wrap.pc .order_list_pc {width:100%;position:relative;}
 .cont_wrap.pc .order_list_pc table {width:100%; border-top:2px solid #000; border-collapse:separate; text-align:center;}
@@ -3246,7 +3246,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .order_list_pc .td_ord_date + .td_pdt_info + .td_ord_amount + .td_ord_delivery + .td_ord_status {border-top:0;}
 .cont_wrap.pc .order_list_pc .td_ord_date p {margin-top:15px; word-break:break-word;}
 .cont_wrap.pc .order_list_pc .td_ord_date p:first-child {margin-top:0;}
-.cont_wrap.pc .order_list_pc .td_ord_date a.btn {width:120px;}
+.cont_wrap.pc .order_list_pc .td_ord_date a.btn {margin-top:20px; font-size:14px; line-height:32px; white-space:nowrap;}
 
 .cont_wrap.pc .order_list_pc .td_pdt_info {}
 
@@ -3314,6 +3314,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 
 .cont_wrap.pc .ord_detail_payment_pc {position:relative;}
 .cont_wrap.pc .ord_detail_payment_pc .btn_right {position:absolute; top:0; right:0;}
+.cont_wrap.pc .ord_detail_payment_pc .btn_right .btn {font-size:14px; line-height:32px; white-space:nowrap;}
 .cont_wrap.pc .ord_detail_payment_pc table {width:100%; border-collapse:separate; text-align:center; border-top:2px solid #222222; border-bottom:1px solid #cccccc;}
 .cont_wrap.pc .ord_detail_payment_pc table th {padding:25px 40px; text-align:left; border-top:1px solid #e7e7e7;}
 .cont_wrap.pc .ord_detail_payment_pc table td {padding:25px 20px; text-align:left; border-top:1px solid #e7e7e7;}
