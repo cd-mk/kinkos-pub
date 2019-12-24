@@ -29,7 +29,7 @@
   PC 일 경우 : fix_pc
   MOBILE 일 경우 : fix_mobile
 -->
-<body class="fix_pc">
+<body class="fix_mobile">
 <!-- 접근성 바로가기 메뉴(숨김) -->
 <div id="accessibility"> <strong class="blind">컨텐츠바로가기</strong>
   <ul>
@@ -59,158 +59,91 @@
     <!-- //breadcrumb  --> 
     
     <!-- 콘텐츠 group "cont_wrap" 고정 -->
-    <!-- PC 버전 -->
-    <div class="cont_wrap sidebar pc">
-      <div class="section mid">
-        <div class="snb">
-          <h2>마이페이지</h2>
-          <ul>
-            <li class="active"><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
-            <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list.html">시안보기</a></li>
-            <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
-            <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
-            <li>
-              <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
-              <ul>
-                <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
-                <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
-                <li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
-                <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
-              <ul>
-                <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
-                <li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+    <!-- MOBILE 버전 -->
+    <div class="cont_wrap tab_area mo">
+      <!-- page tab -->
+      <div class="page_tab col4">
+        <ul>
+          <li class="active"><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+          <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list.html">시안보기</a></li>
+          <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+          <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+          <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a></li>
+          <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a></li>
+        </ul>
+      </div>
+      <!-- //page tab -->
 
+      <div class="section">
         <!-- 본문 -->
-        <div class="con_box mpg_wrap">
+        <div class="con_box mpg_wrap detail">
           <div class="my_order detail">
             <div class="tit_box mid">
               <h3>주문/배송상세</h3>
+
+              <a class="btn type01 small prev_page_btn"><span>이전화면</span></a>
             </div>
 
-            <div class="guide_box_pc">
+            <div class="guide_box_mo">
               <p class="left"><span><strong>주문일</strong></span><span>2019-11-30</span></p>
               <p class="right"><span><strong>주문번호</strong></span><span><strong>2019091613453087</strong></span></p>
             </div>
 
             <!-- 결제정보-->
-            <div class="section mid ord_detail_payment_pc">
+            <div class="section ord_detail_payment_mo">
               <div class="tit_box mid">
                 <h3>결제 정보</h3>
 
-                <div class="btn_right"><a href="#popup1" class="btn type03 small btn_popup">영수증 출력</a></div>
+                <!--<div class="btn_right"><a href="#popup1" class="btn type03 small btn_popup">영수증 출력</a></div>-->
               </div>
-              <table>
-                <caption>결제정보</caption>
-                <colgroup>
-                  <col width="15%" />
-                  <col width="*" />
-                  <col width="20%" />
-                </colgroup>
-                <tbody>
-                <tr>
-                  <th scope="row">주문 금액</th>
-                  <td>상품금액 <strong>10,000,000</strong>원 + 배송비 <strong>1,000,000</strong>원</td>
-                  <td class="price"><strong>10,000,000</strong>원</td>
-                </tr>
-                <tr>
-                  <th scope="row">할인금액</th>
-                  <td>즉시할인 1,000,000원</td>
-                  <td class="price"><strong>-1,000,000</strong>원</td>
-                </tr>
-                <tr>
-                  <th scope="row">총 결제금액</th>
-                  <td><strong>비씨카드 1234-1234-****-1234</strong> 일시불</td>
-                  <td class="price total"><strong>9,000,000</strong>원</td>
-                </tr>
-                </tbody>
-              </table>
 
+              <div class="ord_detail_payment_info">
+                <div class="ord_detail_payment_info_items">
+                  <div class="ord_detail_payment_info_item">
+                    <div class="ord_detail_payment_info_price">
+                      <span><strong>주문금액</strong></span>
+                      <span><strong>10,000,000</strong>원</span>
+                    </div>
+                    <div class="ord_detail_payment_info_price_summary">
+                      <span>상품금액 <strong>10,000,000</strong>원 + 배송비 <strong>1,000,000</strong>원</span>
+                    </div>
+                  </div>
+                  <div class="ord_detail_payment_info_item">
+                    <div class="ord_detail_payment_info_price">
+                      <span><strong>할인금액</strong></span>
+                      <span><strong>1,000,000</strong>원</span>
+                    </div>
+                    <div class="ord_detail_payment_info_price_summary">
+                      <span>즉시할인 <strong>1,000,000</strong>원</span>
+                    </div>
+                  </div>
+                  <div class="ord_detail_payment_info_item">
+                    <div class="ord_detail_payment_info_price">
+                      <span><strong>총 결제금액</strong></span>
+                      <span class="ord_detail_payment_info_total_price"><strong>9,000,000</strong>원</span>
+                    </div>
+                    <div class="ord_detail_payment_info_price_summary">
+                      <span><strong>비씨카드 1234-1234-****-1234</strong> 일시불</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- //결제정보 -->
 
             <!-- 주문상품정보 -->
-            <div class="section mid ord_detail_payment_pc">
+            <div class="section">
               <div class="tit_box mid"><h3>주문상품정보</h3></div>
-              <div class="order_list_pc">
-                <table>
-                  <caption>주문상품정보</caption>
-                  <colgroup>
-                    <col width="12%" />
-                    <col width="*" />
-                    <col width="15%" />
-                    <col width="18%" />
-                    <col width="15%" />
-                    <col width="14%" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">카트번호</th>
-                      <th scope="col">상품/옵션정보</th>
-                      <th scope="col">수량/상품금액</th>
-                      <th scope="col">배송</th>
-                      <th scope="col">파일확인</th>
-                      <th scope="col">주문상태</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- loop -->
-                    <tr>
-                      <td class="td_cart_num">
-                        <p><strong>100100100</strong></p>
-                      </td>
-                      <td class="td_prd_info">
-                        <div class="pdt_info">
-                          <div class="pdt_info_title">
-                            <span class="pdt_info_title_name">즉석명함 100매</span>
-                          </div>
-                        </div>
-                        <div class="pdt_info_option">
-                          <p><span>[사이즈] 90mm X 55mm</span></p>
-                          <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
-                          <p class="add_option">
-                            <i class="ico cramp"><span class="blind"></span></i>
-                            <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
-                          </p>
-                        </div>
-                      </td>
-                      <td class="td_prd_price">
-                        <p><strong>1</strong>개</p>
-                        <p><strong>10,000,000</strong>원</p>
-                      </td>
-                      <td class="td_ord_delivery">
-                        <p><strong>직접수령</strong></p>
-                        <p><strong class="ord_delivery_point">가산디지털단지 센터</strong></p>
-                        <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
-                      </td>
-                      <td class="td_ord_regist_files">
-                        <a href="#popup2" class="btn_popup">요청사항/파일확인</a>
-                      </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#popup1" class="btn type07 small btn_popup">시안보기</a></p>
-                        <p><a href="#" class="btn type02 small">주문취소</a></p>
-                        <p><a href="#" class="btn type01 small">재주문</a></p>
-                      </td>
-                    </tr>
-                    <!-- loop -->
 
-                    <tr>
-                      <td class="td_cart_num">
-                        <p><strong>100100100</strong></p>
-                      </td>
-                      <td class="td_prd_info">
-                        <div class="pdt_info">
-                          <div class="pdt_info_title">
-                            <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
-                          </div>
+              <div class="order_list_mo">
+                <div class="order_list_items">
+                  <!-- loop -->
+                  <div class="order_list_item">
+                    <div class="pdt_info">
+                      <div class="pdt_info_content">
+                        <div class="pdt_info_title">
+                          <p class="pdt_info_title_txt">100100100</p>
+                          <p class="pdt_info_title_name">즉석명함 100매</p>
                         </div>
                         <div class="pdt_info_option">
                           <p><span>[사이즈] 90mm X 55mm</span></p>
@@ -219,35 +152,95 @@
                             <i class="ico cramp"><span class="blind"></span></i>
                             <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
                           </p>
+                          <p class="ord_amount">주문수량<strong>1</strong>개</p>
                         </div>
-                      </td>
-                      <td class="td_prd_price">
-                        <p><strong>1</strong>개</p>
-                        <p><strong>9,000,000</strong>원</p>
-                      </td>
-                      <td class="td_ord_delivery">
-                        <p><strong>택배수령</strong></p>
-                        <p>배송비<strong class="ord_delivery_price">2500</strong>원</p>
-                        <p><a href="#" class="btn type04 small">배송조회</a></p>
-                      </td>
-                      <td class="td_ord_regist_files">
-                        <a href="#popup2" class="btn_popup">요청사항/파일확인</a>
-                      </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#popup1" class="btn type07 small btn_popup">시안보기</a></p>
-                        <p><a href="#" class="btn type02 small">주문취소</a></p>
-                        <p><a href="#" class="btn type01 small">재주문</a></p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+
+                        <div class="ord_status">접수대기</div>
+                      </div>
+                    </div>
+
+                    <div class="ord_delivery">
+                      <p class="left"><strong>직접수령</strong> / <strong class="ord_delivery_point">가산디지털단지 센터</strong></p>
+                      <p class="right">배송비<strong class="ord_delivery_price">0</strong>원</p>
+                    </div>
+
+                    <div class="ord_regist_files">
+                      <a href="#popup2" class="left btn_popup">요청사항/파일확인</a>
+
+                      <a class="btn type04 small delivery_tracking_btn"><span>배송조회</span></a>
+                    </div>
+
+                    <div class="ord_pdt_total_price">
+                      <div class="box">
+                        <div class="box_item total">
+                          <span class="label">판매금액</span>
+                          <span class="price"><strong>9,000,000</strong>원</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ord_btns">
+                      <a href="#popup1" class="btn type02 small btn_popup">시안보기</a>
+                      <a href="#" class="btn type02 small">주문취소</a>
+                      <a href="#" class="btn type01 small">재주문</a>
+                    </div>
+                  </div>
+                  <!-- //loop -->
+
+                  <div class="order_list_item">
+                    <div class="pdt_info">
+                      <div class="pdt_info_content">
+                        <div class="pdt_info_title">
+                          <p class="pdt_info_title_txt">100100100</p>
+                          <p class="pdt_info_title_name">즉석명함 100매</p>
+                        </div>
+                        <div class="pdt_info_option">
+                          <p><span>[사이즈] 90mm X 55mm</span></p>
+                          <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                          <p class="add_option">
+                            <i class="ico cramp"><span class="blind"></span></i>
+                            <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                          </p>
+                          <p class="ord_amount">주문수량<strong>1</strong>개</p>
+                        </div>
+
+                        <div class="ord_status">접수대기</div>
+                      </div>
+                    </div>
+
+                    <div class="ord_delivery">
+                      <p class="left"><strong>직접수령</strong> / <strong class="ord_delivery_point">가산디지털단지 센터</strong></p>
+                      <p class="right">배송비<strong class="ord_delivery_price">0</strong>원</p>
+                    </div>
+
+                    <div class="ord_regist_files">
+                      <a href="#popup2" class="left btn_popup">요청사항/파일확인</a>
+
+                      <a class="btn type04 small delivery_tracking_btn"><span>배송조회</span></a>
+                    </div>
+
+                    <div class="ord_pdt_total_price">
+                      <div class="box">
+                        <div class="box_item total">
+                          <span class="label">판매금액</span>
+                          <span class="price"><strong>9,000,000</strong>원</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ord_btns">
+                      <a href="#popup1" class="btn type02 small btn_popup">시안보기</a>
+                      <a href="#" class="btn type02 small">주문취소</a>
+                      <a href="#" class="btn type01 small">재주문</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- //주문상품정보-->
 
             <!-- 배송지 정보 -->
-            <div class="section mid ord_delivery_info">
+            <div class="section ord_delivery_info">
               <div class="tit_box mid"><h3>배송지 정보</h3></div>
               <div class="ord_delivery_info_wrap first">
                 <div class="ord_delivery_info_items">
@@ -255,6 +248,11 @@
                     <div class="box">
                       <div class="box_item"><p><strong>보내시는 분</strong></p></div>
                       <div class="box_item"><p><strong>킨코스</strong></p></div>
+                    </div>
+
+                    <div class="box">
+                      <div class="box_item"><p><strong>주소</strong></p></div>
+                      <div class="box_item"><p>(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</p></div>
                     </div>
 
                     <div class="box">
@@ -267,12 +265,6 @@
                       <div class="box_item"><p>010-1234-5679</p></div>
                     </div>
                   </div>
-                  <div class="ord_delivery_info_item">
-                    <div class="box">
-                      <div class="box_item"><p><strong>주소</strong></p></div>
-                      <div class="box_item"><p>(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</p></div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -282,6 +274,11 @@
                     <div class="box">
                       <div class="box_item"><p><strong>받으시는 분</strong></p></div>
                       <div class="box_item"><p><strong>킨코스코리아 가산디지털단지센터</strong></p></div>
+                    </div>
+
+                    <div class="box">
+                      <div class="box_item"><p><strong>주소</strong></p></div>
+                      <div class="box_item"><p>(06729)<br />서울특별시 금천구 가산디지털1로 168 우림라이온스밸리 B동 106호</p></div>
                     </div>
 
                     <div class="box">
@@ -299,12 +296,6 @@
                       <div class="box_item"><p>1층에서 연락바랍니다.</p></div>
                     </div>
                   </div>
-                  <div class="ord_delivery_info_item">
-                    <div class="box">
-                      <div class="box_item"><p><strong>주소</strong></p></div>
-                      <div class="box_item"><p>(06729)<br />서울특별시 금천구 가산디지털1로 168 우림라이온스밸리 B동 106호</p></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -317,7 +308,7 @@
         <!-- //본문 -->
       </div>
     </div>
-    <!-- //PC 버전 -->
+    <!-- //MOBILE 버전 -->
   </div>
   <!-- CONTENT --> 
   

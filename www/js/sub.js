@@ -114,8 +114,6 @@ toggleReview();
 
           if( obj.is('[class*="sub_type"]') === false )
           {
-            console.log('aaa');
-
             pageTabInit( obj );
           }
         });
