@@ -691,7 +691,7 @@ p+.btn_wrap {margin-top:40px !important;}
 /* side menu */
 .cont_wrap.sidebar {padding-left:260px;position:relative;padding-top:0;}
 .sidebar .snb {widtH:230px;position:absolute;left:0;top:0;color:#222;}
-.mall .sidebar .snb {top:45px;}
+.mall .sidebar .snb {top:0px;}
 .sidebar .snb h2 {font-size:36px;font-weight:700;}
 .sidebar .snb ul li a {display:inline-block;}
 .sidebar .snb ul li.active a,
