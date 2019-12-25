@@ -1135,3 +1135,7 @@ common mall
 
 #popupzone.closed {height:0;transition:linear 0.5s;position: relative;top:-120px}
 #popupzone.opened {height:120px;transition:linear 0.5s;position: relative;top:0}
+
+/* PC 버전 */
+body.fix_pc {min-width:1024px;}
+/* //PC 버전 */

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+	<meta name="Title" content="킨코스코리아" />
+	<meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+	<!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="킨코스코리아">
+	<meta property="og:url" content="http://www.kinkos.co.kr/">
+	<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
+	<meta property="og:image" content="../image/common/logo.png">
+	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<title>시안보기 | 마이페이지 | 킨코스코리아</title>
+	<!-- CSS FILE LOAD -->
+	<link rel="stylesheet" href="../css/lib/animate.css">
+	<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href="../css/lib/swiper.min.css">
+
+	<link rel="stylesheet" href="../css/common.css">
+	<!-- only sub -->
+	<link rel="stylesheet" href="../css/sub.css">
+</head>
+
+<!--
+  PC 일 경우 : fix_pc
+  MOBILE 일 경우 : fix_mobile
+-->
+<body class="fix_pc">
+<!-- 접근성 바로가기 메뉴(숨김) -->
+<div id="accessibility">
+	<strong class="blind">컨텐츠바로가기</strong>
+	<ul>
+		<li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+		<li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+	</ul>
+</div>
+<!-- //접근성 바로가기 메뉴(숨김) -->
+
+<!-- WRAP (mall or company css추가)-->
+<div id="wrap" class="mall">
+
+	<!-- HEADER -->
+	<div id="header">
+	</div>
+	<!-- //HEADER -->
+
+	<!-- CONTENT -->
+	<div id="content">
+		<!-- breadcrumb  -->
+		<div class="breadcrumb_wrap">
+			<ul class="item_list">
+				<li><a href="#url" class="home">Home</a></li>
+				<li><a href="#">마이페이지</a></li>
+				<li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
+			</ul>
+		</div>
+		<!-- //breadcrumb  -->
+
+		<!-- 콘텐츠 group "cont_wrap" 고정 -->
+		<!-- PC 버전 -->
+		<div class="cont_wrap sidebar pc">
+			<div class="section mid">
+				<div class="snb">
+					<h2>마이페이지</h2>
+					<ul>
+						<li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+						<li class="active"><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
+						<li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+						<li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+						<li>
+							<a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
+							<ul>
+								<li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
+								<li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+								<li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+								<li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
+							<ul>
+								<li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
+								<li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 본문 -->
+				<div class="con_box mpg_wrap">
+					<!-- 구매내역 리스트 -->
+					<div class="my_order">
+						<div class="tit_box mid">
+							<h3>시안보기</h3>
+						</div>
+
+						<div class="order_list_pc">
+							<table>
+								<caption>주문/배송조회 목록</caption>
+								<colgroup>
+									<col width="20%" />
+									<col width="*" />
+									<col width="18%" />
+									<col width="10%" />
+									<col width="14%" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">주문일자</th>
+									<th scope="col">상품/옵션정보</th>
+									<th scope="col">파일확인</th>
+									<th scope="col">진행상태</th>
+									<th scope="col">시안보기</th>
+								</tr>
+								</thead>
+								<tbody>
+								<!-- loop 1차 -->
+								<!-- 주문 1의 상품 1 -->
+								<tr>
+									<!--
+										loop 1차의 첫번째 tr에 추가
+										<td class="td_ord_date" rowspan=" 해당주문의 상품 갯수 ">
+
+										loop 2차 상품정보
+									-->
+									<td class="td_ord_date" rowspan="3">
+										<p>2019-11-30</p>
+										<p><strong>(2019091613453087)</strong></p>
+									</td>
+									<td class="td_pdt_info">
+										<div class="pdt_info">
+											<div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
+											<div class="pdt_info_title">
+												<span class="pdt_info_title_txt">100100100</span>
+												<span class="pdt_info_title_name">즉석명함 100매</span>
+											</div>
+										</div>
+										<div class="pdt_info_option">
+											<p><span>[사이즈] 90mm X 55mm</span></p>
+											<p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+											<p class="add_option">
+												<i class="ico cramp"><span class="blind"></span></i>
+												<span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+											</p>
+										</div>
+									</td>
+									<td class="td_ord_pdt_total_regist_files">
+										<a href="#popup2" class="btn_popup">요청사항/파일확인</a>
+									</td>
+									<td class="td_ord_status">
+										<span class="ord_status_confirm">시안확정</span>
+									</td>
+									<td class="td_ord_view">
+										<p><a href="#popup1" class="btn type02 btn_popup sian_view_btn">시안보기</a></p>
+									</td>
+								</tr>
+								<!-- //주문 1의 상품 1 -->
+
+								<!-- 주문 1의 상품이 1개 이상 일 경우 loop 2차 상품 -->
+								<!-- 주문 1의 상품 2 -->
+								<tr>
+									<td class="td_pdt_info">
+										<div class="pdt_info">
+											<div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
+											<div class="pdt_info_title">
+												<span class="pdt_info_title_txt">100100100</span>
+												<span class="pdt_info_title_name">즉석명함 100매</span>
+											</div>
+										</div>
+										<div class="pdt_info_option">
+											<p><span>[사이즈] 90mm X 55mm</span></p>
+											<p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+											<p class="add_option">
+												<i class="ico cramp"><span class="blind"></span></i>
+												<span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+											</p>
+										</div>
+									</td>
+									<td class="td_ord_pdt_total_regist_files">
+										<a href="#popup2" class="btn_popup">요청사항/파일확인</a>
+									</td>
+									<td class="td_ord_status">
+										<span class="ord_status_progress">진행중</span>
+									</td>
+									<td class="td_ord_view">
+										<p><a href="#popup1" class="btn type02 btn_popup sian_view_btn">시안보기</a></p>
+									</td>
+								</tr>
+								<!-- //주문 1의  주문의 상품 2 -->
+								<!-- 주문 1의 상품 3 -->
+								<tr>
+									<td class="td_pdt_info">
+										<div class="pdt_info">
+											<div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
+											<div class="pdt_info_title">
+												<span class="pdt_info_title_txt">100100100</span>
+												<span class="pdt_info_title_name">템플릿 명함_기업 가로형</span>
+											</div>
+										</div>
+										<div class="pdt_info_option">
+											<p><span>[템플릿 선택] 기업 가로형-9</span><span>[수량] 100매</span></p>
+											<p><span>[재질] 하모니 198g</span><span>1개 (+55,000원)</span></p>
+											<p class="add_option">
+												<i class="ico cramp"><span class="blind"></span></i>
+												<span>[코너라운딩] 2면</span><span>1개 (+5,000원)</span>
+											</p>
+										</div>
+									</td>
+									<td class="td_ord_pdt_total_regist_files">
+										<a href="#popup2" class="btn_popup">요청사항/파일확인</a>
+									</td>
+									<td class="td_ord_status">
+										<span class="ord_status_progress">진행중</span>
+									</td>
+									<td class="td_ord_view">
+										<p><a href="#popup1" class="btn type02 btn_popup sian_view_btn">시안보기</a></p>
+									</td>
+								</tr>
+								<!-- 주문 1의 상품 3 -->
+								<!-- //주문 1의 상품이 1개 이상 일 경우 loop 2차 상품 -->
+
+								<!-- loop 1차 밑에 tr 태그 추가해 주세요 -->
+								<tr><td colspan="5" class="blank_botter_bottom"></td></tr>
+								<!-- //loop 1차 -->
+
+								<!-- 주문 2 -->
+								<tr>
+									<!--
+										<td class="td_ord_date" rowspan=" 해당주문의 상품 갯수 ">
+									-->
+									<td class="td_ord_date" rowspan="1">
+										<p>2019-11-30</p>
+										<p><strong>(2019091613453087)</strong></p>
+									</td>
+									<td class="td_pdt_info">
+										<div class="pdt_info">
+											<div class="pdt_info_img"><img src="../image/mall/product/cart_pl_03.png"></div>
+											<div class="pdt_info_title">
+												<span class="pdt_info_title_txt">100100100</span>
+												<span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
+											</div>
+										</div>
+										<div class="pdt_info_option">
+											<p><span>[사이즈 (긴쪽)] ⑦ 7m</span></p>
+											<p><span>[마감방식] 각목+노끈(10M) + 113,000원 (+131,000원)</span></p>
+											<p class="add_option">
+												<i class="ico cramp"><span class="blind"></span></i>
+												<span>[끈추가] 10m</span><span>1개 (+2,000원)</span>
+											</p>
+										</div>
+									</td>
+									<td class="td_ord_pdt_total_regist_files">
+										<a href="#popup2" class="btn_popup">요청사항/파일확인</a>
+									</td>
+									<td class="td_ord_status">
+										<span class="ord_status_progress">진행중</span>
+									</td>
+									<td class="td_ord_view">
+										<p><a href="#popup1" class="btn type02 btn_popup sian_view_btn">시안보기</a></p>
+									</td>
+								</tr>
+
+								<tr><td colspan="5" class="blank_botter_bottom"></td></tr>
+								<!-- //주문 2 -->
+
+								</tbody>
+							</table>
+
+							<!-- Page navigation -->
+							<div class="page_navi">
+								<a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+								<a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+								<ul class="navi_list">
+									<li class="active"><a href="#url">1</a></li>
+									<li><a href="#url">2</a></li>
+									<li><a href="#url">3</a></li>
+									<li><a href="#url">4</a></li>
+									<li><a href="#url">5</a></li>
+								</ul>
+								<a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+								<a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+							</div>
+							<!-- Page navigation -->
+
+						</div>
+					</div>
+					<!-- //구매내역 리스트 -->
+
+				</div>
+				<!-- //본문 -->
+			</div>
+		</div>
+		<!-- //PC 버전 -->
+	</div>
+	<!-- CONTENT -->
+
+	<!-- FOOTER -->
+	<div id="footer" class="layout_width">
+	</div>
+	<!-- //FOOTER -->
+
+	<!-- popup area -->
+	<div id="popup1" class="popup_wrap pop_sian_view">
+		<div class="inner">
+			<!-- popup title -->
+			<h3 class="title">시안보기</h3>
+			<!-- popup content -->
+			<div class="popup_content">
+				<h4>주문정보</h4>
+
+				<div class="ord_info">
+					<div class="ord_info_items">
+						<div class="ord_info_item grid_2">
+							<div class="box">
+								<div class="box_item"><strong>이름</strong></div>
+								<div class="box_item">오비맥주사용자1</div>
+							</div>
+							<div class="box">
+								<div class="box_item"><strong>소속</strong></div>
+								<div class="box_item">프리미엄유흥지점</div>
+							</div>
+						</div>
+						<div class="ord_info_item grid_2">
+							<div class="box">
+								<div class="box_item"><strong>휴대전화</strong></div>
+								<div class="box_item">010-1234-5678</div>
+							</div>
+							<div class="box">
+								<div class="box_item"><strong>알반전화</strong></div>
+								<div class="box_item">02-1234-5678</div>
+							</div>
+						</div>
+						<div class="ord_info_item grid_2">
+							<div class="box">
+								<div class="box_item"><strong>매장명</strong></div>
+								<div class="box_item">프리미엄</div>
+							</div>
+							<div class="box">
+								<div class="box_item"><strong>POC CODE</strong></div>
+								<div class="box_item">premium</div>
+							</div>
+						</div>
+
+						<div class="ord_info_item">
+							<div class="box">
+								<div class="box_item"><strong>배송지 주소</strong></div>
+								<div class="box_item">
+									<p>(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</p>
+									<p>- 송지 변경 시 함께 주문하신 택배수령 상품에 모두 적용됩니다.</p>
+
+									<a href="#popup1" class="btn type04 ship_to_change_btn">배송지 변경</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h4>상품정보</h4>
+
+				<div class="prd_info">
+					<div class="prd_info_img"><img src="../image/mall/product/temp-pdt-list-01.png" /></div>
+					<div class="prd_info_wrap">
+						<div class="prd_info_items">
+							<div class="prd_info_item">
+								<div class="box">
+									<div class="box_item"><strong>상품명</strong></div>
+									<div class="box_item">버드와이저_배너</div>
+								</div>
+							</div>
+							<div class="prd_info_item">
+								<div class="box">
+									<div class="box_item"><strong>옵션명</strong></div>
+									<div class="box_item"><span>단/양면 : 양면</span><span>거치대 : 필요없음</span></div>
+								</div>
+							</div>
+							<div class="prd_info_item grid_2">
+								<div class="box">
+									<div class="box_item"><strong>판매가</strong></div>
+									<div class="box_item">11,140원</div>
+								</div>
+								<div class="box">
+									<div class="box_item"><strong>수량</strong></div>
+									<div class="box_item">1</div>
+								</div>
+							</div>
+							<div class="prd_info_item grid_2">
+								<div class="box">
+									<div class="box_item"><strong>소계</strong></div>
+									<div class="box_item">11,140원</div>
+								</div>
+								<div class="box">
+									<div class="box_item"><strong>주문일시</strong></div>
+									<div class="box_item">2019-09-19 10:19</div>
+								</div>
+							</div>
+							<div class="prd_info_item">
+								<div class="box">
+									<div class="box_item"><strong>가로 X 세로(cm)</strong></div>
+									<div class="box_item">0 x 0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h4>제작정보</h4>
+
+				<div class="making_info">
+					<div class="making_info_items">
+						<div class="making_info_item">
+							<div class="box">
+								<div class="box_item"><strong>상태</strong></div>
+								<div class="box_item">시안확인요청</div>
+							</div>
+						</div>
+
+						<div class="making_info_item grid_2">
+							<div class="box">
+								<div class="box_item"><strong>인쇄요청시간</strong></div>
+								<div class="box_item">2019-09-19 10:19</div>
+							</div>
+							<div class="box">
+								<div class="box_item"><strong>최종시안 등록일</strong></div>
+								<div class="box_item">2019-09-19 10:19</div>
+							</div>
+						</div>
+
+						<div class="making_info_item">
+							<div class="box">
+								<div class="box_item"><strong>요청사항</strong></div>
+								<div class="box_item">
+									<p>시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항 시안수정사항 시안수정사항 시안수정사항시안 수정사항 시안수정사항</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form_wrap">
+					<div class="form_group">
+						<div class="form_item">
+							<strong class="form_name">판매가격 결정</strong>
+							<div class="form_inp">
+								<div class="box">
+									<input type="text" class="sale_price_input" value="" />
+									<button type="button" class="btn type02">가격결정</button>
+								</div>
+
+								<div class="box right">
+									<a href="#" class="btn type01 payment_btn">결제하기</a>
+									<a href="#" class="btn type07 print_request_btn">인쇄요청</a>
+								</div>
+							</div>
+							<!-- //file upload box -->
+						</div>
+					</div>
+				</div>
+
+				<h4>요청사항</h4>
+
+				<div class="form_wrap border_top">
+					<div class="form_group">
+						<div class="form_item">
+							<div class="form_inp">
+								<textarea name="" id="" title="내용 입력"></textarea>
+							</div>
+							<p class="desc">- 등록가능 파일 : jpg, jpeg, gif, png, tiff, tif, bmp, ppt(x), xls(x), doc(x)</p>
+						</div>
+						<div class="form_item">
+							<div class="form_inp">
+								<textarea name="" id="" title="내용 입력" placeholder="댓글 내용을 입력해주세요."></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn_wrap center">
+					<button type="button" class="btn type01 large regist_btn">등록</button>
+				</div>
+
+				<div class="request_list">
+					<!-- loop -->
+					<div class="request_list_item">
+						<div class="title_wrap">
+							<div class="title_author"><span><strong>작성자 : 킨코스</strong></span></div>
+							<div class="title_write_date">2019.11.18</div>
+							<a href="#" class="btn_delete"><i></i></a>
+						</div>
+
+						<div class="request_image swiper-container">
+							<div class="swiper-wrapper">
+								<!-- loop (리스트 추가가능) -->
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+								<!-- //loop (리스트 추가가능) -->
+
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="pg_nav_wrap">
+								<div class="pg_nav">
+									<!-- Add Pagination -->
+									<div class="swiper-pagination"></div>
+									<!-- Add Arrows -->
+									<div class="swiper-button-next small"></div>
+									<div class="swiper-button-prev small"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="regist_files">
+							<div class="box">
+								<div class="box_item"><strong>등록파일</strong></div>
+								<div class="box_item">
+									<span>즉석명함_디자인.png</span>
+									<span>즉석명함_디자인(앞면).jpg</span>
+									<span>즉석명함_디자인(뒷면).jpg</span>
+									<span>즉석명함_디자인.xlxs</span>
+									<span>즉석명함_디자인.pptx</span>
+									<span>즉석명함_디자인.doc</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="comment">
+							<div class="box">
+								<div class="box_item"><strong>댓글내용</strong></div>
+								<div class="box_item">
+									<span>시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항 시안수정사항 시안수정사항</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //loop -->
+
+					<div class="request_list_item">
+						<div class="title_wrap">
+							<div class="title_author"><span><strong>작성자 : 킨코스</strong></span></div>
+							<div class="title_write_date">2019.11.18</div>
+							<a href="#" class="btn_delete"><i></i></a>
+						</div>
+
+						<div class="request_image swiper-container">
+							<div class="swiper-wrapper">
+								<!-- loop (리스트 추가가능) -->
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+								<!-- //loop (리스트 추가가능) -->
+
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="pg_nav_wrap">
+								<div class="pg_nav">
+									<!-- Add Pagination -->
+									<div class="swiper-pagination"></div>
+									<!-- Add Arrows -->
+									<div class="swiper-button-next small"></div>
+									<div class="swiper-button-prev small"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="regist_files">
+							<div class="box">
+								<div class="box_item"><strong>등록파일</strong></div>
+								<div class="box_item">
+									<span>즉석명함_디자인.png</span>
+									<span>즉석명함_디자인(앞면).jpg</span>
+									<span>즉석명함_디자인(뒷면).jpg</span>
+									<span>즉석명함_디자인.xlxs</span>
+									<span>즉석명함_디자인.pptx</span>
+									<span>즉석명함_디자인.doc</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="comment">
+							<div class="box">
+								<div class="box_item"><strong>댓글내용</strong></div>
+								<div class="box_item">
+									<span>시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항 시안수정사항 시안수정사항</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //popup content -->
+			<button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+		</div>
+	</div>
+	<!-- //popup area -->
+
+
+	<div class="dim"></div>
+</div>
+<!-- //WRAP -->
+
+
+<!-- SCRIPT -->
+<!-- global -->
+<script src="../js/jquery/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="../js/jquery/jquery.placeholder.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/swiper/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+<!-- //global -->
+
+<script src="../js/sub.js"></script>
+
+<script type="text/javascript">
+	(function () {
+	    $('.sian_view_btn').on('click', function() {
+	        setTimeout(function() {
+
+              // 시안보기 레이어팝업 호출시 실행
+              $('.pop_sian_view .request_image').each(function() {
+                  var targetObj = $(this);
+                  var nextBtnObj = targetObj.find('.swiper-button-next');
+                  var prevBtnObj = targetObj.find('.swiper-button-prev');
+                  var paginationObj = targetObj.find('.swiper-pagination');
+
+                  var opt = {
+                      slidesPerView: 'auto',
+                      spaceBetween: 30,
+                      loop: true,
+                      loopFillGroupWithBlank: true,
+                      navigation: {
+                          nextEl: nextBtnObj,
+                          prevEl: prevBtnObj,
+                      },
+                      pagination: {
+                          el: paginationObj,
+                          type: 'fraction',
+                      }
+                  };
+
+                  var requestImageSlide = new Swiper(targetObj, opt);
+
+                  reloadSlide(requestImageSlide, opt, opt);
+              });
+					}, 500);
+			});
+	})();
+</script>
+<!-- //SCRIPT -->
+
+</body>
+</html>
