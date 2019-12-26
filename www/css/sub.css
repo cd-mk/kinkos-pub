@@ -656,6 +656,10 @@ position: absolute;top:30px;right:40px;}
 .tit_box.mid.border_none {border:0;padding:0;}
 .tit_box.mid h3 .title_alert {position:relative; top:8px; float:right; color:#777;font-size:18px;font-weight: 400;}
 
+.tit_box.right_select {position:relative; overflow:initial;}
+.tit_box.right_select .right_select_wrap {position:absolute; top:-4px; right:0; min-width:200px; margin-top:0; padding:0; box-sizing:border-box;}
+.tit_box.right_select .right_select_wrap .form_item {margin-top:0;}
+
 .tit_box.small {margin-bottom:30px;text-align: left;margin-top:0;max-width:100%;}
 .tit_box.small h5 {font-weight:700;font-size:1em;}
 .tit_box.small p {font-size:14px;color:#777;margin-top:10px;}
@@ -709,6 +713,8 @@ position: absolute;top:30px;right:40px;}
   .tit_box.mid.btn_with .left {float:left;}
   .tit_box.mid.btn_with .right {float:right;}
   .tit_box.mid h3 .title_alert {top:initial; font-size:14px;width:100%;margin-top:10px;}
+
+  .tit_box.right_select .right_select_wrap {top:-10px;}
 
   .tit_box.small {margin-bottom:20px;margin-top:20px;text-align: left;padding:0}
   .tit_box.small h5 {font-size:1em;}
@@ -3220,7 +3226,8 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 /* //장바구니 MOBILE 버전 */
 
 /* 마이페이지 > 주문/배송조회 PC 버전 */
-body.fix_pc .cont_wrap.sidebar.pc {display:block !important; padding-left:260px !important; min-width:1024px;}
+body.fix_pc .cont_wrap.sidebar.pc {display:block !important; padding-left:260px !important; min-width:1284px; box-sizing:border-box;}
+body.fix_pc .cont_wrap.sidebar.pc .section {min-width:1024px;}
 body.fix_pc .cont_wrap.pc .snb {display:block !important;}
 body.fix_pc .cont_wrap.pc .mpg_wrap {display:block !important;  min-height:600px;}
 body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}

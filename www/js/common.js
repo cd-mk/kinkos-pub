@@ -260,7 +260,7 @@ var popupSizeInit = function( obj ) {
 
       if( winHeight < innerHeight )
       {
-        inner.css({'height': winHeight + 'px', 'overflow-y': 'scroll'});
+        inner.css({'height': '90%', 'overflow-y': 'scroll'});
       }
     }
   }
