@@ -501,6 +501,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 }
 /* 게시판 리스트 */
 .bbs_list {width:100%;position:relative;margin-top:60px;}
+.mpg_bbs .bbs_list {margin-top:0;}
 #tab_con .bbs_list {margin-top:0;}
 .bbs_list table {width:100%;border-top:2px solid #222;border-collapse:separate;text-align:center;}
 .bbs_list th {padding:20px 10px;border-bottom:1px solid #e7e7e7; color:#222; vertical-align:middle; font-weight:700;}
@@ -644,6 +645,7 @@ position: absolute;top:30px;right:40px;}
 .txt_message {font-size:18px;color:#03a2ea;margin-top:13px;font-weight:400 !important;display:block;}
 
 .tit_box.mid {max-width:100%;text-align:left;overflow: hidden;margin-bottom:30px;width:100%;}
+.mpg_wrap .tit_box.mid{margin-bottom:20px;}
 .tit_box.mid h3 {font-size:24px;}
 .tit_box.mid h4 {font-size:24px;}
 .tit_box.mid h4.up_size {font-size:24px;}
@@ -658,8 +660,8 @@ position: absolute;top:30px;right:40px;}
 .tit_box.mid.border_none {border:0;padding:0;}
 .tit_box.mid h3 .title_alert {position:relative; top:8px; float:right; color:#777;font-size:18px;font-weight: 400;}
 
-.tit_box.right_select {position:relative; overflow:initial;}
-.tit_box.right_select .right_select_wrap {position:absolute; top:-4px; right:0; min-width:200px; margin-top:0; padding:0; box-sizing:border-box;}
+.tit_box.right_select {position:relative; margin-bottom:30px !important; overflow:initial;}
+.tit_box.right_select .right_select_wrap {position:absolute; top:-10px; right:0; min-width:200px; margin-top:0; padding:0; box-sizing:border-box;}
 .tit_box.right_select .right_select_wrap .form_item {margin-top:0;}
 
 .tit_box.small {margin-bottom:30px;text-align: left;margin-top:0;max-width:100%;}

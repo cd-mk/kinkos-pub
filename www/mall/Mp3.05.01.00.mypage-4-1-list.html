@@ -37,7 +37,8 @@
   <!-- //접근성 바로가기 메뉴(숨김) -->
 
   <!-- WRAP (mall or company css추가)-->
-  <div id="wrap" class="mall">
+	<!-- 마이페이지 페이지 일 경우 is-mypage 추가 -->
+	<div id="wrap" class="mall is-mypage">
 
     <!-- HEADER -->
     <div id="header"> </div>
@@ -97,7 +98,7 @@
         <!-- //page tab -->
 
         <!-- page tab sub -->
-        <div class="page_tab sub_type1 col4 section">
+        <div class="page_tab sub_type1 col4 section mo">
           <a href="javascript:;" class="btn_mo_sub_type">견적 및 상품 문의 내역</a>
           <ul>
             <li class="active"><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의 내역</a></li>
@@ -110,6 +111,9 @@
 
         <!-- 본문 -->
         <div class="con_box mpg_wrap">
+          <div class="tit_box section mid pc">
+            <h3>견적 및 상품 문의 내역</h3>
+          </div>
           
           <div class="mpg_bbs">
             
@@ -221,7 +225,10 @@
 
   <script src="../js/sub.js"></script>
   <script type="text/javascript">
-
+      // 퍼블리싱용
+      $(document).ready(function() {
+          mallSubPageTitle('마이페이지');
+      });
   </script>
 
   <!-- //SCRIPT -->

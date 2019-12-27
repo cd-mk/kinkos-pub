@@ -36,7 +36,8 @@
 <!-- //접근성 바로가기 메뉴(숨김) --> 
 
 <!-- WRAP (mall or company css추가)-->
-<div id="wrap" class="company"> 
+<!-- 마이페이지 페이지 일 경우 is-mypage 추가 -->
+<div id="wrap" class="mall is-mypage">
   
   <!-- HEADER -->
   <div id="header"> </div>
@@ -45,7 +46,7 @@
   <!-- CONTENT -->
   <div id="content"> 
     <!-- breadcrumb  -->
-                <div class="breadcrumb_wrap">
+      <div class="breadcrumb_wrap">
         <ul class="item_list">
           <li><a href="#url" class="home">Home</a></li>
         <li><a href="#">마이페이지</a></li>
@@ -55,7 +56,7 @@
     <!-- //breadcrumb  --> 
     
     <!-- 콘텐츠 group "cont_wrap" 고정 -->
-    <div class="cont_wrap sidebar">
+    <div class="cont_wrap sidebar tab_area">
       <div class="snb">
         <h2>마이페이지</h2>
         <ul>
@@ -81,6 +82,31 @@
           </li>
         </ul>
       </div>
+
+      <!-- page tab -->
+      <div class="page_tab col4 mo">
+        <ul>
+          <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+          <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-mobile.html">시안보기</a></li>
+          <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+          <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+          <li class="active"><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a></li>
+          <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a></li>
+        </ul>
+      </div>
+      <!-- //page tab -->
+
+      <!-- page tab sub -->
+      <div class="page_tab sub_type1 col4 section">
+        <a href="javascript:;" class="btn_mo_sub_type">견적 및 상품 문의 내역</a>
+        <ul>
+          <li class="active"><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의 내역</a></li>
+          <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+          <li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+          <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+        </ul>
+      </div>
+      <!-- //page tab sub -->
       
       <!-- 본문 -->
       <div class="con_box mpg_wrap">
@@ -195,7 +221,10 @@
 <script src="../js/sub.js"></script>
 
 <script>
-  
+  // 퍼블리싱용
+  $(document).ready(function() {
+    mallSubPageTitle('마이페이지');
+  });
 </script>
  <!-- //SCRIPT -->
 

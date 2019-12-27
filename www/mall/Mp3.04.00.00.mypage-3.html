@@ -37,7 +37,8 @@
   <!-- //접근성 바로가기 메뉴(숨김) -->
 
   <!-- WRAP (mall or company css추가)-->
-  <div id="wrap" class="company">
+	<!-- 마이페이지 페이지 일 경우 is-mypage 추가 -->
+	<div id="wrap" class="mall is-mypage">
 
     <!-- HEADER -->
     <div id="header"> </div>
@@ -167,8 +168,6 @@
                 <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
               </div>
               <!-- Page navigation -->
-         
-            
             </div>
           </div>
         </div>
@@ -196,8 +195,12 @@
   <!-- //global -->
 
   <script src="../js/sub.js"></script>
-  <script type="text/javascript">
 
+  <script type="text/javascript">
+		// 퍼블리싱용
+		$(document).ready(function() {
+			mallSubPageTitle('마이페이지');
+		});
   </script>
 
   <!-- //SCRIPT -->

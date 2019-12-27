@@ -84,7 +84,6 @@ function slideInit() {
 } 
 $(document).ready(slideInit());
 
-
 // layer popup
 var toggleV = function () {
   $(".toggle_view").click(function () {
@@ -101,6 +100,39 @@ var toggleReview = function () {
   });
 }
 toggleReview();
+
+function mallSubPageTitle( title )
+{
+  if( title )
+  {
+    var setObj = '';
+    var setDelay = 200;
+
+    var setFunc = function(title) {
+      clearTimeout( setObj );
+
+      var targetObj = $('.nav.mall .btn_back');
+      if( targetObj.length )
+      {
+        targetObj.html( title );
+      }
+      else
+      {
+        setObj = setTimeout(function() { setFunc(title); }, setDelay);
+      }
+    };
+
+    var targetObj = $('.nav.mall .btn_back');
+    if( targetObj.length )
+    {
+      targetObj.html( title );
+    }
+    else
+    {
+      setObj = setTimeout(function() { setFunc(title); }, setDelay);
+    }
+  }
+}
 
 (function($) {
   "use strict";
