@@ -114,7 +114,9 @@ toggleReview();
 
           if( obj.is('[class*="sub_type"]') === false )
           {
-            pageTabInit( obj );
+            $(window).on('load', function() {
+              pageTabInit( obj );
+            });
           }
         });
       }
@@ -128,24 +130,29 @@ toggleReview();
     function pageTabInit( obj ) {
       if( obj )
       {
-        var objOffset = obj.offset();
-        var objOffsetTop = parseInt( objOffset.top, 10 );
-
         var eventBind = obj.attr('data-event-bind');
         if( eventBind !== 'Y' )
         {
-          obj.attr('data-event-bind', 'Y');
+
+          console.log( obj.offset().top );
+          obj.attr('data-event-bind', 'Y').attr('data-first-offset-top', parseInt( obj.offset().top, 10 ));
 
           $(window).on('scroll', function() {
-            var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
+            var winWidth = parseInt( window.innerWidth, 10 );
 
-            if( objOffsetTop < windowScrollTop )
+            if( winWidth < 1025 )
             {
-              obj.addClass('fixed');
-            }
-            else
-            {
-              obj.removeClass('fixed');
+              var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
+              var objOffsetTop = parseInt( obj.attr('data-first-offset-top'), 10 );
+
+              if( objOffsetTop < windowScrollTop )
+              {
+                obj.addClass('fixed');
+              }
+              else
+              {
+                obj.removeClass('fixed');
+              }
             }
           });
 

@@ -487,7 +487,7 @@ p+.btn_wrap {margin-top:40px !important;}
 @media screen and (max-width:1024px) {
  .new_update::after {width:16px; height:16px; font-size:10px; right:-22px;}
 
- .mall .header_wrap .nav {height:61px; text-align:left; padding-left:2.73%; background:#03a2ea; border-bottom:1px solid #e7e7e7; box-sizing:border-box;}
+ .mall .header_wrap .nav {height:60px; text-align:left; padding-left:2.73%; background:#03a2ea; box-sizing:border-box;}
  .mall.is-main .header_wrap .nav .btn_back {display:none;}
  .mall .header_wrap .nav .btn_mo_gnb {float:left; width:24px; height:24px; margin:0; padding:0;}
  .mall .header_wrap .nav .btn_mo_gnb > span {display:block; width:100%; height:2px; margin-top:6px; background:#fff;}
@@ -832,7 +832,6 @@ p+.btn_wrap {margin-top:40px !important;}
  .mall .breadcrumb_wrap + .tab_area {margin-top:0;}
  .mall .breadcrumb_wrap {padding:0 15px 15px;}
  .mall .breadcrumb_wrap.mid {margin-top:0;}
-
 }
 
 

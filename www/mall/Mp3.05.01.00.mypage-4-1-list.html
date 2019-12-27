@@ -37,7 +37,7 @@
   <!-- //접근성 바로가기 메뉴(숨김) -->
 
   <!-- WRAP (mall or company css추가)-->
-  <div id="wrap" class="company">
+  <div id="wrap" class="mall">
 
     <!-- HEADER -->
     <div id="header"> </div>
@@ -56,7 +56,7 @@
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap sidebar">
+      <div class="cont_wrap sidebar tab_area">
         <div class="snb">
           <h2>마이페이지</h2>
           <ul>
@@ -83,13 +83,35 @@
           </ul>
         </div>
 
+        <!-- page tab -->
+        <div class="page_tab col4 mo">
+          <ul>
+            <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+            <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-mobile.html">시안보기</a></li>
+            <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+            <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+            <li class="active"><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a></li>
+            <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a></li>
+          </ul>
+        </div>
+        <!-- //page tab -->
+
+        <!-- page tab sub -->
+        <div class="page_tab sub_type1 col4 section">
+          <a href="javascript:;" class="btn_mo_sub_type">견적 및 상품 문의 내역</a>
+          <ul>
+            <li class="active"><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의 내역</a></li>
+            <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+            <li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+            <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+          </ul>
+        </div>
+        <!-- //page tab sub -->
+
         <!-- 본문 -->
         <div class="con_box mpg_wrap">
           
           <div class="mpg_bbs">
-            <div class="tit_box section mid">
-              <h3>견적 및 상품 문의 내역</h3>
-            </div>
             
             <div class="bbs_list">
               <table>
@@ -111,38 +133,38 @@
                    -->
                   <tr class="ing">
                     <td class="num">56</td>
-                    <td class="subject"><a href="/www/mall/Mp3.05.01.01.mypage-4-1-view.html">선릉센터 새단장 기념</a></td>
+                    <td class="subject"><a href="/www/mall/Mp3.05.01.01.mypage-4-1-view.html">하드커버_와이어제본(외부) 상담 문의</a></td>
                     <td class="type">상품문의</td>
-                    <td class="date">2019.08.06</td>
+                    <td class="date">2019.08.20</td>
                     <td class="status">접수완료</td>
                   </tr>
                   <!-- 답변완료 -->
                   <tr class="fin">
                     <td class="num">56</td>
-                    <td class="subject"><a href="#url">선릉센터 새단장 기념</a></td>
+                    <td class="subject"><a href="#url">스마트 즉석 브로슈어 4단 (8p) 제작 상담 문의합니다.</a></td>
                     <td class="type">상품문의</td>
-                    <td class="date">2019.08.06</td>
+                    <td class="date">2019.08.20</td>
                     <td class="status">답변완료</td>
                   </tr>
                   <tr class="fin">
                     <td class="num">56</td>
-                    <td class="subject"><a href="#url">선릉센터 새단장 기념</a></td>
+                    <td class="subject"><a href="#url">하드 커버_메뉴판 Oversize형 이미지 제작 / 스마트 즉석 브로슈어 4단 (8p) 제작 가능한가요?</a></td>
                     <td class="type">상품문의</td>
-                    <td class="date">2019.08.06</td>
+                    <td class="date">2019.08.20</td>
                     <td class="status">답변완료</td>
                   </tr>
                   <tr class="fin">
                     <td class="num">56</td>
-                    <td class="subject"><a href="#url">선릉센터 새단장 기념</a></td>
+                    <td class="subject"><a href="#url">즉석 명함 100매 가격 상담 문의</a></td>
                     <td class="type">상품문의</td>
-                    <td class="date">2019.08.06</td>
+                    <td class="date">2019.08.20</td>
                     <td class="status">답변완료</td>
                   </tr>
                   <tr class="fin">
                     <td class="num">56</td>
-                    <td class="subject"><a href="#url">선릉센터 새단장 기념</a></td>
+                    <td class="subject"><a href="#url">템플릿 명함_기업 세로형 상담 문의합니다.</a></td>
                     <td class="type">상품문의</td>
-                    <td class="date">2019.08.06</td>
+                    <td class="date">2019.08.20</td>
                     <td class="status">답변완료</td>
                   </tr>
                   <tr>
@@ -152,6 +174,9 @@
               </table>
               <!-- Page navigation -->
               <div class="page_navi">
+                <!-- PC 버전에서만 노출 -->
+                <a href="javascript:;" class="btn_navi first pc"><span class="blind">처음 리스트로 이동</span></a>
+                <!-- //PC 버전에서만 노출 -->
                 <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
                 <ul class="navi_list">
                   <li class="active"><a href="#url">1</a></li>
@@ -161,6 +186,9 @@
                   <li><a href="#url">5</a></li>
                 </ul>
                 <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                <!-- PC 버전에서만 노출 -->
+                <a href="javascript:;" class="btn_navi last pc"><span class="blind">마지막 리스트로 이동</span></a>
+                <!-- //PC 버전에서만 노출 -->
               </div>
               <!-- Page navigation -->
          
