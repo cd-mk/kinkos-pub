@@ -165,8 +165,6 @@ function mallSubPageTitle( title )
         var eventBind = obj.attr('data-event-bind');
         if( eventBind !== 'Y' )
         {
-
-          console.log( obj.offset().top );
           obj.attr('data-event-bind', 'Y').attr('data-first-offset-top', parseInt( obj.offset().top, 10 ));
 
           $(window).on('scroll', function() {

@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+	<meta name="Title" content="킨코스코리아" />
+	<meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+	<!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="킨코스코리아">
+	<meta property="og:url" content="http://www.kinkos.co.kr/">
+	<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
+	<meta property="og:image" content="../image/common/logo.png">
+	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<title>예산 등록 | 마이페이지 | 킨코스코리아</title>
+	<!-- CSS FILE LOAD -->
+	<link rel="stylesheet" href="../css/lib/animate.css">
+	<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href="../css/lib/swiper.min.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<!-- only sub -->
+	<link rel="stylesheet" href="../css/sub.css">
+</head>
+
+<body>
+<!-- 접근성 바로가기 메뉴(숨김) -->
+<div id="accessibility"> <strong class="blind">컨텐츠바로가기</strong>
+	<ul>
+		<li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+		<li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+	</ul>
+</div>
+<!-- //접근성 바로가기 메뉴(숨김) -->
+
+<!-- WRAP (mall or company css추가)-->
+<!-- 마이페이지 페이지 일 경우 is-mypage 추가 -->
+<div id="wrap" class="mall is-mypage">
+
+	<!-- HEADER -->
+	<div id="header"> </div>
+	<!-- //HEADER -->
+
+	<!-- CONTENT -->
+	<div id="content">
+		<!-- breadcrumb  -->
+		<div class="breadcrumb_wrap">
+			<ul class="item_list">
+				<li><a href="#url" class="home">Home</a></li>
+				<li><a href="#">마이페이지</a></li>
+				<li><a href="#">예산 관리</a></li>
+				<li><a href="#">예산 등록</a></li>
+				<li><a href="/www/mall/Bbm.04.00.00.mypage-budget-regist.html">예산 등록</a></li>
+			</ul>
+		</div>
+		<!-- //breadcrumb  -->
+
+		<!-- 콘텐츠 group "cont_wrap" 고정 -->
+		<div class="cont_wrap sidebar">
+			<div class="snb">
+				<h2>마이페이지</h2>
+				<ul>
+					<li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+					<li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
+					<li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+					<li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+					<li>
+						<a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
+						<ul>
+							<li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
+							<li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+							<li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+							<li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
+						<ul>
+							<li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
+							<li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/www/mall/Bbm.02.00.00.mypage-budget-status.html">예산 관리</a>
+						<ul>
+							<li><a href="/www/mall/Bbm.02.00.00.mypage-budget-status.html">예산 현황</a></li>
+							<li><a href="/www/mall/Bbm.03.00.00.mypage-budget-use-status.html">예산 사용현황</a></li>
+							<li class="active"><a href="/www/mall/Bbm.04.00.00.mypage-budget-regist.html">예산 등록</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 본문 -->
+			<div class="con_box mpg_wrap">
+
+				<div class="budget_regist_wrap">
+					<div class="tit_box section mid">
+						<h3>예산 등록</h3>
+					</div>
+
+					<div class="page_tab col2 ly_tab">
+						<ul class="" id="tab1">
+							<li><a href="javascript:void(0)">예산 등록</a></li>
+							<li><a href="javascript:void(0)">조정 이력</a></li>
+						</ul>
+					</div>
+
+					<div class="con_box" id="tab1_con">
+						<!-- 예산등록 -->
+						<div class="budget_regist regist">
+							<div class="calendar_wrap">
+								<div class="calendar_items">
+									<div class="calendar_item"><a href="#" class="calendar_year_change_btn"><i class="prev"></i></a></div>
+									<div class="calendar_item calendar_text">
+										<span class="year_start">2019</span>
+										<span class="year_end">2020</span>
+										<a href="#" class="calendar_btn"><i class="ico_calendar"></i></a>
+									</div>
+									<div class="calendar_item"><a href="#" class="calendar_year_change_btn"><i class="next disabled"></i></a></div>
+								</div>
+							</div>
+
+							<div class="budget_regist_scrollbar top"></div>
+							<div class="budget_regist_scrollbar bottom"></div>
+
+							<table>
+								<caption>예산 등록</caption>
+								<colgroup>
+									<col width="151" />
+									<col width="151" />
+									<col width="81" />
+									<col width="156" />
+									<col width="156" />
+									<col width="157" />
+									<col width="428" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th>기업</th>
+									<th>부서</th>
+									<th>주문자</th>
+									<th>예산 금액</th>
+									<th>배정 금액 합계</th>
+									<th>배정 잔액</th>
+
+									<!-- thead 의 월 표시 th 에는 반드시 standard 클래스를 추가해 준다. -->
+									<th class="month_loop standard">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item">2019년 1월</div>
+													<div class="month_loop_item">2월</div>
+													<div class="month_loop_item">3월</div>
+													<div class="month_loop_item">4월</div>
+													<div class="month_loop_item">5월</div>
+													<div class="month_loop_item">6월</div>
+													<div class="month_loop_item">7월</div>
+													<div class="month_loop_item">8월</div>
+													<div class="month_loop_item">9월</div>
+													<div class="month_loop_item">10월</div>
+													<div class="month_loop_item">11월</div>
+													<div class="month_loop_item">12월</div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<!-- loop 1차 -->
+								<!-- loop 1차 일 경우 depth_1 추가-->
+								<!-- 펼쳤을 때 tr 에 active 클래스 추가 -->
+								<tr class="depth_1" data-enterprise-id="1">
+									<td>
+										<!-- data-enterprise-id 에 해당 기업의 primary key 값 입력 -->
+										<!-- data-enterprise-id 의 값으로 child css 제어 -->
+										<a class="child_open" href="#" data-depth="depth_1">OB맥주 002</a>
+									</td>
+									<td></td>
+									<td></td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="1,000,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">304,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+
+								<!-- loop 2차 -->
+								<!-- data-department-id 에 해당 부서의 primary key 값 입력 -->
+								<!-- data-department-id 의 값으로 child css 제어 -->
+								<tr class="depth_2" data-enterprise-id="1" data-department-id="1">
+									<td></td>
+									<td><a class="child_open" href="#" data-depth="depth_2">OB맥주 유흥지점</a></td>
+									<td></td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="3,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">3,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 2차 -->
+
+								<!-- loop 3차 -->
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="1">
+									<td></td>
+									<td></td>
+									<td>배해선</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="2,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">2,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+											<div class="month_loop_items">
+												<!-- month loop -->
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+												<!-- //month loop -->
+											</div>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="1">
+									<td></td>
+									<td></td>
+									<td>정우성</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">500,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+											<div class="month_loop_items">
+												<!-- month loop -->
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+												<!-- //month loop -->
+											</div>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+								<tr class="depth_3 last" data-enterprise-id="1" data-department-id="1">
+									<td></td>
+									<td></td>
+									<td>홍길동</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">41,666</td>
+									<td class="right">458,334</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+											<div class="month_loop_items">
+												<!-- month loop -->
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+												<!-- //month loop -->
+											</div>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 3차 -->
+
+								<!-- loop 2차 -->
+								<tr class="depth_2" data-enterprise-id="1" data-department-id="2">
+									<td></td>
+									<td><a class="child_open" href="#" data-depth="depth_2">유흥지점</a></td>
+									<td></td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="6,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">6,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+											<div class="month_loop_items">
+												<!-- month loop -->
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+												<!-- //month loop -->
+											</div>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 2차 -->
+
+								<!-- loop 3차 -->
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="2">
+									<td></td>
+									<td></td>
+									<td>배해선</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="2,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">2,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="2">
+									<td></td>
+									<td></td>
+									<td>정우성</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">500,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+								<tr class="depth_3 last" data-enterprise-id="1" data-department-id="2">
+									<td></td>
+									<td></td>
+									<td>홍길동</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">41,666</td>
+									<td class="right">458,334</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 3차 -->
+
+								<!-- loop 2차 -->
+								<tr class="depth_2" data-enterprise-id="1" data-department-id="3">
+									<td></td>
+									<td><a class="child_open" href="#" data-depth="depth_2">프리미엄지점</a></td>
+									<td></td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="6,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">6,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+											<div class="month_loop_items">
+												<!-- month loop -->
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+												<!-- //month loop -->
+											</div>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 2차 -->
+
+								<!-- loop 3차 -->
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="3">
+									<td></td>
+									<td></td>
+									<td>배해선</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="2,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">2,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="3">
+									<td></td>
+									<td></td>
+									<td>정우성</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">500,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+								<tr class="depth_3 last" data-enterprise-id="1" data-department-id="3">
+									<td></td>
+									<td></td>
+									<td>홍길동</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">41,666</td>
+									<td class="right">458,334</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 3차 -->
+
+								<!-- loop 2차 -->
+								<tr class="depth_2" data-enterprise-id="1" data-department-id="4">
+									<td></td>
+									<td><a class="child_open" href="#" data-depth="depth_2">지점</a></td>
+									<td></td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="6,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">6,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+											<div class="month_loop_items">
+												<!-- month loop -->
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+												<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+												<!-- //month loop -->
+											</div>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 2차 -->
+
+								<!-- loop 3차 -->
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="4">
+									<td></td>
+									<td></td>
+									<td>배해선</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="2,000,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">2,000,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="depth_3" data-enterprise-id="1" data-department-id="4">
+									<td></td>
+									<td></td>
+									<td>정우성</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">500,000</td>
+									<td class="right">0</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+								<tr class="depth_3 last" data-enterprise-id="1" data-department-id="4">
+									<td></td>
+									<td></td>
+									<td>홍길동</td>
+									<td class="inp">
+										<div class="form_inp">
+											<input type="text" title="예산 금액" value="500,000" placeholder="예산 금액" />
+										</div>
+									</td>
+									<td class="right">41,666</td>
+									<td class="right">458,334</td>
+
+									<td class="month_loop">
+										<div class="month_loop_outer">
+											<div class="month_loop_inner">
+												<div class="month_loop_items">
+													<!-- month loop -->
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 1월" value="1,500,000" placeholder="2019년 1월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 2월" value="1,500,000" placeholder="2019년 2월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 3월" value="1,500,000" placeholder="2019년 3월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 4월" value="1,500,000" placeholder="2019년 4월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 5월" value="1,500,000" placeholder="2019년 5월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 6월" value="1,500,000" placeholder="2019년 6월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 7월" value="1,500,000" placeholder="2019년 7월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 8월" value="1,500,000" placeholder="2019년 8월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 9월" value="1,500,000" placeholder="2019년 9월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 10월" value="1,500,000" placeholder="2019년 10월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 11월" value="1,500,000" placeholder="2019년 11월" /></div>
+													<div class="month_loop_item form_inp"><input type="text" title="2019년 12월" value="1,500,000" placeholder="2019년 12월" /></div>
+													<!-- //month loop -->
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<!-- //loop 3차 -->
+
+								<!-- //loop 1차 -->
+								</tbody>
+							</table>
+
+							<div class="btn_wrap center">
+								<button type="button" class="btn type02 large"><span>취소</span></button>
+								<button type="submit" class="btn type01 large"><span>저장</span></button>
+							</div>
+						</div>
+
+
+						<!-- 조정 이력 -->
+						<div class="budget_regist history" style="display: none;">
+							<div class="search_wrap">
+								<div class="search_items">
+									<div class="search_item">
+										<div class="form_group">
+											<div class="form_item">
+												<strong class="form_name">조회기간</strong>
+												<div class="form_inp">
+													<select class="sel_opt" title="조회기간 선택하기">
+														<option value="" selected="">조회기간 선택</option>
+														<option value="">2019</option>
+														<option value="">2020</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="search_items">
+									<div class="search_item">
+										<div class="form_group">
+											<div class="form_item">
+												<strong class="form_name">부서</strong>
+												<div class="form_inp">
+													<select class="sel_opt" title="부서 선택하기">
+														<option value="" selected="">부서 선택</option>
+														<option value="">부서전체</option>
+														<option value="">OB맥주 유흥지점</option>
+														<option value="">유흥지점</option>
+														<option value="">프리미엄지점</option>
+														<option value="">지점</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="search_item">
+										<div class="form_group">
+											<div class="form_item">
+												<strong class="form_name">주문자</strong>
+												<div class="form_inp">
+													<select class="sel_opt" title="주문자 선택하기">
+														<option value="" selected="">주문자 선택</option>
+														<option value="">주문자 전체</option>
+														<option value="">배해선</option>
+														<option value="">정우성</option>
+														<option value="">홍길동</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="search_items grid_1">
+									<div class="search_item right">
+										<div class="btn_wrap">
+											<button type="button" class="btn type01 mid_large">검색</button>
+											<button type="button" class="btn type02">검색 초기화</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="total_count_wrap">
+								<div class="total_count">총 <span>1,999</span>건</div>
+
+								<a href="#" class="excel_download_btn"><i class="ico_excel_download"></i>엑셀 다운</a>
+							</div>
+
+
+							<table class="budget_regist_history_table">
+								<caption>조정 이력</caption>
+								<colgroup>
+									<col width="155" />
+									<col width="114" />
+									<col width="208" />
+									<col width="207" />
+									<col width="114" />
+									<col width="155" />
+									<col width="158" />
+									<col width="158" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">조정일시</th>
+									<th scope="col">조정자</th>
+									<th class="row_2" scope="col" colspan="3">
+										<div class="forward_title">대상자</div>
+
+										<div class="title_items">
+											<div class="title_item">기업</div>
+											<div class="title_item">부서</div>
+											<div class="title_item">주문자</div>
+										</div>
+									</th>
+									<th scope="col">조정기간</th>
+									<th scope="col" colspan="2">예산 금액</th>
+								</tr>
+								</thead>
+								<tbody>
+								<!-- loop -->
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">-</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<!-- loop -->
+
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								<tr>
+									<td class="date">2019-11-25 14:25</td>
+									<td class="name">홍길동</td>
+									<td>OB 맥주</td>
+									<td>OB맥주 유흥지점</td>
+									<td class="orderer">정우성</td>
+									<td class="date">2019년 12월</td>
+									<td class="price"><strong>250,000</strong>원</td>
+									<td class="price"><strong>5,550,000</strong>원</td>
+								</tr>
+								</tbody>
+							</table>
+
+							<div class="page_navi">
+								<!-- PC 버전에서만 노출 -->
+								<a href="javascript:;" class="btn_navi first pc"><span class="blind">처음 리스트로 이동</span></a>
+								<!-- //PC 버전에서만 노출 -->
+								<a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+								<ul class="navi_list">
+									<li class="active"><a href="#url">1</a></li>
+									<li><a href="#url">2</a></li>
+									<li><a href="#url">3</a></li>
+									<li><a href="#url">4</a></li>
+									<li><a href="#url">5</a></li>
+								</ul>
+								<a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+								<!-- PC 버전에서만 노출 -->
+								<a href="javascript:;" class="btn_navi last pc"><span class="blind">마지막 리스트로 이동</span></a>
+								<!-- //PC 버전에서만 노출 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //본문 -->
+		</div>
+	</div>
+	<!-- CONTENT -->
+
+	<!-- FOOTER -->
+	<div id="footer" class="layout_width"> </div>
+	<!-- //FOOTER -->
+
+	<div class="dim"> </div>
+</div>
+<!-- //WRAP -->
+
+<!-- SCRIPT -->
+<!-- global -->
+<script src="../js/jquery/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="../js/jquery/jquery.placeholder.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/swiper/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+<!-- //global -->
+
+<script src="../js/sub.js"></script>
+
+<script>
+		function monthLoopHeightInit()
+		{
+		    $('.month_loop').each(function() {
+		        var obj = $(this);
+		        var tagName = obj.prop('tagName').toUpperCase();
+
+		        var prevObj = obj.prev();
+		        var prevHeight = parseInt( prevObj.outerHeight( true ), 10 );
+
+            obj.css('height', prevHeight + 'px');
+
+            setTimeout(function() { monthLoopHorizenScroll(); }, 100);
+				});
+		}
+
+		function monthLoopHorizenScroll()
+		{
+		    var obj = $('.budget_regist_scrollbar');
+		    var objWidth = parseInt( obj.outerWidth( true ), 10 );
+
+        obj.slider({
+            value:0,
+            min: 0,
+            max: 100,
+            step: 1,
+            slide: function( event, ui ) {
+                var monthLoopStandard = $('.month_loop.standard');
+                var monthLoopItemCount = parseInt( monthLoopStandard.find('.month_loop_item').length, 10 );
+                var monthLoopItemWidth = parseInt( monthLoopStandard.find('.month_loop_item').eq(0).outerWidth( true ), 10 );
+
+                var monthLoopWidth = monthLoopItemWidth * monthLoopItemCount;
+
+                var scrollDistance = ( (monthLoopWidth - objWidth) * ( parseInt( ui.value, 10 ) / 100 ) ) * -1;
+                scrollDistance = scrollDistance < -1205 ? -1205 : scrollDistance;
+
+								$('.month_loop_items').each(function() {
+                		var _this = {};
+										_this.obj = $(this);
+
+                    _this.obj.css('transform', 'translateX(' + scrollDistance + 'px)');
+								});
+            }
+        });
+
+        setInterval(function() {
+            $('.budget_regist_scrollbar').each(function() {
+                var func = {};
+
+                func.obj = $(this);
+                func.handleObj = func.obj.find('.ui-slider-handle');
+
+                if( func.handleObj.hasClass('ui-state-active') )
+								{
+								    func.left = func.handleObj.css('left');
+
+                    func.targetObj = !func.obj.hasClass('top') ? $('.budget_regist_scrollbar.top') : func.targetObj = $('.budget_regist_scrollbar.bottom');
+                    func.targetObj.find('.ui-slider-handle').css('left', func.left);
+								}
+						});
+				}, 10);
+		}
+
+		function budgetRegistInit()
+		{
+		    var _this = {};
+
+		    _this.obj = $('.budget_regist .child_open');
+
+        _this.obj.on('click', function(e) {
+            e.preventDefault();
+
+            var _func = {};
+
+            _func.obj = $(this);
+            _func.topObj = _func.obj.closest('.budget_regist');
+            _func.depth = _func.obj.attr('data-depth');
+            _func.parentObj = _func.obj.closest('.' + _func.depth);
+
+            if( _func.parentObj.length )
+						{
+                _func.enterpriseId = _func.parentObj.attr('data-enterprise-id');
+                _func.departmentId = _func.depth === 'depth_2' ? _func.parentObj.attr('data-department-id') : '';
+
+                if( _func.depth === 'depth_1' )
+								{
+                    if( _func.parentObj.hasClass('active') )
+										{
+                        // 펼쳐져 있으면 child depth 를 닫는다.
+
+                        _func.parentObj.removeClass('active');
+
+                        // depth_2, depth_3 close
+                        _func.topObj.find('tr.depth_2[data-enterprise-id="' + _func.enterpriseId + '"]').each(function() {
+                            var _func2 = {};
+
+                            _func2.obj = $(this);
+                            _func2.obj.removeClass('active').removeClass('show');
+
+                            _func2.departmentId = _func2.obj.attr('data-department-id');
+                            _func.topObj.find('tr.depth_3[data-department-id="' + _func2.departmentId + '"]').removeClass('active');
+												});
+										}
+                    else
+										{
+                        // 닫혀져 있으면 child depth 를 펼친다.
+
+                        _func.parentObj.addClass('active');
+
+                        // depth_2 open
+												_func.topObj.find('tr.depth_2[data-enterprise-id="' + _func.enterpriseId + '"]').addClass('active');
+										}
+								}
+								else if( _func.depth === 'depth_2' )
+								{
+                    if( _func.parentObj.hasClass('show') )
+										{
+                        // 펼쳐져 있으면 child depth 를 닫는다.
+
+                        _func.parentObj.removeClass('show');
+
+                        // depth_3 close
+                        _func.topObj.find('tr.depth_3[data-department-id="' + _func.departmentId + '"]').removeClass('active');
+										}
+                    else
+										{
+                        // 닫혀져 있으면 child depth 를 펼친다.
+
+                        _func.parentObj.addClass('show');
+
+												// depth_3 open
+                        _func.topObj.find('tr.depth_3[data-department-id="' + _func.departmentId + '"]').addClass('active');
+										}
+								}
+						}
+				});
+		}
+
+    $(document).ready(function() {
+        budgetRegistInit();
+    });
+
+		$(window).on('load', function() {
+        if( $('.month_loop').length )
+        {
+            monthLoopHeightInit();
+        }
+		});
+
+    // 퍼블리싱용
+    $(document).ready(function() {
+        mallSubPageTitle('마이페이지');
+    });
+</script>
+<!-- //SCRIPT -->
+
+</body>
+</html>
