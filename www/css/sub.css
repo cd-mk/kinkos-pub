@@ -4100,13 +4100,21 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .budget_regist.history .budget_regist_history_table {width:100%; border-right:1px solid #dfdfdf; border-bottom:1px solid #bdbdbd;}
 .budget_regist.history .budget_regist_history_table thead th {margin:0; padding:14px 0; font-size:16px; font-weight:bold; line-height:100%; color:#222222; border-top:2px solid #222222; border-bottom:1px solid #bdbdbd; border-left:1px solid #ececec; box-sizing:border-box; background:#fbfbfb; vertical-align:middle;}
 .budget_regist.history .budget_regist_history_table thead th:first-child {border-left:1px solid #dfdfdf;}
-.budget_regist.history .budget_regist_history_table thead th.row_2 {padding:0;}
-.budget_regist.history .budget_regist_history_table thead th .forward_title {display:inline-block; width:100%; height:auto; margin:0; padding:15px 0; border-bottom:1px solid #dfdfdf; box-sizing:border-box;}
+.budget_regist.history .budget_regist_history_table thead th.row_2 {padding:0; border-left:0;}
+.budget_regist.history .budget_regist_history_table thead th .forward_title {display:inline-block; width:100%; height:auto; margin:0; padding:15px 0; border-bottom:1px solid #dfdfdf; border-left:1px solid #ececec; box-sizing:border-box;}
 .budget_regist.history .budget_regist_history_table thead th .title_items {clear:both; display:inline-block; width:100%; height:auto; margin:0; padding:0;}
 .budget_regist.history .budget_regist_history_table thead th .title_item {float:left; display:inline-block; margin:0; padding:15px 0; border-left:1px solid #ececec; box-sizing:border-box;}
-.budget_regist.history .budget_regist_history_table thead th .title_item:nth-child(1) {width:207px; min-width:207px; max-width:207px; border-left:0;}
-.budget_regist.history .budget_regist_history_table thead th .title_item:nth-child(2) {width:207px; min-width:207px; max-width:207px;}
-.budget_regist.history .budget_regist_history_table thead th .title_item:nth-child(3) {width:114px; min-width:114px; max-width:114px;}
+.budget_regist.history .budget_regist_history_table thead th .title_item:nth-child(1) {width:209px;}
+.budget_regist.history .budget_regist_history_table thead th .title_item:nth-child(2) {width:209px;}
+.budget_regist.history .budget_regist_history_table thead th .title_item:nth-child(3) {width:116px;}
+.budget_regist.history .budget_regist_history_table thead th .title_items.budget_price .title_item:nth-child(1) {width:158px;}
+.budget_regist.history .budget_regist_history_table thead th .title_items.budget_price .title_item:nth-child(2) {width:156px;}
+
+.budget_regist.history .budget_regist_history_table thead th.botton_not_end {border-bottom:1px solid #dfdfdf;}
+
+.budget_regist.history .budget_regist_history_table thead tr.th_depth_2 th {border-top:0;}
+
+
 .budget_regist.history .budget_regist_history_table tbody td {margin:0; padding:20px 15px; font-size:16px; font-weight:400; line-height:100%; color:#222222; text-align:left; border-top:1px solid #dfdfdf; border-left:1px solid #f0f0f0; box-sizing:border-box;}
 .budget_regist.history .budget_regist_history_table tbody tr:first-child td {border-top:0;}
 .budget_regist.history .budget_regist_history_table tbody td:first-child {border-left:1px solid #dfdfdf;}

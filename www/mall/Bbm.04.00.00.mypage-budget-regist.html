@@ -893,19 +893,23 @@
 								<caption>조정 이력</caption>
 								<colgroup>
 									<col width="155" />
-									<col width="114" />
+									<col width="113" />
 									<col width="208" />
 									<col width="207" />
-									<col width="114" />
+									<col width="115" />
 									<col width="155" />
 									<col width="158" />
 									<col width="158" />
 								</colgroup>
 								<thead>
 								<tr>
-									<th scope="col">조정일시</th>
-									<th scope="col">조정자</th>
-									<th class="row_2" scope="col" colspan="3">
+									<th scope="col" rowspan="2">조정일시</th>
+									<th scope="col" rowspan="2">조정자</th>
+									<th scope="col" colspan="3" class="botton_not_end">대상자</th>
+
+									<!---->
+
+									<!--<th class="row_2" scope="col" colspan="3">
 										<div class="forward_title">대상자</div>
 
 										<div class="title_items">
@@ -913,9 +917,24 @@
 											<div class="title_item">부서</div>
 											<div class="title_item">주문자</div>
 										</div>
-									</th>
-									<th scope="col">조정기간</th>
-									<th scope="col" colspan="2">예산 금액</th>
+									</th>-->
+									<th scope="col" rowspan="2">조정기간</th>
+									<th scope="col" colspan="2" class="botton_not_end">예산 금액</th>
+									<!--<th class="row_2" scope="col" colspan="2">
+										<div class="forward_title">예산 금액</div>
+
+										<div class="title_items budget_price">
+											<div class="title_item">조정 전</div>
+											<div class="title_item">조정 후</div>
+										</div>
+									</th>-->
+								</tr>
+								<tr class="th_depth_2">
+									<th scope="col">기업</th>
+									<th scope="col">부서</th>
+									<th scope="col">주문자</th>
+									<th scope="col">조정 전</th>
+									<th scope="col">조정 후</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -1223,6 +1242,8 @@
     // 퍼블리싱용
     $(document).ready(function() {
         mallSubPageTitle('마이페이지');
+
+				$('.budget_regist_wrap .page_tab').find('li').eq(1).trigger('click');
     });
 </script>
 <!-- //SCRIPT -->
