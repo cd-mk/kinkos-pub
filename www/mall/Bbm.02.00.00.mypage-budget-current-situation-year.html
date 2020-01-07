@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+	<meta name="Title" content="킨코스코리아" />
+	<meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+	<!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="킨코스코리아">
+	<meta property="og:url" content="http://www.kinkos.co.kr/">
+	<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
+	<meta property="og:image" content="../image/common/logo.png">
+	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+	<title>예산 사용현황 (연간) | 마이페이지 | 킨코스코리아</title>
+	<!-- CSS FILE LOAD -->
+	<link rel="stylesheet" href="../css/lib/animate.css">
+	<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href="../css/lib/swiper.min.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<!-- only sub -->
+	<link rel="stylesheet" href="../css/sub.css">
+</head>
+
+<body>
+<!-- 접근성 바로가기 메뉴(숨김) -->
+<div id="accessibility"> <strong class="blind">컨텐츠바로가기</strong>
+	<ul>
+		<li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+		<li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+	</ul>
+</div>
+<!-- //접근성 바로가기 메뉴(숨김) -->
+
+<!-- WRAP (mall or company css추가)-->
+<!-- 마이페이지 페이지 일 경우 is-mypage 추가 -->
+<div id="wrap" class="mall is-mypage">
+
+	<!-- HEADER -->
+	<div id="header"> </div>
+	<!-- //HEADER -->
+
+	<!-- CONTENT -->
+	<div id="content">
+		<!-- breadcrumb  -->
+		<div class="breadcrumb_wrap">
+			<ul class="item_list">
+				<li><a href="#url" class="home">Home</a></li>
+				<li><a href="#">마이페이지</a></li>
+				<li><a href="#">예산 관리</a></li>
+				<li><a href="#">예산 사용현황</a></li>
+				<li><a href="/www/mall/Bbm.02.00.00.mypage-budget-current-situation-year.html">연간</a></li>
+			</ul>
+		</div>
+		<!-- //breadcrumb  -->
+
+		<!-- 콘텐츠 group "cont_wrap" 고정 -->
+		<div class="cont_wrap sidebar">
+			<div class="snb">
+				<h2>마이페이지</h2>
+				<ul>
+					<li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+					<li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
+					<li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+					<li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+					<li>
+						<a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
+						<ul>
+							<li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
+							<li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+							<li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+							<li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
+						<ul>
+							<li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
+							<li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/www/mall/Bbm.02.00.00.mypage-budget-status.html">예산 관리</a>
+						<ul>
+							<li class="active"><a href="/www/mall/Bbm.02.00.00.mypage-budget-current-situation-month.html">예산 현황</a></li>
+							<li><a href="/www/mall/Bbm.03.00.00.mypage-budget-use-current-situation.html">예산 사용현황</a></li>
+							<li><a href="/www/mall/Bbm.04.00.00.mypage-budget-regist.html">예산 등록</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 본문 -->
+			<div class="con_box mpg_wrap">
+				<div class="budget_wrap">
+					<div class="tit_box section mid">
+						<h3>예산 현황</h3>
+					</div>
+
+					<div class="budget_cs_wrap">
+						<div class="calendar_wrap">
+							<div class="calendar_items">
+								<div class="calendar_item"><a href="#" class="calendar_year_change_btn"><i class="prev"></i></a></div>
+								<div class="calendar_item calendar_text">
+									<span class="year no_after">2019</span>
+									<a href="#" class="calendar_btn"><i class="ico_calendar"></i></a>
+								</div>
+								<div class="calendar_item">
+									<!-- 비활성화 시 disabled 클래스 추가 -->
+									<a href="#" class="calendar_year_change_btn disabled"><i class="next"></i></a>
+								</div>
+							</div>
+
+							<!-- 현재 선택된 표시방식에 active 클래스 추가 -->
+							<a href="/www/mall/Bbm.02.00.00.mypage-budget-current-situation-month.html" class="budget_duration_change_btn month">월간</a>
+							<a href="/www/mall/Bbm.02.00.00.mypage-budget-current-situation-year.html" class="budget_duration_change_btn year active">연간</a>
+						</div>
+
+						<div class="budget_cs_summary_wrap">
+							<div class="budget_cs_summary_items">
+								<div class="budget_cs_summary_item budget_amount">
+									<div class="budget_cs_summary_item_title">전체 예산 금액</div>
+									<div class="budget_cs_summary_item_amount"><strong>500,000,000</strong>원</div>
+								</div>
+								<div class="budget_cs_summary_item amount_used">
+									<div class="budget_cs_summary_item_title">전체 사용 금액</div>
+									<div class="budget_cs_summary_item_amount"><strong>304,000,000</strong>원</div>
+								</div>
+								<div class="budget_cs_summary_item balance">
+									<div class="budget_cs_summary_item_title">전체 잔액</div>
+									<div class="budget_cs_summary_item_amount"><strong>304,000,000</strong>원</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="budget_cs">
+							<div class="excel_download">
+								<a href="#" class="excel_download_btn"><i class="ico_excel_download"></i>엑셀 다운</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="budget_regist_wrap">
+					<div class="budget_regist regist cs">
+						<table>
+							<caption>예산 등록</caption>
+							<colgroup>
+								<col width="213" />
+								<col width="214" />
+								<col width="131" />
+								<col width="171" />
+								<col width="171" />
+								<col width="171" />
+								<col width="131" />
+								<col width="68" />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col" rowspan="2">기업</th>
+								<th scope="col" rowspan="2">부서</th>
+								<th scope="col" rowspan="2">주문자</th>
+								<th scope="col" colspan="3" class="botton_not_end">예산</th>
+								<th scope="col" rowspan="2">관리자</th>
+								<th scope="col" rowspan="2">상태</th>
+							</tr>
+							<tr class="th_depth_2">
+								<th scope="col">예산 금액</th>
+								<th scope="col">사용 금액</th>
+								<th scope="col">잔액</th>
+							</tr>
+							</thead>
+							<tbody>
+							<!-- loop 1차 -->
+							<!-- loop 1차 일 경우 depth_1 추가-->
+							<!-- 펼쳤을 때 tr 에 active 클래스 추가 -->
+							<tr class="depth_1" data-enterprise-id="1">
+								<td>
+									<!-- data-enterprise-id 에 해당 기업의 primary key 값 입력 -->
+									<!-- data-enterprise-id 의 값으로 child css 제어 -->
+									<a class="child_open" href="#" data-depth="depth_1">OB맥주 002</a>
+								</td>
+								<td></td>
+								<td></td>
+								<td class="price">500,000,000</td>
+								<td class="price">304,000,000</td>
+								<td class="price">196,000,000</td>
+								<td class="center">정우성</td>
+								<td class="center"><span class="status">사용</span></td>
+							</tr>
+
+							<!-- loop 2차 -->
+							<!-- data-department-id 에 해당 부서의 primary key 값 입력 -->
+							<!-- data-department-id 의 값으로 child css 제어 -->
+							<tr class="depth_2" data-enterprise-id="1" data-department-id="1">
+								<td></td>
+								<td><a class="child_open" href="#" data-depth="depth_2">OB맥주 유흥지점</a></td>
+								<td></td>
+								<td class="price">100,000,000</td>
+								<td class="price">2,000,000</td>
+								<td class="price">98,000,000</td>
+								<td class="center">김종국</td>
+								<td class="center">
+									<!-- 상태가 사용 일 경우 <span class="status"></span> 으로 감싸준다 -->
+									<span class="status">사용</span>
+								</td>
+							</tr>
+							<!-- //loop 2차 -->
+
+							<!-- loop 3차 -->
+							<tr class="depth_3" data-enterprise-id="1" data-department-id="1">
+								<td></td>
+								<td></td>
+								<td class="center">배해선</td>
+								<td class="price">1,050,000</td>
+								<td class="price">1,050,000</td>
+								<td class="price">0</td>
+								<td class="center">홍길동</td>
+								<td class="center">-</td>
+							</tr>
+							<tr class="depth_3" data-enterprise-id="1" data-department-id="1">
+								<td></td>
+								<td></td>
+								<td class="center">정우성</td>
+								<td class="price">1,000,000</td>
+								<td class="price">0</td>
+								<td class="price">1,000,000</td>
+								<td class="center">김종국</td>
+								<td class="center">-</td>
+							</tr>
+							<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+							<tr class="depth_3 last" data-enterprise-id="1" data-department-id="1">
+								<td></td>
+								<td></td>
+								<td class="center">홍길동</td>
+								<td class="price">97.950,000</td>
+								<td class="price">950,000</td>
+								<td class="price">97,000,000</td>
+								<td class="center">홍길동</td>
+								<td class="center">-</td>
+							</tr>
+							<!-- //loop 3차 -->
+
+							<!-- loop 2차 -->
+							<tr class="depth_2" data-enterprise-id="1" data-department-id="2">
+								<td></td>
+								<td><a class="child_open" href="#" data-depth="depth_2">OB맥주 삼성점</a></td>
+								<td></td>
+								<td class="price">100,000,000</td>
+								<td class="price">2,000,000</td>
+								<td class="price">98,000,000</td>
+								<td class="center">김종국</td>
+								<td class="center">
+									<!-- 상태가 사용 일 경우 <span class="status"></span> 으로 감싸준다 -->
+									<span class="status">사용</span>
+								</td>
+							</tr>
+							<!-- //loop 2차 -->
+
+							<!-- loop 3차 -->
+							<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+							<tr class="depth_3 last" data-enterprise-id="1" data-department-id="2">
+								<td></td>
+								<td></td>
+								<td class="center">정우성</td>
+								<td class="price">1,050,000</td>
+								<td class="price">1,050,000</td>
+								<td class="price">0</td>
+								<td class="center">홍길동</td>
+								<td class="center">-</td>
+							</tr>
+							<!-- //loop 3차 -->
+
+							<!-- loop 2차 -->
+							<tr class="depth_2" data-enterprise-id="1" data-department-id="3">
+								<td></td>
+								<td><a class="child_open" href="#" data-depth="depth_2">프리미엄유흥지점</a></td>
+								<td></td>
+								<td class="price">100,000,000</td>
+								<td class="price">100,000,000</td>
+								<td class="price">0</td>
+								<td class="center">홍길동</td>
+								<td class="center">
+									<!-- 상태가 사용 일 경우 <span class="status"></span> 으로 감싸준다 -->
+									<span class="status">사용</span>
+								</td>
+							</tr>
+							<!-- //loop 2차 -->
+
+							<!-- loop 3차 -->
+							<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+							<tr class="depth_3 last" data-enterprise-id="1" data-department-id="3">
+								<td></td>
+								<td></td>
+								<td class="center">정우성</td>
+								<td class="price">1,050,000</td>
+								<td class="price">1,050,000</td>
+								<td class="price">0</td>
+								<td class="center">홍길동</td>
+								<td class="center">-</td>
+							</tr>
+							<!-- //loop 3차 -->
+
+							<!-- loop 2차 -->
+							<tr class="depth_2" data-enterprise-id="1" data-department-id="4">
+								<td></td>
+								<td><a class="child_open" href="#" data-depth="depth_2">킨코스코리아 프리미엄 유흥지점</a></td>
+								<td></td>
+								<td class="price">100,000,000</td>
+								<td class="price">100,000,000</td>
+								<td class="price">0</td>
+								<td class="center">홍길동</td>
+								<td class="center">-</td>
+							</tr>
+							<!-- //loop 2차 -->
+
+							<!-- loop 3차 -->
+							<!-- loop 3차 마지막 tr 에 last 클래스 추기 -->
+							<tr class="depth_3 last" data-enterprise-id="1" data-department-id="4">
+								<td></td>
+								<td></td>
+								<td class="center">정우성</td>
+								<td class="price">1,050,000</td>
+								<td class="price">1,050,000</td>
+								<td class="price">0</td>
+								<td class="center">홍길동</td>
+								<td class="center">-</td>
+							</tr>
+							<!-- //loop 3차 -->
+
+							<!-- //loop 1차 -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //본문 -->
+		</div>
+	</div>
+	<!-- CONTENT -->
+
+	<!-- FOOTER -->
+	<div id="footer" class="layout_width"> </div>
+	<!-- //FOOTER -->
+
+	<div class="dim"> </div>
+</div>
+<!-- //WRAP -->
+
+<!-- SCRIPT -->
+<!-- global -->
+<script src="../js/jquery/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="../js/jquery/jquery.placeholder.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/swiper/swiper.min.js"></script>
+<script src="../js/common.js"></script>
+<!-- //global -->
+
+<script src="../js/sub.js"></script>
+
+<script>
+    function budgetRegistInit()
+    {
+        var _this = {};
+
+        _this.obj = $('.budget_regist .child_open');
+
+        _this.obj.on('click', function(e) {
+            e.preventDefault();
+
+            var _func = {};
+
+            _func.obj = $(this);
+            _func.topObj = _func.obj.closest('.budget_regist');
+            _func.depth = _func.obj.attr('data-depth');
+            _func.parentObj = _func.obj.closest('.' + _func.depth);
+
+            if( _func.parentObj.length )
+            {
+                _func.enterpriseId = _func.parentObj.attr('data-enterprise-id');
+                _func.departmentId = _func.depth === 'depth_2' ? _func.parentObj.attr('data-department-id') : '';
+
+                if( _func.depth === 'depth_1' )
+                {
+                    if( _func.parentObj.hasClass('active') )
+                    {
+                        // 펼쳐져 있으면 child depth 를 닫는다.
+
+                        _func.parentObj.removeClass('active');
+
+                        // depth_2, depth_3 close
+                        _func.topObj.find('tr.depth_2[data-enterprise-id="' + _func.enterpriseId + '"]').each(function() {
+                            var _func2 = {};
+
+                            _func2.obj = $(this);
+                            _func2.obj.removeClass('active').removeClass('show');
+
+                            _func2.departmentId = _func2.obj.attr('data-department-id');
+                            _func.topObj.find('tr.depth_3[data-department-id="' + _func2.departmentId + '"]').removeClass('active');
+                        });
+                    }
+                    else
+                    {
+                        // 닫혀져 있으면 child depth 를 펼친다.
+
+                        _func.parentObj.addClass('active');
+
+                        // depth_2 open
+                        _func.topObj.find('tr.depth_2[data-enterprise-id="' + _func.enterpriseId + '"]').addClass('active');
+                    }
+                }
+                else if( _func.depth === 'depth_2' )
+                {
+                    if( _func.parentObj.hasClass('show') )
+                    {
+                        // 펼쳐져 있으면 child depth 를 닫는다.
+
+                        _func.parentObj.removeClass('show');
+
+                        // depth_3 close
+                        _func.topObj.find('tr.depth_3[data-department-id="' + _func.departmentId + '"]').removeClass('active');
+                    }
+                    else
+                    {
+                        // 닫혀져 있으면 child depth 를 펼친다.
+
+                        _func.parentObj.addClass('show');
+
+                        // depth_3 open
+                        _func.topObj.find('tr.depth_3[data-department-id="' + _func.departmentId + '"]').addClass('active');
+                    }
+                }
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        budgetRegistInit();
+    });
+
+    // 퍼블리싱용
+    $(document).ready(function() {
+        mallSubPageTitle('마이페이지');
+    });
+</script>
+<!-- //SCRIPT -->
+
+</body>
+</html>
