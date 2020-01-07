@@ -90,7 +90,7 @@ var toggleV = function () {
     $(this).parents(".item_list").toggleClass("on");
     $(this).toggleClass("on");
   });
-}
+};
 toggleV();
 
 // 상품상세 리뷰
@@ -98,7 +98,7 @@ var toggleReview = function () {
   $(".review_item").click(function () {
     $(this).toggleClass("review_view");
   });
-}
+};
 toggleReview();
 
 function mallSubPageTitle( title )
@@ -157,9 +157,38 @@ function mallSubPageTitle( title )
       {
         pageTabAnchorInit();
       }
+
+      if( $('.question_tooltip').length )
+      {
+        $(document).on('click', function(e) {
+          var obj = $(e.target);
+
+          if( obj.hasClass('question_tooltip') )
+          {
+            e.preventDefault();
+
+            questionTooltipToggle( obj );
+          }
+          else
+          {
+            var closeExec = questionTooltipHasClassSearch( obj );
+
+            if( closeExec === 'Y' )
+            {
+              questionTooltipClose();
+            }
+          }
+        });
+      }
+
+      if( $('.input-group.date').length )
+      {
+        datePickerInit();
+      }
     }
 
-    function pageTabInit( obj ) {
+    function pageTabInit( obj )
+    {
       if( obj )
       {
         var eventBind = obj.attr('data-event-bind');
@@ -265,7 +294,8 @@ function mallSubPageTitle( title )
       });
     }
 
-    function pageTabAnchorActiveFunc( pageTab ) {
+    function pageTabAnchorActiveFunc( pageTab )
+    {
       if( pageTab )
       {
         var pageTabAnchors = pageTab.find('ul li');
@@ -312,6 +342,107 @@ function mallSubPageTitle( title )
           });
         }
       }
+    }
+
+    function questionTooltipToggle( obj )
+    {
+      if( obj )
+      {
+        var target = obj.attr('data-target');
+        if( target )
+        {
+          var targetObj = $('#' + target);
+          if( targetObj.length )
+          {
+            if( targetObj.hasClass('show') )
+            {
+              questionTooltipClose();
+            }
+            else
+            {
+              questionTooltipFunc( obj, targetObj );
+            }
+          }
+        }
+      }
+    }
+
+    function questionTooltipFunc( obj, targetObj )
+    {
+      if( obj && targetObj )
+      {
+        var objOffset = obj.offset();
+        var objLeft = parseInt( objOffset.left, 10 );
+        var objTop = parseInt( objOffset.top, 10 );
+        var objHeight = parseInt( obj.outerHeight( true ), 10 );
+        objTop = ( objTop + objHeight ) + 5;
+
+        targetObj.addClass('show').css({
+          'left': objLeft + 'px',
+          'top': objTop + 'px',
+        });
+      }
+    }
+
+    function questionTooltipHasClassSearch( obj )
+    {
+      var closeExec = 'Y';
+
+      if( obj )
+      {
+        var findClassArray = [
+          'question_tooltip',
+          'question_tooltip_layer_popup',
+          'question_tooltip_layer_popup_content',
+        ];
+
+        findClassArray.some(function(findClass) {
+          if( obj.hasClass( findClass ) )
+          {
+            closeExec = 'N';
+            return closeExec;
+          }
+        });
+      }
+
+      return closeExec;
+    }
+
+    function questionTooltipClose()
+    {
+      $('.question_tooltip_layer_popup').removeClass('show');
+    }
+
+    function datePickerInit()
+    {
+      /*$('.input-daterange').datepicker({
+        format: 'yyyy-mm-dd',
+        container: 'body',
+        orientation: 'bottom left',
+        autoclose: true,
+        toggleActive: true,
+        language: 'ko',
+        todayHighlight: true,
+        beforeShowMonth: function(date){
+          if (date.getMonth() == 8) {
+            return false;
+          }
+        }
+      });*/
+
+      $('.input-group.date').each(function() {
+        var obj = $(this);
+
+        obj.datepicker({
+          format: 'yyyy-mm-dd',
+          container: 'body',
+          orientation: 'bottom left',
+          autoclose: true,
+          toggleActive: true,
+          language: 'ko',
+          todayHighlight: true,
+        });
+      });
     }
 
     $(document).ready(function() {

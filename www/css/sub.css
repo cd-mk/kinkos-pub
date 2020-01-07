@@ -4,6 +4,8 @@
  --------------------- */
 /* content */
 
+input[type="text"]::-ms-clear {display:none;}
+
 .cont_wrap {min-height:500px;max-width:1530px;margin:0 auto;}
 .cont_wrap.no_tit {padding-top:0;}
 
@@ -289,11 +291,11 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 
 /* checkbox & radio */
 input[type="checkbox"],
-input[type="radio"] {overflow:hidden; position:absolute; width:1px; height:1px; clip:rect(1px, 1px, 1px, 1px); border:0; line-height:0;}
+input[type="radio"] {overflow:hidden; position:absolute; width:1px; height:1px;  border:0; line-height:0;}
 input[type="checkbox"] + label,
-input[type="radio"] + label {position:relative; padding-left:30px; cursor:pointer;vertical-align:middle;}
+input[type="radio"] + label {position:relative; display:inline-block; padding-left:30px; cursor:pointer;vertical-align:middle;}
 input[type="checkbox"] + label::before,
-input[type="radio"] + label::before {content:''; position:absolute; left:0; top: 50%;transform: translateY(-50%); width:20px; height:20px; background:url('../image/common/ico-check.png') no-repeat 0 0; background-size:40px auto;}
+input[type="radio"] + label::before {content:""; display:inline-block; position:absolute; left:0; top:50%; width:20px; height:20px; background:url('../image/common/ico-check.png') no-repeat 0 0; background-size:40px auto; transform:translateY(-50%);}
 
 
 input[type="checkbox"]:checked + label::before{background-position:0 -20px;}
@@ -4040,14 +4042,15 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .budget_regist.ucs .search_wrap .search_item .btn_wrap.duration {display:inline-block; margin-top:0;}
 .budget_regist.ucs .search_wrap .search_item .btn_wrap.duration .btn {width:auto; min-width:auto !important; margin:0 0 0 10px; padding:0 24px; font-size:16px; color:#777777; border:1px solid #777777; box-sizing:border-box;}
 .budget_regist.ucs .search_wrap .search_item .btn_wrap.duration .btn.active {color:#fff; background:#777777;}
+.budget_regist.ucs .search_wrap .search_item .form_inp {position:relative;}
 .budget_regist.ucs .search_wrap .search_item .form_inp.duration {display:inline-block; margin-left:10px;}
 .budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item {display:inline-block; position:relative;}
-.budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item input[type="text"] {width:250px;}
-.budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item .ico_calendar {display:inline-block; position:absolute; top:50%; right:16px; width:20px; height:22px; margin:0; padding:0; background:url(../image/mall/common/ico-calendar.png) center no-repeat; transform:translateY(-50%);}
+.budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item .input-group {display:inline-block !important; position:relative; flex-wrap:unset; -ms-flex-align:unset; align-items:unset;}
+.budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item input[type="text"] {top:unset; left:unset; width:250px; margin:0 !important; padding:0 15px !important; color:#222; border-radius:0 !important; -moz-border-radius:0 !important; -webkit-border-radius:0 !important;}
+.budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item .calendar_btn {display:inline-block; position:absolute; top:50%; right:16px; width:20px; height:22px; margin:0; padding:0; cursor:pointer; transform:translateY(-50%); z-index:99;}
+.budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_item .ico_calendar {display:block; width:100%; height:100%; margin:0; padding:0; background:url(../image/mall/common/ico-calendar.png) top center no-repeat;}
 .budget_regist.ucs .search_wrap .search_item .form_inp.duration .form_inp_duration_division {padding:0 5px; box-sizing:border-box;}
 .budget_regist.ucs .search_wrap .search_item .form_inp label {padding-right:35px;}
-.budget_regist.ucs .search_wrap .search_item .form_inp label .question_tooltip {display:inline-block; position:relative; top:4px; width:22px; height:22px; margin:0 0 0 5px; padding:0; background:url(../image/mall/common/ico_question_tooltip.png) center no-repeat;}
-.budget_regist.ucs .search_wrap .search_item .form_inp label .question_tooltip em.none {position:absolute; top:-9999px; left:-9999px; width:0; height:0;}
 .budget_regist.ucs .search_wrap .search_item.order_num .form_inp {display:inline-block; margin-right:10px;}
 .budget_regist.ucs .search_wrap .search_item.order_num .form_inp select {width:175px;}
 .budget_regist.ucs .search_wrap .search_item.order_num .form_inp input[type="text"] {width:616px;}
@@ -4070,6 +4073,107 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .budget_regist.ucs table.ucs tbody td.pdt_amount {font-weight:700;}
 .budget_regist.ucs table.ucs tbody td.department {color:#777;}
 .budget_regist.ucs table.ucs tbody td.orderer {color:#777;}
+
+.question_tooltip {display:inline-block; position:relative; top:4px; right:0; width:22px; height:22px; margin:0 0 0 5px; padding:0; background:url(../image/mall/common/ico_question_tooltip.png) center no-repeat;}
+.question_tooltip em.none {position:absolute; top:-9999px; left:-9999px; width:0; height:0;}
+.question_tooltip_layer_popup {display:block; position:absolute; top:-9999px; left:-9999px; width:235px; height:125px; margin:0; padding:30px 30px; border:1px solid #777777; box-sizing:border-box; background:#fff; opacity:0; transition:opacity 0.2s ease-in-out; z-index:99;}
+.question_tooltip_layer_popup.show {opacity:1;}
+.question_tooltip_layer_popup_content {font-size:16px; font-weight:400; line-height:140%; color:#222222;}
+
+.ui-widget.ui-widget-content {border:1px solid #777;}
+
+.dropdown-menu {position:absolute; top:100%; left:0; z-index:1000; display:none; float:left; min-width:10rem; padding:0 8px !important; margin:0 !important; font-size:1rem; color:#212529; text-align:left; list-style:none; background-color:#fff; background-clip:padding-box; border:1px solid #777777; border-radius:0rem; transform:translateY(50px);}
+.datepicker-dropdown:before {display:none !important;}
+.datepicker-dropdown:after {display:none !important;}
+
+.datepicker-days {margin-bottom:18px;}
+.datepicker-days table thead th.prev {display:inline-block; position:absolute; top:8px; left:10px; width:auto; height:auto; margin:0; padding:18px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-days table thead th.prev:hover {border:1px solid #ddd;}
+.datepicker-days table thead th.prev::after {content:"‹"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-days table thead .datepicker-switch {font-size:16px; font-weight:700; line-height:55px; color:#222;}
+.datepicker-days table thead .datepicker-switch:hover {background:transparent !important;}
+.datepicker-days table thead th.next {display:inline-block; position:absolute; top:8px; right:10px; width:auto; height:auto; margin:0; padding:18px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-days table thead th.next:hover {border:1px solid #ddd;}
+.datepicker-days table thead th.next::after {content:"›"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-days table thead tr:nth-child(3) {background:#fafafa;}
+.datepicker-days table thead tr:nth-child(3) th {padding:12px 15px; font-size:14px; font-weight:400; line-height:100%; color:#999; border-top:1px solid #eee; border-bottom:1px solid #eee;}
+.datepicker-days table tbody td {padding:16px 20px; font-size:14px; font-weight:400; line-height:100%; color:#333 !important; border-radius:0 !important;}
+.datepicker-days table tbody td.old {color:#999 !important;}
+.datepicker-days table tbody td.day {position:relative;}
+.datepicker-days table tbody td.day:hover {background:transparent !important;}
+.datepicker-days table tbody td.day:hover::after {content:""; display:inline-block; width:39px; height:39px; padding:0; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border:1px solid #ddd; border-radius:50%; box-sizing:border-box; background:#f7f7f7; z-index:-1;}
+.datepicker-days table tbody td.today {background:transparent !important;}
+.datepicker-days table tbody td.today::after {content:""; display:inline-block; width:39px; height:39px; padding:0; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border:1px solid #fbf3b6; border-radius:50%; box-sizing:border-box; background:#fbf3b6; z-index:-1;}
+.datepicker-days table tbody td.today:hover::after {border:1px solid #FBF8CD; box-sizing:border-box; background:#FBF8CD;}
+.datepicker-days table tbody td.active {color:#fff !important; background:transparent !important;}
+.datepicker-days table tbody td.active::after {content:""; display:inline-block; width:39px; height:39px; padding:0; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border:1px solid #43a5e7; border-radius:50%; box-sizing:border-box; background:#43a5e7; z-index:-1;}
+.datepicker-days table tbody td.active:hover::after {border:1px solid #55AFE7; box-sizing:border-box; background:#55AFE7;}
+.datepicker-days table tbody td.range {background:transparent !important;}
+
+.datepicker-months {margin-bottom:18px;}
+.datepicker-months table thead th.prev {display:inline-block; position:absolute; top:7px; left:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-months table thead th.prev:hover {border:1px solid #ddd;}
+.datepicker-months table thead th.prev::after {content:"‹"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-months table thead .datepicker-switch {font-size:16px; font-weight:700; line-height:55px; color:#222;}
+.datepicker-months table thead .datepicker-switch:hover {background:transparent !important;}
+.datepicker-months table thead th.next {display:inline-block; position:absolute; top:7px; right:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-months table thead th.next:hover {border:1px solid #ddd;}
+.datepicker-months table thead th.next::after {content:"›"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-months table tbody td {width:315px; min-width:315px; height:auto;}
+.datepicker-months table tbody td span.month {width:105px; height:50px; margin:0; padding:16px 20px; font-size:16px; font-weight:400; line-height:100%; color:#333 !important; border:0; border-radius:0 !important; box-sizing:border-box; box-shadow:0 0 0 1px #eee inset;}
+.datepicker-months table tbody td span.month:hover {box-shadow:0 0 0 1px #eee inset; background:#f7f7f7 !important;}
+.datepicker-months table tbody td span.focused {color:#fff !important; background:#43a5e7 !important;}
+.datepicker-months table tbody td span.focused:hover {color:#fff !important; background:#43a5e7 !important;}
+
+.datepicker-years {margin-bottom:18px;}
+.datepicker-years table thead th.prev {display:inline-block; position:absolute; top:7px; left:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-years table thead th.prev:hover {border:1px solid #ddd;}
+.datepicker-years table thead th.prev::after {content:"‹"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-years table thead .datepicker-switch {font-size:16px; font-weight:700; line-height:55px; color:#222;}
+.datepicker-years table thead .datepicker-switch:hover {background:transparent !important;}
+.datepicker-years table thead th.next {display:inline-block; position:absolute; top:7px; right:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-years table thead th.next:hover {border:1px solid #ddd;}
+.datepicker-years table thead th.next::after {content:"›"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-years table tbody td {width:315px; min-width:315px; height:auto;}
+.datepicker-years table tbody td span.year {width:105px; height:50px; margin:0; padding:16px 20px; font-size:16px; font-weight:400; line-height:100%; color:#333 !important; border:0; border-radius:0 !important; box-sizing:border-box; box-shadow:0 0 0 1px #eee inset;}
+.datepicker-years table tbody td span.year:hover {box-shadow:0 0 0 1px #eee inset; background:#f7f7f7 !important;}
+.datepicker-years table tbody td span.focused {color:#fff !important; background:#43a5e7 !important;}
+.datepicker-years table tbody td span.focused:hover {color:#fff !important; background:#43a5e7 !important;}
+
+.datepicker-decades {margin-bottom:18px;}
+.datepicker-decades table thead th.prev {display:inline-block; position:absolute; top:7px; left:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-decades table thead th.prev:hover {border:1px solid #ddd;}
+.datepicker-decades table thead th.prev::after {content:"‹"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-decades table thead .datepicker-switch {font-size:16px; font-weight:700; line-height:55px; color:#222;}
+.datepicker-decades table thead .datepicker-switch:hover {background:transparent !important;}
+.datepicker-decades table thead th.next {display:inline-block; position:absolute; top:7px; right:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-decades table thead th.next:hover {border:1px solid #ddd;}
+.datepicker-decades table thead th.next::after {content:"›"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-decades table tbody td {width:315px; min-width:315px; height:auto;}
+.datepicker-decades table tbody td span.year {width:105px; height:50px; margin:0; padding:16px 20px; font-size:16px; font-weight:400; line-height:100%; color:#333 !important; border:0; border-radius:0 !important; box-sizing:border-box; box-shadow:0 0 0 1px #eee inset;}
+.datepicker-decades table tbody td span.year:hover {box-shadow:0 0 0 1px #eee inset; background:#f7f7f7 !important;}
+.datepicker-decades table tbody td span.focused {color:#fff !important; background:#43a5e7 !important;}
+.datepicker-decades table tbody td span.focused:hover {color:#fff !important; background:#43a5e7 !important;}
+
+.datepicker-centuries {margin-bottom:18px;}
+.datepicker-centuries table thead th.prev {display:inline-block; position:absolute; top:7px; left:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-centuries table thead th.prev:hover {border:1px solid #ddd;}
+.datepicker-centuries table thead th.prev::after {content:"‹"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-centuries table thead .datepicker-switch {font-size:16px; font-weight:700; line-height:55px; color:#222;}
+.datepicker-centuries table thead .datepicker-switch:hover {background:transparent !important;}
+.datepicker-centuries table thead th.next {display:inline-block; position:absolute; top:7px; right:10px; width:auto; height:auto; margin:0; padding:20px 18px; font-size:0; line-height:100%;  border:1px solid #fff; border-radius:50%; box-sizing:border-box; background:transparent !important;}
+.datepicker-centuries table thead th.next:hover {border:1px solid #ddd;}
+.datepicker-centuries table thead th.next::after {content:"›"; position:absolute; top:45%; left:50%; font-size:16px; line-height:100%; transform:translate(-50%, -50%);}
+.datepicker-centuries table tbody td {width:315px; min-width:315px; height:auto;}
+.datepicker-centuries table tbody td span.year {width:105px; height:50px; margin:0; padding:16px 20px; font-size:16px; font-weight:400; line-height:100%; color:#333 !important; border:0; border-radius:0 !important; box-sizing:border-box; box-shadow:0 0 0 1px #eee inset;}
+.datepicker-centuries table tbody td span.year:hover {box-shadow:0 0 0 1px #eee inset; background:#f7f7f7 !important;}
+.datepicker-centuries table tbody td span.focused {color:#fff !important; background:#43a5e7 !important;}
+.datepicker-centuries table tbody td span.focused:hover {color:#fff !important; background:#43a5e7 !important;}
+
+@media screen and (max-width: 1024px) {
+  .budget_regist.ucs .search_wrap .search_item .form_inp.duration {width:auto;}
+  .budget_regist.ucs .search_wrap .search_item.order_num .form_inp {width:auto;}
+}
 /* //마이페이지 > 예산 사용현황 */
 
 /* 마이페이지 > 예산 등록 */
