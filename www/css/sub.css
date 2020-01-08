@@ -4082,7 +4082,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 
 .ui-widget.ui-widget-content {border:1px solid #777;}
 
-.dropdown-menu {position:absolute; top:100%; left:0; z-index:1000; display:none; float:left; min-width:10rem; padding:0 8px !important; margin:0 !important; font-size:1rem; color:#212529; text-align:left; list-style:none; background-color:#fff; background-clip:padding-box; border:1px solid #777777; border-radius:0rem; transform:translateY(50px);}
+.dropdown-menu {position:absolute; top:100%; left:0; z-index:1000; display:none; float:left; min-width:10rem; padding:0 8px !important; margin:0 !important; font-size:1rem; color:#212529; text-align:left; list-style:none; background-color:#fff; background-clip:padding-box; border:1px solid #777777; border-radius:0 !important; transform:translateY(50px);}
+body.calendarDefault .dropdown-menu {transform:translateY(10px);}
 .datepicker-dropdown:before {display:none !important;}
 .datepicker-dropdown:after {display:none !important;}
 

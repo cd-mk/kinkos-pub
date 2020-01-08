@@ -134,6 +134,66 @@ function mallSubPageTitle( title )
   }
 }
 
+function callCalendar( obj )
+{
+    if( obj )
+    {
+        var callback = obj.attr('data-callback');
+        var minViewMode = obj.attr('data-min-view-mode') ? obj.attr('data-min-view-mode') : 0;
+        var maxViewMode = obj.attr('data-max-view-mode') ? obj.attr('data-max-view-mode') : 0;
+
+        obj.datepicker({
+          format: 'yyyy-mm-dd',
+          container: 'body',
+          orientation: 'bottom left',
+          autoclose: true,
+          toggleActive: true,
+          language: 'ko',
+          todayHighlight: true,
+          minViewMode: minViewMode,
+        }).on('show', {type: 'default'}, function(e) {
+          var data = e.data;
+          if( data )
+          {
+            if( data.type === 'default' )
+            {
+              $('body').addClass('calendarDefault');
+            }
+          }
+        }).on('changeDate', {callback: callback}, function(e) {
+          var data = e.data;
+          if( data )
+          {
+            var getDate = new Date( e.date );
+            var selectDate = {
+              'year': parseInt( getDate.getFullYear(), 10 ),
+              'month': parseInt( getDate.getMonth(), 10 ) + 1,
+              'day': parseInt( getDate.getDate(), 10 )
+            };
+
+            var callback = data.callback;
+            var callbackTypeOf = typeof(eval(callback));
+
+            if( callbackTypeOf.toLowerCase() === 'function' )
+            {
+              eval(callback + '(' + selectDate.year + ',' + selectDate.month + ',' + selectDate.day + ')');
+            }
+          }
+        });
+    }
+}
+
+$(document).ready(function() {
+    if( $('.callCalendarBtn').length )
+    {
+        $('.callCalendarBtn').each(function() {
+            var obj = $(this);
+
+            callCalendar( obj );
+        });
+    }
+});
+
 (function($) {
   "use strict";
 

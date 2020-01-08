@@ -23,6 +23,10 @@
 	<link rel="stylesheet" href="../css/common.css">
 	<!-- only sub -->
 	<link rel="stylesheet" href="../css/sub.css">
+
+	<!-- datepicker 을 사용하기 위해 load -->
+	<link rel="stylesheet" href="../css/lib/bootstrap/datepicker/bootstrap-datepicker.min.css">
+	<!-- //datepicker 을 사용하기 위해 load -->
 </head>
 
 <body>
@@ -117,7 +121,9 @@
 									<div class="calendar_item calendar_text">
 										<span class="year_start">2019</span>
 										<span class="year_end">2020</span>
-										<a href="#" class="calendar_btn"><i class="ico_calendar"></i></a>
+										<!-- 캘린더 호출 클래스 callCalendarBtn -->
+										<!-- data-min-view-mode: 캘린더 최소 뷰 모드 (days:일, months:월, years:년 -->
+										<a href="javascript:void(0);" class="calendar_btn callCalendarBtn" data-min-view-mode="years" data-callback="calendarCallbackFunc"><i class="ico_calendar"></i></a>
 									</div>
 									<div class="calendar_item">
 										<!-- 비활성화 시 disabled 클래스 추가 -->
@@ -848,6 +854,12 @@
 
 <script src="../js/sub.js"></script>
 
+<!-- datepicker 을 사용하기 위해 load -->
+<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap/datepicker/bootstrap-datepicker.min.js"></script>
+<script src="../js/bootstrap/datepicker/locales/bootstrap-datepicker.ko.min.js"></script>
+<!-- //datepicker 을 사용하기 위해 load -->
+
 <script>
 		function monthLoopHeightInit()
 		{
@@ -996,6 +1008,15 @@
             monthLoopHeightInit();
         }
 		});
+
+    // 캘린더 선택된 값 전달받을 콜백 함수 (window 에 추가하여 전역으로 사용 할 수 있게 한다.)
+    function calendarCallbackFunc( year, month, day )
+    {
+        // test code
+        console.log( year ); console.log( month ); console.log( day );
+
+        // 전달받은 날짜 값을 사용할 로직을 추가
+    }
 
     // 퍼블리싱용
     $(document).ready(function() {
