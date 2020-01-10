@@ -697,6 +697,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .noti strong {color:#03a2ea;font-weight:400;} 
 .noti .ico_area {}
 
+.mpg_wrap .tit_info {display:block; width:100%; height:auto; margin:0 0 20px 0; padding:0; font-size:18px; font-weight:400; line-height:100%; color:#999;}
+
 @media screen and (max-width:1024px) {
   .tit_box {margin-top:37px;padding: 0 15px;}
   .tit_box h2 {font-size:20px;}
@@ -3390,6 +3392,9 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 
 .ord_detail_receipt .popup_content .btn_wrap {margin-top:40px;}
 .ord_detail_receipt .popup_content .btn_wrap .btn_pop_close_btn {margin-right:10px;}
+
+.popup_wrap .order_cancle_wrap .form_wrap {padding-top:0; border-top:0;}
+.popup_wrap .order_cancle_wrap .form_wrap .form_group {padding:0;}
 /* //마이페이지 > 주문/배송조회 PC 버전 */
 
 /* 마이페이지 > 주문/배송조회 MOBILE 버전 */

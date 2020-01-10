@@ -254,8 +254,18 @@ var popupSizeInit = function( obj ) {
     if( inner.length )
     {
       var winHeight = parseInt( window.innerHeight, 10 );
-      var innerHeight = parseInt( inner.outerHeight( true ), 10 );
-      console.log( winHeight + '__' + innerHeight );
+      var innerHeight = 0;
+
+      if( obj.hasClass('small') )
+      {
+        var titleHeight = parseInt( inner.find('.title').outerHeight( true ), 10 );
+        var contentHeight = parseInt( inner.find('.pop_con').outerHeight( true ), 10 );
+        innerHeight = titleHeight + contentHeight;
+      }
+      else
+      {
+        innerHeight = parseInt( inner.outerHeight( true ), 10 );
+      }
 
       inner.css({'height': '', 'overflow-y': ''});
 

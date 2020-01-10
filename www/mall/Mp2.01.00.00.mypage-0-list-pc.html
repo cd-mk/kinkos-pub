@@ -142,6 +142,9 @@
                         <p>2019-11-30</p>
                         <p><strong>(2019091613453087)</strong></p>
                         <p><a href="/www/mall/Mp2.01.01.00.mypage-0-view-pc.html" class="btn type03 small">자세히 보기</a></p>
+                        <!-- 주문취소 -->
+                        <p><a href="#popup3" class="btn type01 small btn_popup">주문취소</a></p>
+                        <!-- //주문취소 -->
                       </td>
                       <td class="td_pdt_info">
                         <div class="pdt_info">
@@ -478,10 +481,61 @@
         <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
       </div>
     </div>
-    
-    
-    <!-- //popup area -->
 
+    <div id="popup3" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">주문취소</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          <div class="order_cancle_wrap">
+            <div class="form_wrap">
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">취소사유</strong>
+                  <div class="form_inp">
+                    <input type="text" title="취소사유" />
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">환불은행</strong>
+                  <div class="form_inp">
+                    <select class="sel_opt" title="환불은행">
+                      <option value="">선택하세요.</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">환불계좌 번호</strong>
+                  <div class="form_inp">
+                    <input type="text" title="환불계좌 번호" />
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">환불계좌 예금주</strong>
+                  <div class="form_inp">
+                    <input type="text" title="환불계좌 예금주" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap center top">
+              <button type="button" class="btn large type02">주문취소</button>
+            </div>
+          </div>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
 
     <div class="dim">
     </div>
