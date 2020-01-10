@@ -697,8 +697,6 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .noti strong {color:#03a2ea;font-weight:400;} 
 .noti .ico_area {}
 
-.mpg_wrap .tit_info {display:block; width:100%; height:auto; margin:0 0 20px 0; padding:0; font-size:18px; font-weight:400; line-height:100%; color:#999;}
-
 @media screen and (max-width:1024px) {
   .tit_box {margin-top:37px;padding: 0 15px;}
   .tit_box h2 {font-size:20px;}
@@ -3674,6 +3672,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 /* //마이페이지 > 시안보기 MOBILE 버전 */
 
 /* 마이페이지 > 배송지 정보 관리 */
+.delivery_list table tbody td {text-align:center;}
+.delivery_list table tbody td.address {line-height:140%; text-align:left;}
 .delivery_list table tbody td .btn {min-width:90px;}
 .delivery_list table tbody td .btn:last-child {margin-left:10px;}
 /* //마이페이지 > 배송지 정보 관리 */
@@ -3977,7 +3977,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 }
 
 /* 디자인템플릿 */
-.design_tm .page_tab.sub_type1.sort ul > li {width:calc(100% / 7);}
+.design_tm .page_tab.sub_type1.sort ul > li {width:calc(100% / 8);}
 .design_tm .photo_list.pop {border-top:0;}
 .design_tm .photo_list .txt_box h4 {font-weight:400;margin-top:3px;}
 .design_tm .btn_modify::before {content: ''; display:inline-block; width:1px; height:20px;background:#dedede;margin-right:10px;margin-left:10px;vertical-align: middle;} 
