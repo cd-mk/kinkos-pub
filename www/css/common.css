@@ -196,8 +196,6 @@ p+.btn_wrap {margin-top:40px !important;}
 .btn.mid_large {height:50px;line-height:50px;}
 .btn.btn_delete {font-weight:400;}
 
-.delivery_list table tbody td .btn {min-width:90px;}
-
 /* button col n~ */
 .btn_wrap[class*="col"] .btn {display:inline-block; margin-left:10px;}
 .btn_wrap[class*="col"] .btn:first-child {margin-left:0;}

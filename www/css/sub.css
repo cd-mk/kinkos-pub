@@ -824,7 +824,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .anchor .con_box > div {min-height:200px;}
 
 .page_tab.sub_type1{height:auto;position:relative;max-width:1530px;border-bottom:1px solid #dedede;border-right:1px solid #dedede;margin-left: auto;margin-right: auto;}
-.page_tab.sub_type1 > ul{position:relative;top:auto;left:auto;transform:none;display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%;}
+.page_tab.sub_type1 > ul{position:relative;top:0;left:0;transform:none;display:table;width:100%;}
 .page_tab.sub_type1 > ul > li{cursor:pointer;display:inline-block;flex:0 0 33.3333%; width:33.3333%; padding-top:0;height:auto;line-height:1.3;box-sizing:border-box;font-size:1em;color:#fff;text-align:center;overflow:hidden;font-weight:normal;}
 .page_tab.sub_type1 > ul > li a {height:63px;line-height:63px;width:100%;text-align:center;border-left: 1px solid #e7e7e7;border-top: 1px solid #e7e7e7;}
 .page_tab.sub_type1 > ul > li.active {position:relative;border-bottom: 0;}
@@ -1322,7 +1322,6 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .event_wrap .photo_list .event_end {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6);}
 .event_wrap .photo_list .event_end::before {content:"";position:absolute;; top:50%; left:50%; width:166px; height:139px; transform:translate(-50%, -50%);background:url(../image/company/sub/img-eventend.png) no-repeat 0 0 /cover;}
 .event_wrap .photo_list .event_end img {display:none;}
-.event_wrap .page_navi {margin-top:0;}
 .event_wrap .content_bbs .img_content {margin:0 auto; width:67.97%;}
 .event_wrap .content_bbs .img_content img {display:block;}
 
@@ -3674,6 +3673,10 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .comment {padding:25px 0 0 0;}
 /* //마이페이지 > 시안보기 MOBILE 버전 */
 
+/* 마이페이지 > 배송지 정보 관리 */
+.delivery_list table tbody td .btn {min-width:90px;}
+.delivery_list table tbody td .btn:last-child {margin-left:10px;}
+/* //마이페이지 > 배송지 정보 관리 */
 
 
 
