@@ -2,23 +2,47 @@
 function slideInit() {
   var isMobile = chkViewport();
 
-  // 디지털출력 복사  
-  var servicePdt = new Swiper('.service_info_view', {
-    spaceBetween: 30,
-    slidesPerView: 'auto',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hide: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-    }
-  });
+
+  // 디지털출력 복사
+  if( $('.service_info_view').length )
+  {
+    $('.service_info_view').each(function(idx) {
+      var obj = $(this);
+      var servicePdt = new Swiper(obj, {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        speed: 500,
+        loop: false,
+        grabCursor: false,
+        navigation: {
+          nextEl: obj.find('.swiper-button-next'),
+          prevEl: obj.find('.swiper-button-prev'),
+        },
+        scrollbar: {
+          el: obj.find('.swiper-scrollbar'),
+          hide: false,
+        },
+        pagination: {
+          el: obj.find('.swiper-pagination'),
+          type: 'fraction',
+        }
+      });
+
+      var itemObj = obj.closest('.item_list');
+      var toggleBtn = itemObj.find('.toggle_view');
+      if( toggleBtn.length )
+      {
+        toggleBtn.on('click', function() {
+          var toggle = $(this);
+
+          if( toggle.hasClass('on') )
+          {
+            servicePdt.update();
+          }
+        });
+      }
+    });
+  }
 
   //상품 리스트 슬라이드
   var pcPtList = {
@@ -79,10 +103,15 @@ function slideInit() {
       swiper: detailThumb
     }
   });
+}
 
+$(window).on('load', function() {
+  slideInit();
+});
 
-} 
-$(document).ready(slideInit());
+$(document).ready(function() {
+  //slideInit();
+});
 
 // layer popup
 var toggleV = function () {

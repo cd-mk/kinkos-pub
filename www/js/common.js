@@ -255,6 +255,7 @@ var popupSizeInit = function( obj ) {
     {
       var winHeight = parseInt( window.innerHeight, 10 );
       var innerHeight = parseInt( inner.outerHeight( true ), 10 );
+      console.log( winHeight + '__' + innerHeight );
 
       inner.css({'height': '', 'overflow-y': ''});
 
