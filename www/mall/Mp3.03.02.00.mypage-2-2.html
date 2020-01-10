@@ -86,99 +86,192 @@
       <!-- 본문 -->
       <div class="con_box mpg_wrap">
        
-        <div class="userinfo_wrap">
+        <div class="userinfo_wrap delivery_info_wrap">
           <div class="tit_box section mid">
             <h3>배송지 정보 관리</h3>
-          </div>
-          
+            <h4 class="delivery_alert">- 주소를 선택하시면 기본배송지로 저장됩니다.</h4>
 
-          <div class="page_tab col2 ly_tab">
-            <ul class="" id="tab1">
-              <li><span>국내 배송 주소</span></li>
-              <li><span>해외 배송 주소</span></li>
-            </ul>
+            <a href="#popup1" class="btn type01 mid_large btn_popup">배송지 등록</a>
           </div>
 
-          <div class="con_box" id="tab1_con">
-            <!-- 국내 -->
-            <div class="basket_list top_line_none">
-              <table>
-                <caption>장바구니 목록</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">선택</th>
-                    <th scope="col">배송지 이름</th>
-                    <th scope="col">받는 사람</th>
-                    <th scope="col">주소</th>
-                    <th scope="col">연락처</th>
-                    <th scope="col">삭제</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- loop -->
-                  <tr>
-                    <td class="pdt_chk">
-                      <input type="checkbox" id="chk1" name="pdt_chk">
-                      <label for="chk1"></label>
-                    </td>
-                    <td class="subject"><a href="#url" class="txt_underline">[기본배송지] 킨스코리아</a></td>
-                    <td>홍길동</td>
-                    <td>서울시 금천구 가산동 </td>
-                    <td>010-7655-8932</td>
-                    <td><button class="btn type03 small">삭제</button></td>
-                  </tr>
-                  <!-- loop -->
-            
-            
-                </tbody>
-              </table>
-              <div class="btn_wrap center">
-                <button type="button" class="btn type01 large"><span>배송지 추가</span></button>
-              </div>
+          <div class="basket_list delivery_list">
+            <table>
+              <caption>장바구니 목록</caption>
+              <colgroup>
+                <col width="8%" />
+                <col width="20%" />
+                <col width="*" />
+                <col width="20%" />
+                <col width="24%" />
+              </colgroup>
+              <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">배송지</th>
+                <th scope="col">주소</th>
+                <th scope="col">연락처</th>
+                <th scope="col">수정/삭제</th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- loop -->
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_1" name="" checked="checked" />
+                  <label for="delivery_1"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">킨코스 강남역 센터</a></td>
+                <td class="address">02641 서울특별시 강남구 강남대로 370 클리닉빌딩 1층</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <!-- loop -->
+
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">가산디지털단지 센터</a></td>
+                <td class="address">08507 서울특별시 금천구 가산디지털1로 168 B동 106호</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">남대문 센터</a></td>
+                <td class="address">04512 서울특별시 중구 칠패로 46 우남빌딩1층</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">압구정 센터</a></td>
+                <td class="address">06025 서울특별시 강남구 논현로 824 동양빌딩1층</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">홍대입구역 센터</a></td>
+                <td class="address">04050 서울특별시 마포구 양화로 156 B1</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">분당 센터</a></td>
+                <td class="address">13591 경기도 성남시 분당구 황새울로312번길 5 1층</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">충무로 센터</a></td>
+                <td class="address">04557 서울특별시 중구 충무로 2  매일경제신문사빌딩 2층</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="" />
+                  <label for="delivery_2"></label>
+                </td>
+                <td class="subject"><a href="#url" class="txt_underline">여의도 센터_구) 동여의도</a></td>
+                <td class="address">07325  서울 영등포구 여의대로 56 한화손해보험빌딩 B1</td>
+                <td>010-1234-1234</td>
+                <td class="td_btns">
+                  <div class="btn_wrap">
+                    <!-- 배송지 수정 팝업 호출 -->
+                    <a href="#popup1" class="btn type03 small btn_popup">수정</a>
+                    <!-- //배송지 수정 팝업 호출 -->
+                    <button class="btn type04 small">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+            <!-- Page navigation -->
+            <div class="page_navi">
+              <a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+              <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+              <ul class="navi_list">
+                <li class="active"><a href="#url">1</a></li>
+                <li><a href="#url">2</a></li>
+                <li><a href="#url">3</a></li>
+                <li><a href="#url">4</a></li>
+                <li><a href="#url">5</a></li>
+              </ul>
+              <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+              <a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
             </div>
-            
-
-            <!-- 해외 -->
-            <div class="basket_list top_line_none" style="display: none;">
-              <table>
-                <caption>장바구니 목록</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">선택</th>
-                    <th scope="col">배송지 이름</th>
-                    <th scope="col">받는 사람</th>
-                    <th scope="col">주소</th>
-                    <th scope="col">연락처</th>
-                    <th scope="col">삭제</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- loop -->
-                  <tr>
-                    <td class="pdt_chk">
-                      <input type="checkbox" id="chk2" name="pdt_chk">
-                      <label for="chk2"></label>
-                    </td>
-                    <td class="subject"><a href="#url" class="txt_underline">[기본배송지] 킨스코리아</a></td>
-                    <td>홍길동</td>
-                    <td>서울시 금천구 가산동 </td>
-                    <td>010-7655-8932</td>
-                    <td><button class="btn type03 small">삭제</button></td>
-                  </tr>
-                  <!-- loop -->
-            
-            
-                </tbody>
-              </table>
-              <div class="btn_wrap center">
-                <button type="button" class="btn type01 large"><span>배송지 추가</span></button>
-              </div>
-            </div>
-
+            <!-- //Page navigation -->
           </div>
-
-
-
         </div>
       </div>
       <!-- //본문 --> 
@@ -189,6 +282,76 @@
   <!-- FOOTER -->
   <div id="footer" class="layout_width"> </div>
   <!-- //FOOTER -->
+
+  <!-- popup area -->
+  <div id="popup1" class="popup_wrap">
+    <div class="inner">
+      <!-- popup title -->
+      <h3 class="title">배송지 등록/수정</h3>
+      <!-- popup content -->
+
+      <div class="pop_con">
+        <h4>배송지 정보</h4>
+        <div class="form_wrap">
+          <div class="form_group">
+            <div class="form_item">
+              <strong class="form_name">받으시는 분</strong>
+              <div class="form_inp">
+                <input type="text" title="받으시는 분" placeholder="20자 이내로 입력해주세요." />
+              </div>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_item">
+              <strong class="form_name">배송지명</strong>
+              <div class="form_inp">
+                <input type="text" title="배송지명" placeholder="20자 이내로 입력해주세요." />
+              </div>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_item">
+              <strong class="form_name">휴대전화</strong>
+              <div class="form_inp">
+                <input type="text" title="휴대전화" placeholder="- 없이 입력" />
+              </div>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_item">
+              <strong class="form_name">일반전화</strong>
+              <div class="form_inp">
+                <input type="text" title="일반전화" placeholder="- 없이 입력" />
+              </div>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_item">
+              <strong class="form_name ver_top">주소</strong>
+              <div class="form_inp address">
+                <input type="text" title="기본 주소" placeholder="우편 번호">
+                <a href="#popup1" class="btn type03 btn_popup">주소 찾기</a>
+                <input type="text" title="기본 주소" placeholder="기본 주소">
+                <input type="text" title="상세 주소" placeholder="상세 주소">
+              </div>
+              <div class="form_inp shipping_address_select">
+                <input type="checkbox" id="shipping_address_chk_2" name="shipping_address_checkbox_dummy">
+                <label for="shipping_address_chk_2">기본배송지로 선택</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrap col2 center top">
+          <button type="button" class="btn large type02 btn_pop_close_btn">닫기</button>
+          <button type="button" class="btn large type01">등록</button>
+        </div>
+      </div>
+      <!-- //popup content -->
+      <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+    </div>
+  </div>
+  <!-- //popup area -->
   
   <div class="dim"> </div>
 </div>

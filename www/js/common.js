@@ -254,18 +254,22 @@ var popupSizeInit = function( obj ) {
     if( inner.length )
     {
       var winHeight = parseInt( window.innerHeight, 10 );
-      var innerHeight = 0;
+      var titleHeight = parseInt( inner.find('.title').outerHeight( true ), 10 );
+      var contentHeight = 0;
 
-      if( obj.hasClass('small') )
+      if( inner.find('.pop_con').length )
       {
-        var titleHeight = parseInt( inner.find('.title').outerHeight( true ), 10 );
-        var contentHeight = parseInt( inner.find('.pop_con').outerHeight( true ), 10 );
-        innerHeight = titleHeight + contentHeight;
+        contentHeight = parseInt( inner.find('.pop_con').outerHeight( true ), 10 );
       }
       else
       {
-        innerHeight = parseInt( inner.outerHeight( true ), 10 );
+        if( inner.find('.popup_content').length )
+        {
+          contentHeight = parseInt( inner.find('.popup_content').outerHeight( true ), 10 );
+        }
       }
+
+      var innerHeight = titleHeight + contentHeight;
 
       inner.css({'height': '', 'overflow-y': ''});
 

@@ -340,7 +340,7 @@
                           <label for="shipping_info_radio2">신규배송지</label>
                         </div>
 
-                        <a href="#" class="btn type03 small btn_popup">배송지 목록</a>
+                        <a href="#popup1" class="btn type03 small btn_popup">배송지 목록</a>
                       </div>
                     </div>
                   </div>
@@ -596,15 +596,105 @@
     </div>
     <!-- CONTENT -->
 
-
     <!-- FOOTER -->
     <div id="footer" class="layout_width">
     </div>
     <!-- //FOOTER -->
 
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap shipping_select">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">배송지 정보</h3>
+        <!-- popup content -->
+
+        <div class="pop_con">
+          <h4>배송지 선택</h4>
+
+          <div class="basket_list delivery_list">
+          <table>
+            <caption>장바구니 목록</caption>
+            <colgroup>
+              <col width="10%" />
+              <col width="23%" />
+              <col width="*" />
+              <col width="23%" />
+            </colgroup>
+            <thead>
+            <tr>
+              <th scope="col">선택</th>
+              <th scope="col">배송지</th>
+              <th scope="col">주소</th>
+              <th scope="col">연락처</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- loop -->
+            <tr>
+              <td>
+                <input type="radio" id="delivery_1" name="delivery_address_radio" checked="checked" />
+                <label for="delivery_1"></label>
+              </td>
+              <td class="subject"><a href="#url" class="txt_underline">킨코스 강남역 센터</a></td>
+              <td class="address">02641 서울특별시 강남구 강남대로 370 클리닉빌딩 1층</td>
+              <td>010-1234-1234</td>
+            </tr>
+            <!-- loop -->
+
+            <tr>
+              <td>
+                <input type="radio" id="delivery_2" name="delivery_address_radio" />
+                <label for="delivery_2"></label>
+              </td>
+              <td class="subject"><a href="#url" class="txt_underline">가산디지털단지 센터</a></td>
+              <td class="address">08507 서울특별시 금천구 가산디지털1로 168 B동 106호</td>
+              <td>010-1234-1234</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="radio" id="delivery_3" name="delivery_address_radio" />
+                <label for="delivery_3"></label>
+              </td>
+              <td class="subject"><a href="#url" class="txt_underline">남대문 센터</a></td>
+              <td class="address">04512 서울특별시 중구 칠패로 46 우남빌딩1층</td>
+              <td>010-1234-1234</td>
+            </tr>
+            </tbody>
+          </table>
+
+            <!-- Page navigation -->
+            <div class="page_navi">
+              <a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+              <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+              <ul class="navi_list">
+                <li class="active"><a href="#url">1</a></li>
+                <li><a href="#url">2</a></li>
+                <li><a href="#url">3</a></li>
+                <li><a href="#url">4</a></li>
+                <li><a href="#url">5</a></li>
+              </ul>
+              <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+              <a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+            </div>
+            <!-- //Page navigation -->
+
+          <div class="btn_wrap center top">
+            <button type="button" class="btn large type02 btn_pop_close_btn">취소</button>
+            <button type="button" class="btn large type01">확인</button>
+          </div>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
+
     <div class="dim">
     </div>
   </div>
+    <!-- //popup area -->
+
+    <div class="dim"></div>
   <!-- //WRAP -->
 
   <!-- SCRIPT -->

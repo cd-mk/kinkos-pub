@@ -226,6 +226,10 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .form_inp .btn  {width:130px; margin-left:10px;}
 .mall .form_inp .btn {font-size:18px;}
 
+/* 레이어팝업 주소 관련 */
+.popup_wrap .pop_con .form_wrap .form_group .form_item .form_inp.shipping_address_select {margin-top:15px;}
+/* //레이어팝업 주소 관련 */
+
 
 @media screen and (max-width:1024px) {
   .form_wrap {padding-bottom:25px;}
@@ -3678,10 +3682,20 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .delivery_info_wrap .tit_box .btn {position:absolute; top:50%; right:0; min-width:165px; transform:translateY(-50%);}
 .delivery_list table thead th {padding-top:20px; padding-bottom:20px;}
 .delivery_list table tbody td {text-align:center;}
-.delivery_list table tbody td.address {line-height:140%; text-align:left;}
-.delivery_list table tbody td .btn {min-width:90px;}
+.delivery_list table tbody td.address {line-height:140%; text-align:left; word-break:keep-all;}
+.delivery_list table tbody td.td_btns .btn_wrap {margin-top:0;}
+.delivery_list table tbody td.td_btns .btn_wrap .btn {width:calc(50% - 10px); min-width:auto;}
 .delivery_list table tbody td .btn:last-child {margin-left:10px;}
 .delivery_list table tbody tr:last-child td {border-bottom:1px solid #ccc;}
+
+@media screen and (max-width:1024px) {
+  .delivery_info_wrap .tit_box .btn {display:block; position:relative; top:auto; right:auto; min-width:165px; margin-top:20px; transform:none;}
+  .basket_list.delivery_list {margin-top:30px !important;}
+  .popup_wrap .delivery_list {margin-top:20px !important;}
+  .delivery_list table tbody td {text-align:left; border:0 !important;}
+  .delivery_list table tbody td.td_btns {margin-top:20px;}
+  .delivery_list table tbody td.td_btns .btn {width:calc(50% - 10px);}
+}
 /* //마이페이지 > 배송지 정보 관리 */
 
 

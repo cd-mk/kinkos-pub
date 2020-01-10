@@ -174,6 +174,9 @@ a.txt_underline.black,
 .btn_wrap.right {text-align:right;margin-top:20px;}
 .btn_wrap.top {margin-top:40px;}
 
+.btn_wrap.center .btn {margin-left:10px;}
+.btn_wrap.center .btn:first-child {margin-left:0;}
+
 .bbs_list td .btn_wrap {margin-top:0;}
 p+.btn_wrap {margin-top:40px !important;}
 
@@ -220,8 +223,9 @@ p+.btn_wrap {margin-top:40px !important;}
   .btn_wrap .left, .btn_wrap .right {overflow:hidden;}
   .btn_wrap .left .btn {width:45%;padding:0 10px;}
   .btn.small {height:36px;line-height:36px;font-size:1em;padding: 0 15px;}
-  .btn.large {height:50px; line-height:50px;font-size:16px;}
+  .btn.large {min-width:auto; height:50px; line-height:50px;font-size:16px;}
   .btn.mid_large {height:50px;line-height:50px;}
+  .btn.full_width {width:100%;}
 
   .dext_box .btn_wrap[class*="col"] .btn {display:inline-block; margin-left:10px;}
   .dext_box .btn_wrap[class*="col"] .btn:last-child {margin-top:0;}
@@ -754,6 +758,10 @@ p+.btn_wrap {margin-top:40px !important;}
 .popup_wrap .result .form_wrap{background:#f3f4f6;padding: 60px 40px;}
 .popup_wrap .result p {padding:0;}
 .popup_wrap .result .btn {width:100%;}
+
+.popup_wrap .pop_con h4 {margin-bottom:20px; font-size:24px; font-weight:700; line-height:100%; color:#222;}
+
+.popup_wrap.shipping_select .inner {width:1010px;}
 
 @media screen and (max-width:1024px) {
  .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:9999;}
