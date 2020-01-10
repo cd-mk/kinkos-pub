@@ -280,11 +280,12 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .js-file-del.on, .js-file-label.on{display:inline-block}
 
 @media screen and (max-width:1024px) {
-.file_inp_box {padding-right:0;}
-.file_inp_box .btn {width:100%;width:calc(100% - 54px);position: relative;top:initial;right:initial;bottom:0;margin-left:0;}
-.file_inp_box + .file_inp_box {margin-top:25px;}
-.btn_list_custom {top:initial;bottom:0;}
-.js-file-name {margin-bottom:10px;}
+  .file_inp_box {padding-right:0;}
+  .file_inp_box .btn {width:calc(100% - 54px); position:relative; top:auto; right:auto; bottom:0; margin-left:0;}
+  .file_inp_box + .file_inp_box {margin-top:25px;}
+  .btn_list_custom {top:auto;bottom:0;}
+  .js-file-name {margin-bottom:10px;}
+  .file_inp_box input[type="text"] {width:100%;}
 }
 
 .bbs_write .form_group .form_item .form_name {width:180px;}
@@ -415,15 +416,17 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .page_navi .navi_list > li.active > a {background:#03a2ea; color:#fff;}
 .page_navi .navi_list > li a {display:block; width:100%; color:#333; text-align:center; line-height:36px;}
 
+.accor_wrap .page_navi {display:flex; flex-direction:row; align-items:center; justify-content:center; left:auto; transform:none;}
+
 @media screen and (max-width:1024px) {
   .page_navi {width:auto; margin-top:40px;}
   .page_navi .navi_list > li {float:left; margin-left:4px; width:28px; height:28px;}
   .page_navi .navi_list > li a {line-height:28px;}
   .page_navi .btn_navi {margin-left:4px; width:28px; height:28px;}
   .page_navi .btn_navi.first {background-position:-2px center;}
-.page_navi .btn_navi.prev {background-position:-2px center;}
-.page_navi .btn_navi.next {background-position:-36px center;}
-.page_navi .btn_navi.last {background-position:-36px center;}
+  .page_navi .btn_navi.prev {background-position:-2px center;}
+  .page_navi .btn_navi.next {background-position:-36px center;}
+  .page_navi .btn_navi.last {background-position:-36px center;}
 }
 
 /* 게시판 보기 */
@@ -627,7 +630,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .accor_wrap .accor_item .accor_title::after {top:26px;right:15px;padding:5px;}
   .agree_box {margin-top:30px; padding:0 0 20px;}
   .accor_wrap .accor_item .accor_con {padding:30px 15px;}
-  .accor_wrap .accor_item .accor_title a {padding:23px 0;}
+  .accor_wrap .accor_item .accor_title a {width:100% !important; padding:23px 0;}
 }
 
 
