@@ -8,7 +8,7 @@ function slideInit() {
   {
     $('.service_info_view').each(function(idx) {
       var obj = $(this);
-      var servicePdt = new Swiper(obj, {
+      var opt = {
         slidesPerView: 'auto',
         spaceBetween: 30,
         speed: 500,
@@ -16,17 +16,19 @@ function slideInit() {
         grabCursor: false,
         navigation: {
           nextEl: obj.find('.swiper-button-next'),
-          prevEl: obj.find('.swiper-button-prev'),
+          prevEl: obj.find('.swiper-button-prev')
         },
         scrollbar: {
           el: obj.find('.swiper-scrollbar'),
-          hide: false,
+          hide: false
         },
         pagination: {
           el: obj.find('.swiper-pagination'),
-          type: 'fraction',
+          type: 'fraction'
         }
-      });
+      };
+
+      var servicePdt = new Swiper(obj, opt);
 
       var itemObj = obj.closest('.item_list');
       var toggleBtn = itemObj.find('.toggle_view');
@@ -35,10 +37,14 @@ function slideInit() {
         toggleBtn.on('click', function() {
           var toggle = $(this);
 
-          if( toggle.hasClass('on') )
-          {
-            servicePdt.update();
-          }
+          setTimeout(function() {
+            if( toggle.hasClass('on') )
+            {
+              servicePdt.destroy(true, true);
+
+              servicePdt = new Swiper(obj, opt);
+            }
+          }, 10);
         });
       }
     });
@@ -115,12 +121,11 @@ $(document).ready(function() {
 
 // layer popup
 var toggleV = function () {
-  $(".toggle_view").click(function () {
+  $(".toggle_view").on('click', function () {
     $(this).parents(".item_list").toggleClass("on");
     $(this).toggleClass("on");
   });
 };
-toggleV();
 
 // 상품상세 리뷰
 var toggleReview = function () {
@@ -128,7 +133,6 @@ var toggleReview = function () {
     $(this).toggleClass("review_view");
   });
 };
-toggleReview();
 
 function mallSubPageTitle( title )
 {
@@ -213,14 +217,18 @@ function callCalendar( obj )
 }
 
 $(document).ready(function() {
-    if( $('.callCalendarBtn').length )
-    {
-        $('.callCalendarBtn').each(function() {
-            var obj = $(this);
+  toggleV();
 
-            callCalendar( obj );
-        });
-    }
+  toggleReview();
+
+  if( $('.callCalendarBtn').length )
+  {
+      $('.callCalendarBtn').each(function() {
+          var obj = $(this);
+
+          callCalendar( obj );
+      });
+  }
 });
 
 (function($) {

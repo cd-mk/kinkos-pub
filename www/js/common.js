@@ -227,11 +227,16 @@ var setDatePicker = function () {
 var setAccordian = function () {
   $('.accor_title label').on('click', toggleContent);
   $('.accor_title .txt_title').on('click', toggleContent);
+  $('.accor_title .accor_toggle_btn').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).closest('.accor_item').toggleClass('active');
+  });
 
   function toggleContent() {
     $(this).closest('.accor_item').toggleClass('active');
   }
-}
+};
 
 // name으로 그룹핑된 체크박스 전체 체크 기능
 var setChkAll = function () {

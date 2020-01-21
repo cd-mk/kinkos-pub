@@ -211,7 +211,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 @media screen and (max-width:1024px) {
   .btn_wrap {margin-top:40px;font-size:1em;}
-  .btn_wrap[class*="col"] {display: flex;}
+  .btn_wrap[class*="col"] {display: flex;flex-direction: row;align-items: center;justify-content: center;}
   .btn_wrap[class*="col"] .btn {margin-left:10px;}
   .btn_wrap[class*="col"] .btn:first-child {margin-left:0;}
 
