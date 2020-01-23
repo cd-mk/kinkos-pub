@@ -44,11 +44,12 @@ h3 {margin:0 20px}
 #tnb:after {display:block;visibility:hidden;clear:both;content:""}
 #tnb {float:right;margin:0;padding:0;zoom:1}
 #tnb:after {display:block;visibility:hidden;clear:both;content:""}
-#tnb li {float:left;margin:0 0 0 10px;padding:0 10px 0 0;border-right:1px solid #444}
+#tnb li {float:left;margin:0 0 0 10px;padding:0 10px 0 0;border-right:1px solid #48546f;}
 #tnb #tnb_logout {border-right:0;padding:0}
-#tnb a {display:inline-block;color:#bbb;text-decoration:none;letter-spacing:-0.1em}
-#tnb a:focus, #tnb a:hover {color:#fff}
-#tnb #tnb_logout a {color:#ff3061}
+#tnb a {display:inline-block;color:#fff;text-decoration:none;letter-spacing:-0.1em}
+#tnb a:focus, #tnb a:hover {color:#9ac6ff}
+#tnb #tnb_logout a {color:#fff;text-decoration:underline;}
+#tnb #tnb_logout a:focus, #tnb #tnb_logout a:hover {color:#9ac6ff;}
 #tnb span {position:absolute;bottom:10px;left:0;width:100%;text-align:center}
 
 /* gnb */
@@ -64,14 +65,14 @@ h3 {margin:0 20px}
 .gnb_1dli_on .gnb_1da {background:#2b7de7;color:#fff}
 .gnb_2dul {display:none;position:absolute;top:34px;width:180px;border:1px solid #2b7de7;border-top:0;background:#fff}
 .gnb_2da {display:block;padding:8px 10px;background:#fff;color:#000;text-decoration:none}
-.gnb_grp_style {background:#f7f7f7 !important}
+.gnb_grp_style {background:#fff !important}
 .gnb_2da:focus, .gnb_2da:hover {background:#d5e5fa !important;color:#000 !important;text-decoration:none}
 .gnb_1dli_air .gnb_2da {background:#fff;color:#000}
 .gnb_1dli_on .gnb_2da {background:#fff;color:#000}
 .gnb_1dli_over .gnb_2dul {display:block;left:-1px}
 .gnb_1dli_over2 .gnb_2dul {display:block;right:-1px}
 
-.gnb_grp_div {border-top:1px solid #eee}
+.gnb_grp_div {border-top:0;}
 
 
 #lnb {margin:0;padding:15px;min-width:970px;border-bottom:1px solid #d7d8da;list-style:none;zoom:1}
@@ -218,13 +219,13 @@ legend {position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent
 
 /* 하단 레이아웃 */
 #ft {clear:both;margin:20px 0;padding:10px 20px;min-width:960px;border-top:1px solid #e7e7e7}
-#ft a {color:#3b5998;text-decoration:underline;}
+#ft a {font-weight:700;color:#3b5998;text-decoration:underline;}
 
 /* 페이지 내 검색 */
 
 .local_sch {min-width:960px}
 
-.local_sch .btn_submit {padding:0 5px;height:24px;border:0;color:#fff;font-size:0.95em;vertical-align:middle;cursor:pointer}
+.local_sch .btn_submit {padding:0 5px;height:27px;border:0;color:#fff;font-size:0.95em;vertical-align:middle;cursor:pointer}
 
 
 .local_sch01 {margin:0 0 10px;padding:0 20px 10px;border-bottom:1px solid #d7d8da}
@@ -259,9 +260,10 @@ legend {position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent
 
 /* 페이지 내 카운트 */
 .local_ov {min-width:960px}
+.local_ov a {color:#222;}
 
-.local_ov01 {position:relative;margin:-10px 0 10px;padding:10px 20px;border-bottom:1px solid #d7d8da;background:#f4f5f6}
-.local_ov01 .ov_listall {display:inline-block;margin:0 5px 0 0;padding:0 10px 0 0;border-right:1px solid #ccc}
+.local_ov01 {position:relative;margin:-10px 0 10px;padding:10px 20px;color:#222;border-bottom:1px solid #d7d8da;background:#f4f5f6}
+.local_ov01 .ov_listall {display:inline-block;margin:0 5px 0 0;padding:0 10px 0 0;border-right:1px solid #bbb}
 .local_ov01 .ov_a {display:inline-block;margin:0 0 0 5px;padding:0 0 0 10px;border-left:1px solid #ccc;color:#ff3061}
 
 
@@ -278,7 +280,7 @@ tfoot td {font-weight:bold;text-align:center}
 /* thead 한 줄 테이블 */
 .tbl_head01 {}
 .tbl_head01 table {clear:both;width:100%;border-collapse:collapse;border-spacing:0}
-.tbl_head01 thead th, .tbl_head01 tbody th {padding:10px 0;border:1px solid #cacaca;border-top:1px solid #363940;background:#e9ebee;color:#383838;letter-spacing:-0.1em}
+.tbl_head01 thead th, .tbl_head01 tbody th {padding:10px 0;border:1px solid #cacaca;border-top:1px solid #363940;background:#e9ebee;color:#222;letter-spacing:-0.1em}
 .tbl_head01 thead th {font-size:0.95em}
 .tbl_head01 thead input {vertical-align:top} /* middle 로 하면 게시판 읽기에서 목록 사용시 체크박스 라인 깨짐 */
 .tbl_head01 thead a {color:#383838;text-decoration:underline}
@@ -288,10 +290,10 @@ tfoot td {font-weight:bold;text-align:center}
 /* thead 두 줄 테이블 */
 .tbl_head02 {}
 .tbl_head02 table {clear:both;width:100%;border-collapse:collapse;border-spacing:0}
-.tbl_head02 thead th, .tbl_head02 tbody th {padding:5px 0;border:1px solid #cacaca;border-top:1px solid #363940;background:#e9ebee;color:#383838;letter-spacing:-0.1em}
+.tbl_head02 thead th, .tbl_head02 tbody th {padding:5px 0;border:1px solid #cacaca;border-top:1px solid #363940;background:#e9ebee;color:#222;letter-spacing:-0.1em}
 .tbl_head02 thead th {font-size:0.95em}
 .tbl_head02 thead input {vertical-align:top} /* middle 로 하면 게시판 읽기에서 목록 사용시 체크박스 라인 깨짐 */
-.tbl_head02 thead a {color:#383838;text-decoration:underline}
+.tbl_head02 thead a {color:#222;text-decoration:underline}
 .tbl_head02 tbody th {}
 .tbl_head02 tbody td {padding:7px 5px;line-height:1.4em;word-break:break-all}
 
