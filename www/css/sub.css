@@ -1777,11 +1777,12 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_list .toggle_view i:before {height:2px; top:9px; left:4px; width:12px;background:#fff; content:""; position:absolute;}
 .service_info_list .toggle_view i:after {height:12px; left:9px; top:4px; width:2px;background:#fff; content:""; position:absolute;}
 .service_info_list .toggle_view.on i:after {display:none;}
-.service_info_list .link_view {display:inline-block;font-size:1em;color:#03a2ea;font-weight:700;padding-top:50px;padding-bottom: 3px;border-bottom:1px solid #03a2ea;}
+.service_info_list .link_view {display:inline-block;position:absolute;bottom:40px;font-size:1em;color:#03a2ea;font-weight:700;padding-top:50px;padding-bottom: 3px;border-bottom:1px solid #03a2ea;}
 
-.service_info_list .service_info_view {background:#f3f4f6;position:relative;overflow:hidden;height:0;opacity:0;transition:all 0.5s;}
+.service_info_list .service_info_view_wrap {width:100%;height:auto;background:#f3f4f6;}
+.service_info_list .service_info_view {position:relative;overflow:hidden;height:0;opacity:0;transition:all 0.5s;}
 .service_info_list .item_list.on .service_info_view {opacity:1;height:auto;padding:60px 0;margin-top:60px;}
-.service_info_list .swiper-wrapper{max-width:1530px; margin:0 auto;}
+.service_info_list .swiper-wrapper{max-width:100%; margin:0;}
 .service_info_list .swiper-slide {width:490px;}
 .service_info_list .service_info_view .txt {margin-top:25px;}
 .service_info_list .service_info_view .txt strong {font-size:20px;font-weight:700;letter-spacing: -1px;line-height: 1.3;}

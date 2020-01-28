@@ -2,7 +2,6 @@
 function slideInit() {
   var isMobile = chkViewport();
 
-
   // 디지털출력 복사
   if( $('.service_info_view').length )
   {
@@ -14,6 +13,7 @@ function slideInit() {
         speed: 500,
         loop: false,
         grabCursor: false,
+        resizeReInit: true,
         navigation: {
           nextEl: obj.find('.swiper-button-next'),
           prevEl: obj.find('.swiper-button-prev')
