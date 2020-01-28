@@ -841,7 +841,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .tit_box+.page_tab.fixed {margin-top:0;}
 
 .page_tab.sub_type1.sort {margin-top:60px; background: #f1f7f9;}
-.page_tab.sub_type1.sort ul > li {float:left; width:calc(100% / 6);border:0;}
+.page_tab.sub_type1.sort ul {flex-wrap:wrap;}
+.page_tab.sub_type1.sort ul > li {float:left; flex:0 0 calc(100% / 6); width:calc(100% / 6);border:0;}
 .page_tab.sub_type1.sort ul > li > a {display:block;}
 .page_tab.sub_type1.sort ul > li.active a, .page_tab.sub_type1.sort > ul > li a:hover {font-weight:700;color:#03a2ea;background:#fff;position: relative;}
 .page_tab.sub_type1.sort ul > li.active a::before, .page_tab.sub_type1.sort > ul > li a:hover::before {content:"";display:block;width:calc(100% - 4px);height:58px;border:2px solid #03a2ea;position: absolute;top:0;}
