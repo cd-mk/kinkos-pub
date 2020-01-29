@@ -1161,3 +1161,31 @@ common mall
 /* PC 버전 */
 body.fix_pc {min-width:1024px;}
 /* //PC 버전 */
+
+/* mall main */
+.mall.is-main .price {position:relative;}
+.mall.is-main .price .tag {display:none;}
+.mall.is-main .price.tag::after {content:""; display:inline-block; position:absolute; top:-2px; margin:0 0 0 8px; padding:0; background-repeat:no-repeat; background-position:center; background-size:100% auto;}
+.mall.is-main .price.tag.speed::after {width:43px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_speed_pc.png);}
+.mall.is-main .price.tag.event::after {width:51px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_event_pc.png);}
+.mall.is-main .price.tag.new::after {width:40px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_new_pc.png);}
+.mall.is-main .price.tag.best::after {width:43px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_best_pc.png);}
+.mall.is-main .price.tag.sale::after {width:43px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_sale_pc.png);}
+
+.mall.is-main .consultPrd_wrap .price {display:block;margin-top:15px;}
+
+@media screen and (max-width:1024px) {
+  .mall.is-main .consultPrd_wrap .price {display:block; margin-top:15px; padding-bottom:5px;}
+
+  .mall.is-main .consultPrd_wrap .consult_slide .item_box .txt .price {display:flex !important; flex-direction:row; align-items:center; justify-content:flex-start; padding-bottom:5px;}
+  .mall.is-main .consultPrd_wrap .consult_slide .item_box .txt .price .tag {position:relative; top:1px; display:flex; flex-direction:column; align-items:flex-start;  justify-content:center; margin-left:8px;}
+  .mall.is-main .consultPrd_wrap .consult_slide .item_box .txt .price .tag img {width:50%; max-width:50%; height:auto;}
+  .mall.is-main .consultPrd_wrap .consult_slide .item_box .txt .price.tag::after {display:none !important;}
+
+  .mall.is-main .price.tag::after {display:none !important;}
+
+  .mall.is-main .price {display:flex !important; flex-direction:row; align-items:center; justify-content:flex-start; padding-bottom:5px;}
+  .mall.is-main .price .tag {position:relative; top:1px; display:flex; flex-direction:column; align-items:flex-start;  justify-content:center; margin-left:8px;}
+  .mall.is-main .price .tag img {width:50%; max-width:50%; height:auto;}
+}
+/* //mall main */
