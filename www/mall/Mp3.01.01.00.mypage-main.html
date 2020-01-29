@@ -39,7 +39,7 @@
   <!-- //접근성 바로가기 메뉴(숨김) -->
 
   <!-- WRAP (mall or company css추가)-->
-  <div id="wrap" class="company">
+  <div id="wrap" class="mall">
 
     <!-- HEADER -->
     <div id="header">
@@ -49,7 +49,7 @@
     <!-- CONTENT -->
     <div id="content">
       <!-- breadcrumb  -->
-                  <div class="breadcrumb_wrap">
+      <div class="breadcrumb_wrap">
         <ul class="item_list">
           <li><a href="#url" class="home">Home</a></li>
           <li><a href="#">마이페이지</a></li>
@@ -59,22 +59,15 @@
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
       <div class="cont_wrap sidebar">
-
         <div class="snb">
           <h2>마이페이지</h2>
           <ul>
-            <li><a href="/www/mall/Mp3.02.00.00.mypage-1-list.html">구매내역리스트</a></li>
-            <li>
-              <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
-              <ul>
-                <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
-                <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
-                <li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
-              </ul>
-            </li>
+            <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+            <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
+            <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
             <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
             <li>
-              <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.htmll">나의 문의 내역</a>
+              <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
               <ul>
                 <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
                 <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
@@ -82,9 +75,15 @@
                 <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
               </ul>
             </li>
+            <li>
+              <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
+              <ul>
+                <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
+                <li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
-
 
         <!-- 본문 -->
         <div class="con_box mpg_main">
@@ -92,37 +91,40 @@
           <div class="my_wrap">
             <ul>
               <li class="my_info">
-                <p><strong>shing1234</strong> 님의 킨코스</p>
-                <p class="my_point"><i>P</i>1,000</p>
+                <h2 class="my_order_title">주문/배송 현황</h2>
+                <p><strong>shing1234</strong>님</p>
               </li>
               <li class="my_status">
                 <strong>입금대기중</strong>
-                <p>0</p>
+                <!-- 0 일경우 zero 클래스를 추가해 준다. -->
+                <p class="zero">0</p>
               </li>
               <li class="my_status">
                 <strong>결제 완료</strong>
-                <p>0</p>
+                <p>3</p>
               </li>
               <li class="my_status">
                 <strong>배송준비중</strong>
-                <p>0</p>
+                <p>2</p>
               </li>
               <li class="my_status">
                 <strong>배송중</strong>
-                <p>0</p>
+                <p>1</p>
               </li>
               <li class="my_status">
                 <strong>배송완료</strong>
-                <p>0</p>
+                <!-- 0 일경우 zero 클래스를 추가해 준다. -->
+                <p class="zero">0</p>
               </li>
               <li class="my_status">
                 <strong>취소/환불/교환</strong>
-                <p>0</p>
+                <!-- 0 일경우 zero 클래스를 추가해 준다. -->
+                <p class="zero">0</p>
               </li>
             </ul>
           </div>
 
-          <div class="section recently_item">
+          <div class="section mid recently_item">
             <div class="tit_box mid"><h3>최근 본 상품</h3></div>
             <div class="box">
               <div class="pdt_slide swiper-container">
@@ -130,86 +132,99 @@
                   <div class="swiper-slide">
                     <img src="../image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
-                      <span class="title">즉석명함</span>
-                      <p class="price">18,000원</p>
+                      <span class="title">명함</span>
+                      <p class="desc">13시 이전 접수 - 당일 완성</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
                     <img src="../image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
-                      <span class="title">즉석명함</span>
-                      <p class="price">18,000원</p>
+                      <span class="title">즉석 명함</span>
+                      <p class="desc">빠르고 다양한 형태로 완성</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
                     <img src="../image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
-                      <span class="title">즉석명함</span>
-                      <p class="price">18,000원</p>
+                      <span class="title">브로슈어 2단</span>
+                      <p class="desc">3시간안에 완성되는 2단 브로슈어</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
                     <img src="../image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
-                      <span class="title">즉석명함</span>
-                      <p class="price">18,000원</p>
+                      <span class="title">즉석 명함</span>
+                      <p class="desc">빠르고 다양한 형태로 2시간만에 완성되는 스피드명함</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
                     <img src="../image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
-                      <span class="title">즉석명함</span>
-                      <p class="price">18,000원</p>
+                      <span class="title">소량명함 10매</span>
+                      <p class="desc">작지만, 홍보효과 톡톡!</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
                     <img src="../image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
-                      <span class="title">즉석명함</span>
-                      <p class="price">18,000원</p>
+                      <span class="title">명함</span>
+                      <p class="desc">13시 이전 접수 - 당일 완성</p>
                     </span>
                   </div>
                 </div>
-                <div class="swiper-button-next mid"></div>
-                <div class="swiper-button-prev mid"></div> 
+
+                <!-- PC Add Pagination -->
+                <div class="pg_nav pc">
+                  <div class="swiper-button-next mid"></div>
+                  <div class="swiper-button-prev mid"></div>
+                </div>
+
+                <!-- MOBILE Add Pagination -->
+                <div class="pg_nav_wrap scroll mo">
+                  <div class="swiper-scrollbar"></div>
+                  <div class="pg_nav">
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next small"></div>
+                    <div class="swiper-button-prev small"></div>
+                  </div>
+                </div>
+                <!-- //MOBILE Add Pagination -->
               </div>
             </div>
           </div>
 
           <div class="section my_activity clearfix">
-
             <div class="box event_act">
               <h3>이벤트 참여내역</h3>
-              <p>0</p>
+              <!-- 0 일경우 zero 클래스를 추가해 준다. -->
+              <p class="zero">0</p>
             </div>
-
 
             <div class="box que_act">
               <h3>나의 문의 내역</h3>
               <ul>
                 <li>
                   <strong>견적 및 상품 문의 내역</strong>
-                  <p>0</p>
+                  <p>5</p>
                 </li>
                 <li>
-                  <strong>입금대기중</strong>
-                  <p>0</p>
+                  <strong>서비스 의견 내역</strong>
+                  <!-- 0 일경우 zero 클래스를 추가해 준다. -->
+                  <p class="zero">0</p>
                 </li>
                 <li>
-                  <strong>입금대기중</strong>
-                  <p>0</p>
+                  <strong>제휴 및 제안 내역</strong>
+                  <p>1</p>
                 </li>
                 <li>
-                  <strong>입금대기중</strong>
-                  <p>0</p>
+                  <strong>파일 주문 내역</strong>
+                  <p>3</p>
                 </li>
               </ul>
             </div>
-
           </div>
-
-
-
         </div>
         <!-- //본문 -->
       </div>
@@ -242,16 +257,57 @@
 
 
     <script type="text/javascript">
-    var service_thumb = new Swiper('.pdt_slide', {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      autoplay: true,
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
+      (function () {
+        var isMobile = chkViewport();
+        var obj = $('.pdt_slide');
+
+        var pcOpt = {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          speed: 500,
+          autoplay: true,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          navigation: {
+            nextEl: obj.find('.swiper-button-next'),
+            prevEl: obj.find('.swiper-button-prev'),
+          },
+          scrollbar: {
+            el: obj.find('.swiper-scrollbar'),
+            hide: false,
+          },
+          pagination: {
+            el: obj.find('.swiper-pagination'),
+            type: 'fraction',
+          }
+        };
+
+        var moOpt = {
+          slidesPerView: 'auto',
+          spaceBetween: 15,
+          speed: 500,
+          autoplay: true,
+          grabCursor: true,
+          navigation: {
+            nextEl: obj.find('.swiper-button-next'),
+            prevEl: obj.find('.swiper-button-prev'),
+          },
+          scrollbar: {
+            el: obj.find('.swiper-scrollbar'),
+            hide: false,
+          },
+          pagination: {
+            el: obj.find('.swiper-pagination'),
+            type: 'fraction',
+          }
+        };
+        var pdtSlide = isMobile
+                ? new Swiper(obj, moOpt)
+                : new Swiper(obj, pcOpt);
+
+        reloadSlide(pdtSlide, pcOpt, moOpt);
+      })();
     </script>
 
     <!-- //SCRIPT -->
