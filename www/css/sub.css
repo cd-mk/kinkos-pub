@@ -2050,10 +2050,18 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_list .pdt_thumb .img img {display:block;width:100%;}
 .pdt_list .pdt_thumb .thumb_flag {position:absolute; top:0; right:21px; height:65px;width:65px;background:#5b5b5b url(../image/mall/product/thumb-flag-quick.png) no-repeat 50% 50%/cover;}
 .pdt_list .pdt_thumb:hover .thumb_flag {background-color:#03a2ea;}
+.pdt_list .pdt_thumb .tag {position:absolute; top:15px; left:15px; width:25%; max-width:70px; height:25%; max-height:70px; margin:0; padding:0; background-repeat:no-repeat; background-position:center; background-size:100% auto;}
+.pdt_list .pdt_thumb .tag.speed {background-image:url(../image/mall/main/ico_pdt_tag_speed_pc.png);}
+.pdt_list .pdt_thumb .tag.event {background-image:url(../image/mall/main/ico_pdt_tag_event_pc.png);}
+.pdt_list .pdt_thumb .tag.new {background-image:url(../image/mall/main/ico_pdt_tag_new_pc.png);}
+.pdt_list .pdt_thumb .tag.best {background-image:url(../image/mall/main/ico_pdt_tag_best_pc.png);}
+.pdt_list .pdt_thumb .tag.sale {background-image:url(../image/mall/main/ico_pdt_tag_sale_pc.png);}
 .pdt_list .item_info{line-height:1.3;}
 .pdt_list .item_info .title {font-size:20px;font-weight:700;margin-top:20px;display:block;}
 .pdt_list .item_info .desc {display:block; min-height:40px; font-size :16px; line-height:20px; margin-top:10px; color:#222222;}
 .pdt_list .item_info .price {display:block; margin-top:30px;}
+
+.pdt_list .page_navi {margin-top:10px;}
 
 .search_result .no_search_result {display:block; width:100%; padding:50px 0; font-size:18px; font-weight:normal; line-heigt:18px; color:#222222; text-align:center;}
 
@@ -2070,6 +2078,15 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .pdt_list .inner .item_list {padding-right:15px;margin-top:25px;width:100%;margin-left:0;}
   .pdt_list .inner .item_list li {width:50%; padding-left:15px; margin-bottom:40px; float:left;margin-right:0;}
   .pdt_list .inner .item_list li:nth-child(2n)::before {content:"";display:block;}
+
+  .pdt_list .pdt_thumb .tag {top:4vw; left:4vw; width:20%; max-width:93px; min-width:40px; height:20%; max-height:93px; min-height:40px;}
+  .pdt_list .pdt_thumb .tag.speed {background-image:url(../image/mall/main/ico_pdt_tag_speed_mo.png);}
+  .pdt_list .pdt_thumb .tag.event {background-image:url(../image/mall/main/ico_pdt_tag_event_mo.png);}
+  .pdt_list .pdt_thumb .tag.new {background-image:url(../image/mall/main/ico_pdt_tag_new_mo.png);}
+  .pdt_list .pdt_thumb .tag.best {background-image:url(../image/mall/main/ico_pdt_tag_best_mo.png);}
+  .pdt_list .pdt_thumb .tag.sale {background-image:url(../image/mall/main/ico_pdt_tag_sale_mo.png);}
+
+
   .choice-option {padding:0 15px;}
   .pdt_list .choice-option {width:96%; margin:0 2%; padding:40px 0 20px 0; box-sizing:border-box;}
   .pdt_list .choice-option .selectbox {display:flex; align-items:center; justify-content:center;}
