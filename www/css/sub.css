@@ -4028,7 +4028,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 }
 
 /* 디자인템플릿 */
-.design_tm .page_tab.sub_type1.sort ul > li {flex:0 0 calc(100% / 8); width:calc(100% / 8);}
+.design_tm .page_tab.sub_type1.sort ul > li {flex:0 0 12.5% !important; width:12.5% !important;}
 .design_tm .photo_list.pop {border-top:0;}
 .design_tm .photo_list .txt_box h4 {font-weight:400;margin-top:3px;}
 .design_tm .btn_modify::before {content: ''; display:inline-block; width:1px; height:20px;background:#dedede;margin-right:10px;margin-left:10px;vertical-align: middle;} 
