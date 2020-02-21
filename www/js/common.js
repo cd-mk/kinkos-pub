@@ -11,7 +11,7 @@ function chkViewport() {
   var winW = $(window).outerWidth();
   var viewport = winW + scrollW;
 
-  return viewport <= 1024 ? true : false;
+  return viewport <= 980 ? true : false;
 }
 // 리사이즈 이벤트에 따른 슬라이드 리로드
 function reloadSlide(slideTarget, pcOpt, moOpt) {

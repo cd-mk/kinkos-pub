@@ -7,27 +7,27 @@
   font-family:'Noto Sans KR';
   font-style:normal;
   font-weight:400;
-  src:url(../font/NotoSansKR-Regular.woff2) format('woff2'),
-  url(../font/NotoSansKR-Regular.woff) format('woff'),
+  src:url(/font/NotoSansKR-Regular.woff2) format('woff2'),
+  url(/font/NotoSansKR-Regular.woff) format('woff'),
 
  
-  url(../font/NotoSansKR-Regular.otf) format('opentype');
+  url(/font/NotoSansKR-Regular.otf) format('opentype');
 }
 @font-face {
   font-family:'Noto Sans KR';
   font-style:normal;
   font-weight:500;
-  src:url(../font/NotoSansKR-Medium.woff2) format('woff2'),
-  url(../font/NotoSansKR-Medium.woff) format('woff'),
-  url(../font/NotoSansKR-Medium.otf) format('opentype');
+  src:url(/font/NotoSansKR-Medium.woff2) format('woff2'),
+  url(/font/NotoSansKR-Medium.woff) format('woff'),
+  url(/font/NotoSansKR-Medium.otf) format('opentype');
 }
 @font-face {
   font-family:'Noto Sans KR';
   font-style:normal;
   font-weight:700;
-  src:url(../font/NotoSansKR-Bold.woff2) format('woff2'),
-  url(../font/NotoSansKR-Bold.woff) format('woff'),
-  url(../font/NotoSansKR-Bold.otf) format('opentype');
+  src:url(/font/NotoSansKR-Bold.woff2) format('woff2'),
+  url(/font/NotoSansKR-Bold.woff) format('woff'),
+  url(/font/NotoSansKR-Bold.otf) format('opentype');
 }
 
 /* ---------------------
@@ -60,7 +60,7 @@ footer, header, hgroup, menu, nav, section {
 display:block;
 }
 body {font-family:'Noto Sans KR'; font-size:18px; line-height:1; font-weight:400;color:#222;}
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  body {font-size:14px}
 }
 
@@ -489,11 +489,11 @@ p+.btn_wrap {margin-top:40px !important;}
 
 
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
   .new_update::after {width:16px; height:16px; font-size:10px; right:-22px;}
 
   .mall .header_wrap .nav {height:60px; text-align:left; padding-left:2.73%; background:#03a2ea; box-sizing:border-box;}
-  .mall .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:18px; font-weight:500; color:#fff;}
+  .mall .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:18px; font-weight:500; color:#fff; width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
   .mall.is-main .header_wrap .nav .btn_back {display:none;}
   .mall.is-main .header_wrap .nav .logo {display:inline-block;}
   .mall .header_wrap .nav .btn_back:before {content:""; display:inline-block; width:9px; height:16px; margin-top:-4px; margin-right:21px; background:url("../image/common/arr-mo-gnb-white.png") 50% 50% no-repeat; background-size:cover; vertical-align:middle; text-indent:-99999px;}
@@ -513,7 +513,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .mall .header_wrap .nav.mall {display:block;}
 
   .company .header_wrap .nav {height:60px; text-align:left; padding-left:2.73%; border-bottom:1px solid #e7e7e7; box-sizing:border-box;}
-  .company .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:18px; font-weight:500; color:#000;}
+  .company .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:18px; font-weight:500; color:#000; width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
   .company.is-main .header_wrap .nav .btn_back {display:none;}
   .company.is-main .header_wrap .nav .logo {display:inline-block;}
   .company .header_wrap .nav .btn_back:before {content:''; display:inline-block; width:9px; height:16px; margin-top:-4px; margin-right:21px; background:url("../image/common/arr-mo-gnb-back.png") 50% 50% no-repeat; background-size:cover; vertical-align:middle; text-indent:-99999px;}
@@ -714,7 +714,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .sidebar .snb {left:15px;}
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
 .sidebar .snb {display:none;}
 .sidebar {padding:0 15px;margin-top:0;}
 .cont_wrap.sidebar {padding-left: 15px;}
@@ -763,7 +763,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 .popup_wrap.shipping_select .inner {width:1010px;}
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:9999;}
  .popup_wrap .inner {position:absolute; left:0; top:0; width:100% !important;height:100% !important;transform:none !important;}
  .popup_wrap.sch .inner {padding:0 15px; background:#03a2ea;}
@@ -795,7 +795,7 @@ p+.btn_wrap {margin-top:40px !important;}
  .sch_wrap {font-size:18px}
  
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .sch_wrap {top:-30px;padding:0;background:#fff;border-top:1px solid #e6e6e6;height:auto;margin:0 15px;}
  .sch_wrap .item_box {padding:0 15px;width:50% !important;height:60px;line-height:60px;border-right:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}
  .sch_wrap .item_box > strong {line-height:60px;display:block;font-size:16px;}
@@ -833,7 +833,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .sch_wrap + .breadcrumb_wrap {top:0;margin:0 15px;}
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .breadcrumb_wrap {display:none;font-size:16px;max-width:100%;margin:20px auto 18px;}
  .breadcrumb_wrap .home {width:23px;height:23px;margin-top:2px;}
  .breadcrumb_wrap .home:after {background-size:23px;width:23px;height:23px;}
@@ -865,7 +865,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .mall .visual_wrap .swiper-pagination-bullet-active {opacity:1; background:#fff; width:38px; border-radius:25px;}
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
 }
 
 @media screen and (max-width:1600px) {
@@ -907,7 +907,7 @@ p+.btn_wrap {margin-top:40px !important;}
 	.company .visual_wrap .txt {width:100%}
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .company .visual_wrap .mo_object_fit_image {
   display: block;
   position: absolute;
@@ -1030,7 +1030,7 @@ body.open {overflow:hidden;}
 .swiper-pagination-total {color:#777;}
 .swiper-pagination-current {color:#222;font-weight:700;}
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .pg_nav_wrap {margin-top:30px !important;}
  .swiper-button-next {background-image:url(../image/common/next-mo.svg); right:20px; left:auto; width:21px; height:18px; background-size:21px;}
  .swiper-button-prev {background-image:url(../image/common/prev-mo.svg); left:20px; right:auto; width:21px; height:18px; background-size:21px;}
@@ -1058,7 +1058,7 @@ common mall
 .spinner .buttons .down:before {display:inline-block; width:42px; height:42px;line-height:42px; content:"─";border:1px solid #dedede;background:#fff;}
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .spinner {max-width:100%;}
 }
 
@@ -1086,7 +1086,7 @@ common mall
 #footer .footer_inner .mark {position:absolute; right:0; bottom:48px; font-size:14px; line-height:1.57; color:#999;font-size:14px;}
 #footer .footer_inner .mark em strong {font-weight:400;color:#222}
 #footer .footer_inner .mark em {margin-right:14px;color:#999;text-align: right;display: inline-block;vertical-align: middle;}
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1100px) {
  #footer {margin-top:80px;}
  #footer .footer_inner {padding:30px 0 20px;}
  #footer .footer_inner .pb {float:none; text-align:center;}
@@ -1123,7 +1123,7 @@ common mall
 
 .layout_width {max-width:1530px; margin:0 auto;}
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .layout_width {max-width:100%;}
 }
 
@@ -1133,7 +1133,7 @@ common mall
  --------------------- */
 
 /* common mobile */
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
  .layout_full {min-width:100%;}
  .mo {display:block !important;}
  .pc{display:none !important;}
@@ -1159,7 +1159,7 @@ common mall
 #popupzone.opened {height:120px;transition:linear 0.5s;position: relative;top:0}
 
 /* PC 버전 */
-body.fix_pc {min-width:1024px;}
+body.fix_pc {min-width:980px;}
 /* //PC 버전 */
 
 /* mall main */
@@ -1174,7 +1174,7 @@ body.fix_pc {min-width:1024px;}
 
 .mall.is-main .consultPrd_wrap .price {display:block;margin-top:15px;}
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
   .mall.is-main .consultPrd_wrap .price {display:block; margin-top:15px; padding-bottom:5px;}
 
   .mall.is-main .consultPrd_wrap .consult_slide .item_box .txt .price {display:flex !important; flex-direction:row; align-items:center; justify-content:flex-start; padding-bottom:5px;}
@@ -1189,3 +1189,12 @@ body.fix_pc {min-width:1024px;}
   .mall.is-main .price .tag img {width:50%; max-width:50%; height:auto;}
 }
 /* //mall main */
+/* 팝업레이어 */
+#hd_pop {z-index:9999;position:relative;margin:0 auto;width:970px;height:0}
+#hd_pop h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
+.hd_pops {position:absolute;border:1px solid #e9e9e9;background:#fff}
+.hd_pops_con { }
+.hd_pops_footer {padding:10px 0;background:#000;color:#fff;text-align:right}
+.hd_pops_footer button {margin-right:5px;padding:5px 10px;border:0;background:#393939;color:#fff}
+.hd_notice { min-width:300px; max-width:500px; margin:0 auto; }
+.hd_notice button { font-family:'Nanum Gothic','나눔 고딕',나눔고딕,NanumGothic,Malgun Gothic,'Malgun Gothic','맑은 고딕','Dotum' , sans-serif; }
