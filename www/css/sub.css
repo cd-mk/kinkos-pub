@@ -12,7 +12,7 @@ input[type="password"]::-ms-clear {display:none;}
 .cont_wrap {min-height:500px;max-width:1530px;margin:0 auto;}
 .cont_wrap.no_tit {padding-top:0;}
 
-.layout_width {max-width:1530px;margin:0 auto;}
+.layout_width {max-width:1530px;margin:0 auto;padding:0 15px;}
 .cont_wrap.layout_full {max-width:100%;}
 .cont_wrap.tab_area {padding-top:0;}
 .cont_wrap.no_pdt {padding-top:0 !important;}
