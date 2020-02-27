@@ -908,21 +908,12 @@ p+.btn_wrap {margin-top:40px !important;}
 }
 
 @media screen and (max-width:980px) {
- .company .visual_wrap .mo_object_fit_image {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
- }
+  .company .visual_wrap {max-height:500px;}
+  .company .visual_wrap .mo_object_fit_image {display:block; position:absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-repeat:no-repeat; background-position:center;}
 }
 
 @media screen and (max-width:768px) {
- .company .visual_wrap {height:calc(70*(1vw + 1vh - 1vmin));}
+ .company .visual_wrap {height:calc(70*(1vw + 1vh - 1vmin)); max-height:450px;}
  .company .visual_wrap .bg {height:100%;}
  .company .visual_wrap .txt {width:100%;left:50%;top:0;transform:translateX(-50%);}
  .company .visual_wrap .swiper-slide-active .txt {top:60px;}
