@@ -3815,7 +3815,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .mpg_main .recently_item .pdt_slide .item_info .title {font-size:18px;font-weight:700;line-height:28px;color:#222;}
 .mpg_main .recently_item .pdt_slide .item_info .desc {margin-top:8px;font-size:14px;line-height:20px;color:#222;}
 
-.mpg_main .my_activity  {width:100%;position:relative;padding-left:390px;}
+.mpg_main .my_activity  {width:100%;position:relative;}
 .mpg_main .my_activity .box {padding:30px;height:150px;}
 .mpg_main .my_activity .box h3 {padding-top:20px;}
 .mpg_main .my_activity .box p {font-weight:700;font-size:42px;padding-top:25px;}
@@ -4097,6 +4097,9 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .design_tm .txt_box {padding:15px 20px;}
 
 @media screen and (max-width:980px) {
+  .design_tm .page_tab.sub_type1.sort ul > li {flex:0 0 auto !important; width:100% !important;}
+  .design_tm .page_tab.sub_type1.sort ul > li.active a, .design_tm .page_tab.sub_type1.sort > ul > li a:hover {border-top:1px solid #e7e7e7;}
+
   .design_tm .txt_box {padding:15px 0;}
 }
 
