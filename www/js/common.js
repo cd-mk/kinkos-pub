@@ -165,8 +165,8 @@ var mobileGnb = function () {
   });
 
 
-  $('.menu_item .title').on('click', function () {
-    $(this).closest('.menu_item .title').toggleClass('active');
+  $('.menu_item .menu_item_more_btn').on('click', function () {
+    $(this).toggleClass('active');
     $(this).closest('.menu_item').find('.menu_list').slideToggle();
   });
 };
