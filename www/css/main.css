@@ -203,25 +203,6 @@
 
 }
 
-
-
-.quick_menu {position:fixed;right:-70px;top:328px;z-index:9999;transition:right .4s ease;}
-.quick_menu:hover {right:0;}
-.quick_menu>li {margin-top:1px;}
-.quick_menu>li>a {position:relative;display:block;padding:0 17px 0 50px;height:50px;color:#fff;background:#000;line-height:50px;font-size:14px;}
-.quick_menu>li>a:hover {background:rgba(0,117,194,0.85);}
-.quick_menu>li:first-child {margin-top:0;}
-.quick_menu>li:first-child a::before {content:'';position:absolute;left:0;top:0;width:50px;height:50px;background:url('../image/company/main/ico-quick01.png') no-repeat center;}
-.quick_menu>li:nth-child(2) a::before {content:'';position:absolute;left:0;top:0;width:50px;height:50px;background:url('../image/company/main/ico-quick02.png') no-repeat center;}
-.quick_menu>li:nth-child(3) a::before {content:'';position:absolute;left:0;top:0;width:50px;height:50px;background:url('../image/company/main/ico-quick03.png') no-repeat center;}
-.quick_menu>li:nth-child(4) a::before {content:'';position:absolute;left:0;top:0;width:50px;height:50px;background:url('../image/company/main/ico-quick04.png') no-repeat center;}
-
-@media screen and (max-width:980px) {
-	.quick_menu {display:none;}
-	.insta_wrap h2 {font-size:18px;}
-	.insta_wrap .swiper-slide {margin-top:30px;}
-}
-
 /*  ---------------------
         mall
  --------------------- */
