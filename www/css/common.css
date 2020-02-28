@@ -556,7 +556,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .mall .lnb_box .login_item .status_logout, .mall .lnb_box .login_item .status_login {color:#fff !important;}
   .mall .lnb_box .login_item a {color:#fffd9b;}
 
-  .mo_gnb_wrap.company .lnb_box .login_item .status_logout, .mall .lnb_box .login_item .status_login {color:#222;}
+  .mo_gnb_wrap.company .lnb_box .login_item .status_logout, .mall .lnb_box .login_item .status_login {color:#222 !important;}
   .mo_gnb_wrap.company .lnb_box .login_item a, .company .lnb_box .login_item .status_login strong {color:#03a2ea;}
 
   .mall .lnb_box .login_item .login_item_depth2 {background:#0079c6 !important;}
