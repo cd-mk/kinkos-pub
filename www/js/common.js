@@ -592,3 +592,32 @@ function clickshow(elem, ID) {
     menu.className = "opened";
   }
 }
+
+// 팝업존
+(function () {
+  function popupZoneSlide()
+  {
+    var opt = {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      centeredSlides: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: '#popupzone .swiper-button-next',
+        prevEl: '#popupzone .swiper-button-prev',
+      }
+    };
+
+    var popupZoneSlide = new Swiper('#popupzone', opt);
+
+    reloadSlide(popupZoneSlide, opt, opt);
+  }
+
+  $(window).on('load', function() {
+    if( $('#popupzone').length )
+    {
+      popupZoneSlide();
+    }
+  });
+})();
