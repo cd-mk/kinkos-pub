@@ -595,6 +595,9 @@ function clickshow(elem, ID) {
 
 // 팝업존
 (function () {
+  var popupZoneSlideSetObj = '';
+  var popupZoneSlideSetDelay = 200;
+
   function popupZoneSlide()
   {
     var opt = {
@@ -614,10 +617,21 @@ function clickshow(elem, ID) {
     reloadSlide(popupZoneSlide, opt, opt);
   }
 
-  $(window).on('load', function() {
+  function popupZoneSlideInit()
+  {
+    clearTimeout( popupZoneSlideSetObj );
+
     if( $('#popupzone').length )
     {
       popupZoneSlide();
     }
+    else
+    {
+      popupZoneSlideSetObj = setTimeout(function() { popupZoneSlideInit(); }, popupZoneSlideSetDelay);
+    }
+  }
+
+  $(document).ready(function() {
+    popupZoneSlideSetObj = setTimeout(function() { popupZoneSlideInit(); }, popupZoneSlideSetDelay);
   });
-})();
+})(window);
