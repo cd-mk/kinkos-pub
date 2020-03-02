@@ -1,0 +1,1225 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/data/_main/e03b7afb25e727d48987c6804423988a_15711901023876.ico">
+	<link rel="canonical" href="https://test.kinkos.co.kr" />
+	<meta name="keywords" content="컬러흑백출력,복사,제본,포스터,명함,스티커,홍보물,스캔서비스" />
+	<meta name="description" content="컬러출력,복사,인쇄,포스터,명함,제본,디자인,홍보물제작,문서스캔,스티커,사진인화,리플렛,브로슈어,제안서" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="킨코스코리아 | 컬러흑백출력, 제본, 포스터, 명함, 포트폴리오, 스캔" />
+	<meta property="og:description" content="킨코스는 빠르고 정확합니다." />
+	<meta property="og:image" content="https://test.kinkos.co.kr/images/191018_og_linkimg-02.jpg" />
+	<meta property="og:url" content="https://test.kinkos.co.kr"/>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="/data/_main/e03b7afb25e727d48987c6804423988a_15711901023876.ico">
+	<title>쿠폰 적용 회원 검색 | 킨코스코리아(주)</title>
+	<link rel="stylesheet" href="./css/jquery-ui.css">
+	<link rel="stylesheet" href="./css/admin.css">
+
+	<!--[if lte IE 8]>
+	<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="./js/html5.js"></script>
+	<![endif]-->
+	<script>
+      // 자바스크립트에서 사용하는 전역변수 선언
+      var g5_url       = "//test.kinkos.co.kr";
+      var g5_bbs_url   = "//test.kinkos.co.kr/bbs";
+      var g5_is_member = "1";
+      var g5_is_admin  = "super";
+      var g5_is_mobile = "";
+      var g5_bo_table  = "";
+      var g5_sca       = "";
+      var g5_editor    = "";
+      var g5_cookie_domain = "";
+      var g5_admin_url = "//test.kinkos.co.kr/adm_kinkos";
+      var mobile = /(mobile)/;
+
+	</script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="./js/jquery.menu.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/wrest.js"></script>
+
+	<script src="./js/ani_menu.js"></script>
+	<script src="./js/backgroundsize.js"></script>
+
+	<!-- s:제품확대보기 -->
+	<script src="./js/jquery.zoom.min.js"></script>
+	<!-- e:제품확대보기 -->
+	<script src="./js/lib/script/basic.js"></script>
+
+
+	<style type="text/css">
+		.ui-datepicker { font:12px dotum; }
+		.ui-datepicker select.ui-datepicker-month,
+		.ui-datepicker select.ui-datepicker-year { width: 70px; padding:0px; }
+		.ui-datepicker-trigger { margin:0 0 -5px 2px; }
+	</style>
+
+	<script type="text/javascript">
+      $(document).ready(function(){
+
+          if ($(".datepicker").length > 0) {
+              $(".datepicker").css("width", "100px");
+              $(".datepicker").datepicker(datepickerOption);
+              $(".datepicker").change(function () {
+                  if (!validate_date($(this).val())) {
+                      $(this).val("");
+                  }
+              });
+          }
+          // 제품확대보기
+          if ($('.zoom').length > 0) { $('.zoom').zoom(); }
+          /*
+					$('#ex1').zoom();
+					$('#ex2').zoom();
+					$('#ex3').zoom({ on:'click' });
+					$('#ex4').zoom({ on:'toggle' });
+					*/
+          $("#simg>div").css({backgroundSize: "cover"});
+
+          var title = "";
+          $(".nav").find("span").each(function() {
+              if(title!="") title = $(this).text() + " " + title;
+              else title = $(this).text();
+          });
+
+          if(title!="") title = title + " " + "상품검색 | 킨코스코리아(주)";
+          else title = "상품검색 | 킨코스코리아(주)";
+
+          if ('상품검색 | 킨코스코리아(주)' != title) {
+              document.title = title;
+              setTracker();
+          }
+
+          $(document).on("click", ".snslink", function() {
+              var url = $(this).prop('href');
+              document.title = title = $(this).html();
+
+              setTracker();
+          });
+
+          /*
+					$(document).on("mouseover", "#header ul.gnb", function() {
+						$("select[name=lcode],select[name=ocode],select[name=scode]").hide();
+					});
+
+					$(document).on("mouseout", "#header ul.gnb", function() {
+						$("select[name=lcode],select[name=ocode],select[name=scode]").show();
+					});
+					*/
+
+          $(document).on("keyup blur", "input:text[numberOnly]", function() {
+              var num_check=/^[0-9]*$/;
+              if(!num_check.test($(this).val())) $(this).val( $(this).val().replace(/[^0-9]/gi,"") );
+          });
+      });
+
+	</script>
+
+	<!-- Piwik -->
+	<!--
+	<script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.www.kinkos.co.kr"]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+          var u="//sites.kinkos.co.kr/";
+          _paq.push(['setTrackerUrl', u+'piwik.php']);
+          _paq.push(['setSiteId', 1]);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+	</script>
+	<noscript><p><img src="//sites.kinkos.co.kr/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+	-->
+	<!-- End Piwik Code -->
+
+	<!-- google analytics code -->
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-74244721-1', 'auto');
+      ga('send', 'pageview');
+	</script>
+	<!-- end google analytics code -->
+
+
+</head>
+<body class="" id="bodyTag">
+
+<div id="sch_target_frm" class="new_win scp_new_win">
+	<h1>쿠폰 적용 회원 검색</h1>
+
+	<form name="ftarget" method="get">
+		<input type="hidden" name="sch_target" value="0">
+
+		<div id="scp_list_find">
+			<select name="sfl" id="sfl">
+				<option value="">회원아이디</option>
+				<option value="">회원이름</option>
+			</select>
+			<input type="text" name="sch_word" id="sch_word" value="" class="frm_input required" required size="20">
+			<input type="submit" value="검색" class="btn_frmline">
+		</div>
+
+		<div class="tbl_head01 tbl_wrap">
+			<table>
+				<colgroup>
+					<col width="45%" />
+					<col width="*" />
+					<col width="45%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td class="border_none member_list">
+							<div class="tbl_head01_child">
+								<table class="tbl_wrap_child">
+									<caption>검색결과</caption>
+									<colgroup>
+										<col width="*" />
+										<col width="45%" />
+										<col width="45%" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">
+											<label for="chkall" class="sound_only">회원 전체</label>
+											<input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all2(this);" />
+										</th>
+										<th scope="col">회원이름</th>
+										<th scope="col">회원아이디</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- loop -->
+
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<!--// loop -->
+
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<nav class="pg_wrap">
+								<span class="pg">
+									<a href="?sch_target=0&amp;sch_word=&amp;page=11" class="pg_page pg_first">처음</a>
+									<span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=4" class="pg_page">4<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=5" class="pg_page">5<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=6" class="pg_page">6<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=7" class="pg_page">7<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=8" class="pg_page">8<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=9" class="pg_page">9<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=10" class="pg_page">10<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=13" class="pg_page pg_end">맨끝</a>
+								</span>
+							</nav>
+						</td>
+						<td class="border_none">
+							<div class="tbl_head01_child_btn_list">
+								<p><button type="button" class="btn btn-select">선택</button></p>
+								<p><button type="button" class="btn btn-delete">삭제</button></p>
+							</div>
+						</td>
+						<td class="border_none">
+							<div class="tbl_head01_child">
+								<table class="tbl_wrap_child">
+									<caption>검색결과</caption>
+									<colgroup>
+										<col width="*" />
+										<col width="45%" />
+										<col width="45%" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">
+											<label for="chkall" class="sound_only">회원 전체</label>
+											<input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all2(this);" />
+										</th>
+										<th scope="col">회원이름</th>
+										<th scope="col">회원아이디</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- loop -->
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<!--// loop -->
+
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									<tr>
+										<td class="td_chk">
+											<input type="hidden" name="mb_id[0]" value="" id="mb_id_0" />
+											<label for="chk_0" class="sound_only"></label>
+											<input type="checkbox" name="chk[]" value="0" id="chk_0" />
+										</td>
+										<td class="text_center">박*검</td>
+										<td class="text_center">Bogyeom****</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<nav class="pg_wrap">
+								<span class="pg">
+									<a href="?sch_target=0&amp;sch_word=&amp;page=11" class="pg_page pg_first">처음</a>
+									<span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=4" class="pg_page">4<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=5" class="pg_page">5<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=6" class="pg_page">6<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=7" class="pg_page">7<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=8" class="pg_page">8<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=9" class="pg_page">9<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=10" class="pg_page">10<span class="sound_only">페이지</span></a>
+									<a href="?sch_target=0&amp;sch_word=&amp;page=13" class="pg_page pg_end">맨끝</a>
+								</span>
+							</nav>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+
+	<div class="btn_confirm01 btn_confirm">
+		<input type="submit" class="btn_submit" value="저장" />
+		<button type="button" onclick="window.close();">닫기</button>
+	</div>
+</div>
+
+<script>
+    function sel_target_id(id)
+    {
+        var f = window.opener.document.fcouponform;
+        f.cp_target.value = id;
+
+        window.close();
+    }
+</script>
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+	$(function() {
+		var $sv_use = $(".sv_use");
+		var count = $sv_use.length;
+
+		$sv_use.each(function() {
+			$(this).css("z-index", count);
+			$(this).css("position", "relative");
+			count = count - 1;
+		});
+	});
+</script>
+<![endif]-->
+</body>
+</html>

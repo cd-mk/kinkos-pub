@@ -286,6 +286,14 @@ tfoot td {font-weight:bold;text-align:center}
 .tbl_head01 thead a {color:#383838;text-decoration:underline}
 .tbl_head01 tbody th {}
 .tbl_head01 tbody td {padding:10px 5px;line-height:1.4em;word-break:break-all}
+.tbl_head01 tbody td.border_none {border:0;}
+.tbl_head01 tbody td .tbl_head01_child {height:500px;overflow-x:hidden;overflow-y:scroll;}
+.tbl_head01 tbody td .tbl_head01_child table tbody td {border:1px solid #dadada;border-top:0;}
+.tbl_head01 tbody td .tbl_head01_child table tbody td.text_center {text-align:center;}
+.tbl_head01 tbody td .tbl_head01_child_btn_list {text-align:center;}
+.tbl_head01 tbody td .tbl_head01_child_btn_list .btn {display:inline-block;margin:0;padding:10px;border:1px solid #ccc;background:#fafafa;text-decoration:none;cursor:pointer;height:37px;}
+.tbl_head01 tbody td .tbl_head01_child_btn_list .btn-select {color:#fff;border:1px solid #3b5998;background:#3b5998 !important;}
+.tbl_head01 tbody td .tbl_head01_child_btn_list .btn-delete {color:#3b5998;border:1px solid #3b5998;background:#fff !important;}
 
 /* thead 두 줄 테이블 */
 .tbl_head02 {}
