@@ -1167,7 +1167,8 @@ body.fix_pc {min-width:980px;}
 /* mall main */
 .mall.is-main .price {position:relative;}
 .mall.is-main .price .tag {display:none;}
-.mall.is-main .price.tag::after {content:""; display:inline-block; position:absolute; top:-2px; margin:0 0 0 8px; padding:0; background-repeat:no-repeat; background-position:center; background-size:100% auto;}
+.mall.is-main .price.tag {padding-right:55px;}
+.mall.is-main .price.tag::after {content:""; display:inline-block; position:absolute; top:-2px; right:0; margin:0 0 0 8px; padding:0; background-repeat:no-repeat; background-position:center; background-size:100% auto;}
 .mall.is-main .price.tag.speed::after {width:43px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_speed_pc.png);}
 .mall.is-main .price.tag.event::after {width:51px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_event_pc.png);}
 .mall.is-main .price.tag.new::after {width:40px; height:25px; background-image:url(../image/mall/main/ico_main_pdt_tag_new_pc.png);}
