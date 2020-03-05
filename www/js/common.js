@@ -289,23 +289,38 @@ var popupSizeInit = function( obj ) {
 
 // layer popup
 var setPopup = function () {
-  $('.btn_popup').on('click', function () {
-    var popupTarget = $(this).attr('href').slice(1);
-    var popupTargetObj = $('#' + popupTarget);
+  $('.btn_popup').on('click', function (e) {
+    var obj = $(this);
+    var targetType = obj.attr('data-target-type');
 
-    if( popupTargetObj.length )
+    if( targetType === 'window_popup' )
     {
-      $('body').addClass('open');
-      $("#" + popupTarget + "").addClass('active');
+      e.preventDefault();
 
-      popupSizeInit( popupTargetObj );
+      var href = obj.attr('href');
+      var windowPopupWidth = obj.attr('data-window-width');
+      var windowPopupHeight = obj.attr('data-window-height');
+      var windowPopup = window.open(href, 'windowPopup', 'width=' + windowPopupWidth + ',height=' + windowPopupHeight + ',resizable=1,scrollbars=0');
+    }
+    else
+    {
+      var popupTarget = $(this).attr('href').slice(1);
+      var popupTargetObj = $('#' + popupTarget);
 
-      if( !$('.dim_layer').length )
+      if( popupTargetObj.length )
       {
-        $('#content').append('<div class="dim_layer"></div>');
-      }
+        $('body').addClass('open');
+        $("#" + popupTarget + "").addClass('active');
 
-      $('.dim_layer').show();
+        popupSizeInit( popupTargetObj );
+
+        if( !$('.dim_layer').length )
+        {
+          $('#content').append('<div class="dim_layer"></div>');
+        }
+
+        $('.dim_layer').show();
+      }
     }
   });
 

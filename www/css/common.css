@@ -768,6 +768,10 @@ p+.btn_wrap {margin-top:40px !important;}
 
 .popup_wrap.shipping_select .inner {width:1010px;}
 
+html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-popup="Y"] body #wrap {width:100%; height:100%;}
+.pop_sian_view.has_window_popup {display:block; width:100%; height:100%; overflow-x:hidden; overflow-y:scroll;}
+.pop_sian_view.has_window_popup .inner .title {font-size:24px; font-weight:700; color:#fff; background:#03a2ea; padding:40px 60px;}
+
 @media screen and (max-width:980px) {
  .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:9999;}
  .popup_wrap .inner {position:absolute; left:0; top:0; width:100% !important;height:100% !important;transform:none !important;}
