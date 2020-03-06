@@ -282,6 +282,42 @@
                     </div>
                     <!-- //요청사항 -->
 
+                    <!-- @2020.03.06 쿠폰 사용 추가 -->
+                    <div class="form_item coupon_use">
+                      <strong class="form_name">쿠폰사용</strong>
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio1" name="radio_dummy" />
+                        <label for="radio1">
+                          <span>[정액할인]명함 100매 5,000원 할인</span>
+                          <span>20,000원 이상 구매</span>
+                        </label>
+                      </div>
+
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio2" name="radio_dummy" disabled="disabled" />
+                        <label for="radio2">
+                          <span>[정액할인]명함 100매 5,000원 할인 (다른 상품에 사용 중)</span>
+                          <span>20,000원 이상 구매</span>
+                        </label>
+                      </div>
+
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio3" name="radio_dummy" />
+                        <label for="radio3">
+                          <span>[정액할인]명함 100매 5,000원 할인</span>
+                          <span>20,000원 이상 구매</span>
+                        </label>
+                      </div>
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio4" name="radio_dummy" />
+                        <label for="radio4">
+                          <span>사용 안함</span>
+                        </label>
+                      </div>
+                      <p class="right desc">※ 쿠폰은 중복하여 사용할 수 없습니다.</p>
+                    </div>
+                    <!-- //@2020.03.06 쿠폰 사용 추가 -->
+
                     <!-- 수량 -->
                     <div class="form_item num">
                       <strong class="form_name">수량/상품금액</strong>
@@ -373,6 +409,42 @@
                     </div>
                     <!-- //요청사항 -->
 
+                    <!-- @2020.03.06 쿠폰 사용 추가 -->
+                    <div class="form_item coupon_use">
+                      <strong class="form_name">쿠폰사용</strong>
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio2_1" name="radio_dummy_2" />
+                        <label for="radio2_1">
+                          <span>[정액할인]명함 100매 5,000원 할인</span>
+                          <span>20,000원 이상 구매</span>
+                        </label>
+                      </div>
+
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio2_2" name="radio_dummy_2" disabled="disabled" />
+                        <label for="radio2_2">
+                          <span>[정액할인]명함 100매 5,000원 할인 (다른 상품에 사용 중)</span>
+                          <span>20,000원 이상 구매</span>
+                        </label>
+                      </div>
+
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio2_3" name="radio_dummy_2" />
+                        <label for="radio2_3">
+                          <span>[정액할인]명함 100매 5,000원 할인</span>
+                          <span>20,000원 이상 구매</span>
+                        </label>
+                      </div>
+                      <div class="form_inp right_radio">
+                        <input type="radio" id="radio2_4" name="radio_dummy_2" />
+                        <label for="radio2_4">
+                          <span>사용 안함</span>
+                        </label>
+                      </div>
+                      <p class="right desc">※ 쿠폰은 중복하여 사용할 수 없습니다.</p>
+                    </div>
+                    <!-- //@2020.03.06 쿠폰 사용 추가 -->
+
                     <!-- 수량 -->
                     <div class="form_item num">
                       <strong class="form_name">수량/상품금액</strong>
@@ -396,17 +468,34 @@
                 <div class="right"><strong>20,000</strong>원</div>
               </div>
 
+              <!-- @2020.03.06 수정 -->
               <!-- 총 상품 금액 -->
               <div class="price_total">
                 <dl>
-                  <dt>총 금액 <span>(VAT 포함)</span></dt>
+                  <dt>
+                    <span><strong>총 상품 금액</strong></span>&nbsp;<span class="price_total_dt_vat">(VAT 포함)</span></dt>
                   <dd>
-                    총 수량 2개 
-                    <strong>30,000<em>원</em></strong>
+                    <span>총 수량 2개</span>
+                    <span>60,000<em>원</em></span>
                   </dd>
                 </dl>
               </div>
               <!-- 총 상품 금액 -->
+              <!-- //@2020.03.06 수정 -->
+
+              <!-- @2020.03.06 추가 -->
+              <!-- 결제 예상 금액 -->
+              <div class="estimated_payment_price">
+                <dl>
+                  <dt><span><strong>결제 예상 금액</strong></span>&nbsp;<span class="price_total_dt_vat">(VAT 포함)</span></dt>
+                  <dd>
+                    <span>총 수량 2개</span>
+                    <span><strong>40,000<em>원</em></strong></span>
+                  </dd>
+                </dl>
+              </div>
+              <!-- //결제 예상 금액 -->
+              <!-- //@2020.03.06 추가 -->
             
          
               <!--btn area 일반-->
@@ -1179,18 +1268,18 @@
   <!-- //global -->
 
   <script src="../js/sub.js"></script>
+
   <!-- 수량 -->
-    <script src="../js/jquery.numspinner.min.js"></script>
+  <script src="../js/jquery.numspinner.min.js"></script>
+
   <script type="text/javascript">
     $(".dtl_num").numSpinner({ min: 1, max: 100, step: 1, value: 1 });
-    
+
+    // 퍼블리싱용
+    $(document).ready(function() {
+      mallSubPageTitle('굿즈 토퍼 4종');
+    });
   </script>
-
-
-  
   <!-- //SCRIPT -->
-
-
 </body>
-
 </html>
