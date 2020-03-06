@@ -499,9 +499,12 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .photo_list.pop.gallery li a {display:block; width:100%; height:100%; cursor:pointer;}
 .photo_list.pop.gallery li a .img_box {display:block; position:relative; width:100%; height:100%; max-height:250px; overflow:hidden;}
 .photo_list.pop.gallery li a .img_box img {display:block; position:relative; top:50%; width:100%; height:auto; object-fit:cover; transform:translateY(-50%);}
-.photo_list.pop.gallery li .txt_box {display:block; width:100%; height:auto; text-align:center;}
-.photo_list.pop.gallery li .txt_box .chk_modi_box {display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:auto;}
+.photo_list.pop.gallery li .txt_box {display:block; width:100%; height:auto; padding:15px 20px; text-align:center;}
+.photo_list.pop.gallery li .txt_box .chk_modi_box {display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:auto; overflow:hidden;}
 .photo_list.pop.gallery li .txt_box .chk_modi_box a {width:auto;}
+.photo_list.pop.gallery li .txt_box .chk_modi_box a.ico.btn_modify::before {content:''; display:inline-block; width:1px; height:20px; background:#dedede; margin-right:10px; margin-left:10px; vertical-align:middle;}
+.photo_list.pop.gallery li .txt_box .chk_modi_box a.ico.btn_modify::after {content:''; display:inline-block; width:20px; height:20px; margin:5px; background:url(../image/common/ico-modify.png) 50% 50% no-repeat; background-size:cover; vertical-align:middle; text-indent:-99999px;}
+.photo_list.pop.gallery li .txt_box h4 {font-weight:400; margin-top:3px;}
 
 @media screen and (max-width:980px) {
   .photo_list.pop.gallery li {flex:0 1 calc(50% - 8px); width:calc(50% - 8px); margin-top:15px;}
@@ -2167,6 +2170,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_info_wrap .opt_size .int_opt li strong {display: inline-block;width:50px;text-align:left;font-weight: 400;}
 .pdt_info_wrap .opt_size .int_opt li input {width:calc(100% - 131px)}
 .pdt_info_wrap .form_group .form_item {padding-left:125px;position:relative;margin-bottom:20px;}
+.pdt_info_wrap .form_group .form_item.coupon_use .form_inp p {}
 .pdt_thumbs {margin-top:30px;padding:0 30px;position:relative;}
 .pdt_thumbs .swiper-slide {vertical-align:middle;height:100px;width:100px;}
 .pdt_thumbs .swiper-slide img {width:100px;position:absolute;top:50%; transform:translateY(-50%);border: 1px solid #dedede;}
