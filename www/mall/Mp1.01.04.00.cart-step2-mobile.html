@@ -75,6 +75,7 @@
           <div class="section mid basket_list confirm">
             <h3 class="title">주문상품 확인</h3>
 
+            <!-- loop -->
             <div class="box basket_list_item">
               <div class="box_item">
                 <div class="pdt_info">
@@ -128,10 +129,13 @@
                 <div class="pdt_price_info">
                   <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
                   <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
-                  <div class="pdt_sale_price"><span>판매금액</span><span><strong>9,000,000</strong>원</span></div>
+                  <!-- @2020.03.06 쿠폰할인 추가 -->
+                  <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
+                  <div class="pdt_sale_price"><span>판매금액</span><span><strong>8,995,000</strong>원</span></div>
                 </div>
               </div>
             </div>
+            <!--// loop -->
 
             <div class="box basket_list_item">
               <div class="box_item">
@@ -183,9 +187,10 @@
               </div>
               <div class="box_item">
                 <div class="pdt_price_info">
-                  <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
-                  <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
-                  <div class="pdt_sale_price"><span>판매금액</span><span><strong>9,000,000</strong>원</span></div>
+                  <div class="pdt_price"><span>상품금액</span><span>100,000원</span></div>
+                  <div class="pdt_discount"><span>할인금액</span><span>10,000원</span></div>
+                  <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
+                  <div class="pdt_sale_price"><span>판매금액</span><span><strong>85,000</strong>원</span></div>
                 </div>
               </div>
             </div>
@@ -356,7 +361,7 @@
                   <div class="box child">
                     <div class="box_item">
                       <span class="label">총 상품금액</span>
-                      <span class="price"><strong>298,000</strong>원</span>
+                      <span class="price"><strong>10,100,000</strong>원</span>
                     </div>
                     <!--
                       <div class="box_item"> 에
@@ -365,7 +370,12 @@
                     -->
                     <div class="box_item mo_minus">
                       <span class="label">총 할인금액</span>
-                      <span class="price"><strong>100,000</strong>원</span>
+                      <span class="price"><strong>1,010,000</strong>원</span>
+                    </div>
+                    <!-- @2020.03.06 쿠폰할인 추가 -->
+                    <div class="box_item mo_minus">
+                      <span class="label">쿠폰할인</span>
+                      <span class="price"><span class="font_weight_bold">10,000</span>원</span>
                     </div>
                     <div class="box_item mo_plus">
                       <span class="label">배송비</span>
@@ -377,7 +387,7 @@
                     </div>
                     <div class="box_item total">
                       <span class="label">예상 결제금액</span>
-                      <span class="price"><strong>303,000</strong>원</span>
+                      <span class="price"><strong>9,085,000</strong>원</span>
                     </div>
                   </div>
                 </div>

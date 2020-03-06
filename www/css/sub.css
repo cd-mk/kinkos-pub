@@ -2793,6 +2793,7 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap.pc .basket_list_pc .pdt_price_info > div:nth-child(1) {margin-top:0; padding-top:0;}
 .cart_wrap.pc .basket_list_pc .pdt_price_info .pdt_price {color:#777777;}
 .cart_wrap.pc .basket_list_pc .pdt_price_info .pdt_discount {color:#777777;}
+.cart_wrap.pc .basket_list_pc .pdt_price_info .pdt_coupon_discount {color:#ed6c16;}
 .cart_wrap.pc .basket_list_pc .pdt_price_info .pdt_sale_price {}
 
 .cart_wrap.pc .basket_list_pc .pdt_price_info > div span {float:left; width:auto; line-height:28px; text-align:left; word-break:keep-all; box-sizing:border-box;}
@@ -3095,6 +3096,7 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 .cart_wrap.mo .basket_list_item .pdt_price_info > div:nth-child(1) {margin-top:0;}
 .cart_wrap.mo .basket_list_item .pdt_price_info .pdt_price {color:#777;}
 .cart_wrap.mo .basket_list_item .pdt_price_info .pdt_discount {color:#777;}
+.cart_wrap.mo .basket_list_item .pdt_price_info .pdt_coupon_discount {color:#ed6c16;}
 .cart_wrap.mo .basket_list_item .pdt_price_info .pdt_sale_price {color:#222;}
 .cart_wrap.mo .basket_list_item .pdt_price_info > div span {float:right;}
 .cart_wrap.mo .basket_list_item .pdt_price_info > div span:nth-child(1) {float:left;}
