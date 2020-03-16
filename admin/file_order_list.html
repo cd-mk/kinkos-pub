@@ -1,0 +1,746 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="title" content="회원관리 | 킨코스코리아(주)" />
+	<meta name="description" id="meta_description" content="회원관리 | 킨코스코리아(주)" />
+	<meta name="keywords" content="복사,인쇄,포스터,제본,킨코스" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="/data/_main/95bd29f4b4955d26f838b3e06bcf4dc8_14482417672292.ico">
+	<title>킨코스코리아 | 컬러흑백출력, 제본, 포스터, 명함, 포트폴리오, 스캔</title>
+	<link rel="stylesheet" href="./css/jquery-ui.css">
+	<link rel="stylesheet" href="./css/admin.css">
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/jquery.menu.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/lib/script/basic.js"></script>
+
+	<!-- @2020.03.13 css 추가 -->
+	<style type="text/css">
+		.ui-datepicker { font:12px dotum; }
+		.ui-datepicker select.ui-datepicker-month,
+		.ui-datepicker select.ui-datepicker-year { width: 70px; padding:0px; }
+		.ui-datepicker-trigger { margin:0 0 -5px 2px; }
+
+		ul.anchor.type_02 { display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start; width:calc(100% - 40px); height:auto; margin:0 20px 10px 20px; padding:0; }
+		ul.anchor.type_02 li { flex:0 0 calc(20% - 10px); margin:0 0 0 10px; border-top:1px solid #cacaca; border-bottom:1px solid #dadada; box-sizing:border-box; }
+		ul.anchor.type_02 li:nth-child(5n+1) { margin-left:0; }
+		ul.anchor.type_02 li a { position:relative; display:inline-block; width:100%; height:auto; margin:0; padding:5px 10px; font-size:1.2em; font-weight:700; line-height:100%; cursor:default; border:0; box-sizing:border-box; background:none; text-decoration:none; }
+		ul.anchor.type_02 li a span { position:absolute; top:50%; right:10px; text-decoration:underline; transform:translateY(-50%); }
+		ul.anchor.type_02 li p { display:block; width:100%; height:auto; min-height:20px; margin:0; padding:5px 10px; font-size:0.9em; line-height:1.2em; letter-spacing:-1px; box-sizing:border-box; }
+		ul.anchor.type_02 li.active p { background:#b4f1fe; }
+
+		.file_order_list table td { text-align:center; }
+		.file_order_list table td a { text-decoration:underline; }
+		.file_order_list table td .file_list_btn { display:inline-block; width:auto; height:27px; margin:0; padding:0 5px; font-size:0.95em; line-height:27px; color:#fff; text-decoration:none; border:0; box-sizing:border-box; vertical-align:middle; cursor:pointer; }
+		.file_order_list table td .file_list_btn.receipt { background:#3b5998 !important; }
+		.file_order_list table td .file_list_btn.template_request { background:#0096e0 !important; }
+		.file_order_list table td .file_list_btn.order_complete { background:#ff575a !important; }
+	</style>
+	<!--// @2020.03.13 css 추가 -->
+</head>
+<body>
+
+<div id="to_content"><a href="#container">본문 바로가기</a></div>
+
+<header id="hd">
+	<div id="hd_wrap">
+		<h1>킨코스코리아(주)</h1>
+
+		<div id="logo"><a href="00.main-admin.html"><img src="./image/logo.jpg" alt="킨코스코리아(주) 관리자"></a></div>
+
+		<ul id="tnb">
+			<li><a href="#">관리자정보</a></li>
+			<li><a href="#">기본환경</a></li>
+			<li><a href="#">커뮤니티</a></li>
+			<li><a href="#">쇼핑몰환경</a></li>
+			<li><a href="#">쇼핑몰</a></li>
+			<li id="tnb_logout"><a href="#">로그아웃</a></li>
+		</ul>
+
+		<nav id="gnb">
+			<h2>관리자 주메뉴</h2>
+			<ul id="gnb_1dul">
+				<li class="gnb_1dli">
+					<a href="#" class="gnb_1da">환경설정</a>
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">관리권한설정</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">기본환경설정</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">메뉴설정</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">메인 좌측 슬라이드</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">메인 하단 슬라이드</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">페이지 배너관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">쇼핑몰 메인 슬라이드</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da  gnb_grp_div">메일 테스트</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">팝업레이어관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">세션파일 일괄삭제</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">캐시파일 일괄삭제</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">캡챠파일 일괄삭제</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">썸네일파일 일괄삭제</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da  gnb_grp_div">phpinfo()</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="#" class="gnb_1da">알림톡설정</a>
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">알림톡설정</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="./member_list.html" class="gnb_1da">회원관리</a>
+					<ul class="gnb_2dul"><li class="gnb_2dli"><a href="./member_list.html" class="gnb_2da">회원관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">기업회원관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">회원/비회원</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">회원메일발송</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">접속자집계</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">접속자검색</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">포인트관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">투표관리</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="board_list.html" class="gnb_1da">게시판관리</a>
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli"><a href="board_list.html" class="gnb_2da">게시판관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">게시판그룹관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">인기검색어관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">인기검색어순위</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">1:1문의설정</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">내용관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style ">FAQ관리</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="#" class="gnb_1da">쇼핑몰관리</a>
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli"><a href="#" class="gnb_2da  ">쇼핑몰설정</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">주문내역</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">주문내역(센터용)</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">주문내역(디자이너용)</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">개인결제관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">분류관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">상품관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">상품문의</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">사용후기</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">상품재고관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">상품유형관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">상품옵션재고관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">쿠폰관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">추가배송비관리</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="#" class="gnb_1da">쇼핑몰현황/기타</a>
+					<ul class="gnb_2dul"><li class="gnb_2dli"><a href="#" class="gnb_2da">매출현황</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">상품판매순위</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">주문내역출력</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style">재입고SMS알림</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">이벤트관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">이벤트일괄처리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">배너관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_div">보관함현황</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da gnb_grp_style gnb_grp_div">가격비교사이트</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="./group.html" class="gnb_1da">서비스관리</a>
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli"><a href="./group.html" class="gnb_2da">코드그룹관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">종이관리</a></li>
+						<li class="gnb_2dli"><a href="#" class="gnb_2da">자동견적관리</a></li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="center.html" class="gnb_1da">사이트관리</a>
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli"><a href="center.html" class="gnb_2da">센터정보관리</a></li>
+						<li class="gnb_2dli"><a href="orderanalytics.html" class="gnb_2da gnb_grp_style gnb_grp_div">견적관리 통계</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+</header>
+
+<ul id="lnb">
+	<li><a href="#">쇼핑몰설정</a></li>
+	<li><a href="#">주문내역</a></li>
+	<li><a href="#">주문내역(센터용)</a></li>
+	<li><a href="#">주문내역(디자이너용)</a></li>
+	<li><a href="#">개인결제관리</a></li>
+	<li><a href="#">분류관리</a></li>
+	<li><a href="#">상품관리</a></li>
+	<li><a href="#">상품문의</a></li>
+	<li><a href="#">사용후기</a></li>
+	<li><a href="#">상품재고관리</a></li>
+	<li><a href="#">상품유형관리</a></li>
+	<li><a href="#">상품옵션재고관리</a></li>
+	<li><a href="#">쿠폰관리</a></li>
+	<li><a href="#">추가배송비관리</a></li></ul>
+
+<div id="wrapper">
+	<div id="container">
+		<div id="text_size">
+			<!-- font_resize('엘리먼트id', '제거할 class', '추가할 class'); -->
+			<button onclick="font_resize('container', 'ts_up ts_up2', '');"><img src="./image/ts01.gif" alt="기본"></button>
+			<button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up');"><img src="./image/ts02.gif" alt="크게"></button>
+			<button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up2');"><img src="./image/ts03.gif" alt="더크게"></button>
+		</div>
+
+		<h1>파일주문내역</h1>
+
+		<div class="local_sch02 local_sch">
+			<div>
+				<form name="forderprint" action="./orderprintresult.php" onsubmit="return forderprintcheck(this);" autocomplete="off">
+					<strong class="sch_long">센터구분</strong>
+					<select name="" id="">
+						<option value="">선택하세요</option>
+						<option value="">가산디지털단지센터</option>
+						<option value="">강남역센터</option>
+						<option value="">경복궁센터</option>
+						<option value="">교대센터</option>
+						<option value="">구로센터</option>
+						<option value="">논현센터</option>
+						<option value="">동여의도센터</option>
+						<option value="">서여의도센터</option>
+						<option value="">분당센터</option>
+						<option value="">남대문센터</option>
+					</select>
+				</form>
+			</div>
+
+			<div class="sch_last">
+				<form name="forderprint" action="" autocomplete="off">
+					<strong class="sch_long">기간검색</strong>
+					<label for="fr_date" class="sound_only">기간 시작일</label>
+					<input type="text" name="fr_date" value="20200313" id="fr_date" required class="required frm_input" size="10" maxlength="8">
+					~
+					<label for="to_date" class="sound_only">기간 종료일</label>
+					<input type="text" name="to_date" value="20200313" id="to_date" required class="required frm_input" size="10" maxlength="8">
+					<button type="button" onclick="javascript:set_date('오늘');">오늘</button>
+					<button type="button" onclick="javascript:set_date('어제');">어제</button>
+					<button type="button" onclick="javascript:set_date('이번주');">이번주</button>
+					<button type="button" onclick="javascript:set_date('이번달');">이번달</button>
+					<button type="button" onclick="javascript:set_date('지난주');">지난주</button>
+					<button type="button" onclick="javascript:set_date('지난달');">지난달</button>
+					<button type="button" onclick="javascript:set_date('전체');">전체</button>
+					<input type="submit" value="검색" class="btn_submit">
+					<input type="button" value="엑셀" class="btn_submit btn_excel">
+
+					<select name="" id="" style="float:right;">
+						<option value="">주문번호 25건 조회</option>
+						<option value="">주문번호 50건 조회</option>
+						<option value="">주문번호 100건 조회</option>
+					</select>
+				</form>
+			</div>
+		</div>
+
+		<ul class="anchor type_02">
+			<!-- 현재 활성 목록에 active 추가 -->
+			<li class="active">
+				<a href="#">전체<span>15건</span></a>
+				<p></p>
+			</li>
+			<li>
+				<a href="javascript:void(0);">주문<span>4건</span></a>
+				<p>파일주문 중 처리하지 않은 주문 수량</p>
+			</li>
+			<li>
+				<a href="javascript:void(0);">주문 접수<span>3건</span></a>
+				<p>담당자에 의하여 파일주문을 확인한 내역</p>
+			</li>
+			<li>
+				<a href="javascript:void(0);">시안 처리<span>4건</span></a>
+				<p>시안등록 후 고객 수정 요청 or 시안 확정 전 내역</p>
+			</li>
+			<li>
+				<a href="javascript:void(0);">주문 완료<span>4건</span></a>
+				<p>시안이 확정된 내역</p>
+			</li>
+		</ul>
+
+		<form class="file_order_list" name="" id="">
+			<div class="tbl_head02 tbl_wrap">
+				<table>
+					<caption>회원관리 목록</caption>
+					<thead>
+					<tr>
+						<th scope="col">
+							<label for="chkall" class="sound_only">주문 전체</label>
+							<input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all(this.form)">
+						</th>
+						<th scope="col"><a href="#">주문번호</a></th>
+						<th scope="col"><a href="#">주문일자</a></th>
+						<th scope="col"><a href="#">주문상태</a></th>
+						<th scope="col"><a href="#">이름</a></th>
+						<th scope="col"><a href="#">회사명</a></th>
+						<th scope="col">이메일</th>
+						<th scope="col">휴대폰</th>
+						<th scope="col">일반전화</th>
+						<th scope="col">제목</th>
+						<th scope="col"><a href="#">마케팅<br />동의</a></th>
+						<th scope="col">주문서</th>
+						<th scope="col">고객파일<br />다운로드</th>
+						<th scope="col">시안파일<br />다운로드</th>
+						<th scope="col">처리</th>
+						<th scope="col">최종 상태<br />변경자 ID</th>
+					</tr>
+					</thead>
+					<tbody>
+					<!-- loop -->
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_0" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_0" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn receipt">접수</a>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td></td>
+					</tr>
+					<!--// loop -->
+
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_1" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_1" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn receipt">접수</a>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_2" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_2" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn receipt">접수</a>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_3" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_3" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn receipt">접수</a>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_4" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_4" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문접수</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_5" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_5" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문접수</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_6" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_6" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문접수</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_7" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_7" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>시안검토요청</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_8" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_8" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>시안검토요청</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_9" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_9" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>시안검토요청</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn template_request">시안등록</a>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_10" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_10" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>시안확정</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_11" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_11" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>시안확정</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td>
+							<a href="#" class="file_list_btn order_complete">주문완료</a>
+						</td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_12" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_12" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문완료</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td></td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_13" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_13" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문완료</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td></td>
+						<td>12345678910</td>
+					</tr>
+					<tr class="bg0">
+						<td class="td_chk">
+							<input type="hidden">
+							<label for="chk_14" class="sound_only">2020040114074378</label>
+							<input type="checkbox" id="chk_14" name="chk[]" />
+						</td>
+						<td>2020040114074378</td>
+						<td>2020-04-01 14:02:18</td>
+						<td>주문완료</td>
+						<td>고우일</td>
+						<td>고우아이티</td>
+						<td>gowittest@gowittest.co.kr</td>
+						<td class="td_tel">01012345678</td>
+						<td class="td_tel">01012345678</td>
+						<td>시안내용 테스트 시안용 테스…</td>
+						<td>Y</td>
+						<td><a href="#">보기</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td><a href="#">다운로드</a></td>
+						<td></td>
+						<td>12345678910</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="btn_list01 btn_list">
+				<input type="submit" name="act_button" value="완료처리" />
+			</div>
+		</form>
+
+		<nav class="pg_wrap">
+			<span class="pg">
+				<a href="?sch_target=0&amp;sch_word=&amp;page=11" class="pg_page pg_first">처음</a>
+				<span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=3" class="pg_page">3<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=4" class="pg_page">4<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=5" class="pg_page">5<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=6" class="pg_page">6<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=7" class="pg_page">7<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=8" class="pg_page">8<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=9" class="pg_page">9<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=10" class="pg_page">10<span class="sound_only">페이지</span></a>
+				<a href="?sch_target=0&amp;sch_word=&amp;page=13" class="pg_page pg_end">맨끝</a>
+			</span>
+		</nav>
+
+		<noscript>
+			<p>
+				귀하께서 사용하시는 브라우저는 현재 <strong>자바스크립트를 사용하지 않음</strong>으로 설정되어 있습니다.<br>
+				<strong>자바스크립트를 사용하지 않음</strong>으로 설정하신 경우는 수정이나 삭제시 별도의 경고창이 나오지 않으므로 이점 주의하시기 바랍니다.
+			</p>
+		</noscript>
+
+	</div>
+</div>
+
+<footer id="ft">
+	<p>
+		Copyright &copy; www.kinkos.co.kr. All rights reserved.<br>
+		<a href="#">상단으로</a>
+	</p>
+</footer>
+
+<script>
+    function set_date(today)
+    {
+        if (today == "오늘") {
+            document.getElementById("fr_date").value = "2020-03-13";
+            document.getElementById("to_date").value = "2020-03-13";
+        } else if (today == "어제") {
+            document.getElementById("fr_date").value = "2020-03-12";
+            document.getElementById("to_date").value = "2020-03-12";
+        } else if (today == "이번주") {
+            document.getElementById("fr_date").value = "2020-03-08";
+            document.getElementById("to_date").value = "2020-03-13";
+        } else if (today == "이번달") {
+            document.getElementById("fr_date").value = "2020-03-01";
+            document.getElementById("to_date").value = "2020-03-13";
+        } else if (today == "지난주") {
+            document.getElementById("fr_date").value = "2020-03-01";
+            document.getElementById("to_date").value = "2020-03-07";
+        } else if (today == "지난달") {
+            document.getElementById("fr_date").value = "2020-02-01";
+            document.getElementById("to_date").value = "2020-02-29";
+        } else if (today == "전체") {
+            document.getElementById("fr_date").value = "";
+            document.getElementById("to_date").value = "";
+        }
+    }
+
+    $(function(){
+        $("#fr_date, #to_date").datepicker({ changeMonth: true, changeYear: true, dateFormat: "yymmdd", showButtonPanel: true, yearRange: "c-99:c+99", maxDate: "+0d" });
+    });
+</script>
+
+</body>
+</html>

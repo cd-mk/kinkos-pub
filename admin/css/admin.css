@@ -139,6 +139,9 @@ h3 {margin:0 20px}
 .btn_confirm02 a {display:inline-block;padding:0 15px;height:30px;background:#617d46;color:#fff;text-decoration:none;line-height:2.5em;vertical-align:middle}
 .btn_confirm02 a:focus {background:#555}
 
+.btn_confirm03 {clear:both;text-align:center;}
+.btn_confirm03 a {display:inline-block;padding:0 15px;height:30px;background:#3b5998;color:#fff;text-decoration:none;line-height:2.5em;vertical-align:middle;}
+
 
 .btn_submit {margin:0;padding:0;border:0;background:#ff3061;color:#fff;cursor:pointer}
 
@@ -813,7 +816,13 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 .new_win .anchor {margin:0 20px 5px}
 
 .new_win .tbl_wrap {margin:0 20px 20px;padding:0}
-
+.new_win .tbl_wrap .order_status { display:inline-block; padding:0 15px; height:24px; background:#3b5998; color:#fff; text-decoration:none; line-height:2em; vertical-align:middle;}
+.new_win .tbl_wrap .order_status.ordered {background:#000;}
+.new_win .tbl_wrap .order_status.order_request {background:#2a5d95;}
+.new_win .tbl_wrap .order_status.template_review_request {background:#0095df;}
+.new_win .tbl_wrap .order_status.template_modify_request {background:#c88b26;}
+.new_win .tbl_wrap .order_status.template_confirm {background:#00af59;}
+.new_win .tbl_wrap .order_status.order_complete {background:#00255d;}
 
 .new_win .win_btn {clear:both;padding:20px;text-align:center} /* 새창용 */
 .new_win .win_btn button {display:inline-block;padding:0 10px;height:30px;border:0;background:#4b545e;color:#fff;line-height:2em;cursor:pointer}
@@ -897,3 +906,12 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 
 /* 센터정보관리 */
 #fcenterlist input[type="submit"] {color:#3b5998;border:1px solid #3b5998;background:#fff !important;}
+
+/* 파일주문내역 > 주문서 팝업 */
+.btn-sale-price-submit { display:inline-block; height:30px; margin:0 0 0 10px; padding:0 15px; color:#fff; line-height:2.5em; text-decoration:none; vertical-align:middle; background:#3b5998; }
+.order_detail table td { font-size:12px; font-weight:400; line-height:140%; }
+.order_detail table td.td_user_regist_file a { text-decoration:underline; }
+.order_detail table td.td_user_regist_file a:first-child::before { content:""; }
+.order_detail table td.td_user_regist_file a::before { content:" / ";}
+.order_detail table td.td_user_regist_file p { padding:10px 0 0 0; font-size:12px; font-weight:400; line-height:100%; color:#444; }
+/* //파일주문내역 > 주문서 팝업 */
