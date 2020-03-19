@@ -363,8 +363,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .login_wrap .login_tab > ul > li.active a, .login_wrap .login_tab > ul > li a:hover{font-weight:700;color:#222;}
 .login_wrap .login_tab > ul > li.active{font-weight:700; border:1px solid #222;color:#222;}
 
-.login_wrap.business .tit_box .business_logo {display:block; width:215px; height:40px; margin:0 auto 30px auto; padding:0;}
-.login_wrap.business .tit_box .business_logo img {width:100%; max-width:100%; height:auto;}
+.login_wrap.business .tit_box .business_logo {display:block; width:auto; height:auto; margin:0 auto 30px auto; padding:0;}
+.login_wrap.business .tit_box .business_logo img {width:100%; max-width:240px; height:auto;}
 .login_wrap.business .section {margin-top:0;}
 
 @media screen and (max-width:980px) {
