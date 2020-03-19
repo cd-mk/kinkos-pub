@@ -539,10 +539,6 @@ function tab(e, num) {
     $(this).closest('.opt_list').removeClass('active');
   });
 
-
-
-
-
   function mo_sub_type_menu()
   {
     var btnObj = $('.btn_mo_sub_type');
@@ -575,6 +571,13 @@ function tab(e, num) {
   if( $('.btn_mo_sub_type').length )
   {
     mo_sub_type_menu();
+  }
+
+  if( $('.window_pop_close_btn').length )
+  {
+    $(document).on('click', '.window_pop_close_btn', function () {
+      self.window.close();
+    });
   }
 })();
 
