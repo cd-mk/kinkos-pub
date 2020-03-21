@@ -816,6 +816,7 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 .new_win .anchor {margin:0 20px 5px}
 
 .new_win .tbl_wrap {margin:0 20px 20px;padding:0}
+.new_win .tbl_wrap.has-border { border:1px solid #dadada; box-sizing:border-box; }
 .new_win .tbl_wrap .order_status { display:inline-block; padding:0 15px; height:24px; background:#3b5998; color:#fff; text-decoration:none; line-height:2em; vertical-align:middle;}
 .new_win .tbl_wrap .order_status.ordered {background:#000;}
 .new_win .tbl_wrap .order_status.order_request {background:#2a5d95;}

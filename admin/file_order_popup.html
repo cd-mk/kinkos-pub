@@ -74,7 +74,7 @@
 		.file_order_win table tbody tr th,
 		.file_order_win table tbody tr td { border-top:1px solid #dadada; border-bottom:0; box-sizing:border-box; }
 
-		.request_image_files { display:block; width:100%; height:auto; margin:0; padding:0 20px 20px; box-sizing:border-box; }
+		.request_image_files { display:block; width:100%; height:auto; margin:0; padding:0; box-sizing:border-box; }
 		.swiper-container { width:100%; }
 		.swiper-slide { cursor:pointer; }
 		.swiper-slide img { width:100%; max-width:100%; height:auto; }
@@ -82,7 +82,6 @@
 		.swiper-pagination-current { color:#222; font-weight:700; }
 		.swiper-button-next { top:auto; left:110px; bottom:0; right:auto; margin-top:0; width:42px; height:42px; background-image:url(./image/next-black.png); background-size:100% auto; }
 		.swiper-button-prev { top:auto; left:10px; bottom:0; right:auto; margin-top:0; width:42px; height:42px; background-image:url(./image/prev-black.png); background-size:100% auto; }
-
 	</style>
 	<!-- //style 추가 -->
 
@@ -294,28 +293,24 @@
 					</tr>
 					</tbody>
 				</table>
-			</div>
-		</section>
 
-		<section class="request_image_files">
-			<!-- Swiper -->
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
-					<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
-					<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+				<div class="request_image_files">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+							<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+							<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+						</div>
+
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next small"></div>
+						<div class="swiper-button-prev small"></div>
+					</div>
 				</div>
 
-				<!-- Add Pagination -->
-				<div class="swiper-pagination"></div>
-				<!-- Add Arrows -->
-				<div class="swiper-button-next small"></div>
-				<div class="swiper-button-prev small"></div>
-			</div>
-		</section>
-
-		<section class="order_detail">
-			<div class="tbl_frm01 tbl_wrap">
 				<table class="no-border-top">
 					<caption>주문 상세</caption>
 					<colgroup>
@@ -325,6 +320,86 @@
 					<tbody>
 					<tr>
 						<th scope="row">고객등록파일</th>
+						<td class="td_user_regist_file">
+							<a href="#" class="user_regist_file">20200219_173852.png</a>
+							<a href="#" class="user_regist_file">20200306_180651.png</a>
+							<a href="#" class="user_regist_file">20200309_152436.png</a>
+							<p>※ 해당 파일명을 클릭하면 자동으로 다운로드 됩니다.</p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl_frm01 tbl_wrap has-border">
+				<table class="no-border-top">
+					<caption>주문 상세</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="*">
+						<col width="20%" />
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>고우일(고우아이티)</td>
+						<td>2020-04-02 09:25:38</td>
+					</tr>
+					<tr>
+						<th scope="row">전달사항</th>
+						<td colspan="2">
+							전달사항 내용 전달사항 내용 전달사항 내용 전달사항 내용 전달사항 내용 전달사항 내용
+							전달사항 내용 전달사항 내용 전달사항 내용 전달사항 내용 전달사항 내용 전달사항 내용
+							전달사항 내용 전달사항 내용 전달사항 내용
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl_frm01 tbl_wrap has-border">
+				<table class="no-border-top">
+					<caption>주문 상세</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="*">
+						<col width="20%" />
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>킨코스신촌센터(12345678910)</td>
+						<td>2020-04-01 19:25:38</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<div class="request_image_files">
+					<!-- Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+							<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+							<div class="swiper-slide"><img src="/admin/image/file_order_popup_slide_dummy.png" /></div>
+						</div>
+
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next small"></div>
+						<div class="swiper-button-prev small"></div>
+					</div>
+				</div>
+
+				<table class="no-border-top">
+					<caption>주문 상세</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="*">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">시안등록파일</th>
 						<td class="td_user_regist_file">
 							<a href="#" class="user_regist_file">20200219_173852.png</a>
 							<a href="#" class="user_regist_file">20200306_180651.png</a>
@@ -368,16 +443,21 @@
 
 <script>
 	$(window).on('load', function() {
-      var swiper = new Swiper('.swiper-container', {
-          pagination: {
-              el: '.swiper-pagination',
-              type: 'fraction',
-          },
-          navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-          },
-      });
+	    // @2020.03.21 수정
+	    $('.swiper-container').each(function() {
+	        var swiperObj = $(this);
+
+          var swiper = new Swiper(swiperObj, {
+              pagination: {
+                  el: swiperObj.find('.swiper-pagination'),
+                  type: 'fraction',
+              },
+              navigation: {
+                  nextEl: swiperObj.find('.swiper-button-next'),
+                  prevEl: swiperObj.find('.swiper-button-prev'),
+              },
+          });
+			});
 	});
 </script>
 <!-- //script 추가 -->
