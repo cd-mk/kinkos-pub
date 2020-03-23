@@ -158,7 +158,9 @@
                 </div>
                 <div class="box_item">
                   <div class="btn_wrap center">
-                    <a href="#popup1" class="btn type02 mid btn_popup">주문수정</a>
+                    <!-- @2020.03.23 수정 -->
+                    <a href="#popup1" class="btn type03 mid btn_popup">옵션/쿠폰 변경</a>
+                    <!-- //@2020.03.23 수정 -->
                     <button type="button" class="btn type01 mid"><span>주문하기</span></button>
                   </div>
                 </div>
@@ -241,7 +243,9 @@
                 </div>
                 <div class="box_item">
                   <div class="btn_wrap center">
-                    <a href="#popup1" class="btn type02 mid btn_popup">주문수정</a>
+                    <!-- @2020.03.23 수정 -->
+                    <a href="#popup1" class="btn type03 mid btn_popup">옵션/쿠폰 변경</a>
+                    <!-- //@2020.03.23 수정 -->
                     <button type="button" class="btn type01 mid"><span>주문하기</span></button>
                   </div>
                 </div>
@@ -330,7 +334,7 @@
       <!-- S: popup area -->
       <div id="popup1" class="mall popup_wrap cart_pdt_change">
         <div class="inner">
-          <h3 class="title">옵션 추가/변경</h3>
+          <h3 class="title">옵션/쿠폰 변경</h3>
 
           <div class="popup_content">
             <div class="pdt_info">
@@ -350,6 +354,50 @@
                 </div>
               </div>
             </div>
+
+            <!-- @2020.03.23 쿠폰 사용 추가 -->
+            <div class="pdt_coupon">
+              <div class="coupon_use">
+                <strong class="coupon_use_title">쿠폰사용</strong>
+
+                <div class="coupon_use_wrap">
+                  <a href="#" class="coupon_toggle_btn">사용하실 수 있는 쿠폰이 있습니다.</a>
+
+                  <div class="coupon_items">
+                    <div class="form_inp right_radio">
+                      <input type="radio" id="radio1" name="radio_dummy" />
+                      <label for="radio1">
+                        <span>[정액할인]명함 100매 5,000원 할인</span>
+                        <span>20,000원 이상 구매</span>
+                      </label>
+                    </div>
+                    <div class="form_inp right_radio">
+                      <input type="radio" id="radio2" name="radio_dummy" disabled="disabled" />
+                      <label for="radio2">
+                        <span>[정액할인]명함 100매 5,000원 할인</span>
+                        <span>20,000원 이상 구매</span>
+                        <span class="another_product">(다른 상품에 사용 중)</span>
+                      </label>
+                    </div>
+                    <div class="form_inp right_radio">
+                      <input type="radio" id="radio3" name="radio_dummy" />
+                      <label for="radio3">
+                        <span>[정액할인]명함 100매 5,000원 할인</span>
+                        <span>20,000원 이상 구매</span>
+                      </label>
+                    </div>
+                    <div class="form_inp right_radio">
+                      <input type="radio" id="radio4" name="radio_dummy" />
+                      <label for="radio4">
+                        <span>사용 안함</span>
+                      </label>
+                    </div>
+                    <p class="coupon_use_desc">※ 쿠폰은 중복하여 사용할 수 없습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //@2020.03.23 쿠폰 사용 추가 -->
 
             <div class="pdt_option_select">
               <div class="pdt_option_select_item">
@@ -388,19 +436,30 @@
                 </div>
 
                 <div class="box_item pc">
-                  <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                  <div class="math"><i class="ico minus type01"><span class="blind">빼기</span></i></div>
                 </div>
 
                 <div class="box_item mo_minus">
                   <span class="label">할인금액</span>
-                  <span class="price"><span class="font_weight_bold">10,000,000</span>원</span>
+                  <span class="price"><span class="font_weight_bold">1,000,000</span>원</span>
                 </div>
+
+                <!-- @2020.03.23 추가 -->
+                <div class="box_item pc">
+                  <div class="math"><i class="ico minus type01"><span class="blind">빼기</span></i></div>
+                </div>
+
+                <div class="box_item mo_minus">
+                  <span class="label">쿠폰할인</span>
+                  <span class="price"><span class="font_weight_bold">5,000</span>원</span>
+                </div>
+                <!-- //@2020.03.23 추가 -->
               </div>
 
               <div class="box pdt_price_total">
                 <div class="box_item">
                   <span class="label">판매금액</span>
-                  <span class="price">27,000,000<span class="font_weight_normal">원</span></span>
+                  <span class="price">8,950,000<span class="font_weight_normal">원</span></span>
                 </div>
               </div>
             </div>

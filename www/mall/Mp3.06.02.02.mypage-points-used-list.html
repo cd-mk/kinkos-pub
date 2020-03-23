@@ -16,7 +16,7 @@
 	<meta property="og:image" content="../image/common/logo.png">
 	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-	<title>쿠폰 내역 | 마이페이지 | 킨코스코리아</title>
+	<title>포인트 내역 | 마이페이지 | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
 	<link rel="stylesheet" href="../css/lib/animate.css">
 	<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -67,8 +67,8 @@
 					<li>
 						<a href="#" onclick="return false;">나의 혜택</a>
 						<ul>
-							<li class="active"><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">쿠폰 내역</a></li>
-							<li><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">포인트 내역</a></li>
+							<li><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">쿠폰 내역</a></li>
+							<li class="active"><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">포인트 내역</a></li>
 						</ul>
 					</li>
 					<li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
@@ -107,98 +107,92 @@
 
 			<!-- page tab sub -->
 			<div class="page_tab sub_type1 col4 section mo">
-				<a href="javascript:;" class="btn_mo_sub_type">쿠폰 내역</a>
+				<a href="javascript:;" class="btn_mo_sub_type">포인트 내역</a>
 				<ul>
-					<li class="active"><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">쿠폰 내역</a></li>
-					<li><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">포인트 내역</a></li>
+					<li><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">쿠폰 내역</a></li>
+					<li class="active"><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">포인트 내역</a></li>
 				</ul>
 			</div>
 			<!-- //page tab sub -->
 
 			<!-- 본문 -->
 			<div class="con_box mpg_wrap">
-				<div class="tit_box section mid pc">
-					<h3>쿠폰 내역</h3>
-				</div>
 
-				<div class="mpg_bbs coupon_list">
+				<div class="mpg_bbs point_list">
+					<div class="tit_box section mid">
+						<h3>포인트 내역</h3>
+					</div>
+
+					<div class="point_list_header">
+						<p class="point_list_header_item">
+							<span class="point_list_header_title">사용 가능한 포인트</span><span class="point_list_header_value">6,000 포인트</span>
+						</p>
+						<p class="point_list_header_item">
+							<span class="point_list_header_title">적립예정</span><span class="point_list_header_value">70 포인트</span>
+						</p>
+					</div>
+
+					<div class="btn_wrap point_list_header_btn_wrap">
+						<a href="/www/mall/Mp3.06.02.01.mypage-points-list.html" class="btn large type04">적립내역</a>
+						<a href="/www/mall/Mp3.06.02.02.mypage-points-used-list.html" class="btn large type01">사용내역</a>
+					</div>
+
 					<div class="bbs_list">
 						<table>
-							<caption>쿠폰 내역을 나열한 표</caption>
+							<caption>포인트 내역을 나열한 표</caption>
 							<thead>
 							<tr>
-								<th scope="col">쿠폰 종류</th>
-								<th scope="col">주문 정보</th>
-								<th scope="col">적용 상품</th>
-								<th scope="col">사용 기한</th>
+								<th scope="col">사용일</th>
+								<th scope="col">사용내역</th>
+								<th scope="col">포인트</th>
 							</tr>
 							</thead>
 							<tbody>
 							<!-- loop -->
 							<tr>
-								<td class="coupon_type">
-									<!-- 정액할인 class discount_amount -->
-									<div class="coupon_type_item discount_amount">
-										<p class="coupon_type_title">개별상품할인</p>
-										<p class="coupon_type_price"><strong>5,000원</strong></p>
-									</div>
+								<td class="point_used_date">2020-04-01</td>
+								<td class="point_used_info">
+									<a href="#url">2020031217591839</a>
 								</td>
-								<td class="coupon_order_info">
-									<p>[정액할인]명함 100매 5,000원 할인</p>
-									<p>20,000원 이상 구매</p>
+								<td class="point_used_amount">500</td>
+							</tr>
+
+							<tr>
+								<td class="point_used_date">2020-04-01</td>
+								<td class="point_used_info">
+									<a href="#url">2020031217591839</a>
 								</td>
-								<td class="coupon_apply_product">
-									<a href="#url">명함 100매</a>
+								<td class="point_used_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_used_date">2020-04-01</td>
+								<td class="point_used_info">
+									<a href="#url">2020031217591839</a>
 								</td>
-								<td class="coupon_date_of_use">
-									<p>2020-04-01 ~ 2020-04-30</p>
-									<p>[사용 가능]</p>
+								<td class="point_used_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_used_date">2020-04-01</td>
+								<td class="point_used_info">
+									<a href="#url">2020031217591839</a>
 								</td>
+								<td class="point_used_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_used_date">2020-04-01</td>
+								<td class="point_used_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_used_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_used_date">2020-04-01</td>
+								<td class="point_used_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_used_amount">500</td>
 							</tr>
 							<!-- //loop -->
-
-							<tr>
-								<td class="coupon_type">
-									<!-- 정률할인 class discount_percent -->
-									<div class="coupon_type_item discount_percent">
-										<p class="coupon_type_title">개별상품할인</p>
-										<p class="coupon_type_price"><strong>50%</strong></p>
-									</div>
-								</td>
-								<td class="coupon_order_info">
-									<p>[정률할인]명함 100매 50% 할인</p>
-									<p>20,000원 이상 구매</p>
-								</td>
-								<td class="coupon_apply_product">
-									<a href="#url">명함 100매</a>
-								</td>
-								<td class="coupon_date_of_use">
-									<p>2020-04-01 ~ 2020-04-30</p>
-									<p>[사용 가능]</p>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="coupon_type">
-									<!-- 무료배송 class free_shipping -->
-									<div class="coupon_type_item free_shipping">
-										<p class="coupon_type_title">무료배송</p>
-										<p class="coupon_type_price">&nbsp;</p>
-									</div>
-								</td>
-								<td class="coupon_order_info">
-									<p>[무료배송]</p>
-									<p>20,000원 이상 구매</p>
-								</td>
-								<td class="coupon_apply_product">
-									<p>전체</p>
-								</td>
-								<td class="coupon_date_of_use">
-									<p>2020-04-01 ~ 2020-04-30</p>
-									<p>[사용 가능]</p>
-								</td>
-							</tr>
-
 							</tbody>
 						</table>
 

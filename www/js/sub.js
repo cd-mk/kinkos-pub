@@ -282,6 +282,17 @@ $(document).ready(function() {
       {
         datePickerInit();
       }
+
+      if( $('.coupon_toggle_btn').length )
+      {
+        $(document).on('click', '.coupon_toggle_btn', function(e) {
+          e.preventDefault();
+
+          var obj = $(this);
+
+          productDetailCouponToggle( obj );
+        });
+      }
     }
 
     function pageTabInit( obj )
@@ -540,6 +551,29 @@ $(document).ready(function() {
           todayHighlight: true,
         });
       });
+    }
+
+    function productDetailCouponToggle( obj )
+    {
+      if( obj )
+      {
+        var parentObj = obj.closest('.coupon_use_wrap');
+        var targetObj = parentObj.find('.coupon_items');
+        var isShow = targetObj.attr('data-is-show');
+
+        if( isShow !== 'Y' )
+        {
+          obj.addClass('show');
+          targetObj.attr('data-is-show', 'Y');
+          targetObj.show();
+        }
+        else
+        {
+          obj.removeClass('show');
+          targetObj.attr('data-is-show', 'N');
+          targetObj.hide();
+        }
+      }
     }
 
     $(document).ready(function() {

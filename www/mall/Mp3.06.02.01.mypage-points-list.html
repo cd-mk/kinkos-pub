@@ -16,7 +16,7 @@
 	<meta property="og:image" content="../image/common/logo.png">
 	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-	<title>이벤트 참여 내역 | 마이페이지 | 킨코스코리아</title>
+	<title>포인트 내역 | 마이페이지 | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
 	<link rel="stylesheet" href="../css/lib/animate.css">
 	<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
@@ -68,7 +68,7 @@
 						<a href="#" onclick="return false;">나의 혜택</a>
 						<ul>
 							<li><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">쿠폰 내역</a></li>
-							<li class="active"><a href="/www/mall/Mp3.06.02.00.mypage-points-list.html">포인트 내역</a></li>
+							<li class="active"><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">포인트 내역</a></li>
 						</ul>
 					</li>
 					<li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
@@ -118,9 +118,122 @@
 			<!-- 본문 -->
 			<div class="con_box mpg_wrap">
 
-				<div class="mpg_bbs event_act_veiw">
+				<div class="mpg_bbs point_list">
 					<div class="tit_box section mid">
 						<h3>포인트 내역</h3>
+					</div>
+
+					<div class="point_list_header">
+						<p class="point_list_header_item">
+							<span class="point_list_header_title">사용 가능한 포인트</span><span class="point_list_header_value">6,000 포인트</span>
+						</p>
+						<p class="point_list_header_item">
+							<span class="point_list_header_title">적립예정</span><span class="point_list_header_value">70 포인트</span>
+						</p>
+					</div>
+
+					<div class="btn_wrap point_list_header_btn_wrap">
+						<a href="/www/mall/Mp3.06.02.01.mypage-points-list.html" class="btn large type01">적립내역</a>
+						<a href="/www/mall/Mp3.06.02.02.mypage-points-used-list.html" class="btn large type04">사용내역</a>
+					</div>
+
+					<div class="bbs_list">
+						<table>
+							<caption>포인트 내역을 나열한 표</caption>
+							<thead>
+							<tr>
+								<th scope="col">적립일</th>
+								<th scope="col">적립내용</th>
+								<th scope="col">소멸예정일</th>
+								<th scope="col">남은기간</th>
+								<th scope="col">포인트</th>
+							</tr>
+							</thead>
+							<tbody>
+							<!-- loop -->
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							<!-- //loop -->
+
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							<tr>
+								<td class="point_save_date">2020-04-01</td>
+								<td class="point_info">
+									<a href="#url">2020031217591839</a>
+								</td>
+								<td class="point_extinction_date">2021-03-31</td>
+								<td class="point_rest_date">D-365</td>
+								<td class="point_amount">500</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<!-- Page navigation -->
+						<div class="page_navi">
+							<a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+							<a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+							<ul class="navi_list">
+								<li class="active"><a href="#url">1</a></li>
+								<li><a href="#url">2</a></li>
+								<li><a href="#url">3</a></li>
+								<li><a href="#url">4</a></li>
+								<li><a href="#url">5</a></li>
+							</ul>
+							<a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+							<a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+						</div>
+						<!-- Page navigation -->
 					</div>
 				</div>
 			</div>

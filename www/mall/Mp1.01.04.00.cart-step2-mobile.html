@@ -71,6 +71,47 @@
       <!-- MOBILE 버전 -->
       <div class="con_box cart_wrap mo">
         <div class="section">
+          <!-- @2020.03.23 쿠폰 사용 추가 -->
+          <div class="section mid order_coupon">
+            <div class="coupon_use">
+              <strong class="coupon_use_title">쿠폰사용</strong>
+
+              <div class="coupon_use_wrap">
+                <a href="#" class="coupon_toggle_btn">사용하실 수 있는 쿠폰이 있습니다.</a>
+
+                <div class="coupon_items">
+                  <div class="form_inp right_radio">
+                    <input type="radio" id="radio1" name="radio_dummy" />
+                    <label for="radio1">
+                      <span>[정액할인]명함 100매 5,000원 할인 20,000원 이상 구매</span>
+                    </label>
+                  </div>
+                  <div class="form_inp right_radio">
+                    <input type="radio" id="radio2" name="radio_dummy" disabled="disabled" />
+                    <label for="radio2">
+                      <span>[정액할인]명함 100매 5,000원 할인 20,000원 이상 구매</span>
+                      <span class="another_product">(다른 상품에 사용 중)</span>
+                    </label>
+                  </div>
+                  <div class="form_inp right_radio">
+                    <input type="radio" id="radio3" name="radio_dummy" />
+                    <label for="radio3">
+                      <span>[정액할인]명함 100매 5,000원 할인 20,000원 이상 구매</span>
+                    </label>
+                  </div>
+                  <div class="form_inp right_radio">
+                    <input type="radio" id="radio4" name="radio_dummy" />
+                    <label for="radio4">
+                      <span>사용 안함</span>
+                    </label>
+                  </div>
+                  <p class="desc">※ 쿠폰은 중복하여 사용할 수 없습니다. 개별 상품에 쿠폰을 사용하면, 전체 상품 및 무료배송 쿠폰을 사용할 수 없습니다.전체상품 및 무료배송 쿠폰을 사용하기 전에 개별 상품 쿠폰의 사용을 해제 해 주세요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //@2020.03.23 쿠폰 사용 추가 -->
+
           <!-- 장바구니 목록 테이블 -->
           <div class="section mid basket_list confirm">
             <h3 class="title">주문상품 확인</h3>
@@ -353,6 +394,23 @@
 
           <!-- 총 주문금액 -->
           <div class="order_total confirm">
+            <!-- @2020.03.23 포인트 사용 추가 -->
+            <div class="order_checkout_wrap point_input">
+              <h3 class="title">포인트 사용</h3>
+
+              <div class="point_input_wrap">
+                <div class="form_inp">
+                  <input type="text" title="요청사항" placeholder="사용할 포인트를 입력해주세요." />
+                  <a href="#" class="btn type01 mid">적용</a>
+                  <p>
+                    <span>사용가능한 포인트</span>
+                    <span><strong class="available_point">80,000</strong>&nbsp;point</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- //@2020.03.23 포인트 사용 추가 -->
+
             <h3 class="title">결제 정보</h3>
 
             <div class="inner">
@@ -361,7 +419,7 @@
                   <div class="box child">
                     <div class="box_item">
                       <span class="label">총 상품금액</span>
-                      <span class="price"><strong>10,100,000</strong>원</span>
+                      <span class="price"><strong>10,000,000</strong>원</span>
                     </div>
                     <!--
                       <div class="box_item"> 에
@@ -370,11 +428,11 @@
                     -->
                     <div class="box_item mo_minus">
                       <span class="label">총 할인금액</span>
-                      <span class="price"><strong>1,010,000</strong>원</span>
+                      <span class="price"><strong>1,000,000</strong>원</span>
                     </div>
                     <!-- @2020.03.06 쿠폰할인 추가 -->
                     <div class="box_item mo_minus">
-                      <span class="label">쿠폰할인</span>
+                      <span class="label">총 쿠폰할인</span>
                       <span class="price"><span class="font_weight_bold">10,000</span>원</span>
                     </div>
                     <div class="box_item mo_plus">
@@ -385,9 +443,15 @@
                       <span class="label">추가 배송비</span>
                       <span class="price"><strong>0</strong>원</span>
                     </div>
+                    <!-- @2020.03.23 추가 -->
+                    <div class="box_item mo_minus">
+                      <span class="label">포인트 사용</span>
+                      <span class="price"><strong>50,000</strong>원</span>
+                    </div>
+                    <!-- //@2020.03.23 추가 -->
                     <div class="box_item total">
                       <span class="label">예상 결제금액</span>
-                      <span class="price"><strong>9,085,000</strong>원</span>
+                      <span class="price"><strong>8,945,000</strong>원</span>
                     </div>
                   </div>
                 </div>

@@ -368,7 +368,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .login_wrap.business .section {margin-top:0;}
 
 @media screen and (max-width:980px) {
-  .login_wrap .inner {margin-top:40px;}
+  .login_wrap .inne.mpg_main .my_activity .que_actr {margin-top:40px;}
   .login_wrap .form_group .btn_wrap .btn {width:100%;padding:0;}
   .login_wrap .inner {width:100%}
   .login_wrap .form_group {margin-top:30px;padding:0;}
@@ -2139,7 +2139,12 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_info_wrap .opt_size .int_opt li input {width:calc(100% - 131px)}
 .pdt_info_wrap .form_group .form_item {padding-left:125px;position:relative;margin-bottom:20px;}
 .pdt_info_wrap .form_group .form_item.coupon_use {margin-bottom:30px;}
-.pdt_info_wrap .form_group .form_item.coupon_use p {margin-left:0;padding-top:0;}
+.pdt_info_wrap .form_group .form_item.coupon_use .coupon_use_wrap {display:block; position:relative; width:100%; min-height:44px; margin:0; padding:0 20px; line-height:44px; background:#f3f4f6; overflow:hidden;}
+.pdt_info_wrap .form_group .form_item.coupon_use .coupon_toggle_btn {display:block; position:relative; width:100%; height:auto;}
+.pdt_info_wrap .form_group .form_item.coupon_use .coupon_toggle_btn:hover {color:#000;}
+.pdt_info_wrap .form_group .form_item.coupon_use .coupon_toggle_btn::after {content:""; display:inline-block; position:absolute; top:50%; right:0; width:13px; height:8px; margin:0; padding:0; background:URL(../image/common/arr-bottom.png) no-repeat; transform:translateY(-50%);}
+.pdt_info_wrap .form_group .form_item.coupon_use .coupon_items {display:none;}
+.pdt_info_wrap .form_group .form_item.coupon_use .coupon_items p {margin-left:0; padding-top:0; padding-bottom:15px;}
 .pdt_thumbs {margin-top:30px;padding:0 30px;position:relative;}
 .pdt_thumbs .swiper-slide {vertical-align:middle;height:100px;width:100px;}
 .pdt_thumbs .swiper-slide img {width:100px;position:absolute;top:50%; transform:translateY(-50%);border: 1px solid #dedede;}
@@ -2214,6 +2219,11 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .right_radio input[type="radio"]:disabled + label {color:#777; opacity:0.5;}
 .right_radio label {width:100%;}
 .right_radio label span {display:block; width:calc(100% - 25px); font-size:16px; line-height:140%;}
+.right_radio label span.another_product {position:absolute; top:0; right:30px; width:auto; height:auto;}
+
+@media screen and (max-width:980px) {
+  .right_radio label span.another_product {position:relative; top:auto; right:auto; width:auto; height:auto;}
+}
 
 @media screen and (max-width:1400px) {
   .pdt_info_wrap .photo_inner {max-width: 600px;}
@@ -2713,6 +2723,71 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .guide_box_pc a {font-weight: 700;display: inline-block;margin-top:40px;}
 .guide_box_pc .prev_page_btn {position:absolute; top:-9px; right:40px; font-weight:400;}
 
+
+.cart_wrap.pc .order_coupon .coupon_use {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_title {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 40px;
+  line-height: 44px;
+  border-top: 2px solid #222;
+  box-sizing: border-box;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn:hover {color:#000;}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 13px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  background: URL(../image/common/arr-bottom.png) no-repeat;
+  transform: translateY(-50%);
+}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn.show::after {background:URL(../image/common/arr-top.png) no-repeat;}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap .coupon_items {display:none;}
+.cart_wrap.pc .order_coupon .coupon_use .coupon_use_wrap .coupon_items p.desc {
+  margin-top: 10px;
+  margin-left: 0;
+  padding-top: 0;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  color: #999;
+  line-height: 1.1;
+}
+
 .cart_wrap.pc .basket_list_pc {width:100%;position:relative;}
 .cart_wrap.pc .basket_list_pc table {width:100%;border-top:2px solid #000;border-collapse:separate;text-align:center;}
 .cart_wrap.pc .basket_list_pc th {padding:20px 20px;border-bottom:1px solid #e7e7e7; color:#000; vertical-align:middle; font-weight:700;}
@@ -2853,15 +2928,35 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_pdt_change .popup_content .pdt_info .pdt_info_title .pdt_info_option p .ico.cramp:before {content:""; position:absolute; top:6px; left:5px; width:1px; height:10px; background:#9e9e9e; transform:rotate(90deg);}
 .cart_pdt_change .popup_content .pdt_info .pdt_info_title .pdt_info_option p .ico.cramp:after {content:""; position:absolute; top:1px; left:0; width:1px; height:10px; background:#9e9e9e;}
 .cart_pdt_change .popup_content .pdt_info .pdt_info_title .pdt_info_option p.add_option .btn_delete {display:inline-block; position:relative; top:-2px; width:24px; height:24px; margin-left:5px; background:url("../image/common/ico-ly-close.png") no-repeat 50% 50%; vertical-align:middle;}
+
+.cart_pdt_change .popup_content .pdt_coupon {clear:both; display:inline-block; width:100%; height:auto; margin-top:40px; padding-bottom:40px; border-bottom:2px solid #222;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_title {float:left; width:20%; height:auto; margin:0; padding:10px 0 0 0;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap {float:left; position:relative; width:80%; min-height:44px; margin:0; padding:0 20px; line-height:44px; background:#f3f4f6; overflow:hidden;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_toggle_btn {display:block; position:relative; width:100%; height:auto; margin:0; padding:10px 0;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_toggle_btn:hover {color:#000;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_toggle_btn::after {content:""; display:inline-block; position:absolute; top:50%; right:0; width:13px; height:8px; margin:0; padding:0; background:URL(../image/common/arr-bottom.png) no-repeat; transform:translateY(-50%);}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_toggle_btn.show::after {background:URL(../image/common/arr-top.png) no-repeat;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_items {display:none;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_items .form_inp {display:block; position:relative; width:100%; min-height:44px; margin-top:10px; padding-right:0; line-height:44px; overflow:hidden;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_items .form_inp:first-child {margin-top:0;}
+.cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_items .coupon_use_desc {margin-top:10px; margin-left:0; padding-top:0; padding-bottom:15px; font-size:14px; color:#999; line-height:1.1;}
+
+@media screen and (max-width:980px) {
+  .cart_pdt_change .popup_content .pdt_coupon {margin-top:30px; padding-bottom:30px;}
+  .cart_pdt_change .popup_content .pdt_coupon .coupon_use_title {width:100%; padding:0 0 20px 0;}
+  .cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap {width:100%;}
+  .cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_toggle_btn {padding:0;}
+}
+
 .cart_pdt_change .popup_content .pdt_option_select {clear:both; display:inline-block; width:100%; height:auto; margin-top:40px;}
 .cart_pdt_change .popup_content .pdt_option_select .pdt_option_select_item {clear:both; display:inline-block; width:100%; height:auto; margin-top:20px;}
 .cart_pdt_change .popup_content .pdt_option_select .pdt_option_select_item:nth-child(1) {margin-top:0;}
 .cart_pdt_change .popup_content .pdt_option_select .pdt_option_select_item span {float:left; width:20%; line-height:44px;}
 .cart_pdt_change .popup_content .pdt_option_select .pdt_option_select_item select {float:left; width:80%;}
 .cart_pdt_change .popup_content .pdt_price {clear:both; display:inline-block; width:100%; height:auto; margin-top:40px; padding:40px 40px; border-top:1px solid #e7e7e7; border-bottom:1px solid #cccccc; box-sizing:border-box; background:#f3f4f6;}
-.cart_pdt_change .popup_content .box.pdt_price_calc {clear:both; display:flex; flex-direction:row; align-items:center; justify-content:flex-end; width:100%; height:auto;}
+.cart_pdt_change .popup_content .box.pdt_price_calc {clear:both; display:flex; flex-direction:row; align-items:center; justify-content:flex-end; width:100%; height:auto; font-size:16px; line-height:100%;}
 .cart_pdt_change .popup_content .box.pdt_price_calc .box_item {float:left;}
-.cart_pdt_change .popup_content .box.pdt_price_calc .box_item .math {padding-left:30px; padding-right:30px;}
+.cart_pdt_change .popup_content .box.pdt_price_calc .box_item .math {padding-left:20px; padding-right:20px;}
 .cart_pdt_change .popup_content .box.pdt_price_total {clear:both; width:100%; height:auto; margin-top:30px; text-align:right;}
 .cart_pdt_change .popup_content .box.pdt_price_total .box_item {}
 .cart_pdt_change .popup_content .box.pdt_price_total .box_item span {font-size:24px; font-weight:bold; line-height:100%;}
@@ -2932,9 +3027,9 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap.pc .order_total.confirm .inner > .box {flex-wrap:wrap;}
 .cart_wrap.pc .order_total .box.child {justify-content:flex-end;}
 .cart_wrap.pc .order_total .box .box_item {flex:0 0 auto;}
-.cart_wrap.pc .order_total.confirm .inner > .box > .box_item {flex:1 1 auto;}
-.cart_wrap.pc .order_total.confirm .inner > .box > .box_item.title {flex:1 1 auto;}
-.cart_wrap.pc .order_total .box .box_item.total {padding-left:40px;}
+.cart_wrap.pc .order_total.confirm .inner > .box > .box_item {flex:0 0 auto;}
+.cart_wrap.pc .order_total.confirm .inner > .box > .box_item.title {flex:0 0 auto; padding-right:50px;}
+.cart_wrap.pc .order_total .box .box_item.total {flex:1 1 auto !important; padding-top:20px; text-align:right;}
 .cart_wrap.pc .order_total .box .box_item h3 {display:block; font-size:26px; line-height:40px; color:#222222;}
 .cart_wrap.pc .order_total .box .box_item .label {color:#222;}
 
@@ -2956,6 +3051,13 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap.pc .order_total .order_total_desc span .order_total_desc_ico {display:inline-block; position:absolute; top:50%; left:0; width:22px; height:22px; margin:0; padding:0; background:url("../image/mall/product/ico_order_total_desc.png") no-repeat; transform:translateY(-50%);}
 
 .cart_wrap.pc .order_total .order_checkout_wrap {display:block; width:100%; height:auto; margin-top:120px;}
+
+.cart_wrap.pc .order_total .point_input {margin-bottom:120px;}
+.cart_wrap.pc .order_total .point_input .point_input_wrap {display:block; width:100%; height:auto; padding:40px 40px; border-top:2px solid #000; border-bottom:1px solid #cccccc; box-sizing:border-box;}
+.cart_wrap.pc .order_total .point_input .point_input_wrap .form_inp {display:inline-block; width:100%; height:auto;}
+.cart_wrap.pc .order_total .point_input .point_input_wrap .form_inp label {float:left; width:15%; line-height:44px;}
+.cart_wrap.pc .order_total .point_input .point_input_wrap .form_inp input {float:left; width:30%;}
+.cart_wrap.pc .order_total .point_input .point_input_wrap .form_inp span {padding-left:20px;}
 
 .cart_wrap.pc .order_total .order_payment_select_wrap {display:block; width:100%; height:auto; padding:40px 40px; border-top:2px solid #000; border-bottom:1px solid #cccccc; box-sizing:border-box;}
 .cart_wrap.pc .order_total .order_payment_select_wrap label {padding-right:35px;}
@@ -3015,6 +3117,81 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 /* 장바구니 MOBILE 버전 */
 body.fix_pc .cart_wrap.mo {display:none !important;}
 body.fix_mobile .cart_wrap.mo {display:block !important;}
+
+.cart_wrap.mo .order_coupon .coupon_use {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_title {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 40px;
+  line-height: 44px;
+  border-top: 2px solid #222;
+  box-sizing: border-box;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn:hover {color:#000;}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 13px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  background: URL(../image/common/arr-bottom.png) no-repeat;
+  transform: translateY(-50%);
+}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_toggle_btn.show::after {background:URL(../image/common/arr-top.png) no-repeat;}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_items {display:none;}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_items p.desc {
+  margin-top: 10px;
+  margin-left: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 15px;
+  font-size: 14px;
+  color: #999;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.cart_wrap.mo .order_coupon .coupon_use .coupon_use_wrap .coupon_items .form_inp .another_product {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: auto;
+  height: auto;
+}
+
+
+
 
 .cart_wrap.mo .basket_list.confirm h3.title {font-size:16px; font-weight:bold; line-height:100%; padding-bottom:15px; border-bottom:2px solid #222222;}
 .cart_wrap.mo .basket_list .pdt_chk_all {display:block; width:100%; height:auto; padding:0 0 15px 0; border-bottom:3px solid #222222; box-sizing:border-box;}
@@ -3141,6 +3318,11 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 
 .cart_wrap.mo .order_total {margin-top:60px;}
 .cart_wrap.mo .order_total h3.title {display:block !important; margin-bottom:15px; font-size:16px; font-weight:bold;}
+
+.cart_wrap.mo .order_total .point_input {margin-bottom:60px;}
+.cart_wrap.mo .order_total .point_input .point_input_wrap {display:block; width:100%; height:auto; padding:25px 15px;}
+.cart_wrap.mo .order_total .point_input .point_input_wrap .form_inp .btn {width:100%; margin:15px 0 0 0;}
+.cart_wrap.mo .order_total .point_input .point_input_wrap .form_inp p {display:block; width:100%; height:auto; margin:15px 0 0 0;}
 
 .cart_wrap.mo .order_total.confirm .box.child {padding:0;}
 .cart_wrap.mo .order_total.confirm .box.child .box_item .price strong {font-size:14px;}
@@ -3775,6 +3957,42 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 }
 /* //마이페이지 > 나의 혜택 > 쿠폰 내역 */
 
+/* 마이페이지 > 나의 혜택 > 포인트 내역 */
+.mpg_bbs.point_list {}
+.mpg_bbs.point_list .point_list_header {display:block;width:100%;height:auto;margin:0;padding:30px 0 30px 30px;border:1px solid #e0e1e3;box-sizing:border-box;}
+.mpg_bbs.point_list .point_list_header_item {display:block;margin:20px 0 0 0;}
+.mpg_bbs.point_list .point_list_header_item:first-child {margin-top:0;}
+.mpg_bbs.point_list .point_list_header_item span:first-child {display:inline-block; width:200px;}
+.mpg_bbs.point_list .point_list_header_item .point_list_header_title {position:relative; padding-left:10px;}
+.mpg_bbs.point_list .point_list_header_item .point_list_header_title::before {content:""; display:inline-block; position:absolute; top:50%; left:0; width:3px; height:3px; border:1px solid #0F1C3F; border-radius:50%; box-sizing:border-box; background:#000; transform:translateY(-50%);}
+.mpg_bbs.point_list .point_list_header_item .point_list_header_value {font-weight:700; color:#ed6c16;}
+.mpg_bbs.point_list .point_list_header_btn_wrap {display:block; width:100%; height:auto; margin:20px 0 0 0; padding:0; text-align:center;}
+.mpg_bbs.point_list .point_list_header_btn_wrap .btn {width:calc(50% - 15px); margin:0 0 0 10px; box-sizing:border-box;}
+.mpg_bbs.point_list .point_list_header_btn_wrap .btn:first-child {margin:0 10px 0 0;}
+
+.mpg_bbs.point_list .bbs_list {margin-top:30px;}
+.mpg_bbs.point_list .bbs_list table tbody td.point_info a {color:#000; font-weight:700; text-decoration:underline;}
+.mpg_bbs.point_list .bbs_list table tbody td.point_used_info a {color:#000; font-weight:700; text-decoration:underline;}
+
+@media screen and (max-width:980px) {
+  .mpg_bbs.point_list .point_list_header_item span:first-child {width:50%;}
+
+  .mpg_bbs.point_list .bbs_list table tbody tr {padding:20px 0;}
+  .mpg_bbs.point_list .bbs_list table tbody td {position:relative; display:block; width:100%; height:auto; margin:20px 0 0 0; padding:0 0 0 100px; text-align:left !important; box-sizing:border-box;}
+  .mpg_bbs.point_list .bbs_list table tbody td:first-child {margin-top:0;}
+  .mpg_bbs.point_list .bbs_list table tbody td::before {position:absolute; top:0; left:0;}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_save_date::before {content:"적립일";}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_info::before {content:"적립내용";}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_extinction_date::before {content:"소멸예정일";}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_rest_date::before {content:"남은기간";}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_amount::before {content:"포인트";}
+
+  .mpg_bbs.point_list .bbs_list table tbody td.point_used_date::before {content:"사용일";}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_used_info::before {content:"사용내역";}
+  .mpg_bbs.point_list .bbs_list table tbody td.point_used_amount::before {content:"포인트";}
+}
+/* //마이페이지 > 나의 혜택 > 포인트 내역 */
+
 
 
 
@@ -3852,13 +4070,11 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .mpg_main .my_activity .event_act p {position:absolute;right:30px;top:40px;padding-top:0;}
 .mpg_main .my_activity .event_act p.zero {color:#cccccc;}
 
-.mpg_main .my_activity .que_act {display:table;width:100%;}
-.mpg_main .my_activity .que_act h3,
-.mpg_main .my_activity .que_act ul{display:table-cell;vertical-align:top;}
-.mpg_main .my_activity .que_act h3 {width:25%;font-size:24px;font-weight:700;line-height:100%;color:#222222;white-space:nowrap;}
-.mpg_main .my_activity .que_act ul {width:75%;}
+.mpg_main .my_activity .que_act { display:flex; flex-direction:row; flex-wrap:nowrap; align-content:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:30px 0; box-sizing:border-box; }
+.mpg_main .my_activity .que_act h3 { flex:0 0 20%; display:block; width:25%; font-size:24px; font-weight:700; line-height:100%; color:#222222; white-space:nowrap; }
+.mpg_main .my_activity .que_act ul{ flex:0 0 80%; display:flex; flex-direction:row; align-content:flex-start; justify-content:flex-start; width:75%; height:auto; }
+.mpg_main .my_activity .que_act ul li {flex:0 0 25%; display:block; width:25%; height:auto; margin:0; padding:0; text-align:center; border-left:1px solid #eee; box-sizing:border-box; }
 .mpg_main .my_activity .que_act strong {color:#777;font-size:14px;font-weight:400;white-space:nowrap;}
-.mpg_main .my_activity .que_act ul li {display:table-cell;text-align:center;vertical-align:top;padding:0 20px;border-left:1px solid #eeeeee;width:25%;}
 .mpg_main .my_activity .que_act ul li:last-child {padding-right:0;}
 .mpg_main .btn_wrap.center {margin-top:40px;}
 .mpg_main .form_wrap .form_inp {max-width:545px;}
@@ -3922,7 +4138,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
   .mpg_main .my_activity .que_act h3 {display:block; width:100%; height:auto; padding-top:0; padding-bottom:25px; font-size:20px; font-weight:700; border-bottom:1px solid #e2e2e2;}
   .mpg_main .my_activity .que_act ul {display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:0;}
   .mpg_main .my_activity .que_act ul li {flex:0 0 100%; position:relative; display:flex; flex-direction:row; align-items:center; justify-content:flex-start; width:100%; height:auto; margin:0; padding:30px 0; border-left:0; border-bottom:1px solid #e2e2e2;}
-  .mpg_main .my_activity .que_act ul li strong {font-size:14px; font-weight:400; color:#222222;}
+  .mpg_main .my_activity .que_act ul li strong {font-size:16px; font-weight:400; line-height:100%; color:#222222;}
   .mpg_main .my_activity .que_act ul li p {position:absolute; top:50%; right:15px; padding-top:0; font-size:35px; font-weight:700; color:#222222; transform:translateY(-50%);}
   .mpg_main .my_activity .que_act ul li p.zero {color:#cccccc;}
 
