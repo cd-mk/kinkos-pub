@@ -991,6 +991,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_view_wrap .item3 .item ul > li {float:left; display:table; table-layout:fixed; width:calc(100% / 3);}
 .center_view_wrap .item3 .item:first-child ul > li {display:table; table-layout:fixed; width:100%;}
 .center_view_wrap .item3 .item ul > li:nth-child(n + 4) {margin-top:16px;}
+
 .center_view_wrap .item3 .item .ico_product {display:table-cell; width:60px; height:60px; background:url('../image/company/sub/ico-product.png') no-repeat;}
 .center_view_wrap .item3 .item .ico_product.windows {background-position:0 0;}
 .center_view_wrap .item3 .item .ico_product.ms {background-position:0 -60px;}
@@ -999,16 +1000,22 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_view_wrap .item3 .item .ico_product.ps {background-position:0 -240px;}
 .center_view_wrap .item3 .item .ico_product.ai {background-position:0 -300px;}
 .center_view_wrap .item3 .item .ico_product.id {background-position:0 -360px;}
-.center_view_wrap .item3 .item .product_info {display:table-cell; padding-left:20px; vertical-align:middle;}
+
+.center_view_wrap .item3 .item .product_info {display:inline-block; padding-left:20px; vertical-align:middle;}
 .center_view_wrap .item3 .item .product_info .name {display:block; font-size:1em; color:#222;}
 .center_view_wrap .item3 .item .product_info .txt {display:block; margin-top:10px; font-size:1em; color:#222;}
+.center_view_wrap .item3 .item .img_product {display:inline-block; width:60px; height:60px; margin:0; padding:0;}
 
-.center_view_wrap .item4 .item {float:left; width:50%;}
+.center_view_wrap .item4 .item_list {display:flex; flex-wrap:wrap; flex-direction:row; align-items:flex-start; justify-content:flex-start; width:100%; height:auto;}
+.center_view_wrap .item4 .item {flex:0 0 50%; width:50%;}
 .center_view_wrap .item4 .item:nth-child(n + 3) {margin-top:70px;}
 .center_view_wrap .item4 .item strong {font-size:20px; font-weight:700;}
+.center_view_wrap .item4 .item .item_wrap {display:flex; flex-direction:row; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:16px 0 0 0; padding:0;}
+.center_view_wrap .item4 .item .item_wrap .img_product {flex:0 0 60px; width:60px; height:60px;}
 .center_view_wrap .item4 .item ul {margin-top:16px;}
 .center_view_wrap .item4 .item ul > li {margin-top:8px;}
 .center_view_wrap .item4 .item ul > li:first-child {margin-top:0;}
+.center_view_wrap .item4 .item .item_wrap ul {flex:1 1 auto; margin:0; padding:0 0 0 20px;}
 .center_view_wrap .item5 .map_view {height:510px;overflow: hidden;}
 .center_view_wrap .item5 .map_view img {display:block; height:100%;max-width: none;}
 .center_view_wrap .item5 .btn_wrap {text-align:center;}
@@ -1043,7 +1050,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .center_view_wrap .item3 .item ul > li:first-child {margin-top:0;}
   .center_view_wrap .item3 .item:first-child ul > li {display:block; width:100%;}
 
-  .center_view_wrap .item4 .item {float:none; width:100%;margin-top:30px !important;}
+  .center_view_wrap .item4 .item {float:none; flex:0 0 100%; width:100%;margin-top:30px !important;}
   .center_view_wrap .item4 .item strong {font-weight:700;font-size: 14px;}
   .center_view_wrap .item4 .item ul {margin-top:10px;}
   .center_view_wrap .item4 .item ul > li {}
@@ -1073,7 +1080,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_info_wrap .bbs_list tr td {padding:25px 20px;color:#222;}
 .center_info_wrap .bbs_list tr td:first-child {font-weight:500;padding-left:60px;white-space: nowrap;}
 .center_info_wrap .bbs_list tr td:last-child {padding-right:60px;}
-.center_info_wrap .bbs_list tr td:nth-child(3) {padding-left:55px;}
+.center_info_wrap .bbs_list tr td.center_phone a {white-space:nowrap;}
 .center_info_wrap .bbs_list .btn_more {display:inline-block; width:98px; height:36px; border:1px solid #dedede; color:#160000; line-height:35px; text-align:center;}
 .center_info_wrap .bbs_list .hours_list > li {margin-top:10px; font-size:1em; color:#333;}
 .center_info_wrap .bbs_list .hours_list > li:first-child {margin-top:0;}
