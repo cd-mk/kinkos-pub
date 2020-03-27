@@ -389,6 +389,8 @@
             </div>
           </div>
 
+          <!-- @2020.03.27 HTML 추가 -->
+
           <!-- PC Add Pagination -->
           <div class="pg_nav pc">
             <div class="swiper-button-next"></div>
@@ -408,6 +410,8 @@
             </div>
           </div>
           <!-- //MOBILE Add Pagination -->
+
+          <!-- //@2020.03.27 HTML 추가 -->
         </div>
       </div>
       <!-- //인스타그램 포토 Swiper -->
@@ -650,16 +654,18 @@
       reloadSlide(bestProSlide, pcOpt, moOpt);
     })();
 
-    // 인스타그램 슬라이드 
+    // 인스타그램 슬라이드
     (function () {
       var pcOpt = {
         slidesPerView: 8,
         spaceBetween: 22,
         loop: true,
+        // @2020.03.27 JS 추가
         navigation: {
           nextEl: '.insta_con .swiper-button-next',
           prevEl: '.insta_con .swiper-button-prev',
         }
+        // //@2020.03.27 JS 추가
       };
       var moOpt = {
         slidesPerView: 3,
@@ -667,6 +673,7 @@
         spaceBetween: 0,
         loop: false,
         centeredSlides: false,
+        // @2020.03.27 JS 추가
         navigation: {
           nextEl: '.insta_con .swiper-button-next',
           prevEl: '.insta_con .swiper-button-prev',
@@ -679,6 +686,7 @@
           el: '.insta_con .swiper-pagination',
           type: 'fraction',
         }
+        // //@2020.03.27 JS 추가
       };
 
       var instaSlide = isMobile
