@@ -388,6 +388,26 @@
               </a>
             </div>
           </div>
+
+          <!-- PC Add Pagination -->
+          <div class="pg_nav pc">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <!-- //PC Add Pagination -->
+
+          <!-- MOBILE Add Pagination -->
+          <div class="pg_nav_wrap scroll mo">
+            <div class="swiper-scrollbar"></div>
+            <div class="pg_nav">
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next small"></div>
+              <div class="swiper-button-prev small"></div>
+            </div>
+          </div>
+          <!-- //MOBILE Add Pagination -->
         </div>
       </div>
       <!-- //인스타그램 포토 Swiper -->
@@ -635,14 +655,30 @@
       var pcOpt = {
         slidesPerView: 8,
         spaceBetween: 22,
-        loop: true
+        loop: true,
+        navigation: {
+          nextEl: '.insta_con .swiper-button-next',
+          prevEl: '.insta_con .swiper-button-prev',
+        }
       };
       var moOpt = {
         slidesPerView: 3,
         slidesPerColumn: 2,
         spaceBetween: 0,
         loop: false,
-        centeredSlides: false
+        centeredSlides: false,
+        navigation: {
+          nextEl: '.insta_con .swiper-button-next',
+          prevEl: '.insta_con .swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: false,
+        },
+        pagination: {
+          el: '.insta_con .swiper-pagination',
+          type: 'fraction',
+        }
       };
 
       var instaSlide = isMobile

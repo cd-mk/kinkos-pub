@@ -642,6 +642,8 @@ function clickshow(elem, ID) {
     if( $('#popupzone').length )
     {
       popupZoneSlide();
+
+      popupZoneInit();
     }
     else
     {
@@ -649,7 +651,69 @@ function clickshow(elem, ID) {
     }
   }
 
+  function popupZoneInit() {
+    var popupzone = $('#popupzone');
+    var swiperSlide = popupzone.find('.swiper-slide');
+
+    if( swiperSlide.length )
+    {
+      swiperSlide.each(function() {
+        var obj = $(this);
+        var a = obj.find('a');
+        var img = a.find('img');
+        var imgSrc = img.attr('src');
+
+        a.css({
+          'background-image': 'url(' + imgSrc + ')',
+          'background-repeat': 'no-repeat',
+          'background-position-x': 'center',
+          'background-position-y': 'center',
+          'background-size': 'cover'
+        });
+
+        img.css('opacity', '0');
+      });
+    }
+  }
+
   $(document).ready(function() {
     popupZoneSlideSetObj = setTimeout(function() { popupZoneSlideInit(); }, popupZoneSlideSetDelay);
+  });
+})(window);
+
+// 메인 비쥬얼 배너 PC 버전
+// 팝업존 PC 버전
+(function () {
+  function visualWrapInit() {
+    var visual_wrap = $('.visual_wrap');
+    var bg_img = visual_wrap.find('.bg_img');
+
+    if( bg_img.length )
+    {
+      bg_img.each(function() {
+        var obj = $(this);
+
+        var pc_tablet = obj.find('.pc_tablet');
+
+        var imgSrc = pc_tablet.attr('src');
+
+        obj.css({
+          'background-image': 'url(' + imgSrc + ')',
+          'background-repeat': 'no-repeat',
+          'background-position-x': '50%',
+          'background-position-y': '0px',
+          'background-size': 'cover'
+        });
+
+        pc_tablet.css('opacity', '0');
+      });
+    }
+  }
+
+  $(document).ready(function() {
+    if( $('.visual_wrap').length )
+    {
+      visualWrapInit();
+    }
   });
 })(window);

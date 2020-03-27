@@ -17,26 +17,10 @@
 .bestPro_wrap .swiper-slide:hover .txt {position:absolute;top:-40px;left:0;transition:all 0.5s;}
 .bestPro_wrap .btn_txt.more {position:absolute;bottom:37px;left:0;width:120px; border:1px solid rgba(35,31,32,0.3);color:#222; font-size:16px;font-weight:500;line-height:44px; text-align:center;}
 
-.bestPro_wrap .pg_nav.pc .swiper-button-next,
-.bestPro_wrap .pg_nav.pc .swiper-button-prev {
-	top: 50%;
-	transform: translateY(-50%);
-	opacity: 0.8;
-}
-
-.bestPro_wrap .pg_nav.pc .swiper-button-next:hover,
-.bestPro_wrap .pg_nav.pc .swiper-button-prev:hover {
-	opacity: 1;
-}
-.bestPro_wrap .pg_nav.pc .swiper-button-next {
-	right: 20px;
-	background-image:url(../image/common/next-blue.png);
-}
-
-.bestPro_wrap .pg_nav.pc .swiper-button-prev {
-	left: 20px;
-	background-image:url(../image/common/prev-blue.png);
-}
+.bestPro_wrap .pg_nav.pc .swiper-button-next, .bestPro_wrap .pg_nav.pc .swiper-button-prev { top:50%; transform:translateY(-50%); opacity:0.8; }
+.bestPro_wrap .pg_nav.pc .swiper-button-next:hover, .bestPro_wrap .pg_nav.pc .swiper-button-prev:hover { opacity:1;}
+.bestPro_wrap .pg_nav.pc .swiper-button-next { right:20px; background-image:url(../image/common/next-blue.png); }
+.bestPro_wrap .pg_nav.pc .swiper-button-prev { left:20px; background-image:url(../image/common/prev-blue.png);}
 
 @media screen and (max-width:980px) {
 	.bestPro_wrap {margin-top:100px;padding:0 15px;}	
@@ -138,6 +122,11 @@
 .insta_wrap .swiper-slide[data-swiper-slide-index="9"] .thumb.animated .color_bg {transition-delay:0.9s;}
 .insta_wrap .swiper-slide[data-swiper-slide-index="10"] .thumb.animated .color_bg {transition-delay:1s;}
 .insta_wrap .swiper-slide .thumb:hover .color_bg {width:500px;top:170px;transition:all 0.5s;}
+
+.insta_wrap .pg_nav.pc .swiper-button-next, .insta_wrap .pg_nav.pc .swiper-button-prev { top:calc(50% + 20px); width:40px; height:40px; background-size:40px; transform:translateY(-50%); opacity:0.8; }
+.insta_wrap .pg_nav.pc .swiper-button-next:hover, .insta_wrap .pg_nav.pc .swiper-button-prev:hover { opacity:1;}
+.insta_wrap .pg_nav.pc .swiper-button-next { right:20px; background-image:url(../image/common/next-blue.png); }
+.insta_wrap .pg_nav.pc .swiper-button-prev { left:20px; background-image:url(../image/common/prev-blue.png);}
 
 
 @media screen and (max-width:980px) {
