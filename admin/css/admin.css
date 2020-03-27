@@ -34,7 +34,7 @@ h2.h2_frm {padding-top:15px}
 h3 {margin:0 20px}
 
 /* 레이아웃 */
-#hd {z-index:10;min-width:1000px;background:url('../image/hd_bg.jpg') #383b3f repeat-x}
+#hd {z-index:10;min-width:1000px;background:url('/image/hd_bg.jpg') #383b3f repeat-x}
 #hd h1, #hd h2 {position:absolute;border:0;font-size:0;line-height:0;overflow:hidden}
 #hd_wrap {z-index:11;position:relative;margin:0 auto;background:#1a294b;}
 #logo {position:relative;height:70px}
@@ -144,6 +144,10 @@ h3 {margin:0 20px}
 
 
 .btn_submit {margin:0;padding:0;border:0;background:#ff3061;color:#fff;cursor:pointer}
+.btn_show {clear:both;text-align:center; display:inline-block;padding:0 15px;height:30px;background:#336699;color:#FFFFFF;cursor:pointer; border:solid #336699;text-decoration:none;line-height:2.5em;vertical-align:middle}
+.btn_hide {clear:both;text-align:center; display:inline-block;padding:0 15px;height:30px;background:#FFFFFF;color:#000000;cursor:pointer; border:solid #336699; text-decoration:none;line-height:2.5em;vertical-align:middle}
+.btn_update {clear:both;text-align:center; display:inline-block;padding:0 15px;height:30px;background:#336699;color:#FFFFFF;cursor:pointer; border:solid #336699; text-decoration:none;line-height:2.5em;vertical-align:middle}
+.btn_delete {clear:both;text-align:center; display:inline-block;padding:0 15px;height:30px;background:#FFFFFF;color:#000000;cursor:pointer; border:solid #336699;; text-decoration:none;line-height:2.5em;vertical-align:middle}
 
 .btn_confirm .btn_submit {padding:0 15px;border:0;height:30px;color:#fff}
 .btn_cancel {display:inline-block;padding:0 15px;height:30px;border:0;background:#617d46;color:#fff;text-decoration:none}
@@ -189,7 +193,7 @@ a.btn_cancel {line-height:2.5em;vertical-align:middle}
 .btn_add01 button {margin:0}
 
 /* 필수입력 */
-.required {background:url('../../img/wrest.gif') #f6f9fa top right no-repeat !important}
+.required {background:url('/image/wrest.gif') #f6f9fa top right no-repeat !important}
 
 /* 외부서비스 사이트코드 */
 .sitecode {display:inline-block;font:bold 15px 'Verdana';vertical-align:middle}
@@ -214,6 +218,13 @@ legend {position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent
 .anchor a {display:inline-block;padding:5px 10px;border:1px solid #c8ced1;background:#d6dde1;text-decoration:none}
 .anchor a:focus, .anchor a:hover {background:#c8d2d8}
 
+/* 목록2 바로가기 */
+.banner_anchor {margin:0 20px 10px 21px;padding:0;zoom:1}
+.banner_anchor:after {display:block;visibility:hidden;clear:both;content:""}
+.banner_anchor li {float:left;margin-left:-1px;list-style:none; display:inline-block;padding:5px 10px;border:1px solid #c8ced1;}
+.banner_anchor .banner{background:#d6dde1;}
+/* .banner_anchor a {display:inline-block;padding:5px 10px;border:1px solid #c8ced1;background:#d6dde1;text-decoration:none} */
+/* .banner_anchor a:focus, .anchor a:hover {background:#c8d2d8} */
 
 #sort_mb {width:800px}
 
@@ -242,6 +253,10 @@ legend {position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent
 .local_sch02 label {display:inline-block;margin:0 5px 0 0}
 .local_sch02 button {margin:0;padding:5px;border:1px solid #ced9de;background:#f6f9fa;font-size:0.95em;vertical-align:middle;cursor:pointer}
 
+.local {margin:0 0 10px;padding:0 20px 5px;border-bottom:1px solid #e9e9e9}
+.local div {padding:0 0 5px;margin:0 0 5px;border-bottom:1px solid #f4f4f4}
+.local button {float:right; margin:0;padding:5px;border:1px solid #ced9de;background:#f6f9fa;font-size:0.95em;vertical-align:middle;cursor:pointer}
+
 /* 페이지 내 실행 */
 .local_cmd {min-width:960px}
 
@@ -261,6 +276,9 @@ legend {position:absolute;width:0;height:0;font-size:0;line-height:0;text-indent
 .local_desc02 {margin:0 20px 10px;min-width:960px} /* 주로 온라인 서식 관련 안내 내용에 사용 */
 .local_desc02 p {padding:0;line-height:1.8em}
 
+.local_desc03 {margin:0 20px 10px;padding:10px 20px 0;min-width:920px;border:1px solid #e7e7e7;background:#f9f9f9}
+.local_desc03 strong {color:#0000ff}
+.local_desc03 a {text-decoration:underline}
 /* 페이지 내 카운트 */
 .local_ov {min-width:960px}
 .local_ov a {color:#222;}
@@ -368,9 +386,9 @@ tfoot td {font-weight:bold;text-align:center}
 /* 메뉴설정 */
 #menu_frm #menu_result {margin:20px 0}
 
-#menulist .sub_menu4_class {padding-left:25px;background:url('../img/sub_menu_ico.gif') 5px 15px no-repeat}
-#menulist .sub_menu6_class {padding-left:50px;background:url('../img/sub_menu_ico.gif') 30px 15px no-repeat}
-#menulist .sub_menu8_class {padding-left:75px;background:url('../img/sub_menu_ico.gif') 55px 15px no-repeat}
+#menulist .sub_menu4_class {padding-left:25px;background:url('/image/sub_menu_ico.gif') 5px 15px no-repeat}
+#menulist .sub_menu6_class {padding-left:50px;background:url('/image/sub_menu_ico.gif') 30px 15px no-repeat}
+#menulist .sub_menu8_class {padding-left:75px;background:url('/image/sub_menu_ico.gif') 55px 15px no-repeat}
 
 /* 회원관리 목록 */
 .mb_leave_msg {color:#b6b6b6}
@@ -572,7 +590,7 @@ td.td_grpset {width:160px;border-left:1px solid #e9ecee;text-align:center}
 #scf_sms:after {display:block;visibility:hidden;clear:both;content:""}
 .scf_sms_box {float:left;margin:0 8px 0 9px;width:163px;text-align:center}
 .scf_sms_box h4 {margin:0 0 5px}
-.scf_sms_img {margin:10px 0;width:163px;height:191px;background:url('../shop_admin/img/sms_back.gif') no-repeat 0 0;text-align:center}
+.scf_sms_img {margin:10px 0;width:163px;height:191px;background:url('/image/sms_back.gif') no-repeat 0 0;text-align:center}
 .scf_sms_img textarea {margin:54px 0 0;width:115px;height:85px;border:0;background:transparent;font-size:0.95em;overflow:hidden}
 .scf_sms_img span {display:block}
 .scf_sms_cnt {display:block}
@@ -661,7 +679,7 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 #sct .sct_name2 {padding-left:50px}
 #sct .sct_name3 {padding-left:75px}
 #sct .sct_name4 {padding-left:100px}
-#sct .name_lbl {position:absolute;top:0;left:-20px;width:13px;height:13px;background:url('../shop_admin/img/icon_reply.gif') 0 0 no-repeat}
+#sct .name_lbl {position:absolute;top:0;left:-20px;width:13px;height:13px;background:url('/image/icon_reply.gif') 0 0 no-repeat}
 
 /* 분류 추가/수정 */
 .frm_ca_id {display:inline-block;margin:0 10px 0 0;font-weight:bold}
@@ -788,7 +806,7 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 #sms_frm table {margin:0 0 30px}
 #sms_frm textarea {height:70px}
 
-#sms_sm {position:relative;float:left;width:229px;height:418px;background:url('../shop_admin/img/mobilebg.jpg') no-repeat}
+#sms_sm {position:relative;float:left;width:229px;height:418px;background:url('/image/mobilebg.jpg') no-repeat}
 #sms_sm_text {position:absolute;top:75px;left:27px;width:180px;color:#fff;font-size:2em;word-break:break-all}
 #sms_sm p {position:absolute;bottom:-70px;left:0;font-size:0.95em;letter-spacing:-0.1em}
 
@@ -882,8 +900,8 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 
 .layerPop{
 	position:fixed; _position:absolute; _z-index:-1d; top:10%; left:10%; right:10%;
-    background-color:White; display:none; border: solid 2px #CCCCCC;
-    z-index:9001;
+	background-color:White; display:none; border: solid 2px #CCCCCC;
+	z-index:9001;
 }
 
 
@@ -907,6 +925,8 @@ strong.sodr_nonpay {display:block;padding:5px 0;text-align:right}
 
 /* 센터정보관리 */
 #fcenterlist input[type="submit"] {color:#3b5998;border:1px solid #3b5998;background:#fff !important;}
+
+.not_use_field {display:none;}
 
 /* 파일주문내역 > 주문서 팝업 */
 .btn-sale-price-submit { display:inline-block; height:30px; margin:0 0 0 10px; padding:0 15px; color:#fff; line-height:2.5em; text-decoration:none; vertical-align:middle; background:#3b5998; }

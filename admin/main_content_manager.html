@@ -1,0 +1,3837 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="title" content="회원관리 | 킨코스코리아(주)" />
+	<meta name="description" id="meta_description" content="회원관리 | 킨코스코리아(주)" />
+	<meta name="keywords" content="복사,인쇄,포스터,제본,킨코스" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="/data/_main/95bd29f4b4955d26f838b3e06bcf4dc8_14482417672292.ico">
+	<title>메인컨텐츠관리 | 컬러흑백출력, 제본, 포스터, 명함, 포트폴리오, 스캔</title>
+	<link rel="stylesheet" href="./css/jquery-ui.css">
+	<link rel="stylesheet" href="./css/admin.css">
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/jquery.menu.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/lib/script/basic.js"></script>
+
+	<!-- @2020.03.13 css 추가 -->
+	<style type="text/css">
+		.ui-datepicker { font:12px dotum; }
+		.ui-datepicker select.ui-datepicker-month,
+		.ui-datepicker select.ui-datepicker-year { width: 70px; padding:0px; }
+		.ui-datepicker-trigger { margin:0 0 -5px 2px; }
+
+		ul.anchor.type_02 { display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start; width:calc(100% - 40px); height:auto; margin:0 20px 10px 20px; padding:0; }
+		ul.anchor.type_02 li { flex:0 0 calc(20% - 10px); margin:0 0 0 10px; border-top:1px solid #cacaca; border-bottom:1px solid #dadada; box-sizing:border-box; }
+		ul.anchor.type_02 li:nth-child(5n+1) { margin-left:0; }
+		ul.anchor.type_02 li a { position:relative; display:inline-block; width:100%; height:auto; margin:0; padding:5px 10px; font-size:1.2em; font-weight:700; line-height:100%; cursor:default; border:0; box-sizing:border-box; background:none; text-decoration:none; }
+		ul.anchor.type_02 li a span { position:absolute; top:50%; right:10px; text-decoration:underline; transform:translateY(-50%); }
+		ul.anchor.type_02 li p { display:block; width:100%; height:auto; min-height:20px; margin:0; padding:5px 10px; font-size:0.9em; line-height:1.2em; letter-spacing:-1px; box-sizing:border-box; }
+		ul.anchor.type_02 li.active p { background:#b4f1fe; }
+
+		.file_order_list table td { text-align:center; }
+		.file_order_list table td a { text-decoration:underline; }
+		.file_order_list table td .file_list_btn { display:inline-block; width:auto; height:27px; margin:0; padding:0 5px; font-size:0.95em; line-height:27px; color:#fff; text-decoration:none; border:0; box-sizing:border-box; vertical-align:middle; cursor:pointer; }
+		.file_order_list table td .file_list_btn.receipt { background:#3b5998 !important; }
+		.file_order_list table td .file_list_btn.template_request { background:#0096e0 !important; }
+		.file_order_list table td .file_list_btn.order_complete { background:#ff575a !important; }
+	</style>
+	<!--// @2020.03.13 css 추가 -->
+</head>
+<body>
+
+<div id="to_content"><a href="#container">본문 바로가기</a></div>
+
+<header id="hd">
+	<div id="hd_wrap">
+		<h1>킨코스코리아(주)</h1>
+
+		<div id="logo"><a href="00.main-admin.html"><img src="./image/logo.jpg" alt="킨코스코리아(주) 관리자"></a></div>
+
+		<ul id="tnb">
+			<li><a href="#">관리자정보</a></li>
+			<li><a href="#">기본환경</a></li>
+			<li><a href="#">커뮤니티</a></li>
+			<li><a href="#">쇼핑몰환경</a></li>
+			<li><a href="#">쇼핑몰</a></li>
+			<li id="tnb_logout"><a href="#">로그아웃</a></li>
+		</ul>
+
+		<nav id="gnb">
+			<h2>관리자 주메뉴</h2>
+			<ul id="gnb_1dul">
+				<li class="gnb_1dli">
+					<a href="/configuration/configView.do" class="gnb_1da">환경설정</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/configView.do', '100100')" class="gnb_2da">기본환경설정</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/mngAuthList.do', '100300')" class="gnb_2da">관리권한설정</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/adminMenuList.do', '100200')" class="gnb_2da">메뉴설정</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/alimtalk/alimtalkTemplateList.do" class="gnb_1da">알림톡설정</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/alimtalk/alimtalkTemplateList.do', '102850')" class="gnb_2da">알림톡설정</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/membermng/memberMngList.do" class="gnb_1da">회원관리</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/membermng/memberMngList.do', '200100')" class="gnb_2da">회원관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/membermng/compMemberMngList.do', '200110')" class="gnb_2da">기업회원관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/membermng/pointMngList.do', '200200')" class="gnb_2da">포인트관리</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/shop/main.do" class="gnb_1da">쇼핑몰관리</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/configform.do', '400100')" class="gnb_2da">쇼핑몰설정</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/orderList.do?s_od_type=normal', '400400')" class="gnb_2da">주문내역</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/fileOrderList.do?init=Y', '400410')" class="gnb_2da">파일주문내역</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/categoryList.do', '400200')" class="gnb_2da">분류관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/itemList.do', '400300')" class="gnb_2da">상품관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/itemQAList.do', '400660')" class="gnb_2da">상품문의</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/itemUseList.do', '400650')" class="gnb_2da">사용후기</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/itemStockList.do', '400620')" class="gnb_2da">상품재고관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/itemTypeList.do', '400610')" class="gnb_2da">상품유형관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/shop/couponList.do', '400800')" class="gnb_2da">쿠폰관리</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/code/getCodeGroupList.do" class="gnb_1da">서비스관리</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/code/getCodeGroupList.do', '700100')" class="gnb_2da">코드그룹관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/code/getPaperList.do', '700200')" class="gnb_2da">종이관리</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/site/getCenterList.do" class="gnb_1da">사이트관리</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/site/getCenterList.do', '800200')" class="gnb_2da">센터정보관리</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/board/getBoardList.do" class="gnb_1da">게시판관리</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/board/getBoardList.do', '300100')" class="gnb_2da">게시판관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/board/getBoardGroupList.do', '300200')" class="gnb_2da">게시판그룹관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/board/getContentList.do', '300600')" class="gnb_2da">내용관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/board/getFaqMasterList.do', '300700')" class="gnb_2da">FAQ관리</a>
+						</li>
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<a href="/configuration/bannerMngList.do" class="gnb_1da">컨텐츠관리</a>
+
+					<ul class="gnb_2dul">
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/bannerMngList.do', '900100')" class="gnb_2da">배너관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/mainMngList.do', '900200')" class="gnb_2da">메인컨텐츠관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/serviceMngList.do', '900300')" class="gnb_2da">서비스안내관리</a>
+						</li>
+
+						<li class="gnb_2dli">
+							<a href="javascript:gf_menuMove('/configuration/popupLayerMngList.do', '900400')" class="gnb_2da">팝업레이어관리</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+				<li class="gnb_1dli">
+					<ul class="gnb_2dul">
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+</header>
+
+<ul id="lnb">
+	<li><a href="javascript:gf_menuMove('/configuration/bannerMngList.do', '900100')">배너관리</a></li>
+	<li><a href="javascript:gf_menuMove('/configuration/mainMngList.do', '900200')">메인컨텐츠관리</a></li>
+	<li><a href="javascript:gf_menuMove('/configuration/serviceMngList.do', '900300')">서비스안내관리</a></li>
+	<li><a href="javascript:gf_menuMove('/configuration/popupLayerMngList.do', '900400')">팝업레이어관리</a></li>
+</ul>
+
+<div id="wrapper">
+	<div id="container">
+		<div id="text_size">
+			<!-- font_resize('엘리먼트id', '제거할 class', '추가할 class'); -->
+			<button onclick="font_resize('container', 'ts_up ts_up2', '');"><img src="./image/ts01.gif" alt="기본"></button>
+			<button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up');"><img src="./image/ts02.gif" alt="크게"></button>
+			<button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up2');"><img src="./image/ts03.gif" alt="더크게"></button>
+		</div>
+
+		<h1>메인컨텐츠관리</h1>
+
+		<ul class="banner_anchor">
+			<li class="banner"><a href="/configuration/mainMngList.do?flag=1&amp;banner_type=B2C">온라인몰</a></li>
+			<!--     <li th:class="${mainMngVO?.banner_type == 'B2B'} ? 'banner' : '' "><a href="/configuration/mainMngList.do?flag=1&banner_type=B2B">기업몰</a></li> -->
+			<li><a href="/configuration/mainMngList.do?flag=1&amp;banner_type=COM">회사소개</a></li>
+		</ul>
+
+		<div class="local">
+			<div>
+				<input type="radio" name="main_flag" value="1" id="main_banner">
+				<label for="main_banner">중간슬라이드</label>&nbsp;&nbsp;
+				<input type="radio" name="main_flag" value="2" id="main_middle" checked="checked">
+				<label for="main_middle">태그상품추천</label>&nbsp;&nbsp;
+				<input type="radio" name="main_flag" value="3" id="main_pop">
+				<label for="main_pop">선택1</label>&nbsp;&nbsp;
+				<input type="radio" name="main_flag" value="4" id="main_top">
+				<label for="main_top">선택2</label>&nbsp;&nbsp;
+				<input type="radio" name="main_flag" value="5" id="main_bottom">
+				<label for="main_bottom">선택3</label>&nbsp;&nbsp;
+				<input type="radio" name="main_flag" value="6" id="main_left">
+				<label for="main_left">선택4</label>&nbsp;&nbsp;
+				<input type="radio" name="main_flag" value="7" id="main_right">
+				<label for="main_right">선택5</label>
+			</div>
+		</div>
+
+		<form action="/configuration/mainMngRegi.do" method="post" name="listForm" id="listForm">
+			<input type="hidden" name="idx">
+			<input type="hidden" name="banner_type" id="banner_type" value="B2C">
+			<input type="hidden" name="content_type" id="content_type" value="MAIN">
+			<input type="hidden" name="gubun">
+
+			<section id="anc_bo_auth">
+
+				<div class="tbl_frm01 tbl_wrap">
+					<table>
+						<caption>메인 슬라이드 설정</caption>
+						<tbody>
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">영역 제목</th>
+							<td width="90%">
+								<input type="text" name="title" value="홍보는 이렇게-" class="text" size="50">
+							</td>
+						</tr>
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">영역 소제목</th>
+							<td width="90%">
+				<textarea name="content" style="width:328px;height:42px;">업종별/상황별 홍보상품을
+킨코스에서 만나보세요!</textarea>
+							</td>
+						</tr>
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">태그1</th>
+							<td width="90%">
+								<input type="text" name="meta_description" value="#카페/음식점" class="text" size="50">
+								<button type="button" class="exception_btn">#카페/음식점 상품 등록</button>
+							</td>
+						</tr>
+
+						<!-- @2020.03.27 추가 -->
+						<tr bgcolor="#FFFFFF">
+							<td colspan="2">
+								<div class="tbl_head02 tbl_wrap" style="padding:0;">
+									<table>
+										<caption>메인 슬라이드 목록</caption>
+										<thead>
+										<tr align="center" bgcolor="#FFFFFF">
+											<th width="45">No</th>
+											<th width="20">
+												<input type="checkbox" id="chkall" value="1">
+											</th>
+											<th width="100">이미지</th>
+											<th width="20">순서</th>
+
+											<th width="100">태그이름</th>
+
+											<th width="300">제목</th>
+											<th width="100">등록일</th>
+											<th width="100">등록자</th>
+											<th width="50">수정/삭제</th>
+											<th width="50">노출</th>
+										</tr>
+										</thead>
+										<tbody data-target="list">
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="0" data-item-index="0">
+											<td>519<input type="hidden" data-name="idx" value="519"></td>
+											<td>
+												<input type="checkbox" value="519" name="del_chk_arr" id="del_chk_arr_0">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_519" value="4" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="519" data-direction="up" class="btnNum" data-rank="4">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="519" data-direction="dw" class="btnNum" data-rank="4">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">메뉴판</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('519');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('519','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('519','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="1" data-item-index="1">
+											<td>521<input type="hidden" data-name="idx" value="521"></td>
+											<td>
+												<input type="checkbox" value="521" name="del_chk_arr" id="del_chk_arr_1">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_521" value="6" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="521" data-direction="up" class="btnNum" data-rank="6">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="521" data-direction="dw" class="btnNum" data-rank="6">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">리플렛</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('521');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('521','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('521','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="2" data-item-index="2">
+											<td>528<input type="hidden" data-name="idx" value="528"></td>
+											<td>
+												<input type="checkbox" value="528" name="del_chk_arr" id="del_chk_arr_2">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_528" value="12" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="528" data-direction="up" class="btnNum" data-rank="12">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="528" data-direction="dw" class="btnNum" data-rank="12">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">미니등신대</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('528');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('528','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('528','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="3" data-item-index="3">
+											<td>526<input type="hidden" data-name="idx" value="526"></td>
+											<td>
+												<input type="checkbox" value="526" name="del_chk_arr" id="del_chk_arr_3">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_526" value="11" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="526" data-direction="up" class="btnNum" data-rank="11">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="526" data-direction="dw" class="btnNum" data-rank="11">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">굿즈토퍼</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('526');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('526','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('526','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="4" data-item-index="4">
+											<td>525<input type="hidden" data-name="idx" value="525"></td>
+											<td>
+												<input type="checkbox" value="525" name="del_chk_arr" id="del_chk_arr_4">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_525" value="10" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="525" data-direction="up" class="btnNum" data-rank="10">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="525" data-direction="dw" class="btnNum" data-rank="10">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">나만의 에코백</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('525');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('525','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('525','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="5" data-item-index="5">
+											<td>524<input type="hidden" data-name="idx" value="524"></td>
+											<td>
+												<input type="checkbox" value="524" name="del_chk_arr" id="del_chk_arr_5">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_524" value="9" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="524" data-direction="up" class="btnNum" data-rank="9">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="524" data-direction="dw" class="btnNum" data-rank="9">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">포토카드</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('524');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('524','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('524','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="6" data-item-index="6">
+											<td>523<input type="hidden" data-name="idx" value="523"></td>
+											<td>
+												<input type="checkbox" value="523" name="del_chk_arr" id="del_chk_arr_6">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_523" value="8" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="523" data-direction="up" class="btnNum" data-rank="8">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="523" data-direction="dw" class="btnNum" data-rank="8">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">현수막</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('523');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('523','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('523','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="7" data-item-index="7">
+											<td>522<input type="hidden" data-name="idx" value="522"></td>
+											<td>
+												<input type="checkbox" value="522" name="del_chk_arr" id="del_chk_arr_7">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_522" value="7" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="522" data-direction="up" class="btnNum" data-rank="7">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="522" data-direction="dw" class="btnNum" data-rank="7">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">점착메모지(10권기준)</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('522');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('522','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('522','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="8" data-item-index="8">
+											<td>520<input type="hidden" data-name="idx" value="520"></td>
+											<td>
+												<input type="checkbox" value="520" name="del_chk_arr" id="del_chk_arr_8">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_520" value="5" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="520" data-direction="up" class="btnNum" data-rank="5">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="520" data-direction="dw" class="btnNum" data-rank="5">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">배너</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('520');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('520','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('520','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="9" data-item-index="9">
+											<td>518<input type="hidden" data-name="idx" value="518"></td>
+											<td>
+												<input type="checkbox" value="518" name="del_chk_arr" id="del_chk_arr_9">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_518" value="3" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="518" data-direction="up" class="btnNum" data-rank="3">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="518" data-direction="dw" class="btnNum" data-rank="3">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석명함</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('518');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('518','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('518','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="10" data-item-index="10">
+											<td>517<input type="hidden" data-name="idx" value="517"></td>
+											<td>
+												<input type="checkbox" value="517" name="del_chk_arr" id="del_chk_arr_10">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_517" value="2" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="517" data-direction="up" class="btnNum" data-rank="2">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="517" data-direction="dw" class="btnNum" data-rank="2">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석스티커</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('517');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('517','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('517','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="11" data-item-index="11">
+											<td>516<input type="hidden" data-name="idx" value="516"></td>
+											<td>
+												<input type="checkbox" value="516" name="del_chk_arr" id="del_chk_arr_11">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_516" value="1" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="516" data-direction="up" class="btnNum" data-rank="1">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="516" data-direction="dw" class="btnNum" data-rank="1">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">테이블 POP</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('516');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('516','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('516','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!-- //@2020.03.27 추가 -->
+
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">태그2</th>
+							<td width="90%">
+								<input type="text" name="code1" value="#기업홍보/이벤트용" class="text" size="50">
+								<button type="button" class="exception_btn">#기업홍보/이벤트용 상품 등록</button>
+							</td>
+						</tr>
+
+						<!-- @2020.03.27 추가 -->
+						<tr bgcolor="#FFFFFF">
+							<td colspan="2">
+								<div class="tbl_head02 tbl_wrap" style="padding:0;">
+									<table>
+										<caption>메인 슬라이드 목록</caption>
+										<thead>
+										<tr align="center" bgcolor="#FFFFFF">
+											<th width="45">No</th>
+											<th width="20">
+												<input type="checkbox" id="chkall" value="1">
+											</th>
+											<th width="100">이미지</th>
+											<th width="20">순서</th>
+
+											<th width="100">태그이름</th>
+
+											<th width="300">제목</th>
+											<th width="100">등록일</th>
+											<th width="100">등록자</th>
+											<th width="50">수정/삭제</th>
+											<th width="50">노출</th>
+										</tr>
+										</thead>
+										<tbody data-target="list">
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="0" data-item-index="0">
+											<td>519<input type="hidden" data-name="idx" value="519"></td>
+											<td>
+												<input type="checkbox" value="519" name="del_chk_arr" id="del_chk_arr_0">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_519" value="4" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="519" data-direction="up" class="btnNum" data-rank="4">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="519" data-direction="dw" class="btnNum" data-rank="4">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">메뉴판</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('519');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('519','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('519','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="1" data-item-index="1">
+											<td>521<input type="hidden" data-name="idx" value="521"></td>
+											<td>
+												<input type="checkbox" value="521" name="del_chk_arr" id="del_chk_arr_1">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_521" value="6" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="521" data-direction="up" class="btnNum" data-rank="6">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="521" data-direction="dw" class="btnNum" data-rank="6">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">리플렛</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('521');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('521','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('521','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="2" data-item-index="2">
+											<td>528<input type="hidden" data-name="idx" value="528"></td>
+											<td>
+												<input type="checkbox" value="528" name="del_chk_arr" id="del_chk_arr_2">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_528" value="12" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="528" data-direction="up" class="btnNum" data-rank="12">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="528" data-direction="dw" class="btnNum" data-rank="12">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">미니등신대</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('528');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('528','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('528','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="3" data-item-index="3">
+											<td>526<input type="hidden" data-name="idx" value="526"></td>
+											<td>
+												<input type="checkbox" value="526" name="del_chk_arr" id="del_chk_arr_3">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_526" value="11" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="526" data-direction="up" class="btnNum" data-rank="11">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="526" data-direction="dw" class="btnNum" data-rank="11">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">굿즈토퍼</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('526');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('526','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('526','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="4" data-item-index="4">
+											<td>525<input type="hidden" data-name="idx" value="525"></td>
+											<td>
+												<input type="checkbox" value="525" name="del_chk_arr" id="del_chk_arr_4">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_525" value="10" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="525" data-direction="up" class="btnNum" data-rank="10">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="525" data-direction="dw" class="btnNum" data-rank="10">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">나만의 에코백</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('525');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('525','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('525','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="5" data-item-index="5">
+											<td>524<input type="hidden" data-name="idx" value="524"></td>
+											<td>
+												<input type="checkbox" value="524" name="del_chk_arr" id="del_chk_arr_5">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_524" value="9" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="524" data-direction="up" class="btnNum" data-rank="9">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="524" data-direction="dw" class="btnNum" data-rank="9">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">포토카드</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('524');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('524','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('524','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="6" data-item-index="6">
+											<td>523<input type="hidden" data-name="idx" value="523"></td>
+											<td>
+												<input type="checkbox" value="523" name="del_chk_arr" id="del_chk_arr_6">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_523" value="8" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="523" data-direction="up" class="btnNum" data-rank="8">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="523" data-direction="dw" class="btnNum" data-rank="8">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">현수막</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('523');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('523','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('523','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="7" data-item-index="7">
+											<td>522<input type="hidden" data-name="idx" value="522"></td>
+											<td>
+												<input type="checkbox" value="522" name="del_chk_arr" id="del_chk_arr_7">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_522" value="7" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="522" data-direction="up" class="btnNum" data-rank="7">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="522" data-direction="dw" class="btnNum" data-rank="7">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">점착메모지(10권기준)</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('522');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('522','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('522','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="8" data-item-index="8">
+											<td>520<input type="hidden" data-name="idx" value="520"></td>
+											<td>
+												<input type="checkbox" value="520" name="del_chk_arr" id="del_chk_arr_8">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_520" value="5" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="520" data-direction="up" class="btnNum" data-rank="5">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="520" data-direction="dw" class="btnNum" data-rank="5">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">배너</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('520');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('520','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('520','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="9" data-item-index="9">
+											<td>518<input type="hidden" data-name="idx" value="518"></td>
+											<td>
+												<input type="checkbox" value="518" name="del_chk_arr" id="del_chk_arr_9">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_518" value="3" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="518" data-direction="up" class="btnNum" data-rank="3">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="518" data-direction="dw" class="btnNum" data-rank="3">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석명함</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('518');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('518','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('518','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="10" data-item-index="10">
+											<td>517<input type="hidden" data-name="idx" value="517"></td>
+											<td>
+												<input type="checkbox" value="517" name="del_chk_arr" id="del_chk_arr_10">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_517" value="2" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="517" data-direction="up" class="btnNum" data-rank="2">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="517" data-direction="dw" class="btnNum" data-rank="2">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석스티커</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('517');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('517','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('517','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="11" data-item-index="11">
+											<td>516<input type="hidden" data-name="idx" value="516"></td>
+											<td>
+												<input type="checkbox" value="516" name="del_chk_arr" id="del_chk_arr_11">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_516" value="1" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="516" data-direction="up" class="btnNum" data-rank="1">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="516" data-direction="dw" class="btnNum" data-rank="1">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">테이블 POP</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('516');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('516','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('516','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!-- //@2020.03.27 추가 -->
+
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">태그3</th>
+							<td width="90%">
+								<input type="text" name="code2" value="#나만의굿즈" class="text" size="50">
+								<button type="button" class="exception_btn">#나만의굿즈 상품 등록</button>
+							</td>
+						</tr>
+
+						<!-- @2020.03.27 추가 -->
+						<tr bgcolor="#FFFFFF">
+							<td colspan="2">
+								<div class="tbl_head02 tbl_wrap" style="padding:0;">
+									<table>
+										<caption>메인 슬라이드 목록</caption>
+										<thead>
+										<tr align="center" bgcolor="#FFFFFF">
+											<th width="45">No</th>
+											<th width="20">
+												<input type="checkbox" id="chkall" value="1">
+											</th>
+											<th width="100">이미지</th>
+											<th width="20">순서</th>
+
+											<th width="100">태그이름</th>
+
+											<th width="300">제목</th>
+											<th width="100">등록일</th>
+											<th width="100">등록자</th>
+											<th width="50">수정/삭제</th>
+											<th width="50">노출</th>
+										</tr>
+										</thead>
+										<tbody data-target="list">
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="0" data-item-index="0">
+											<td>519<input type="hidden" data-name="idx" value="519"></td>
+											<td>
+												<input type="checkbox" value="519" name="del_chk_arr" id="del_chk_arr_0">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_519" value="4" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="519" data-direction="up" class="btnNum" data-rank="4">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="519" data-direction="dw" class="btnNum" data-rank="4">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">메뉴판</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('519');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('519','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('519','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="1" data-item-index="1">
+											<td>521<input type="hidden" data-name="idx" value="521"></td>
+											<td>
+												<input type="checkbox" value="521" name="del_chk_arr" id="del_chk_arr_1">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_521" value="6" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="521" data-direction="up" class="btnNum" data-rank="6">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="521" data-direction="dw" class="btnNum" data-rank="6">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">리플렛</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('521');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('521','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('521','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="2" data-item-index="2">
+											<td>528<input type="hidden" data-name="idx" value="528"></td>
+											<td>
+												<input type="checkbox" value="528" name="del_chk_arr" id="del_chk_arr_2">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_528" value="12" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="528" data-direction="up" class="btnNum" data-rank="12">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="528" data-direction="dw" class="btnNum" data-rank="12">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">미니등신대</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('528');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('528','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('528','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="3" data-item-index="3">
+											<td>526<input type="hidden" data-name="idx" value="526"></td>
+											<td>
+												<input type="checkbox" value="526" name="del_chk_arr" id="del_chk_arr_3">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_526" value="11" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="526" data-direction="up" class="btnNum" data-rank="11">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="526" data-direction="dw" class="btnNum" data-rank="11">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">굿즈토퍼</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('526');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('526','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('526','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="4" data-item-index="4">
+											<td>525<input type="hidden" data-name="idx" value="525"></td>
+											<td>
+												<input type="checkbox" value="525" name="del_chk_arr" id="del_chk_arr_4">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_525" value="10" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="525" data-direction="up" class="btnNum" data-rank="10">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="525" data-direction="dw" class="btnNum" data-rank="10">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">나만의 에코백</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('525');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('525','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('525','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="5" data-item-index="5">
+											<td>524<input type="hidden" data-name="idx" value="524"></td>
+											<td>
+												<input type="checkbox" value="524" name="del_chk_arr" id="del_chk_arr_5">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_524" value="9" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="524" data-direction="up" class="btnNum" data-rank="9">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="524" data-direction="dw" class="btnNum" data-rank="9">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">포토카드</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('524');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('524','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('524','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="6" data-item-index="6">
+											<td>523<input type="hidden" data-name="idx" value="523"></td>
+											<td>
+												<input type="checkbox" value="523" name="del_chk_arr" id="del_chk_arr_6">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_523" value="8" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="523" data-direction="up" class="btnNum" data-rank="8">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="523" data-direction="dw" class="btnNum" data-rank="8">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">현수막</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('523');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('523','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('523','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="7" data-item-index="7">
+											<td>522<input type="hidden" data-name="idx" value="522"></td>
+											<td>
+												<input type="checkbox" value="522" name="del_chk_arr" id="del_chk_arr_7">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_522" value="7" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="522" data-direction="up" class="btnNum" data-rank="7">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="522" data-direction="dw" class="btnNum" data-rank="7">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">점착메모지(10권기준)</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('522');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('522','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('522','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="8" data-item-index="8">
+											<td>520<input type="hidden" data-name="idx" value="520"></td>
+											<td>
+												<input type="checkbox" value="520" name="del_chk_arr" id="del_chk_arr_8">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_520" value="5" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="520" data-direction="up" class="btnNum" data-rank="5">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="520" data-direction="dw" class="btnNum" data-rank="5">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">배너</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('520');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('520','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('520','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="9" data-item-index="9">
+											<td>518<input type="hidden" data-name="idx" value="518"></td>
+											<td>
+												<input type="checkbox" value="518" name="del_chk_arr" id="del_chk_arr_9">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_518" value="3" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="518" data-direction="up" class="btnNum" data-rank="3">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="518" data-direction="dw" class="btnNum" data-rank="3">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석명함</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('518');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('518','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('518','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="10" data-item-index="10">
+											<td>517<input type="hidden" data-name="idx" value="517"></td>
+											<td>
+												<input type="checkbox" value="517" name="del_chk_arr" id="del_chk_arr_10">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_517" value="2" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="517" data-direction="up" class="btnNum" data-rank="2">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="517" data-direction="dw" class="btnNum" data-rank="2">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석스티커</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('517');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('517','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('517','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="11" data-item-index="11">
+											<td>516<input type="hidden" data-name="idx" value="516"></td>
+											<td>
+												<input type="checkbox" value="516" name="del_chk_arr" id="del_chk_arr_11">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_516" value="1" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="516" data-direction="up" class="btnNum" data-rank="1">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="516" data-direction="dw" class="btnNum" data-rank="1">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">테이블 POP</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('516');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('516','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('516','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!-- //@2020.03.27 추가 -->
+
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">태그4</th>
+							<td width="90%">
+								<input type="text" name="category" value="" class="text" size="50">
+								<button type="button" class="exception_btn"> 상품 등록</button>
+							</td>
+						</tr>
+
+						<!-- @2020.03.27 추가 -->
+						<tr bgcolor="#FFFFFF">
+							<td colspan="2">
+								<div class="tbl_head02 tbl_wrap" style="padding:0;">
+									<table>
+										<caption>메인 슬라이드 목록</caption>
+										<thead>
+										<tr align="center" bgcolor="#FFFFFF">
+											<th width="45">No</th>
+											<th width="20">
+												<input type="checkbox" id="chkall" value="1">
+											</th>
+											<th width="100">이미지</th>
+											<th width="20">순서</th>
+
+											<th width="100">태그이름</th>
+
+											<th width="300">제목</th>
+											<th width="100">등록일</th>
+											<th width="100">등록자</th>
+											<th width="50">수정/삭제</th>
+											<th width="50">노출</th>
+										</tr>
+										</thead>
+										<tbody data-target="list">
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="0" data-item-index="0">
+											<td>519<input type="hidden" data-name="idx" value="519"></td>
+											<td>
+												<input type="checkbox" value="519" name="del_chk_arr" id="del_chk_arr_0">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_519" value="4" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="519" data-direction="up" class="btnNum" data-rank="4">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="519" data-direction="dw" class="btnNum" data-rank="4">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">메뉴판</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('519');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('519','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('519','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="1" data-item-index="1">
+											<td>521<input type="hidden" data-name="idx" value="521"></td>
+											<td>
+												<input type="checkbox" value="521" name="del_chk_arr" id="del_chk_arr_1">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_521" value="6" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="521" data-direction="up" class="btnNum" data-rank="6">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="521" data-direction="dw" class="btnNum" data-rank="6">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">리플렛</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('521');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('521','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('521','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="2" data-item-index="2">
+											<td>528<input type="hidden" data-name="idx" value="528"></td>
+											<td>
+												<input type="checkbox" value="528" name="del_chk_arr" id="del_chk_arr_2">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_528" value="12" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="528" data-direction="up" class="btnNum" data-rank="12">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="528" data-direction="dw" class="btnNum" data-rank="12">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">미니등신대</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('528');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('528','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('528','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="3" data-item-index="3">
+											<td>526<input type="hidden" data-name="idx" value="526"></td>
+											<td>
+												<input type="checkbox" value="526" name="del_chk_arr" id="del_chk_arr_3">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_526" value="11" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="526" data-direction="up" class="btnNum" data-rank="11">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="526" data-direction="dw" class="btnNum" data-rank="11">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">굿즈토퍼</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('526');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('526','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('526','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="4" data-item-index="4">
+											<td>525<input type="hidden" data-name="idx" value="525"></td>
+											<td>
+												<input type="checkbox" value="525" name="del_chk_arr" id="del_chk_arr_4">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_525" value="10" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="525" data-direction="up" class="btnNum" data-rank="10">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="525" data-direction="dw" class="btnNum" data-rank="10">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">나만의 에코백</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('525');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('525','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('525','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="5" data-item-index="5">
+											<td>524<input type="hidden" data-name="idx" value="524"></td>
+											<td>
+												<input type="checkbox" value="524" name="del_chk_arr" id="del_chk_arr_5">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_524" value="9" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="524" data-direction="up" class="btnNum" data-rank="9">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="524" data-direction="dw" class="btnNum" data-rank="9">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">포토카드</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('524');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('524','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('524','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="6" data-item-index="6">
+											<td>523<input type="hidden" data-name="idx" value="523"></td>
+											<td>
+												<input type="checkbox" value="523" name="del_chk_arr" id="del_chk_arr_6">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_523" value="8" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="523" data-direction="up" class="btnNum" data-rank="8">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="523" data-direction="dw" class="btnNum" data-rank="8">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">현수막</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('523');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('523','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('523','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="7" data-item-index="7">
+											<td>522<input type="hidden" data-name="idx" value="522"></td>
+											<td>
+												<input type="checkbox" value="522" name="del_chk_arr" id="del_chk_arr_7">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_522" value="7" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="522" data-direction="up" class="btnNum" data-rank="7">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="522" data-direction="dw" class="btnNum" data-rank="7">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">점착메모지(10권기준)</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('522');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('522','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('522','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="8" data-item-index="8">
+											<td>520<input type="hidden" data-name="idx" value="520"></td>
+											<td>
+												<input type="checkbox" value="520" name="del_chk_arr" id="del_chk_arr_8">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_520" value="5" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="520" data-direction="up" class="btnNum" data-rank="5">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="520" data-direction="dw" class="btnNum" data-rank="5">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">배너</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('520');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('520','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('520','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="9" data-item-index="9">
+											<td>518<input type="hidden" data-name="idx" value="518"></td>
+											<td>
+												<input type="checkbox" value="518" name="del_chk_arr" id="del_chk_arr_9">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_518" value="3" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="518" data-direction="up" class="btnNum" data-rank="3">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="518" data-direction="dw" class="btnNum" data-rank="3">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석명함</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('518');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('518','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('518','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="10" data-item-index="10">
+											<td>517<input type="hidden" data-name="idx" value="517"></td>
+											<td>
+												<input type="checkbox" value="517" name="del_chk_arr" id="del_chk_arr_10">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_517" value="2" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="517" data-direction="up" class="btnNum" data-rank="2">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="517" data-direction="dw" class="btnNum" data-rank="2">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석스티커</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('517');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('517','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('517','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="11" data-item-index="11">
+											<td>516<input type="hidden" data-name="idx" value="516"></td>
+											<td>
+												<input type="checkbox" value="516" name="del_chk_arr" id="del_chk_arr_11">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_516" value="1" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="516" data-direction="up" class="btnNum" data-rank="1">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="516" data-direction="dw" class="btnNum" data-rank="1">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">테이블 POP</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('516');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('516','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('516','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!-- //@2020.03.27 추가 -->
+
+						<tr bgcolor="#FFFFFF">
+							<th width="10%">태그5</th>
+							<td width="90%">
+								<input type="text" name="price" value="" class="text" size="50">
+								<button type="button" class="exception_btn"> 상품 등록 </button>
+							</td>
+						</tr>
+
+						<!-- @2020.03.27 추가 -->
+						<tr bgcolor="#FFFFFF">
+							<td colspan="2">
+								<div class="tbl_head02 tbl_wrap" style="padding:0;">
+									<table>
+										<caption>메인 슬라이드 목록</caption>
+										<thead>
+										<tr align="center" bgcolor="#FFFFFF">
+											<th width="45">No</th>
+											<th width="20">
+												<input type="checkbox" id="chkall" value="1">
+											</th>
+											<th width="100">이미지</th>
+											<th width="20">순서</th>
+
+											<th width="100">태그이름</th>
+
+											<th width="300">제목</th>
+											<th width="100">등록일</th>
+											<th width="100">등록자</th>
+											<th width="50">수정/삭제</th>
+											<th width="50">노출</th>
+										</tr>
+										</thead>
+										<tbody data-target="list">
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="0" data-item-index="0">
+											<td>519<input type="hidden" data-name="idx" value="519"></td>
+											<td>
+												<input type="checkbox" value="519" name="del_chk_arr" id="del_chk_arr_0">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_519" value="4" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="519" data-direction="up" class="btnNum" data-rank="4">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="519" data-direction="dw" class="btnNum" data-rank="4">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">메뉴판</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('519');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('519','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('519','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="1" data-item-index="1">
+											<td>521<input type="hidden" data-name="idx" value="521"></td>
+											<td>
+												<input type="checkbox" value="521" name="del_chk_arr" id="del_chk_arr_1">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_521" value="6" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="521" data-direction="up" class="btnNum" data-rank="6">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="521" data-direction="dw" class="btnNum" data-rank="6">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">리플렛</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('521');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('521','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('521','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="2" data-item-index="2">
+											<td>528<input type="hidden" data-name="idx" value="528"></td>
+											<td>
+												<input type="checkbox" value="528" name="del_chk_arr" id="del_chk_arr_2">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_528" value="12" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="528" data-direction="up" class="btnNum" data-rank="12">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="528" data-direction="dw" class="btnNum" data-rank="12">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">미니등신대</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('528');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('528','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('528','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="3" data-item-index="3">
+											<td>526<input type="hidden" data-name="idx" value="526"></td>
+											<td>
+												<input type="checkbox" value="526" name="del_chk_arr" id="del_chk_arr_3">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_526" value="11" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="526" data-direction="up" class="btnNum" data-rank="11">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="526" data-direction="dw" class="btnNum" data-rank="11">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">굿즈토퍼</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('526');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('526','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('526','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="4" data-item-index="4">
+											<td>525<input type="hidden" data-name="idx" value="525"></td>
+											<td>
+												<input type="checkbox" value="525" name="del_chk_arr" id="del_chk_arr_4">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_525" value="10" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="525" data-direction="up" class="btnNum" data-rank="10">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="525" data-direction="dw" class="btnNum" data-rank="10">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">나만의 에코백</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('525');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('525','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('525','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="5" data-item-index="5">
+											<td>524<input type="hidden" data-name="idx" value="524"></td>
+											<td>
+												<input type="checkbox" value="524" name="del_chk_arr" id="del_chk_arr_5">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_524" value="9" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="524" data-direction="up" class="btnNum" data-rank="9">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="524" data-direction="dw" class="btnNum" data-rank="9">
+												</div>
+											</td>
+
+											<td align="left">#나만의굿즈</td>
+
+											<td align="left">포토카드</td>
+											<td>2020-03-26</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('524');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('524','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('524','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="6" data-item-index="6">
+											<td>523<input type="hidden" data-name="idx" value="523"></td>
+											<td>
+												<input type="checkbox" value="523" name="del_chk_arr" id="del_chk_arr_6">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_523" value="8" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="523" data-direction="up" class="btnNum" data-rank="8">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="523" data-direction="dw" class="btnNum" data-rank="8">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">현수막</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('523');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('523','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('523','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="7" data-item-index="7">
+											<td>522<input type="hidden" data-name="idx" value="522"></td>
+											<td>
+												<input type="checkbox" value="522" name="del_chk_arr" id="del_chk_arr_7">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_522" value="7" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="522" data-direction="up" class="btnNum" data-rank="7">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="522" data-direction="dw" class="btnNum" data-rank="7">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">점착메모지(10권기준)</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('522');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('522','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('522','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="8" data-item-index="8">
+											<td>520<input type="hidden" data-name="idx" value="520"></td>
+											<td>
+												<input type="checkbox" value="520" name="del_chk_arr" id="del_chk_arr_8">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_520" value="5" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="520" data-direction="up" class="btnNum" data-rank="5">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="520" data-direction="dw" class="btnNum" data-rank="5">
+												</div>
+											</td>
+
+											<td align="left">#기업홍보/이벤트용</td>
+
+											<td align="left">배너</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('520');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('520','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('520','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="9" data-item-index="9">
+											<td>518<input type="hidden" data-name="idx" value="518"></td>
+											<td>
+												<input type="checkbox" value="518" name="del_chk_arr" id="del_chk_arr_9">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_518" value="3" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="518" data-direction="up" class="btnNum" data-rank="3">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="518" data-direction="dw" class="btnNum" data-rank="3">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석명함</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('518');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('518','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('518','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="10" data-item-index="10">
+											<td>517<input type="hidden" data-name="idx" value="517"></td>
+											<td>
+												<input type="checkbox" value="517" name="del_chk_arr" id="del_chk_arr_10">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_517" value="2" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="517" data-direction="up" class="btnNum" data-rank="2">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="517" data-direction="dw" class="btnNum" data-rank="2">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">즉석스티커</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('517');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('517','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('517','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+
+
+										<tr align="center" bgcolor="#FFFFFF" data-list-index="11" data-item-index="11">
+											<td>516<input type="hidden" data-name="idx" value="516"></td>
+											<td>
+												<input type="checkbox" value="516" name="del_chk_arr" id="del_chk_arr_11">
+											</td>
+											<!-- 이미지링크 작업예정 -->
+											<td>
+
+												<a href="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" width="50" height="20"></a>
+
+											</td>
+											<td>
+												<input type="text" data-name="chnum" name="chnum" id="chnum_516" value="1" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+												<div class="r_sortmove">
+													<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="516" data-direction="up" class="btnNum" data-rank="1">
+													<br>
+													<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="516" data-direction="dw" class="btnNum" data-rank="1">
+												</div>
+											</td>
+
+											<td align="left">#카페/음식점</td>
+
+											<td align="left">테이블 POP</td>
+											<td>2020-03-25</td>
+											<td>khome_manager</td>
+											<td class="btn_confirm">
+												<a class="btn_update" href="javascript:fn_moveMainRegi('516');">
+													<span class="button">수정</span>
+												</a>
+												<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+													<span class="button">삭제</span>
+												</a>
+											</td>
+											<td class="btn_confirm">
+												<a class="btn_show" href="javascript:fn_viewYn('516','Y');">
+													<span class="button">노출</span>
+												</a>
+												<a class="btn_hide" href="javascript:fn_viewYn('516','N');">
+													<span class="button">숨김</span>
+												</a>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!-- //@2020.03.27 추가 -->
+
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<div class="btn_confirm01 btn_confirm">
+				<input type="submit" value="확인" class="btn_submit" onclick="fn_mainMngExceptionSave();return false;">
+			</div>
+
+			<div class="tbl_head02 tbl_wrap">
+				<table>
+					<caption>메인 슬라이드 목록</caption>
+					<thead>
+					<tr align="center" bgcolor="#FFFFFF">
+						<th width="45">No</th>
+						<th width="20">
+							<input type="checkbox" id="chkall" value="1">
+						</th>
+						<th width="100">이미지</th>
+						<th width="20">순서</th>
+
+						<th width="100">태그이름</th>
+
+						<th width="300">제목</th>
+						<th width="100">등록일</th>
+						<th width="100">등록자</th>
+						<th width="50">수정/삭제</th>
+						<th width="50">노출</th>
+					</tr>
+					</thead>
+					<tbody data-target="list">
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="0" data-item-index="0">
+						<td>519<input type="hidden" data-name="idx" value="519"></td>
+						<td>
+							<input type="checkbox" value="519" name="del_chk_arr" id="del_chk_arr_0">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585124010392.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_519" value="4" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="519" data-direction="up" class="btnNum" data-rank="4">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="519" data-direction="dw" class="btnNum" data-rank="4">
+							</div>
+						</td>
+
+						<td align="left">#카페/음식점</td>
+
+						<td align="left">메뉴판</td>
+						<td>2020-03-26</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('519');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('519','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('519','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="1" data-item-index="1">
+						<td>521<input type="hidden" data-name="idx" value="521"></td>
+						<td>
+							<input type="checkbox" value="521" name="del_chk_arr" id="del_chk_arr_1">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585126161158.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_521" value="6" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="521" data-direction="up" class="btnNum" data-rank="6">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="521" data-direction="dw" class="btnNum" data-rank="6">
+							</div>
+						</td>
+
+						<td align="left">#기업홍보/이벤트용</td>
+
+						<td align="left">리플렛</td>
+						<td>2020-03-26</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('521');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('521','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('521','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="2" data-item-index="2">
+						<td>528<input type="hidden" data-name="idx" value="528"></td>
+						<td>
+							<input type="checkbox" value="528" name="del_chk_arr" id="del_chk_arr_2">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585203312066.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_528" value="12" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="528" data-direction="up" class="btnNum" data-rank="12">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="528" data-direction="dw" class="btnNum" data-rank="12">
+							</div>
+						</td>
+
+						<td align="left">#나만의굿즈</td>
+
+						<td align="left">미니등신대</td>
+						<td>2020-03-26</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('528');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('528','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('528','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="3" data-item-index="3">
+						<td>526<input type="hidden" data-name="idx" value="526"></td>
+						<td>
+							<input type="checkbox" value="526" name="del_chk_arr" id="del_chk_arr_3">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585196516698.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_526" value="11" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="526" data-direction="up" class="btnNum" data-rank="11">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="526" data-direction="dw" class="btnNum" data-rank="11">
+							</div>
+						</td>
+
+						<td align="left">#나만의굿즈</td>
+
+						<td align="left">굿즈토퍼</td>
+						<td>2020-03-26</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('526');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('526','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('526','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="4" data-item-index="4">
+						<td>525<input type="hidden" data-name="idx" value="525"></td>
+						<td>
+							<input type="checkbox" value="525" name="del_chk_arr" id="del_chk_arr_4">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189653867.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_525" value="10" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="525" data-direction="up" class="btnNum" data-rank="10">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="525" data-direction="dw" class="btnNum" data-rank="10">
+							</div>
+						</td>
+
+						<td align="left">#나만의굿즈</td>
+
+						<td align="left">나만의 에코백</td>
+						<td>2020-03-26</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('525');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('525','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('525','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="5" data-item-index="5">
+						<td>524<input type="hidden" data-name="idx" value="524"></td>
+						<td>
+							<input type="checkbox" value="524" name="del_chk_arr" id="del_chk_arr_5">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585189495275.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_524" value="9" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="524" data-direction="up" class="btnNum" data-rank="9">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="524" data-direction="dw" class="btnNum" data-rank="9">
+							</div>
+						</td>
+
+						<td align="left">#나만의굿즈</td>
+
+						<td align="left">포토카드</td>
+						<td>2020-03-26</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('524');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('524','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('524','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="6" data-item-index="6">
+						<td>523<input type="hidden" data-name="idx" value="523"></td>
+						<td>
+							<input type="checkbox" value="523" name="del_chk_arr" id="del_chk_arr_6">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127269747.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_523" value="8" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="523" data-direction="up" class="btnNum" data-rank="8">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="523" data-direction="dw" class="btnNum" data-rank="8">
+							</div>
+						</td>
+
+						<td align="left">#기업홍보/이벤트용</td>
+
+						<td align="left">현수막</td>
+						<td>2020-03-25</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('523');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('523','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('523','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="7" data-item-index="7">
+						<td>522<input type="hidden" data-name="idx" value="522"></td>
+						<td>
+							<input type="checkbox" value="522" name="del_chk_arr" id="del_chk_arr_7">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585127032824.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_522" value="7" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="522" data-direction="up" class="btnNum" data-rank="7">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="522" data-direction="dw" class="btnNum" data-rank="7">
+							</div>
+						</td>
+
+						<td align="left">#기업홍보/이벤트용</td>
+
+						<td align="left">점착메모지(10권기준)</td>
+						<td>2020-03-25</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('522');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('522','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('522','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="8" data-item-index="8">
+						<td>520<input type="hidden" data-name="idx" value="520"></td>
+						<td>
+							<input type="checkbox" value="520" name="del_chk_arr" id="del_chk_arr_8">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585125044097.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_520" value="5" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="520" data-direction="up" class="btnNum" data-rank="5">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="520" data-direction="dw" class="btnNum" data-rank="5">
+							</div>
+						</td>
+
+						<td align="left">#기업홍보/이벤트용</td>
+
+						<td align="left">배너</td>
+						<td>2020-03-25</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('520');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('520','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('520','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="9" data-item-index="9">
+						<td>518<input type="hidden" data-name="idx" value="518"></td>
+						<td>
+							<input type="checkbox" value="518" name="del_chk_arr" id="del_chk_arr_9">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123803976.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_518" value="3" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="518" data-direction="up" class="btnNum" data-rank="3">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="518" data-direction="dw" class="btnNum" data-rank="3">
+							</div>
+						</td>
+
+						<td align="left">#카페/음식점</td>
+
+						<td align="left">즉석명함</td>
+						<td>2020-03-25</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('518');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('518','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('518','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="10" data-item-index="10">
+						<td>517<input type="hidden" data-name="idx" value="517"></td>
+						<td>
+							<input type="checkbox" value="517" name="del_chk_arr" id="del_chk_arr_10">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585123074737.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_517" value="2" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="517" data-direction="up" class="btnNum" data-rank="2">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="517" data-direction="dw" class="btnNum" data-rank="2">
+							</div>
+						</td>
+
+						<td align="left">#카페/음식점</td>
+
+						<td align="left">즉석스티커</td>
+						<td>2020-03-25</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('517');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('517','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('517','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+
+
+					<tr align="center" bgcolor="#FFFFFF" data-list-index="11" data-item-index="11">
+						<td>516<input type="hidden" data-name="idx" value="516"></td>
+						<td>
+							<input type="checkbox" value="516" name="del_chk_arr" id="del_chk_arr_11">
+						</td>
+						<!-- 이미지링크 작업예정 -->
+						<td>
+
+							<a href="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" target="_img"><img src="/image/imgview.do?imgPath=/_main/3232261265_1585122801430.jpg" width="50" height="20"></a>
+
+						</td>
+						<td>
+							<input type="text" data-name="chnum" name="chnum" id="chnum_516" value="1" style="width:40px; padding-left:0; text-align:center;ime-mode:disabled" title="조정값" maxlength="2" numberonly="true">
+							<div class="r_sortmove">
+								<img src="/image/num_plus.jpg" style="cursor:pointer;" title="위로" data-idx="516" data-direction="up" class="btnNum" data-rank="1">
+								<br>
+								<img src="/image/num_minus.jpg" style="cursor:pointer;" title="아래로" data-idx="516" data-direction="dw" class="btnNum" data-rank="1">
+							</div>
+						</td>
+
+						<td align="left">#카페/음식점</td>
+
+						<td align="left">테이블 POP</td>
+						<td>2020-03-25</td>
+						<td>khome_manager</td>
+						<td class="btn_confirm">
+							<a class="btn_update" href="javascript:fn_moveMainRegi('516');">
+								<span class="button">수정</span>
+							</a>
+							<a class="btn_delete" href="javascript:;" data-btn-delete-item="">
+								<span class="button">삭제</span>
+							</a>
+						</td>
+						<td class="btn_confirm">
+							<a class="btn_show" href="javascript:fn_viewYn('516','Y');">
+								<span class="button">노출</span>
+							</a>
+							<a class="btn_hide" href="javascript:fn_viewYn('516','N');">
+								<span class="button">숨김</span>
+							</a>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="btn_list01 btn_list">
+				<button type="button" id="btnListDel" onclick="fn_chkMainDel();">삭제<span class="sound_only"></span></button>
+				<button type="button" data-action="listUpdate" style="color:white; background-color:#3b5998;">순서저장<span class="sound_only"></span></button>
+			</div>
+		</form>
+
+		<div class="local_desc03 local_desc">
+			<p>
+				<strong> 이 컨텐츠는 다수의 이미지를 슬라이드로 표시하는 컨텐츠 입니다.<br> 노출되는 컨텐츠는 순서를 설정할 수 있습니다.<br>순서를 설정하고, 순서 저장 버튼을 눌러야 순서 변경이 최종 반영됩니다.</strong>
+			</p>
+		</div>
+
+		<noscript>
+			<p>
+				귀하께서 사용하시는 브라우저는 현재 <strong>자바스크립트를 사용하지 않음</strong>으로 설정되어 있습니다.<br>
+				<strong>자바스크립트를 사용하지 않음</strong>으로 설정하신 경우는 수정이나 삭제시 별도의 경고창이 나오지 않으므로 이점 주의하시기 바랍니다.
+			</p>
+		</noscript>
+
+	</div>
+</div>
+
+<footer id="ft">
+	<p>
+		Copyright &copy; www.kinkos.co.kr. All rights reserved.<br>
+		<a href="#">상단으로</a>
+	</p>
+</footer>
+
+</body>
+</html>
