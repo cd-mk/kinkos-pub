@@ -37,25 +37,24 @@
       .ord_detail_receipt .popup_content .box.ord_info .box_item span {font-size:14px;}
 
       .ord_detail_receipt .popup_content h4 {margin-top:20px;font-size: 16px;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr {display:flex;flex-direction:row;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;width:100%;height:auto;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th {white-space:nowrap;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(1) {flex:1 1 auto;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(2) {flex:0 0 15%;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(3) {flex:0 0 12%;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(4) {flex:0 0 12%;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(5) {flex:0 0 12%;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(6) {flex:0 0 10%;}
-
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr {display:flex;flex-direction:row;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;width:100%;height:auto;}
+
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th {font-size:14px; padding:10px 10px; white-space:nowrap;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(1) {flex:1 1 auto;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(2) {flex:0 0 15%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(3) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(4) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(5) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(6) {flex:0 0 10%;}
+
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(1) {flex:1 1 auto;}
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(2) {flex:0 0 15%;}
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(3) {flex:0 0 12%;}
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(4) {flex:0 0 12%;}
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(5) {flex:0 0 12%;}
       .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(6) {flex:0 0 10%;}
-      .ord_detail_receipt .popup_content .order_list_pc table thead th {font-size:14px;padding:10px 10px;}
-      .ord_detail_receipt .popup_content .order_list_pc table tbody td {font-size:12px;padding:15px 10px;}
-      .ord_detail_receipt .popup_content .order_list_pc table tbody td.td_prd_info {font-size: 10px;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td {font-size:12px;padding:15px 10px;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td.td_prd_info {font-size: 10px;}
       .ord_detail_receipt .popup_content .pdt_info .pdt_info_title .pdt_info_title_name {font-size: 12px;}
       .ord_detail_receipt .popup_content .pdt_info .pdt_info_option {font-size: 10px;}
 
@@ -63,6 +62,9 @@
 
       .ord_detail_receipt .popup_content .btn_wrap {display:none;}
     }
+
+    .ord_detail_receipt .popup_content .order_list_pc table {border-top:0;}
+    .ord_detail_receipt .popup_content .order_list_pc table tbody tr th {border-top:2px solid #222222;}
   </style>
   <!-- //@2020.04.01 추가 -->
 
@@ -129,7 +131,8 @@
               <col width="15%" />
               <col width="10%" />
             </colgroup>
-            <thead>
+            <tbody>
+            <!-- @2020.04.01 추가 -->
             <tr>
               <th scope="col">상품/옵션정보</th>
               <th scope="col">정상가</th>
@@ -138,8 +141,8 @@
               <th scope="col">할인액</th>
               <th scope="col">할인%</th>
             </tr>
-            </thead>
-            <tbody>
+            <!-- @2020.04.01 추가 -->
+
             <!-- loop -->
             <tr>
               <td class="td_prd_info">
@@ -175,6 +178,135 @@
             </tr>
             <!-- loop -->
 
+            <tr>
+              <td class="td_prd_info">
+                <div class="pdt_info">
+                  <div class="pdt_info_title">
+                    <span class="pdt_info_title_name">즉석명함 100매</span>
+                  </div>
+                </div>
+                <div class="pdt_info_option">
+                  <p><span>[사이즈] 90mm X 55mm</span></p>
+                  <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                  <p class="add_option">
+                    <i class="ico cramp"><span class="blind"></span></i>
+                    <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                  </p>
+                </div>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>50,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>1</strong></p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>45,000</strong>개</p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>5,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>10%</strong></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="td_prd_info">
+                <div class="pdt_info">
+                  <div class="pdt_info_title">
+                    <span class="pdt_info_title_name">즉석명함 100매</span>
+                  </div>
+                </div>
+                <div class="pdt_info_option">
+                  <p><span>[사이즈] 90mm X 55mm</span></p>
+                  <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                  <p class="add_option">
+                    <i class="ico cramp"><span class="blind"></span></i>
+                    <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                  </p>
+                </div>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>50,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>1</strong></p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>45,000</strong>개</p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>5,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>10%</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="td_prd_info">
+                <div class="pdt_info">
+                  <div class="pdt_info_title">
+                    <span class="pdt_info_title_name">즉석명함 100매</span>
+                  </div>
+                </div>
+                <div class="pdt_info_option">
+                  <p><span>[사이즈] 90mm X 55mm</span></p>
+                  <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                  <p class="add_option">
+                    <i class="ico cramp"><span class="blind"></span></i>
+                    <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                  </p>
+                </div>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>50,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>1</strong></p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>45,000</strong>개</p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>5,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>10%</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="td_prd_info">
+                <div class="pdt_info">
+                  <div class="pdt_info_title">
+                    <span class="pdt_info_title_name">즉석명함 100매</span>
+                  </div>
+                </div>
+                <div class="pdt_info_option">
+                  <p><span>[사이즈] 90mm X 55mm</span></p>
+                  <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                  <p class="add_option">
+                    <i class="ico cramp"><span class="blind"></span></i>
+                    <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                  </p>
+                </div>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>50,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>1</strong></p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>45,000</strong>개</p>
+              </td>
+              <td class="td_prd_price">
+                <p><strong>5,000</strong>개</p>
+              </td>
+              <td class="td_prd_amount">
+                <p><strong>10%</strong></p>
+              </td>
+            </tr>
             <tr>
               <td class="td_prd_info">
                 <div class="pdt_info">
