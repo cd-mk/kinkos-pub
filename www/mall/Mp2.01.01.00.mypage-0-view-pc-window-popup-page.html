@@ -25,6 +25,47 @@
   <link rel="stylesheet" href="../css/common.css">
   <!-- only sub -->
   <link rel="stylesheet" href="../css/sub.css">
+
+  <!-- @2020.04.01 추가 -->
+  <style>
+    @media print {
+      @page {size:21.0cm 29.7cm; margin:0.5cm 0.5cm;}
+
+      .popup_receipt_view.has_window_popup .inner .title {font-size:16px;padding:20px 30px;}
+
+      .ord_detail_receipt .popup_content .box.ord_info .box_item {padding:10px 20px;}
+      .ord_detail_receipt .popup_content .box.ord_info .box_item span {font-size:14px;}
+
+      .ord_detail_receipt .popup_content h4 {margin-top:20px;font-size: 16px;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr {display:flex;flex-direction:row;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;width:100%;height:auto;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th {white-space:nowrap;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(1) {flex:1 1 auto;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(2) {flex:0 0 15%;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(3) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(4) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(5) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead tr th:nth-child(6) {flex:0 0 10%;}
+
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr {display:flex;flex-direction:row;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;width:100%;height:auto;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(1) {flex:1 1 auto;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(2) {flex:0 0 15%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(3) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(4) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(5) {flex:0 0 12%;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(6) {flex:0 0 10%;}
+      .ord_detail_receipt .popup_content .order_list_pc table thead th {font-size:14px;padding:10px 10px;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody td {font-size:12px;padding:15px 10px;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody td.td_prd_info {font-size: 10px;}
+      .ord_detail_receipt .popup_content .pdt_info .pdt_info_title .pdt_info_title_name {font-size: 12px;}
+      .ord_detail_receipt .popup_content .pdt_info .pdt_info_option {font-size: 10px;}
+
+      .ord_detail_receipt .popup_content .order_list_pc .ord_detail_receipt_noti {font-size:12px;}
+
+      .ord_detail_receipt .popup_content .btn_wrap {display:none;}
+    }
+  </style>
+  <!-- //@2020.04.01 추가 -->
+
 </head>
 
 <!--
