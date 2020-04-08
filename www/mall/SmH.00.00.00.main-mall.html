@@ -1702,12 +1702,45 @@
 
     $selectbox.on("click", _onToggleOptionBox);
     $optionbox.on("mouseleave", _onCloseOptionBox);
+  };
+
+  // @2020.04.08 추가
+  function visualImageObjectFitForIE()
+  {
+    var visual_wrap = $('.visual_wrap');
+    if( visual_wrap.length )
+    {
+      var bg_img = visual_wrap.find('.bg_img');
+      if( bg_img.length )
+      {
+        bg_img.each(function() {
+          var obj = $(this);
+          var mobile_image = obj.find('.mo_only');
+          if( mobile_image.length )
+          {
+            var mobile_image_src = mobile_image.attr('src');
+            if( mobile_image_src )
+            {
+              var mobile_image_div = $('<div class="mo_object_fit_image"></div>');
+              mobile_image_div.css('background-image', 'url(' + mobile_image_src + ')');
+
+              obj.parent().append( mobile_image_div );
+            }
+          }
+        });
+      }
+    }
   }
+  // //@2020.04.08 추가
 
   $(document).ready(function () {
     slideInit();
 
     $(".service_select").setCustomizedSelectbox();
+
+    // @2020.04.08 추가
+    visualImageObjectFitForIE();
+    // //@2020.04.08 추가
   });
 </script>
  <!-- //SCRIPT -->
