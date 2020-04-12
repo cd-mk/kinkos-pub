@@ -41,9 +41,11 @@
     <!-- 홈페이지 타입에 따라 gnb_wrap에 클래스 추가 회사소개 : company, 쇼핑몰: mall -->
     <div class="gnb_wrap">
       <div class="inner">
-        <button type="button" class="btn_toggle">
+        <!-- @2020.04.12 회사소개, 온라인몰 메인 URL 추가 -->
+        <button type="button" class="btn_toggle" data-company-main-url="/www/company/MH.00.00.00.main-www.html" data-mall-main-url="/www/mall/SmH.00.00.00.main-mall.html">
           <strong>온라인몰 바로가기</strong>
         </button>
+        <!-- //@2020.04.12 회사소개, 온라인몰 메인 URL 추가 -->
 
         
         <div class="gnb_quick company js_gnb" data-gnb="company">
@@ -55,14 +57,6 @@
           </ul>
         </div>
         <div class="gnb_quick mall js_gnb" data-gnb="mall">
-          <button type="button" class="link_item all_menu">
-            <i>
-              <span></span>
-              <span></span>
-              <span></span>
-            </i>
-            <!--<span>전체카테고리</span>-->
-          </button>
           <ul>
             <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">즉석상품</a></li>
             <li><a href="/www/mall/Sm1.01.00.00.pdt-list.html">히트상품</a></li>
