@@ -627,24 +627,47 @@ function tab(e, num) {
       self.window.close();
     });
   }
-})();
 
-// (swiper)visual section slide
-var visual = new Swiper('.visual_wrap', {
-  slidesPerView: 1,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-  },
-  navigation: {
-    nextEl: '.service_wrap .swiper-button-next',
-    prevEl: '.service_wrap .swiper-button-prev',
-  },
-  pagination: {
-    el: '.visual_wrap .swiper-pagination',
-    clickable: true,
+  function visualWrapSlide()
+  {
+    var visual_wrap = $('.visual_wrap');
+    var visualWrapSlideCount = parseInt( visual_wrap.find('.swiper-slide').length, 10 );
+    var opt = '';
+
+    if( visualWrapSlideCount > 1 )
+    {
+      opt = {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: '.service_wrap .swiper-button-next',
+          prevEl: '.service_wrap .swiper-button-prev',
+        },
+        pagination: {
+          el: '.visual_wrap .swiper-pagination',
+          clickable: true,
+        }
+      };
+    }
+    else
+    {
+      opt = {
+        slidesPerView: 1,
+        loop: false
+      };
+    }
+
+    var visualWrapSlide = new Swiper('.visual_wrap', opt);
   }
-});
+
+  if( $('.visual_wrap').length )
+  {
+    visualWrapSlide();
+  }
+})();
 
 function clickshow(elem, ID) {
   var menu = document.getElementById(ID);
@@ -664,20 +687,39 @@ function clickshow(elem, ID) {
 
   function popupZoneSlide()
   {
-    var opt = {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      centeredSlides: true,
-      loopFillGroupWithBlank: true,
-      autoplay: {
-        delay: 3000,
-      },
-      navigation: {
-        nextEl: '#popupzone .swiper-button-next',
-        prevEl: '#popupzone .swiper-button-prev',
-      }
-    };
+    var popupzone = $('#popupzone');
+    var swiperSlideCount = parseInt( popupzone.find('.swiper-slide').length );
+    var opt = '';
+
+    if( swiperSlideCount > 1 )
+    {
+      opt = {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        centeredSlides: true,
+        loopFillGroupWithBlank: true,
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: '#popupzone .swiper-button-next',
+          prevEl: '#popupzone .swiper-button-prev',
+        }
+      };
+    }
+    else
+    {
+      opt = {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: false,
+        centeredSlides: true,
+        loopFillGroupWithBlank: true
+      };
+
+      popupzone.find('.pg_nav').removeClass('pc').hide();
+    }
 
     var popupZoneSlide = new Swiper('#popupzone', opt);
 
@@ -759,10 +801,65 @@ function clickshow(elem, ID) {
     }
   }
 
+  function prdListVisualWrapInit() {
+    var prdList_visual_wrap = $('.prdList_visual_wrap');
+    var bg_img = prdList_visual_wrap.find('.bg_img');
+
+    if( bg_img.length )
+    {
+      bg_img.each(function() {
+        var obj = $(this);
+
+        var pc_tablet = obj.find('.pc_tablet');
+
+        var imgSrc = pc_tablet.attr('src');
+
+        obj.css({
+          'background-image': 'url(' + imgSrc + ')',
+          'background-repeat': 'no-repeat',
+          'background-position-x': '50%',
+          'background-position-y': '0px',
+          'background-size': 'cover'
+        });
+
+        pc_tablet.css('opacity', '0');
+      });
+    }
+  }
+
   $(document).ready(function() {
     if( $('.visual_wrap').length )
     {
       visualWrapInit();
     }
+
+    if( $('.prdList_visual_wrap').length )
+    {
+      prdListVisualWrapInit();
+    }
   });
+})(window);
+
+// 마이페이지 SNB HEIGHT 동기화
+(function () {
+  function mpgWrapHeightSyncSnb() {
+    var sidebar = $('.sidebar');
+    var snb = $('.snb');
+
+    var sidebarHeight = parseInt( sidebar.outerHeight(true), 10 );
+    var snbHeight = parseInt( snb.outerHeight(true), 10 );
+
+    console.log( sidebarHeight + '__' + snbHeight );
+
+    if( snbHeight > sidebarHeight )
+    {
+      sidebar.css('min-height', snbHeight + 'px');
+    }
+
+  }
+
+  if( $('.cont_wrap.sidebar').length )
+  {
+    mpgWrapHeightSyncSnb();
+  }
 })(window);

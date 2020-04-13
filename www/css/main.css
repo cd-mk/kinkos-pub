@@ -275,8 +275,9 @@
   .consultPrd_wrap .consult_tag > div > div a {padding:0 15px;font-size:16px;line-height:34px;height:34px;}
   .consultPrd_wrap .consult_slide .item_box .txt .name {font-size:16px; line-height:26px;}
   .consultPrd_wrap .consult_slide .item_box .txt .price {font-size:16px; overflow:hidden;margin-top: 8px;display: block;}
-  .consultPrd_wrap .consult_slide .item_box .txt .price img {margin-right:2px; float:right;} 
-  .consultPrd_wrap .consult_tag > div > div.swiper-slide-thumb-active > a, .consultPrd_wrap .consult_tag > div > div a:hover {line-height: 30px;font-weight:400;}  
+  .consultPrd_wrap .consult_slide .item_box .txt .price img {margin-right:2px; float:right;}
+	.consultPrd_wrap .consult_tag > div > div.swiper-slide-thumb-active > a {line-height:30px; font-weight:bold !important; color:#03a2ea !important; border:2px solid #03a2ea !important;}
+	.consultPrd_wrap .consult_tag > div > div a:hover {font-weight:400; color:#000; border:2px solid #fff;}
 }
 @media screen and (max-width:768px) { 
   .consultPrd_wrap .consult_slide {width:100%;}

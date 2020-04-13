@@ -944,7 +944,7 @@ html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-
 }
 
 /* product list key visual */
-.prdList_visual_wrap {position:relative;width:100%;max-width:1530px;height:400px;overflow:hidden;}
+.prdList_visual_wrap {position:relative;width:100%;max-width:1530px;height:600px;overflow:hidden;}
 .prdList_visual_wrap .txt {position:absolute; top:0; left:40%; width:1530px; transform:translateX(-50%); opacity:0; transition:all .7s ease-in-out;}
 .prdList_visual_wrap .swiper-slide-active .txt {transition:all 0.5s; top:60px; opacity:1}
 .prdList_visual_wrap .color_white {color:#fff;}

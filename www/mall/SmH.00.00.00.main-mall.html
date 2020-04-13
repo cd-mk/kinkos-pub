@@ -1430,11 +1430,15 @@
       reloadSlide(speedSlide, pcOpt, moOpt);
     })();
 
+    // @2020-04-13 수정
     // 상담 상품
     (function () {
       var pcOpt = {
         slidesPerView: 1,
         spaceBetween: 30,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         thumbs: {
           swiper: {
             el: '.consult_tag',
@@ -1451,6 +1455,9 @@
         direction: 'horizontal',
         slidesPerView: 1,
         spaceBetween: 30,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         thumbs: {
           swiper: {
             el: '.consult_tag',
@@ -1465,6 +1472,7 @@
         centeredSlides: true,
         roundLengths: true
       };
+      // //@2020-04-13 수정
 
       var consultSlide = isMobile
         ? new Swiper('.consult_slide', moOpt)

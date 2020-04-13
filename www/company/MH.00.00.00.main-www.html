@@ -554,7 +554,6 @@
                 value = $selectedItem.data();
             value = value && value.value || null;
 
-            console.log(value);
             // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
             // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
             // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
@@ -696,11 +695,15 @@
       reloadSlide(instaSlide, pcOpt, moOpt);
     })();
 
+    // @2020-04-13 수정
     // 서비스상품 슬라이드
     var service_navi = new Swiper('.service_wrap .service_select', {
       slidesPerView: 'auto',
       autoplay: true,
       direction: 'vertical',
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
       thumbs: {
         swiper: service_thumb
       }
@@ -710,6 +713,9 @@
       slidesPerView: 'auto',
       autoplay: true,
       loop: true,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
       navigation: {
         nextEl: '.service_wrap .swiper-button-next',
         prevEl: '.service_wrap .swiper-button-prev',
@@ -722,6 +728,7 @@
         swiper: service_navi
       }
     });
+    // //@2020-04-13 수정
   }
 
   function visualImageObjectFitForIE()

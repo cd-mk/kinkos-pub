@@ -282,15 +282,68 @@
 
 <script>
   (function () {
-    var prdList_visual = new Swiper('.prdList_visual_wrap', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: '.prdList_visual_wrap .swiper-pagination',
-        clickable: true,
+    // @2020.04.13 수정
+    function prdListVisualSlide() {
+      var prdListVisualWrap = $('.prdList_visual_wrap');
+      var prdListVisualWrapSlideCount = parseInt( prdListVisualWrap.find('.swiper-slide').length, 10 );
+      var opt = '';
+
+      if( prdListVisualWrapSlideCount > 1 )
+      {
+        opt = {
+          slidesPerView: 1,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.prdList_visual_wrap .swiper-pagination',
+            clickable: true,
+          }
+        };
       }
-    });
+      else
+      {
+        opt = {
+          slidesPerView: 1,
+          loop: false
+        };
+      }
+
+      var prdListVisualWrapSlide = new Swiper('.prdList_visual_wrap', opt);
+    }
+
+    function visualImageObjectFitForIE()
+    {
+      var visual_wrap = $('.prdList_visual_wrap');
+      if( visual_wrap.length )
+      {
+        var bg_img = visual_wrap.find('.bg_img');
+        if( bg_img.length )
+        {
+          bg_img.each(function() {
+            var obj = $(this);
+            var mobile_image = obj.find('.mo_only');
+            if( mobile_image.length )
+            {
+              var mobile_image_src = mobile_image.attr('src');
+              if( mobile_image_src )
+              {
+                var mobile_image_div = $('<div class="mo_object_fit_image"></div>');
+                mobile_image_div.css('background-image', 'url(' + mobile_image_src + ')');
+
+                obj.parent().append( mobile_image_div );
+              }
+            }
+          });
+        }
+      }
+    }
+
+    prdListVisualSlide();
+
+    visualImageObjectFitForIE();
+    // //@2020.04.13 수정
   })();
 </script>
  <!-- //SCRIPT -->

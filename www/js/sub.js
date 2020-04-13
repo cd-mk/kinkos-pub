@@ -98,10 +98,9 @@ function slideInit() {
   var detailThumb = new Swiper('.pdt_thumbs .inner', {
     slidesPerView: 'auto',
     spaceBetween: 15,
-    navigation: {
-      nextEl: '.pdt_thumbs .swiper-button-next',
-      prevEl: '.pdt_thumbs .swiper-button-prev',
-    },
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true
   });
   var detailPhoto = new Swiper('.photo_box', {
     slidesPerView: 1,
@@ -113,10 +112,6 @@ function slideInit() {
 
 $(window).on('load', function() {
   slideInit();
-});
-
-$(document).ready(function() {
-  //slideInit();
 });
 
 // layer popup
