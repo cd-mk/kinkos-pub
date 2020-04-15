@@ -449,7 +449,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .center_list_wrap .list_box .list_item .locat_list.etc > li:first-child {margin-left:0;}
 .center_list_wrap .list_box .list_item .locat_list.etc > li > a {display:block; width:220px; height:40px; line-height:39px; border-radius:30px; border:1px solid #d9d9d9; text-align:center;}
 .center_list_wrap .list_box .list_item .locat_list.etc > li:hover > a {border-color:#03a2ea;}
-.center_list_wrap .map_box {float:right; width:465px; height:495px; margin-left:30px; padding:18px 18px 20px; background:#fff;}
+.center_list_wrap .map_box {float:right; width:465px; height:auto; min-height:495px; margin-left:30px; padding:18px 18px 20px; background:#fff;}
 .center_list_wrap .map_box .map_view {width:100%;height:300px;overflow:hidden;}
 .center_list_wrap .map_box .map_view img {width:100%}
 .center_list_wrap .map_box .map_info {margin-top:20px;font-size:14px;overflow:hidden;}
@@ -471,7 +471,7 @@ p+.btn_wrap {margin-top:40px !important;}
 
 
 
- .center_list_wrap {padding:50px 0;}
+ .center_list_wrap {padding:50px 15px;}
  .center_list_wrap .inner {padding:0;}
  .center_list_wrap .inner .tit_1depth {width:15%;}
  .center_list_wrap .tit_box {float:none; width:100%; margin-left:0; margin-bottom:40px;}
@@ -543,8 +543,8 @@ p+.btn_wrap {margin-top:40px !important;}
   .lnb_box .login_item .login_item_depth2 a {float:left; padding:15px 15px; font-size:14px; line-height:20px; color:#222222 !important; text-decoration:none;}
   .lnb_box .login_item .login_item_depth2 a:hover {color:#03a2ea; text-decoration:underline;}
   .lnb_box .login_item .login_item_depth2 a.lnb_btn_usage_guide {float:right; font-weight:400;}
-  .lnb_box .login_item .status_logout {font-size:18px;padding:0 15px 20px}
-  .lnb_box .login_item .status_login {font-size:18px;padding:0 15px 20px}
+  .lnb_box .login_item .status_logout {font-size:16px;padding:0 15px 20px}
+  .lnb_box .login_item .status_login {font-size:16px;padding:0 15px 20px}
   .lnb_box .login_item .status_login strong {font-size:30px;font-weight:700;}
   .lnb_box .login_item a {text-decoration:underline;font-weight:700;}
 

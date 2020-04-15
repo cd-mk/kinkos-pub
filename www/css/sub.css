@@ -772,8 +772,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .noti.small {margin-top: 30px;font-size:16px;color:#0075c2;}
 }
 
-
-
+@media screen and (max-width:400px) {
+  .tit_box.mid h3 {font-size:16px;}
+}
 
  /* sub title */
 .tit_sub {text-align:center;max-width:1530px;margin:55px auto 0;}
@@ -1902,6 +1903,13 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap .signs .visual_box.item1::before {background-image:url(../image/company/sub/signs-main-1.png);}
 .service_info_wrap .signs .visual_box.item2::before {background-image:url(../image/company/sub/signs-main-2.png);}
 
+.service_info_wrap .signs .visual_box, .service_info_wrap .scan .visual_box {display:flex; flex-direction:column; align-items:center; justify-content:center;}
+.service_info_wrap .signs .icon_list ul {border-bottom:1px solid #e7e7e7;}
+.service_info_wrap .design .visual_box p {text-align:center;}
+.service_info_wrap.recommend_products .visual_box p {text-align:center;}
+.service_info_wrap .dhl .visual_box strong {display:block; width:100%; text-align:center;}
+.service_info_wrap .dhl .visual_box p {text-align:center;}
+
 .service_info_wrap .scan .visual_box::before {background-image:url(../image/company/sub/scan-main-1.png);}
 .service_info_wrap .scan .faq_tab_con {margin-top:0;}
 .service_info_wrap .scan .accor_wrap .accor_item .accor_title a {padding:19px 0;}
@@ -2176,8 +2184,11 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_detail .pdt_item {border-top:1px solid #e7e7e7;border-bottom:1px solid #ccc;padding:40px 0 20px;margin-top:0;}
 
 .pdt_detail .pdt_item .shipping_info {width:100%; height:auto; margin:0 0 30px 0; padding:0 0 0 20px; font-size:18px; font-weight:400; box-sizing:border-box;}
-.pdt_detail .pdt_item .shipping_info::before {content:""; padding-left:30px; background:URL(../image/common/ico-shipping-info.png) no-repeat;
-background-size:18px auto; background-position:center left;}
+.pdt_detail .pdt_item .shipping_info::before {content:""; padding-left:30px; background:URL(../image/common/ico-shipping-info.png) no-repeat; background-size:18px auto; background-position:center left;}
+
+@media screen and (max-width:980px) {
+  .pdt_detail .pdt_item .shipping_info {padding-left:0; font-size:14px;}
+}
 
 .pdt_detail .size {}
 .pdt_detail .size .form_name {}
@@ -4754,3 +4765,12 @@ body.calendarDefault .dropdown-menu {transform:translateY(10px);}
   .file_box .statusbar .abort_delete {position:absolute; top:7px; right:5px; width:auto; margin:0; padding:4px 8px;}
 }
 /* //센터안내 > 파일주문 */
+
+/* 이용가이드 */
+.userguide_wrap .bbs_detal .content_bbs .img_content {display:flex; width:100%; align-items:center; justify-content:center;}
+/* //이용가이드 */
+
+/* SCROLL TOP */
+#scroll-top {display:none; position:fixed; bottom:25px; right:10px; margin-left:-150px; opacity:0.8;}
+#scroll-top a {width:40px; height:34px; display:block; background:URL(../image/common/scroll-top-arrow.png) center center no-repeat; background-color:rgba(51, 51, 51, 0.8); background-size:40% auto; text-indent:100%; white-space:nowrap; overflow:hidden; -webkit-transition:1s; -moz-transition:1s; transition:1s;}
+/* //SCROLL TOP */
