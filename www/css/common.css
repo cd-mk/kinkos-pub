@@ -452,13 +452,12 @@ p+.btn_wrap {margin-top:40px !important;}
 .center_list_wrap .map_box {float:right; width:465px; height:auto; min-height:495px; margin-left:30px; padding:18px 18px 20px; background:#fff;}
 .center_list_wrap .map_box .map_view {width:100%;height:300px;overflow:hidden;}
 .center_list_wrap .map_box .map_view img {width:100%}
-.center_list_wrap .map_box .map_info {margin-top:20px;font-size:14px;overflow:hidden;}
-.center_list_wrap .map_box .map_info strong {display:block; font-size:20px; color:#222;}
-.center_list_wrap .map_box .map_info [class*="info_"] {float:left; width:50%; margin-top:20px;}
-.center_list_wrap .map_box .map_info [class*="info_"] > li {margin-top:10px; color:#444;}
-.center_list_wrap .map_box .map_info [class*="info_"] > li:first-child {margin-top:0;}
-.center_list_wrap .map_box .map_info .info_date {padding-left:22px;}
-.center_list_wrap .map_box .map_info .info_etc {padding-left:26px;}
+.center_list_wrap .map_box .map_info {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start; margin-top:20px; font-size:14px; overflow:hidden;}
+.center_list_wrap .map_box .map_info strong {flex: 0 0 100%; display:block; font-size:20px; color:#222;}
+.center_list_wrap .map_box .map_info [class*="info_"] {width:auto; margin-top:20px;}
+.center_list_wrap .map_box .map_info [class*="info_"] > li {line-height:160%; color:#444;}
+.center_list_wrap .map_box .map_info .info_date {flex:1 1 auto;}
+.center_list_wrap .map_box .map_info .info_etc {flex:0 0 auto; max-width:50%; padding-left:10px;}
 
 .center_list_wrap .map_box .map-content {display:none;padding:0;}
 .center_list_wrap .map_box .map-content.active {display:block;}
@@ -1002,7 +1001,7 @@ html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-
 
 
 body.open {overflow:hidden;}
-.bg_img {position:relative; display:inline-block; width:100%; height:100%; overflow:hidden;}
+.bg_img {position:relative; display:inline-block; width:100%; height:100%; background-size:auto 600px !important; overflow:hidden;}
 .bg_img img {position:absolute; top:50%; left:50%; transform:translate(-50% , -50%); width:100%; height:100%; pointer-events:none;}
 
 .pg_nav_wrap {position:relative;width:112px;height:18px;}

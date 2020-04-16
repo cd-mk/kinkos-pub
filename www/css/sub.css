@@ -791,7 +791,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .tit_sub.bg_guide {background-image:url('../image/company/sub/bg-guide.png');}
 .tit_sub.bg_membership {background-image:url('../image/company/sub/bg-membership.png');}
 .tit_sub.type_bg h2 {color:#fff;}
-.tit_sub.type_bg p {margin-top:18px; font-size:1em; color:#fff;}
+.tit_sub.type_bg p {margin-top:18px; font-size:1em; line-height:1.36; color:#fff;}
 
 @media screen and (max-width:768px) {
   .tit_sub {max-width:100%;padding:0 20px;margin-bottom:30px;}
@@ -1015,6 +1015,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_view_wrap .item4 .item .item_wrap .img_product {flex:0 0 60px; width:60px; height:60px;}
 .center_view_wrap .item4 .item ul {margin-top:16px;}
 .center_view_wrap .item4 .item ul > li {margin-top:8px;}
+.center_view_wrap .item4 .item ul > li.editor {line-height:140%;}
 .center_view_wrap .item4 .item ul > li:first-child {margin-top:0;}
 .center_view_wrap .item4 .item .item_wrap ul {flex:1 1 auto; margin:0; padding:0 0 0 20px;}
 .center_view_wrap .item5 .map_view {height:510px;overflow: hidden;}
@@ -2041,7 +2042,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_list .pdt_thumb .img img {display:block;width:100%;}
 .pdt_list .pdt_thumb .thumb_flag {position:absolute; top:0; right:21px; height:65px;width:65px;background:#5b5b5b url(../image/mall/product/thumb-flag-quick.png) no-repeat 50% 50%/cover;}
 .pdt_list .pdt_thumb:hover .thumb_flag {background-color:#03a2ea;}
-.pdt_list .pdt_thumb .tag {position:absolute; top:15px; left:15px; width:25%; max-width:70px; height:25%; max-height:70px; margin:0; padding:0; background-repeat:no-repeat; background-position:center; background-size:100% auto;}
+.pdt_list .pdt_thumb .tag {position:absolute; top:15px; left:15px; width:20%; max-width:50px; height:20%; max-height:50px; margin:0; padding:0; background-repeat:no-repeat; background-position:center; background-size:100% auto;}
 .pdt_list .pdt_thumb .tag.speed {background-image:url(../image/mall/main/ico_pdt_tag_speed_pc.png);}
 .pdt_list .pdt_thumb .tag.event {background-image:url(../image/mall/main/ico_pdt_tag_event_pc.png);}
 .pdt_list .pdt_thumb .tag.new {background-image:url(../image/mall/main/ico_pdt_tag_new_pc.png);}
@@ -2070,7 +2071,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .pdt_list .inner .item_list li {width:50%; padding-left:15px; margin-bottom:40px; float:left;margin-right:0;}
   .pdt_list .inner .item_list li:nth-child(2n)::before {content:"";display:block;}
 
-  .pdt_list .pdt_thumb .tag {top:4vw; left:4vw; width:20%; max-width:93px; min-width:40px; height:20%; max-height:93px; min-height:40px;}
+  .pdt_list .pdt_thumb .tag {top:3vw; left:3vw; width:20%; max-width:50px; min-width:40px; height:20%; max-height:50px; min-height:40px;}
   .pdt_list .pdt_thumb .tag.speed {background-image:url(../image/mall/main/ico_pdt_tag_speed_mo.png);}
   .pdt_list .pdt_thumb .tag.event {background-image:url(../image/mall/main/ico_pdt_tag_event_mo.png);}
   .pdt_list .pdt_thumb .tag.new {background-image:url(../image/mall/main/ico_pdt_tag_new_mo.png);}
@@ -4767,7 +4768,7 @@ body.calendarDefault .dropdown-menu {transform:translateY(10px);}
 /* //센터안내 > 파일주문 */
 
 /* 이용가이드 */
-.userguide_wrap .bbs_detal .content_bbs .img_content {display:flex; width:100%; align-items:center; justify-content:center;}
+.userguide_wrap .bbs_detal .content_bbs .img_content img {display:inline-block;}
 /* //이용가이드 */
 
 /* SCROLL TOP */
