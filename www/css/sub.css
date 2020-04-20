@@ -989,9 +989,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_view_wrap .item3 .item:first-child {width:26%;}
 .center_view_wrap .item3 .item strong {font-size:1em;}
 .center_view_wrap .item3 .item ul {margin-top:26px;}
-.center_view_wrap .item3 .item ul > li {float:left; display:table; table-layout:fixed; width:calc(100% / 3);}
+.center_view_wrap .item3 .item ul > li {float:left; display:table; table-layout:fixed; width:calc(100% / 2);}
 .center_view_wrap .item3 .item:first-child ul > li {display:table; table-layout:fixed; width:100%;}
-.center_view_wrap .item3 .item ul > li:nth-child(n + 4) {margin-top:16px;}
+.center_view_wrap .item3 .item ul > li:nth-child(n + 3) {margin-top:16px;}
 
 .center_view_wrap .item3 .item .ico_product {display:table-cell; width:60px; height:60px; background:url('../image/company/sub/ico-product.png') no-repeat;}
 .center_view_wrap .item3 .item .ico_product.windows {background-position:0 0;}
