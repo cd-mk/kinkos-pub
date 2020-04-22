@@ -472,13 +472,6 @@
 </div>
 <!-- //WRAP -->
 
-<!-- @2020.04.14 SCROLL TOP 추가 -->
-<!-- SCROLL TOP -->
-<div id="scroll-top"><a href="#top">Scroll to Top</a></div>
-<!-- //SCROLL TOP -->
-<!-- //@2020.04.14 SCROLL TOP 추가 -->
-
-
 <!-- SCRIPT -->
 <script src="../js/jquery/jquery-1.12.4.min.js"></script>
 <script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
@@ -487,29 +480,6 @@
 <script src="../js/swiper/swiper.min.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/sub.js"></script>
-
-<script>
-  // @2020.04.14 SCROLL TOP 추가
-  (function () {
-    $(document).ready(function() {
-      $(window).on('scroll', function () {
-        if ($(this).scrollTop() > 100) {
-          $('#scroll-top').fadeIn();
-        } else {
-          $('#scroll-top').fadeOut();
-        }
-      });
-
-      $('#scroll-top a').on('click', function(e) {
-        $('body,html').animate({
-          scrollTop: 0
-        }, 300);
-        return false;
-      });
-    });
-  })();
-  // //@2020.04.14 SCROLL TOP 추가
-</script>
 <!-- //SCRIPT -->
 
 

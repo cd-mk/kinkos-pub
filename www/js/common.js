@@ -491,13 +491,9 @@ $(document).ready(function () {
     setGnb();
     mobileGnb();
   });
+
   $("#footer").load("../common/include/common.html .footer_inner", function () {
-
   });
-
-
-  
-
 });
 
 
@@ -863,3 +859,30 @@ function clickshow(elem, ID) {
     mpgWrapHeightSyncSnb();
   }
 })(window);
+
+// @2020.04.14 SCROLL TOP 추가
+(function () {
+  $(document).ready(function() {
+    // <div id="scroll-top"><a href="#top">Scroll to Top</a></div>
+    if(! $('#scroll-top').length )
+    {
+      $('body').append('<div id="scroll-top"><a href="#top">Scroll to Top</a></div>');
+    }
+
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 100) {
+        $('#scroll-top').fadeIn();
+      } else {
+        $('#scroll-top').fadeOut();
+      }
+    });
+
+    $('#scroll-top a').on('click', function(e) {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 300);
+      return false;
+    });
+  });
+})(window);
+// //@2020.04.14 SCROLL TOP 추가

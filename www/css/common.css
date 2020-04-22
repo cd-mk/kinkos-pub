@@ -582,6 +582,9 @@ p+.btn_wrap {margin-top:40px !important;}
   .lnb_box .mymenu_box .my_link .point{color:#03a2ea;}
   .lnb_box .mymenu_box .my_link strong {color:inherit;}
 
+  .lnb_box .mymenu_box .my_link.file_order::before {position:relative; top:2px; margin-right:25px; transform:unset; background:url('../image/company/main/ico-quick01.png') no-repeat center; background-size:12px auto; background-position:0 0;}
+  .lnb_box .mymenu_box .my_link.grid_1 {width:100%;}
+
   .lnb_box .mymenu_box.company .my_link {color:#000;}
   .lnb_box .mymenu_box.company .my_link:hover {color:#03a2ea;}
 
