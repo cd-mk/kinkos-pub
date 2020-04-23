@@ -1,4 +1,3 @@
-
 function slideInit() {
   var isMobile = chkViewport();
 
@@ -110,8 +109,10 @@ function slideInit() {
   });
 }
 
-$(window).on('load', function() {
-  slideInit();
+$(function () {
+  $(window).on('load', function() {
+    slideInit();
+  });
 });
 
 // layer popup
@@ -129,8 +130,7 @@ var toggleReview = function () {
   });
 };
 
-function mallSubPageTitle( title )
-{
+function mallSubPageTitle( title ) {
   if( title )
   {
     var setObj = '';
@@ -162,8 +162,7 @@ function mallSubPageTitle( title )
   }
 }
 
-function callCalendar( obj )
-{
+function callCalendar( obj ) {
     if( obj )
     {
         var callback = obj.attr('data-callback');
@@ -211,314 +210,291 @@ function callCalendar( obj )
     }
 }
 
-$(document).ready(function() {
-  toggleV();
+$(function () {
+  function init() {
+    if( $('.page_tab').length )
+    {
+      $('.page_tab').each(function() {
+        var obj = $(this);
 
-  toggleReview();
-
-  if( $('.callCalendarBtn').length )
-  {
-      $('.callCalendarBtn').each(function() {
-          var obj = $(this);
-
-          callCalendar( obj );
+        if( obj.is('[class*="sub_type"]') === false )
+        {
+          $(window).on('load', function() {
+            pageTabInit( obj );
+          });
+        }
       });
-  }
-});
+    }
 
-(function($) {
-  "use strict";
+    if( $('.tab_area.anchor').length )
+    {
+      pageTabAnchorInit();
+    }
 
-  $(function() {
-    function init() {
-      if( $('.page_tab').length )
-      {
-        $('.page_tab').each(function() {
-          var obj = $(this);
+    if( $('.question_tooltip').length )
+    {
+      $(document).on('click', function(e) {
+        var obj = $(e.target);
 
-          if( obj.is('[class*="sub_type"]') === false )
-          {
-            $(window).on('load', function() {
-              pageTabInit( obj );
-            });
-          }
-        });
-      }
-
-      if( $('.tab_area.anchor').length )
-      {
-        pageTabAnchorInit();
-      }
-
-      if( $('.question_tooltip').length )
-      {
-        $(document).on('click', function(e) {
-          var obj = $(e.target);
-
-          if( obj.hasClass('question_tooltip') )
-          {
-            e.preventDefault();
-
-            questionTooltipToggle( obj );
-          }
-          else
-          {
-            var closeExec = questionTooltipHasClassSearch( obj );
-
-            if( closeExec === 'Y' )
-            {
-              questionTooltipClose();
-            }
-          }
-        });
-      }
-
-      if( $('.input-group.date').length )
-      {
-        datePickerInit();
-      }
-
-      if( $('.coupon_toggle_btn').length )
-      {
-        $(document).on('click', '.coupon_toggle_btn', function(e) {
+        if( obj.hasClass('question_tooltip') )
+        {
           e.preventDefault();
 
-          var obj = $(this);
-
-          productDetailCouponToggle( obj );
-        });
-      }
-    }
-
-    function pageTabInit( obj )
-    {
-      if( obj )
-      {
-        var eventBind = obj.attr('data-event-bind');
-        if( eventBind !== 'Y' )
-        {
-          obj.attr('data-event-bind', 'Y').attr('data-first-offset-top', parseInt( obj.offset().top, 10 ));
-
-          $(window).on('scroll', function() {
-            var winWidth = parseInt( window.innerWidth, 10 );
-
-            if( winWidth < 1025 )
-            {
-              var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
-              var objOffsetTop = parseInt( obj.attr('data-first-offset-top'), 10 );
-
-              if( objOffsetTop < windowScrollTop )
-              {
-                obj.addClass('fixed');
-              }
-              else
-              {
-                obj.removeClass('fixed');
-              }
-            }
-          });
-
-          pageTabAnchorActiveFunc( obj );
+          questionTooltipToggle( obj );
         }
-      }
-    }
+        else
+        {
+          var closeExec = questionTooltipHasClassSearch( obj );
 
-    function pageTabAnchorInit()
-    {
-      var tabArea = $('.tab_area');
-      var pageTab = $('.anchor .page_tab');
-
-      pageTab.attr('data-current-id', '1').find('#tab01').addClass('active');
-
-      var pageTabItems = tabArea.find('.center_view_wrap .item_box');
-      if( pageTabItems.length )
-      {
-        var pageTabItemCount = parseInt( pageTabItems.length, 10 );
-        pageTab.attr('data-max-count', pageTabItemCount);
-
-        pageTabItems.each(function(idx) {
-          var currentObj = $(this);
-
-          currentObj.attr('data-target', (idx+1));
-
-          currentObj=null;
-        });
-      }
-
-      var pageTabItemCalc = function() {
-        var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
-
-        pageTabItems.each(function() {
-          var currentObj = $(this);
-          var currentObjTop = parseInt( currentObj.offset().top, 10 );
-          var currentObjHeight = parseInt( currentObj.height(), 10 );
-          var currentObjOuterHeight = parseInt( currentObj.outerHeight(true), 10 );
-          var currentObjHeightCalc = currentObjOuterHeight > currentObjHeight ? currentObjOuterHeight - currentObjHeight : 0;
-          var currentObjBottom = currentObjTop + (currentObjHeight - currentObjHeightCalc);
-
-          if( windowScrollTop < currentObjBottom )
+          if( closeExec === 'Y' )
           {
-            var prevTarget = pageTab.attr('data-current-id');
-            var target = currentObj.attr('data-target');
-
-            if( prevTarget !== target )
-            {
-              var targetObj = pageTab.find('#tab' + target);
-              if( targetObj.length )
-              {
-                pageTab.attr('data-current-id', target).find('ul li').removeClass('active');
-                targetObj.addClass('active');
-
-                pageTabAnchorActiveFunc( pageTab );
-              }
-
-              targetObj=null;
-            }
-
-            prevTarget=null;
-            target=null;
-
-            return false;
+            questionTooltipClose();
           }
-
-          currentObj=null;
-          currentObjTop=null;
-          currentObjHeight=null;
-          currentObjOuterHeight=null;
-          currentObjHeightCalc=null;
-          currentObjBottom=null;
-        });
-
-        windowScrollTop=null;
-      };
-
-      $(window).scroll(function () {
-        pageTabItemCalc();
+        }
       });
     }
 
-    function pageTabAnchorActiveFunc( pageTab )
+    if( $('.input-group.date').length )
     {
-      if( pageTab )
+      datePickerInit();
+    }
+
+    if( $('.coupon_toggle_btn').length )
+    {
+      $(document).on('click', '.coupon_toggle_btn', function(e) {
+        e.preventDefault();
+
+        var obj = $(this);
+
+        productDetailCouponToggle( obj );
+      });
+    }
+  }
+
+  function pageTabInit( obj ) {
+    if( obj )
+    {
+      var eventBind = obj.attr('data-event-bind');
+      if( eventBind !== 'Y' )
       {
-        var pageTabAnchors = pageTab.find('ul li');
-        var scrollSpeed = 200;
+        obj.attr('data-event-bind', 'Y').attr('data-first-offset-top', parseInt( obj.offset().top, 10 ));
 
-        if( pageTabAnchors.length )
-        {
-          pageTabAnchors.each(function() {
-            var currentObj = $(this);
+        $(window).on('scroll', function() {
+          var winWidth = parseInt( window.innerWidth, 10 );
 
-            if( currentObj.hasClass('active') === true )
+          if( winWidth < 1025 )
+          {
+            var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
+            var objOffsetTop = parseInt( obj.attr('data-first-offset-top'), 10 );
+
+            if( objOffsetTop < windowScrollTop )
             {
-              var parentObj = currentObj.closest('ul');
-              var windownWidth = parseInt( window.innerWidth, 10 );
-              var currentObjWidth = parseInt( currentObj.outerWidth( true ), 10 );
-              var currentObjPosition = currentObj.position();
-              var currentObjLeft = parseInt( currentObjPosition.left, 10 );
+              obj.addClass('fixed');
+            }
+            else
+            {
+              obj.removeClass('fixed');
+            }
+          }
+        });
 
-              parentObj.stop();
+        pageTabAnchorActiveFunc( obj );
+      }
+    }
+  }
 
-              if( currentObjLeft < 1 )
-              {
-                currentObjLeft = Math.abs(currentObjLeft);
-                var scrollLeft = parseInt( parentObj.scrollLeft(), 10 ) - currentObjLeft;
+  function pageTabAnchorInit() {
+    var tabArea = $('.tab_area');
+    var pageTab = $('.anchor .page_tab');
+
+    pageTab.attr('data-current-id', '1').find('#tab01').addClass('active');
+
+    var pageTabItems = tabArea.find('.center_view_wrap .item_box');
+    if( pageTabItems.length )
+    {
+      var pageTabItemCount = parseInt( pageTabItems.length, 10 );
+      pageTab.attr('data-max-count', pageTabItemCount);
+
+      pageTabItems.each(function(idx) {
+        var currentObj = $(this);
+
+        currentObj.attr('data-target', (idx+1));
+
+        currentObj=null;
+      });
+    }
+
+    var pageTabItemCalc = function() {
+      var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
+
+      pageTabItems.each(function() {
+        var currentObj = $(this);
+        var currentObjTop = parseInt( currentObj.offset().top, 10 );
+        var currentObjHeight = parseInt( currentObj.height(), 10 );
+        var currentObjOuterHeight = parseInt( currentObj.outerHeight(true), 10 );
+        var currentObjHeightCalc = currentObjOuterHeight > currentObjHeight ? currentObjOuterHeight - currentObjHeight : 0;
+        var currentObjBottom = currentObjTop + (currentObjHeight - currentObjHeightCalc);
+
+        if( windowScrollTop < currentObjBottom )
+        {
+          var prevTarget = pageTab.attr('data-current-id');
+          var target = currentObj.attr('data-target');
+
+          if( prevTarget !== target )
+          {
+            var targetObj = pageTab.find('#tab' + target);
+            if( targetObj.length )
+            {
+              pageTab.attr('data-current-id', target).find('ul li').removeClass('active');
+              targetObj.addClass('active');
+
+              pageTabAnchorActiveFunc( pageTab );
+            }
+
+            targetObj=null;
+          }
+
+          prevTarget=null;
+          target=null;
+
+          return false;
+        }
+
+        currentObj=null;
+        currentObjTop=null;
+        currentObjHeight=null;
+        currentObjOuterHeight=null;
+        currentObjHeightCalc=null;
+        currentObjBottom=null;
+      });
+
+      windowScrollTop=null;
+    };
+
+    $(window).scroll(function () {
+      pageTabItemCalc();
+    });
+  }
+
+  function pageTabAnchorActiveFunc( pageTab ) {
+    if( pageTab )
+    {
+      var pageTabAnchors = pageTab.find('ul li');
+      var scrollSpeed = 200;
+
+      if( pageTabAnchors.length )
+      {
+        pageTabAnchors.each(function() {
+          var currentObj = $(this);
+
+          if( currentObj.hasClass('active') === true )
+          {
+            var parentObj = currentObj.closest('ul');
+            var windownWidth = parseInt( window.innerWidth, 10 );
+            var currentObjWidth = parseInt( currentObj.outerWidth( true ), 10 );
+            var currentObjPosition = currentObj.position();
+            var currentObjLeft = parseInt( currentObjPosition.left, 10 );
+
+            parentObj.stop();
+
+            if( currentObjLeft < 1 )
+            {
+              currentObjLeft = Math.abs(currentObjLeft);
+              var scrollLeft = parseInt( parentObj.scrollLeft(), 10 ) - currentObjLeft;
+
+              parentObj.stop().animate({
+                'scrollLeft': scrollLeft + 'px'
+              }, scrollSpeed);
+            }
+            else
+            {
+              var currentObjRight = currentObjWidth + currentObjLeft;
+              if( currentObjRight > windownWidth ) {
+                var scrollLeft = currentObjWidth + (currentObjRight - windownWidth);
 
                 parentObj.stop().animate({
                   'scrollLeft': scrollLeft + 'px'
                 }, scrollSpeed);
               }
-              else
-              {
-                var currentObjRight = currentObjWidth + currentObjLeft;
-                if( currentObjRight > windownWidth ) {
-                  var scrollLeft = currentObjWidth + (currentObjRight - windownWidth);
-
-                  parentObj.stop().animate({
-                    'scrollLeft': scrollLeft + 'px'
-                  }, scrollSpeed);
-                }
-              }
-
-              return false;
             }
-          });
-        }
+
+            return false;
+          }
+        });
       }
     }
+  }
 
-    function questionTooltipToggle( obj )
+  function questionTooltipToggle( obj ) {
+    if( obj )
     {
-      if( obj )
+      var target = obj.attr('data-target');
+      if( target )
       {
-        var target = obj.attr('data-target');
-        if( target )
+        var targetObj = $('#' + target);
+        if( targetObj.length )
         {
-          var targetObj = $('#' + target);
-          if( targetObj.length )
+          if( targetObj.hasClass('show') )
           {
-            if( targetObj.hasClass('show') )
-            {
-              questionTooltipClose();
-            }
-            else
-            {
-              questionTooltipFunc( obj, targetObj );
-            }
+            questionTooltipClose();
+          }
+          else
+          {
+            questionTooltipFunc( obj, targetObj );
           }
         }
       }
     }
+  }
 
-    function questionTooltipFunc( obj, targetObj )
+  function questionTooltipFunc( obj, targetObj ) {
+    if( obj && targetObj )
     {
-      if( obj && targetObj )
-      {
-        var objOffset = obj.offset();
-        var objLeft = parseInt( objOffset.left, 10 );
-        var objTop = parseInt( objOffset.top, 10 );
-        var objHeight = parseInt( obj.outerHeight( true ), 10 );
-        objTop = ( objTop + objHeight ) + 5;
+      var objOffset = obj.offset();
+      var objLeft = parseInt( objOffset.left, 10 );
+      var objTop = parseInt( objOffset.top, 10 );
+      var objHeight = parseInt( obj.outerHeight( true ), 10 );
+      objTop = ( objTop + objHeight ) + 5;
 
-        targetObj.addClass('show').css({
-          'left': objLeft + 'px',
-          'top': objTop + 'px',
-        });
-      }
+      targetObj.addClass('show').css({
+        'left': objLeft + 'px',
+        'top': objTop + 'px',
+      });
+    }
+  }
+
+  function questionTooltipHasClassSearch( obj ) {
+    var closeExec = 'Y';
+
+    if( obj )
+    {
+      var findClassArray = [
+        'question_tooltip',
+        'question_tooltip_layer_popup',
+        'question_tooltip_layer_popup_content',
+      ];
+
+      findClassArray.some(function(findClass) {
+        if( obj.hasClass( findClass ) )
+        {
+          closeExec = 'N';
+          return closeExec;
+        }
+      });
     }
 
-    function questionTooltipHasClassSearch( obj )
-    {
-      var closeExec = 'Y';
+    return closeExec;
+  }
 
-      if( obj )
-      {
-        var findClassArray = [
-          'question_tooltip',
-          'question_tooltip_layer_popup',
-          'question_tooltip_layer_popup_content',
-        ];
+  function questionTooltipClose() {
+    $('.question_tooltip_layer_popup').removeClass('show');
+  }
 
-        findClassArray.some(function(findClass) {
-          if( obj.hasClass( findClass ) )
-          {
-            closeExec = 'N';
-            return closeExec;
-          }
-        });
-      }
+  function datePickerInit() {
+    $('.input-group.date').each(function() {
+      var obj = $(this);
 
-      return closeExec;
-    }
-
-    function questionTooltipClose()
-    {
-      $('.question_tooltip_layer_popup').removeClass('show');
-    }
-
-    function datePickerInit()
-    {
-      /*$('.input-daterange').datepicker({
+      obj.datepicker({
         format: 'yyyy-mm-dd',
         container: 'body',
         orientation: 'bottom left',
@@ -526,56 +502,46 @@ $(document).ready(function() {
         toggleActive: true,
         language: 'ko',
         todayHighlight: true,
-        beforeShowMonth: function(date){
-          if (date.getMonth() == 8) {
-            return false;
-          }
-        }
-      });*/
+      });
+    });
+  }
 
-      $('.input-group.date').each(function() {
+  function productDetailCouponToggle( obj ) {
+    if( obj )
+    {
+      var parentObj = obj.closest('.coupon_use_wrap');
+      var targetObj = parentObj.find('.coupon_items');
+      var isShow = targetObj.attr('data-is-show');
+
+      if( isShow !== 'Y' )
+      {
+        obj.addClass('show');
+        targetObj.attr('data-is-show', 'Y');
+        targetObj.show();
+      }
+      else
+      {
+        obj.removeClass('show');
+        targetObj.attr('data-is-show', 'N');
+        targetObj.hide();
+      }
+    }
+  }
+
+  $(document).ready(function() {
+    toggleV();
+
+    toggleReview();
+
+    if( $('.callCalendarBtn').length )
+    {
+      $('.callCalendarBtn').each(function() {
         var obj = $(this);
 
-        obj.datepicker({
-          format: 'yyyy-mm-dd',
-          container: 'body',
-          orientation: 'bottom left',
-          autoclose: true,
-          toggleActive: true,
-          language: 'ko',
-          todayHighlight: true,
-        });
+        callCalendar( obj );
       });
     }
 
-    function productDetailCouponToggle( obj )
-    {
-      if( obj )
-      {
-        var parentObj = obj.closest('.coupon_use_wrap');
-        var targetObj = parentObj.find('.coupon_items');
-        var isShow = targetObj.attr('data-is-show');
-
-        if( isShow !== 'Y' )
-        {
-          obj.addClass('show');
-          targetObj.attr('data-is-show', 'Y');
-          targetObj.show();
-        }
-        else
-        {
-          obj.removeClass('show');
-          targetObj.attr('data-is-show', 'N');
-          targetObj.hide();
-        }
-      }
-    }
-
-    $(document).ready(function() {
-      init();
-    });
+    init();
   });
-})(jQuery);
-
-
-
+});
