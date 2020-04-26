@@ -443,7 +443,6 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .title_bbs .division strong {color:#222; font-size:1em;display:inline-block;padding-right:17px;}
 .content_bbs {border-bottom:1px solid #ccc;}
 .pre_wrap {padding:60px 40px;}
-.img_content img {display:block; max-width:100%;}
 .txt_content {color:#333; font-size:1em; font-weight:400; /*white-space:pre-line;*/ line-height:1.5;}
 .txt_content em {display:block; text-indent:10px; font-style:normal; font-size:16px; font-weight:300; line-height:24px;}
 .txt_content strong {font-weight:500;}
@@ -647,6 +646,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .agree_box {padding:40px 0 40px 40px;border-bottom:1px solid #ccc;}
 .agree_box label {padding-top:0;}
 .agree_box label::before {top:2px;}
+
+.join_wrap .accor_wrap .accor_con {max-height:200px !important;}
+.join_wrap .accor_wrap .accor_con .terms_wrap .tit_box {margin-top:40px;}
 
 @media screen and (max-width:980px) {
   .accor_wrap .accor_item .accor_title {padding:0;}
@@ -1763,7 +1765,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_list .toggle_view i:before {height:2px; top:9px; left:4px; width:12px;background:#fff; content:""; position:absolute;}
 .service_info_list .toggle_view i:after {height:12px; left:9px; top:4px; width:2px;background:#fff; content:""; position:absolute;}
 .service_info_list .toggle_view.on i:after {display:none;}
-.service_info_list .link_view {display:inline-block;position:absolute;bottom:40px;font-size:1em;color:#03a2ea;font-weight:700;padding-top:50px;padding-bottom: 3px;border-bottom:1px solid #03a2ea;}
+.service_info_list .link_view {display:inline-block;position:relative;font-size:1em;color:#03a2ea;font-weight:700;padding-top:50px;padding-bottom: 3px;border-bottom:1px solid #03a2ea;}
 
 .service_info_list .service_info_view_wrap {width:100%;height:auto;background:#f3f4f6;}
 .service_info_list .service_info_view {position:relative;overflow:hidden;height:0;opacity:0;transition:all 0.5s;}
