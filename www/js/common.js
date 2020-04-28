@@ -853,4 +853,31 @@ $(function () {
     });
   });
   // //@2020.04.14 SCROLL TOP 추가
+
+  function mallMainBannerWrapInit()
+  {
+    var bannerWrap = $('.banner_wrap');
+    var bannerItem = bannerWrap.find('.item');
+
+    bannerItem.each(function() {
+      var obj = $(this);
+      var anchor = obj.find('>a');
+      var img = anchor.find('.pc');
+      var imgSrc = img.attr('src');
+
+      anchor.css({
+        'background-image': 'url("' + imgSrc + '")',
+        'background-size': 'cover',
+        'background-position': 'center',
+        'background-repeat': 'no-repeat'
+      });
+    });
+  }
+
+  $(document).ready(function() {
+    if( $('.mall.is-main').length )
+    {
+      mallMainBannerWrapInit();
+    }
+  });
 });
