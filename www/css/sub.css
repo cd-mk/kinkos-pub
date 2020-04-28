@@ -1164,13 +1164,14 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .offer_service {text-align: left;}
 .offer_service li {display:inline-block;padding-right:20px;margin-bottom:25px;}
 .offer_service li:first-child {padding-left:0;}
-.offer_service li span {display:inline-block;width:70px;height:auto;letter-spacing:-1px;text-align:center;color:#222;}
-.offer_service li span:before {content:"";clear:both;display:block;width:70px;height:auto;min-height:30px;background-position:center;background-repeat:no-repeat;margin:0;}
-.offer_service li span.offer_1:before {background-image:url(/image/company/sub/offer-1.jpg);}
-.offer_service li span.offer_2:before {background-image:url(/image/company/sub/offer-2.jpg);}
-.offer_service li span.offer_3:before {background-image:url(/image/company/sub/offer-3.jpg);}
-.offer_service li span.offer_4:before {background-image:url(/image/company/sub/offer-4.jpg);}
-.offer_service li span.offer_5:before {background-image:url(/image/company/sub/offer-5.jpg);}
+.offer_service li span {display:inline-block;width:100px;height:50px;letter-spacing:-1px;text-align:center;color:#222;background-size:contain;background-position:center;background-repeat:no-repeat;margin:0;}
+.offer_service li span::before {content:"";clear:both;display:block;width:100px;height:25px;background-size:contain;background-position:center;background-repeat:no-repeat;margin:0;}
+.offer_service li span.offer_1::before {background-image:url(/image/company/sub/offer-1.jpg);}
+.offer_service li span.offer_2::before {background-image:url(/image/company/sub/offer-2.jpg);}
+.offer_service li span.offer_3::before {background-image:url(/image/company/sub/offer-3.jpg);}
+.offer_service li span.offer_4::before {background-image:url(/image/company/sub/offer-4.jpg);}
+.offer_service li span.offer_5::before {background-image:url(/image/company/sub/offer-5.jpg);}
+.offer_service li span.offer_6::before {background-image:url(/image/company/sub/offer-6.jpg);}
 
 @media screen and (max-width:1600px) {
   .center_info_wrap .sch_box .sch_item {width:22.69%;}
