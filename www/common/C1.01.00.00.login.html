@@ -87,6 +87,19 @@
                     <div class="form_item">
                       <input type="password" name="" id="" title="비밀번호 입력" placeholder="비밀번호" required="" value="1234567">
                     </div>
+
+                    <!-- @2020.04.28 추가 -->
+                    <div class="form_item not_vaild">
+                      <div class="form_inp col2 with_btn email_auth">
+                        <input type="text" name="" title="이메일 인증번호" placeholder="이메일 인증번호">
+                        <button type="button" class="btn type01">이메일 인증</button>
+                        <span id="timer" class="timer" style="display: block;">10:00</span>
+                      </div>
+
+                      <p class="txt_vaild">5회 비번 틀려서 이메일 인증바랍니다.</p>
+                    </div>
+                    <!-- //@2020.04.28 추가 -->
+
                     <div class="btn_wrap center login">
                       <a href="#popup1" class="btn large type01 btn_popup">로그인</a>
                     </div>

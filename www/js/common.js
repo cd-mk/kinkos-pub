@@ -707,7 +707,7 @@ $(function () {
     {
       popupZoneSlide();
 
-      popupZoneInit();
+      //popupZoneInit();
     }
     else
     {
