@@ -33,15 +33,30 @@ function reloadSlide(slideTarget, pcOpt, moOpt) {
   });
 }
 
+// clickshow 개발 수정
 function clickshow(elem, ID) {
   var menu = document.getElementById(ID);
+  var param;
   if (elem.id != 'closed') {
     elem.id = 'closed';
     menu.className = "closed";
+    param = "closed";
   } else {
     elem.id = 'opened';
     menu.className = "opened";
+    param = "opened";
   }
+  $.ajax({
+    url         : "/front/common/popupZoneYn.ajax",
+    data        : {param : param},
+    type        : "post",
+    async: false,
+    success: function (data) {
+    },
+    error: function (res) {
+      alert(res.responseText)
+    }
+  });
 }
 
 function tab(e, num) {
@@ -72,13 +87,17 @@ function tab(e, num) {
 var setGnb = function () {
   if ($("#wrap").is(".company") === true) {
     $(".gnb_wrap").addClass("company");
-    $(".btn_toggle strong").text("온라인몰");
-    $(".logo").attr('href', '/www/company/MH.00.00.00.main-www.html');
+    // 개발 수정
+    //$(".btn_toggle strong").text($('[data-mall-name]').text());
+    //$(".logo").attr('href', '/home/main.do');
+    // //개발 수정
   }
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
-    $(".btn_toggle strong").text("Kinko's");
-    $(".logo").attr('href', '/www/mall/SmH.00.00.00.main-mall.html');
+    // 개발 수정
+    //$(".btn_toggle strong").text($('[data-mall-name]').text());
+    //$(".logo").attr('href', '/btc/main.do');
+    // //개발 수정
   }
   var $gnb, chkGnb;
 
@@ -122,7 +141,14 @@ var setGnb = function () {
     if( target.hasClass('js_center') ) {
       $("[data-snb=" + chkGnb + "]").hide();
       $('.center_list_wrap').stop().slideDown(400);
-
+      // 개발 추가
+      var	center_latitude2 ='126.8825167';
+      var	center_longitude2 ='37.4799034';
+      var	center_operating_hour2 ='월 ~ 일 24시간';
+      var	center_service_name2 ='즉석스티커 가능센터';
+      var	center_name2 ='가산디지털단지센터';
+      initMap2(center_latitude2,center_longitude2,center_name2,center_operating_hour2,center_service_name2);
+      // //개발 추가
       $('.sub_gnb_wrap').slideUp(400);
       $('.gnb_quick.mall').removeClass('active').removeClass('off');
       $('.gnb_quick.company').removeClass('off').removeClass('active');
@@ -139,6 +165,10 @@ var setGnb = function () {
       e.preventDefault();
 
       var $gnbWrap = $(this).closest('.gnb_wrap');
+
+      if($gnbWrap.hasClass('comp')){
+        return false;
+      }
 
       $('.center_list_wrap').stop().slideUp(400);
       $(this).addClass('on');
@@ -201,18 +231,18 @@ var setGnb = function () {
   }
   toggleGnb();
 
-
+// 개발 수정(미사용) - common2.js 에서 처리
   // map link (2019.11/20)
-  $('ul.locat_list li').on('mouseleave focusout', function () {
-    var tab_id = $(this).attr('data-tab');
-
-    $('ul.locat_list li').removeClass('active');
-    $('.map-content').removeClass('active');
-
-    $(this).addClass('active');
-    $("#" + tab_id).addClass('active');
-  })
-
+//  $('ul.locat_list li').on('mouseleave focusout', function () {
+//    var tab_id = $(this).attr('data-tab');
+//
+//    $('ul.locat_list li').removeClass('active');
+//    $('.map-content').removeClass('active');
+//
+//    $(this).addClass('active');
+//    $("#" + tab_id).addClass('active');
+//  })
+// //개발 수정(미사용)
 
 }
 
@@ -509,18 +539,9 @@ $(function () {
       }
     });
 
-
-    // 임시 header, footer영역 로드
-    $("#header").load("../common/include/common.html header", function () {
-      // header 로드 후 header 관련 function 실행
-      setGnb();
-      mobileGnb();
-    });
-
-    $("#footer").load("../common/include/common.html .footer_inner", function () {
-    });
   });
 
+  //tab
   tab('#tab', 0);
   tab('#tab1', 0);
 
@@ -744,8 +765,8 @@ $(function () {
     popupZoneSlideSetObj = setTimeout(function() { popupZoneSlideInit(); }, popupZoneSlideSetDelay);
   });
 
-  // 메인 비쥬얼 배너 PC 버전
-  // 팝업존 PC 버전
+// 메인 비쥬얼 배너 PC 버전
+// 팝업존 PC 버전
   function visualWrapInit() {
     var visual_wrap = $('.visual_wrap');
     var bg_img = visual_wrap.find('.bg_img');
@@ -810,7 +831,7 @@ $(function () {
     }
   });
 
-  // 마이페이지 SNB HEIGHT 동기화
+//마이페이지 SNB HEIGHT 동기화
   function mpgWrapHeightSyncSnb() {
     var sidebar = $('.sidebar');
     var snb = $('.snb');
