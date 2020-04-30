@@ -701,6 +701,8 @@ $(function () {
           prevEl: '#popupzone .swiper-button-prev',
         }
       };
+
+      popupzone.find('.pg_nav').addClass('show');
     }
     else
     {
@@ -711,8 +713,6 @@ $(function () {
         centeredSlides: true,
         loopFillGroupWithBlank: true
       };
-
-      popupzone.find('.pg_nav').removeClass('pc').hide();
     }
 
     var popupZoneSlide = new Swiper('#popupzone', opt);

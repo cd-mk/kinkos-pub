@@ -99,13 +99,29 @@ function slideInit() {
     spaceBetween: 15,
     freeMode: true,
     watchSlidesVisibility: true,
-    watchSlidesProgress: true
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.pdt_thumbs .swiper-button-next',
+      prevEl: '.pdt_thumbs .swiper-button-prev',
+    },
   });
   var detailPhoto = new Swiper('.photo_box', {
     slidesPerView: 1,
     thumbs: {
       swiper: detailThumb
     }
+  });
+
+  var detailOptionMaterial = new Swiper('.pdt_option_material_wrap .inner', {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.pdt_option_material_wrap .swiper-button-next',
+      prevEl: '.pdt_option_material_wrap .swiper-button-prev',
+    },
   });
 }
 
