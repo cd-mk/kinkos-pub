@@ -4790,8 +4790,8 @@ body.calendarDefault .dropdown-menu {transform:translateY(10px);}
 /* //마이페이지 > 조정 이력 */
 
 /* 센터안내 > 파일주문 */
-.file_box .statusbar {display:flex; flex-direction:row; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:10px 0 0 0;}
-.file_box .statusbar .filename {flex:1 1 auto; word-break:break-all; -ms-word-break:break-all;}
+.file_box .statusbar {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:10px 0;}
+.file_box .statusbar .filename {flex:1 1 auto; font-size:18px; line-height:44px; word-break:break-all; -ms-word-break:break-all;}
 .file_box .statusbar .filesize {flex:0 0 auto;}
 .file_box .statusbar .progressBar {flex:0 0 auto;}
 .file_box .statusbar .progressBar > div {width:100% !important; text-align:center;}
