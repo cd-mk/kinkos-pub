@@ -866,6 +866,54 @@ $(function () {
       }
     });
 
+    var scrollTopSetObj = '';
+    var scrollTopSetDelay = 50;
+
+    var scrollTopInit = function() {
+      if( $('.quick_menu').length ) {
+        var quickMenu = $('.quick_menu');
+        var quickMenuOffset = quickMenu.offset();
+        var quickMenuHeight = parseInt( quickMenu.outerHeight( true ), 10 );
+        var quickMenuBottom = parseInt( quickMenuOffset.top, 10 ) + quickMenuHeight;
+
+        var scrollTopObj = $('#scroll-top');
+        var scrollTopObjOffset = scrollTopObj.offset();
+        var scrollTopObjTop = parseInt( scrollTopObjOffset.top, 10 );
+
+        if( scrollTopObjTop < quickMenuBottom ) {
+          var quickMenuPositionTop = parseInt( quickMenu.position().top, 10 );
+          var quickMenuPositionBottom = quickMenuPositionTop + quickMenuHeight;
+          var winHeight = parseInt( window.innerHeight, 10 );
+          var calcScrollTopObjBottom = 0;
+
+          if( quickMenuPositionBottom < winHeight ) {
+            calcScrollTopObjBottom = ( winHeight - quickMenuPositionBottom ) - 40;
+
+            scrollTopObj.css({
+              'bottom': calcScrollTopObjBottom + 'px',
+              'right': ''
+            });
+          } else {
+            scrollTopObj.css({
+              'bottom': '20px',
+              'right': '70px'
+            });
+          }
+        } else {
+          scrollTopObj.css({
+            'bottom': '',
+            'right': ''
+          });
+        }
+      }
+    };
+
+    $(window).on('resize', function() {
+      clearTimeout( scrollTopSetObj );
+
+      scrollTopSetObj = setTimeout(function() { scrollTopInit(); }, scrollTopSetDelay);
+    });
+
     $('#scroll-top a').on('click', function(e) {
       $('body,html').animate({
         scrollTop: 0
