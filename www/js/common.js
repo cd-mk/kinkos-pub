@@ -944,7 +944,7 @@ $(function () {
   }
 
   $(document).ready(function() {
-    if( $('.mall.is-main').length )
+    if( $('.is-main').length )
     {
       mallMainBannerWrapInit();
     }

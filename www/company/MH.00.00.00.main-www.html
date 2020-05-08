@@ -696,14 +696,16 @@
     })();
 
     // @2020-04-13 수정
+      // @2020.05.08 수정
     // 서비스상품 슬라이드
     var service_navi = new Swiper('.service_wrap .service_select', {
       slidesPerView: 'auto',
       autoplay: true,
       direction: 'vertical',
-      freeMode: true,
+      freeMode: false,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      centeredSlides: true,
       thumbs: {
         swiper: service_thumb
       }
@@ -713,9 +715,10 @@
       slidesPerView: 'auto',
       autoplay: true,
       loop: true,
-      freeMode: true,
+      freeMode: false,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      centeredSlides: true,
       navigation: {
         nextEl: '.service_wrap .swiper-button-next',
         prevEl: '.service_wrap .swiper-button-prev',
@@ -728,6 +731,7 @@
         swiper: service_navi
       }
     });
+      // //@2020.05.08 수정
     // //@2020-04-13 수정
   }
 
