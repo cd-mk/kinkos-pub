@@ -777,6 +777,7 @@ $(function () {
         var obj = $(this);
 
         var pc_tablet = obj.find('.pc_tablet');
+        var mo_only = obj.find('.mo_only');
 
         var imgSrc = pc_tablet.attr('src');
 
@@ -789,6 +790,7 @@ $(function () {
         });
 
         pc_tablet.css('opacity', '0');
+        mo_only.css('opacity', '0');
       });
     }
   }
