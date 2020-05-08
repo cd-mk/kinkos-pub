@@ -1617,53 +1617,6 @@
     })();
   }
 
-  // @2020.05.08 기업몰 메인 추가
-  function corporateSlideInit() {
-    var isMobile = chkViewport();
-
-    if( $('.recommendPrd_wrap').length ) {
-      $('.recommendPrd_wrap').each(function(idx) {
-        var recommendPrd_wrap = $(this);
-
-        var pcOpt = {
-          slidesPerView: 4,
-          spaceBetween: 30,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          navigation: {
-            nextEl: recommendPrd_wrap.find('.swiper-button-next'),
-            prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
-          }
-        };
-        var moOpt = {
-          slidesPerView: 'auto',
-          spaceBetween: 15,
-          speed: 500,
-          grabCursor: true,
-          navigation: {
-            nextEl: recommendPrd_wrap.find('.swiper-button-next'),
-            prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
-          },
-          scrollbar: {
-            el: recommendPrd_wrap.find('.swiper-scrollbar'),
-            hide: false,
-          }
-        };
-
-        var recommendPrd_wrap_id = 'recommendPrd_wrap_' + (idx+1);
-
-        recommendPrd_wrap.addClass(recommendPrd_wrap_id);
-
-        var recommendProSlide = isMobile
-                ? new Swiper('.' + recommendPrd_wrap_id + ' .mainPrd_item', moOpt)
-                : new Swiper('.' + recommendPrd_wrap_id + ' .mainPrd_item', pcOpt);
-
-        reloadSlide(recommendProSlide, pcOpt, moOpt);
-      });
-    }
-  }
-  // //@2020.05.08 기업몰 메인 추가
-
   //service select
   $.fn.setCustomizedSelectbox = function () {
     var $selectbox = $(this),
@@ -1724,9 +1677,60 @@
     $optionbox.on("mouseleave", _onCloseOptionBox);
   };
 
+  $(document).ready(function () {
+    slideInit();
+
+    //visualImageObjectFitForIE();
+  });
+
+
   // @2020.05.08 기업몰 메인 추가
-  function visualImageObjectFitForIE()
-  {
+  function corporateSlideInit() {
+    var isMobile = chkViewport();
+
+    if( $('.recommendPrd_wrap').length ) {
+      $('.recommendPrd_wrap').each(function(idx) {
+        var recommendPrd_wrap = $(this);
+
+        var pcOpt = {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          navigation: {
+            nextEl: recommendPrd_wrap.find('.swiper-button-next'),
+            prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
+          }
+        };
+        var moOpt = {
+          slidesPerView: 'auto',
+          spaceBetween: 15,
+          speed: 500,
+          grabCursor: true,
+          navigation: {
+            nextEl: recommendPrd_wrap.find('.swiper-button-next'),
+            prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
+          },
+          scrollbar: {
+            el: recommendPrd_wrap.find('.swiper-scrollbar'),
+            hide: false,
+          }
+        };
+
+        var recommendPrd_wrap_id = 'recommendPrd_wrap_' + (idx+1);
+
+        recommendPrd_wrap.addClass(recommendPrd_wrap_id);
+
+        var recommendProSlide = isMobile
+                ? new Swiper('.' + recommendPrd_wrap_id + ' .mainPrd_item', moOpt)
+                : new Swiper('.' + recommendPrd_wrap_id + ' .mainPrd_item', pcOpt);
+
+        reloadSlide(recommendProSlide, pcOpt, moOpt);
+      });
+    }
+  }
+
+  function visualImageObjectFitForIE() {
     var visual_wrap = $('.visual_wrap');
     if( visual_wrap.length )
     {
@@ -1751,19 +1755,13 @@
       }
     }
   }
-  // //@2020.05.08 기업몰 메인 추가
 
   $(document).ready(function () {
-    slideInit();
-
-    // @2020.05.08 기업몰 메인 추가
     corporateSlideInit();
-    // //@2020.05.08 기업몰 메인
 
-    // @2020.05.08 기업몰 메인 추가
     visualImageObjectFitForIE();
-    // //@2020.05.08 기업몰 메인 추가
   });
+  // //@2020.05.08 기업몰 메인 추가
 
   // 퍼블리싱 코드
   $(document).ready(function () {
