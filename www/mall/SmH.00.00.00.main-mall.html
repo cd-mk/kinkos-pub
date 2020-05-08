@@ -1340,42 +1340,9 @@
 <script>
   function slideInit() {
     var isMobile = chkViewport();
-    ////////////////////
-    //common
-    ////////////////////
-    // cs문의 슬라이드
-    // (function () {
-    //   var pcOpt = {
-    //     slidesPerView: false,
-    //     allowTouchMove: false
-    //   };
-    //   var moOpt = {
-    //     roundLengths: true,
-    //     slidesPerView: 1,
-    //     allowTouchMove: true,
-    //     navigation: {
-    //       nextEl: '.swiper-button-next',
-    //       prevEl: '.swiper-button-prev',
-    //     },
-    //     scrollbar: {
-    //       el: '.swiper-scrollbar',
-    //       hide: false,
-    //     },
-    //     pagination: {
-    //       el: '.swiper-pagination',
-    //       type: 'fraction',
-    //     }
-    //   };
-
-    //   var csInfo = isMobile
-    //           ? new Swiper('.info_wrap .cs', moOpt)
-    //           : new Swiper('.info_wrap .cs', pcOpt);
-
-    //   reloadSlide(csInfo, pcOpt, moOpt);
-    // })();
 
     ////////////////////
-    //mall
+    // mall
     ////////////////////
     // 초스피드 즉성상품 슬라이드
     (function () {
@@ -1510,15 +1477,18 @@
     })();
 
     // 추천상품 상품 슬라이드
+    /*
     (function () {
+      var recommendPrd_wrap = $(this);
+
       var pcOpt = {
         slidesPerView: 4,
         spaceBetween: 30,
         loop: true,
         loopFillGroupWithBlank: true,
         navigation: {
-          nextEl: '.recommendPrd_wrap .swiper-button-next',
-          prevEl: '.recommendPrd_wrap .swiper-button-prev',
+          nextEl: recommendPrd_wrap.find('.swiper-button-next'),
+          prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
         }
       };
       var moOpt = {
@@ -1527,11 +1497,11 @@
         speed: 500,
         grabCursor: true,
         navigation: {
-          nextEl: '.recommendPrd_wrap .swiper-button-next',
-          prevEl: '.recommendPrd_wrap .swiper-button-prev',
+          nextEl: recommendPrd_wrap.find('.swiper-button-next'),
+          prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
         },
         scrollbar: {
-          el: '.swiper-scrollbar',
+          el: recommendPrd_wrap.find('.swiper-scrollbar'),
           hide: false,
         }
       };
@@ -1542,6 +1512,7 @@
 
       reloadSlide(recommendProSlide, pcOpt, moOpt);
     })();
+    */
 
     // 최신상품 상품 슬라이드
     (function () {
@@ -1646,6 +1617,53 @@
     })();
   }
 
+  // @2020.05.08 기업몰 메인
+  function corporateSlideInit() {
+    var isMobile = chkViewport();
+
+    if( $('.recommendPrd_wrap').length ) {
+      $('.recommendPrd_wrap').each(function(idx) {
+        var recommendPrd_wrap = $(this);
+
+        var pcOpt = {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          navigation: {
+            nextEl: recommendPrd_wrap.find('.swiper-button-next'),
+            prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
+          }
+        };
+        var moOpt = {
+          slidesPerView: 'auto',
+          spaceBetween: 15,
+          speed: 500,
+          grabCursor: true,
+          navigation: {
+            nextEl: recommendPrd_wrap.find('.swiper-button-next'),
+            prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
+          },
+          scrollbar: {
+            el: recommendPrd_wrap.find('.swiper-scrollbar'),
+            hide: false,
+          }
+        };
+
+        var recommendPrd_wrap_id = 'recommendPrd_wrap_' + (idx+1);
+
+        recommendPrd_wrap.addClass(recommendPrd_wrap_id);
+
+        var recommendProSlide = isMobile
+                ? new Swiper('.' + recommendPrd_wrap_id + ' .mainPrd_item', moOpt)
+                : new Swiper('.' + recommendPrd_wrap_id + ' .mainPrd_item', pcOpt);
+
+        reloadSlide(recommendProSlide, pcOpt, moOpt);
+      });
+    }
+  }
+  // //@2020.05.08 기업몰 메인
+
   //service select
   $.fn.setCustomizedSelectbox = function () {
     var $selectbox = $(this),
@@ -1738,7 +1756,9 @@
   $(document).ready(function () {
     slideInit();
 
-    $(".service_select").setCustomizedSelectbox();
+    // @2020.05.08 기업몰 메인
+    corporateSlideInit();
+    // //@2020.05.08 기업몰 메인
 
     // @2020.04.08 추가
     visualImageObjectFitForIE();
