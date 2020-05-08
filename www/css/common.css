@@ -502,6 +502,8 @@ p+.btn_wrap {margin-top:40px !important;}
   .mall .header_wrap .nav .btn_mo_gnb > span:first-child {margin-top:0;}
   .mall .header_wrap .nav .btn_mo_gnb > span:nth-child(2) {width:10px;}
   .mall .header_wrap .nav .logo {display:none; width:152px; height:30px; margin-top:16px;}
+  .corporate .header_wrap.mo .nav.mall .btn_back {display:none !important;}
+  .corporate .header_wrap.mo .nav.mall .logo {display:inline-block !important;}
   .mall .header_wrap .nav .logo img {width:100%;}
   .mall .header_wrap .nav .btn_link {float:right; position:relative; width:60px; height:60px; box-sizing:border-box;}
   .mall .header_wrap .nav .btn_link.btn_mo_kinkos_gnb {margin-right:1%;}
