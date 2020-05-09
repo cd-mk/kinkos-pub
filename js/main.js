@@ -298,9 +298,8 @@ $(function () {
 		}
 		// //온라인몰
 
-		// 비쥬얼 배너
-		if( $('.visual_wrap').length ) {
-			visualImageObjectFitForIE();
+		if( $('.is-main .banner_wrap').length ) {
+			mallMainBannerWrapInit();
 		}
 	}
 
@@ -484,30 +483,23 @@ $(function () {
 		});
 	}
 
-	function visualImageObjectFitForIE() {
-		var visual_wrap = $('.visual_wrap');
-		if( visual_wrap.length )
-		{
-			var bg_img = visual_wrap.find('.bg_img');
-			if( bg_img.length )
-			{
-				bg_img.each(function() {
-					var obj = $(this);
-					var mobile_image = obj.find('.mo_only');
-					if( mobile_image.length )
-					{
-						var mobile_image_src = mobile_image.attr('src');
-						if( mobile_image_src )
-						{
-							var mobile_image_div = $('<div class="mo_object_fit_image"></div>');
-							mobile_image_div.css('background-image', 'url(' + mobile_image_src + ')');
+	function mallMainBannerWrapInit() {
+		var bannerWrap = $('.banner_wrap');
+		var bannerItem = bannerWrap.find('.item');
 
-							obj.parent().append( mobile_image_div );
-						}
-					}
-				});
-			}
-		}
+		bannerItem.each(function() {
+			var obj = $(this);
+			var anchor = obj.find('>a');
+			var img = anchor.find('.pc');
+			var imgSrc = img.attr('src');
+
+			anchor.css({
+				'background-image': 'url("' + imgSrc + '")',
+				'background-size': 'cover',
+				'background-position': 'center',
+				'background-repeat': 'no-repeat'
+			});
+		});
 	}
 
 	$(document).ready(function() {
