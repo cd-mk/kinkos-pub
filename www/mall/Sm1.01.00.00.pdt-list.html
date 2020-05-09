@@ -346,6 +346,20 @@
     visualImageObjectFitForIE();
     // //@2020.04.13 수정
   });
+
+  // 퍼블리싱 코드
+  $(document).ready(function () {
+    // 임시 header, footer영역 로드
+    $("#header").load("../common/include/common.html header", function () {
+      // header 로드 후 header 관련 function 실행
+      setGnb();
+      mobileGnb();
+    });
+
+    $("#footer").load("../common/include/common.html .footer_inner", function () {
+    });
+  });
+  // //퍼블리싱 코드
 </script>
 <!-- @2020.04.22 스크립트 추가 -->
 <!-- //SCRIPT -->

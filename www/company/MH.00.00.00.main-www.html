@@ -8,24 +8,24 @@
   <!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
   <meta name="Title" content="킨코스코리아" />
   <meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
-<meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="telephone=no">
   <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
-  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-  <meta property="og:image" content="../image/common/logo.png">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>메인 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
-  <link rel="stylesheet" href="../css/lib/animate.css">
-<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/common.css">
 	
 	<!-- only main -->
-	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -488,7 +488,6 @@
     </div>
     <!-- //CONTENT -->
 
-
     <!-- FOOTER -->
     <div id="footer" class="layout_width">
     </div>
@@ -500,279 +499,40 @@
   <!-- //WRAP -->
 
 
-<!-- SCRIPT -->
-<!-- global -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
-<!-- //global -->
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
+  <!-- //global -->
 
-<!-- <script src="../js/main.js"></script> -->
+  <!-- 2020.05.09 추가 -->
+  <!-- page -->
+  <script src="/js/main.js"></script>
+  <!-- //page -->
+  <!-- //2020.05.09 추가 -->
 
-<script>
-  //service select
-  $.fn.setCustomizedSelectbox = function () {
-        var $selectbox = $(this),
-            $optionbox = $selectbox.children("ul.selectbox-options"),
-            $options = $optionbox.children("li");
-        var isOpened = false;
+  <script>
+    $(document).ready(function () {
 
-        function _onToggleOptionBox(event) {
-            event.stopPropagation();
+      // 퍼블리싱 코드
+      $(document).ready(function () {
+        // 임시 header, footer영역 로드
+        $("#header").load("/www/common/include/common.html header", function () {
+          // header 로드 후 header 관련 function 실행
+          setGnb();
+          mobileGnb();
+        });
 
-            var target = event.target;
-
-            if ($.inArray(target, $options) !== -1) {
-                if (isOpened) return toggleOptionItem(target);
-                isOpened = true;
-            } else {
-                if (!isOpened) return;
-                isOpened = false;
-            }
-
-            $optionbox.toggleClass("opened");
-
-        }
-
-        function _onCloseOptionBox(event) {
-            event.stopPropagation();
-
-            var $this = $(this),
-                $target = $(event.target);
-
-            if (($.inArray(event.target, $options) !== -1 || $target.is($this)) && isOpened) {
-                $optionbox.toggleClass("opened");
-                isOpened = false;
-            }
-        }
-
-        function toggleOptionItem(selected) {
-            var $selectedItem = $(selected),
-                value = $selectedItem.data();
-            value = value && value.value || null;
-
-            // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
-            // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
-            // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
-
-            if (!$selectedItem.hasClass("swiper-slide-active")) {
-                $options.removeClass("swiper-slide-active");
-                $selectedItem.addClass("swiper-slide-active");
-                $selectedItem.trigger("onSorterSelected");
-            }
-
-            $selectbox.trigger("click");
-
-            return;
-        }
-
-        $selectbox.on("click", _onToggleOptionBox);
-        $optionbox.on("mouseleave", _onCloseOptionBox);
-  };
-
-  function slideInit() {
-    var isMobile = chkViewport();
-    ////////////////////
-    //common
-    ////////////////////
-    // cs문의 슬라이드
-    // (function () {
-    //   var pcOpt = {
-    //     slidesPerView: false,
-    //     allowTouchMove: false
-    //   };
-    //   var moOpt = {
-    //     roundLengths: true,
-    //     slidesPerView: 1,
-    //     allowTouchMove: true,
-    //     navigation: {
-    //       nextEl: '.swiper-button-next',
-    //       prevEl: '.swiper-button-prev',
-    //     },
-    //     scrollbar: {
-    //       el: '.swiper-scrollbar',
-    //       hide: false,
-    //     },
-    //     pagination: {
-    //       el: '.swiper-pagination',
-    //       type: 'fraction',
-    //     }
-    //   };
-
-    //   var csInfo = isMobile
-    //     ? new Swiper('.info_wrap .cs', moOpt)
-    //     : new Swiper('.info_wrap .cs', pcOpt);
-
-    //   reloadSlide(csInfo, pcOpt, moOpt);
-    // })();
-
-    ////////////////////
-    //www
-    ////////////////////
-
-    // 베스트상품 상품 슬라이드
-    (function () {
-      var pcOpt = {
-        slidesPerView: 'auto',
-        spaceBetween: 160,
-        loop: true,
-        centeredSlides: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: '.bestPro_wrap .swiper-button-next',
-          prevEl: '.bestPro_wrap .swiper-button-prev',
-        }
-      };
-      var moOpt = {
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-        centeredSlides: false,
-        loop: false,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: '.bestPro_wrap .swiper-button-next',
-          prevEl: '.bestPro_wrap .swiper-button-prev',
-        },
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          hide: false,
-        },
-        pagination: {
-          el: '.bestPro_wrap .swiper-pagination',
-          type: 'fraction',
-        }
-      };
-
-      var bestProSlide = isMobile
-        ? new Swiper('.bestPro_wrap', moOpt)
-        : new Swiper('.bestPro_wrap', pcOpt);
-
-      reloadSlide(bestProSlide, pcOpt, moOpt);
-    })();
-
-    // 인스타그램 슬라이드
-    (function () {
-      var pcOpt = {
-        slidesPerView: 8,
-        spaceBetween: 22,
-        loop: true,
-        // @2020.03.27 JS 추가
-        navigation: {
-          nextEl: '.insta_con .swiper-button-next',
-          prevEl: '.insta_con .swiper-button-prev',
-        }
-        // //@2020.03.27 JS 추가
-      };
-      var moOpt = {
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        spaceBetween: 0,
-        loop: false,
-        centeredSlides: false,
-        // @2020.03.27 JS 추가
-        navigation: {
-          nextEl: '.insta_con .swiper-button-next',
-          prevEl: '.insta_con .swiper-button-prev',
-        },
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          hide: false,
-        },
-        pagination: {
-          el: '.insta_con .swiper-pagination',
-          type: 'fraction',
-        }
-        // //@2020.03.27 JS 추가
-      };
-
-      var instaSlide = isMobile
-        ? new Swiper('.insta_con', moOpt)
-        : new Swiper('.insta_con', pcOpt);
-
-      reloadSlide(instaSlide, pcOpt, moOpt);
-    })();
-
-    // @2020-04-13 수정
-      // @2020.05.08 수정
-    // 서비스상품 슬라이드
-    var service_navi = new Swiper('.service_wrap .service_select', {
-      slidesPerView: 'auto',
-      autoplay: true,
-      direction: 'vertical',
-      freeMode: false,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      centeredSlides: true,
-      thumbs: {
-        swiper: service_thumb
-      }
+        $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+        });
+      });
+      // //퍼블리싱 코드
     });
-
-    var service_thumb = new Swiper('.service_wrap .thumb', {
-      slidesPerView: 'auto',
-      autoplay: true,
-      loop: true,
-      freeMode: false,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.service_wrap .swiper-button-next',
-        prevEl: '.service_wrap .swiper-button-prev',
-      },
-      pagination: {
-        el: '.service_wrap .swiper-pagination',
-        type: 'fraction',
-      },
-      thumbs: {
-        swiper: service_navi
-      }
-    });
-      // //@2020.05.08 수정
-    // //@2020-04-13 수정
-  }
-
-  function visualImageObjectFitForIE()
-  {
-      var visual_wrap = $('.visual_wrap');
-      if( visual_wrap.length )
-      {
-          var bg_img = visual_wrap.find('.bg_img');
-          if( bg_img.length )
-          {
-              bg_img.each(function() {
-                  var obj = $(this);
-                  var mobile_image = obj.find('.mo_only');
-                  if( mobile_image.length )
-                  {
-                      var mobile_image_src = mobile_image.attr('src');
-                      if( mobile_image_src )
-                      {
-                          var mobile_image_div = $('<div class="mo_object_fit_image"></div>');
-                          mobile_image_div.css('background-image', 'url(' + mobile_image_src + ')');
-
-                          obj.parent().append( mobile_image_div );
-                      }
-                  }
-              });
-          }
-      }
-  }
-
-  $(document).ready(function () {
-    slideInit();
-
-    $(".service_select").setCustomizedSelectbox();
-
-    visualImageObjectFitForIE();
-  });
-</script>
-
- <!-- //SCRIPT -->
-
+  </script>
+  <!-- //SCRIPT -->
 </body>
-
 </html>

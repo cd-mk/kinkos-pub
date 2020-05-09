@@ -203,13 +203,13 @@
 .speedPrd_wrap .title_box {text-align:center;}
 .speedPrd_wrap .title_box h2 {font-weight:normal; font-size:40px; color:#222;}
 .speedPrd_wrap .title_box p {margin-top:15px; font-size:18px; color:#444;}
-.speed_slide {margin-top:60px; padding:0 195px;}
+.speed_slide {padding:60px 195px 0 195px;}
 .speed_slide .swiper-slide .thumb {overflow:hidden;}
 .speed_slide .swiper-slide .thumb:hover img {transform:scale(1.2);}
 .speed_slide .swiper-slide .thumb img {display:block; width:100%; transition:transform .5s;}
 .speed_slide .swiper-slide .txt {position:relative; top:-12px; padding-left:12px; box-sizing:border-box;}
 .speed_slide .swiper-slide .txt strong {font-size:32px; color:#222;}
-.speed_slide .swiper-slide .txt p {font-size:14px; color:#444; line-height:44px;}
+.speed_slide .swiper-slide .txt p {margin-top:12px; font-size:14px; color:#444; line-height:20px;}
 
 .speed_slide .pg_nav.pc .swiper-button-next, .speed_slide .pg_nav.pc .swiper-button-prev {opacity: 0.8;}
 .speed_slide .pg_nav.pc .swiper-button-next:hover, .speed_slide .pg_nav.pc .swiper-button-prev:hover {opacity: 1;}
