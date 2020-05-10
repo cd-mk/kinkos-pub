@@ -787,7 +787,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .tit_box.numbering p {padding-left:35px;margin-top:14px;}
 
   .business_template_wrap .tit_box {display:flex !important; flex-direction:column;}
-  .business_template_wrap .tit_box .right {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start; margin-top:20px;}
+  .business_template_wrap .tit_box .right {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-end; margin-top:20px;}
   .business_template_wrap .tit_box .right .business_template_input_1 {flex:1 1 calc(100% - 130px); margin:20px 10px 0 0; width:calc(100% - 130px);}
   .business_template_wrap .tit_box .right .btn {width:120px; margin-top:20px; box-sizing:border-box;}
 
