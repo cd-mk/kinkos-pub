@@ -87,17 +87,10 @@ function tab(e, num) {
 var setGnb = function () {
   if ($("#wrap").is(".company") === true) {
     $(".gnb_wrap").addClass("company");
-    // 개발 수정
-    //$(".btn_toggle strong").text($('[data-mall-name]').text());
-    //$(".logo").attr('href', '/home/main.do');
-    // //개발 수정
   }
+
   if ($("#wrap").is(".mall") === true) {
     $(".gnb_wrap").addClass("mall");
-    // 개발 수정
-    //$(".btn_toggle strong").text($('[data-mall-name]').text());
-    //$(".logo").attr('href', '/btc/main.do');
-    // //개발 수정
   }
   var $gnb, chkGnb;
 
@@ -118,14 +111,17 @@ var setGnb = function () {
     $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
     $('.center_list_wrap').stop().slideUp(400);
   });
+
   $('.js_gnb').on('mouseleave focusout', function () {
     $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
     $('.dim').hide();
   });
+
   $('.sub_gnb_wrap').on('mouseenter focusin', function () {
     $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
     $('.dim').show();
   });
+
   $('.sub_gnb_wrap').on('mouseleave focusout', function () {
     $("[data-snb=" + chkGnb + "]").stop().slideUp(400);
     $('.dim').hide();
@@ -158,7 +154,6 @@ var setGnb = function () {
       $("[data-snb=" + chkGnb + "]").stop().slideDown(400);
     }
   }
-
 
   function toggleGnb() {
     $('.btn_toggle').on('mouseover', function (e) {
@@ -230,20 +225,6 @@ var setGnb = function () {
     });
   }
   toggleGnb();
-
-// 개발 수정(미사용) - common2.js 에서 처리
-  // map link (2019.11/20)
-//  $('ul.locat_list li').on('mouseleave focusout', function () {
-//    var tab_id = $(this).attr('data-tab');
-//
-//    $('ul.locat_list li').removeClass('active');
-//    $('.map-content').removeClass('active');
-//
-//    $(this).addClass('active');
-//    $("#" + tab_id).addClass('active');
-//  })
-// //개발 수정(미사용)
-
 }
 
 // MOBILE GNB
