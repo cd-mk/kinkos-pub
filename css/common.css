@@ -493,6 +493,7 @@ p+.btn_wrap {margin-top:40px !important;}
   .new_update::after {width:16px; height:16px; font-size:10px; right:-22px;}
 
   .mall .header_wrap .nav {height:60px; text-align:left; padding-left:2.73%; background:#03a2ea; box-sizing:border-box;}
+  .mall .header_wrap .nav.corporate {background:#fff !important;}
   .mall .header_wrap .nav .btn_back {display:inline-block; margin-top:20px; font-size:18px; font-weight:500; color:#fff; width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
   .mall.is-main .header_wrap .nav .btn_back {display:none;}
   .mall.is-main .header_wrap .nav .logo {display:inline-block;}
