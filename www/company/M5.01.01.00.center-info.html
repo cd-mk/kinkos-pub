@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,18 +12,18 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
-  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-<meta property="og:image" content="../image/common/logo.png">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+<meta property="og:image" content="/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>센터 안내 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
-  <link rel="stylesheet" href="../css/lib/animate.css">
-<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="/css/lib/animate.css">
+<link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/common.css">
   <!-- only sub -->
-<link rel="stylesheet" href="../css/sub.css">
+<link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <body>
@@ -153,41 +152,8 @@
                   <a href="/www/company/M5.01.02.02.file_order.html" class="btn type01">파일 주문</a>
                 </div>
               </td>
-        </tr>
-
-            <tr>
-              <td class="cell_left">
-                <a href="/www/company/M5.01.02.01.gasan.html">가산디지털단지 센터</a>
-                <!-- 모바일만 주소 추가 -->
-                <p class="address mo">서울특별시 금천구 가산동 371-28 우림라이온스밸리B동 106호</p>
-              </td>
-              <!-- @2020.03.24 수정 -->
-              <td class="center_phone"><a href="#">02-837-0020</a></td>
-              <!-- //@2020.03.24 수정 -->
-              <td class="cell_left">
-                <ul class="hours_list">
-                  <li>월 ~ 목 24시간</li>
-                  <li>금 ~22:00</li>
-                  <li>토 9:00 ~ 18:00 / 일 9:00 ~18:00</li>
-                </ul>
-                <p class="hours_txt">주말, 공휴일 점심 휴게 시간 : 13:00 ~ 14:00</p>
-              </td>
-              <td>
-                <ul class="offer_service clearfix">
-                  <li><span class="offer_1"></span></li>
-                  <li><span class="offer_2"></span></li>
-                  <li><span class="offer_3"></span></li>
-                  <li><span class="offer_4"></span></li>
-                  <li><span class="offer_5"></span></li>
-                  <li><span class="offer_6"></span></li>
-                </ul>
-              </td>
-              <td>
-                <div class="btn_wrap">
-                  <a href="/www/company/M5.01.02.02.file_order.html" class="btn type01">파일 주문</a>
-                </div>
-              </td>
             </tr>
+
             <tr>
               <td class="cell_left">
                 <a href="/www/company/M5.01.02.01.gasan.html">가산디지털단지 센터</a>
@@ -483,13 +449,29 @@
 <!-- //WRAP -->
 
 <!-- SCRIPT -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
-<script src="../js/sub.js"></script>
+<script src="/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="/js/jquery/jquery.placeholder.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/sub.js"></script>
+
+<script>
+  // 퍼블리싱 코드
+  $(document).ready(function () {
+    // 임시 header, footer영역 로드
+    $("#header").load("/www/common/include/common.html header", function () {
+      // header 로드 후 header 관련 function 실행
+      setGnb();
+      mobileGnb();
+    });
+
+    $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+    });
+  });
+  // //퍼블리싱 코드
+</script>
 <!-- //SCRIPT -->
 
 

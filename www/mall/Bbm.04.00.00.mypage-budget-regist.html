@@ -11,21 +11,21 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="킨코스코리아">
 	<meta property="og:url" content="http://www.kinkos.co.kr/">
-	<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-	<meta property="og:image" content="../image/common/logo.png">
+	<link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+	<meta property="og:image" content="/image/common/logo.png">
 	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
 	<title>예산 등록 | 마이페이지 | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
-	<link rel="stylesheet" href="../css/lib/animate.css">
-	<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-	<link rel="stylesheet" href="../css/lib/swiper.min.css">
-	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="/css/lib/animate.css">
+	<link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href="/css/lib/swiper.min.css">
+	<link rel="stylesheet" href="/css/common.css">
 	<!-- only sub -->
-	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="/css/sub.css">
 
 	<!-- datepicker 을 사용하기 위해 load -->
-	<link rel="stylesheet" href="../css/lib/bootstrap/datepicker/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="/css/lib/bootstrap/datepicker/bootstrap-datepicker.min.css">
 	<!-- //datepicker 을 사용하기 위해 load -->
 </head>
 
@@ -844,20 +844,20 @@
 
 <!-- SCRIPT -->
 <!-- global -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="/js/jquery/jquery.placeholder.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/common.js"></script>
 <!-- //global -->
 
-<script src="../js/sub.js"></script>
+<script src="/js/sub.js"></script>
 
 <!-- datepicker 을 사용하기 위해 load -->
-<script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="../js/bootstrap/datepicker/bootstrap-datepicker.min.js"></script>
-<script src="../js/bootstrap/datepicker/locales/bootstrap-datepicker.ko.min.js"></script>
+<script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/js/bootstrap/datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/js/bootstrap/datepicker/locales/bootstrap-datepicker.ko.min.js"></script>
 <!-- //datepicker 을 사용하기 위해 load -->
 
 <script>
@@ -1024,6 +1024,20 @@
 
 				//$('.budget_regist_wrap .page_tab').find('li').eq(1).trigger('click');
     });
+
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+        // 임시 header, footer영역 로드
+        $("#header").load("/www/common/include/common.html header", function () {
+            // header 로드 후 header 관련 function 실행
+            setGnb();
+            mobileGnb();
+        });
+
+        $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+        });
+    });
+    // //퍼블리싱 코드
 </script>
 <!-- //SCRIPT -->
 
