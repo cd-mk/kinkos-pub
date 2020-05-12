@@ -142,8 +142,7 @@ $(function () {
 					swiper: {
 						el: '.consult_tag',
 						direction: 'vertical',
-						slidesPerView: 'auto',
-						allowTouchMove: false
+						slidesPerView: 'auto'
 					}
 				}
 			};
@@ -158,8 +157,7 @@ $(function () {
 						el: '.consult_tag',
 						direction: 'horizontal',
 						spaceBetween: 0,
-						slidesPerView: 'auto',
-						allowTouchMove: true
+						slidesPerView: 'auto'
 					}
 				}
 			};
@@ -322,7 +320,7 @@ $(function () {
 		if( act === 'reload' ) {
 			slide = isMobile ? new Swiper(target, moOpt) : new Swiper(target, pcOpt);
 
-			reloadSlide(slide, pcOpt, moOpt);
+			reloadSlide(slide, pcOpt, moOpt, target);
 		} else {
 			slide = new Swiper(target, pcOpt);
 		}
@@ -467,19 +465,28 @@ $(function () {
 		var el = slideTarget.params.el;
 		var scrollW = getScrollbarWidth();
 
-		$(window).resize(function () {
+		var setObj = '';
+		var setDelay = 100;
+
+		var setFunc = function() {
 			var winW = $(this).outerWidth();
 			viewport = winW + scrollW;
 
 			if (viewport <= 980 && flag) {
-				slideTarget.destroy(true, true);
+				slideTarget.destroy(false, true);
 				slideTarget = new Swiper(el, moOpt);
 				flag = false;
 			} else if (viewport > 980 && !flag) {
-				slideTarget.destroy(true, true);
+				slideTarget.destroy(false, true);
 				slideTarget = new Swiper(el, pcOpt);
 				flag = true;
 			}
+		};
+
+		$(window).resize(function () {
+			clearTimeout( setObj );
+
+			setObj = setTimeout(function() { setFunc(); }, setDelay);
 		});
 	}
 

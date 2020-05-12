@@ -846,19 +846,39 @@ $(function () {
     mpgWrapHeightSyncSnb();
   }
 
-  // @2020.04.14 SCROLL TOP 추가
-  $(document).ready(function() {
+  var scrollTopFunc = function() {
+    var setObj = '';
+    var setDelay = 20;
+
+    var setFunc = function() {
+      var scrollTop = $('#scroll-top');
+      var winScrollTop = parseInt( $(window).scrollTop(), 10 );
+
+      if( winScrollTop > 100) {
+        scrollTop.fadeIn();
+      } else {
+        scrollTop.fadeOut();
+      }
+    };
+
     if(! $('#scroll-top').length ) {
       $('body').append('<div id="scroll-top"><a href="#top">Scroll to Top</a></div>');
     }
 
     $(window).on('scroll', function () {
-      if ($(this).scrollTop() > 100) {
-        $('#scroll-top').fadeIn();
-      } else {
-        $('#scroll-top').fadeOut();
+      clearTimeout( setObj );
+
+      var winWidth = parseInt( window.innerWidth, 10 );
+
+      if( winWidth > 980 ) {
+        setObj = setTimeout(function() { setFunc(); }, setDelay);
       }
     });
+  };
+
+  // @2020.04.14 SCROLL TOP 추가
+  $(document).ready(function() {
+    scrollTopFunc();
 
     var scrollTopSetObj = '';
     var scrollTopSetDelay = 50;
