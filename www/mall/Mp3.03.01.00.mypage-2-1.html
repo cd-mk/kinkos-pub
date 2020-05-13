@@ -12,18 +12,18 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
-  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-  <meta property="og:image" content="../image/common/logo.png">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>회원정보 변경 | 마이페이지 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
-  <link rel="stylesheet" href="../css/lib/animate.css">
-  <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/common.css">
   <!-- only sub -->
-  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <body>
@@ -146,6 +146,10 @@
                       </div>
                     </div>
                   </div>
+
+                  <!-- @2020.05.13 추가 -->
+                  <p class="form_alert"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
+                  <!-- //@2020.05.13 추가 -->
 
                   <div class="form_group top_line">
                     <div class="form_item">
@@ -279,20 +283,34 @@
 
   <!-- SCRIPT -->
   <!-- global -->
-  <script src="../js/jquery/jquery-1.12.4.min.js"></script>
-  <script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-  <script src="../js/jquery/jquery.placeholder.min.js"></script>
-  <script src="../js/wow.min.js"></script>
-  <script src="../js/swiper/swiper.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
   <!-- //global -->
 
-  <script src="../js/sub.js"></script>
+  <script src="/js/sub.js"></script>
   <script type="text/javascript">
     // 퍼블리싱용
     $(document).ready(function() {
       mallSubPageTitle('마이페이지');
     });
+
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+      // 임시 header, footer영역 로드
+      $("#header").load("/www/common/include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
+      });
+
+      $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+      });
+    });
+    // //퍼블리싱 코드
   </script>
 
   <!-- //SCRIPT -->

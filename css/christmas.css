@@ -56,8 +56,11 @@ button:disabled{pointer-events: none;cursor: default;}
 }
 .filename{
 	display:inline-block;
-	vertical-align:top;
-	width:100% !important;
+	width: 100% !important;
+	margin-bottom: 10px;
+	line-height: 140%;
+	word-break: break-all;
+	vertical-align: top;
 }
 .filesize{
 	display:inline-block;

@@ -894,28 +894,23 @@ $(function () {
         var scrollTopObjOffset = scrollTopObj.offset();
         var scrollTopObjTop = parseInt( scrollTopObjOffset.top, 10 );
 
-        if( scrollTopObjTop < quickMenuBottom ) {
-          var quickMenuPositionTop = parseInt( quickMenu.position().top, 10 );
-          var quickMenuPositionBottom = quickMenuPositionTop + quickMenuHeight;
-          var winHeight = parseInt( window.innerHeight, 10 );
-          var calcScrollTopObjBottom = 0;
+        var quickMenuPositionTop = 0;
+        var quickMenuPositionBottom = 0;
+        var winHeight = parseInt( window.innerHeight, 10 );;
+        var calcScrollTopObjBottom = 0;
 
-          if( quickMenuPositionBottom < winHeight ) {
-            calcScrollTopObjBottom = ( winHeight - quickMenuPositionBottom ) - 40;
-
-            scrollTopObj.css({
-              'bottom': calcScrollTopObjBottom + 'px',
-              'right': ''
-            });
-          } else {
-            scrollTopObj.css({
-              'bottom': '20px',
-              'right': '70px'
-            });
-          }
-        } else {
+        if( 740 < winHeight ) {
           scrollTopObj.css({
             'bottom': '',
+            'right': ''
+          });
+        } else {
+          quickMenuPositionTop = parseInt( quickMenu.position().top, 10 );
+          quickMenuPositionBottom = quickMenuPositionTop + quickMenuHeight;
+          calcScrollTopObjBottom = ( winHeight - quickMenuPositionBottom ) - 50;
+
+          scrollTopObj.css({
+            'bottom': calcScrollTopObjBottom + 'px',
             'right': ''
           });
         }
@@ -927,6 +922,8 @@ $(function () {
 
       scrollTopSetObj = setTimeout(function() { scrollTopInit(); }, scrollTopSetDelay);
     });
+
+    scrollTopSetObj = setTimeout(function() { scrollTopInit(); }, scrollTopSetDelay);
 
     $('#scroll-top a').on('click', function(e) {
       $('body,html').animate({

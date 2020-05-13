@@ -85,6 +85,7 @@ p.txt:first-child {margin-top:0;}
 .date_sel .inp_date {width:45%;}
 .date_sel span {display:inline-block;width:7%;text-align:center;}
 .form_alert {margin-bottom:12px; text-align:right; color:#222;}
+.userinfo_wrap .form_wrap .form_alert {margin-top:0; margin-bottom:-20px;}
 .user_alert {margin-bottom:12px; text-align:right; color:#222;}
 .user_alert strong {margin-bottom:12px; text-align:right; color:#03a2ea;}
 h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
@@ -93,6 +94,7 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 
 @media screen and (max-width:980px) {
   .form_alert {color:#777;}
+  .userinfo_wrap .form_wrap .form_alert {margin-bottom:-10px;}
   .txt_guide.bottom {margin-top:40px;}
   .pg_nav_wrap.scroll {padding-left:0;}
 }
@@ -838,7 +840,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 }
  /* page_tab */
 .page_tab{height:66px;position:relative;width:100%;max-width:1530px;margin-right:auto;margin-left:auto;border-bottom:1px solid #e7e7e7;z-index:99;}
-.page_tab > ul{position:relative;top:-1px;display:table;max-width:1530px;height:100%;}
+.page_tab > ul{position:relative;top:-1px;display:table;max-width:1530px;height:100%;margin:0 auto;}
 .page_tab > ul > li{cursor:pointer;display:table-cell;height:100%;padding-top:0;font-size:20px;color:#222;text-align:center;vertical-align:middle;overflow:hidden;font-weight:normal;}
 .page_tab > ul > li > a{width:306px;height:64px;line-height:64px;display:block;}
 .page_tab > ul > li.active a, .page_tab > ul > li a:hover{font-weight:700;color:#222;}
@@ -2542,7 +2544,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_review .txt_view {padding-right:20%;margin-top:25px;}
 .pdt_review .ellipsis {height: 22px;line-height:1.5;word-break: break-all;}
 .pdt_review .review_row, .pdt_review .review_view {background: #f3f4f6;}
-.pdt_review .review_head {min-height: 110px;}
+.pdt_review .review_head {width:100%; min-height: 110px;}
 .pdt_review .review_head a {display: block;}
 .pdt_review .review_head .sjt {font-weight:400;color:#777;margin-top:25px;padding-right:120px;line-height: 1.5;}
 .pdt_review .review_head .sjt strong {font-weight:700;color:#222;display: inline-block;margin-right:20px;}
