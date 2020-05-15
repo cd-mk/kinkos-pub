@@ -3630,15 +3630,16 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .order_list_pc .td_ord_status span.ord_status_progress {color:#999999;}
 
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total {border-top:0; background:#f7f7f7;}
-.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap {clear:both; width:100%;}
-.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_regist_files {float:left; width:20%; height:auto; margin:0; padding:0; text-align:left;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap {clear:both; display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:flex-start; width:100%; height:auto;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_regist_files {flex:0 0 15%; width:15%; height:auto; margin:0; padding:0; text-align:left;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_regist_files a {font-weight:700; color:#222222; text-decoration:underline;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_regist_files a:hover {color:#03a2ea;}
-.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price {float:right; width:80%; word-break:keep-all;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_template_view_btn {flex:0 0 15%; width:15%; height:auto; margin:0; padding:0; text-align:right;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price {flex:0 0 70%; width:70%; word-break:keep-all;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price .box {clear:both; display:flex; flex-direction:row; align-items:flex-end; justify-content:flex-end; width:100%; height:auto;}
-.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price .box .box_item {float:left; padding-left:30px;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price .box .box_item {float:left; padding-left:15px;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price span {display:inline-block; color:#777777;}
-.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price span.price {padding-left:20px;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price span.price {padding-left:10px;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total_wrap .td_ord_pdt_total_price .box .box_item.total span {color:#222222;}
 
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total_regist_files a {font-weight:700; text-decoration:underline;}

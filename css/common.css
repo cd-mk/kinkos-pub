@@ -317,7 +317,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .gnb_wrap .gnb_quick.company ul {width:60%;}
 /*.gnb_wrap .gnb_quick.mall ul {display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:center; width:calc(100% - 437px); left:236px; transform: none;}
 .gnb_wrap .gnb_quick.mall ul li {flex:1 1 calc(100% / 6);}*/
-.gnb_wrap .gnb_quick.mall ul {display:table; width:calc(100% - 437px); left:236px; transform: none;}
+.gnb_wrap .gnb_quick.mall ul {display:table; width:calc(100% - 382px); left:181px; transform: none;}
 .gnb_wrap .gnb_quick.mall ul li {display:table-cell; text-align:center;}
 .gnb_wrap .gnb_quick.mall ul li a {display:inline-block; height:100%; padding:0 10%;}
 

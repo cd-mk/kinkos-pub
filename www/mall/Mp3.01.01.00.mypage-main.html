@@ -12,19 +12,19 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
-  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-  <meta property="og:image" content="../image/common/logo.png">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>마이페이지 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
-  <link rel="stylesheet" href="../css/lib/animate.css">
-  <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
 
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="/css/common.css">
   <!-- only sub -->
-  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <body>
@@ -62,7 +62,16 @@
         <div class="snb">
           <h2>마이페이지</h2>
           <ul>
-            <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+            <li>
+              <a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송현황</a>
+              <ul>
+                <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문내역/시안 확인</a></li>
+                <!-- @2020-05-15 기업 관리자만 노출 -->
+                <li><a href="/www/mall/Bbm.05.00.00.business-template-list.html">시안확인</a></li>
+                <!-- //@2020-05-15 기업 관리자만 노출 -->
+                <li><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">결제하기</a></li>
+              </ul>
+            </li>
             <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
             <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
             <!-- @2020.03.06 추가 -->
@@ -75,6 +84,7 @@
             </li>
             <!-- //@2020.03.06 추가 -->
             <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+            <!-- @2020-05-15 기업몰에서는 비노출 처리 -->
             <li>
               <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
               <ul>
@@ -84,6 +94,7 @@
                 <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
               </ul>
             </li>
+            <!-- //@2020-05-15 기업몰에서는 비노출 처리 -->
             <li>
               <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
               <ul>
@@ -97,7 +108,7 @@
         <!-- page tab -->
         <div class="page_tab col4 mo">
           <ul>
-            <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+            <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송현황</a></li>
             <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-mobile.html">시안보기</a></li>
             <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
             <li><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">나의 혜택</a></li>
@@ -174,42 +185,42 @@
               <div class="pdt_slide swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="../image/mall/product/pl_thumb.jpg" />
+                    <img src="/image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
                       <span class="title">명함</span>
                       <p class="desc">13시 이전 접수 - 당일 완성</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
-                    <img src="../image/mall/product/pl_thumb.jpg" />
+                    <img src="/image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
                       <span class="title">즉석 명함</span>
                       <p class="desc">빠르고 다양한 형태로 완성</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
-                    <img src="../image/mall/product/pl_thumb.jpg" />
+                    <img src="/image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
                       <span class="title">브로슈어 2단</span>
                       <p class="desc">3시간안에 완성되는 2단 브로슈어</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
-                    <img src="../image/mall/product/pl_thumb.jpg" />
+                    <img src="/image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
                       <span class="title">즉석 명함</span>
                       <p class="desc">빠르고 다양한 형태로 2시간만에 완성되는 스피드명함</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
-                    <img src="../image/mall/product/pl_thumb.jpg" />
+                    <img src="/image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
                       <span class="title">소량명함 10매</span>
                       <p class="desc">작지만, 홍보효과 톡톡!</p>
                     </span>
                   </div>
                   <div class="swiper-slide">
-                    <img src="../image/mall/product/pl_thumb.jpg" />
+                    <img src="/image/mall/product/pl_thumb.jpg" />
                     <span class="item_info">
                       <span class="title">명함</span>
                       <p class="desc">13시 이전 접수 - 당일 완성</p>
@@ -283,15 +294,15 @@
 
     <!-- SCRIPT -->
     <!-- global -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
+    <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="/js/jquery/jquery.placeholder.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/swiper/swiper.min.js"></script>
+    <script src="/js/common.js"></script>
     <!-- //global -->
 
-    <script src="../js/sub.js"></script>
+    <script src="/js/sub.js"></script>
 
 
     <script type="text/javascript">
@@ -351,6 +362,20 @@
       $(document).ready(function() {
         mallSubPageTitle('마이페이지');
       });
+
+      // 퍼블리싱 코드
+      $(document).ready(function () {
+        // 임시 header, footer영역 로드
+        $("#header").load("/www/common/include/common.html header", function () {
+          // header 로드 후 header 관련 function 실행
+          setGnb();
+          mobileGnb();
+        });
+
+        $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+        });
+      });
+      // //퍼블리싱 코드
     </script>
     <!-- //SCRIPT -->
 </body>
