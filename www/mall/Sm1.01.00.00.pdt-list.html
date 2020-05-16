@@ -56,8 +56,9 @@
       </div>
       <!-- //breadcrumb  -->
 
+      <!-- @2020-05-16 제거 -->
       <!-- visual area Swiper -->
-      <div class="prdList_visual_wrap swiper-container layout_full">
+      <div class="prdList_visual_wrap swiper-container layout_full" style="display:none;">
         <div class="swiper-wrapper">
           <!-- loop (리스트 추가 가능) -->
           <!-- color option:  color_black/color_white 중 선택 할 수 있게  -->
@@ -100,6 +101,7 @@
         <!-- Add Arrows -->
       </div>
       <!-- //visual area Swiper -->
+      <!-- //@2020-05-16 제거 -->
 
       <!-- 상품리스트 -->
       <div class="pdt_list layout_width">
@@ -127,9 +129,14 @@
             <li>
               <a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="pdt_thumb">
                 <span class="img"><img src="/image/mall/product/temp-search-pdt-list-01.png"></span>
-                <!-- 상품 tag 위치변경 -->
-                <!-- speed, event, new, best, sale 클래스로 각 태그 이미지를 노출합니다. -->
-                <span class="tag speed"></span>
+
+                <!-- @2020-05-16 수정 -->
+                <div class="tag_wrap">
+                  <!-- speed, event, new, best, sale 클래스로 각 태그 이미지를 노출합니다. -->
+                  <span class="tag speed"></span>
+                  <span class="tag event"></span>
+                </div>
+                <!-- //@2020-05-16 수정 -->
               </a>
               <span class="item_info">
 									<a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="title">소량명함 10매(양면)</a>
@@ -142,7 +149,13 @@
             <li>
               <a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="pdt_thumb">
                 <span class="img"><img src="/image/mall/product/temp-search-pdt-list-02.png"></span>
-                <span class="tag event"></span>
+                <!-- @2020-05-16 수정 -->
+                <div class="tag_wrap">
+                  <!-- speed, event, new, best, sale 클래스로 각 태그 이미지를 노출합니다. -->
+                  <span class="tag speed"></span>
+                  <span class="tag event"></span>
+                </div>
+                <!-- //@2020-05-16 수정 -->
               </a>
               <span class="item_info">
 									<a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="title">명함 10매</a>
@@ -153,7 +166,13 @@
             <li>
               <a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="pdt_thumb">
                 <span class="img"><img src="/image/mall/product/temp-search-pdt-list-03.png"></span>
-                <span class="tag new"></span>
+                <!-- @2020-05-16 수정 -->
+                <div class="tag_wrap">
+                  <!-- speed, event, new, best, sale 클래스로 각 태그 이미지를 노출합니다. -->
+                  <span class="tag speed"></span>
+                  <span class="tag new"></span>
+                </div>
+                <!-- //@2020-05-16 수정 -->
               </a>
               <span class="item_info">
 									<a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="title">소량명함 10매</a>
@@ -164,7 +183,13 @@
             <li>
               <a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="pdt_thumb">
                 <span class="img"><img src="/image/mall/product/temp-search-pdt-list-04.png"></span>
-                <span class="tag best"></span>
+                <!-- @2020-05-16 수정 -->
+                <div class="tag_wrap">
+                  <!-- speed, event, new, best, sale 클래스로 각 태그 이미지를 노출합니다. -->
+                  <span class="tag speed"></span>
+                  <span class="tag best"></span>
+                </div>
+                <!-- //@2020-05-16 수정 -->
               </a>
               <span class="item_info">
 									<a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="title">소량명함 10매</a>
@@ -175,7 +200,13 @@
             <li>
               <a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="pdt_thumb">
                 <span class="img"><img src="/image/mall/product/temp-search-pdt-list-05.png"></span>
-                <span class="tag sale"></span>
+                <!-- @2020-05-16 수정 -->
+                <div class="tag_wrap">
+                  <!-- speed, event, new, best, sale 클래스로 각 태그 이미지를 노출합니다. -->
+                  <span class="tag speed"></span>
+                  <span class="tag sale"></span>
+                </div>
+                <!-- //@2020-05-16 수정 -->
               </a>
               <span class="item_info">
 									<a href="/www/mall/Sm1.01.01.00.pdt-detail.html" class="title">소량명함 10매</a>
@@ -255,7 +286,6 @@
     </div>
     <!-- //CONTENT -->
 
-
     <!-- FOOTER -->
     <div id="footer" class="layout_width">
     </div>
@@ -268,36 +298,33 @@
   </div>
 <!-- //WRAP -->
 
-<!-- SCRIPT -->
-<!-- global -->
-<script src="/js/jquery/jquery-1.12.4.min.js"></script>
-<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="/js/jquery/jquery.placeholder.min.js"></script>
-<script src="/js/wow.min.js"></script>
-<script src="/js/swiper/swiper.min.js"></script>
-<script src="/js/common.js"></script>
-<!-- //global -->
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
+  <!-- //global -->
 
-<script src="/js/sub.js"></script>
+  <script src="/js/sub.js"></script>
 
-<!-- @2020.04.22 스크립트 추가 -->
-<script>
-  // 퍼블리싱 코드
-  $(document).ready(function () {
-    // 임시 header, footer영역 로드
-    $("#header").load("/www/common/include/common.html header", function () {
-      // header 로드 후 header 관련 function 실행
-      setGnb();
-      mobileGnb();
+  <script>
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+      // 임시 header, footer영역 로드
+      $("#header").load("/www/common/include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
+      });
+
+      $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+      });
     });
-
-    $("#footer").load("/www/common/include/common.html .footer_inner", function () {
-    });
-  });
-  // //퍼블리싱 코드
-</script>
-<!-- @2020.04.22 스크립트 추가 -->
-<!-- //SCRIPT -->
+    // //퍼블리싱 코드
+  </script>
+  <!-- //SCRIPT -->
 </body>
-
 </html>

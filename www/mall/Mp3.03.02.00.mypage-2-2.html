@@ -60,8 +60,16 @@
       <div class="snb">
         <h2>마이페이지</h2>
         <ul>
-          <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
-          <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-pc.html">시안보기</a></li>
+          <li>
+            <a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송현황</a>
+            <ul>
+              <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문내역/시안 확인</a></li>
+              <!-- @2020-05-15 기업 관리자만 노출 -->
+              <li><a href="/www/mall/Bbm.05.00.00.business-template-list.html">시안확인</a></li>
+              <!-- //@2020-05-15 기업 관리자만 노출 -->
+              <li><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">결제하기</a></li>
+            </ul>
+          </li>
           <li class="active"><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
           <li>
             <a href="#" onclick="return false;">나의 혜택</a>
@@ -71,6 +79,7 @@
             </ul>
           </li>
           <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+          <!-- @2020-05-15 기업몰에서는 비노출 처리 -->
           <li>
             <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
             <ul>
@@ -80,6 +89,7 @@
               <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
             </ul>
           </li>
+          <!-- //@2020-05-15 기업몰에서는 비노출 처리 -->
           <li>
             <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
             <ul>
@@ -93,12 +103,16 @@
       <!-- page tab -->
       <div class="page_tab col4 mo">
         <ul>
-          <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
-          <li><a href="/www/mall/Mp2.02.00.00.mypage-template-list-mobile.html">시안보기</a></li>
+          <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송현황</a></li>
+          <!-- @2020-05-15 기업 관리자만 노출 -->
+          <li><a href="/www/mall/Bbm.05.00.00.business-template-list.html">시안확인</a></li>
+          <!-- //@2020-05-15 기업 관리자만 노출 -->
           <li class="active"><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
           <li><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">나의 혜택</a></li>
           <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+          <!-- @2020-05-15 기업몰에서는 비노출 처리 -->
           <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a></li>
+          <!-- //@2020-05-15 기업몰에서는 비노출 처리 -->
           <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a></li>
         </ul>
       </div>

@@ -13,19 +13,19 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="킨코스코리아">
 	<meta property="og:url" content="http://www.kinkos.co.kr/">
-	<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-<meta property="og:image" content="../image/common/logo.png">
+	<link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+<meta property="og:image" content="/image/common/logo.png">
 	<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
 	<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
 	<title>법인 우대 프로그램 | 킨코스코리아</title>
 	<!-- CSS FILE LOAD -->
-	<link rel="stylesheet" href="../css/lib/animate.css">
-  <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
+	<link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
 
-	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="/css/common.css">
 	<!-- only sub -->
-	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <body>
@@ -82,10 +82,11 @@
         </div>
         
         <!-- page tab -->
-        <div class="page_tab sub_type1 col2">
+        <div class="page_tab sub_type1 col3">
           <a href="javascript:;" class="btn_mo_sub_type">법인 우대 서비스</a>
           <ul>
             <li><a href="/www/company/M2.12.00.00.corporation.html">법인 우대 서비스</a></li>
+            <li><a href="/www/company/M2.12.00.00.corporation-solution.html">B2B 온라인 솔루션</a></li>
             <li class="active"><a href="/www/company/M2.12.00.00.corporation-bs.html">법인 상담 요청</a></li>
           </ul>
         </div>
@@ -98,7 +99,9 @@
             <fieldset>
               <legend>회원정보 입력 양식</legend>
               <p class="form_alert section mid"><sup class="require">*</sup> 항목은 필수 입력항목입니다.</p>
-              <div class="form_wrap ver_top">
+							<!-- @2020-05-15 ver_top 클래스 제거 -->
+              <div class="form_wrap">
+							<!-- //@2020-05-15 ver_top 클래스 제거 -->
               
                 <div class="form_group col2">
                   <!-- 입력 유효성 검사 후 통과시 'form_item'에 'is_vaild' 비통과시 'not_vaild' 클래스 추가 -->
@@ -135,20 +138,85 @@
                   <div class="form_item chk_box">
                     <strong class="form_name ver_mid">S&G센터</strong>
                     <div class="form_inp">
-                      <input type="checkbox" id="sgChk1" name="">
+                      <input type="radio" id="sgChk1" name="wr_10" value="1" checked="checked">
                       <label for="sgChk1">방문 희망</label>
-                      <input type="checkbox" id="sgChk2" name="">
+                      <input type="radio" id="sgChk2" name="wr_10" value="0">
                       <label for="sgChk2">방문 비희망</label>
                     </div>
                   </div>
                   <div class="form_item">
                     <strong class="form_name">센터선택 <sup class="require">*</sup></strong>
                     <div class="form_inp">
-                      <input type="text" title="센터 입력">
-                      <p class="txt_vaild">센터를 입력해주세요</p>
+											<select name="wr_subject" id="wr_subject">
+												<option value="C20">가산디지털단지 센터</option>
+												<option value="C16">강남역 센터</option>
+												<option value="C25">경복궁 센터</option>
+												<option value="C04">광화문 센터</option>
+												<option value="C02">교대 센터</option>
+												<option value="C18">구로 센터</option>
+												<option value="C10">국회의사당역센터</option>
+												<option value="C21">남대문 센터</option>
+												<option value="SPC">보안제작지원센터(SPC)</option>
+												<option value="C23">분당 센터</option>
+												<option value="SNG">사인앤그래픽센터(S&amp;G)</option>
+												<option value="C01">삼성 센터</option>
+												<option value="C35">서면 센터</option>
+												<option value="C11">선릉 센터</option>
+												<option value="C33">센텀시티 센터</option>
+												<option value="C24">송파 센터</option>
+												<option value="C05">시청 센터</option>
+												<option value="C15">신사 센터</option>
+												<option value="C32">신촌 센터</option>
+												<option value="C26">압구정 센터</option>
+												<option value="C19">양재 센터</option>
+												<option value="C07">여의도 센터</option>
+												<option value="C08">역삼 센터</option>
+												<option value="C06">을지로 센터</option>
+												<option value="C29">일산 센터</option>
+												<option value="C31">종로 센터</option>
+												<option value="C09">충무로 센터</option>
+												<option value="C27">판교 센터</option>
+												<option value="C28">평촌 센터</option>
+												<option value="C17">포스코 센터</option>
+												<option value="C22">홍대 센터</option>
+												<option value="C30">홍대입구역 센터</option>
+											</select>
+                      <p class="txt_vaild">센터를 선택해주세요</p>
                     </div>
                   </div>
                 </div>
+
+								<!-- @2020-05-15 수정 -->
+								<div class="form_group col2">
+									<div class="form_item">
+										<span class="form_name">회사명 <sup class="require">*</sup></span>
+										<div class="form_inp">
+											<input type="text" title="회사명 입력" placeholder="회사명 입력" name="wr_1" id="wr_1" value="">
+										</div>
+									</div>
+									<div class="form_item chk_box">
+										<strong class="form_name ver_mid">직원 수</strong>
+										<div class="form_inp">
+											<input type="radio" name="wr_4" id="wrChk1" value="50명 이하" checked="checked"><label for="wrChk1">50명 이하</label>
+											<input type="radio" name="wr_4" id="wrChk2" value="50 ~ 100명"><label for="wrChk2">50 ~ 100명</label>
+											<input type="radio" name="wr_4" id="wrChk3" value="100명 이상"><label for="wrChk3">100명 이상</label>
+										</div>
+									</div>
+								</div>
+								<div class="form_group col2">
+									<div class="form_item">
+										<span class="form_name">서비스 구분 <sup class="require">*</sup></span>
+										<div class="form_inp">
+											<select name="ca_name" id="ca_name" title="문의 유형 선택">
+												<option value="법인우대서비스">법인우대서비스</option>
+												<option value="B2B 온라인 솔루션">B2B 온라인 솔루션</option>
+											</select>
+										</div>
+									</div>
+									<div class="form_item"></div>
+								</div>
+								<!-- //@2020-05-15 수정 -->
+
                 <div class="form_group top_line">
                   <div class="form_item">
                     <strong class="form_name">제목</strong>
@@ -437,18 +505,30 @@
 
 <!-- SCRIPT -->
 <!-- global -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="/js/jquery/jquery.placeholder.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/common.js"></script>
 <!-- //global -->
 
-<script src="../js/sub.js"></script>
+<script src="/js/sub.js"></script>
 
 <script>
-  
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+        // 임시 header, footer영역 로드
+        $("#header").load("/www/common/include/common.html header", function () {
+            // header 로드 후 header 관련 function 실행
+            setGnb();
+            mobileGnb();
+        });
+
+        $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+        });
+    });
+    // //퍼블리싱 코드
 </script>
  <!-- //SCRIPT -->
 

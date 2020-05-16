@@ -503,7 +503,7 @@ $(function () {
 			anchor.css({
 				'background-image': 'url("' + imgSrc + '")',
 				'background-size': 'cover',
-				'background-position': 'center',
+				'background-position': 'right center',
 				'background-repeat': 'no-repeat'
 			});
 		});
