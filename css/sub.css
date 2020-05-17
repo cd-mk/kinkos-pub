@@ -759,8 +759,6 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .tit_box h2 {font-size:20px;}
   .tit_box h3 {font-size:20px;}
   .tit_box p {margin-top:12px; font-size:16px; line-height:1.36; word-break:keep-all;}
-  .tit_box p > br {display:none !important;}
-  .tit_box p br.mo, .tit_box p br.mo_only {display:none !important;}
   h3.pc + p {margin-top:0}
   .tit_box p.top_stit {margin-top:0; font-size:18px;margin-bottom:20px;}
   .tit_box p.small {font-size:16px;letter-spacing: -0.5px;}
@@ -1413,7 +1411,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 /* 채용안내 */
 
-.recruit_wrap .item_box .tit_box.btn_with {margin-top:75px;}
+.recruit_wrap .item_box .tit_box.btn_with {display:flex; flex-direction:row; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin-top:75px;}
+.recruit_wrap .item_box .tit_box.btn_with .left {flex:1 1 auto; display:block; padding-right:20px; box-sizing:border-box;}
+.recruit_wrap .item_box .tit_box.btn_with .right {flex:0 0 auto; display:block;}
 .recruit_wrap .item_box .tit_box.btn_with .btn {width:100%}
 .recruit_wrap .item_box .item .bbs_list table {table-layout:fixed;}
 .recruit_wrap .item_box .item .bbs_list thead th {font-size:1em; font-weight:500; border-top:0;}
@@ -1433,7 +1433,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .recruit_wrap .item_box .item .submit_list > li:first-child {margin-top:0;}
 .recruit_wrap .item_box .item .submit_list > li strong {font-weight:500;}
 @media screen and (max-width:980px) {
-  .recruit_wrap .item_box .tit_box.btn_with {margin-top:30px;}
+  .recruit_wrap .item_box .tit_box.btn_with {flex-direction:column; margin-top:30px;}
   .recruit_wrap .item_box .item .bbs_list tr {padding:30px 20px;padding-left:130px;position: relative;}
   .recruit_wrap .item_box .item .bbs_list tr::before {content:"";width:1px;height:100%;background: #ddd;display: block;position: absolute;top:0;left:110px;}
   .recruit_wrap .item_box .item .bbs_list tbody th {position: absolute;top:50%;transform: translateY(-50%);left:15px;width:80px;padding-left: 0;}
@@ -1449,8 +1449,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .recruit_wrap .item_box .item .submit_list > li {margin-top:20px; font-size:1em;}
 
 
-  .recruit_wrap .tit_box.mid .left {display: block;float: none;width:80%}
-  .recruit_wrap .tit_box.mid .right {display: block;float: none;}
+  .recruit_wrap .tit_box.mid .left {display:block; float:none; width:100%;}
+  .recruit_wrap .tit_box.mid .right {display:block; float:none; flex:1 1 auto; width:100%;}
   .recruit_wrap .tit_box.mid .right .btn_wrap {display: block;width:100%;margin-top:40px;}
   .recruit_wrap .tit_box.mid .right .btn_wrap .btn {width:100%;}
   .recruit_wrap .item_box .item .submit_list > li strong {font-weight:700;display: inline-block;margin-bottom:4px}
@@ -1937,6 +1937,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap .visual_box .txt_box_sub strong {display:block;margin-top:40px;}
 .service_info_wrap .visual_box .txt_box_sub p {margin-top:20px;color:#777;line-height: 1.5;}
 
+.service_info_wrap .tit_box p {text-align:left;}
+
 
 @media screen and (max-width:1600px) {
   .layout_full .service_info_wrap .visual_box::before {width: calc(100% - 30px);}
@@ -1952,6 +1954,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .service_info_wrap .visual_box > ul {margin-top:15px;}
   .service_info_wrap .visual_box > ul.col2 li {width:100%;float:none;}
   .service_info_wrap .visual_box > ul.col2 li:nth-child(2) {margin-top:10px;}
+
+  .service_info_wrap .tit_box p br {display:none !important;}
+  .service_info_wrap .tit_box p br.mo, .tit_box p br.mo_only {display:none !important;}
 }
 
 
@@ -4412,7 +4417,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .popup_wrap #ninja-slider .inner .title {text-align: left;padding:40px;}
 /* ---------Arrow buttons ------- */   
 /* The arrow button id should be:slider id + ("-prev", "-next", and "-pause-play") */ 
-#ninja-slider-prev, #ninja-slider-next {position: absolute;; display:inline-block; width:auto; height:20px; line-height:20px; margin-top:10px; backface-visibility:hidden; color:#222; white-space:nowrap; -webkit-user-select:none; user-select:none; /* border-radius:2px; */ z-index:10; cursor:pointer;bottom:0;}
+#ninja-slider-prev, #ninja-slider-next {position: absolute;; display:inline-block; width:auto; height:20px; line-height:20px; margin-top:10px; backface-visibility:hidden; color:#222; white-space:nowrap; -webkit-user-select:none; user-select:none; /* border-radius:2px; */ z-index:999; cursor:pointer;bottom:0;}
 #ninja-slider-prev {left:0;}
 #ninja-slider-next {right:0;}
 #ninja-slider-prev div {display:none;}
@@ -4424,11 +4429,11 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 
 @media screen and (max-width:980px) {
   #ninja-slider.fullscreen .fs-icon {top:7px !important; right:0 !important; width:44px; height:44px; background:url(/image/common/mo_menu_close.svg) no-repeat 50% / 24px; padding:10px;}
-  #ninja-slider.fullscreen .slider-inner {top:20%; width: calc(100% - 30px) !important; max-width:100%; height:auto; min-height:360px; margin:0 15px; padding:0 0 50px 0 !important;}
+  #ninja-slider.fullscreen .slider-inner {top:50%; width: calc(100% - 30px) !important; max-width:100%; height:auto !important; min-height:360px; margin:0 15px; padding:0 0 50px 0 !important; transform:translateY(-50%) !important;}
   #ninja-slider .pop_con {height: 260px !important;margin:20px !important;}
-  #ninja-slider ul {height:221px !important;}
-  #ninja-slider li {margin-bottom:55px!important;}
-  #ninja-slider .caption {font-size:14px;margin-top:20px;font-weight: 400;}
+  #ninja-slider ul {height:100% !important;}
+  #ninja-slider li {height:90%; margin-bottom:55px !important;}
+  #ninja-slider .caption {font-size:14px; margin-top:28px; font-weight:400;}
   .popup_wrap #ninja-slider .inner .title {padding:20px;}
 }
 .pop_sian {padding:0;}
@@ -4495,6 +4500,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
   .guide_wrap .item .inner ul {margin-left:35px;margin-right:35px;margin-top:20px;}
   .guide_wrap .item .inner ul li {padding-left: 10px;position: relative;margin-top:10px;line-height: 1.3;}
   .guide_wrap .item .inner .img {margin-top:20px;}
+  .guide_wrap .item .inner .img img {border:1px solid #03a2ea; box-sizing:border-box;}
   .guide_wrap .item .inner .img.mo_only {padding:20px 20px; background:#f3f4f6;}
   .guide_wrap .item.bg_gray .inner .img.mo_only {padding:20px 20px; background:#fff;}
 
@@ -4887,7 +4893,7 @@ body.calendarDefault .dropdown-menu {transform:translateY(10px);}
 
 @media screen and (max-width:980px) {
   .file_box .statusbar {position:relative; display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:10px 0 0 0; border:0;}
-  .file_box .statusbar .filename {flex:1 1 auto; width:min-content;}
+  .file_box .statusbar .filename {flex:0 0 calc(100% - 50px); width:calc(100% - 50px) !important; line-height:140%;}
   .file_box .statusbar .filesize {flex:0 0 auto; width:auto; margin-right:0; padding-right:50px; box-sizing:border-box;}
   .file_box .statusbar .progressBar {flex:1 1 auto; width:100% !important; margin:10px 0;}
   .file_box .statusbar .progressBar > div {width:100% !important; text-align:center;}

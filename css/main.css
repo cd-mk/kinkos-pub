@@ -194,7 +194,8 @@
   .service_wrap .pg_nav_wrap {width:100%;}
   .service_wrap .pg_nav_wrap .pg_nav {top:0;left:50%;transform:translateX(-50%);}
 
-
+	.service_wrap .service_select ul.selectbox-options li.swiper-slide-thumb-active {text-align:center;}
+	.service_wrap .service_select ul.selectbox-options.opened li.swiper-slide-thumb-active {text-align:left;}
 }
 
 /*  ---------------------
