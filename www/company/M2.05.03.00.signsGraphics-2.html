@@ -36,6 +36,7 @@
     </ul>
   </div>
   <!-- //접근성 바로가기 메뉴(숨김) -->
+
   <!-- WRAP -->
   <div id="wrap" class="company">
 
@@ -68,9 +69,9 @@
       <!-- //breadcrumb  -->
 
       <!-- 콘텐츠 group "cont_wrap" 고정 -->
-      <div class="cont_wrap layout_full">
-
-      
+      <!-- @2020-05-17 layout_full -> layout_width 클래스 수정 -->
+      <div class="cont_wrap layout_width">
+      <!-- //@2020-05-17 layout_full -> layout_width 클래스 수정 -->
 
         <!-- 본문 -->
         <!-- photo zoom js 적용 -->
@@ -81,9 +82,9 @@
             기획 · 제작 전문가와 함께 고객님의 아이디어를<br class="mo_only"> 더 특별하게 표현해 보세요</p>
           </div>
 
-            <div class="btn_wrap top center">
-              <a href="/www/company/M4.01.01.00.estimate.html" class="btn type05 large">상담문의하기</a>
-            </div>
+          <div class="btn_wrap top center">
+            <a href="/www/company/M4.01.01.00.estimate.html" class="btn type05 large">상담문의하기</a>
+          </div>
 
           <!-- page tab -->
           <div class="page_tab sub_type1 col3 section">
@@ -96,13 +97,15 @@
           </div>
           <!-- page tab -->
 
-        <p class="noti top big">기획부터 디자인, 제작,<br class="mo_only"> 설치까지 원활하게!</p>
+          <!-- @2020-05-17 제거 -->
+          <p class="noti top big" style="display:none;">기획부터 디자인, 제작,<br class="mo_only"> 설치까지 원활하게!</p>
+          <!-- //@2020-05-17 제거 -->
 
           <div class="section mid service_info_list package_wrap">   
             <div class="item_list">
               <div class="box clearfix">
                 <div class="img_box">
-                  <div class=" package">
+                  <div class="package" style="height:100%;">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide"><img src="/image/company/sub/sign-list-1-01.png" alt=""></div>
                       <div class="swiper-slide"><img src="/image/company/sub/sign-list-1-01.png" alt=""></div>
@@ -133,9 +136,6 @@
                 </div>
               </div>
             </div>
-
-
-
             <div class="item_list">
               <div class="box clearfix">
                 <div class="img_box">
@@ -172,9 +172,8 @@
                 </div>
               </div>
             </div>
-      
             <div class="item_list">
-              <div class="box clearfix ">
+              <div class="box clearfix">
                 <div class="img_box">
                   <div class=" package">
                     <div class="swiper-wrapper">
@@ -207,7 +206,6 @@
                 </div>
               </div>
             </div>
-
             <div class="item_list">
               <div class="box clearfix">
                 <div class="img_box">
@@ -249,7 +247,6 @@
     </div>
     <!-- CONTENT -->
 
-
     <!-- FOOTER -->
     <div id="footer" class="layout_width">
     </div>
@@ -260,48 +257,57 @@
   </div>
   <!-- //WRAP -->
 
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
+  <!-- //global -->
+  <script src="/js/sub.js"></script>
+  <script>
+    // @2020-05-17 스와이프 JS 수정
+    $(document).ready(function () {
+      var opt = {
+        slidesPerView: 1,
+        loop: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        }
+      };
 
-<!-- SCRIPT -->
-<!-- global -->
-<script src="/js/jquery/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="/js/jquery/jquery.placeholder.min.js"></script>
-<script src="/js/wow.min.js"></script>
-<script src="/js/swiper/swiper.min.js"></script>
-<script src="/js/common.js"></script>
-<!-- //global -->
-<script src="/js/sub.js"></script>
-<script>
-  $(document).ready(function () {
-    var package = new Swiper('.package', {
-      slidesPerView: '1',
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      }
+      $('.package').each(function() {
+        var obj = $(this);
+
+        var slide = new Swiper(obj, opt);
+
+        reloadSlide(slide, opt, opt);
+      });
     });
-  });
+    // //@2020-05-17 스와이프 JS 수정
 
-  // 퍼블리싱 코드
-  $(document).ready(function () {
-    // 임시 header, footer영역 로드
-    $("#header").load("/www/common/include/common.html header", function () {
-      // header 로드 후 header 관련 function 실행
-      setGnb();
-      mobileGnb();
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+      // 임시 header, footer영역 로드
+      $("#header").load("/www/common/include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
+      });
+
+      $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+      });
     });
-
-    $("#footer").load("/www/common/include/common.html .footer_inner", function () {
-    });
-  });
-  // //퍼블리싱 코드
-</script>
-
+    // //퍼블리싱 코드
+  </script>
+  <!-- //SCRIPT -->
 </body>
-
 </html>

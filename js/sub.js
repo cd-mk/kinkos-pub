@@ -2,8 +2,7 @@ function slideInit() {
   var isMobile = chkViewport();
 
   // 디지털출력 복사
-  if( $('.service_info_view').length )
-  {
+  if( $('.service_info_view').length ) {
     $('.service_info_view').each(function(idx) {
       var obj = $(this);
       var opt = {
@@ -31,8 +30,7 @@ function slideInit() {
 
       var itemObj = obj.closest('.item_list');
       var toggleBtn = itemObj.find('.toggle_view');
-      if( toggleBtn.length )
-      {
+      if( toggleBtn.length ) {
         toggleBtn.on('click', function() {
           var toggle = $(this);
 

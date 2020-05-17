@@ -933,4 +933,17 @@ $(function () {
     });
   });
   // //@2020.04.14 SCROLL TOP 추가
+
+  // @2020.05.17 모바일 사업자 정보 보기 추가
+  $(window).on('load', function() {
+    if( $('.business_information_btn').length ) {
+      $(document).on('click', '.business_information_btn', function(e) {
+        e.preventDefault();
+
+        $(this).toggleClass('active');
+        $('.footer_business_information').toggleClass('active');
+      });
+    }
+  });
+  // //@2020.05.17 모바일 사업자 정보 보기 추가
 });

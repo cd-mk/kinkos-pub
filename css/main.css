@@ -31,41 +31,47 @@
 	.bestPro_wrap .swiper-slide:hover .txt {position:relative;top:0;}
 	.bestPro_wrap .swiper-slide {margin-bottom:0;width:285px;}
 
-
-
-
 	/* mobile none */
 	.bestPro_wrap .stit,
 	.bestPro_wrap .btn_txt.more {display:none;}
 }
-.cs_wrap {margin-top:140px;font-size:24px;}
+
+.cs_wrap {margin-top:140px; padding-top:30px !important; padding-bottom:30px !important; font-size:24px; background:#fbfbfb;}
 .cs_wrap ul {overflow:hidden;text-align:center;}
 .cs_wrap ul li {margin-left:2.083em;box-sizing:border-box;position:relative;display: inline-block;text-align:left;}
-.cs_wrap ul li strong {font-weight:normal;}
-.cs_wrap ul li p {margin-top:10px;color:#777;font-size:0.750em;}
+.cs_wrap ul li strong {font-size:20px;}
+.cs_wrap ul li p {margin-top:10px;font-size:16px; font-weight:400; line-height:140%;}
 .cs_wrap ul li a {display:block;padding:6.5px 2.083em 6.5px 4.375em;}
 .cs_wrap ul li:first-child {background:url('/image/company/main/ico-book.png') no-repeat left center;background-size:auto 100%;}
 .cs_wrap ul li:nth-child(2) {background:url('/image/company/main/ico-text.png') no-repeat left center;background-size:auto 100%;}
 .cs_wrap ul li:nth-child(3) {background:url('/image/company/main/ico-pencil.png') no-repeat left center;background-size:auto 100%;}
 .cs_wrap ul li::before {content:"";clear:both;position:absolute;top:50%;right:0;width:1px;height:63px;transform:translateY(-50%);background-color:#e7e7e7;}
 .cs_wrap ul li:last-child:before {display:none;}
+
 @media screen and (max-width:1600px) {
-.cs_wrap {font-size:20px;}
+	.cs_wrap {font-size:20px;}
 }
+
 @media screen and (max-width:1200px) {
-.cs_wrap {font-size:17px;}
+	.cs_wrap {font-size:17px;}
 }
+
 @media screen and (max-width:980px) {
-	.cs_wrap {margin-top:80px;}
-	.cs_wrap ul {margin:0 8px;}
-	.cs_wrap ul li {margin:0;padding:0;width:calc((100% - 10px) / 3);}
-	.cs_wrap ul li strong {font-size:14px;display:block;text-align:center;}
+	.cs_wrap {margin-top:80px; padding-top:20px !important; padding-bottom:20px !important; text-align:center;}
+	.cs_wrap ul {display:flex; flex-direction:column; align-items:center; justify-content:flex-start; width:100%; max-width:100%; margin:0 auto; padding:0 15px; box-sizing:border-box;}
+	.cs_wrap ul li {flex:0 0 auto; position:relative; display:flex; flex-direction:column; flex-wrap:nowrap; align-items:center; justify-content:center; width:100%; height:auto; margin:20px 0 0 0; padding:20px 0 0 0;}
+	.cs_wrap ul li:nth-child(1) {margin-top:0; padding-top:0;}
+	.cs_wrap ul li strong {font-size:20px;display:block;text-align:center;}
 	.cs_wrap ul li p {display:none !important;}
 	.cs_wrap ul li a {padding:70px 0 0 0;}
+	.cs_wrap ul li a p.pc {display:block !important;}
 	.cs_wrap ul li:first-child {background:url('/image/company/main/ico-book.png') no-repeat center 10px;background-size:50px auto;}
-	.cs_wrap ul li:nth-child(2) {background:url('/image/company/main/ico-text.png') no-repeat center 10px;background-size:50px auto;}
-	.cs_wrap ul li:nth-child(3) {background:url('/image/company/main/ico-pencil.png') no-repeat center 10px;background-size:50px auto;}
-	.cs_wrap ul li::before {height:66px;}
+	.cs_wrap ul li:nth-child(2) {background:url('/image/company/main/ico-text.png') no-repeat center 30px;background-size:50px auto;}
+	.cs_wrap ul li:nth-child(3) {background:url('/image/company/main/ico-pencil.png') no-repeat center 20px;background-size:50px auto;}
+	.cs_wrap ul li::before {content:""; display:inline-block; position:absolute; top:0; left:50%; width:50%; height:1px; border-left:0; border-top:1px solid #e1e1e1; transform:translateX(-50%);}
+
+	.cs_wrap ul li:nth-child(1):before {display:none;}
+	.cs_wrap ul li:last-child:before {display:inline-block;}
 }
 
 .banner_wrap.layout_width {margin-top:120px;}
