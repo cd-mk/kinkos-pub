@@ -2063,6 +2063,17 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap .item_photo_list .txt p {margin-top:20px; font-size:1em; color:#777; line-height:1.5;}
 .service_info_wrap .item_photo_list .txt ul li {margin-top:10px; font-size:1em; color:#777; line-height:1.5;position: relative;padding-left:15px; word-break:keep-all;}
 .service_info_wrap .item_photo_list .txt ul li::before{content:"-";position:absolute;top:0;left:0;}
+
+.service_info_wrap .corporation-solution-footer {display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:30px 0 0 0; padding:0;}
+.service_info_wrap .corporation-solution-footer .corporation-solution-footer-items {flex:1 1 auto; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:0;}
+.service_info_wrap .corporation-solution-footer .corporation-solution-footer-item {flex:1 1 auto; display:flex; flex-direction:row; align-items:center; justify-content:flex-start; width:100%; height:auto; margin:20px 0 0 0; padding:10px 10px; border:1px solid #e7e7e7; box-sizing:border-box;}
+.service_info_wrap .corporation-solution-footer .corporation-solution-footer-item p {flex:1 1 auto;
+  font-size: 1em;
+  color: #777;
+  line-height: 1.5;
+}
+.service_info_wrap .corporation-solution-footer .corporation-solution-footer-item a {flex:0 0 auto; min-width:130px; margin:0 20px 0 0;}
+
 @media screen and (max-width:980px) {
   .service_info_wrap .item_photo_list .thumb {height:200px;overflow: hidden;}
   .service_info_wrap .item_photo_list .txt {margin-top:20px;}
@@ -2070,6 +2081,11 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .service_info_wrap .item_photo_list .txt strong {font-size:16px;}
   .service_info_wrap .item_photo_list .txt p {margin-top:10px;line-height: 1.3;}
   .service_info_wrap .item_photo_list .txt ul li {margin-top:6px; padding-left:10px;}
+}
+
+@media screen and (max-width:768px) {
+  .service_info_wrap .corporation-solution-footer .corporation-solution-footer-item {flex-direction:column; align-items:flex-start;}
+  .service_info_wrap .corporation-solution-footer .corporation-solution-footer-item a {width:100%; margin-top:20px;}
 }
 
 
