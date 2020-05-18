@@ -1217,17 +1217,18 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .center_info_wrap .center_explanation_wrap .item_list.grid_2 li .txt_box {margin-top:20px; font-size:20px; font-weight:500; color:#222222; text-align:center;}
 
 
-.offer_service {text-align: left;}
-.offer_service li {display:inline-block; width:auto; min-width:120px; padding-left:10px; padding-right:10px; margin-bottom:20px; box-sizing:border-box;}
+.offer_service {display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:flex-start; width:100%; height:auto;}
+.offer_service li {display:inline-block; width:auto; height:30px; padding-left:5px; padding-right:5px; margin-bottom:20px; box-sizing:border-box;}
 .offer_service li:first-child {padding-left:0;}
-.offer_service li span {display:inline-block;width:auto;min-width:120px;height:30px;margin:0;font-size:0;line-height0;letter-spacing:-1px;text-align:center;color:#222;background-size:auto 100%;background-position:center;background-repeat:no-repeat;}
+.offer_service li span {display:inline-block;width:auto;height:30px;margin:0;font-size:0;line-height:0;letter-spacing:-1px;text-align:center;color:#222;background-size:auto 100%;background-position:center;background-repeat:no-repeat;}
 .offer_service li span::before {content:"";clear:both;display:block;width:100%;height:30px;background-size:auto 100%;background-position:center;background-repeat:no-repeat;margin:0;}
-.offer_service li span.offer_1::before {background-image:url(/image/company/sub/offer-1.jpg);}
-.offer_service li span.offer_2::before {background-image:url(/image/company/sub/offer-2.jpg);}
-.offer_service li span.offer_3::before {background-image:url(/image/company/sub/offer-3.jpg);}
-.offer_service li span.offer_4::before {background-image:url(/image/company/sub/offer-4.jpg);}
-.offer_service li span.offer_5::before {background-image:url(/image/company/sub/offer-5.jpg);}
-.offer_service li span.offer_6::before {background-image:url(/image/company/sub/offer-6.jpg);}
+.offer_service li span img {width:auto; height:100%; opacity:0;}
+.offer_service li span.offer_1::before {background-image:url(/image/company/sub/offer-1.png);}
+.offer_service li span.offer_2::before {background-image:url(/image/company/sub/offer-2.png);}
+.offer_service li span.offer_3::before {background-image:url(/image/company/sub/offer-3.png);}
+.offer_service li span.offer_4::before {background-image:url(/image/company/sub/offer-4.png);}
+.offer_service li span.offer_5::before {background-image:url(/image/company/sub/offer-5.png);}
+.offer_service li span.offer_6::before {background-image:url(/image/company/sub/offer-6.png);}
 
 @media screen and (max-width:1600px) {
   .center_info_wrap .sch_box .sch_item {width:22.69%;}
@@ -1252,7 +1253,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .offer_service {width:100%;margin-top:20px;}
   .offer_service li {display:inline-block;padding-left:4px;text-align:center;}
   .offer_service li span {width:auto;letter-spacing:-1px;text-align:center;}
-  .offer_service li span:before {display:block;width:50px;height:55px;background-size:50px auto;}
+  .offer_service li span:before {display:block;width:100%;height:30px;background-size:auto 100%;}
   .center_info_wrap .bbs_list .btn_wrap {margin-top:0;}
   .center_info_wrap .bbs_list .btn_wrap .btn {width:100%}
   .center_info_wrap .bbs_list .head_item .sort_item .sort_opt {font-size:14px;}
@@ -2249,6 +2250,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_option_material_wrap {margin-top:30px;padding:0 30px;position:relative;}
 .pdt_option_material_wrap h1 {margin:0; padding:0; font-size:1em; line-height:44px; font-weight:700; box-sizing:border-box;}
 .pdt_option_material_wrap .swiper-slide {display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100px; height:auto;}
+.pdt_option_material_wrap .swiper-slide .pdt_option_material_view {display:inline-block; width:100%; height:100%;}
 .pdt_option_material_wrap .pdt_option_material_image {display:block;}
 .pdt_option_material_wrap .pdt_option_material_image img {display:block;width:100px;border:1px solid #dedede;box-sizing:border-box;}
 .pdt_option_material_wrap .pdt_option_material_name {font-size:14px; line-height:20px;}
@@ -2474,7 +2476,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_tab_wrap .item {margin-top:60px;}
 .pdt_tab_wrap .item4 .tit_box.mid:first-child {margin-top:0;}
 
-.pdt_tab_wrap .item .pdt_dtl_explain {line-height:normal;}
+.pdt_tab_wrap .item .pdt_dtl_explain {line-height:inherit;}
 .pdt_tab_wrap .item .pdt_dtl_explain em {font-style:italic;}
 
 .pdt_tab_wrap .writer .id {display:inline-block;font-weight:700;color:#222;}
