@@ -265,10 +265,23 @@ var setInputFile = function () {
     $('.file_inp').each(function () {
       $(this).on('change', function () {
         var filename = window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop();
+        var dupChkFile = false;
 
-        $(this).siblings('.js-file-name').val(filename).attr('disabled', true);
-        $(this).siblings('.js-file-label').addClass('hide');
-        $(this).siblings('.js-file-del').addClass('on');
+        if($(".js-file-name").length) {
+          $(".js-file-name").each(function () {
+            if(filename == $(this).val()) {
+              dupChkFile = true;
+              alert("같은 이름의 파일이 이미 있습니다.");
+              return false;
+            }
+          });
+        }
+
+        if(!dupChkFile) {
+          $(this).siblings('.js-file-name').val(filename); //.attr('disabled', true);
+          $(this).siblings('.js-file-label').addClass('hide');
+          $(this).siblings('.js-file-del').addClass('on');
+        }
       });
     });
   }
