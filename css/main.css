@@ -83,7 +83,7 @@
 .banner_wrap li.item.list1 .txt {left:35px;}
 .banner_wrap li.item.list2 .txt {left:35px;}
 .banner_wrap li:hover .txt {transition:all 0.8s;top:40%;}
-.banner_wrap .txt .title {font-size:24px;font-weight:700;color:#fff;}
+.banner_wrap .txt .title {font-size:24px;font-weight:700;line-height:140%;color:#fff;}
 .banner_wrap .txt .cont {font-size:18px;color:#fff;margin-top:15px;line-height:1.44;}
 .banner_wrap a {display:block;overflow:hidden;width:100%;position:relative;}
 .banner_wrap a .color_bg {width:0%;top:0;right:-300px;transition:all 0.5s;z-index:1;}
