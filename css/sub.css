@@ -2712,7 +2712,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 }
 
 /* 배송/교환/상품 */
-.production_pro {position:relative;}
+.production_pro {position:relative; clear:both;}
 .production_pro .inner {padding:60px 0 0;overflow:hidden;border-top:2px solid #000;text-align:center;}
 .production_pro .inner h4 {font-size:1.111em;font-weight:700;text-align:left;margin-bottom:22px;}
 .production_pro .pro {padding:0 56px;}
