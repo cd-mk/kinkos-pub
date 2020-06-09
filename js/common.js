@@ -808,7 +808,7 @@ $(function () {
     if( $('#popupzone').length ) {
       popupZoneSlide();
 
-      //popupZoneInit();
+      popupZoneInit();
     } else {
       popupZoneSlideSetObj = setTimeout(function() { popupZoneSlideInit(); }, popupZoneSlideSetDelay);
     }
@@ -825,15 +825,7 @@ $(function () {
         var img = a.find('img');
         var imgSrc = img.attr('src');
 
-        a.css({
-          'background-image': 'url(' + imgSrc + ')',
-          'background-repeat': 'no-repeat',
-          'background-position-x': 'center',
-          'background-position-y': 'center',
-          'background-size': 'cover'
-        });
-
-        img.css('opacity', '0');
+        a.css('background-image', 'url(' + imgSrc + ')');
       });
     }
   }

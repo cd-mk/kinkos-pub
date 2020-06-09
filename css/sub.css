@@ -366,7 +366,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .login_wrap .login_tab > ul > li.active{font-weight:700; border:1px solid #222;color:#222;}
 
 .login_wrap.business .tit_box .business_logo {display:block; width:auto; height:auto; margin:0 auto 30px auto; padding:0;}
-.login_wrap.business .tit_box .business_logo img {width:100%; max-width:240px; height:auto;}
+.login_wrap.business .tit_box .business_logo img {width:auto; max-width:240px; height:auto;}
 .login_wrap.business .section {margin-top:0;}
 
 @media screen and (max-width:980px) {
@@ -1251,7 +1251,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
   .center_info_wrap .bbs_list .hours_list > li:nth-child(2)::before {content:"/";display:inline-block}
 
   .offer_service {width:100%;margin-top:20px;}
-  .offer_service li {display:inline-block;padding-left:4px;text-align:center;}
+  .offer_service li {display:inline-block;padding-left:0;text-align:center;}
   .offer_service li span {width:auto;letter-spacing:-1px;text-align:center;}
   .offer_service li span:before {display:block;width:100%;height:30px;background-size:auto 100%;}
   .center_info_wrap .bbs_list .btn_wrap {margin-top:0;}
@@ -1340,7 +1340,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .magazine_wrap .photo_list > li:nth-child(1),
 .magazine_wrap .photo_list > li:nth-child(2),
 .magazine_wrap .photo_list > li:nth-child(3){margin-top:0;}
-.magazine_wrap .photo_list .img_box {width:100%;}
+.magazine_wrap .photo_list .img_box {position:relative; width:100%; height:auto; max-height:300px; background-repeat:no-repeat; background-position:center; background-size:cover;}
+.magazine_wrap .photo_list .img_box img {opacity:0;}
 .magazine_wrap .photo_list .txt_box h4 {margin-top:28px; font-size:20px;}
 .magazine_wrap .photo_list .txt_box span {margin-top:15px; font-size:1em;}
 .magazine_wrap .photo_list .txt_box ul {overflow:hidden; margin-top:18px;}
@@ -1364,7 +1365,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .event_wrap .photo_list {margin-top:40px;}
 .event_wrap .photo_list li {margin-bottom:80px; width:calc((100% - 30px) / 2);}
 .event_wrap .photo_list li:nth-child(even) {margin-left:30px;}
-.event_wrap .photo_list .img_box {position:relative; width:100%; height:300px;}
+.event_wrap .photo_list .img_box {position:relative; width:100%; height:auto; max-height:300px; background-repeat:no-repeat; background-position:center; background-size:cover;}
+.event_wrap .photo_list .img_box img {opacity:0;}
 .event_wrap .photo_list .txt_box h4 {margin-top:19px; font-size:18px;}
 .event_wrap .photo_list .txt_box span {margin-top:15px; font-size:16px;}
 .event_wrap .photo_list .event_end {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6);}
@@ -1919,6 +1921,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 
 /* 서비스안내 기본 비주얼 */
+.service_info_wrap .tit_box {max-width:100%;}
+.service_info_wrap .tit_box p {display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:auto; margin:25px 0 0 0; padding:0;}
 .service_info_wrap .visual_box {padding-top:405px;position:relative;text-align:left;overflow: hidden;}
 .service_info_wrap .visual_box::before {z-index:-1;content:"";width:100%;height:380px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;}
 .service_info_wrap .visual_box.item1::before {background-image:url(/image/company/sub/signs-main-1.png);}

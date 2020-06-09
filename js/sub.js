@@ -283,6 +283,14 @@ $(function () {
         productDetailCouponToggle( obj );
       });
     }
+
+    if( $('.event_wrap').length ) {
+      eventPhotoListInit('.event_wrap');
+    }
+
+    if( $('.magazine_wrap').length ) {
+      eventPhotoListInit('.magazine_wrap');
+    }
   }
 
   function pageTabInit( obj ) {
@@ -539,6 +547,22 @@ $(function () {
         targetObj.attr('data-is-show', 'N');
         targetObj.hide();
       }
+    }
+  }
+
+  function eventPhotoListInit( target ) {
+    var targetObj = $(target);
+    var photoList = targetObj.find('.photo_list');
+    var imgBox = photoList.find('.img_box');
+
+    if( imgBox.length ) {
+      imgBox.each(function() {
+        var obj = $(this);
+        var img = obj.find('img');
+        var imgSrc = img.attr('src');
+
+        obj.css('background-image', 'URL(' + imgSrc + ')');
+      });
     }
   }
 
