@@ -407,6 +407,8 @@
 .info_wrap .item_box.notice .notice_list > li > a {overflow:hidden; display:block; font-size:16px; line-height:20px;}
 .info_wrap .item_box.notice .notice_list > li > a:hover .title {text-decoration:underline;}
 .info_wrap .item_box.notice .notice_list > li .title {float:left; width:auto; max-width:calc(100% - 135px); margin-right:0; padding-right:0; color:#333; text-overflow:ellipsis; white-space:nowrap;}
+.info_wrap .item_box.notice .notice_list > li > a.notice .title {font-weight:700;}
+.info_wrap .item_box.notice .notice_list > li > a.new .title {font-weight:700;}
 .info_wrap .item_box.notice .notice_list > li .ico_notice {display:inline-block; position:relative; top:3px; width:18px; height:18px; margin:0 0 0 5px; background:URL('/image/common/ico-bbs-notice.png') no-repeat; background-size:100% auto;}
 .info_wrap .item_box.notice .notice_list > li .ico_new {display:inline-block; position:relative; top:3px; width:18px; height:18px; margin:0 0 0 5px; background:URL('/image/common/ico-bbs-new.png') no-repeat; background-size:100% auto;}
 .info_wrap .item_box.notice .notice_list > li .date {float:right; width:90px; color:#7c7c7c;}

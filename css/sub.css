@@ -1218,7 +1218,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 
 .offer_service {display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:flex-start; width:100%; height:auto;}
-.offer_service li {display:inline-block; width:auto; height:30px; padding-left:0; padding-right:10px; margin-bottom:20px; box-sizing:border-box;}
+.offer_service li {display:inline-block; width:auto; height:30px; margin:10px 0 10px 0; padding-left:0; padding-right:10px; box-sizing:border-box;}
 .offer_service li:first-child {padding-left:0;}
 .offer_service li span {display:inline-block;width:auto;height:30px;margin:0;font-size:0;line-height:0;letter-spacing:-1px;text-align:center;color:#222;background-size:auto 100%;background-position:center;background-repeat:no-repeat;}
 .offer_service li span::before {content:"";clear:both;display:block;width:100%;height:30px;background-size:auto 100%;background-position:center;background-repeat:no-repeat;margin:0;}
@@ -1943,6 +1943,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap .visual_box .txt_box_sub p {margin-top:20px;color:#777;line-height: 1.5;}
 
 .service_info_wrap .tit_box p {text-align:left;}
+
+.service_info_wrap h4 {line-height:140%;}
 
 
 @media screen and (max-width:1600px) {
