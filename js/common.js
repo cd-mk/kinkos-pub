@@ -951,4 +951,24 @@ $(function () {
     }
   });
   // //@2020.05.17 모바일 사업자 정보 보기 추가
+
+  // @2020-06-11 SNB 상품배너 없을경우 2차메뉴 width 최대화
+  function snbWidthInit() {
+    var snbWrap = $('.sub_gnb_wrap.mall');
+    var inner = snbWrap.find('.inner');
+    var pdtBanner = snbWrap.find('.pdt_banner');
+    var pdtBannerHtml = pdtBanner.html();
+    pdtBannerHtml = pdtBannerHtml.replace(/(\s*)/g, "");
+
+    if( pdtBannerHtml === '' ) {
+      inner.css('padding-right', '60px');
+    }
+  }
+
+  $(window).on('load', function() {
+    if( $('#wrap').hasClass('mall') ) {
+      snbWidthInit();
+    }
+  });
+  // //@2020-06-11 SNB 상품배너 없을경우 2차메뉴 width 최대화
 });

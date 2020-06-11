@@ -365,7 +365,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .gnb_wrap .search_item .gnb_search_form .btn_sch .ico_sch {background-position:0 -21px;}
 
 .sub_gnb_wrap {display:none; position:absolute; left:0; top:58px; width:100%; z-index:99;overflow:hidden;background:#fff;}
-.sub_gnb_wrap .inner {padding:20px 0 80px 0;z-index:99;position:relative;margin:0 auto;max-width:1530px;padding-left:230px;padding-right:275px;}
+.sub_gnb_wrap .inner {padding:20px 0 80px 0;z-index:99;position:relative;margin:0 auto;max-width:1530px;height:auto;min-height:360px;padding-left:230px;padding-right:275px;}
 .sub_gnb_wrap .gnb_box {z-index:999;position:relative;}
 .sub_gnb_wrap .gnb_box a {display: inline-block;}
 .sub_gnb_wrap .gnb_item {display:block;overflow:hidden;padding-left:160px;position:relative;}
@@ -377,7 +377,7 @@ p+.btn_wrap {margin-top:40px !important;}
 .sub_gnb_wrap .gnb_item .menu_list > li {float:left;}
 .sub_gnb_wrap .gnb_item .menu_list > li:first-child {margin-top:0;}
 .sub_gnb_wrap .gnb_item .menu_list > li a {font-size:16px; color:#fff;padding:10px 25px;display:inline-block;position:relative;}
-.sub_gnb_wrap .gnb_item .menu_list > li a::after {display:inline-block;width:1px;height:16px;content:"";clear:both;background:#87d2f4;position:absolute;top:14px;right:0;}
+.sub_gnb_wrap .gnb_item .menu_list > li a::after {display:inline-block;width:1px;height:16px;content:"";clear:both;background:#87d2f4;position:absolute;top:12px;right:0;}
 .sub_gnb_wrap .gnb_item .menu_list > li:last-child a::after {display:none;}
 
 .sub_gnb_wrap.mall {background:#03a2ea;}
@@ -1238,7 +1238,7 @@ body.fix_pc {min-width:980px;}
 .hd_notice button { font-family:'Nanum Gothic','나눔 고딕',나눔고딕,NanumGothic,Malgun Gothic,'Malgun Gothic','맑은 고딕','Dotum' , sans-serif; }
 
 /* 퀵메뉴 */
-.quick_menu {position:fixed;right:-70px;top:328px;z-index:9999;transition:right .4s ease;}
+.quick_menu {position:fixed;right:-70px;top:35%;z-index:9999;transition:right .4s ease;}
 .quick_menu:hover {right:0;}
 .quick_menu>li {margin-top:1px;}
 .quick_menu>li>a {position:relative;display:block;padding:0 17px 0 50px;height:50px;color:#fff;background:#000;line-height:50px;font-size:14px;}
