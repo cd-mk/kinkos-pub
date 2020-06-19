@@ -2362,9 +2362,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 @media screen and (max-width:1400px) {
   .pdt_info_wrap .photo_inner {max-width: 600px;}
+  .pdt_info_wrap .opt_size .int_opt li {padding-left:0 !important;}
   .ease_cart ul li {display:block;width:100%;} 
   .ease_cart ul li:last-child {padding-left:110px; margin-top:20px; width:100%;}
-
 }
 
 
