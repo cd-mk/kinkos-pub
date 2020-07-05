@@ -346,7 +346,7 @@ var setAccordian = function () {
   };
 
   if( $('.accor_title').length ) {
-    $(document).on('click', '.accor_title label', toggleContent);
+    //$(document).on('click', '.accor_title label', toggleContent);
     $(document).on('click', '.accor_title .txt_title', toggleContent);
     $(document).on('click', '.accor_title .accor_toggle_btn', function(e) {
       e.preventDefault();
@@ -640,10 +640,6 @@ $(function () {
       if( targetObj.length ) {
         btnObj.on('click', function() {
           targetObj.toggleClass('active');
-        });
-
-        parentObj.on('mouseleave', function() {
-          targetObj.removeClass('active');
         });
 
         // 11/20 추가
