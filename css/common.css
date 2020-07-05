@@ -173,6 +173,7 @@ a.txt_underline.black,
 .btn_wrap.center {position:relative; display:block; width:100%;text-align:center;}
 .btn_wrap.right {text-align:right;margin-top:20px;}
 .btn_wrap.top {margin-top:40px;}
+.btn_wrap p {font-size:16px;text-align:center;}
 
 .btn_wrap.center .btn {margin-left:10px;}
 .btn_wrap.center .btn:first-child {margin-left:0;}
