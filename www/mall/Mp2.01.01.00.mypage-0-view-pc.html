@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-<!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
-<meta name="Title" content="킨코스코리아" />
-<meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
-<!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="킨코스코리아">
-<meta property="og:url" content="http://www.kinkos.co.kr/">
-<link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-<meta property="og:image" content="../image/common/logo.png">
-<meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
-<!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
-<title>구매 상세 내역 | 마이페이지 | 킨코스코리아</title>
-<!-- CSS FILE LOAD -->
-<link rel="stylesheet" href="../css/lib/animate.css">
-<link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-<link rel="stylesheet" href="../css/lib/swiper.min.css">
-<link rel="stylesheet" href="../css/common.css">
-<!-- only sub -->
-<link rel="stylesheet" href="../css/sub.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+  <meta name="Title" content="킨코스코리아" />
+  <meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+  <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="킨코스코리아">
+  <meta property="og:url" content="http://www.kinkos.co.kr/">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
+  <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+  <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <title>구매 상세 내역 | 마이페이지 | 킨코스코리아</title>
+  <!-- CSS FILE LOAD -->
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <!-- only sub -->
+  <link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <!--
@@ -156,7 +156,6 @@
                     <col width="15%" />
                     <col width="18%" />
                     <col width="15%" />
-                    <col width="14%" />
                   </colgroup>
                   <thead>
                     <tr>
@@ -165,7 +164,6 @@
                       <th scope="col">수량/상품금액</th>
                       <th scope="col">배송</th>
                       <th scope="col">파일확인</th>
-                      <th scope="col">주문상태</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -173,6 +171,13 @@
                     <tr>
                       <td class="td_cart_num">
                         <p><strong>100100100</strong></p>
+
+                        <!-- @2020-07-06 추가 -->
+                        <p>접수대기</p>
+                        <p><a href="#popup1" class="btn type07 btn_popup">시안보기</a></p>
+                        <p><a href="#" class="btn type02">주문취소</a></p>
+                        <p><a href="#" class="btn type01">재주문</a></p>
+                        <!-- //@2020-07-06 추가 -->
                       </td>
                       <td class="td_prd_info">
                         <div class="pdt_info">
@@ -201,18 +206,19 @@
                       <td class="td_ord_regist_files">
                         <a href="#popup2" class="btn_popup">요청사항/파일확인</a>
                       </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#popup1" class="btn type07 btn_popup">시안보기</a></p>
-                        <p><a href="#" class="btn type02">주문취소</a></p>
-                        <p><a href="#" class="btn type01">재주문</a></p>
-                      </td>
                     </tr>
                     <!-- loop -->
 
                     <tr>
                       <td class="td_cart_num">
                         <p><strong>100100100</strong></p>
+
+                        <!-- @2020-07-06 추가 -->
+                        <p>접수대기</p>
+                        <p><a href="#popup1" class="btn type07 btn_popup">시안보기</a></p>
+                        <p><a href="#" class="btn type02">주문취소</a></p>
+                        <p><a href="#" class="btn type01">재주문</a></p>
+                        <!-- //@2020-07-06 추가 -->
                       </td>
                       <td class="td_prd_info">
                         <div class="pdt_info">
@@ -240,12 +246,6 @@
                       </td>
                       <td class="td_ord_regist_files">
                         <a href="#popup2" class="btn_popup">요청사항/파일확인</a>
-                      </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#popup1" class="btn type07 btn_popup">시안보기</a></p>
-                        <p><a href="#" class="btn type02">주문취소</a></p>
-                        <p><a href="#" class="btn type01">재주문</a></p>
                       </td>
                     </tr>
                   </tbody>
@@ -455,21 +455,35 @@
 
 <!-- SCRIPT -->
 <!-- global -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="/js/jquery/jquery.placeholder.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/common.js"></script>
 <!-- //global -->
 
-<script src="../js/sub.js"></script>
+<script src="/js/sub.js"></script>
 
 <script>
   // 퍼블리싱용
   $(document).ready(function() {
     mallSubPageTitle('마이페이지');
   });
+
+  // 퍼블리싱 코드
+  $(document).ready(function () {
+    // 임시 header, footer영역 로드
+    $("#header").load("/www/common/include/common.html header", function () {
+      // header 로드 후 header 관련 function 실행
+      setGnb();
+      mobileGnb();
+    });
+
+    $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+    });
+  });
+  // //퍼블리싱 코드
 </script>
  <!-- //SCRIPT -->
 

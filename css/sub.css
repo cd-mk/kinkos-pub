@@ -2956,7 +2956,7 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 
 .cart_wrap.pc .basket_list_pc {width:100%;position:relative;}
 .cart_wrap.pc .basket_list_pc table {width:100%;border-top:2px solid #000;border-collapse:separate;text-align:center;}
-.cart_wrap.pc .basket_list_pc th {padding:20px 20px;border-bottom:1px solid #e7e7e7; color:#000; vertical-align:middle; font-weight:700;}
+.cart_wrap.pc .basket_list_pc th {padding:20px 15px;border-bottom:1px solid #e7e7e7; color:#000; vertical-align:middle; font-weight:700;}
 .cart_wrap.pc .basket_list_pc th:first-child {padding-left:40px;}
 .cart_wrap.pc .basket_list_pc td {padding:10px; border:0; border-bottom:1px solid #cccccc; color:#222; vertical-align:middle; font-weight:normal;}
 .cart_wrap.pc .basket_list_pc .pdt_chk {width:2%; min-width:30px; text-align:center; vertical-align:top;}
@@ -2965,14 +2965,13 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap.pc .basket_list_pc .td_ct_num {min-width:127px;}
 .cart_wrap.pc .basket_list_pc .td_ct_num .form_inp .spinner {display:inline-block; padding:0;}
 .cart_wrap.pc .basket_list_pc .td_ct_num .form_inp .spinner .buttons {display:inline-block; position:relative; width:100%; height:42px; margin:10px 0 0 0; padding:0;}
-.cart_wrap.pc .basket_list_pc .td_ct_price {min-width:165px;text-align:left;}
-.cart_wrap.pc .basket_list_pc .td_ct_price {min-width:165px;text-align:left;}
+.cart_wrap.pc .basket_list_pc .td_ct_price {min-width:215px;text-align:left;}
 .cart_wrap.pc .basket_list_pc .td_ct_file {}
 .cart_wrap.pc .basket_list_pc .td_ct_file a {display:inline-block; width:auto; color:#222222; font-size:18px; line-height:120%; word-break:break-word; text-decoration:underline;}
 .cart_wrap.pc .basket_list_pc .td_ct_file a:hover {color:#03a2ea;}
 .cart_wrap.pc .basket_list_pc .td_ct_order {min-width:140px;}
 .cart_wrap.pc .basket_list_pc .td_ct_no_item {padding:60px 0;}
-.cart_wrap.pc .basket_list_pc td {padding:25px 20px; box-sizing:border-box;}
+.cart_wrap.pc .basket_list_pc td {padding:25px 15px; box-sizing:border-box;}
 .cart_wrap.pc .basket_list_pc td:first-child {padding-left:40px;}
 .cart_wrap.pc .basket_list_pc td:last-child {padding-right:40px;}
 .cart_wrap.pc .basket_list_pc td > a {color:#03a2ea }
@@ -3599,11 +3598,12 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 /* //장바구니 MOBILE 버전 */
 
 /* 마이페이지 > 주문/배송조회 PC 버전 */
-body.fix_pc #wrap {min-width:1530px;}
-body.fix_pc .cont_wrap.sidebar.pc {display:block !important; padding-left:260px !important; min-width:1284px; box-sizing:border-box;}
+body.fix_pc #wrap {min-width:1350px; max-width:1350px; margin:0 auto;}
+body.fix_pc .cont_wrap {max-width:1350px; padding-left:0; padding-right:0;}
+body.fix_pc .cont_wrap.sidebar.pc {display:block !important; padding-left:260px !important; min-width:1090px; box-sizing:border-box;}
 body.fix_pc .cont_wrap.sidebar.pc .section {min-width:980px;}
 body.fix_pc .cont_wrap.pc .snb {display:block !important;}
-body.fix_pc .cont_wrap.pc .mpg_wrap {display:block !important; min-width:1270px;  min-height:600px;}
+body.fix_pc .cont_wrap.pc .mpg_wrap {display:block !important; min-width:1090px;  min-height:600px;}
 body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 
 .cont_wrap.pc .guide_box_pc {position:relative; clear:both; display:inline-block; width:100%; height:auto; padding:40px 40px; background:#f3f4f6; color:#222; text-align:center;}
@@ -3618,7 +3618,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .order_list_pc table {width:100%; border-top:2px solid #000; border-collapse:separate; text-align:center;}
 
 .cont_wrap.pc .order_list_pc th {padding:20px 0; color:#000; border-bottom:1px solid #e7e7e7; vertical-align:middle; font-weight:700;}
-.cont_wrap.pc .order_list_pc td {padding:25px 30px; border:0; border-top:1px solid #e7e7e7; color:#222; vertical-align:middle; font-weight:normal;}
+.cont_wrap.pc .order_list_pc td {padding:25px 15px; border:0; border-top:1px solid #e7e7e7; color:#222; vertical-align:middle; font-weight:normal;}
 .cont_wrap.pc .order_list_pc td.blank_botter_bottom {height:1px; padding:0; border-top:0; background:#ccc;}
 .cont_wrap.pc .order_list_pc .td_ord_date {border-top:0; border-right:1px solid #e7e7e7; vertical-align:top;}
 .cont_wrap.pc .order_list_pc .td_ord_date + .td_pdt_info {border-top:0;}
@@ -3702,7 +3702,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .ord_detail_payment_pc .btn_right {position:absolute; top:0; right:0;}
 .cont_wrap.pc .ord_detail_payment_pc .btn_right .btn {font-size:14px; line-height:32px; white-space:nowrap;}
 .cont_wrap.pc .ord_detail_payment_pc table {width:100%; border-collapse:separate; text-align:center; border-top:2px solid #222222; border-bottom:1px solid #cccccc;}
-.cont_wrap.pc .ord_detail_payment_pc table th {padding:25px 40px; text-align:left; border-top:1px solid #e7e7e7;}
+.cont_wrap.pc .ord_detail_payment_pc table th {padding:25px 40px; text-align:center; border-top:1px solid #e7e7e7;}
 .cont_wrap.pc .ord_detail_payment_pc table td {padding:25px 20px; text-align:left; border-top:1px solid #e7e7e7;}
 .cont_wrap.pc .ord_detail_payment_pc table tr:first-child th {border-top:0;}
 .cont_wrap.pc .ord_detail_payment_pc table tr:first-child td {border-top:0;}
@@ -3710,7 +3710,8 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .ord_detail_payment_pc table td.price.total strong {color:#ed6c16;}
 .cont_wrap.pc .ord_detail_payment_pc .pdt_info .pdt_info_title {padding-left:0;}
 .cont_wrap.pc .ord_detail_payment_pc .td_cart_num {text-align:center;}
-.cont_wrap.pc .ord_detail_payment_pc .td_cart_num p {color:#03a2ea;}
+.cont_wrap.pc .ord_detail_payment_pc .td_cart_num p {margin-top:10px; color:#999;}
+.cont_wrap.pc .ord_detail_payment_pc .td_cart_num p:first-child {margin-top:0; margin-bottom:20px; color:#03a2ea;}
 .cont_wrap.pc .ord_detail_payment_pc .td_prd_price {text-align:center;}
 .cont_wrap.pc .ord_detail_payment_pc .td_prd_price p {margin-top:15px;}
 .cont_wrap.pc .ord_detail_payment_pc .td_prd_price p:first-child {margin-top:0;}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,398 +11,486 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
-  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-  <meta property="og:image" content="../image/common/logo.png">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>장바구니 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
-  <link rel="stylesheet" href="../css/lib/animate.css">
-  <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
 
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="/css/common.css">
   <!-- only sub -->
-  <link rel="stylesheet" href="../css/sub.css">
-
+  <link rel="stylesheet" href="/css/sub.css">
 </head>
-
 <!--
   PC 일 경우 : fix_pc
   MOBILE 일 경우 : fix_mobile
 -->
 <body class="fix_pc">
-<!-- 접근성 바로가기 메뉴(숨김) -->
-<div id="accessibility">
-  <strong class="blind">컨텐츠바로가기</strong>
-  <ul>
-    <li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
-    <li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
-  </ul>
-</div>
-<!-- //접근성 바로가기 메뉴(숨김) -->
-
-<!-- WRAP (mall or company css추가)-->
-<div id="wrap" class="mall">
-
-  <!-- HEADER -->
-  <div id="header">
+  <!-- 접근성 바로가기 메뉴(숨김) -->
+  <div id="accessibility">
+    <strong class="blind">컨텐츠바로가기</strong>
+    <ul>
+      <li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+      <li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+    </ul>
   </div>
-  <!-- //HEADER -->
+  <!-- //접근성 바로가기 메뉴(숨김) -->
 
-  <!-- CONTENT -->
-  <div id="content">
-    <!-- breadcrumb  -->
-    <div class="breadcrumb_wrap">
-      <ul class="item_list">
-        <li><a href="#url" class="home">Home</a></li>
-        <li><a href="#">장바구니</a></li>
-      </ul>
+  <!-- WRAP (mall or company css추가)-->
+  <div id="wrap" class="mall">
+
+    <!-- HEADER -->
+    <div id="header">
     </div>
-    <!-- //breadcrumb  -->
+    <!-- //HEADER -->
 
-    <!-- 콘텐츠 group "cont_wrap" 고정 -->
-    <div class="cont_wrap">
-      <!-- 본문 -->
-      <!-- 콘텐츠 "con_box" 고정 -->
-      <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
-      <!-- PC 버전 -->
-      <div class="con_box cart_wrap pc">
-        <!-- step -->
-        <div class="step_wrap">
-          <div class="inner clearfix">
-            <div class="step_item user">
-              <span class="ico_step"></span>
-              <span class="txt_step">
-                  <span class="number">STEP 01</span>
-                  <span class="desc">장바구니</span>
-                </span>
-            </div>
-            <div class="step_item order active">
-              <span class="ico_step"></span>
-              <span class="txt_step">
-                  <span class="number">STEP 03</span>
-                  <span class="desc">주문/결제</span>
-                </span>
-            </div>
-            <div class="step_item finish">
-              <span class="ico_step"></span>
-              <span class="txt_step">
-                  <span class="number">STEP 03</span>
-                  <span class="desc">결제완료</span>
-                </span>
-            </div>
-          </div>
-        </div>
-        <!-- //step -->
+    <!-- CONTENT -->
+    <div id="content">
+      <!-- breadcrumb  -->
+      <div class="breadcrumb_wrap">
+        <ul class="item_list">
+          <li><a href="#url" class="home">Home</a></li>
+          <li><a href="#">장바구니</a></li>
+        </ul>
+      </div>
+      <!-- //breadcrumb  -->
 
-        <div class="section">
-          <div class="section mid guide_box_pc">
-            <ul>
-              <li>상품수량 및 옵션변경은 상품화면 또는 장바구니에서 가능합니다.</li>
-            </ul>
-
-            <a class="btn type01 small prev_page_btn"><span>이전화면</span></a>
-          </div>
-
-          <!-- @2020.03.23 쿠폰 사용 추가 -->
-          <div class="section mid order_coupon">
-            <div class="coupon_use">
-              <strong class="coupon_use_title">쿠폰사용</strong>
-
-              <div class="coupon_use_wrap">
-                <a href="#" class="coupon_toggle_btn">사용하실 수 있는 쿠폰이 있습니다.</a>
-
-                <div class="coupon_items">
-                  <div class="form_inp">
-                    <input type="radio" id="radio1" name="radio_dummy" />
-                    <label for="radio1">
-                      <span>[정액할인]명함 100매 5,000원 할인</span>
-                      <span>20,000원 이상 구매</span>
-                    </label>
-                  </div>
-                  <div class="form_inp">
-                    <input type="radio" id="radio2" name="radio_dummy" disabled="disabled" />
-                    <label for="radio2">
-                      <span>[정액할인]명함 100매 5,000원 할인</span>
-                      <span>20,000원 이상 구매</span>
-                      <span class="another_product">(다른 상품에 사용 중)</span>
-                    </label>
-                  </div>
-                  <div class="form_inp">
-                    <input type="radio" id="radio3" name="radio_dummy" />
-                    <label for="radio3">
-                      <span>[정액할인]명함 100매 5,000원 할인</span>
-                      <span>20,000원 이상 구매</span>
-                    </label>
-                  </div>
-                  <div class="form_inp">
-                    <input type="radio" id="radio4" name="radio_dummy" />
-                    <label for="radio4">
-                      <span>사용 안함</span>
-                    </label>
-                  </div>
-                  <p class="desc">※ 쿠폰은 중복하여 사용할 수 없습니다. 개별 상품에 쿠폰을 사용하면, 전체 상품 및 무료배송 쿠폰을 사용할 수 없습니다.전체상품 및 무료배송 쿠폰을 사용하기 전에 개별 상품 쿠폰의 사용을 해제 해 주세요.</p>
-                </div>
+      <!-- 콘텐츠 group "cont_wrap" 고정 -->
+      <div class="cont_wrap">
+        <!-- 본문 -->
+        <!-- 콘텐츠 "con_box" 고정 -->
+        <!-- step_item 엘리먼트에 active css로 활성화 표시 -->
+        <!-- PC 버전 -->
+        <div class="con_box cart_wrap pc">
+          <!-- step -->
+          <div class="step_wrap">
+            <div class="inner clearfix">
+              <div class="step_item user">
+                <span class="ico_step"></span>
+                <span class="txt_step">
+                    <span class="number">STEP 01</span>
+                    <span class="desc">장바구니</span>
+                  </span>
+              </div>
+              <div class="step_item order active">
+                <span class="ico_step"></span>
+                <span class="txt_step">
+                    <span class="number">STEP 03</span>
+                    <span class="desc">주문/결제</span>
+                  </span>
+              </div>
+              <div class="step_item finish">
+                <span class="ico_step"></span>
+                <span class="txt_step">
+                    <span class="number">STEP 03</span>
+                    <span class="desc">결제완료</span>
+                  </span>
               </div>
             </div>
           </div>
-          <!-- //@2020.03.23 쿠폰 사용 추가 -->
+          <!-- //step -->
 
-          <!-- 장바구니 목록 테이블 -->
-          <div class="section mid basket_list_pc confirm">
-            <h3 class="title">주문상품 확인</h3>
-            <table>
-              <caption>
-                구매 상세 목록
-              </caption>
-              <colgroup>
-                <col width="*" />
-                <col width="5%" />
-                <col width="15%" />
-                <col width="15%" />
-                <col width="30%" />
-              </colgroup>
-              <thead>
-              <tr>
-                <th>상품/옵션정보</th>
-                <th>수량</th>
-                <th>상품금액</th>
-                <th>배송</th>
-                <th>배송비 안내</th>
-              </tr>
-              </thead>
-              <tbody>
-              <!-- loop -->
-              <tr class="line_start">
-                <td class="td_ct_img">
-                  <div class="pdt_info">
-                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_01.png"></div>
-                    <div class="pdt_info_title">
-                      <span class="pdt_info_title_txt">100100100</span>
-                      <span class="pdt_info_title_name">즉석명함 100매</span>
-                    </div>
-                  </div>
-                  <div class="pdt_info_option">
-                    <p><span>[사이즈] 90mm X 55mm</span></p>
-                    <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
-                    <p class="add_option">
-                      <i class="ico cramp"><span class="blind"></span></i>
-                      <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
-                    </p>
-                  </div>
-                </td>
-                <td class="td_ct_num">
-                  <strong>1</strong>개
-                </td>
-                <td class="td_ct_price">
-                  <div class="pdt_price_info">
-                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
-                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
-                    <!-- @2020.03.06 쿠폰할인 추가 -->
-                    <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
-                    <div class="pdt_sale_price"><span>판매금액</span><span><strong>8,995,000</strong>원</span></div>
-                  </div>
-                </td>
-                <td class="td_ct_delivery">
-                  <div class="pdt_delivery_select">직접수령</div>
-                  <div class="pdt_delivery_select">서울(금천구)</div>
-                  <div class="pdt_delivery_select other_select">가산디지털단지</div>
-                  <div class="pdt_delivery_price"><span>배송비 <strong>0</strong>원</span></div>
-                </td>
-                <td class="td_ct_file">
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>100,000원 이상 구매 시 배송비 무료</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>제주도 3,000원 추가</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>제주도 외 도서산간 6,000원 추가</span>
-                  </div>
-                </td>
-              </tr>
-              <tr class="line_end"> <!-- 등록된 파일 리스트 -->
-                <td colspan="5" class="td_ct_regist_files">
-                  <div class="td_ct_regist_files_wrap">
-                    <div class="td_ct_regist_files_title">등록파일</div>
-                    <div class="td_ct_regist_files_name">
-                      <span>즉석명함_디자인.png</span>
-                      <span>즉석명함_디자인(앞면).jpg</span>
-                      <span>즉석명함_디자인(뒷면).jpg</span>
-                      <span>즉석명함_디자인.xlxs</span>
-                      <span>즉석명함_디자인.pptx</span>
-                      <span>즉석명함_디자인.doc</span>
-                    </div>
-                  </div>
-                </td>
-              </tr> <!-- //등록된 파일 리스트 -->
-              <!-- loop -->
+          <div class="section">
+            <div class="section mid guide_box_pc">
+              <ul>
+                <li>상품수량 및 옵션변경은 상품화면 또는 장바구니에서 가능합니다.</li>
+              </ul>
 
-              <tr class="line_start">
-                <td class="td_ct_img">
-                  <div class="pdt_info">
-                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
-                    <div class="pdt_info_title">
-                      <span class="pdt_info_title_txt">100100100</span>
-                      <span class="pdt_info_title_name">템플릿 명함_기업 가로형</span>
-                    </div>
-                  </div>
-                  <div class="pdt_info_option">
-                    <p><span>[템플릿 선택] 기업 가로형-9</span><span>[수량] 100매</span></p>
-                    <p><span>[재질] 하모니 198g</span><span>1개 (+55,000원)</span></p>
-                    <p class="add_option">
-                      <i class="ico cramp"><span class="blind"></span></i>
-                      <span>[코너라운딩] 2면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="td_ct_num">
-                  <strong>2</strong>개
-                </td>
-                <td class="td_ct_price">
-                  <div class="pdt_price_info">
-                    <div class="pdt_price"><span>상품금액</span><span>100,000원</span></div>
-                    <div class="pdt_discount"><span>할인금액</span><span>10,000원</span></div>
-                    <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
-                    <div class="pdt_sale_price"><span>판매금액</span><span><strong>85,000</strong>원</span></div>
-                  </div>
-                </td>
-                <td class="td_ct_delivery">
-                  <div class="pdt_delivery_select">택배수령</div>
-                  <div class="pdt_delivery_price"><span>배송비 <strong>2,500</strong>원</span></div>
-                </td>
-                <td class="td_ct_file">
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>100,000원 이상 구매 시 배송비 무료</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
-                  </div>
-                </td>
-              </tr>
-              <tr class="line_end">
-                <td colspan="5" class="td_ct_regist_files">
-                  <div class="td_ct_regist_files_wrap">
-                    <div class="td_ct_regist_files_title">등록파일</div>
-                    <div class="td_ct_regist_files_name">
-                      <span>즉석명함_디자인.png</span>
-                      <span>즉석명함_디자인(앞면).jpg</span>
-                      <span>즉석명함_디자인(뒷면).jpg</span>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+              <a class="btn type01 small prev_page_btn"><span>이전화면</span></a>
+            </div>
 
-              <tr class="line_start">
-                <td class="td_ct_img">
-                  <div class="pdt_info">
-                    <div class="pdt_info_img"><img src="../image/mall/product/cart_pl_02.png"></div>
-                    <div class="pdt_info_title">
-                      <span class="pdt_info_title_txt">100100100</span>
-                      <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
-                    </div>
-                  </div>
-                  <div class="pdt_info_option">
-                    <p><span>[사이즈 (긴쪽)] ⑦ 7m</span></p>
-                    <p class="after_content_plus"><span>[마감방식] 각목+노끈(10M)</span><span>113,000원 (+131,000원)</span></p>
-                    <p class="add_option">
-                      <i class="ico cramp"><span class="blind"></span></i>
-                      <span>[끈추가] 10m</span><span>1개 (+2,000원)</span>
-                    </p>
-                  </div>
-                </td>
-                <td class="td_ct_num">
-                  <strong>1</strong>개
-                </td>
-                <td class="td_ct_price">
-                  <div class="pdt_price_info">
-                    <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
-                    <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
-                    <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
-                    <div class="pdt_sale_price"><span>판매금액</span><span><strong>8,995,000</strong>원</span></div>
-                  </div>
-                </td>
-                <td class="td_ct_delivery">
-                  <div class="pdt_delivery_select">직접수령</div>
-                  <div class="pdt_delivery_select other_select">가산디지털단지</div>
-                  <div class="pdt_delivery_price"><span>배송비 <strong>0</strong>원</span></div>
-                </td>
-                <td class="td_ct_file">
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
-                  </div>
-                  <div class="pdt_shipping_info">
-                    <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
-                  </div>
-                </td>
-              </tr>
-              <tr class="line_end">
-                <td colspan="5" class="td_ct_regist_files">
-                  <div class="td_ct_regist_files_wrap">
-                    <div class="td_ct_regist_files_title">등록파일</div>
-                    <div class="td_ct_regist_files_name">
-                      <span>즉석명함_디자인.png</span>
-                      <span>즉석명함_디자인(앞면).jpg</span>
-                      <span>즉석명함_디자인(뒷면).jpg</span>
-                      <span>즉석명함_디자인.xlxs</span>
-                      <span>즉석명함_디자인.pptx</span>
-                      <span>즉석명함_디자인.doc</span>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- //장바구니 목록 테이블 -->
+            <!-- @2020.03.23 쿠폰 사용 추가 -->
+            <div class="section mid order_coupon">
+              <div class="coupon_use">
+                <strong class="coupon_use_title">쿠폰사용</strong>
 
-          <!-- 배송지 정보, 주문자 정보 -->
-          <div class="shipping_info">
-            <div class="box">
-              <!-- @2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
-              <!--
-              <div class="box_item">
-                <h3 class="title">배송지 정보</h3>
+                <div class="coupon_use_wrap">
+                  <a href="#" class="coupon_toggle_btn">사용하실 수 있는 쿠폰이 있습니다.</a>
 
-                <div class="shipping_info_items">
-                  <div class="shipping_info_item">
-                    <div class="shipping_info_item_title">배송지 선택</div>
-                    <div class="shipping_info_item_content">
-                      <div class="form_inp">
-                        <div class="form_inp_item">
-                          <input type="radio" class="shipping_address_radio" id="shipping_info_radio1" name="shipping_info_radio_dummy" data-target="shipping_address_default" checked />
-                          <label for="shipping_info_radio1">기본배송지</label>
+                  <div class="coupon_items">
+                    <div class="form_inp">
+                      <input type="radio" id="radio1" name="radio_dummy" />
+                      <label for="radio1">
+                        <span>[정액할인]명함 100매 5,000원 할인</span>
+                        <span>20,000원 이상 구매</span>
+                      </label>
+                    </div>
+                    <div class="form_inp">
+                      <input type="radio" id="radio2" name="radio_dummy" disabled="disabled" />
+                      <label for="radio2">
+                        <span>[정액할인]명함 100매 5,000원 할인</span>
+                        <span>20,000원 이상 구매</span>
+                        <span class="another_product">(다른 상품에 사용 중)</span>
+                      </label>
+                    </div>
+                    <div class="form_inp">
+                      <input type="radio" id="radio3" name="radio_dummy" />
+                      <label for="radio3">
+                        <span>[정액할인]명함 100매 5,000원 할인</span>
+                        <span>20,000원 이상 구매</span>
+                      </label>
+                    </div>
+                    <div class="form_inp">
+                      <input type="radio" id="radio4" name="radio_dummy" />
+                      <label for="radio4">
+                        <span>사용 안함</span>
+                      </label>
+                    </div>
+                    <p class="desc">※ 쿠폰은 중복하여 사용할 수 없습니다. 개별 상품에 쿠폰을 사용하면, 전체 상품 및 무료배송 쿠폰을 사용할 수 없습니다.전체상품 및 무료배송 쿠폰을 사용하기 전에 개별 상품 쿠폰의 사용을 해제 해 주세요.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //@2020.03.23 쿠폰 사용 추가 -->
+
+            <!-- 장바구니 목록 테이블 -->
+            <div class="section mid basket_list_pc confirm">
+              <h3 class="title">주문상품 확인</h3>
+              <table>
+                <caption>
+                  구매 상세 목록
+                </caption>
+                <colgroup>
+                  <col width="*" />
+                  <col width="5%" />
+                  <col width="15%" />
+                  <col width="15%" />
+                  <col width="30%" />
+                </colgroup>
+                <thead>
+                <tr>
+                  <th>상품/옵션정보</th>
+                  <th>수량</th>
+                  <th>상품금액</th>
+                  <th>배송</th>
+                  <th>배송비 안내</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- loop -->
+                <tr class="line_start">
+                  <td class="td_ct_img">
+                    <div class="pdt_info">
+                      <div class="pdt_info_img"><img src="/image/mall/product/cart_pl_01.png"></div>
+                      <div class="pdt_info_title">
+                        <span class="pdt_info_title_txt">100100100</span>
+                        <span class="pdt_info_title_name">즉석명함 100매</span>
+                      </div>
+                    </div>
+                    <div class="pdt_info_option">
+                      <p><span>[사이즈] 90mm X 55mm</span></p>
+                      <p><span>[재질] 마쉬멜로우 233g</span><span>1개 (+30,000원)</span></p>
+                      <p class="add_option">
+                        <i class="ico cramp"><span class="blind"></span></i>
+                        <span>[코너라운딩] 4mm 기준 3면</span><span>1개 (+5,000원)</span>
+                      </p>
+                    </div>
+                  </td>
+                  <td class="td_ct_num">
+                    <strong>1</strong>개
+                  </td>
+                  <td class="td_ct_price">
+                    <div class="pdt_price_info">
+                      <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                      <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                      <!-- @2020.03.06 쿠폰할인 추가 -->
+                      <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
+                      <div class="pdt_sale_price"><span>판매금액</span><span><strong>8,995,000</strong>원</span></div>
+                    </div>
+                  </td>
+                  <td class="td_ct_delivery">
+                    <div class="pdt_delivery_select">직접수령</div>
+                    <div class="pdt_delivery_select">서울(금천구)</div>
+                    <div class="pdt_delivery_select other_select">가산디지털단지</div>
+                    <div class="pdt_delivery_price"><span>배송비 <strong>0</strong>원</span></div>
+                  </td>
+                  <td class="td_ct_file">
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>100,000원 이상 구매 시 배송비 무료</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>제주도 3,000원 추가</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>제주도 외 도서산간 6,000원 추가</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line_end"> <!-- 등록된 파일 리스트 -->
+                  <td colspan="5" class="td_ct_regist_files">
+                    <div class="td_ct_regist_files_wrap">
+                      <div class="td_ct_regist_files_title">등록파일</div>
+                      <div class="td_ct_regist_files_name">
+                        <span>즉석명함_디자인.png</span>
+                        <span>즉석명함_디자인(앞면).jpg</span>
+                        <span>즉석명함_디자인(뒷면).jpg</span>
+                        <span>즉석명함_디자인.xlxs</span>
+                        <span>즉석명함_디자인.pptx</span>
+                        <span>즉석명함_디자인.doc</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr> <!-- //등록된 파일 리스트 -->
+                <!-- loop -->
+
+                <tr class="line_start">
+                  <td class="td_ct_img">
+                    <div class="pdt_info">
+                      <div class="pdt_info_img"><img src="/image/mall/product/cart_pl_02.png"></div>
+                      <div class="pdt_info_title">
+                        <span class="pdt_info_title_txt">100100100</span>
+                        <span class="pdt_info_title_name">템플릿 명함_기업 가로형</span>
+                      </div>
+                    </div>
+                    <div class="pdt_info_option">
+                      <p><span>[템플릿 선택] 기업 가로형-9</span><span>[수량] 100매</span></p>
+                      <p><span>[재질] 하모니 198g</span><span>1개 (+55,000원)</span></p>
+                      <p class="add_option">
+                        <i class="ico cramp"><span class="blind"></span></i>
+                        <span>[코너라운딩] 2면</span><span>1개 (+5,000원)<a href="#" class="btn_delete"><i></i></a></span>
+                      </p>
+                    </div>
+                  </td>
+                  <td class="td_ct_num">
+                    <strong>2</strong>개
+                  </td>
+                  <td class="td_ct_price">
+                    <div class="pdt_price_info">
+                      <div class="pdt_price"><span>상품금액</span><span>100,000원</span></div>
+                      <div class="pdt_discount"><span>할인금액</span><span>10,000원</span></div>
+                      <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
+                      <div class="pdt_sale_price"><span>판매금액</span><span><strong>85,000</strong>원</span></div>
+                    </div>
+                  </td>
+                  <td class="td_ct_delivery">
+                    <div class="pdt_delivery_select">택배수령</div>
+                    <div class="pdt_delivery_price"><span>배송비 <strong>2,500</strong>원</span></div>
+                  </td>
+                  <td class="td_ct_file">
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>100,000원 이상 구매 시 배송비 무료</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line_end">
+                  <td colspan="5" class="td_ct_regist_files">
+                    <div class="td_ct_regist_files_wrap">
+                      <div class="td_ct_regist_files_title">등록파일</div>
+                      <div class="td_ct_regist_files_name">
+                        <span>즉석명함_디자인.png</span>
+                        <span>즉석명함_디자인(앞면).jpg</span>
+                        <span>즉석명함_디자인(뒷면).jpg</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="line_start">
+                  <td class="td_ct_img">
+                    <div class="pdt_info">
+                      <div class="pdt_info_img"><img src="/image/mall/product/cart_pl_02.png"></div>
+                      <div class="pdt_info_title">
+                        <span class="pdt_info_title_txt">100100100</span>
+                        <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
+                      </div>
+                    </div>
+                    <div class="pdt_info_option">
+                      <p><span>[사이즈 (긴쪽)] ⑦ 7m</span></p>
+                      <p class="after_content_plus"><span>[마감방식] 각목+노끈(10M)</span><span>113,000원 (+131,000원)</span></p>
+                      <p class="add_option">
+                        <i class="ico cramp"><span class="blind"></span></i>
+                        <span>[끈추가] 10m</span><span>1개 (+2,000원)</span>
+                      </p>
+                    </div>
+                  </td>
+                  <td class="td_ct_num">
+                    <strong>1</strong>개
+                  </td>
+                  <td class="td_ct_price">
+                    <div class="pdt_price_info">
+                      <div class="pdt_price"><span>상품금액</span><span>10,000,000원</span></div>
+                      <div class="pdt_discount"><span>할인금액</span><span>1,000,000원</span></div>
+                      <div class="pdt_coupon_discount"><span>쿠폰할인</span><span>5,000원</span></div>
+                      <div class="pdt_sale_price"><span>판매금액</span><span><strong>8,995,000</strong>원</span></div>
+                    </div>
+                  </td>
+                  <td class="td_ct_delivery">
+                    <div class="pdt_delivery_select">직접수령</div>
+                    <div class="pdt_delivery_select other_select">가산디지털단지</div>
+                    <div class="pdt_delivery_price"><span>배송비 <strong>0</strong>원</span></div>
+                  </td>
+                  <td class="td_ct_file">
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>택배수령 선택 시 배송지 정보는 주문결제 화면에서 등록/변경하실 수 있습니다.</span>
+                    </div>
+                    <div class="pdt_shipping_info">
+                      <span>-</span><span>택배수령 시 지역별 추가배송비가 발생합니다.</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line_end">
+                  <td colspan="5" class="td_ct_regist_files">
+                    <div class="td_ct_regist_files_wrap">
+                      <div class="td_ct_regist_files_title">등록파일</div>
+                      <div class="td_ct_regist_files_name">
+                        <span>즉석명함_디자인.png</span>
+                        <span>즉석명함_디자인(앞면).jpg</span>
+                        <span>즉석명함_디자인(뒷면).jpg</span>
+                        <span>즉석명함_디자인.xlxs</span>
+                        <span>즉석명함_디자인.pptx</span>
+                        <span>즉석명함_디자인.doc</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //장바구니 목록 테이블 -->
+
+            <!-- 배송지 정보, 주문자 정보 -->
+            <div class="shipping_info">
+              <div class="box">
+                <!-- @2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
+                <!--
+                <div class="box_item">
+                  <h3 class="title">배송지 정보</h3>
+
+                  <div class="shipping_info_items">
+                    <div class="shipping_info_item">
+                      <div class="shipping_info_item_title">배송지 선택</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp">
+                          <div class="form_inp_item">
+                            <input type="radio" class="shipping_address_radio" id="shipping_info_radio1" name="shipping_info_radio_dummy" data-target="shipping_address_default" checked />
+                            <label for="shipping_info_radio1">기본배송지</label>
+                          </div>
+
+                          <div class="form_inp_item">
+                            <input type="radio" class="shipping_address_radio" id="shipping_info_radio2" name="shipping_info_radio_dummy" data-target="shipping_address_new">
+                            <label for="shipping_info_radio2">신규배송지</label>
+                          </div>
+
+                          <a href="#popup1" class="btn type03 small btn_popup">배송지 목록</a>
                         </div>
+                      </div>
+                    </div>
 
-                        <div class="form_inp_item">
-                          <input type="radio" class="shipping_address_radio" id="shipping_info_radio2" name="shipping_info_radio_dummy" data-target="shipping_address_new">
-                          <label for="shipping_info_radio2">신규배송지</label>
+                    <div class="shipping_address_item shipping_address_default">
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">받으시는 분</div>
+                        <div class="shipping_info_item_content">킨코스</div>
+                      </div>
+
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">주소</div>
+                        <div class="shipping_info_item_content">(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</div>
+                      </div>
+
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">휴대전화</div>
+                        <div class="shipping_info_item_content">010-1234-5678</div>
+                      </div>
+
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">일반전화</div>
+                        <div class="shipping_info_item_content">02-1234-5678</div>
+                      </div>
+                    </div>
+
+                    <div class="shipping_address_item shipping_address_new hide">
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">받으시는 분</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp">
+                            <input type="text" title="요청사항" placeholder="20자 이내로 입력해주세요." />
+                          </div>
                         </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">배송지명</div>
+                        <div class="shipping_info_item_content">
+                          <input type="text" title="요청사항" placeholder="20자 이내로 입력해주세요." />
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">휴대전화</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">일반전화</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">주소</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp address">
+                            <input type="text" title="기본 주소" placeholder="우편 번호">
+                            <a href="#popup1" class="btn type03 btn_popup">주소 찾기</a>
+                            <input type="text" title="기본 주소" placeholder="기본 주소">
+                            <input type="text" title="상세 주소" placeholder="상세 주소">
+                          </div>
+                          <div class="form_inp shipping_address_select">
+                            <input type="checkbox" id="shipping_address_chk_1" name="shipping_address_checkbox_dummy" checked="checked">
+                            <label for="shipping_address_chk_1">배송지 목록 추가</label>
 
-                        <a href="#popup1" class="btn type03 small btn_popup">배송지 목록</a>
+                            <input type="checkbox" id="shipping_address_chk_2" name="shipping_address_checkbox_dummy">
+                            <label for="shipping_address_chk_2">기본배송지로 선택</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shipping_request_wrap">
+                      <div class="shipping_request_title">요청사항</div>
+                      <div class="shipping_request_content">
+                        <div class="form_inp">
+                          <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
+                        </div>
+                        <div class="inp_word_count"><span>0</span>/<span>100</span></div>
                       </div>
                     </div>
                   </div>
+                </div>
+                -->
+                <!-- //@2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
 
-                  <div class="shipping_address_item shipping_address_default">
+                <div class="box_item">
+                  <h3 class="title">주문자 정보</h3>
+
+                  <div class="shipping_info_items orderer">
                     <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">받으시는 분</div>
+                      <div class="shipping_info_item_title">이름</div>
                       <div class="shipping_info_item_content">킨코스</div>
                     </div>
 
                     <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">주소</div>
-                      <div class="shipping_info_item_content">(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</div>
+                      <div class="shipping_info_item_title">이메일</div>
+                      <div class="shipping_info_item_content">kinkos@kinkos.co.kr</div>
                     </div>
 
                     <div class="shipping_info_item">
@@ -411,394 +498,307 @@
                       <div class="shipping_info_item_content">010-1234-5678</div>
                     </div>
 
-                    <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">일반전화</div>
-                      <div class="shipping_info_item_content">02-1234-5678</div>
+                    <div class="shipping_info_item info">
+                      <span>주문자 정보로 결제관련 정보가 제공됩니다.</span>
+                      <span>정확한 정보로 등록되어 있는지 확인해주세요.</span>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <!-- //배송지 정보, 주문자 정보 -->
 
-                  <div class="shipping_address_item shipping_address_new hide">
-                    <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">받으시는 분</div>
-                      <div class="shipping_info_item_content">
-                        <div class="form_inp">
-                          <input type="text" title="요청사항" placeholder="20자 이내로 입력해주세요." />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">배송지명</div>
-                      <div class="shipping_info_item_content">
-                        <input type="text" title="요청사항" placeholder="20자 이내로 입력해주세요." />
-                      </div>
-                    </div>
-                    <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">휴대전화</div>
-                      <div class="shipping_info_item_content">
-                        <div class="form_inp tel">
-                          <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">일반전화</div>
-                      <div class="shipping_info_item_content">
-                        <div class="form_inp tel">
-                          <input type="number" title="휴대폰 번호 입력" placeholder="-없이 입력">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="shipping_info_item">
-                      <div class="shipping_info_item_title">주소</div>
-                      <div class="shipping_info_item_content">
-                        <div class="form_inp address">
-                          <input type="text" title="기본 주소" placeholder="우편 번호">
-                          <a href="#popup1" class="btn type03 btn_popup">주소 찾기</a>
-                          <input type="text" title="기본 주소" placeholder="기본 주소">
-                          <input type="text" title="상세 주소" placeholder="상세 주소">
-                        </div>
-                        <div class="form_inp shipping_address_select">
-                          <input type="checkbox" id="shipping_address_chk_1" name="shipping_address_checkbox_dummy" checked="checked">
-                          <label for="shipping_address_chk_1">배송지 목록 추가</label>
+            <!-- 총 주문금액 -->
+            <div class="order_total confirm">
+              <!-- @2020.03.23 포인트 사용 추가 -->
+              <div class="order_checkout_wrap point_input">
+                <h3 class="title">포인트 사용</h3>
 
-                          <input type="checkbox" id="shipping_address_chk_2" name="shipping_address_checkbox_dummy">
-                          <label for="shipping_address_chk_2">기본배송지로 선택</label>
-                        </div>
-                      </div>
-                    </div>
+                <div class="point_input_wrap">
+                  <div class="form_inp">
+                    <label for="radio1">포인트</label>
+                    <input type="text" title="요청사항" placeholder="사용할 포인트를 입력해주세요." />
+                    <a href="#" class="btn type01 mid">적용</a>
+                    <span>사용가능한 포인트</span>
+                    <span><strong class="available_point">80,000</strong>&nbsp;point</span>
+                  </div>
+                </div>
+              </div>
+              <!-- //@2020.03.23 포인트 사용 추가 -->
+
+              <h3 class="title">결제 정보</h3>
+
+              <!-- @2020.03.23 수정 -->
+              <div class="inner">
+                <div class="box">
+                  <div class="box_item title">
+                    <h3>합계</h3>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">총 상품금액</span>
+                    <span class="price">20,100,000원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">총 할인금액</span>
+                    <span class="price">2,010,000원</span>
+                  </div>
+                  <!-- @2020.03.06 쿠폰할인 추가 -->
+                  <div class="box_item">
+                    <div class="math"><i class="ico minus type01"><span class="blind">빼기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">총 쿠폰할인</span>
+                    <span class="price">15,000원</span>
+                  </div>
+                  <!-- //@2020.03.06 쿠폰할인 추가 -->
+                  <div class="box_item">
+                    <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">배송비</span>
+                    <span class="price">5,000원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">추가 배송비</span>
+                    <span class="price">0원</span>
+                  </div>
+                  <div class="box_item">
+                    <div class="math"><i class="ico minus type01"><span class="blind">빼기</span></i></div>
+                  </div>
+                  <div class="box_item">
+                    <span class="label">포인트 사용</span>
+                    <span class="price">50,000원</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="box_item total">
+                    <span class="label">결제금액</span>
+                    <span class="price"><strong>18,080,000</strong>원</span>
+                  </div>
+                </div>
+              </div>
+              <!-- //@2020.03.23 수정 -->
+
+              <div class="order_total_desc">
+                <span><i class="order_total_desc_ico"></i>추가배송비는 지역에 따라 추가되는 도선료 등의 배송비 입니다.</span>
+              </div>
+
+              <div class="order_checkout_wrap order_payment_select">
+                <h3 class="title">결제방법 선택</h3>
+
+                <div class="order_payment_select_wrap">
+                  <div class="form_inp">
+                    <input type="radio" id="radio1" name="radio_dummy" checked="checked">
+                    <label for="radio1">ARS 카드결제</label>
+
+                    <input type="radio" id="radio2" name="radio_dummy">
+                    <label for="radio2">무통장입금</label>
+
+                    <input type="radio" id="radio3" name="radio_dummy">
+                    <label for="radio3">에스크로 계좌이체</label>
+
+                    <input type="radio" id="radio4" name="radio_dummy">
+                    <label for="radio4">신용카드</label>
+
+                    <input type="radio" id="radio5" name="radio_dummy">
+                    <label for="radio5">후불결제</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order_checkout_wrap order_payment_terms">
+                <h3 class="title">약관동의</h3>
+
+                <div class="order_payment_terms_wrap">
+                  <div class="form_inp">
+                    <input type="checkbox" class="inp_chk_all" id="terms_chk_all" name="terms_chk">
+                    <label for="terms_chk_all">전체 동의</label>
                   </div>
 
-                  <div class="shipping_request_wrap">
-                    <div class="shipping_request_title">요청사항</div>
-                    <div class="shipping_request_content">
+                  <div class="order_payment_terms_items">
+                    <div class="order_payment_terms_item">
                       <div class="form_inp">
-                        <input type="text" title="요청사항" placeholder="요청사항을 입력해주세요." />
+                        <input type="checkbox" id="terms_chk_1" name="terms_chk">
+                        <label for="terms_chk_1">이용약관에 동의합니다.<span class="require">&nbsp;[필수]</span></label>
                       </div>
-                      <div class="inp_word_count"><span>0</span>/<span>100</span></div>
+                    </div>
+                    <div class="order_payment_terms_item">
+                      <div class="form_inp">
+                        <input type="checkbox" id="terms_chk_2" name="terms_chk">
+                        <label for="terms_chk_2">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소/환불 규정에 동의합니다.<span>&nbsp;[선택]</span></label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              -->
-              <!-- //@2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
 
-              <div class="box_item">
-                <h3 class="title">주문자 정보</h3>
+              <div class="order_checkout_wrap order_payment_budget">
+                <h3 class="title">예산 선택</h3>
 
-                <div class="shipping_info_items orderer">
-                  <div class="shipping_info_item">
-                    <div class="shipping_info_item_title">이름</div>
-                    <div class="shipping_info_item_content">킨코스</div>
-                  </div>
+                <div class="order_payment_budget_wrap">
+                  <div class="form_inp">
+                    <input type="checkbox" id="budget_chk_1" name="budget_checkbox_dummy" checked="checked">
+                    <label for="budget_chk_1">마케팅 1팀(처음처럼)</label>
 
-                  <div class="shipping_info_item">
-                    <div class="shipping_info_item_title">이메일</div>
-                    <div class="shipping_info_item_content">kinkos@kinkos.co.kr</div>
-                  </div>
+                    <input type="checkbox" id="budget_chk_2" name="budget_checkbox_dummy">
+                    <label for="budget_chk_2">마케팅 2팀(클라우드)</label>
 
-                  <div class="shipping_info_item">
-                    <div class="shipping_info_item_title">휴대전화</div>
-                    <div class="shipping_info_item_content">010-1234-5678</div>
-                  </div>
+                    <input type="checkbox" id="budget_chk_3" name="budget_checkbox_dummy">
+                    <label for="budget_chk_3">마케팅 3팀(파츠)</label>
 
-                  <div class="shipping_info_item info">
-                    <span>주문자 정보로 결제관련 정보가 제공됩니다.</span>
-                    <span>정확한 정보로 등록되어 있는지 확인해주세요.</span>
+                    <input type="checkbox" id="budget_chk_4" name="budget_checkbox_dummy">
+                    <label for="budget_chk_4">지점예산</label>
                   </div>
                 </div>
               </div>
+
+              <div class="order_info">
+                <p>상품수량 및 옵션변경은 상품화면 또는 장바구니에서 가능합니다.</p>
+                <p>주문취소는 결제 1시간 내에만 가능하며, 시안작업이 시작된 이후에는 취소가 불가능합니다.</p>
+              </div>
+
+              <div class="btn_wrap center">
+                <button type="button" class="btn type02 large"><span>장바구니 이동</span></button>
+                <button type="button" class="btn type01 large"><span>결제하기</span></button>
+              </div>
             </div>
+            <!-- //총 주문금액 -->
           </div>
-          <!-- //배송지 정보, 주문자 정보 -->
 
-          <!-- 총 주문금액 -->
-          <div class="order_total confirm">
-            <!-- @2020.03.23 포인트 사용 추가 -->
-            <div class="order_checkout_wrap point_input">
-              <h3 class="title">포인트 사용</h3>
-
-              <div class="point_input_wrap">
-                <div class="form_inp">
-                  <label for="radio1">포인트</label>
-                  <input type="text" title="요청사항" placeholder="사용할 포인트를 입력해주세요." />
-                  <a href="#" class="btn type01 mid">적용</a>
-                  <span>사용가능한 포인트</span>
-                  <span><strong class="available_point">80,000</strong>&nbsp;point</span>
-                </div>
-              </div>
-            </div>
-            <!-- //@2020.03.23 포인트 사용 추가 -->
-
-            <h3 class="title">결제 정보</h3>
-
-            <!-- @2020.03.23 수정 -->
-            <div class="inner">
-              <div class="box">
-                <div class="box_item title">
-                  <h3>합계</h3>
-                </div>
-                <div class="box_item">
-                  <span class="label">총 상품금액</span>
-                  <span class="price">20,100,000원</span>
-                </div>
-                <div class="box_item">
-                  <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
-                </div>
-                <div class="box_item">
-                  <span class="label">총 할인금액</span>
-                  <span class="price">2,010,000원</span>
-                </div>
-                <!-- @2020.03.06 쿠폰할인 추가 -->
-                <div class="box_item">
-                  <div class="math"><i class="ico minus type01"><span class="blind">빼기</span></i></div>
-                </div>
-                <div class="box_item">
-                  <span class="label">총 쿠폰할인</span>
-                  <span class="price">15,000원</span>
-                </div>
-                <!-- //@2020.03.06 쿠폰할인 추가 -->
-                <div class="box_item">
-                  <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
-                </div>
-                <div class="box_item">
-                  <span class="label">배송비</span>
-                  <span class="price">5,000원</span>
-                </div>
-                <div class="box_item">
-                  <div class="math"><i class="ico plus type01"><span class="blind">더하기</span></i></div>
-                </div>
-                <div class="box_item">
-                  <span class="label">추가 배송비</span>
-                  <span class="price">0원</span>
-                </div>
-                <div class="box_item">
-                  <div class="math"><i class="ico minus type01"><span class="blind">빼기</span></i></div>
-                </div>
-                <div class="box_item">
-                  <span class="label">포인트 사용</span>
-                  <span class="price">50,000원</span>
-                </div>
-              </div>
-              <div class="box">
-                <div class="box_item total">
-                  <span class="label">결제금액</span>
-                  <span class="price"><strong>18,080,000</strong>원</span>
-                </div>
-              </div>
-            </div>
-            <!-- //@2020.03.23 수정 -->
-
-            <div class="order_total_desc">
-              <span><i class="order_total_desc_ico"></i>추가배송비는 지역에 따라 추가되는 도선료 등의 배송비 입니다.</span>
-            </div>
-
-            <div class="order_checkout_wrap order_payment_select">
-              <h3 class="title">결제방법 선택</h3>
-
-              <div class="order_payment_select_wrap">
-                <div class="form_inp">
-                  <input type="radio" id="radio1" name="radio_dummy" checked="checked">
-                  <label for="radio1">ARS 카드결제</label>
-
-                  <input type="radio" id="radio2" name="radio_dummy">
-                  <label for="radio2">무통장입금</label>
-
-                  <input type="radio" id="radio3" name="radio_dummy">
-                  <label for="radio3">에스크로 계좌이체</label>
-
-                  <input type="radio" id="radio4" name="radio_dummy">
-                  <label for="radio4">신용카드</label>
-
-                  <input type="radio" id="radio5" name="radio_dummy">
-                  <label for="radio5">후불결제</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="order_checkout_wrap order_payment_terms">
-              <h3 class="title">약관동의</h3>
-
-              <div class="order_payment_terms_wrap">
-                <div class="form_inp">
-                  <input type="checkbox" class="inp_chk_all" id="terms_chk_all" name="terms_chk">
-                  <label for="terms_chk_all">전체 동의</label>
-                </div>
-
-                <div class="order_payment_terms_items">
-                  <div class="order_payment_terms_item">
-                    <div class="form_inp">
-                      <input type="checkbox" id="terms_chk_1" name="terms_chk">
-                      <label for="terms_chk_1">이용약관에 동의합니다.<span class="require">&nbsp;[필수]</span></label>
-                    </div>
-                  </div>
-                  <div class="order_payment_terms_item">
-                    <div class="form_inp">
-                      <input type="checkbox" id="terms_chk_2" name="terms_chk">
-                      <label for="terms_chk_2">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소/환불 규정에 동의합니다.<span>&nbsp;[선택]</span></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="order_checkout_wrap order_payment_budget">
-              <h3 class="title">예산 선택</h3>
-
-              <div class="order_payment_budget_wrap">
-                <div class="form_inp">
-                  <input type="checkbox" id="budget_chk_1" name="budget_checkbox_dummy" checked="checked">
-                  <label for="budget_chk_1">마케팅 1팀(처음처럼)</label>
-
-                  <input type="checkbox" id="budget_chk_2" name="budget_checkbox_dummy">
-                  <label for="budget_chk_2">마케팅 2팀(클라우드)</label>
-
-                  <input type="checkbox" id="budget_chk_3" name="budget_checkbox_dummy">
-                  <label for="budget_chk_3">마케팅 3팀(파츠)</label>
-
-                  <input type="checkbox" id="budget_chk_4" name="budget_checkbox_dummy">
-                  <label for="budget_chk_4">지점예산</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="order_info">
-              <p>상품수량 및 옵션변경은 상품화면 또는 장바구니에서 가능합니다.</p>
-              <p>주문취소는 결제 1시간 내에만 가능하며, 시안작업이 시작된 이후에는 취소가 불가능합니다.</p>
-            </div>
-
-            <div class="btn_wrap center">
-              <button type="button" class="btn type02 large"><span>장바구니 이동</span></button>
-              <button type="button" class="btn type01 large"><span>결제하기</span></button>
-            </div>
-          </div>
-          <!-- //총 주문금액 -->
+          <!-- //본문 -->
         </div>
-
-        <!-- //본문 -->
+        <!-- //PC 버전 -->
       </div>
-      <!-- //PC 버전 -->
-    </div>
-    <!-- CONTENT -->
 
-    <!-- FOOTER -->
-    <div id="footer" class="layout_width">
-    </div>
-    <!-- //FOOTER -->
 
-    <!-- popup area -->
-    <div id="popup1" class="popup_wrap shipping_select">
-      <div class="inner">
-        <!-- popup title -->
-        <h3 class="title">배송지 정보</h3>
-        <!-- popup content -->
+      <!-- FOOTER -->
+      <div id="footer" class="layout_width">
+      </div>
+      <!-- //FOOTER -->
 
-        <div class="pop_con">
-          <h4>배송지 선택</h4>
+      <!-- popup area -->
+      <div id="popup1" class="popup_wrap shipping_select">
+        <div class="inner">
+          <!-- popup title -->
+          <h3 class="title">배송지 정보</h3>
+          <!-- popup content -->
 
-          <div class="basket_list delivery_list">
-          <table>
-            <caption>장바구니 목록</caption>
-            <colgroup>
-              <col width="10%" />
-              <col width="23%" />
-              <col width="*" />
-              <col width="23%" />
-            </colgroup>
-            <thead>
-            <tr>
-              <th scope="col">선택</th>
-              <th scope="col">배송지</th>
-              <th scope="col">주소</th>
-              <th scope="col">연락처</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!-- loop -->
-            <tr>
-              <td>
-                <input type="radio" id="delivery_1" name="delivery_address_radio" checked="checked" />
-                <label for="delivery_1"></label>
-              </td>
-              <!-- @2020.04.27 수정 -->
-              <td class="subject"><span>킨코스 강남역 센터</span></td>
-              <!-- //@2020.04.27 수정 -->
-              <td class="address">02641 서울특별시 강남구 강남대로 370 클리닉빌딩 1층</td>
-              <td>010-1234-1234</td>
-            </tr>
-            <!-- loop -->
+          <div class="pop_con">
+            <h4>배송지 선택</h4>
 
-            <tr>
-              <td>
-                <input type="radio" id="delivery_2" name="delivery_address_radio" />
-                <label for="delivery_2"></label>
-              </td>
-              <!-- @2020.04.27 수정 -->
-              <td class="subject"><span>가산디지털단지 센터</span></td>
-              <!-- //@2020.04.27 수정 -->
-              <td class="address">08507 서울특별시 금천구 가산디지털1로 168 B동 106호</td>
-              <td>010-1234-1234</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" id="delivery_3" name="delivery_address_radio" />
-                <label for="delivery_3"></label>
-              </td>
-              <!-- @2020.04.27 수정 -->
-              <td class="subject"><span>남대문 센터</span></td>
-              <!-- //@2020.04.27 수정 -->
-              <td class="address">04512 서울특별시 중구 칠패로 46 우남빌딩1층</td>
-              <td>010-1234-1234</td>
-            </tr>
-            </tbody>
-          </table>
+            <div class="basket_list delivery_list">
+            <table>
+              <caption>장바구니 목록</caption>
+              <colgroup>
+                <col width="10%" />
+                <col width="23%" />
+                <col width="*" />
+                <col width="23%" />
+              </colgroup>
+              <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">배송지</th>
+                <th scope="col">주소</th>
+                <th scope="col">연락처</th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- loop -->
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_1" name="delivery_address_radio" checked="checked" />
+                  <label for="delivery_1"></label>
+                </td>
+                <!-- @2020.04.27 수정 -->
+                <td class="subject"><span>킨코스 강남역 센터</span></td>
+                <!-- //@2020.04.27 수정 -->
+                <td class="address">02641 서울특별시 강남구 강남대로 370 클리닉빌딩 1층</td>
+                <td>010-1234-1234</td>
+              </tr>
+              <!-- loop -->
 
-            <!-- Page navigation -->
-            <div class="page_navi">
-              <a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
-              <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
-              <ul class="navi_list">
-                <li class="active"><a href="#url">1</a></li>
-                <li><a href="#url">2</a></li>
-                <li><a href="#url">3</a></li>
-                <li><a href="#url">4</a></li>
-                <li><a href="#url">5</a></li>
-              </ul>
-              <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
-              <a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_2" name="delivery_address_radio" />
+                  <label for="delivery_2"></label>
+                </td>
+                <!-- @2020.04.27 수정 -->
+                <td class="subject"><span>가산디지털단지 센터</span></td>
+                <!-- //@2020.04.27 수정 -->
+                <td class="address">08507 서울특별시 금천구 가산디지털1로 168 B동 106호</td>
+                <td>010-1234-1234</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="delivery_3" name="delivery_address_radio" />
+                  <label for="delivery_3"></label>
+                </td>
+                <!-- @2020.04.27 수정 -->
+                <td class="subject"><span>남대문 센터</span></td>
+                <!-- //@2020.04.27 수정 -->
+                <td class="address">04512 서울특별시 중구 칠패로 46 우남빌딩1층</td>
+                <td>010-1234-1234</td>
+              </tr>
+              </tbody>
+            </table>
+
+              <!-- Page navigation -->
+              <div class="page_navi">
+                <a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+                <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+                <ul class="navi_list">
+                  <li class="active"><a href="#url">1</a></li>
+                  <li><a href="#url">2</a></li>
+                  <li><a href="#url">3</a></li>
+                  <li><a href="#url">4</a></li>
+                  <li><a href="#url">5</a></li>
+                </ul>
+                <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                <a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+              </div>
+              <!-- //Page navigation -->
+
+            <div class="btn_wrap center top">
+              <button type="button" class="btn large type02 btn_pop_close_btn">취소</button>
+              <button type="button" class="btn large type01">확인</button>
             </div>
-            <!-- //Page navigation -->
-
-          <div class="btn_wrap center top">
-            <button type="button" class="btn large type02 btn_pop_close_btn">취소</button>
-            <button type="button" class="btn large type01">확인</button>
           </div>
+          <!-- //popup content -->
+          <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
         </div>
-        <!-- //popup content -->
-        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+      <!-- //popup area -->
+
+      <div class="dim">
       </div>
     </div>
-    <!-- //popup area -->
+      <!-- //popup area -->
 
-    <div class="dim">
+      <div class="dim"></div>
     </div>
+    <!-- //CONTENT -->
   </div>
-    <!-- //popup area -->
-
-    <div class="dim"></div>
   <!-- //WRAP -->
 
   <!-- SCRIPT -->
   <!-- global -->
-  <script src="../js/jquery/jquery-1.12.4.min.js"></script>
-  <script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-  <script src="../js/jquery/jquery.placeholder.min.js"></script>
-  <script src="../js/wow.min.js"></script>
-  <script src="../js/swiper/swiper.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
   <!-- //global -->
 
-  <script src="../js/sub.js"></script>
-  <script src="../js/jquery.numspinner.min.js"></script>
+  <script src="/js/sub.js"></script>
+  <script src="/js/jquery.numspinner.min.js"></script>
 
   <!-- 수량 -->
   <script type="text/javascript">
@@ -867,12 +867,21 @@
     $(document).ready(function() {
       mallSubPageTitle('주문/결제');
     });
+
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+      // 임시 header, footer영역 로드
+      $("#header").load("/www/common/include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
+      });
+
+      $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+      });
+    });
+    // //퍼블리싱 코드
   </script>
-
   <!-- //SCRIPT -->
-
-
-</div>
 </body>
-
 </html>
