@@ -182,15 +182,14 @@ $(function () {
 					el: '.hitPrd_wrap .swiper-scrollbar',
 					hide: false,
 				},
+				pagination: {
+					el: '.hitPrd_wrap .swiper-pagination',
+					type: 'fraction',
+				},
 				breakpoints: {
 					980: {
 						slidesPerView: 'auto',
-						spaceBetween: 15,
-						loop: true,
-						loopFillGroupWithBlank: true,
-						scrollbar: {
-							hide: true
-						}
+						spaceBetween: 15
 					}
 				}
 			};
@@ -334,16 +333,17 @@ $(function () {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				speed: 500,
-				loop: true,
-				loopFillGroupWithBlank: true,
 				grabCursor: true,
 				navigation: {
 					nextEl: recommendPrd_wrap.find('.swiper-button-next'),
 					prevEl: recommendPrd_wrap.find('.swiper-button-prev'),
 				},
 				scrollbar: {
-					el: recommendPrd_wrap.find('.swiper-scrollbar'),
-					hide: false,
+					el: recommendPrd_wrap.find('.swiper-scrollbar')
+				},
+				pagination: {
+					el: recommendPrd_wrap.find('.swiper-pagination'),
+					type: 'fraction',
 				},
 				breakpoints: {
 					980: {
