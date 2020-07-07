@@ -3702,7 +3702,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .ord_detail_payment_pc .btn_right {position:absolute; top:0; right:0;}
 .cont_wrap.pc .ord_detail_payment_pc .btn_right .btn {font-size:14px; line-height:32px; white-space:nowrap;}
 .cont_wrap.pc .ord_detail_payment_pc table {width:100%; border-collapse:separate; text-align:center; border-top:2px solid #222222; border-bottom:1px solid #cccccc;}
-.cont_wrap.pc .ord_detail_payment_pc table th {padding:25px 40px; text-align:center; border-top:1px solid #e7e7e7;}
+.cont_wrap.pc .ord_detail_payment_pc table th {padding:25px 20px; text-align:center; border-top:1px solid #e7e7e7;}
 .cont_wrap.pc .ord_detail_payment_pc table td {padding:25px 20px; text-align:left; border-top:1px solid #e7e7e7;}
 .cont_wrap.pc .ord_detail_payment_pc table tr:first-child th {border-top:0;}
 .cont_wrap.pc .ord_detail_payment_pc table tr:first-child td {border-top:0;}
