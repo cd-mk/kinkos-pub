@@ -173,7 +173,8 @@ $(function () {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				speed: 500,
-				grabCursor: true,
+				loop: false,
+				loopFillGroupWithBlank: true,
 				navigation: {
 					nextEl: '.hitPrd_wrap .swiper-button-next',
 					prevEl: '.hitPrd_wrap .swiper-button-prev',
@@ -205,7 +206,7 @@ $(function () {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				speed: 500,
-				loop: true,
+				loop: false,
 				loopFillGroupWithBlank: true,
 				navigation: {
 					nextEl: '.latestPrd_wrap .swiper-button-next',
@@ -235,7 +236,8 @@ $(function () {
 			var popularPrdSlideOpt = {
 				slidesPerView: 4,
 				spaceBetween: 30,
-				loop: true,
+				speed: 500,
+				loop: false,
 				loopFillGroupWithBlank: true,
 				navigation: {
 					nextEl: '.popularPrd_wrap .swiper-button-next',
@@ -265,7 +267,8 @@ $(function () {
 			var discountPrdSlideOpt = {
 				slidesPerView: 4,
 				spaceBetween: 30,
-				loop: true,
+				speed: 500,
+				loop: false,
 				loopFillGroupWithBlank: true,
 				navigation: {
 					nextEl: '.discountPrd_wrap .swiper-button-next',
@@ -333,6 +336,8 @@ $(function () {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				speed: 500,
+				loop: false,
+				loopFillGroupWithBlank: true,
 				grabCursor: true,
 				navigation: {
 					nextEl: recommendPrd_wrap.find('.swiper-button-next'),
