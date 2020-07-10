@@ -212,16 +212,18 @@ $(function () {
 					nextEl: '.latestPrd_wrap .swiper-button-next',
 					prevEl: '.latestPrd_wrap .swiper-button-prev',
 				},
+				scrollbar: {
+					el: '.latestPrd_wrap .swiper-scrollbar',
+					hide: false,
+				},
+				pagination: {
+					el: '.latestPrd_wrap .swiper-pagination',
+					type: 'fraction',
+				},
 				breakpoints: {
 					980: {
 						slidesPerView: 'auto',
-						spaceBetween: 15,
-						loop: true,
-						loopFillGroupWithBlank: true,
-						scrollbar: {
-							el: '.latestPrd_wrap .swiper-scrollbar',
-							hide: false,
-						}
+						spaceBetween: 15
 					}
 				}
 			};

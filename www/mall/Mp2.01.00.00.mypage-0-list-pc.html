@@ -133,7 +133,11 @@
                     <col width="*" />
                     <col width="10%" />
                     <col width="18%" />
+                    <!-- @2020-07-10 삭제 -->
+                    <!--
                     <col width="14%" />
+                    -->
+                    <!-- //@2020-07-10 삭제 -->
                   </colgroup>
                   <thead>
                     <tr>
@@ -141,7 +145,11 @@
                       <th scope="col">상품/옵션정보</th>
                       <th scope="col">수량</th>
                       <th scope="col">배송</th>
+                      <!-- @2020-07-10 삭제 -->
+                      <!--
                       <th scope="col">주문상태</th>
+                      -->
+                      <!-- //@2020-07-10 삭제 -->
                     </tr>
                   </thead>
                   <tbody>
@@ -187,22 +195,28 @@
                         <p><strong class="ord_delivery_point">가산디지털단지 센터</strong></p>
                         <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
                       </td>
+                      <!-- @2020-07-10 삭제 -->
+                      <!--
                       <td class="td_ord_status">
                         <p>접수대기</p>
                         <p><a href="#" class="btn type02">주문취소</a></p>
                         <p><a href="#" class="btn type01">재주문</a></p>
                       </td>
+                      -->
+                      <!-- //@2020-07-10 삭제 -->
                     </tr>
                     <!-- 개별 상품의 금액 -->
                     <tr>
                       <td colspan="4" class="td_ord_pdt_total">
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status top">
+                          <p><strong>주문상태&nbsp;:&nbsp;</strong></p>
+                          <p>접수대기</p>
+                        </div>
+                        <!-- //@2020-07-10 추가 -->
+
+                        <!-- @2020-07-10 수정 -->
                         <div class="td_ord_pdt_total_wrap">
-                          <div class="td_ord_pdt_total_regist_files"><a href="#popup5" class="btn_popup">요청사항/파일확인</a></div>
-
-                          <!-- @2020-07-08 수정 -->
-                          <div class="td_ord_pdt_total_template_view_btn"><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></div>
-                          <!-- //@2020-07-08 수정 -->
-
                           <div class="td_ord_pdt_total_price">
                             <div class="box">
                               <div class="box_item">
@@ -223,6 +237,16 @@
                             </div>
                           </div>
                         </div>
+                        <!-- //@2020-07-10 수정 -->
+
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status">
+                          <p><a href="#popup5" class="btn type04 small btn_popup file_confirm_btn">요청사항/<br />파일확인</a></p>
+                          <p><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></p>
+                          <p><a href="#" class="btn type02 small">주문취소</a></p>
+                          <p><a href="#" class="btn type01 small">재주문</a></p>
+                        </div>
+                        <!-- @2020-07-10 추가 -->
                       </td>
                     </tr>
                     <!-- //주문 1의 상품 1 -->
@@ -255,21 +279,18 @@
                         <p>배송비<strong class="ord_delivery_price">2500</strong>원</p>
                         <p><a href="#" class="btn type04">배송조회</a></p>
                       </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#" class="btn type02">주문취소</a></p>
-                        <p><a href="#" class="btn type01">재주문</a></p>
-                      </td>
                     </tr>
                     <tr><!-- 개별 상품의 금액 -->
                       <td colspan="4" class="td_ord_pdt_total">
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status top">
+                          <p><strong>주문상태&nbsp;:&nbsp;</strong></p>
+                          <p>접수대기</p>
+                        </div>
+                        <!-- //@2020-07-10 추가 -->
+
+                        <!-- @2020-07-10 수정 -->
                         <div class="td_ord_pdt_total_wrap">
-                          <div class="td_ord_pdt_total_regist_files"><a href="#popup5" class="btn_popup">요청사항/파일확인</a></div>
-
-                          <!-- @2020-07-08 수정 -->
-                          <div class="td_ord_pdt_total_template_view_btn"><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></div>
-                          <!-- //@2020-07-08 수정 -->
-
                           <div class="td_ord_pdt_total_price">
                             <div class="box">
                               <div class="box_item">
@@ -290,6 +311,15 @@
                             </div>
                           </div>
                         </div>
+                        <!-- //@2020-07-10 수정 -->
+
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status">
+                          <p><a href="#popup5" class="btn type04 small btn_popup file_confirm_btn">요청사항/<br />파일확인</a></p>
+                          <p><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></p>
+                          <p><a href="#" class="btn type01">재주문</a></p>
+                        </div>
+                        <!-- @2020-07-10 추가 -->
                       </td>
                     </tr>
                     <!-- //주문 1의  주문의 상품 2 -->
@@ -320,21 +350,18 @@
                         <p>배송비<strong class="ord_delivery_price">2500</strong>원</p>
                         <p><a href="#" class="btn type04">배송조회</a></p>
                       </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#" class="btn type02">주문취소</a></p>
-                        <p><a href="#" class="btn type01">재주문</a></p>
-                      </td>
                     </tr>
                     <tr><!-- 개별 상품의 금액 -->
-                      <td colspan="4" class="td_ord_pdt_total">
+                      <td colspan="3" class="td_ord_pdt_total">
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status top">
+                          <p><strong>주문상태&nbsp;:&nbsp;</strong></p>
+                          <p>접수대기</p>
+                        </div>
+                        <!-- //@2020-07-10 추가 -->
+
+                        <!-- @2020-07-10 수정 -->
                         <div class="td_ord_pdt_total_wrap">
-                          <div class="td_ord_pdt_total_regist_files"><a href="#popup5" class="btn_popup">요청사항/파일확인</a></div>
-
-                          <!-- @2020-07-08 수정 -->
-                          <div class="td_ord_pdt_total_template_view_btn"><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></div>
-                          <!-- //@2020-07-08 수정 -->
-
                           <div class="td_ord_pdt_total_price">
                             <div class="box">
                               <div class="box_item">
@@ -355,13 +382,23 @@
                             </div>
                           </div>
                         </div>
+                        <!-- //@2020-07-10 수정 -->
+
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status">
+                          <p><a href="#popup5" class="btn type04 small btn_popup file_confirm_btn">요청사항/<br />파일확인</a></p>
+                          <p><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></p>
+                          <p><a href="#" class="btn type02">주문취소</a></p>
+                          <p><a href="#" class="btn type01">재주문</a></p>
+                        </div>
+                        <!-- @2020-07-10 추가 -->
                       </td>
                     </tr>
                     <!-- 주문 1의 상품 3 -->
                     <!-- //주문 1의 상품이 1개 이상 일 경우 loop 2차 상품 -->
 
                     <!-- loop 1차 밑에 tr 태그 추가해 주세요 -->
-                    <tr><td colspan="5" class="blank_botter_bottom"></td></tr>
+                    <tr><td colspan="4" class="blank_botter_bottom"></td></tr>
                     <!-- //loop 1차 -->
 
                     <!-- 주문 2 -->
@@ -399,21 +436,18 @@
                         <p><strong class="ord_delivery_point">강남역 센터</strong></p>
                         <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
                       </td>
-                      <td class="td_ord_status">
-                        <p>접수대기</p>
-                        <p><a href="#" class="btn type02">주문취소</a></p>
-                        <p><a href="#" class="btn type01">재주문</a></p>
-                      </td>
                     </tr>
                     <tr><!-- 개별 상품의 금액 -->
-                      <td colspan="4" class="td_ord_pdt_total">
+                      <td colspan="3" class="td_ord_pdt_total">
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status top">
+                          <p><strong>주문상태&nbsp;:&nbsp;</strong></p>
+                          <p>접수대기</p>
+                        </div>
+                        <!-- //@2020-07-10 추가 -->
+
+                        <!-- @2020-07-10 수정 -->
                         <div class="td_ord_pdt_total_wrap">
-                          <div class="td_ord_pdt_total_regist_files"><a href="#popup5" class="btn_popup">요청사항/파일확인</a></div>
-
-                          <!-- @2020-07-08 수정 -->
-                          <div class="td_ord_pdt_total_template_view_btn"><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></div>
-                          <!-- //@2020-07-08 수정 -->
-
                           <div class="td_ord_pdt_total_price">
                             <div class="box">
                               <div class="box_item">
@@ -434,10 +468,20 @@
                             </div>
                           </div>
                         </div>
+                        <!-- //@2020-07-10 수정 -->
+
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status">
+                          <p><a href="#popup5" class="btn type04 small btn_popup file_confirm_btn">요청사항/<br />파일확인</a></p>
+                          <p><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></p>
+                          <p><a href="#" class="btn type02">주문취소</a></p>
+                          <p><a href="#" class="btn type01">재주문</a></p>
+                        </div>
+                        <!-- @2020-07-10 추가 -->
                       </td>
                     </tr>
 
-                    <tr><td colspan="5" class="blank_botter_bottom"></td></tr>
+                    <tr><td colspan="4" class="blank_botter_bottom"></td></tr>
                     <!-- //주문 2 -->
 
                   </tbody>
@@ -462,8 +506,6 @@
               </div>
             </div>
             <!-- //구매내역 리스트 -->
-
-
           </div>
           <!-- //본문 -->
         </div>
@@ -932,77 +974,75 @@
   </div>
   <!-- //WRAP -->
 
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
+  <!-- //global -->
 
-    <!-- SCRIPT -->
-    <!-- global -->
-    <script src="/js/jquery/jquery-1.12.4.min.js"></script>
-    <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-    <script src="/js/jquery/jquery.placeholder.min.js"></script>
-    <script src="/js/wow.min.js"></script>
-    <script src="/js/swiper/swiper.min.js"></script>
-    <script src="/js/common.js"></script>
-    <!-- //global -->
-
-    <script src="/js/sub.js"></script>
+  <script src="/js/sub.js"></script>
 
 
-    <script type="text/javascript">
-      // @2020-05-15 JS 추가
-      $(function() {
-        $('.sian_view_btn').on('click', function() {
-          setTimeout(function() {
+  <script type="text/javascript">
+    // @2020-05-15 JS 추가
+    $(function() {
+      $('.sian_view_btn').on('click', function() {
+        setTimeout(function() {
 
-            // 시안보기 레이어팝업 호출시 실행
-            $('.pop_sian_view .request_image').each(function() {
-              var targetObj = $(this);
-              var nextBtnObj = targetObj.find('.swiper-button-next');
-              var prevBtnObj = targetObj.find('.swiper-button-prev');
-              var paginationObj = targetObj.find('.swiper-pagination');
+          // 시안보기 레이어팝업 호출시 실행
+          $('.pop_sian_view .request_image').each(function() {
+            var targetObj = $(this);
+            var nextBtnObj = targetObj.find('.swiper-button-next');
+            var prevBtnObj = targetObj.find('.swiper-button-prev');
+            var paginationObj = targetObj.find('.swiper-pagination');
 
-              var opt = {
-                slidesPerView: 'auto',
-                spaceBetween: 30,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                navigation: {
-                  nextEl: nextBtnObj,
-                  prevEl: prevBtnObj,
-                },
-                pagination: {
-                  el: paginationObj,
-                  type: 'fraction',
-                }
-              };
+            var opt = {
+              slidesPerView: 'auto',
+              spaceBetween: 30,
+              loop: true,
+              loopFillGroupWithBlank: true,
+              navigation: {
+                nextEl: nextBtnObj,
+                prevEl: prevBtnObj,
+              },
+              pagination: {
+                el: paginationObj,
+                type: 'fraction',
+              }
+            };
 
-              var requestImageSlide = new Swiper(targetObj, opt);
+            var requestImageSlide = new Swiper(targetObj, opt);
 
-              reloadSlide(requestImageSlide, opt, opt);
-            });
-          }, 500);
-        });
+            reloadSlide(requestImageSlide, opt, opt);
+          });
+        }, 500);
       });
-      // //@2020-05-15 JS 추가
+    });
+    // //@2020-05-15 JS 추가
 
-      // 퍼블리싱용
-      $(document).ready(function() {
-        mallSubPageTitle('마이페이지');
+    // 퍼블리싱용
+    $(document).ready(function() {
+      mallSubPageTitle('마이페이지');
+    });
+
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+      // 임시 header, footer영역 로드
+      $("#header").load("/www/common/include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
       });
 
-      // 퍼블리싱 코드
-      $(document).ready(function () {
-        // 임시 header, footer영역 로드
-        $("#header").load("/www/common/include/common.html header", function () {
-          // header 로드 후 header 관련 function 실행
-          setGnb();
-          mobileGnb();
-        });
-
-        $("#footer").load("/www/common/include/common.html .footer_inner", function () {
-        });
+      $("#footer").load("/www/common/include/common.html .footer_inner", function () {
       });
-      // //퍼블리싱 코드
-    </script>
-    <!-- //SCRIPT -->
-
+    });
+    // //퍼블리싱 코드
+  </script>
+  <!-- //SCRIPT -->
 </body>
 </html>
