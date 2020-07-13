@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> -->
+  <meta name="Title" content="킨코스코리아" />
+  <meta name="Description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다." />
+  <!-- 기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="킨코스코리아">
+  <meta property="og:url" content="http://www.kinkos.co.kr/">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
+  <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
+  <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
+  <title>구매내역리스트 | 마이페이지 | 킨코스코리아</title>
+  <!-- CSS FILE LOAD -->
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
+
+  <link rel="stylesheet" href="/css/common.css">
+  <!-- only sub -->
+  <link rel="stylesheet" href="/css/sub.css">
+</head>
+
+<!--
+  PC 일 경우 : fix_pc
+  MOBILE 일 경우 : fix_mobile
+-->
+<body class="fix_pc">
+  <!-- 접근성 바로가기 메뉴(숨김) -->
+  <div id="accessibility">
+    <strong class="blind">컨텐츠바로가기</strong>
+    <ul>
+      <li><a href="#content"><strong>본문으로 바로가기</strong></a></li>
+      <li><a href="#header"><strong>주메뉴 바로가기</strong></a></li>
+    </ul>
+  </div>
+  <!-- //접근성 바로가기 메뉴(숨김) -->
+
+  <!-- WRAP (mall or company css추가)-->
+  <!-- 마이페이지 페이지 일 경우 is-mypage 추가 -->
+  <div id="wrap" class="mall is-mypage">
+
+    <!-- HEADER -->
+    <div id="header">
+    </div>
+    <!-- //HEADER -->
+
+    <!-- CONTENT -->
+    <div id="content">
+      <!-- breadcrumb  -->
+			<div class="breadcrumb_wrap">
+        <ul class="item_list">
+          <li><a href="#url" class="home">Home</a></li>
+          <li><a href="#">마이페이지</a></li>
+          <li><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송조회</a></li>
+        </ul>
+      </div>
+      <!-- //breadcrumb  -->
+
+      <!-- 콘텐츠 group "cont_wrap" 고정 -->
+      <!-- PC 버전 -->
+      <div class="cont_wrap sidebar pc">
+        <div class="section mid">
+          <div class="snb">
+            <h2>마이페이지</h2>
+            <ul>
+              <li>
+                <a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문/배송현황</a>
+                <ul>
+                  <li class="active"><a href="/www/mall/Mp2.01.00.00.mypage-0-list-pc.html">주문내역/시안 확인</a></li>
+                  <!-- @2020-05-15 기업 관리자만 노출 -->
+                  <li><a href="/www/mall/Bbm.05.00.00.business-template-list.html">시안확인</a></li>
+                  <!-- //@2020-05-15 기업 관리자만 노출 -->
+                  <li><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">결제하기</a></li>
+                </ul>
+              </li>
+              <li><a href="/www/mall/Mp3.03.02.00.mypage-2-2.html">배송지 정보 관리</a></li>
+              <li>
+                <a href="#" onclick="return false;">나의 혜택</a>
+                <ul>
+                  <li><a href="/www/mall/Mp3.06.01.00.mypage-coupons-list.html">쿠폰 내역</a></li>
+                  <li><a href="/www/mall/Mp3.06.02.01.mypage-points-list.html">포인트 내역</a></li>
+                </ul>
+              </li>
+              <li><a href="/www/mall/Mp3.04.00.00.mypage-3.html">이벤트 참여 내역</a></li>
+              <!-- @2020-05-15 기업몰에서는 비노출 처리 -->
+              <li>
+                <a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">나의 문의 내역</a>
+                <ul>
+                  <li><a href="/www/mall/Mp3.05.01.00.mypage-4-1-list.html">견적 및 상품 문의내역</a></li>
+                  <li><a href="/www/mall/Mp3.05.02.00.mypage-4-2-list.html">서비스 의견 내역</a></li>
+                  <li><a href="/www/mall/Mp3.05.03.00.mypage-4-3-list.html">제휴 및 제안 내역</a></li>
+                  <li><a href="/www/mall/Mp3.05.04.00.mypage-4-4-list.html">파일 주문 내역</a></li>
+                </ul>
+              </li>
+              <!-- //@2020-05-15 기업몰에서는 비노출 처리 -->
+              <li>
+                <a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보</a>
+                <ul>
+                  <li><a href="/www/mall/Mp3.03.01.00.mypage-2-1.html">회원정보 변경</a></li>
+                  <li><a href="/www/mall/Mp3.03.03.00.mypage-2-3.html">회원탈퇴</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 본문 -->
+          <div class="con_box mpg_wrap">
+            <!-- 구매내역 리스트 -->
+            <div class="my_order">
+              <div class="tit_box mid right_select">
+                <h3>주문내역/시안 확인</h3>
+
+                <div class="form_group right_select_wrap">
+                  <div class="form_item">
+                    <select name="" id="" title="">
+                      <option value="">전체</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order_list_pc">
+                <table>
+                  <caption>주문/배송조회 목록</caption>
+                  <colgroup>
+                    <col width="20%" />
+                    <col width="*" />
+                    <col width="10%" />
+                    <col width="18%" />
+                    <!-- @2020-07-10 삭제 -->
+                    <!--
+                    <col width="14%" />
+                    -->
+                    <!-- //@2020-07-10 삭제 -->
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">주문일자</th>
+                      <th scope="col">상품/옵션정보</th>
+                      <th scope="col">수량</th>
+                      <th scope="col">배송</th>
+                      <!-- @2020-07-10 삭제 -->
+                      <!--
+                      <th scope="col">주문상태</th>
+                      -->
+                      <!-- //@2020-07-10 삭제 -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- loop 1차 -->
+                    <!-- 주문 1의 상품 1 -->
+                    <tr>
+                      <td class="td_ord_date" rowspan="2">
+                        <p>2019-11-30</p>
+                        <p><strong>(2019091613453087)</strong></p>
+                        <p><a href="/www/mall/Mp2.01.01.00.mypage-0-view-pc.html" class="btn type03 small">자세히 보기</a></p>
+                        <!-- 주문취소 -->
+                        <p><a href="#popup3" class="btn type01 small btn_popup">주문취소</a></p>
+                        <!-- //주문취소 -->
+                      </td>
+                      <td class="td_pdt_info">
+                        <div class="pdt_info">
+                          <div class="pdt_info_img"><img src="/image/mall/product/cart_pl_01.png"></div>
+                          <div class="pdt_info_title">
+                            <span class="pdt_info_title_txt">100100100</span>
+                            <span class="pdt_info_title_name">즉석명함 100매(파일주문)</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="td_ord_amount">
+                        <p><strong>1000</strong>개</p>
+                      </td>
+                      <td class="td_ord_delivery">
+                        <p><strong>직접수령</strong></p>
+                        <p><strong class="ord_delivery_point">가산디지털단지 센터</strong></p>
+                        <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
+                      </td>
+                      <!-- @2020-07-10 삭제 -->
+                      <!--
+                      <td class="td_ord_status">
+                        <p>접수대기</p>
+                        <p><a href="#" class="btn type02">주문취소</a></p>
+                        <p><a href="#" class="btn type01">재주문</a></p>
+                      </td>
+                      -->
+                      <!-- //@2020-07-10 삭제 -->
+                    </tr>
+                    <!-- 개별 상품의 금액 -->
+                    <tr>
+                      <td colspan="4" class="td_ord_pdt_total">
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status top">
+                          <p><strong>주문상태&nbsp;:&nbsp;</strong></p>
+                          <p>접수대기</p>
+                        </div>
+                        <!-- //@2020-07-10 추가 -->
+
+                        <!-- @2020-07-10 수정 -->
+                        <div class="td_ord_pdt_total_wrap">
+                          <div class="td_ord_pdt_total_price">
+                            <div class="box">
+                              <div class="box_item">
+                                <span class="label">상품금액</span>
+                                <span class="price">10,000,000원</span>
+                              </div>
+                              <div class="box_item">
+                                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                              </div>
+                              <div class="box_item">
+                                <span class="label">할인금액</span>
+                                <span class="price">1,000,000원</span>
+                              </div>
+                              <div class="box_item total">
+                                <span class="label"><strong>판매금액</strong></span>
+                                <span class="price"><strong>9,000,000</strong>원</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //@2020-07-10 수정 -->
+
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status">
+                          <p><a href="#popup5" class="btn type04 small btn_popup file_confirm_btn">요청사항/<br />파일확인</a></p>
+                          <p><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></p>
+                          <p><a href="#" class="btn type02 small">주문취소</a></p>
+                          <p><a href="#" class="btn type01 small">재주문</a></p>
+                        </div>
+                        <!-- @2020-07-10 추가 -->
+                      </td>
+                    </tr>
+                    <!-- //주문 1의 상품 1 -->
+
+                    <!-- loop 1차 밑에 tr 태그 추가해 주세요 -->
+                    <tr><td colspan="4" class="blank_botter_bottom"></td></tr>
+                    <!-- //loop 1차 -->
+
+                    <!-- 주문 2 -->
+                    <tr>
+                      <!--
+                        <td class="td_ord_date" rowspan=" 해당주문의 상품 갯수 * 2 ">
+                      -->
+                      <td class="td_ord_date" rowspan="2">
+                        <p>2019-11-30</p>
+                        <p><strong>(2019091613453087)</strong></p>
+                        <p><a href="/www/mall/Mp2.01.01.00.mypage-0-view-pc.html" class="btn type03 small">자세히 보기</a></p>
+                      </td>
+                      <td class="td_pdt_info">
+                        <div class="pdt_info">
+                          <div class="pdt_info_img"><img src="/image/mall/product/cart_pl_03.png"></div>
+                          <div class="pdt_info_title">
+                            <span class="pdt_info_title_txt">100100100</span>
+                            <span class="pdt_info_title_name">현수막 (짧은 쪽 1.2M 기준)</span>
+                          </div>
+                        </div>
+                        <div class="pdt_info_option">
+                          <p><span>[사이즈 (긴쪽)] ⑦ 7m</span></p>
+                          <p><span>[마감방식] 각목+노끈(10M) + 113,000원 (+131,000원)</span></p>
+                          <p class="add_option">
+                            <i class="ico cramp"><span class="blind"></span></i>
+                            <span>[끈추가] 10m</span><span>1개 (+2,000원)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="td_ord_amount">
+                        <p><strong>1000</strong>개</p>
+                      </td>
+                      <td class="td_ord_delivery">
+                        <p><strong>직접수령</strong></p>
+                        <p><strong class="ord_delivery_point">강남역 센터</strong></p>
+                        <p>배송비<strong class="ord_delivery_price">0</strong>원</p>
+                      </td>
+                    </tr>
+                    <tr><!-- 개별 상품의 금액 -->
+                      <td colspan="3" class="td_ord_pdt_total">
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status top">
+                          <p><strong>주문상태&nbsp;:&nbsp;</strong></p>
+                          <p>접수대기</p>
+                        </div>
+                        <!-- //@2020-07-10 추가 -->
+
+                        <!-- @2020-07-10 수정 -->
+                        <div class="td_ord_pdt_total_wrap">
+                          <div class="td_ord_pdt_total_price">
+                            <div class="box">
+                              <div class="box_item">
+                                <span class="label">상품금액</span>
+                                <span class="price">10,000,000원</span>
+                              </div>
+                              <div class="box_item">
+                                <div class="math"><i class="ico minus type01"><span class="blind">더하기</span></i></div>
+                              </div>
+                              <div class="box_item">
+                                <span class="label">할인금액</span>
+                                <span class="price">1,000,000원</span>
+                              </div>
+                              <div class="box_item total">
+                                <span class="label"><strong>판매금액</strong></span>
+                                <span class="price"><strong>9,000,000</strong>원</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //@2020-07-10 수정 -->
+
+                        <!-- @2020-07-10 추가 -->
+                        <div class="td_ord_pdt_status">
+                          <p><a href="#popup5" class="btn type04 small btn_popup file_confirm_btn">요청사항/<br />파일확인</a></p>
+                          <p><a href="#popup4" class="btn type02 small btn_popup sian_view_btn">시안보기</a></p>
+                          <p><a href="#" class="btn type02">주문취소</a></p>
+                          <p><a href="#" class="btn type01">재주문</a></p>
+                        </div>
+                        <!-- @2020-07-10 추가 -->
+                      </td>
+                    </tr>
+
+                    <tr><td colspan="4" class="blank_botter_bottom"></td></tr>
+                    <!-- //주문 2 -->
+
+                  </tbody>
+                </table>
+
+                <!-- Page navigation -->
+                <div class="page_navi">
+                  <a href="javascript:;" class="btn_navi first"><span class="blind">처음 리스트로 이동</span></a>
+                  <a href="#url" class="btn_navi prev"><span class="blind">이전 리스트로 이동</span></a>
+                  <ul class="navi_list">
+                    <li class="active"><a href="#url">1</a></li>
+                    <li><a href="#url">2</a></li>
+                    <li><a href="#url">3</a></li>
+                    <li><a href="#url">4</a></li>
+                    <li><a href="#url">5</a></li>
+                  </ul>
+                  <a href="#url" class="btn_navi next"><span class="blind">다음 리스트로 이동</span></a>
+                  <a href="javascript:;" class="btn_navi last"><span class="blind">마지막 리스트로 이동</span></a>
+                </div>
+                <!-- Page navigation -->
+
+              </div>
+            </div>
+            <!-- //구매내역 리스트 -->
+          </div>
+          <!-- //본문 -->
+        </div>
+      </div>
+      <!-- //PC 버전 -->
+    </div>
+    <!-- CONTENT -->
+
+    <!-- FOOTER -->
+    <div id="footer" class="layout_width">
+    </div>
+    <!-- //FOOTER -->
+
+    <!-- popup area -->
+    <div id="popup1" class="popup_wrap small">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">증빙서류</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          <ul>
+            <li><a href="#">>영수증 출력</a></li>
+            <li><a href="#">>매출전표 출력</a></li>
+            <li><a href="#">>제출서류 다운로드</a></li>
+          </ul>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+
+    <div id="popup2" class="popup_wrap small">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">배송 현황</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          <dl>
+            <dt>송장번호</dt> 
+            <dd>로젠택배 <strong>123456789</strong></dd>
+          </dl>
+          
+          <p>현 배송상태는 <strong>"배송완료"</strong> 입니다.</p>
+
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+
+    <div id="popup3" class="popup_wrap">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">주문취소</h3>
+        <!-- popup content -->
+        <div class="pop_con">
+          <div class="order_cancle_wrap">
+            <div class="form_wrap">
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">취소사유</strong>
+                  <div class="form_inp">
+                    <input type="text" title="취소사유" />
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">환불은행</strong>
+                  <div class="form_inp">
+                    <select class="sel_opt" title="환불은행">
+                      <option value="">선택하세요.</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">환불계좌 번호</strong>
+                  <div class="form_inp">
+                    <input type="text" title="환불계좌 번호" />
+                  </div>
+                </div>
+              </div>
+              <div class="form_group">
+                <div class="form_item">
+                  <strong class="form_name">환불계좌 예금주</strong>
+                  <div class="form_inp">
+                    <input type="text" title="환불계좌 예금주" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_wrap center top">
+              <button type="button" class="btn large type02">주문취소</button>
+            </div>
+          </div>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+
+    <!-- @2020-07-13 개인회원, 파일주문 시안보기 팝업 -->
+    <div id="popup4" class="popup_wrap pop_sian_view">
+      <div class="inner">
+        <!-- popup title -->
+        <h3 class="title">시안보기</h3>
+        <!-- popup content -->
+        <div class="popup_content">
+          <h4>주문정보</h4>
+
+          <div class="ord_info">
+            <div class="ord_info_items">
+              <div class="ord_info_item grid_1">
+                <div class="box">
+                  <div class="box_item"><strong>이름</strong></div>
+                  <div class="box_item">개인사용자</div>
+                </div>
+              </div>
+
+              <div class="ord_info_item grid_2">
+                <div class="box">
+                  <div class="box_item"><strong>휴대전화</strong></div>
+                  <div class="box_item">010-1234-5678</div>
+                </div>
+                <div class="box">
+                  <div class="box_item"><strong>알반전화</strong></div>
+                  <div class="box_item">02-1234-5678</div>
+                </div>
+              </div>
+              <div class="ord_info_item grid_2">
+                <div class="box">
+                  <div class="box_item"><strong>매장명</strong></div>
+                  <div class="box_item">프리미엄</div>
+                </div>
+                <div class="box">
+                  <div class="box_item"><strong>POC CODE</strong></div>
+                  <div class="box_item">premium</div>
+                </div>
+              </div>
+
+              <div class="ord_info_item">
+                <div class="box">
+                  <div class="box_item"><strong>배송지 주소</strong></div>
+
+                  <!-- 직접 수령 -->
+                  <div class="box_item">
+                    <p>직접수령</a>
+                  </div>
+                  <!-- //직접 수령 -->
+
+                  <!-- 택배수령 -->
+                  <!--
+                  <div class="box_item">
+                    <p>(06729)<br />서울특별시 서초구 강남대로 291 남강빌딩 8층</p>
+                    <p>- 송지 변경 시 함께 주문하신 택배수령 상품에 모두 적용됩니다.</p>
+
+                    <a href="#popup1" class="btn type04 ship_to_change_btn">배송지 변경</a>
+                  </div>
+                  -->
+                  <!-- 택배수령 -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>상품정보</h4>
+
+          <div class="prd_info">
+            <div class="prd_info_img"><img src="../image/mall/product/temp-pdt-list-01.png" /></div>
+            <div class="prd_info_wrap">
+              <div class="prd_info_items">
+                <div class="prd_info_item">
+                  <div class="box">
+                    <div class="box_item"><strong>상품명</strong></div>
+                    <div class="box_item">버드와이저_배너</div>
+                  </div>
+                </div>
+
+                <div class="prd_info_item pb-0">
+                  <table>
+                    <caption>상품정보</caption>
+                    <colgroup>
+                      <col width="40%" />
+                      <col width="20%" />
+                      <col width="20%" />
+                      <col width="20%" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th scope="col">상품서비스명</th>
+                      <th scope="col">단가</th>
+                      <th scope="col">수량</th>
+                      <th scope="col">금액</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>A4 컬러 단면</td>
+                      <td class="num">980</td>
+                      <td class="num">5</td>
+                      <td class="num">4900</td>
+                    </tr>
+                    <tr>
+                      <td>유광 코팅 A4</td>
+                      <td class="num">1500</td>
+                      <td class="num">2</td>
+                      <td class="num">3000</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td><strong>소계</strong></td>
+                      <td class="num">7900</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td><strong>금액할인</strong></td>
+                      <td class="num">0</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td><strong>합계</strong></td>
+                      <td class="num">7900</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="prd_info_item grid_1">
+                  <div class="box">
+                    <div class="box_item"><strong>주문일시</strong></div>
+                    <div class="box_item">2020-07-09 14:35:58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>제작정보</h4>
+
+          <div class="making_info">
+            <div class="making_info_items">
+              <div class="making_info_item">
+                <div class="box">
+                  <div class="box_item"><strong>상태</strong></div>
+                  <div class="box_item">시안확인요청</div>
+                </div>
+              </div>
+
+              <div class="making_info_item grid_2">
+                <div class="box">
+                  <div class="box_item"><strong>완료요청일시</strong></div>
+                  <div class="box_item">2020-07-10 오후 10시</div>
+                </div>
+                <div class="box">
+                  <div class="box_item"><strong>최종시안 등록일시</strong></div>
+                  <div class="box_item">2020-07-10 10:10:21</div>
+                </div>
+              </div>
+
+              <div class="making_info_item">
+                <div class="box">
+                  <div class="box_item"><strong>요청사항</strong></div>
+                  <div class="box_item">
+                    <p>시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항 시안수정사항 시안수정사항 시안수정사항시안 수정사항 시안수정사항</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_wrap">
+            <div class="form_group">
+              <div class="form_item">
+                <strong class="form_name">판매가격 결정</strong>
+                <div class="form_inp">
+                  <div class="box">
+                    <input type="text" class="sale_price_input" value="" />
+                    <button type="button" class="btn type02">가격결정</button>
+                  </div>
+
+                  <div class="box right">
+                    <a href="#" class="btn type01 payment_btn">결제하기</a>
+                    <a href="#" class="btn type07 print_request_btn">인쇄요청</a>
+                  </div>
+                </div>
+                <!-- //file upload box -->
+              </div>
+            </div>
+          </div>
+
+          <h4>요청사항</h4>
+
+          <div class="form_wrap border_top">
+            <div class="form_group">
+              <div class="form_item">
+                <div class="form_inp">
+                  <textarea name="" id="" title="내용 입력"></textarea>
+                </div>
+                <p class="desc">- 등록가능 파일 : jpg, jpeg, gif, png, tiff, tif, bmp, ppt(x), xls(x), doc(x)</p>
+              </div>
+              <div class="form_item">
+                <div class="form_inp">
+                  <textarea name="" id="" title="내용 입력" placeholder="댓글 내용을 입력해주세요."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn_wrap center">
+            <button type="button" class="btn type01 large regist_btn">등록</button>
+          </div>
+
+          <div class="request_list">
+            <!-- loop -->
+            <div class="request_list_item">
+              <div class="title_wrap">
+                <div class="title_author"><span><strong>작성자 : 킨코스</strong></span></div>
+                <div class="title_write_date">2019.11.18</div>
+                <a href="#" class="btn_delete"><i></i></a>
+              </div>
+
+              <div class="request_image swiper-container">
+                <div class="swiper-wrapper">
+                  <!-- loop (리스트 추가가능) -->
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                  <!-- //loop (리스트 추가가능) -->
+
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="pg_nav_wrap">
+                  <div class="pg_nav">
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next small"></div>
+                    <div class="swiper-button-prev small"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="regist_files">
+                <div class="box">
+                  <div class="box_item"><strong>등록파일</strong></div>
+                  <div class="box_item">
+                    <span>즉석명함_디자인.png</span>
+                    <span>즉석명함_디자인(앞면).jpg</span>
+                    <span>즉석명함_디자인(뒷면).jpg</span>
+                    <span>즉석명함_디자인.xlxs</span>
+                    <span>즉석명함_디자인.pptx</span>
+                    <span>즉석명함_디자인.doc</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="comment">
+                <div class="box">
+                  <div class="box_item"><strong>댓글내용</strong></div>
+                  <div class="box_item">
+                    <span>시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항 시안수정사항 시안수정사항</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //loop -->
+
+            <div class="request_list_item">
+              <div class="title_wrap">
+                <div class="title_author"><span><strong>작성자 : 킨코스</strong></span></div>
+                <div class="title_write_date">2019.11.18</div>
+                <a href="#" class="btn_delete"><i></i></a>
+              </div>
+
+              <div class="request_image swiper-container">
+                <div class="swiper-wrapper">
+                  <!-- loop (리스트 추가가능) -->
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                  <!-- //loop (리스트 추가가능) -->
+
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../image/mall/product/template_popup_tmp_request_img_pc.jpg" alt="">
+                  </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="pg_nav_wrap">
+                  <div class="pg_nav">
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next small"></div>
+                    <div class="swiper-button-prev small"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="regist_files">
+                <div class="box">
+                  <div class="box_item"><strong>등록파일</strong></div>
+                  <div class="box_item">
+                    <span>즉석명함_디자인.png</span>
+                    <span>즉석명함_디자인(앞면).jpg</span>
+                    <span>즉석명함_디자인(뒷면).jpg</span>
+                    <span>즉석명함_디자인.xlxs</span>
+                    <span>즉석명함_디자인.pptx</span>
+                    <span>즉석명함_디자인.doc</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="comment">
+                <div class="box">
+                  <div class="box_item"><strong>댓글내용</strong></div>
+                  <div class="box_item">
+                    <span>시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항시안수정사항 시안수정사항 시안수정사항 시안수정사항</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //popup content -->
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //@2020-07-13 개인회원, 파일주문 시안보기 팝업 -->
+
+    <div id="popup5" class="mall popup_wrap cart_pdt_file">
+      <div class="inner">
+        <h3 class="title">요청사항 및 파일확인</h3>
+
+        <div class="popup_content">
+          <h4>요청사항</h4>
+
+          <div class="box pdt_request">
+            <div class="box_item">
+              <p>
+                시안수정사항 시안수정사항시안수정사항 시안수정사항시안수
+                정사항 시안수정사항시안수정사항 시안수정사항시안수정사항
+                시안수정사항 시안수정사항 시안수정사항 시안수정사항시안수
+                정사항 시안수정사항
+              </p>
+
+              <p>
+                시안수정사항 시안수정사항시안수정사항 시안수정사항시
+              </p>
+            </div>
+          </div>
+
+          <h4>파일확인</h4>
+
+          <div class="box pdt_files">
+            <div class="box_item">
+              <span>파일1</span>
+              <a href="#">123456.jpg</a>
+            </div>
+            <div class="box_item">
+              <span>파일2</span>
+              <a href="#">123456.jpg</a>
+            </div>
+            <div class="box_item">
+              <span>파일3</span>
+              <a href="#">123456.jpg</a>
+            </div>
+          </div>
+
+          <div class="btn_wrap center">
+            <button type="button" class="btn type02 large btn_pop_close_btn"><span>닫기</span></button>
+          </div>
+        </div>
+
+
+        <button type="button" class="btn_pop_close" title="팝업 닫기"></button>
+      </div>
+    </div>
+    <!-- //popup area -->
+
+    <div class="dim">
+    </div>
+  </div>
+  <!-- //WRAP -->
+
+  <!-- SCRIPT -->
+  <!-- global -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery.placeholder.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script src="/js/swiper/swiper.min.js"></script>
+  <script src="/js/common.js"></script>
+  <!-- //global -->
+
+  <script src="/js/sub.js"></script>
+
+
+  <script type="text/javascript">
+    // @2020-05-15 JS 추가
+    $(function() {
+      $('.sian_view_btn').on('click', function() {
+        setTimeout(function() {
+
+          // 시안보기 레이어팝업 호출시 실행
+          $('.pop_sian_view .request_image').each(function() {
+            var targetObj = $(this);
+            var nextBtnObj = targetObj.find('.swiper-button-next');
+            var prevBtnObj = targetObj.find('.swiper-button-prev');
+            var paginationObj = targetObj.find('.swiper-pagination');
+
+            var opt = {
+              slidesPerView: 'auto',
+              spaceBetween: 30,
+              loop: true,
+              loopFillGroupWithBlank: true,
+              navigation: {
+                nextEl: nextBtnObj,
+                prevEl: prevBtnObj,
+              },
+              pagination: {
+                el: paginationObj,
+                type: 'fraction',
+              }
+            };
+
+            var requestImageSlide = new Swiper(targetObj, opt);
+
+            reloadSlide(requestImageSlide, opt, opt);
+          });
+        }, 500);
+      });
+    });
+    // //@2020-05-15 JS 추가
+
+    // 퍼블리싱용
+    $(document).ready(function() {
+      mallSubPageTitle('마이페이지');
+    });
+
+    // 퍼블리싱 코드
+    $(document).ready(function () {
+      // 임시 header, footer영역 로드
+      $("#header").load("/www/common/include/common.html header", function () {
+        // header 로드 후 header 관련 function 실행
+        setGnb();
+        mobileGnb();
+      });
+
+      $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+      });
+    });
+    // //퍼블리싱 코드
+  </script>
+  <!-- //SCRIPT -->
+</body>
+</html>
