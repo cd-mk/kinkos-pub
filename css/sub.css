@@ -4255,9 +4255,10 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 	.cart_wrap .result dd {margin-top:15px;}
 }
 /* 마이페이지 */
+.order_list_title {padding-bottom:30px;border-bottom:2px solid #222;}
 .my_wrap {background:#4866af;padding:30px 0;color:#fff;}
 .my_wrap ul {display:table;width:100%;}
-.my_wrap ul li {display:table-cell;text-align:left;padding-left:20px;border-left:1px solid #5a75b5;width:10%;vertical-align:top;}
+.my_wrap ul li {display:table-cell;text-align:left;padding:0 10px;border-left:1px solid #5a75b5;width:10%;vertical-align:top;}
 .my_wrap .my_info {position:relative;width:16%;padding-left:0;font-size:28px;font-weight:400;color:#c3cbe1;border-left:0;box-sizing:border-box;}
 .my_wrap .my_info .my_order_title {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);font-size:16px;font-weight:400;line-height:28px;color:#ffffff;white-space:nowrap;}
 .my_wrap .my_info strong {color:#ffffff;font-size:28px;line-height:38px;}
@@ -4265,8 +4266,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .my_wrap .my_info .my_point {position:absolute;bottom:0;}
 .my_wrap .my_info .my_point i {font-weight:700; display:inline-block; position:relative; height:30px; text-align:center; font-size:18px; width:30px; margin-right:10px; font-style:normal; line-height:30px;}
 .my_wrap .my_info .my_point i:before {content:""; display:inline-block; border:2px solid #b6c2df; width:26px; height:26px; border-radius:50%; position:absolute; top:0; left:0;}
-.my_wrap .my_status strong {color:#c3cbe1;font-weight:400;font-size:14px;}
-.my_wrap .my_status p {color:#fff;font-size:24px;font-weight:700;margin-top:20px;}
+.my_wrap .my_status strong {display:block;width:100%;height:auto;color:#c3cbe1;font-weight:400;font-size:14px;text-align:center;}
+.my_wrap .my_status p {display:block;width:100%;height:auto;margin-top:20px;color:#fff;font-size:24px;font-weight:700;text-align:center;}
 .my_wrap .my_status p.zero {color:rgba(255, 255, 255, 0.3);}
 
 .mpg_main {margin-top:60px;}
