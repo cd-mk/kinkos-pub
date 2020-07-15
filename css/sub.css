@@ -4339,11 +4339,12 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 	.userinfo_wrap .form_group .form_item .form_inp .email_info {margin-top: 10px; margin-bottom: 5px;}
 
 	.mpg_main .my_wrap {padding:20px 15px 15px 15px;}
-	.mpg_main .my_wrap ul {display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:center; width:100%;}
+	.mpg_main .my_wrap ul {display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:flex-start; width:100%;}
 	.mpg_main .my_wrap ul .my_info {flex:1 1 auto; display:block; width:100%; padding-left:0; text-align:center;}
 	.mpg_main .my_wrap ul .my_info h2 {position:relative;top:unset;left:unset;margin:10px 0 20px 0;transform:unset;}
 	.mpg_main .my_wrap ul .my_info p {margin-top:15px;margin-bottom:20px;}
-	.mpg_main .my_wrap ul .my_status {display:inline-block; flex:1 1 33%; width:33%; padding-left:0; text-align:center; border-left:1px solid #5a75b5; border-bottom:1px solid #5a75b5; box-sizing:border-box;}
+	.mpg_main .my_wrap ul .my_status {display:inline-block; flex:0 0 33%; width:33%; padding-left:0; text-align:center; border-left:0; border-right:1px solid #5a75b5; border-bottom:1px solid #5a75b5; box-sizing:border-box;}
+	.mpg_main .my_wrap ul .my_status:nth-child(3n-1) {border-left:1px solid #5a75b5;}
 	.mpg_main .my_wrap ul .my_status:nth-child(-n+4) {border-top:1px solid #5a75b5;}
 	.mpg_main .my_wrap ul .my_status:nth-child(3n+4) {border-right:1px solid #5a75b5;}
 	.mpg_main .my_wrap .my_status strong {display:block; padding-top:15px; font-size:14px; font-weight:400;}
