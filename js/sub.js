@@ -304,18 +304,28 @@ $(function () {
         $(window).on('scroll', function() {
           var winWidth = parseInt( window.innerWidth, 10 );
 
-          if( winWidth < 1025 )
+          if( winWidth < 981 )
           {
             var windowScrollTop = parseInt( $(window).scrollTop(), 10 );
-            var objOffsetTop = parseInt( obj.attr('data-first-offset-top'), 10 );
+            var pdtInfoWrapInner = $('.pdt_info_wrap > .inner');
+            if( pdtInfoWrapInner.length ) {
+              var pdtInfoWrapInnerOffset = pdtInfoWrapInner.offset();
+              var pdtInfoWrapInnerHeight = parseInt( pdtInfoWrapInner.outerHeight(true), 10 );
+              var pdtInfoWrapInnerBottom = parseInt(pdtInfoWrapInnerOffset.top, 10) + pdtInfoWrapInnerHeight;
 
-            if( objOffsetTop < windowScrollTop )
-            {
-              obj.addClass('fixed');
-            }
-            else
-            {
-              obj.removeClass('fixed');
+              if( pdtInfoWrapInnerBottom < windowScrollTop ) {
+                obj.addClass('fixed');
+              } else {
+                obj.removeClass('fixed');
+              }
+            } else {
+              var objOffsetTop = parseInt( obj.attr('data-first-offset-top'), 10 );
+
+              if( objOffsetTop < windowScrollTop ) {
+                obj.addClass('fixed');
+              } else {
+                obj.removeClass('fixed');
+              }
             }
           }
         });
