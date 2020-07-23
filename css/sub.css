@@ -1576,7 +1576,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .history_wrap .history_item .phi_list02 ul li:first-child strong {background:rgba(179,227,248,0.5);}
 .history_wrap .history_item .phi_list02 ul li:nth-child(2) strong {background:rgba(223,230,234,0.5);}
 .history_wrap .history_item .phi_list02 ul li:last-child strong {background:rgba(124,193,231,0.5);}
-.history_wrap .history_item .phi_list02 ul li strong:before {content:''; position:absolute; bottom:-85px; width:1px; height:141px;}
+.history_wrap .history_item .phi_list02 ul li strong:before {content:''; position:absolute; left:50%; bottom:-85px; width:1px; height:141px;}
 .history_wrap .history_item .phi_list02 ul li:first-child strong:before,
 .history_wrap .history_item .phi_list02 ul li:first-child strong:after {background:#80bae0;}
 .history_wrap .history_item .phi_list02 ul li:nth-child(2) strong:before,
