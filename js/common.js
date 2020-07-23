@@ -879,59 +879,61 @@ $(function () {
 
   // @2020.04.14 SCROLL TOP 추가
   $(document).ready(function() {
-    scrollTopFunc();
+    if( $('.gnb_wrap.comp').length ) {
+      scrollTopFunc();
 
-    var scrollTopSetObj = '';
-    var scrollTopSetDelay = 50;
+      var scrollTopSetObj = '';
+      var scrollTopSetDelay = 50;
 
-    var scrollTopInit = function() {
-      if( $('.quick_menu').length ) {
-        var quickMenu = $('.quick_menu');
-        var quickMenuOffset = quickMenu.offset();
-        var quickMenuHeight = parseInt( quickMenu.outerHeight( true ), 10 );
-        var quickMenuBottom = parseInt( quickMenuOffset.top, 10 ) + quickMenuHeight;
+      var scrollTopInit = function() {
+        if( $('.quick_menu').length ) {
+          var quickMenu = $('.quick_menu');
+          var quickMenuOffset = quickMenu.offset();
+          var quickMenuHeight = parseInt( quickMenu.outerHeight( true ), 10 );
+          var quickMenuBottom = parseInt( quickMenuOffset.top, 10 ) + quickMenuHeight;
 
-        var scrollTopObj = $('#scroll-top');
-        var scrollTopObjOffset = scrollTopObj.offset();
-        var scrollTopObjTop = parseInt( scrollTopObjOffset.top, 10 );
+          var scrollTopObj = $('#scroll-top');
+          var scrollTopObjOffset = scrollTopObj.offset();
+          var scrollTopObjTop = parseInt( scrollTopObjOffset.top, 10 );
 
-        var quickMenuPositionTop = 0;
-        var quickMenuPositionBottom = 0;
-        var winHeight = parseInt( window.innerHeight, 10 );;
-        var calcScrollTopObjBottom = 0;
+          var quickMenuPositionTop = 0;
+          var quickMenuPositionBottom = 0;
+          var winHeight = parseInt( window.innerHeight, 10 );;
+          var calcScrollTopObjBottom = 0;
 
-        if( 740 < winHeight ) {
-          scrollTopObj.css({
-            'bottom': '',
-            'right': ''
-          });
-        } else {
-          quickMenuPositionTop = parseInt( quickMenu.position().top, 10 );
-          quickMenuPositionBottom = quickMenuPositionTop + quickMenuHeight;
-          calcScrollTopObjBottom = ( winHeight - quickMenuPositionBottom ) - 50;
+          if( 740 < winHeight ) {
+            scrollTopObj.css({
+              'bottom': '',
+              'right': ''
+            });
+          } else {
+            quickMenuPositionTop = parseInt( quickMenu.position().top, 10 );
+            quickMenuPositionBottom = quickMenuPositionTop + quickMenuHeight;
+            calcScrollTopObjBottom = ( winHeight - quickMenuPositionBottom ) - 50;
 
-          scrollTopObj.css({
-            'bottom': calcScrollTopObjBottom + 'px',
-            'right': ''
-          });
+            scrollTopObj.css({
+              'bottom': calcScrollTopObjBottom + 'px',
+              'right': ''
+            });
+          }
         }
-      }
-    };
+      };
 
-    $(window).on('resize', function() {
-      clearTimeout( scrollTopSetObj );
+      $(window).on('resize', function() {
+        clearTimeout( scrollTopSetObj );
+
+        scrollTopSetObj = setTimeout(function() { scrollTopInit(); }, scrollTopSetDelay);
+      });
 
       scrollTopSetObj = setTimeout(function() { scrollTopInit(); }, scrollTopSetDelay);
-    });
 
-    scrollTopSetObj = setTimeout(function() { scrollTopInit(); }, scrollTopSetDelay);
-
-    $('#scroll-top a').on('click', function(e) {
-      $('body,html').animate({
-        scrollTop: 0
-      }, 300);
-      return false;
-    });
+      $('#scroll-top a').on('click', function(e) {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 300);
+        return false;
+      });
+    }
   });
   // //@2020.04.14 SCROLL TOP 추가
 
@@ -954,9 +956,10 @@ $(function () {
     var inner = snbWrap.find('.inner');
     var pdtBanner = snbWrap.find('.pdt_banner');
     var pdtBannerHtml = pdtBanner.html();
-    pdtBannerHtml = pdtBannerHtml.replace(/(\s*)/g, "");
 
-    if( pdtBannerHtml === '' ) {
+    if( pdtBannerHtml ) {
+      pdtBannerHtml = pdtBannerHtml.replace(/(\s*)/g, "");
+    } else {
       inner.css('padding-right', '60px');
     }
   }
@@ -967,4 +970,16 @@ $(function () {
     }
   });
   // //@2020-06-11 SNB 상품배너 없을경우 2차메뉴 width 최대화
+
+  // @2020-07-23 퀵메뉴 TOP 버튼 추가
+  $(document).ready(function() {
+    if( $('.quick_menu_top').length ) {
+      $('.quick_menu_top').on('click', function(e) {
+        e.preventDefault();
+
+        $('body,html').animate({scrollTop: 0}, 300);
+      });
+    }
+  });
+  // //@2020-07-23 퀵메뉴 TOP 버튼 추가
 });

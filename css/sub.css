@@ -505,7 +505,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .photo_list.pop.gallery li {float:none; flex:0 1 calc(25% - 30px); display:flex; flex-direction:column; align-items:center; justify-content:center; width:calc(25% - 30px); height:auto; margin:40px 15px 0 15px; overflow:hidden;}
 .photo_list.pop.gallery li a {display:block; width:100%; height:100%; cursor:pointer;}
 .photo_list.pop.gallery li a .img_box {display:block; position:relative; width:100%; height:100%; max-height:250px; overflow:hidden;}
-.photo_list.pop.gallery li a .img_box img {display:block; position:relative; top:50%; width:100%; height:auto; object-fit:cover; transform:translateY(-50%);}
+.photo_list.pop.gallery li a .img_box img {display:block; position:relative; width:100%; height:auto; object-fit:cover;}
 .photo_list.pop.gallery li .txt_box {display:block; width:100%; height:auto; padding:15px 20px; text-align:center;}
 .photo_list.pop.gallery li .txt_box .chk_modi_box {display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:auto; overflow:hidden;}
 .photo_list.pop.gallery li .txt_box .chk_modi_box a {width:auto;}
@@ -1937,7 +1937,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 /* 서비스안내 기본 비주얼 */
 .service_info_wrap .tit_box {max-width:100%;}
-.service_info_wrap .tit_box p {display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:auto; margin:25px 0 0 0; padding:0;}
+.service_info_wrap .tit_box p {display:flex; flex-direction:row; align-items:center; justify-content:center; width:80%; height:auto; margin:25px 0 0 0; padding:0;}
 .service_info_wrap .visual_box {padding-top:405px;position:relative;text-align:left;overflow: hidden;}
 .service_info_wrap .visual_box::before {z-index:-1;content:"";width:100%;height:380px;background-position:0 0;background-repeat:no-repeat;background-size:cover;display:block;position:absolute;top:0;}
 .service_info_wrap .visual_box.item1::before {background-image:url(/image/company/sub/signs-main-1.png);}
@@ -1957,7 +1957,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap .visual_box .txt_box_sub strong {display:block;margin-top:20px;}
 .service_info_wrap .visual_box .txt_box_sub p {margin-top:20px;color:#777;line-height: 1.5;}
 
-.service_info_wrap .tit_box p {text-align:left;}
+.service_info_wrap .tit_box p {text-align:center; margin-left:auto; margin-right:auto; word-break:keep-all;}
 
 .service_info_wrap h4 {line-height:140%;}
 
@@ -2256,7 +2256,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_info_wrap .opt_size .int_opt li span {display: inline-block;width:80px;padding-left:10px;}
 .pdt_info_wrap .opt_size .int_opt li strong {display: inline-block;width:50px;text-align:left;font-weight: 400;}
 .pdt_info_wrap .opt_size .int_opt li input {width:calc(100% - 131px)}
-.pdt_info_wrap .form_group .form_item {position:relative; margin-bottom:20px; padding-left:35%; box-sizing:border-box;}
+.pdt_info_wrap .form_group .form_item {position:relative; margin-bottom:20px; padding-left:35%; box-sizing:border-box; table-layout:fixed;}
 .pdt_info_wrap .form_group .form_item .form_name {position:absolute;left:0;font-size:1em;width:35%;padding:0 0 0 20px;line-height:44px;font-weight:700;box-sizing:border-box;}
 .pdt_info_wrap .form_group .form_item.coupon_use {margin-bottom:30px;}
 .pdt_info_wrap .form_group .form_item.coupon_use .coupon_use_wrap {display:block; position:relative; width:100%; min-height:44px; margin:0; padding:0 20px; line-height:44px; background:#f3f4f6; overflow:hidden;}
@@ -2311,6 +2311,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 	.pdt_detail .pdt_item .shipping_info {padding-left:0; font-size:14px;}
 	.pdt_detail .pdt_item .shipping_info::before {position:relative; top:3px; left:auto; padding-left:0; padding-right:5px;}
 	.pdt_detail .pdt_item .shipping_info span {display:inline-block; padding-top:0; padding-left:0 !important;}
+
+	.pdt_detail .form_item.size {border-top:0;}
 }
 
 @media screen and (max-width:380px) {
@@ -2322,6 +2324,10 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .pdt_detail .size .form_name {}
 .pdt_detail .size .form_inp .sel_opt {}
 .pdt_detail .size .form_inp .int_opt {width:100%; margin-top:0;}
+.pdt_detail .size .form_inp .int_opt li {display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:flex-start; width:100%; height:auto; box-sizing:border-box;}
+.pdt_detail .size .form_inp .int_opt li strong {flex:0 0 50px; width:50px; padding-right:10px; box-sizing:border-box;}
+.pdt_detail .size .form_inp .int_opt li input[type="number"] {flex:1 1 calc(100% - 100px); width:calc(100% - 100px);}
+.pdt_detail .size .form_inp .int_opt li span {flex:0 0 50px; width:50px; padding-left:10px; box-sizing:border-box;}
 
 .pdt_detail .delivery_price {padding:40px 20px; border-top:1px solid #ccc; border-bottom:1px solid #e7e7e7;}
 
@@ -3611,9 +3617,7 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 /* //장바구니 MOBILE 버전 */
 
 /* 마이페이지 > 주문/배송조회 PC 버전 */
-body.fix_pc #wrap {min-width:1350px; max-width:1350px; margin:0 auto;}
-body.fix_pc .cont_wrap {max-width:1350px; padding-left:0; padding-right:0;}
-body.fix_pc .cont_wrap.sidebar.pc {display:block !important; padding-left:260px !important; min-width:1090px; box-sizing:border-box;}
+body.fix_pc #wrap {margin:0 auto;}
 body.fix_pc .cont_wrap.sidebar.pc .section {min-width:980px;}
 body.fix_pc .cont_wrap.pc .snb {display:block !important;}
 body.fix_pc .cont_wrap.pc .mpg_wrap {display:block !important; min-width:1090px;  min-height:600px;}
@@ -3709,7 +3713,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status {display:flex; flex-direction:row; align-items:center; justify-content:flex-start; width:100%; height:auto; margin:25px 0 0 0; padding:0;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status.top {margin-top:0; margin-bottom:20px;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status.text-center {justify-content:center;}
-.cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status p {flex:0 0 auto; margin:0 0 0 15px;}
+.cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status p {flex:0 0 auto; margin:0 0 0 15px; color:#03a2ea;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status p:first-child {margin-left:0;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status.top p {margin-left:0;}
 .cont_wrap.pc .order_list_pc .td_ord_pdt_total .td_ord_pdt_status .btn {display:flex; align-items:center; justify-content:center; width:auto; min-width:110px; min-height:44px;}
@@ -3870,7 +3874,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:block !important;}
 .order_list_mo .pdt_info_content .pdt_info_option p.add_option .btn_delete {display:inline-block; position:relative; top:-2px; width:24px; height:24px; margin-left:5px; background:url("/image/common/ico-ly-close.png") no-repeat 50% 50%; vertical-align:middle;}
 .order_list_mo .pdt_info_content .pdt_info_option p.ord_amount {margin-top:15px;}
 .order_list_mo .pdt_info_content .pdt_info_option p.ord_amount strong {padding-left:20px;}
-.order_list_mo .pdt_info .ord_status {position:absolute; top:0; right:0; color:#999999;}
+.order_list_mo .pdt_info .ord_status {position:absolute; top:0; right:0; font-weight:bold; color:#03a2ea;}
 .order_list_mo .pdt_info .ord_status.shipping {font-weight:bold; color:#03a2ea;}
 
 .order_list_mo .ord_delivery {clear:both; display:inline-block; width:100%; margin-top:20px; padding-top:20px; border-top:1px solid #e7e7e7;}
@@ -3936,7 +3940,7 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:block !important;}
 /* //마이페이지 > 주문/배송조회 MOBILE 버전 */
 
 /* /마이페이지 > 시안보기 PC 버전 */
-.pop_sian_view .inner {width:980px;}
+.pop_sian_view .inner {width:100%; max-width:980px;}
 .pop_sian_view .popup_content {padding:0 40px 40px 40px; box-sizing:border-box;}
 .pop_sian_view .popup_content h4 {margin-top:60px; font-size:24px; font-weight:bold; line-height:100%; color:#222222;}
 .pop_sian_view .popup_content h4:nth-child(1) {margin-top:40px;}
@@ -4041,6 +4045,12 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:block !important;}
 .pop_sian_view .popup_content .request_list .request_list_item .comment .box .box_item:nth-child(1) {width:20%;}
 .pop_sian_view .popup_content .request_list .request_list_item .comment .box .box_item:nth-child(2) {width:80%;}
 
+@media screen and (max-width: 1370px) {
+	body.fix_pc #wrap {min-width: 1370px; max-width: 1370px;}
+	body.fix_pc .cont_wrap {max-width:1370px; padding-left:0; padding-right:0;}
+	body.fix_pc .cont_wrap.sidebar.pc {display:block !important; padding-left:260px !important; min-width:1110px; box-sizing:border-box;}
+}
+
 @media screen and (max-width: 980px) {
 	body.fix_pc .pop_sian_view {overflow:scroll;}
 	body.fix_pc .pop_sian_view .inner {min-width:980px; overflow-x:scroll; overflow-y:scroll;}
@@ -4118,14 +4128,14 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 
 /* 마이페이지 > 배송지 정보 관리 */
 .delivery_info_wrap {}
-.delivery_info_wrap .tit_box {position:relative;}
+.delivery_info_wrap .tit_box {position:relative; min-height:50px;}
 .delivery_info_wrap .tit_box .delivery_alert {margin-top:20px; font-size:18px; font-weight:400; line-height:100%; color:#999;}
 .delivery_info_wrap .tit_box .btn {position:absolute; top:50%; right:0; min-width:165px; transform:translateY(-50%);}
 .delivery_list table thead th {padding-top:20px; padding-bottom:20px;}
 .delivery_list table tbody td {text-align:center;}
 .delivery_list table tbody td.address {line-height:140%; text-align:left; word-break:keep-all;}
-.delivery_list table tbody td.td_btns .btn_wrap {margin-top:0;}
-.delivery_list table tbody td.td_btns .btn_wrap .btn {width:calc(50% - 10px); min-width:auto; white-space:nowrap;}
+.delivery_list table tbody td.td_btns .btn_wrap {display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:center; width:100%; height:auto; margin:0; padding:0;}
+.delivery_list table tbody td.td_btns .btn_wrap .btn {flex:1 1 auto; width:auto; min-width:auto; white-space:nowrap;}
 .delivery_list table tbody td .btn:last-child {margin-left:10px;}
 .delivery_list table tbody tr:last-child td {border-bottom:1px solid #ccc;}
 
