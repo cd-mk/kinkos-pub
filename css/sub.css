@@ -513,6 +513,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .photo_list.pop.gallery li .txt_box .chk_modi_box a.ico.btn_modify::after {content:''; display:inline-block; width:20px; height:20px; margin:5px; background:url(/image/common/ico-modify.png) 50% 50% no-repeat; background-size:cover; vertical-align:middle; text-indent:-99999px;}
 .photo_list.pop.gallery li .txt_box h4 {font-weight:400; margin-top:3px;}
 
+.photo_list.design_template li .img_box {display:flex !important; flex-direction:column; align-items:center; justify-content:center;}
+.photo_list.design_template li .img_box img {object-fit: unset !important;}
+
 @media screen and (max-width:980px) {
 	.photo_list.pop.gallery li {flex:0 1 calc(50% - 8px); width:calc(50% - 8px); margin-top:15px;}
 	.photo_list.pop.gallery li:nth-child(odd) {margin-left:0; margin-right:8px;}
@@ -1436,7 +1439,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .recruit_wrap .item_box .item .bbs_list table {table-layout:fixed;}
 .recruit_wrap .item_box .item .bbs_list thead th {font-size:1em; font-weight:500; border-top:0;}
 .recruit_wrap .item_box .item .bbs_list thead th:nth-child(2) {width:520px;}
-.recruit_wrap .item_box .item .bbs_list tbody th {text-align:left;padding-left:6.34%; font-weight:500;}
+.recruit_wrap .item_box .item .bbs_list tbody th {text-align:left;padding-left:3%; font-weight:500;}
 .recruit_wrap .item_box .item .bbs_list td {height:auto; padding:28px 0 26px; font-size:1em; color:#222; text-align:left;}
 
 .recruit_wrap .item_box .item .bbs_list td:nth-child(2) {padding-left:3.92%;}
@@ -2068,7 +2071,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 
 	.service_info_wrap .dhl .bbs_list tr {padding:15px 0;}
 	.service_info_wrap .dhl .bbs_list td.subject a {padding: 0 0 10px 0;}
-	.service_info_wrap .dhl .bbs_list td.time {    padding-left: 8px;}
+	.service_info_wrap .dhl .bbs_list td.time {padding-left: 8px;}
 	.service_info_wrap .dhl .div_col2 .inner:last-child table thead {display:none;}
 	.service_info_wrap .dhl .div_col2 .inner:last-child table {border-top:0;}
 }
@@ -2086,6 +2089,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap .item_photo_list .txt p {margin-top:20px; font-size:1em; color:#777; line-height:1.5;}
 .service_info_wrap .item_photo_list .txt ul li {margin-top:10px; font-size:1em; color:#777; line-height:1.5;position: relative;padding-left:15px; word-break:keep-all;}
 .service_info_wrap .item_photo_list .txt ul li::before{content:"-";position:absolute;top:0;left:0;}
+
+.service_info_wrap .item_photo_list.corporate-solution .thumb {height:250px;}
+.service_info_wrap .item_photo_list.corporate-solution .txt {margin-top:20px;}
 
 .service_info_wrap .corporation-solution-footer {display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:30px 0 0 0; padding:0;}
 .service_info_wrap .corporation-solution-footer .corporation-solution-footer-items {flex:1 1 auto; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100%; height:auto; margin:0; padding:0;}
@@ -4505,7 +4511,7 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 #ninja-slider li.ns-show {opacity:1;}
 #ninja-slider .ns-img {background-size:contain; cursor:default; display:block;  width:100%; height:100%; background-repeat:no-repeat; background-position:center center;}
 #ninja-slider .caption { margin:auto; width:100%; font-size:18px; color:#222; box-sizing:border-box; text-align:center;margin-top: 40px;}
-.popup_wrap #ninja-slider .inner .title {text-align: left;padding:40px;}
+.popup_wrap #ninja-slider .inner .title {padding:23px 40px; text-align:left;}
 /* ---------Arrow buttons ------- */
 /* The arrow button id should be:slider id + ("-prev", "-next", and "-pause-play") */
 #ninja-slider-prev, #ninja-slider-next {position: absolute;; display:inline-block; width:auto; height:20px; line-height:20px; margin-top:10px; backface-visibility:hidden; color:#222; white-space:nowrap; -webkit-user-select:none; user-select:none; /* border-radius:2px; */ z-index:999; cursor:pointer;bottom:0;}
@@ -4644,6 +4650,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .icon_list strong {font-size:20px;line-height: 1.5;}
 .icon_list p {font-size:1em;margin-top:10px;line-height:1.4;}
 
+.icon_list.only_kinkos li div strong {display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:80px;}
+
 .signs .icon_list li {padding-bottom:0 !important;}
 
 .signs .icon_list .item1 div::before{background-image:url(/image/company/sub/ico-signs-1.png);}
@@ -4674,6 +4682,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 	.icon_list li div::before{width:60px;height:60px;background-position:50% 50%;background-size: auto 50px;}
 	.icon_list strong {font-size:16px;}
 	.icon_list p {font-size:1em;margin-top:15px;line-height:1.4;}
+
+	.icon_list.only_kinkos li div strong {height:60px;}
 
 	.signs .icon_list li {padding-bottom:30px !important;}
 	.signs .icon_list li:nth-child(1)::before {display:none !important;}
