@@ -266,18 +266,47 @@ var setInputFile = function () {
       $(this).on('change', function () {
         var filename = window.FileReader ? $(this)[0].files[0].name : $(this).val().split('/').pop().split('\\').pop();
         var dupChkFile = false;
+        var files = this.files;
+        var url = document.location.href;
 
-        if($(".js-file-name").length) {
-          $(".js-file-name").each(function () {
-            if(filename == $(this).val()) {
-              dupChkFile = true;
-              alert("같은 이름의 파일이 이미 있습니다.");
-              return false;
+        // 파일체크 (크기, 확장자)
+        if(!dupChkFile) {
+          for(var i = 0; i < files.length; i++){
+            var lang = '';
+            if(url.indexOf("enPageHTO") > 0) {
+              lang = 'eng';
             }
-          });
+            if(isNotUploadFile(files[i], lang)){
+              dupChkFile = true;
+              break;
+            }
+          }
         }
 
         if(!dupChkFile) {
+          if($(".js-file-name").length) {
+            $(".js-file-name").each(function () {
+              if(filename == $(this).val()) {
+                dupChkFile = true;
+
+                if(url.indexOf("enPageHTO") > 0) {
+                  alert("A file with the same name already exists.");
+                } else {
+                  alert("같은 이름의 파일이 이미 있습니다.");
+                }
+
+                return false;
+              }
+            });
+          }
+        }
+
+        if(dupChkFile) {
+          $(this).val('');
+          $(this).siblings('.js-file-name').val(''); //.attr('disabled', true);
+          $(this).siblings('.js-file-label').removeClass('hide');
+          $(this).siblings('.js-file-del').removeClass('on');
+        }else{
           $(this).siblings('.js-file-name').val(filename); //.attr('disabled', true);
           $(this).siblings('.js-file-label').addClass('hide');
           $(this).siblings('.js-file-del').addClass('on');
@@ -424,20 +453,22 @@ var setPopup = function () {
         var windowPopupHeight = obj.attr('data-window-height');
         var windowPopup = window.open(href, 'windowPopup', 'width=' + windowPopupWidth + ',height=' + windowPopupHeight + ',resizable=1,scrollbars=0');
       } else {
-        var popupTarget = $(this).attr('href').slice(1);
-        var popupTargetObj = $('#' + popupTarget);
+        var popupTarget = $(this).attr('href');
+        if(popupTarget.indexOf('#') == 0){
+          var popupTargetObj = $(popupTarget);
 
-        if( popupTargetObj.length ) {
-          $('body').addClass('open');
-          $("#" + popupTarget + "").addClass('active');
+          if( popupTargetObj.length ) {
+            $('body').addClass('open');
+            popupTargetObj.addClass('active');
 
-          popupSizeInit( popupTargetObj );
+            popupSizeInit( popupTargetObj );
 
-          if( !$('.dim_layer').length ) {
-            $('#content').append('<div class="dim_layer"></div>');
+            if( !$('.dim_layer').length ) {
+              $('#content').append('<div class="dim_layer"></div>');
+            }
+
+            $('.dim_layer').show();
           }
-
-          $('.dim_layer').show();
         }
       }
     });
