@@ -1980,7 +1980,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 	.service_info_wrap .visual_box > ul.col2 li {width:100%;float:none;}
 	.service_info_wrap .visual_box > ul.col2 li:nth-child(2) {margin-top:10px;}
 
-	.service_info_wrap .tit_box p br {display:none !important;}
+	.service_info_wrap .tit_box p {width:100%; word-break:keep-all;}
 	.service_info_wrap .tit_box p br.mo, .tit_box p br.mo_only {display:none !important;}
 	.service_info_wrap .tit_box p br.display {display:block !important;}
 }
@@ -2013,7 +2013,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .service_info_wrap.recommend_products .visual_box::before {background-image:url(/image/company/sub/recommended-products-main-1.png);}
 .service_info_wrap.recommend_products .btn_wrap_title {color: #03a2ea;margin-top:10px;}
 
-.service_info_wrap .dhl .visual_box::before {background-image:url(/image/company/sub/dhl-main.png);}
+.service_info_wrap .dhl .visual_box::before {background-image:url(/image/company/sub/dhl-main.jpg);}
 .service_info_wrap .dhl .visual_box_col2 {display:flex; flex-direction:row; flex-wrap:wrap; width:100%; height:auto;}
 .service_info_wrap .dhl .visual_box_col2 > li {width:calc((100% - 30px) /2);float:left;}
 .service_info_wrap .dhl .visual_box_col2 > li:nth-child(2) {margin-left:30px;}
@@ -2048,7 +2048,8 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 	.service_info_wrap .scan .accor_wrap .accor_item ul.col2 li {float:none;width:100%;}
 	.service_info_wrap .design .visual_box::before {background-image:url(/image/company/sub/design-main-mo.png);}
 
-	.service_info_wrap .dhl .visual_box::before {background-image:url(/image/company/sub/dhl-main-mo.png);}
+	.service_info_wrap .dhl .visual_box {padding-top:52vw;}
+	.service_info_wrap .dhl .visual_box::before {height:50vw; background-image:url(/image/company/sub/dhl-main-mo.jpg);}
 	.service_info_wrap .dhl .visual_box_col2 {display:block; flex-direction:initial; flex-wrap:initial; width:100%; height:auto;}
 	.service_info_wrap .dhl .visual_box_col2 > li {width:100%;float:none;}
 	.service_info_wrap .dhl .visual_box_col2 > li:nth-child(2) {margin-left:0;margin-top:30px;}
