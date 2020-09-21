@@ -809,6 +809,9 @@ html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-
   .popup_wrap .inner .item_box .opt_list.active {display:block; height:300px; opacity:1; transition:all 0.5s;}
   .popup_wrap .inner .item_box .btn_sch {display:block; width:100%; height:100%; margin:15px 0 0 0; padding:0; font-size:16px; font-weight:700; line-height:16px; color:#0079c6; cursor:pointer; text-align:center; border:0; box-sizing:border-box; background:#fff;}
   .popup_wrap.pop_pdt_option_material {height: 70%;}
+
+  .popup_wrap .pop_con.terms_wrap {padding:0 !important;}
+  .popup_wrap .pop_con.terms_wrap .item_box ul li:first-child {margin-top:0;}
 }
 
 

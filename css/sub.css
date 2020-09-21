@@ -1895,6 +1895,9 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 	.terms_wrap .item_box .terms_table td {padding:15px 0; font-size:1em; font-weight:normal; line-height:1.3; color:#777777; text-align:center; border-top:1px solid #e7e7e7;}
 	.terms_wrap .terms_select select {width: 100%;float:none;}
 	.terms_wrap .item_box ul li p strong.small em {font-style:normal; color:#03a2ea;position: absolute;top:0;left:0}
+
+	.pop_con.terms_wrap .item_box ul li p {font-size:13px; word-break:keep-all;}
+	.pop_con.terms_wrap .item_box ul li p .txt_number {top:10px !important;}
 }
 
 /* 서비스안내 */
@@ -2450,6 +2453,11 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .ease_cart .item .pdt_info_option p.add_option span.spinner:nth-child(2):before {content:""; padding-left:0; padding-right:0;}
 .ease_cart .item .pdt_info_option p.add_option span.spinner .buttons .down:before {content: "─";width: 28px;height: 28px;line-height: 27px;}
 .ease_cart .item .pdt_info_option p.add_option span.spinner .buttons .up:before {content: "+";width: 28px;height: 28px;line-height: 27px;}
+
+@media screen and (max-width:980px) {
+	.ease_cart .item .pdt_info_option p.add_option {text-align:center;}
+	.ease_cart .item .pdt_info_option p.add_option span.spinner {float: none; margin: 15px auto 0 auto;}
+}
 
 .ease_cart .item .form_group {padding:0;}
 .ease_cart .item .form_group .form_item .form_name {padding-left:0;}
@@ -3268,7 +3276,7 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_wrap.pc .shipping_info .box .box_item:nth-child(2) {margin-left:4%;}
 .cart_wrap.pc .shipping_info .box .box_item h3.title {margin-bottom:20px; font-size:24px; font-weight:bold;}
 .cart_wrap.pc .shipping_info .box .box_item .shipping_info_items {display:inline-block; width:100%; height:auto; margin:0; padding:40px 0 0 0; border-top:2px solid #000; border-bottom:1px solid #cccccc; box-sizing:border-box;}
-.cart_wrap.pc .shipping_info .box .box_item .shipping_info_item {clear:both; display:flex; flex-direction:row; align-items:flex-start; justify-content:flex-start;  width:100%; height:auto; margin:0 0 30px 0; padding:0 40px; box-sizing:border-box;}
+.cart_wrap.pc .shipping_info .box .box_item .shipping_info_item {clear:both; display:flex; flex-direction:row; align-items:center; justify-content:flex-start;  width:100%; height:auto; margin:0 0 30px 0; padding:0 40px; box-sizing:border-box;}
 .cart_wrap.pc .shipping_info .box .box_item .shipping_info_item:last-child {margin-bottom:0;}
 .cart_wrap.pc .shipping_info .box .box_item .shipping_info_items > .shipping_info_item:first-child {margin-bottom:40px;}
 .cart_wrap.pc .shipping_info .box .box_item .shipping_info_item.info {flex-direction:column;}
@@ -3609,7 +3617,10 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 .cart_wrap.mo .shipping_info .shipping_request_wrap .shipping_request_content .form_inp {width:100%;}
 .cart_wrap.mo .shipping_info .shipping_request_wrap .shipping_request_content .inp_word_count {display:block; padding-top:10px; font-size:14px; font-weight:normal; line-height:100%; color:#999999; text-align:right;}
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:980px) {
+	.cart_wrap.mo .shipping_info .shipping_info_item {align-items:center;}
+
+	.cart_wrap.mo .shipping_info .shipping_info_item .shipping_info_item_content .btn {line-height:40px;}
 }
 
 .cart_wrap.mo .order_total {margin-top:60px;}
@@ -3656,7 +3667,9 @@ body.fix_mobile .cart_wrap.mo {display:block !important;}
 .cart_wrap.mo .order_payment_terms_wrap .order_payment_terms_items .accor_item .accor_title .accor_toggle_btn .ico_accor_toggle {display:inline-block; position:relative; top:0 !important; width:10px !important; height:10px !important; margin:0; padding:3px !important; font-size:0; line-height:0; border:solid #ccc; border-width:0 1.3px 1.3px 0 !important; box-sizing:border-box; transform:rotate(45deg); -webkit-transform:rotate(45deg);}
 .cart_wrap.mo .order_payment_terms_wrap .order_payment_terms_items .accor_item.active .accor_title .accor_toggle_btn .ico_accor_toggle {top:5px !important; transform:rotate(-135deg); -webkit-transform:rotate(-135deg); border-color:#222;}
 
-
+@media screen and (max-width:980px) {
+	.cart_wrap.mo .order_payment_terms_wrap .order_payment_terms_items {padding:0 15px;}
+}
 
 
 .cart_wrap.mo .order_payment_budget_wrap {display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; width:100%;}
