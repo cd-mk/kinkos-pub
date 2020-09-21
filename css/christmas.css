@@ -16,9 +16,13 @@ button:disabled{pointer-events: none;cursor: default;}
 	color: #92AAB0;
 	text-align: center;
 	vertical-align: middle;
-	padding: 10px 0 10px 10px !important;
-	font-size:200%;
-	display: table-cell;
+	padding: 10px 10px 10px 10px !important;
+	font-size: 16px;
+	line-height: 30px !important;
+	/* 	display: table-cell; */
+}
+.fix_mobile .dragAndDropDiv {
+	line-height: 20px !important;
 }
 .progressBar {
 	position: relative;

@@ -390,7 +390,7 @@ var setChkAll = function () {
   if( $('.inp_chk_all').length ) {
     $(document).on('change', '.inp_chk_all', function () {
       var name = $(this).attr('name');
-      $("input[name=" + name + "").prop('checked', $(this).prop('checked'));
+      $("input[name=" + name + "]").prop('checked', $(this).prop('checked'));
     });
   }
 

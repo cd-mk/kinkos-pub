@@ -500,11 +500,15 @@ $(function () {
 	function mallMainBannerWrapInit() {
 		var bannerWrap = $('.banner_wrap');
 		var bannerItem = bannerWrap.find('.item');
+		var device = bannerWrap.data('device');
 
 		bannerItem.each(function() {
 			var obj = $(this);
 			var anchor = obj.find('>a');
 			var img = anchor.find('.pc');
+			if(device != 'PC'){
+				img = anchor.find('.mo');
+			}
 			var imgSrc = img.attr('src');
 
 			anchor.css({

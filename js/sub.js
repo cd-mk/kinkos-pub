@@ -139,7 +139,7 @@ var toggleV = function () {
 
 // 상품상세 리뷰
 var toggleReview = function () {
-  $(".review_item").click(function () {
+  $(document).on('click','.review_item',function () {
     $(this).toggleClass("review_view");
   });
 };
@@ -177,51 +177,75 @@ function mallSubPageTitle( title ) {
 }
 
 function callCalendar( obj ) {
-    if( obj )
-    {
-        var callback = obj.attr('data-callback');
-        var minViewMode = obj.attr('data-min-view-mode') ? obj.attr('data-min-view-mode') : 0;
-        var maxViewMode = obj.attr('data-max-view-mode') ? obj.attr('data-max-view-mode') : 0;
+  if( obj )
+  {
+    var callback = obj.attr('data-callback');
+    var minViewMode = obj.attr('data-min-view-mode') ? obj.attr('data-min-view-mode') : 0;
+    var maxViewMode = obj.attr('data-max-view-mode') ? obj.attr('data-max-view-mode') : 0;
 
-        obj.datepicker({
-          format: 'yyyy-mm-dd',
-          container: 'body',
-          orientation: 'bottom left',
-          autoclose: true,
-          toggleActive: true,
-          language: 'ko',
-          todayHighlight: true,
-          minViewMode: minViewMode,
-        }).on('show', {type: 'default'}, function(e) {
-          var data = e.data;
-          if( data )
-          {
-            if( data.type === 'default' )
-            {
-              $('body').addClass('calendarDefault');
-            }
+    obj.datepicker({
+      format: 'yyyy-mm-dd',
+      container: 'body',
+      orientation: 'bottom left',
+      autoclose: true,
+      toggleActive: true,
+      language: 'ko',
+      todayHighlight: true,
+      minViewMode: minViewMode,
+    }).on('show', {type: 'default'}, function(e) {
+      var data = e.data;
+      if( data )
+      {
+        if( data.type === 'default' )
+        {
+          $('body').addClass('calendarDefault');
+        }
+        // 개발추가
+        if($("#year").val() !== undefined && $("#year").val() !== ''){
+          if($("#year").val() != $(".datepicker-years .focused").html()){
+            $(".datepicker-years .year").each(function(){
+              if($("#year").val() == $(this).html()){
+                $(this).addClass("focused");
+              }else{
+                $(this).removeClass("focused");
+              }
+            });
           }
-        }).on('changeDate', {callback: callback}, function(e) {
-          var data = e.data;
-          if( data )
-          {
-            var getDate = new Date( e.date );
-            var selectDate = {
-              'year': parseInt( getDate.getFullYear(), 10 ),
-              'month': parseInt( getDate.getMonth(), 10 ) + 1,
-              'day': parseInt( getDate.getDate(), 10 )
-            };
-
-            var callback = data.callback;
-            var callbackTypeOf = typeof(eval(callback));
-
-            if( callbackTypeOf.toLowerCase() === 'function' )
-            {
-              eval(callback + '(' + selectDate.year + ',' + selectDate.month + ',' + selectDate.day + ')');
-            }
+        }
+        if($("#month").val() !== undefined && $("#month").val() !== ''){
+          if($("#month").val() != $(".datepicker-months .focused").html()){
+            $(".datepicker-months .month").each(function(){
+              if($("#month").val() == $(this).html()){
+                $(this).addClass("focused");
+              }else{
+                $(this).removeClass("focused");
+              }
+            });
           }
-        });
-    }
+        }
+        // //개발추가
+      }
+    }).on('changeDate', {callback: callback}, function(e) {
+      var data = e.data;
+      if( data )
+      {
+        var getDate = new Date( e.date );
+        var selectDate = {
+          'year': parseInt( getDate.getFullYear(), 10 ),
+          'month': parseInt( getDate.getMonth(), 10 ) + 1,
+          'day': parseInt( getDate.getDate(), 10 )
+        };
+
+        var callback = data.callback;
+        var callbackTypeOf = typeof(eval(callback));
+
+        if( callbackTypeOf.toLowerCase() === 'function' )
+        {
+          eval(callback + '(' + selectDate.year + ',' + selectDate.month + ',' + selectDate.day + ')');
+        }
+      }
+    });
+  }
 }
 
 $(function () {
