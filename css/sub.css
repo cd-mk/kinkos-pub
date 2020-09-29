@@ -3953,29 +3953,10 @@ body.fix_mobile .cont_wrap.mo .mpg_wrap {display:none !important;}
 .ord_detail_receipt .popup_content .btn_wrap {margin-top:40px;}
 .ord_detail_receipt .popup_content .btn_wrap .btn_pop_close_btn {margin-right:10px;}
 
-.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table {
-    width: 100%;
-    margin-top: 0;
-    border-top: 0;
-    border-collapse: separate;
-    text-align: center;
-}
-.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table tbody tr td {
-    padding: 25px 15px;
-    border: 0;
-    border-top: 1px solid #e7e7e7;
-    border-left: 1px solid #e7e7e7;
-    color: #222;
-    text-align: left;
-    vertical-align: middle;
-    font-weight: normal;
-}
-.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table tbody tr:first-child td {
-    border-top: 0;
-}
-.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table tbody tr td:first-child {
-    border-left: 0;
-}
+.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table {width:100%; margin-top:0; border-top:0; border-collapse:separate; text-align:center;}
+.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table tbody tr td {padding:25px 15px; border:0; border-top:1px solid #e7e7e7; border-left:1px solid #e7e7e7; color:#222; text-align:left; vertical-align:middle; font-weight:normal;}
+.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table tbody tr:first-child td {border-top:0;}
+.ord_detail_receipt .popup_content .ord_detail_receipt_payment_information_table tbody tr td:first-child {border-left:0;}
 
 .popup_wrap .order_cancle_wrap .form_wrap {padding-top:0; border-top:0;}
 .popup_wrap .order_cancle_wrap .form_wrap .form_group {padding:0;}
