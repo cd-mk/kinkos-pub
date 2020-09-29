@@ -389,10 +389,44 @@
 
         <h4>결제정보</h4>
         <div class="box ord_info">
+          <!-- @2020-09-28 추가 -->
+          <table class="ord_detail_receipt_payment_information_table">
+              <caption>결제정보</caption>
+              <colgroup>
+                  <col width="15%" />
+                  <col width="35%" />
+                  <col width="15%" />
+                  <col width="35%" />
+              </colgroup>
+              <tbody>
+              <tr>
+                  <td>거래일시</td>
+                  <td colspan="2">2020-09-25 15:55:45</td>
+              </tr>
+              <tr>
+                  <td>결제수단</td>
+                  <td>ARS카드결제 외환</td>
+                  <td>승인번호</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>결제번호</td>
+                  <td>371001******732</td>
+                  <td>결제금액</td>
+                  <td>10000</td>
+              </tr>
+              </tbody>
+          </table>
+          <!-- //@2020-09-28 추가 -->
+
+          <!-- @2020-09-28 식제 -->
+          <!--
           <div class="box_item">
             <span>결제금액</span>
             <span>신용카드 <strong>1,000,000</strong>원 (<strong>비씨카드 1234-1234-****-1234</strong> 일시불)</span>
           </div>
+          -->
+          <!-- //@2020-09-28 식제 -->
         </div>
 
         <h4>주문상품정보</h4>
@@ -467,6 +501,36 @@
           <p class="ord_detail_receipt_noti">- 결제 영수증은 세금계산서 등 증빙서류로 활용할 수 없습니다.</p>
         </div>
 
+        <!-- @2020-09-28 추가 -->
+        <h4>공급자 정보</h4>
+        <div class="box ord_info">
+          <table class="ord_detail_receipt_payment_information_table">
+            <caption>공급자 정보</caption>
+            <colgroup>
+              <col width="25%" />
+              <col width="25%" />
+              <col width="25%" />
+              <col width="25%" />
+            </colgroup>
+            <tbody>
+            <tr>
+              <td>사업자 등록번호</td>
+              <td colspan="3">12981-17306</td>
+            </tr>
+            <tr>
+              <td>싱호명</td>
+              <td>킨코스코리아</td>
+              <td>대표자명</td>
+              <td>박정수</td>
+            </tr>
+            <tr>
+              <td>주소</td>
+              <td colspan="3">서울시 서초구 강남대로 291 남강빌딩 8층</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //@2020-09-28 추가 -->
 
         <div class="btn_wrap center">
           <button type="button" class="btn type02 large btn_pop_close_btn"><span>닫기</span></button>
