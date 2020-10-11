@@ -809,9 +809,6 @@ html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-
   .popup_wrap .inner .item_box .opt_list.active {display:block; height:300px; opacity:1; transition:all 0.5s;}
   .popup_wrap .inner .item_box .btn_sch {display:block; width:100%; height:100%; margin:15px 0 0 0; padding:0; font-size:16px; font-weight:700; line-height:16px; color:#0079c6; cursor:pointer; text-align:center; border:0; box-sizing:border-box; background:#fff;}
   .popup_wrap.pop_pdt_option_material {height: 70%;}
-
-  .popup_wrap .pop_con.terms_wrap {padding:0 !important;}
-  .popup_wrap .pop_con.terms_wrap .item_box ul li:first-child {margin-top:0;}
 }
 
 
@@ -1167,7 +1164,7 @@ common mall
 
 .pc {display:block !important;}
 .mo {display:none !important;}
-.pc_tablet {display:block !important;}
+.pc_tablet {}
 .mo_only {display:none !important;}
 .dim {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:998;}
 .dim_layer {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9998;}
@@ -1189,7 +1186,7 @@ common mall
   .mo {display:block !important;}
   .pc{display:none !important;}
   .mo img {max-width:100%;}
-  .pc_tablet {display:block !important;}
+  .pc_tablet {}
   .mo_only {display:none !important;}
 }
 

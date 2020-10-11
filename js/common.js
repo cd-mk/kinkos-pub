@@ -137,14 +137,26 @@ var setGnb = function () {
     if( target.hasClass('js_center') ) {
       $("[data-snb=" + chkGnb + "]").hide();
       $('.center_list_wrap').stop().slideDown(400);
+
       // 개발 추가
-      var	center_latitude2 ='126.8825167';
-      var	center_longitude2 ='37.4799034';
-      var	center_operating_hour2 ='월 ~ 일 24시간';
-      var	center_service_name2 ='즉석스티커 가능센터';
-      var	center_name2 ='가산디지털단지센터';
-      initMap2(center_latitude2,center_longitude2,center_name2,center_operating_hour2,center_service_name2);
-      // //개발 추가
+//      var	center_latitude2 ='126.8825167';
+//      var	center_longitude2 ='37.4799034';
+//      var	center_operating_hour2 ='월 ~ 일 24시간';
+//      var	center_service_name2 ='즉석스티커 가능센터';
+//      var	center_name2 ='가산디지털단지센터';
+//      initMap2(center_latitude2,center_longitude2,center_name2,center_operating_hour2,center_service_name2);
+
+      // 개발 추가
+      var center = $('.locat_list > #map1');
+      var center_id = center.attr('id');
+      var center_name = center.attr('name');
+      var center_latitude = center.attr('latitude');
+      var center_longitude = center.attr('longitude');
+      var center_operating_hour = center.attr('operating_hour');
+      var center_service_name = center.attr('service_name');
+      initMap2(center_latitude, center_longitude, center_name, center_operating_hour, center_service_name);
+
+      // 개발 추가
       $('.sub_gnb_wrap').slideUp(400);
       $('.gnb_quick.mall').removeClass('active').removeClass('off');
       $('.gnb_quick.company').removeClass('off').removeClass('active');
@@ -969,7 +981,7 @@ $(function () {
   // //@2020.04.14 SCROLL TOP 추가
 
   // @2020.05.17 모바일 사업자 정보 보기 추가
-  $(window).on('load', function() {
+  $(document).ready(function() {
     if( $('.business_information_btn').length ) {
       $(document).on('click', '.business_information_btn', function(e) {
         e.preventDefault();
@@ -995,7 +1007,7 @@ $(function () {
     }
   }
 
-  $(window).on('load', function() {
+  $(document).ready(function() {
     if( $('#wrap').hasClass('mall') ) {
       snbWidthInit();
     }
