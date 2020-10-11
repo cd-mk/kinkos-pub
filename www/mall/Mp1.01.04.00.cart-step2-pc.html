@@ -368,7 +368,6 @@
             <div class="shipping_info">
               <div class="box">
                 <!-- @2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
-                <!--
                 <div class="box_item">
                   <h3 class="title">배송지 정보</h3>
 
@@ -476,7 +475,6 @@
                     </div>
                   </div>
                 </div>
-                -->
                 <!-- //@2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
 
                 <div class="box_item">
@@ -502,6 +500,228 @@
                       <span>주문자 정보로 결제관련 정보가 제공됩니다.</span>
                       <span>정확한 정보로 등록되어 있는지 확인해주세요.</span>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shipping_info">
+              <div class="box">
+                <div class="box_item jq_cl_Delivery_info" data-id-shipping-info="" style="display: none;">
+                  <h3 class="title">배송지 정보</h3>
+
+                  <div class="shipping_info_items">
+                    <div class="shipping_info_item" data-div-shipping-radio="" style="display: none;">
+                      <div class="shipping_info_item_title">배송지 선택</div>
+                      <div class="shipping_info_item_content">
+                        <div class="form_inp">
+                          <div class="form_inp_item">
+                            <input type="radio" class="shipping_address_radio" id="shipping_info_radio1" name="shipping_info_radio_dummy" value="default" data-target="shipping_address_default" checked="">
+                            <label for="shipping_info_radio1">기본배송지</label>
+                          </div>
+
+                          <div class="form_inp_item">
+                            <input type="radio" class="shipping_address_radio" id="shipping_info_radio2" name="shipping_info_radio_dummy" value="new" data-target="shipping_address_new">
+                            <label for="shipping_info_radio2">신규배송지</label>
+                          </div>
+
+                          <a href="#popup1" class="btn type03 small btn_popup" data-btn-shipping-address-list="">배송지 목록</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div data-info-not-shipping="" class="shipping_info_item info" style="">
+                      <span>직접수령은 배송지를 입력하지 않습니다.</span>
+                    </div>
+
+                    <!-- 	        od.setOd_b_name(od_b_name); -->
+                    <!-- 	        od.setOd_b_tel(od_b_tel); -->
+                    <!-- 	        od.setOd_b_hp(od_b_hp); -->
+                    <!-- 	        od.setOd_b_zip(od_b_zip); -->
+                    <!-- 	        od.setOd_b_addr1(od_b_addr1); -->
+                    <!-- 	        od.setOd_b_addr2(od_b_addr2); -->
+                    <!-- 	        od.setOd_b_addr3(od_b_addr3); -->
+                    <!-- 	        od.setOd_b_addr_jibeon(od_b_addr_jibeon); -->
+
+                    <div class="shipping_address_item shipping_address_default" style="display:none;">
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">받으시는 분<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp">
+                            <input type="text" name="od_b_name" title="받으시는 분" maxlength="20" placeholder="20자 이내로 입력해주세요." value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">휴대전화<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="od_b_hp" title="휴대폰 번호 입력" maxlength="11" placeholder="숫자만 입력" value="" data-input-type-number="" data-type-mobile-phone="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">일반전화</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="od_b_tel" title="일반전화 번호 입력" maxlength="11" placeholder="숫자만 입력" value="" data-input-type-number="" data-type-phone="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">주소<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp address">
+                            <input type="text" name="od_b_zip" title="기본 주소" placeholder="우편 번호" readonly="" value="">
+                            <a href="javascript:;" onclick="win_zip('order_form', 'od_b_zip', 'od_b_addr1', 'od_b_addr2');" class="btn type03 jq_cl_addr">주소검색</a>
+                            <input type="text" name="od_b_addr1" title="기본 주소" placeholder="기본 주소" readonly="" value="">
+                            <input type="text" name="od_b_addr2" title="상세 주소" placeholder="상세 주소" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shipping_address_item shipping_address_new hide" style="display: none;">
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">배송지명</div>
+                        <div class="shipping_info_item_content">
+                          <input type="text" name="delivery_name" title="배송지명" maxlength="20" placeholder="20자 이내로 입력해주세요.">
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">받으시는 분<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp">
+                            <input type="text" name="_od_b_name" data-copy-name="od_b_name" title="받으시는 분" maxlength="20" placeholder="20자 이내로 입력해주세요.">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">휴대전화<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="_od_b_hp" data-copy-name="od_b_hp" title="휴대폰 번호 입력" maxlength="11" placeholder="숫자만 입력" data-input-type-number="" data-type-mobile-phone="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">일반전화</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="_od_b_tel" data-copy-name="od_b_tel" title="일반전화 번호 입력" maxlength="11" placeholder="숫자만 입력" data-input-type-number="" data-type-phone="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">주소<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp address">
+                            <input type="text" name="_od_b_zip" data-copy-name="od_b_zip" title="기본 주소" placeholder="우편 번호" readonly="">
+                            <a href="javascript:;" onclick="win_zip('order_form', '_od_b_zip', '_od_b_addr1', '_od_b_addr2');" class="btn type03 jq_cl_addr">주소검색</a>
+                            <input type="text" name="_od_b_addr1" data-copy-name="od_b_addr1" title="기본 주소" placeholder="기본 주소" readonly="">
+                            <input type="text" name="_od_b_addr2" data-copy-name="od_b_addr2" title="상세 주소" placeholder="상세 주소">
+                          </div>
+                          <div class="form_inp shipping_address_select" style="display:none;">
+                            <input type="checkbox" id="shipping_address_chk_1" name="add_delivery_address" value="0">
+                            <label for="shipping_address_chk_1">배송지 목록 추가</label>
+
+                            <input type="checkbox" id="shipping_address_chk_2" name="add_default_address" value="0">
+                            <label for="shipping_address_chk_2">기본배송지로 선택</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shipping_request_wrap" style="display: none;">
+                      <div class="shipping_request_title">요청사항</div>
+                      <div class="shipping_request_content">
+                        <div class="form_inp">
+                          <input type="text" name="od_memo" title="요청사항" maxlength="100" placeholder="100자 이내로 입력해주세요.">
+                        </div>
+                        <div class="inp_word_count"><span data-length-od_memo="">0</span>/<span>100</span></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="box_item">
+                  <h3 class="title">주문자 정보</h3>
+
+                  <div class="shipping_info_items orderer">
+
+                    <div class="shipping_address_item">
+                      <!-- 비회원은 주문자정보를 입력 -->
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">이름<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp">
+                            <input type="text" name="od_name" title="이름" maxlength="20" placeholder="20자 이내로 입력해주세요." value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">이메일<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="od_email" title="이메일 주소 입력" maxlength="100" placeholder="이메일 주소 입력" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- @2020-10-11 비밀번호, 비밀번호 확인 분리 -->
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">비밀번호<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="password" name="od_pwd" title="비밀번호 입력" maxlength="20" placeholder="비밀번호 입력">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">비밀번호 확인<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="password" name="od_pwd_confirm" title="비밀번호 확인" maxlength="20" placeholder="비밀번호 확인">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //@2020-10-11 비밀번호, 비밀번호 확인 분리 -->
+
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">휴대전화<sup class="require">*</sup></div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="od_hp" title="휴대폰 번호 입력" maxlength="11" placeholder="숫자만 입력" value="" data-input-type-number="" data-type-mobile-phone="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item">
+                        <div class="shipping_info_item_title">일반전화</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp tel">
+                            <input type="text" name="od_tel" title="일반전화 번호 입력" maxlength="11" placeholder="숫자만 입력" value="" data-input-type-number="" data-type-phone="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item" style="display:none;">
+                        <div class="shipping_info_item_title">주소</div>
+                        <div class="shipping_info_item_content">
+                          <div class="form_inp address">
+                            <input type="text" name="od_zip" title="우편 번호" placeholder="우편 번호" readonly="" value="">
+                            <a href="javascript:;" onclick="win_zip('order_form', 'od_zip', 'od_addr1', 'od_addr2');" class="btn type03">주소검색</a>
+                            <input type="text" name="od_addr1" title="기본 주소" placeholder="기본 주소" readonly="" value="">
+                            <input type="text" name="od_addr2" title="상세 주소" placeholder="상세 주소" value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shipping_info_item info">
+                        <span>주문자 정보로 결제관련 정보가 제공됩니다.</span>
+                        <span>정확한 정보로 등록되어 있는지 확인하세요.</span>
+                        <span>비회원 구매 시 주문정보 확인을 위해, 이름/이메일/비밀번호를 기억하세요.</span>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>

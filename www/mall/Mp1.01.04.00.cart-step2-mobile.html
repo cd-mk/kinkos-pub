@@ -265,8 +265,6 @@
                 </div>
               </div>
 
-              <!-- @2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
-              <!--
               <div class="box_item">
                 <h3 class="title">배송지 정보</h3>
 
@@ -388,8 +386,86 @@
                   </div>
                 </div>
               </div>
-              -->
-              <!-- //@2020-05-17 직접 배송 일 경우 배송지 정보 비노출 -->
+            </div>
+          </div>
+
+          <div class="shipping_info">
+            <div class="box">
+              <div class="box_item">
+                <h3 class="title">주문자 정보</h3>
+
+                <div class="shipping_info_items orderer">
+                  <!-- 비회원은 주문자정보를 입력 -->
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">이름<sup class="require">*</sup></div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp">
+                        <input type="text" name="od_name" title="이름" maxlength="20" placeholder="20자 이내로 입력해주세요." value="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">이메일<sup class="require">*</sup></div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp tel">
+                        <input type="text" name="od_email" title="이메일 주소 입력" maxlength="100" placeholder="이메일 주소 입력" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- @2020-10-11 비밀번호, 비밀번호 확인 분리 -->
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">비밀번호</div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp tel">
+                        <input type="password" name="od_pwd" title="비밀번호 입력" maxlength="20" placeholder="비밀번호 입력">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">비밀번호<br />확인</div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp tel">
+                        <input type="password" name="od_pwd_confirm" title="비밀번호 확인" maxlength="20" placeholder="비밀번호 확인">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //@2020-10-11 비밀번호, 비밀번호 확인 분리 -->
+
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">휴대전화<sup class="require">*</sup></div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp tel">
+                        <input type="text" name="od_hp" title="휴대폰 번호 입력" maxlength="11" placeholder="숫자만 입력" value="" data-input-type-number="" data-type-mobile-phone="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipping_info_item">
+                    <div class="shipping_info_item_title">일반전화</div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp tel">
+                        <input type="text" name="od_tel" title="일반전화 번호 입력" maxlength="11" placeholder="숫자만 입력" value="" data-input-type-number="" data-type-phone="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipping_info_item" style="display:none;">
+                    <div class="shipping_info_item_title">주소</div>
+                    <div class="shipping_info_item_content">
+                      <div class="form_inp address">
+                        <input type="text" name="od_zip" title="기본 주소" placeholder="우편 번호" readonly="" value="">
+                        <a href="javascript:;" onclick="win_zip('order_form', 'od_zip', 'od_addr1', 'od_addr2');" class="btn type03">주소검색</a>
+                        <input type="text" name="od_addr1" title="기본 주소" placeholder="기본 주소" readonly="" value="">
+                        <input type="text" name="od_addr2" title="상세 주소" placeholder="상세 주소" value="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipping_info_item info">
+                    <p><span></span><span>주문자 정보로 결제관련 정보가 제공됩니다.</span></p>
+                    <p><span></span><span>정확한 정보로 등록되어 있는지 확인하세요.</span></p>
+                    <p><span></span><span>비회원 구매 시 주문정보 확인을 위해, 이름/이메일/비밀번호를 기억하세요.</span></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- //배송지 정보, 주문자 정보 -->

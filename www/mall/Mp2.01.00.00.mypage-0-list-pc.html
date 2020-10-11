@@ -493,6 +493,10 @@
                     <tr><td colspan="4" class="blank_botter_bottom"></td></tr>
                     <!-- //주문 2 -->
 
+                    <!-- @2020-10-11 주문내역 없을 경우 노출 추가 -->
+                    <tr><td colspan="4">주문내역이 없습니다.</td></tr>
+                    <!-- //@2020-10-11 주문내역 없을 경우 노출 추가 -->
+
                   </tbody>
                 </table>
 
@@ -735,12 +739,26 @@
 
               <div class="making_info_item grid_2">
                 <div class="box">
+
+                  <!-- @2020-10-11 인쇄요청일시 -> 인쇄요청시간 수정 -->
                   <div class="box_item"><strong>인쇄요청시간</strong></div>
+                  <!-- //@2020-10-11 인쇄요청일시 -> 인쇄요청시간 수정 -->
+
                   <div class="box_item">2019-09-19 10:19</div>
                 </div>
                 <div class="box">
                   <div class="box_item"><strong>최종시안 등록일</strong></div>
                   <div class="box_item">2019-09-19 10:19</div>
+                </div>
+              </div>
+              <div class="making_info_item">
+                <div class="box">
+
+                  <!-- @2020-10-11 완료예정일시 -> 완료예정시간 수정 -->
+                  <div class="box_item"><strong>완료예정시간</strong></div>
+                  <!-- //@2020-10-11 완료예정일시 -> 완료예정시간 수정 -->
+
+                  <div class="box_item" data-ct_due_date=""> </div>
                 </div>
               </div>
 
