@@ -147,6 +147,42 @@
   </div>
   <!-- //WRAP -->
 
+  <!-- @2020-10-16 기업회원 관리자연동 배너 type_2 -->
+  <div class="hd_slide_popups">
+    <div class="hd_slide_popup_wrap">
+      <div class="swiper-wrapper hd_slide_popup_items">
+
+        <!-- loop -->
+        <div class="swiper-slide hd_slide_popup_item">
+          <h2>팝업레이어 알림</h2>
+          <div id="hd_pops_front_38" class="hd_slide_popup">
+            <div class="hd_pops_con" style="height:500px; width:500px;"><img alt="" src="/image/common/popup_500_500.jpg" style="width: 500px; height: 500px;"></div>
+          </div>
+        </div>
+
+        <div class="swiper-slide hd_slide_popup_item">
+          <h2>팝업레이어 알림</h2>
+          <div id="hd_pops_front_39" class="hd_slide_popup">
+            <div class="hd_pops_con" style="height:300px; width:700px;"><img alt="" src="/image/common/popup_700_300.jpg" style="width: 700px; height: 300px;"></div>
+          </div>
+        </div>
+        <!-- //loop -->
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination">
+      </div>
+
+      <div class="hd_pops_footer">
+        <button class="hd_pops_reject" data-popup-id="hd_pops_front_38" data-pop-time="1"><strong>1</strong>시간 동안 다시 열람하지 않습니다.</button>
+        <button class="hd_pops_close hd_slide_popups_close">닫기</button>
+      </div>
+    </div>
+
+    <div class="hd_slide_popups_back"></div>
+  </div>
+  <!-- //@2020-10-16 기업회원 관리자연동 배너 type_2 -->
+
   <!-- SCRIPT -->
   <!-- global -->
   <script src="/js/jquery/jquery-1.12.4.min.js"></script>
@@ -161,17 +197,17 @@
 
   <script>
     // 퍼블리싱 코드
-    // 임시 header, footer영역 로드
-    $("#header").load("/www/common/include/common.html header", function () {
-        // header 로드 후 header 관련 function 실행
-        setGnb();
-        mobileGnb();
-    });
+    $(document).ready(function () {
+        // 임시 header, footer영역 로드
+        $("#header").load("/www/common/include/common.html header", function () {
+            // header 로드 후 header 관련 function 실행
+            setGnb();
+            mobileGnb();
+        });
 
-    $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+        $("#footer").load("/www/common/include/common.html .footer_inner", function () {
+        });
     });
-
-    $('.hd_popup_wrap').each(function() {});
     // //퍼블리싱 코드
   </script>
   <!-- //SCRIPT -->

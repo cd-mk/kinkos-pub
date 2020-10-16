@@ -1025,4 +1025,61 @@ $(function () {
     }
   });
   // //@2020-07-23 퀵메뉴 TOP 버튼 추가
+
+  // @2020-10-16 기업회원 관리자연동 배너 type_2
+  function hdSlidePopupSlide() {
+    var hdSlidePopupWrap = $('.hd_slide_popup_wrap');
+    var hdSlidePopupSlideCount = parseInt( hdSlidePopupWrap.find('.swiper-slide').length, 10 );
+    var opt = '';
+
+    if( hdSlidePopupSlideCount > 1 ) {
+      opt = {
+        slidesPerView: 1,
+        loop: true,
+        //autoplay: {
+          //delay: 3000,
+        //},
+        pagination: {
+          el: '.hd_slide_popup_wrap .swiper-pagination',
+          clickable: true,
+        }
+      };
+    } else {
+      opt = {
+        slidesPerView: 1,
+        loop: false
+      };
+    }
+
+    var hdSlidePopupSlide = new Swiper('.hd_slide_popup_wrap', opt);
+  }
+  // //@2020-10-16 기업회원 관리자연동 배너 type_2
+
+  $(document).ready(function() {
+    // @2020-10-16 기업회원 관리자연동 배너 type_1
+    if( $('.hd_popup_wrap').length ) {
+      var hdPopupIndex = 9000;
+
+      $('.hd_popup_wrap').each(function() {
+        var obj = $(this);
+
+        obj.css({
+          'z-index': hdPopupIndex
+        }).show();
+        hdPopupIndex++;
+      });
+    }
+    // //@2020-10-16 기업회원 관리자연동 배너 type_1
+
+    // @2020-10-16 기업회원 관리자연동 배너 type_2
+    if( $('.hd_slide_popups').length  ) {
+      $('.hd_slide_popups').show();
+      hdSlidePopupSlide();
+
+      $('.hd_slide_popups_close').on('click', function(e) {
+        $(this).closest('.hd_slide_popups').hide();
+      });
+    }
+    // //@2020-10-16 기업회원 관리자연동 배너 type_2
+  });
 });
