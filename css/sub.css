@@ -24,6 +24,7 @@ input[type="password"]::-ms-clear {display:none;}
     .cont_wrap.layout_full, .cont_wrap .layout_width {padding-left:0;padding-right:0;}
 }
 @media screen and (max-width:980px) {
+    .cont_wrap {width:100%; max-width:100%; box-sizing:border-box;}
     .cont_wrap.tab_area.history_wrap {overflow:hidden;}
 }
 
@@ -4435,8 +4436,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 @media screen and (max-width:980px) {
     .cart_wrap .form_wrap {padding-bottom:30px;}
     .cart_wrap .tit_box h3 {font-size:24px;}
-    .cart_wrap .btn_wrap.col2 .btn {width:calc((100% - 14px)/2);min-width:auto; display:inline-block;margin-top:0;}
-    .cart_wrap .btn_wrap.col2 .btn:last-child {margin-left:10px;}
+    .cart_wrap .btn_wrap.col2 .btn {flex:0 0 calc(50% - 5px); width:calc(50% - 5px); min-width:auto; display:inline-block; margin:0 5px 0 0 !important;}
+    .cart_wrap .btn_wrap.col2 .btn:last-child {margin-left:5px !important; margin-right: 0 !important;}
     .cart_wrap .form_item .form_name {color:#777;font-weight:400;}
 
     .cart_wrap .result {width:100%;margin:40px auto 0;padding:20px 25px 40px;}

@@ -796,7 +796,7 @@ html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-
   .popup_wrap {display:none; position:fixed; left:0; top:0; width:100%; height:100%; z-index:9999;}
   .popup_wrap .inner {position:absolute; left:0; top:0; width:100% !important;height:100% !important;transform:none !important;max-height: 100% !important;}
   .popup_wrap.sch .inner {padding:0 15px; background:#03a2ea;}
-  .popup_wrap .pop_con {overflow-y:auto;height:calc(100% - 91px);margin:15px 15px;min-height: 400px;}
+  .popup_wrap .pop_con {overflow-y:auto;height:calc(100% - 91px);margin:15px 15px;padding:0;min-height: 400px;}
   .popup_wrap .inner .title {font-size:20px; padding:20px 25px;text-align:left;height: 61px;}
   .popup_wrap.sch .inner .title {padding:80px 0 45px 0; font-size:28px; font-weight:400; line-height:28px; text-align:center;}
   .popup_wrap .inner .btn_pop_close {position:absolute; top:9px; right:3px;}
