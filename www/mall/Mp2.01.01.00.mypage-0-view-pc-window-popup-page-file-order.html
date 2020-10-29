@@ -12,19 +12,61 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="킨코스코리아">
   <meta property="og:url" content="http://www.kinkos.co.kr/">
-  <link rel="icon" type="image/x-icon" href="../image/common/favicon.ico">
-  <meta property="og:image" content="../image/common/logo.png">
+  <link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+  <meta property="og:image" content="/image/common/logo.png">
   <meta property="og:description" content="킨코스 코리아는 On Demand Solution 서비스를 제공하고 있습니다.">
   <!-- //기본 셋팅시 모바일 메신저로 넘기기 위한 셋팅 -->
   <title>시안보기 | 마이페이지 | 킨코스코리아</title>
   <!-- CSS FILE LOAD -->
-  <link rel="stylesheet" href="../css/lib/animate.css">
-  <link rel="stylesheet" href="../js/jquery/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="../css/lib/swiper.min.css">
+  <link rel="stylesheet" href="/css/lib/animate.css">
+  <link rel="stylesheet" href="/js/jquery/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/css/lib/swiper.min.css">
 
-  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="/css/common.css">
   <!-- only sub -->
-  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="/css/sub.css">
+
+  <!-- @2020.04.01 추가 -->
+  <style>
+      @media print {
+          @page {size:21.0cm 29.7cm; margin:0.5cm 0.5cm;}
+
+          .popup_receipt_view.has_window_popup .inner .title {font-size:16px;padding:20px 30px;}
+
+          .ord_detail_receipt .popup_content .box.ord_info .box_item {padding:10px 20px;}
+          .ord_detail_receipt .popup_content .box.ord_info .box_item span {font-size:14px;}
+
+          .ord_detail_receipt .popup_content h4 {margin-top:20px;font-size: 16px;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr {display:flex;flex-direction:row;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;width:100%;height:auto;}
+
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th {font-size:14px; padding:10px 10px; white-space:nowrap;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(1) {flex:1 1 auto;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(2) {flex:0 0 15%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(3) {flex:0 0 12%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(4) {flex:0 0 12%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(5) {flex:0 0 12%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr th:nth-child(6) {flex:0 0 10%;}
+
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(1) {flex:1 1 auto;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(2) {flex:0 0 15%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(3) {flex:0 0 12%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(4) {flex:0 0 12%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(5) {flex:0 0 12%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td:nth-child(6) {flex:0 0 10%;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td {font-size:12px;padding:15px 10px;}
+          .ord_detail_receipt .popup_content .order_list_pc table tbody tr td.td_prd_info {font-size: 10px;}
+          .ord_detail_receipt .popup_content .pdt_info .pdt_info_title .pdt_info_title_name {font-size: 12px;}
+          .ord_detail_receipt .popup_content .pdt_info .pdt_info_option {font-size: 10px;}
+
+          .ord_detail_receipt .popup_content .order_list_pc .ord_detail_receipt_noti {font-size:12px;}
+
+          .ord_detail_receipt .popup_content .btn_wrap {display:none;}
+      }
+
+      .ord_detail_receipt .popup_content .order_list_pc table {border-top:0;}
+      .ord_detail_receipt .popup_content .order_list_pc table tbody tr th {border-top:2px solid #222222;}
+  </style>
+  <!-- //@2020.04.01 추가 -->
 </head>
 
 <!--
@@ -51,33 +93,53 @@
       <h3 class="title">결제 영수증</h3>
       <!-- popup content -->
       <div class="popup_content">
-        <h4>주문정보</h4>
-        <div class="box ord_info">
-          <div class="box_item">
+
+        <!-- @2020-10-29 수정 -->
+        <h4 class="first-title">주문정보</h4>
+        <div class="box ord_info grid_2">
+          <div class="box_item grid_1">
             <span>주문일</span>
             <span><strong>2020-04-01 13:12:11</strong></span>
           </div>
-          <div class="box_item">
+          <div class="box_item grid_1">
             <span>주문번호</span>
             <span><strong>2020040113121187</strong></span>
           </div>
-          <div class="box_item">
+          <div class="box_item grid_1">
             <span>주문자</span>
             <span><strong>고우일</strong></span>
           </div>
         </div>
+        <!-- //@2020-10-29 수정 -->
 
         <h4>결제정보</h4>
-        <div class="box ord_info">
+        <!-- @2020-10-29 수정 -->
+        <div class="box ord_info grid_2">
+          <div class="box_item grid_1">
+            <span>거래일시</span>
+            <span>2020-10-19 18:31:08.0</span>
+          </div>
+          <div class="box_item">
+            <span>결제수단</span>
+            <span>신용카드</span>
+          </div>
+          <div class="box_item">
+            <span>승인번호</span>
+            <span></span>
+          </div>
+          <div class="box_item">
+            <span>결제번호</span>
+            <span></span>
+          </div>
           <div class="box_item">
             <span>결제금액</span>
-            <span>신용카드 <strong>1,000,000</strong>원 (<strong>비씨카드 1234-1234-****-1234</strong> 일시불)</span>
+            <span>10,000</span>
           </div>
         </div>
+        <!-- //@2020-10-29 수정 -->
 
         <h4>구매상품</h4>
-        <!-- @2020.03.26 수정 -->
-        <div class="order_list_pc file_order">
+        <div class="order_list_pc">
           <table>
             <caption>주문상품정보</caption>
             <colgroup>
@@ -88,99 +150,108 @@
               <col width="15%" />
               <col width="10%" />
             </colgroup>
-            <thead>
+            <tbody>
             <tr>
-              <th scope="col">상품/옵션정보</th>
+
+              <!-- @2020-10-29 수정 -->
+              <th scope="col" class="text-left">상품/옵션정보</th>
+              <!-- //@2020-10-29 수정 -->
+
               <th scope="col">정상가</th>
               <th scope="col">수량</th>
               <th scope="col">금액</th>
               <th scope="col">할인액</th>
               <th scope="col">할인%</th>
             </tr>
-            </thead>
-            <tbody>
+
             <!-- loop -->
+            <!-- @2020-10-29 수정 -->
             <tr>
-              <td>
-                <p><strong>영수증명</strong></p>
+              <td class="td_prd_info">
+                <p><strong>A4 흑백 양면</strong></p>
               </td>
               <td class="td_prd_price">
-                <p><strong>50,000원</strong></p>
+                <p><strong>3,600</strong>원</p>
               </td>
               <td class="td_prd_amount">
-                <p><strong>1</strong></p>
+                <p><strong>20</strong></p>
               </td>
               <td class="td_prd_price">
-                <p><strong>45,000원</strong></p>
+                <p><strong>3,600</strong>원</p>
               </td>
               <td class="td_prd_price">
-                <p><strong>5,000원</strong></p>
+                <p><strong>0</strong>개</p>
               </td>
               <td class="td_prd_amount">
-                <p><strong>10%</strong></p>
+                <p><strong>0%</strong></p>
               </td>
             </tr>
-            <!-- loop -->
+            <!-- //@2020-10-29 수정 -->
+            <!-- //loop -->
 
             <tr>
-              <td>
-                <p><strong>영수증명</strong></p>
+              <td class="td_prd_info">
+                <p><strong>와이어8-14.3mm</strong></p>
               </td>
               <td class="td_prd_price">
-                <p><strong>50,000원</strong></p>
+                <p><strong>7,000</strong>원</p>
               </td>
               <td class="td_prd_amount">
-                <p><strong>1</strong></p>
+                <p><strong>20</strong></p>
               </td>
               <td class="td_prd_price">
-                <p><strong>45,000원</strong></p>
+                <p><strong>7,000</strong>원</p>
               </td>
               <td class="td_prd_price">
-                <p><strong>5,000원</strong></p>
+                <p><strong>0</strong>원</p>
               </td>
               <td class="td_prd_amount">
-                <p><strong>10%</strong></p>
+                <p><strong>0%</strong></p>
               </td>
             </tr>
 
             <!-- total -->
-            <tr>
-              <td>
-                <p><strong>Total</strong></p>
-              </td>
+            <!-- @2020-10-29 수정 -->
+            <tr class="order_list_pc_tr_total">
+              <td><strong>Total</strong></td>
               <td class="td_prd_price">
-                <p><strong>100,000원</strong></p>
+                <p><strong>10,600</strong>원</p>
               </td>
               <td></td>
               <td class="td_prd_price total">
-                <p><strong>90,000원</strong></p>
+                <p><strong>10,600</strong>원</p>
               </td>
               <td class="td_prd_price">
-                <p><strong>10,000원</strong></p>
+                <p><strong>-0</strong>원</p>
               </td>
               <td></td>
             </tr>
+            <!-- //@2020-10-29 수정 -->
             <!-- //total -->
-
             </tbody>
           </table>
 
-          <p class="ord_detail_receipt_noti">- 결제영수증은 소득공제용 영수증 및 매입 세금계산서로 활용할 수 없으며, 결제가 완료되었음을 증명하는 용도로만 활용가능합니다. 결제영수증은 세무상의 지출증빙 효력이 없습니다.</p>
+          <!-- @2020-10-29 수정 -->
+          <p class="ord_detail_receipt_noti">
+            <strong>안내사항</strong>
+            <span>
+              결제영수증은 소득공제용 영수증 및 매입 세금계산서로 활용할 수 없으며, 결제가 완료되었음을 증명하는 용도로만 활용가능합니다.<br />
+              결제영수증은 세무상의 지출증빙 효력이 없습니다.
+            </span>
+          </p>
+          <!-- //@2020-10-29 수정 -->
         </div>
-        <!-- //@2020.03.26 수정 -->
 
-        <!-- @2020.03.26 추가 -->
+        <!-- @2020-10-29 수정 -->
         <div class="order_list_pc_footer">
-          <div class="order_list_pc_footer_item"><img src="../image/common/img-logo.png" alt="kinko's On Demand Solutions, KONICA MINOLIA"></div>
+          <div class="order_list_pc_footer_item"><img src="/image/common/img-logo.png" alt="kinko's On Demand Solutions, KONICA MINOLIA"></div>
           <div class="order_list_pc_footer_item">
-            <p>상호명 : 킨코스코리아㈜</p>
-            <p>주소 : 서울 서초구 강남대로 291 남강빌딩 8층</p>
-            <p>사업자등록번호 : 129-81-17306</p>
-            <p>통신판매업신고번호 : 2019-서울서초-1279</p>
-            <p>대표자 : 박정수</p>
+            <p>킨코스코리아㈜</p>
+            <p>대표이사 : 박정수 / 사업자등록번호 : 129-81-17306</p>
+            <p>주소 : 서울 서초구 강남대로 291 남강빌딩 8층 / 대표전화 : 1600-3696</p>
           </div>
         </div>
-        <!-- @2020.03.26 추가 -->
+        <!-- //@2020-10-29 수정 -->
 
         <div class="btn_wrap center">
           <button type="button" class="btn type02 large window_pop_close_btn"><span>닫기</span></button>
@@ -196,15 +267,15 @@
 
 <!-- SCRIPT -->
 <!-- global -->
-<script src="../js/jquery/jquery-1.12.4.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
-<script src="../js/wow.min.js"></script>
-<script src="../js/swiper/swiper.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="/js/jquery/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="/js/jquery/jquery.placeholder.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/common.js"></script>
 <!-- //global -->
 
-<script src="../js/sub.js"></script>
+<script src="/js/sub.js"></script>
 <!-- //SCRIPT -->
 
 </body>
