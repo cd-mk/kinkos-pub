@@ -911,8 +911,8 @@ html[data-window-popup="Y"], html[data-window-popup="Y"] body, html[data-window-
   .mall .visual_wrap .bg {height:100%;}
   .mall .visual_wrap .txt {width:100%;}
   .mall .visual_wrap .txt_inner {position:static; text-align:center;}
-  .mall .visual_wrap .txt_inner em {margin-top:30px; font-style:normal; font-size:16px; text-align:center;}
-  .mall .visual_wrap .txt .title {margin-top:20px; font-size:28px; letter-spacing:-0.4px; line-height:33px;}
+  .mall .visual_wrap .txt_inner em {display:block; font-style:normal; font-size:20px; font-weight:300; line-height:0.9; text-align:center;}
+  .mall .visual_wrap .txt .title {font-size:28px; letter-spacing:-0.4px; line-height:33px;}
   .mall .visual_wrap .txt p {margin-top:20px; margin-bottom:30px; font-size:14px; line-height:20px; letter-spacing:-0.26px;}
   .mall .visual_wrap .txt_inner .btn_txt.more {display:inline-block; width:auto;margin:0 auto; padding:11px 25px; font-size:14px; line-height:18px;}
   .mall .visual_wrap .swiper-pagination {bottom:50px;}
