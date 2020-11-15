@@ -3235,6 +3235,8 @@ body.fix_mobile .cart_wrap.pc {display:none !important;}
 .cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap .coupon_items .coupon_use_desc {margin-top:10px; margin-left:0; padding-top:0; padding-bottom:15px; font-size:14px; color:#999; line-height:1.1;}
 
 @media screen and (max-width:980px) {
+    .cart_pdt_change .popup_content .pdt_info .pdt_info_title .pdt_info_option p {display:flex; flex-direction:row; flex-wrap:wrap; align-content:flex-start; justify-content:flex-start;}
+
     .cart_pdt_change .popup_content .pdt_coupon {margin-top:30px; padding-bottom:30px;}
     .cart_pdt_change .popup_content .pdt_coupon .coupon_use_title {width:100%; padding:0 0 20px 0;}
     .cart_pdt_change .popup_content .pdt_coupon .coupon_use_wrap {width:100%;}
