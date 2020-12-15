@@ -370,8 +370,8 @@ var setDatePicker = function () {
   if( $('.inp_date').length ) {
     $.datepicker.setDefaults({
       dateFormat: 'yy-mm-dd',
-      dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
-      dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+      dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
       monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
       monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
     });
@@ -381,21 +381,38 @@ var setDatePicker = function () {
 };
 
 // accordian 변경 예정
-var setAccordian = function () {
-  var toggleContent = function() {
-    $(this).closest('.accor_item').toggleClass('active');
-  };
+//var setAccordian = function () {
+//  var toggleContent = function() {
+//    $(this).closest('.accor_item').toggleClass('active');
+//  };
+//
+//  if( $('.accor_title').length ) {
+////    $(document).on('click', '.accor_title label', toggleContent);
+//    $(document).on('click', '.accor_title .txt_title', toggleContent);
+//    $(document).on('click', '.accor_title .accor_toggle_btn', function(e) {
+//      e.preventDefault();
+//
+//      $(this).closest('.accor_item').toggleClass('active');
+//    });
+//  }
+//};
 
-  if( $('.accor_title').length ) {
-    //$(document).on('click', '.accor_title label', toggleContent);
-    $(document).on('click', '.accor_title .txt_title', toggleContent);
-    $(document).on('click', '.accor_title .accor_toggle_btn', function(e) {
-      e.preventDefault();
-
-      $(this).closest('.accor_item').toggleClass('active');
-    });
-  }
-};
+// accordian
+//$(document).on('click', '.accor_title label', function(e){
+//	e.preventDefault();
+//	console.log('label');
+//	$(this).closest('.accor_item').toggleClass('active');
+//});
+$(document).on('click', '.accor_title .txt_title', function(e){
+//	e.preventDefault();
+  console.log('txt_title');
+  $(this).closest('.accor_item').toggleClass('active');
+});
+$(document).on('click', '.accor_title .accor_toggle_btn', function(e) {
+  e.preventDefault();
+  console.log('accor_toggle_btn');
+  $(this).closest('.accor_item').toggleClass('active');
+});
 
 // name으로 그룹핑된 체크박스 전체 체크 기능
 var setChkAll = function () {
@@ -463,7 +480,7 @@ var setPopup = function () {
         var href = obj.attr('href');
         var windowPopupWidth = obj.attr('data-window-width');
         var windowPopupHeight = obj.attr('data-window-height');
-        var windowPopup = window.open(href, 'windowPopup', 'width=' + windowPopupWidth + ',height=' + windowPopupHeight + ',resizable=1,scrollbars=0');
+        var windowPopup = window.open(href, 'windowPopup', 'width=' + windowPopupWidth + ',height=' + windowPopupHeight + ',resizable=1,scrollbars=1');
       } else {
         var popupTarget = $(this).attr('href');
         if(popupTarget.indexOf('#') == 0){
@@ -584,9 +601,9 @@ $(function () {
       setChkAll();
     }
 
-    if( $('.accor_wrap').length ) {
-      setAccordian();
-    }
+//    if( $('.accor_wrap').length ) {
+//      setAccordian();
+//    }
 
     if( $('.file_inp').length ) {
       setInputFile();
@@ -1025,61 +1042,4 @@ $(function () {
     }
   });
   // //@2020-07-23 퀵메뉴 TOP 버튼 추가
-
-  // @2020-10-16 기업회원 관리자연동 배너 type_2
-  function hdSlidePopupSlide() {
-    var hdSlidePopupWrap = $('.hd_slide_popup_wrap');
-    var hdSlidePopupSlideCount = parseInt( hdSlidePopupWrap.find('.swiper-slide').length, 10 );
-    var opt = '';
-
-    if( hdSlidePopupSlideCount > 1 ) {
-      opt = {
-        slidesPerView: 1,
-        loop: true,
-        //autoplay: {
-          //delay: 3000,
-        //},
-        pagination: {
-          el: '.hd_slide_popup_wrap .swiper-pagination',
-          clickable: true,
-        }
-      };
-    } else {
-      opt = {
-        slidesPerView: 1,
-        loop: false
-      };
-    }
-
-    var hdSlidePopupSlide = new Swiper('.hd_slide_popup_wrap', opt);
-  }
-  // //@2020-10-16 기업회원 관리자연동 배너 type_2
-
-  $(document).ready(function() {
-    // @2020-10-16 기업회원 관리자연동 배너 type_1
-    if( $('.hd_popup_wrap').length ) {
-      var hdPopupIndex = 9000;
-
-      $('.hd_popup_wrap').each(function() {
-        var obj = $(this);
-
-        obj.css({
-          'z-index': hdPopupIndex
-        }).show();
-        hdPopupIndex++;
-      });
-    }
-    // //@2020-10-16 기업회원 관리자연동 배너 type_1
-
-    // @2020-10-16 기업회원 관리자연동 배너 type_2
-    if( $('.hd_slide_popups').length  ) {
-      $('.hd_slide_popups').show();
-      hdSlidePopupSlide();
-
-      $('.hd_slide_popups_close').on('click', function(e) {
-        $(this).closest('.hd_slide_popups').hide();
-      });
-    }
-    // //@2020-10-16 기업회원 관리자연동 배너 type_2
-  });
 });

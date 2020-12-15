@@ -1848,7 +1848,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
     .ceo_wrap .ceo_sign p img {width:104px;}
 }
 /* 이용약관 */
-.terms_wrap {margin-bottom:140px;}
+.terms_wrap {/*margin-bottom:140px;*/}
 .terms_wrap .item_box {list-style: decimal; width:100%; height:auto;padding:0;}
 .terms_wrap .item_box ul {clear:both; width:100%; height:auto;}
 .terms_wrap .item_box ul.grid_8 {width:66.6666%; margin:0 auto;}
@@ -1880,7 +1880,7 @@ input[type="radio"]:checked:disabled + label::before {background-position:-20px 
 .terms_wrap .terms_select select {width: 340px;float:right;}
 
 @media screen and (max-width:980px) {
-    .terms_wrap {margin-bottom:140px;}
+    .terms_wrap {/*margin-bottom:140px;*/}
     .terms_wrap .item_box {}
     .terms_wrap .item_box ul li {margin-top:25px;}
     .terms_wrap .item_box ul li p {position:relative; margin:0; padding:10px 0 0 0; font-size:1em; line-height:1.3;}
@@ -4354,8 +4354,8 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 .mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item {display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; width:100%; height:100px; margin:0; padding:0;}
 .mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item.discount_amount {background:#ff0000;}
 .mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item.discount_amount p {color:#fff;}
-.mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item .coupon_type_title {display:block; width:100%; height:auto; margin:0; padding:0; font-size:14px; font-family:'Noto Sans KR'; font-weight:400; box-sizing:border-box;}
-.mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item .coupon_type_price {display:block; width:100%; height:auto; margin:0; padding:20px 0 0 0; font-size:40px; font-family:'Noto Sans KR'; font-weight:800; box-sizing:border-box;}
+.mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item .coupon_type_title {display:block; width:100%; height:auto; margin:0; padding:0; font-size:14px; font-family:'Noto Sans Regular'; color: #fff; font-weight:400; box-sizing:border-box;}
+.mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item .coupon_type_price {display:block; width:100%; height:auto; margin:0; padding:20px 0 0 0; font-size:40px; font-family:'Noto Sans Black'; color: #fff; font-weight:800; box-sizing:border-box;}
 
 .mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item.discount_percent {background:#008000;}
 .mpg_bbs.coupon_list .bbs_list table tbody td.coupon_type .coupon_type_item.discount_percent p {color:#fff;}
@@ -4696,14 +4696,14 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 #ninja-slider.fullscreen .fs-icon {opacity:1;}
 #ninja-slider .fs-icon::before {content:"EXPAND"; display:block;}
 #ninja-slider.fullscreen .fs-icon::before {content:"+"; display:block; font-weight:bold; font-size:3em; transform:rotate(-45deg);}
-#ninja-slider .slider-inner {margin:0 auto;font-size:0px; box-sizing:border-box; padding-bottom:100px!important;}
-#ninja-slider.fullscreen .slider-inner {width:100%; max-width:730px;height:715px !important;}
-#ninja-slider .pop_con {height: 530px !important;margin:40px !important;position: relative;    overflow-y: unset;}
-#ninja-slider ul {position:relative; list-style:none; padding:0; box-sizing:border-box; overflow:visible!important;height:468px !important;}
+#ninja-slider .slider-inner {margin:0 auto;font-size:0px; box-sizing:border-box;}
+#ninja-slider.fullscreen .slider-inner {width:100%; max-width:730px;height:630px !important;}
+#ninja-slider .pop_con {height: 480px !important;margin:40px !important;position: relative; overflow-y: unset; padding: 0px;}
+#ninja-slider ul {position:relative; list-style:none; padding:0; box-sizing:border-box; overflow:visible!important;height:438px !important;}
 #ninja-slider li {width:100%; height:100%; top:0; left:0; position:absolute; list-style:none; margin:0; padding:0; opacity:0; box-sizing:border-box;}
 #ninja-slider li.ns-show {opacity:1;}
 #ninja-slider .ns-img {background-size:contain; cursor:default; display:block;  width:100%; height:100%; background-repeat:no-repeat; background-position:center center;}
-#ninja-slider .caption { margin:auto; width:100%; font-size:18px; color:#222; box-sizing:border-box; text-align:center;margin-top: 40px;}
+#ninja-slider .caption { margin:auto; width:100%; font-size:18px; color:#222; box-sizing:border-box; text-align:center;margin-top: 20px;}
 .popup_wrap #ninja-slider .inner .title {padding:23px 40px; text-align:left;}
 /* ---------Arrow buttons ------- */
 /* The arrow button id should be:slider id + ("-prev", "-next", and "-pause-play") */
@@ -4719,11 +4719,11 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 
 @media screen and (max-width:980px) {
     #ninja-slider.fullscreen .fs-icon {top:7px !important; right:0 !important; width:44px; height:44px; background:url(/image/common/mo_menu_close.svg) no-repeat 50% / 24px; padding:10px;}
-    #ninja-slider.fullscreen .slider-inner {top:50%; width: calc(100% - 30px) !important; max-width:100%; height:auto !important; min-height:360px; margin:0 15px; padding:0 0 50px 0 !important; transform:translateY(-50%) !important;}
+    #ninja-slider.fullscreen .slider-inner {top:50%; width: calc(100% - 30px) !important; max-width:100%; height:auto !important; min-height:360px; margin:0 15px; padding:0 0 0 0 !important; transform:translateY(-50%) !important;}
     #ninja-slider .pop_con {height: 260px !important;margin:20px !important;}
     #ninja-slider ul {height:100% !important;}
     #ninja-slider li {height:90%; margin-bottom:55px !important;}
-    #ninja-slider .caption {font-size:14px; margin-top:28px; font-weight:400;}
+    #ninja-slider .caption {font-size:14px; margin-top:22px; font-weight:400;}
     .popup_wrap #ninja-slider .inner .title {padding:20px;}
 }
 .pop_sian {padding:0;}
@@ -5187,7 +5187,7 @@ body.calendarDefault .dropdown-menu {transform:translateY(10px);}
 .file_box .statusbar .filename {flex:1 1 auto; font-size:18px; line-height:44px; word-break:break-all; -ms-word-break:break-all;}
 .file_box .statusbar .filesize {flex:0 0 auto;}
 .file_box .statusbar .progressBar {flex:0 0 auto;}
-.file_box .statusbar .progressBar > div {width:100% !important; text-align:center;}
+.file_box .statusbar .progressBar > div {/*width:100% !important;*/ text-align:center;}
 .file_box .statusbar .abort {flex:0 0 auto;}
 .file_box .statusbar .abort_delete {flex:0 0 auto;}
 
@@ -5196,7 +5196,7 @@ body.calendarDefault .dropdown-menu {transform:translateY(10px);}
     .file_box .statusbar .filename {flex:0 0 calc(100% - 50px); width:calc(100% - 50px) !important; line-height:140%;}
     .file_box .statusbar .filesize {flex:0 0 auto; width:auto; margin-right:0; padding-right:50px; box-sizing:border-box;}
     .file_box .statusbar .progressBar {flex:1 1 auto; width:100% !important; margin:10px 0;}
-    .file_box .statusbar .progressBar > div {width:100% !important; text-align:center;}
+    .file_box .statusbar .progressBar > div {/*width:100% !important;*/ text-align:center;}
     .file_box .statusbar .abort {position:absolute; top:7px; right:5px; width:auto; margin:0; padding:4px 8px;}
     .file_box .statusbar .abort_delete {position:absolute; top:7px; right:5px; width:auto; margin:0; padding:4px 8px;}
 }
