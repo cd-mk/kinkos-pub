@@ -119,6 +119,12 @@ h3+.form_alert {/* float:right; */ position:absolute; top:0; right:0;}
 .type_select .form_group .form_item {float:left; }
 .type_select .form_group .form_inp {float:left; margin-left:10px; width:calc(100% - 390px);}
 .type_select .form_group .btn_wrap {float:left; margin:0 0 0 10px;}
+.type_select .form_group .form_inp_item {margin-left:10px; display:inline-block; position:relative;}
+.type_select .form_group .form_inp_item .input-group {display:inline-block !important;position:relative;flex-wrap:unset;-ms-flex-align:unset;align-items:unset;}
+.type_select .form_group .form_inp_item .input-group input[type="text"] {top:unset; left:unset; width:250px; margin:0 !important; padding:0 15px !important; color:#222; border-radius:0 !important; -moz-border-radius:0 !important; -webkit-border-radius:0 !important;}
+.type_select .form_group .form_inp_item .calendar_btn {display:inline-block; position:absolute; top:50%; right:16px; width:20px; height:22px; margin:0; padding:0; cursor:pointer; transform:translateY(-50%); z-index:99;}
+.type_select .form_group .form_inp_item .calendar_btn .ico_calendar {display:block; width:100%; height:100%; margin:0; padding:0; background:url(/image/mall/common/ico-calendar.png) top center no-repeat;}
+.type_select .form_group .form_inp_duration_division {padding:0 5px; box-sizing:border-box;}
 
 .form_alert+.form_wrap {margin-top:18px;}
 .noti+.type_select {margin-top:18px;}
@@ -4699,19 +4705,19 @@ body.fix_mobile .pop_sian_view .popup_content .request_list .request_list_item .
 #ninja-slider .fs-icon::before {content:"EXPAND"; display:block;}
 #ninja-slider.fullscreen .fs-icon::before {content:"+"; display:block; font-weight:bold; font-size:3em; transform:rotate(-45deg);}
 #ninja-slider .slider-inner {margin:0 auto;font-size:0px; box-sizing:border-box;}
-#ninja-slider.fullscreen .slider-inner {width:100%; max-width:730px;height:630px !important;}
-#ninja-slider .pop_con {height: 480px !important;margin:40px !important;position: relative; overflow-y: unset; padding: 0px;}
-#ninja-slider ul {position:relative; list-style:none; padding:0; box-sizing:border-box; overflow:visible!important;height:438px !important;}
-#ninja-slider li {width:100%; height:100%; top:0; left:0; position:absolute; list-style:none; margin:0; padding:0; opacity:0; box-sizing:border-box;}
+#ninja-slider.fullscreen .slider-inner {width:100%; max-width:730px; height:90% !important; max-height:630px;}
+#ninja-slider .pop_con {position:relative; height:calc(100% - 70px) !important; min-height:auto; margin:0 !important; overflow-y:unset; padding:30px 40px; box-sizing:border-box;}
+#ninja-slider ul {position:relative; list-style:none; padding:0; box-sizing:border-box; overflow:visible !important;height:100% !important;}
+#ninja-slider li {position:absolute; top:0; left:0; width:100%; height:100%; list-style:none; margin:0; padding:0; opacity:0; box-sizing:border-box;}
 #ninja-slider li.ns-show {opacity:1;}
-#ninja-slider .ns-img {background-size:contain; cursor:default; display:block;  width:100%; height:100%; background-repeat:no-repeat; background-position:center center;}
-#ninja-slider .caption { margin:auto; width:100%; font-size:18px; color:#222; box-sizing:border-box; text-align:center;margin-top: 20px;}
+#ninja-slider .ns-img {cursor:default; display:block;  width:100%; height:calc(100% - 40px); background-size:contain; background-repeat:no-repeat; background-position:center center;}
+#ninja-slider .caption { margin:auto; width:100%; height:20px; font-size:18px; line-height:20px; color:#222; box-sizing:border-box; text-align:center;margin-top: 20px;}
 .popup_wrap #ninja-slider .inner .title {padding:23px 40px; text-align:left;}
 /* ---------Arrow buttons ------- */
 /* The arrow button id should be:slider id + ("-prev", "-next", and "-pause-play") */
-#ninja-slider-prev, #ninja-slider-next {position: absolute;; display:inline-block; width:auto; height:20px; line-height:20px; margin-top:10px; backface-visibility:hidden; color:#222; white-space:nowrap; -webkit-user-select:none; user-select:none; /* border-radius:2px; */ z-index:999; cursor:pointer;bottom:0;}
-#ninja-slider-prev {left:0;}
-#ninja-slider-next {right:0;}
+#ninja-slider-prev, #ninja-slider-next {position:absolute; bottom:30px; display:inline-block; width:auto; height:20px; margin:0; padding:0; line-height:20px; color:#222; white-space:nowrap; backface-visibility:hidden; -webkit-user-select:none; user-select:none; /* border-radius:2px; */ cursor:pointer; box-sizing:border-box; z-index:999;}
+#ninja-slider-prev {left:20px;}
+#ninja-slider-next {right:20px;}
 #ninja-slider-prev div {display:none;}
 #ninja-slider-next div {display:none;}
 /* arrows */
