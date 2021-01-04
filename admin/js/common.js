@@ -376,7 +376,7 @@ var win_homepage = function(href) {
 /**
  * 우편번호 창
  **/
-var win_zip = function(frm_name, frm_zip1, frm_zip2, frm_addr1, frm_addr2, frm_addr3, frm_jibeon) {
+var win_zip = function(frm_name, frm_zip, frm_addr1, frm_addr2, frm_addr3, frm_jibeon) {
     if(typeof daum === 'undefined'){
         alert("다음 juso.js 파일이 로드되지 않았습니다.");
         return false;
@@ -386,15 +386,18 @@ var win_zip = function(frm_name, frm_zip1, frm_zip2, frm_addr1, frm_addr2, frm_a
         oncomplete: function(data) {
             // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
             // 우편번호와 주소 정보를 해당 필드에 넣고, 커서를 상세주소 필드로 이동한다.
+            // 선택에 따라 지번 입력도 지원할 경우
+            // userSelectedType : 'R'(도로명), 'J'(지번)
+            // jibunAddress : 지번주소
+
             var of = document[frm_name];
-            of[frm_zip1].value = data.postcode1;
-            of[frm_zip2].value = data.postcode2;
-            of[frm_addr1].value = data.address1;
+            of[frm_zip].value = data.zonecode;
+            of[frm_addr1].value = data.address + " ("+data.buildingName+")";
             of[frm_addr2].value = "";
             of[frm_addr3].value = "";
 
             if( data.addressType == "R" ){  //도로명이면
-                of[frm_addr3].value = data.address2;
+//                of[frm_addr3].value = data.autoJibunAddress;
             }
             if(of[frm_jibeon] !== undefined){
                 of[frm_jibeon].value = data.addressType;
@@ -445,7 +448,7 @@ $(function() {
 
 /**
  * 텍스트 리사이즈
-**/
+ **/
 function font_resize(id, rmv_class, add_class)
 {
     var $el = $("#"+id);
@@ -497,12 +500,10 @@ $(function(){
         return false;
     });
 
-    /*
     $(".win_poll").click(function() {
         win_poll(this.href);
         return false;
     });
-    */
 
     // 사이드뷰
     var sv_hide = false;
@@ -610,10 +611,10 @@ function OpenPopupPost(Url, param, width, height, scroll, resizeble, name) {
         name = "PopupView";
 
     var popup = window.open('', name, 'width=' + width + 'px,height=' + height + 'px,status=yes,menubar=no, scrollbars=' + scroll + ',resizable=' + resizeble);
-	popup.focus();
-	
+    popup.focus();
+
     post_goto(Url, param, name);
-	
+
     return popup;
 };
 
@@ -646,102 +647,102 @@ function post_goto(url, parm, target) {
 // 이미지의 크기에 따라 새창의 크기가 변경
 function image_window(img)
 {
-	var w = img.tmp_width; 
-	var h = img.tmp_height; 
-	var winl = (screen.width-w)/2; 
-	var wint = (screen.height-h)/3; 
+    var w = img.tmp_width;
+    var h = img.tmp_height;
+    var winl = (screen.width-w)/2;
+    var wint = (screen.height-h)/3;
 
-	if (w >= screen.width) { 
-		winl = 0; 
-		h = (parseInt)(w * (h / w)); 
-	} 
+    if (w >= screen.width) {
+        winl = 0;
+        h = (parseInt)(w * (h / w));
+    }
 
-	if (h >= screen.height) { 
-		wint = 0; 
-		w = (parseInt)(h * (w / h)); 
-	} 
+    if (h >= screen.height) {
+        wint = 0;
+        w = (parseInt)(h * (w / h));
+    }
 
-	var js_url = "<script type='text/javascript'> \n"; 
-		js_url += "<!-- \n"; 
-		js_url += "var ie=document.all; \n"; 
-		js_url += "var nn6=document.getElementById&&!document.all; \n"; 
-		js_url += "var isdrag=false; \n"; 
-		js_url += "var x,y; \n"; 
-		js_url += "var dobj; \n"; 
-		js_url += "function movemouse(e) \n"; 
-		js_url += "{ \n"; 
-		js_url += "  if (isdrag) \n"; 
-		js_url += "  { \n"; 
-		js_url += "    dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x; \n"; 
-		js_url += "    dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y; \n"; 
-		js_url += "    return false; \n"; 
-		js_url += "  } \n"; 
-		js_url += "} \n"; 
-		js_url += "function selectmouse(e) \n"; 
-		js_url += "{ \n"; 
-		js_url += "  var fobj      = nn6 ? e.target : event.srcElement; \n"; 
-		js_url += "  var topelement = nn6 ? 'HTML' : 'BODY'; \n"; 
-		js_url += "  while (fobj.tagName != topelement && fobj.className != 'dragme') \n"; 
-		js_url += "  { \n"; 
-		js_url += "    fobj = nn6 ? fobj.parentNode : fobj.parentElement; \n"; 
-		js_url += "  } \n"; 
-		js_url += "  if (fobj.className=='dragme') \n"; 
-		js_url += "  { \n"; 
-		js_url += "    isdrag = true; \n"; 
-		js_url += "    dobj = fobj; \n"; 
-		js_url += "    tx = parseInt(dobj.style.left+0); \n"; 
-		js_url += "    ty = parseInt(dobj.style.top+0); \n"; 
-		js_url += "    x = nn6 ? e.clientX : event.clientX; \n"; 
-		js_url += "    y = nn6 ? e.clientY : event.clientY; \n"; 
-		js_url += "    document.onmousemove=movemouse; \n"; 
-		js_url += "    return false; \n"; 
-		js_url += "  } \n"; 
-		js_url += "} \n"; 
-		js_url += "document.onmousedown=selectmouse; \n"; 
-		js_url += "document.onmouseup=new Function('isdrag=false'); \n"; 
-		js_url += "//--> \n"; 
-		js_url += "</"+"script> \n"; 
+    var js_url = "<script type='text/javascript'> \n";
+    js_url += "<!-- \n";
+    js_url += "var ie=document.all; \n";
+    js_url += "var nn6=document.getElementById&&!document.all; \n";
+    js_url += "var isdrag=false; \n";
+    js_url += "var x,y; \n";
+    js_url += "var dobj; \n";
+    js_url += "function movemouse(e) \n";
+    js_url += "{ \n";
+    js_url += "  if (isdrag) \n";
+    js_url += "  { \n";
+    js_url += "    dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x; \n";
+    js_url += "    dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y; \n";
+    js_url += "    return false; \n";
+    js_url += "  } \n";
+    js_url += "} \n";
+    js_url += "function selectmouse(e) \n";
+    js_url += "{ \n";
+    js_url += "  var fobj      = nn6 ? e.target : event.srcElement; \n";
+    js_url += "  var topelement = nn6 ? 'HTML' : 'BODY'; \n";
+    js_url += "  while (fobj.tagName != topelement && fobj.className != 'dragme') \n";
+    js_url += "  { \n";
+    js_url += "    fobj = nn6 ? fobj.parentNode : fobj.parentElement; \n";
+    js_url += "  } \n";
+    js_url += "  if (fobj.className=='dragme') \n";
+    js_url += "  { \n";
+    js_url += "    isdrag = true; \n";
+    js_url += "    dobj = fobj; \n";
+    js_url += "    tx = parseInt(dobj.style.left+0); \n";
+    js_url += "    ty = parseInt(dobj.style.top+0); \n";
+    js_url += "    x = nn6 ? e.clientX : event.clientX; \n";
+    js_url += "    y = nn6 ? e.clientY : event.clientY; \n";
+    js_url += "    document.onmousemove=movemouse; \n";
+    js_url += "    return false; \n";
+    js_url += "  } \n";
+    js_url += "} \n";
+    js_url += "document.onmousedown=selectmouse; \n";
+    js_url += "document.onmouseup=new Function('isdrag=false'); \n";
+    js_url += "//--> \n";
+    js_url += "</"+"script> \n";
 
-	var settings;
+    var settings;
 
-	if (g4_is_gecko) {
-		settings  ='width='+(w+10)+','; 
-		settings +='height='+(h+10)+','; 
-	} else {
-		settings  ='width='+w+','; 
-		settings +='height='+h+','; 
-	}
-	settings +='top='+wint+','; 
-	settings +='left='+winl+','; 
-	settings +='scrollbars=no,'; 
-	settings +='resizable=yes,'; 
-	settings +='status=no'; 
+    if (g4_is_gecko) {
+        settings  ='width='+(w+10)+',';
+        settings +='height='+(h+10)+',';
+    } else {
+        settings  ='width='+w+',';
+        settings +='height='+h+',';
+    }
+    settings +='top='+wint+',';
+    settings +='left='+winl+',';
+    settings +='scrollbars=no,';
+    settings +='resizable=yes,';
+    settings +='status=no';
 
 
-	win=window.open("","image_window",settings); 
-	win.document.open(); 
-	win.document.write ("<html><head> \n<meta http-equiv='imagetoolbar' CONTENT='no'> \n<meta http-equiv='content-type' content='text/html; charset="+g4_charset+"'>\n"); 
-	var size = "이미지 사이즈 : "+w+" x "+h;
-	win.document.write ("<title>"+size+"</title> \n"); 
-	if(w >= screen.width || h >= screen.height) { 
-		win.document.write (js_url); 
-		var click = "ondblclick='window.close();' style='cursor:move' title=' "+size+" \n\n 이미지 사이즈가 화면보다 큽니다. \n 왼쪽 버튼을 클릭한 후 마우스를 움직여서 보세요. \n\n 더블 클릭하면 닫혀요. '"; 
-	} 
-	else 
-		var click = "onclick='window.close();' style='cursor:pointer' title=' "+size+" \n\n 클릭하면 닫혀요. '"; 
-	win.document.write ("<style>.dragme{position:relative;}</style> \n"); 
-	win.document.write ("</head> \n\n"); 
-	win.document.write ("<body leftmargin=0 topmargin=0 bgcolor=#dddddd style='cursor:arrow;'> \n"); 
-	win.document.write ("<table width=100% height=100% cellpadding=0 cellspacing=0><tr><td align=center valign=middle><img src='"+img.src+"' width='"+w+"' height='"+h+"' border=0 class='dragme' "+click+"></td></tr></table>");
-	win.document.write ("</body></html>"); 
-	win.document.close(); 
+    win=window.open("","image_window",settings);
+    win.document.open();
+    win.document.write ("<html><head> \n<meta http-equiv='imagetoolbar' CONTENT='no'> \n<meta http-equiv='content-type' content='text/html; charset="+g4_charset+"'>\n");
+    var size = "이미지 사이즈 : "+w+" x "+h;
+    win.document.write ("<title>"+size+"</title> \n");
+    if(w >= screen.width || h >= screen.height) {
+        win.document.write (js_url);
+        var click = "ondblclick='window.close();' style='cursor:move' title=' "+size+" \n\n 이미지 사이즈가 화면보다 큽니다. \n 왼쪽 버튼을 클릭한 후 마우스를 움직여서 보세요. \n\n 더블 클릭하면 닫혀요. '";
+    }
+    else
+        var click = "onclick='window.close();' style='cursor:pointer' title=' "+size+" \n\n 클릭하면 닫혀요. '";
+    win.document.write ("<style>.dragme{position:relative;}</style> \n");
+    win.document.write ("</head> \n\n");
+    win.document.write ("<body leftmargin=0 topmargin=0 bgcolor=#dddddd style='cursor:arrow;'> \n");
+    win.document.write ("<table width=100% height=100% cellpadding=0 cellspacing=0><tr><td align=center valign=middle><img src='"+img.src+"' width='"+w+"' height='"+h+"' border=0 class='dragme' "+click+"></td></tr></table>");
+    win.document.write ("</body></html>");
+    win.document.close();
 
-	if(parseInt(navigator.appVersion) >= 4){win.window.focus();} 
+    if(parseInt(navigator.appVersion) >= 4){win.window.focus();}
 }
 
 var datepickerOption = {
     showOn: "button",
-    buttonImage: "/img/common/iconCalenda.gif",
+    buttonImage: "/image/icon/iconCalenda.gif",
     buttonImageOnly: true,
     dateFormat: 'yy-mm-dd',
     prevText: '이전 달',
@@ -799,254 +800,304 @@ function validate_date(checkDate) {
 }
 
 function popINIReceipt(tid){
-	var receiptUrl = "https://iniweb.inicis.com/DefaultWebApp/mall/cr/cm/mCmReceipt_head.jsp?noTid=" + tid + "&noMethod=1";
-	var popReceipt = window.open(receiptUrl,"receipt","width=430,height=700");
-	popReceipt.focus();
+    var receiptUrl = "https://iniweb.inicis.com/DefaultWebApp/mall/cr/cm/mCmReceipt_head.jsp?noTid=" + tid + "&noMethod=1";
+    var popReceipt = window.open(receiptUrl,"receipt","width=430,height=700");
+    popReceipt.focus();
 }
 
 function setTracker() {
-	_paq.push ([ 'trackEvent', document.domain, document.title]);
-		
-	post_goto('/blank.html?title='+document.title, null, 'hiddenframe');
+    _paq.push ([ 'trackEvent', document.domain, document.title]);
+
+    post_goto('/blank.html?title='+document.title, null, 'hiddenframe');
 }
 
 function get_Subway(select, lcode, ocode){
-	select.empty();
-	select.append('<option value="">지하철역명으로 찾기</option>');
-	
-	$.ajax({
-		url: '/svchandler/Common.php',
-		data: {
-			action: 'get_subway',
-			lcode: lcode,
-			security: function() { return $("#token").val(); }
-		},
-		async: false,
-		success: function (res) {
-			if (res != "") {
-				var r = JSON.parse(res);
-				$.each(r.data, function() {
-					select.append('<option value="'+this['swidx']+'"'+(ocode == this['swidx']? ' selected':'')+'>'+this['data']+'</option>');
-				});
-			}
-		}
-	});
+    select.empty();
+    select.append('<option value="">지하철역명으로 찾기</option>');
+
+    $.ajax({
+        url: '/svchandler/Common.php',
+        data: {
+            action: 'get_subway',
+            lcode: lcode,
+            security: function() { return $("#token").val(); }
+        },
+        async: false,
+        success: function (res) {
+            if (res != "") {
+                var r = JSON.parse(res);
+                $.each(r.data, function() {
+                    select.append('<option value="'+this['swidx']+'"'+(ocode == this['swidx']? ' selected':'')+'>'+this['data']+'</option>');
+                });
+            }
+        }
+    });
 }
 
 function get_Paperlist(code, btn, view, txt) {
-	if (txt == null || txt == '') {
-		txt = "종류보기";
-	}
-	
-	var regEx = /temp_view_([0-9])/gi;
-	var matStr = $(view).prop('class').match(regEx).toString();
-	var dn = matStr.replace(/[^0-9]/g, '');
+    if (txt == null || txt == '') {
+        txt = "종류보기";
+    }
 
-	$.ajax({
-		url: '/svchandler/Common.php',
-		data: {
-			action: 'get_paperlist',
-			code: code,
-			security: function() { return $("#token").val(); }
-		},
-		success: function (res) {
-			if (res != "") {
-				var r = JSON.parse(res);
+    var regEx = /temp_view_([0-9])/gi;
+    var matStr = $(view).prop('class').match(regEx).toString();
+    var dn = matStr.replace(/[^0-9]/g, '');
 
-				if (r.data.length > 0) {
-					$(btn).html(txt+'<img src="/img/service/07btn02.gif" class="btn_prod_down" alt=""/><img src="/img/service/07btn01.gif" class="btn_prod_up" alt=""/>');
-					
-					var p = 0;
-					var html = '';
-					$(view).empty();
-					$(view).append('<img src="/img/service/07con_arrow.gif" alt=""/>');
-					$.each(r.data, function() {
-						if (p%2 == 0) { html += "<ul class='paper'>"; }
-						html += "<li><span class='zoom' realpath='/data/paper/"+this['savename']+"'><img src='"+this['src']+"'/></span>"+this['name'];
-						
-						var arr_data = this['data'].split('||');
-						html += '<ul class="paper_cont">';
-						for(i=0; i < arr_data.length; i++) {
-							if (arr_data[i] != '') { html += "<li>"+arr_data[i]+"</li>"; }
-						}
-						html += "</ul>";
-						html += "</li>";
-						if ((p-1)%2 == 0) html += "</ul>";
-						p++;
-					});
-					if (p > 1 && p%2 != 0) html += "</ul>";
-					$(view).append(html);
-					$(view).append('<div class="btn_close_list fa fa-times" data-n="'+dn+'"></div>');
-					
-					$('.zoom').each(function() {
-						var src = $(this).attr('realpath');
-						if (src != null && src != undefined) {
-							$(this).zoom({url: src});
-						}
-					});
-				} else {
-					$(btn).html('서비스 준비중<img src="/img/service/07btn02.gif" class="btn_prod_down" alt=""/><img src="/img/service/07btn01.gif" class="btn_prod_up" alt=""/>');
-				}
-			}
-		}
-	});
+    $.ajax({
+        url: '/svchandler/Common.php',
+        data: {
+            action: 'get_paperlist',
+            code: code,
+            security: function() { return $("#token").val(); }
+        },
+        success: function (res) {
+            if (res != "") {
+                var r = JSON.parse(res);
+
+                if (r.data.length > 0) {
+                    $(btn).html(txt+'<img src="/img/service/07btn02.gif" class="btn_prod_down" alt=""/><img src="/img/service/07btn01.gif" class="btn_prod_up" alt=""/>');
+
+                    var p = 0;
+                    var html = '';
+                    $(view).empty();
+                    $(view).append('<img src="/img/service/07con_arrow.gif" alt=""/>');
+                    $.each(r.data, function() {
+                        if (p%2 == 0) { html += "<ul class='paper'>"; }
+                        html += "<li><span class='zoom' realpath='/data/paper/"+this['savename']+"'><img src='"+this['src']+"'/></span>"+this['name'];
+
+                        var arr_data = this['data'].split('||');
+                        html += '<ul class="paper_cont">';
+                        for(i=0; i < arr_data.length; i++) {
+                            if (arr_data[i] != '') { html += "<li>"+arr_data[i]+"</li>"; }
+                        }
+                        html += "</ul>";
+                        html += "</li>";
+                        if ((p-1)%2 == 0) html += "</ul>";
+                        p++;
+                    });
+                    if (p > 1 && p%2 != 0) html += "</ul>";
+                    $(view).append(html);
+                    $(view).append('<div class="btn_close_list fa fa-times" data-n="'+dn+'"></div>');
+
+                    $('.zoom').each(function() {
+                        var src = $(this).attr('realpath');
+                        if (src != null && src != undefined) {
+                            $(this).zoom({url: src});
+                        }
+                    });
+                } else {
+                    $(btn).html('서비스 준비중<img src="/img/service/07btn02.gif" class="btn_prod_down" alt=""/><img src="/img/service/07btn01.gif" class="btn_prod_up" alt=""/>');
+                }
+            }
+        }
+    });
 }
 
 function bodyClass(addClassName) {
-	$('body').addClass(addClassName);
+    $('body').addClass(addClassName);
 }
 
 function decodeURL(str)
 {
-	var s0, i, j, s, ss, u, n, f;
-	s0 = "";                // decoded str
-	
-	for (i = 0; i < str.length; i++){ // scan the source str
-		s = str.charAt(i);
-		if (s == "+"){s0 += " ";} // "+" should be changed to SP
-		else {
-			if (s != "%"){s0 += s;} // add an unescaped char
-			else{ // escape sequence decoding
-				u = 0;// unicode of the character
-				f = 1;// escape flag, zero means end of this sequence
-				while (true) {
-					ss = "";// local str to parse as int
-						for (j = 0; j < 2; j++ ) {// get two maximum hex characters for parse
-							sss = str.charAt(++i);
-							if (((sss >= "0") && (sss <= "9")) || ((sss >= "a") && (sss <= "f"))|| ((sss >= "A") && (sss <= "F"))) {
-								ss += sss;// if hex, add the hex character
-							} else {--i; break;}// not a hex char., exit the loop
-						}
-					n = parseInt(ss, 16); // parse the hex str as byte
-					if (n <= 0x7f){u = n; f = 1;} // single byte format
-					if ((n >= 0xc0) && (n <= 0xdf)){u = n & 0x1f; f = 2;} // double byte format
-					if ((n >= 0xe0) && (n <= 0xef)){u = n & 0x0f; f = 3;} // triple byte format
-					if ((n >= 0xf0) && (n <= 0xf7)){u = n & 0x07; f = 4;} // quaternary byte format (extended)
-					if ((n >= 0x80) && (n <= 0xbf)){u = (u << 6) + (n & 0x3f); --f;} // not a first, shift and add 6 lower bits
-					if (f <= 1){break;} // end of the utf byte sequence
-					if (str.charAt(i + 1) == "%"){ i++ ;} // test for the next shift byte
-					else {break;} // abnormal, format error
-				}
-			s0 += String.fromCharCode(u); // add the escaped character
-			}
-		}
-	}
-	return s0;
+    var s0, i, j, s, ss, u, n, f;
+    s0 = "";                // decoded str
+
+    for (i = 0; i < str.length; i++){ // scan the source str
+        s = str.charAt(i);
+        if (s == "+"){s0 += " ";} // "+" should be changed to SP
+        else {
+            if (s != "%"){s0 += s;} // add an unescaped char
+            else{ // escape sequence decoding
+                u = 0;// unicode of the character
+                f = 1;// escape flag, zero means end of this sequence
+                while (true) {
+                    ss = "";// local str to parse as int
+                    for (j = 0; j < 2; j++ ) {// get two maximum hex characters for parse
+                        sss = str.charAt(++i);
+                        if (((sss >= "0") && (sss <= "9")) || ((sss >= "a") && (sss <= "f"))|| ((sss >= "A") && (sss <= "F"))) {
+                            ss += sss;// if hex, add the hex character
+                        } else {--i; break;}// not a hex char., exit the loop
+                    }
+                    n = parseInt(ss, 16); // parse the hex str as byte
+                    if (n <= 0x7f){u = n; f = 1;} // single byte format
+                    if ((n >= 0xc0) && (n <= 0xdf)){u = n & 0x1f; f = 2;} // double byte format
+                    if ((n >= 0xe0) && (n <= 0xef)){u = n & 0x0f; f = 3;} // triple byte format
+                    if ((n >= 0xf0) && (n <= 0xf7)){u = n & 0x07; f = 4;} // quaternary byte format (extended)
+                    if ((n >= 0x80) && (n <= 0xbf)){u = (u << 6) + (n & 0x3f); --f;} // not a first, shift and add 6 lower bits
+                    if (f <= 1){break;} // end of the utf byte sequence
+                    if (str.charAt(i + 1) == "%"){ i++ ;} // test for the next shift byte
+                    else {break;} // abnormal, format error
+                }
+                s0 += String.fromCharCode(u); // add the escaped character
+            }
+        }
+    }
+    return s0;
 }
 
 function encodeURL(str)
 {
-	var s0, i, s, u;
-	s0 = "";// encoded str
-	for (i = 0; i < str.length; i++){ // scan the source
-		s = str.charAt(i);
-		u = str.charCodeAt(i);// get unicode of the char
-		if (s == " "){s0 += "+";} // SP should be converted to "+"
-		else {
-			if ( u == 0x2a || u == 0x2d || u == 0x2e || u == 0x5f || ((u >= 0x30) && (u <= 0x39)) || ((u >= 0x41) && (u <= 0x5a)) || ((u >= 0x61) && (u <= 0x7a))){ // check for escape
-				s0 = s0 + s;// don't escape
-			}
-			else {// escape
-				if ((u >= 0x0) && (u <= 0x7f)){ // single byte format
-					s = "0"+u.toString(16);
-					s0 += "%"+ s.substr(s.length-2);
-				}
-				else if (u > 0x1fffff){ // quaternary byte format (extended)
-					s0 += "%" + (oxf0 + ((u & 0x1c0000) >> 18)).toString(16);
-					s0 += "%" + (0x80 + ((u & 0x3f000) >> 12)).toString(16);
-					s0 += "%" + (0x80 + ((u & 0xfc0) >> 6)).toString(16);
-					s0 += "%" + (0x80 + (u & 0x3f)).toString(16);
-				}
-				else if (u > 0x7ff){// triple byte format
-					s0 += "%" + (0xe0 + ((u & 0xf000) >> 12)).toString(16);
-					s0 += "%" + (0x80 + ((u & 0xfc0) >> 6)).toString(16);
-					s0 += "%" + (0x80 + (u & 0x3f)).toString(16);
-				}
-				else {// double byte format
-					s0 += "%" + (0xc0 + ((u & 0x7c0) >> 6)).toString(16);
-					s0 += "%" + (0x80 + (u & 0x3f)).toString(16);
-				}
-			}
-		}
-	}
-	return s0;
+    var s0, i, s, u;
+    s0 = "";// encoded str
+    for (i = 0; i < str.length; i++){ // scan the source
+        s = str.charAt(i);
+        u = str.charCodeAt(i);// get unicode of the char
+        if (s == " "){s0 += "+";} // SP should be converted to "+"
+        else {
+            if ( u == 0x2a || u == 0x2d || u == 0x2e || u == 0x5f || ((u >= 0x30) && (u <= 0x39)) || ((u >= 0x41) && (u <= 0x5a)) || ((u >= 0x61) && (u <= 0x7a))){ // check for escape
+                s0 = s0 + s;// don't escape
+            }
+            else {// escape
+                if ((u >= 0x0) && (u <= 0x7f)){ // single byte format
+                    s = "0"+u.toString(16);
+                    s0 += "%"+ s.substr(s.length-2);
+                }
+                else if (u > 0x1fffff){ // quaternary byte format (extended)
+                    s0 += "%" + (oxf0 + ((u & 0x1c0000) >> 18)).toString(16);
+                    s0 += "%" + (0x80 + ((u & 0x3f000) >> 12)).toString(16);
+                    s0 += "%" + (0x80 + ((u & 0xfc0) >> 6)).toString(16);
+                    s0 += "%" + (0x80 + (u & 0x3f)).toString(16);
+                }
+                else if (u > 0x7ff){// triple byte format
+                    s0 += "%" + (0xe0 + ((u & 0xf000) >> 12)).toString(16);
+                    s0 += "%" + (0x80 + ((u & 0xfc0) >> 6)).toString(16);
+                    s0 += "%" + (0x80 + (u & 0x3f)).toString(16);
+                }
+                else {// double byte format
+                    s0 += "%" + (0xc0 + ((u & 0x7c0) >> 6)).toString(16);
+                    s0 += "%" + (0x80 + (u & 0x3f)).toString(16);
+                }
+            }
+        }
+    }
+    return s0;
 }
 
 //템플릿 리스트
 $(document).on("click", ".btn_temp", function () {
-	var btn_nom = $(this).attr('data-n')
-	$(".temp_view_"+btn_nom).toggleClass('on');
-	$(this).toggleClass('on');
+    var btn_nom = $(this).attr('data-n')
+    $(".temp_view_"+btn_nom).toggleClass('on');
+    $(this).toggleClass('on');
 });
 
 $(document).on("click", ".btn_close_list", function () {
-	var btn_nom = $(this).attr('data-n')
-	$(".temp_view_"+btn_nom).removeClass('on');
-	$(".btn_temp").toggleClass('on');
+    var btn_nom = $(this).attr('data-n')
+    $(".temp_view_"+btn_nom).removeClass('on');
+    $(".btn_temp").toggleClass('on');
 });
 
 $(".temp_view").click(function () {
-	$(".temp_view").removeClass('on');
-	$(".btn_temp").removeClass('on');
+    $(".temp_view").removeClass('on');
+    $(".btn_temp").removeClass('on');
 });
 
 $(document).on("click", ".temp_view .arrow", function () {
-	var offset = $(".temp_view").offset();
-	$(".temp_view").offset(offset);
-	$(".temp_view").css({position:'fixed'});
+    var offset = $(".temp_view").offset();
+    $(".temp_view").offset(offset);
+    $(".temp_view").css({position:'fixed'});
 });
 
-function set_Noti(noti) {	
-	var rtnVal = false;	
-	$.ajax({
-		url: '/svchandler/Common.php',
-		data: {
-			action: 'set_noti',
-			noti: noti,
-			security: function() { return $("#token").val(); }
-		},
-		async: false,
-		success: function (res) {
-			if (res != "") {
-				var r = JSON.parse(res);
-				rtnVal = r.result;
-			} else {
-				rtnVal = false;
-			}
-		},
-		error: function (res) {
-			alert(res.responseText)
-			rtnVal = false;
-		}
-	});	
-	return rtnVal;
+function set_Noti(noti) {
+    var rtnVal = false;
+    $.ajax({
+        url: '/svchandler/Common.php',
+        data: {
+            action: 'set_noti',
+            noti: noti,
+            security: function() { return $("#token").val(); }
+        },
+        async: false,
+        success: function (res) {
+            if (res != "") {
+                var r = JSON.parse(res);
+                rtnVal = r.result;
+            } else {
+                rtnVal = false;
+            }
+        },
+        error: function (res) {
+            alert(res.responseText)
+            rtnVal = false;
+        }
+    });
+    return rtnVal;
 }
 
-function get_jobresponse(jm_seqno) {	
-	var rtnVal = false;	
-	$.ajax({
-		url: '/svchandler/Konline.php',
-		data: {
-			action: 'get_jobresponse',
-			jm_seqno: jm_seqno,
-			security: function() { return $("#token").val(); }
-		},
-		async: false,
-		success: function (res) {
-			if (res != "") {
-				var r = JSON.parse(res);
-				xmlDoc = $.parseXML(decodeURIComponent(r.data.jm_response)),
-				$xml = $( xmlDoc ),
-				$pdf = $xml.find( "pdf" );
-				window.open("https://wp.kinkos.co.kr"+$pdf.text());
-			} else {
-				rtnVal = false;
-			}
-		},
-		error: function (res) {
-			alert(res.responseText)
-			rtnVal = false;
-		}
-	});	
-	return rtnVal;
+function get_jobresponse(jm_seqno) {
+    var rtnVal = false;
+    $.ajax({
+        url: '/svchandler/Konline.php',
+        data: {
+            action: 'get_jobresponse',
+            jm_seqno: jm_seqno,
+            security: function() { return $("#token").val(); }
+        },
+        async: false,
+        success: function (res) {
+            if (res != "") {
+                var r = JSON.parse(res);
+                xmlDoc = $.parseXML(decodeURIComponent(r.data.jm_response)),
+                    $xml = $( xmlDoc ),
+                    $pdf = $xml.find( "pdf" );
+                window.open("https://wp.kinkos.co.kr"+$pdf.text());
+            } else {
+                rtnVal = false;
+            }
+        },
+        error: function (res) {
+            alert(res.responseText)
+            rtnVal = false;
+        }
+    });
+    return rtnVal;
+}
+
+function gf_isRequireValueCheck(p_form){
+
+    var flag = true;
+    var obj = $('#'+p_form).find('.required')
+
+    obj.each(function(){
+
+        if($(this).prop('type') == 'text'){
+            if($(this).val() == ''){
+                $(this).focus();
+                flag = false;
+                return false;
+            }
+        }
+
+    });
+
+    return flag;
+}
+
+// 업로드 파일 체크
+function isNotUploadFile(file){
+    // 제한 용량 MB
+    var FILE_MB = 2048;
+    // 허용 확장자
+    var FILE_EXT = ["zip", "7z", "rar", "alz", "egg", "csv", "dbf", "dif", "doc", "docm", "docx", "dot", "dotm", "dotx", "emf", "mht", "odp", "ods", "odt", "pdf", "pot", "potm", "potx", "ppa", "ppam", "pps", "ppsm", "ppsx", "ppt", "pptm", "pptx", "prn", "rtf", "slk", "thmx", "wmf", "wmv", "wps", "xla", "xlam", "xls", "xlsb", "xlsm", "xlsx", "xlt", "xltm", "xltx", "xlw", "xml", "xps", "txt", "ai", "ait", "bmp", "cdr", "cgm", "css", "dc3", "dcm", "dib", "dic", "doc", "docx", "draw", "dwg", "dxf", "emf", "eps", "epsf", "gif", "icb", "id", "idea", "idml", "iff", "indb", "indd", "indl", "indt", "inx", "j2c", "j2k", "jp2", "jpc", "jpe", "jpeg", "jpf", "jpg", "jps", "jpx", "line", "mpo", "pam", "pbm", "pct", "pcx", "pdd", "pdf", "pdp", "pfm", "pgm", "pic", "pmd", "png", "pnm", "pns", "ppm", "ps", "psb", "psd", "psdt", "pxr", "raw", "rle", "sct", "sket", "svg", "svgz", "tdi", "tga", "tif", "tiff", "vda", "vst", "wmf", "xqx", "2b", "hwp", "hwt"];
+    if(file.name != ""){
+        // 확장자 체크
+        var ext = file.name.split('.').pop().toLowerCase();
+        if($.inArray(ext, FILE_EXT) == -1){
+            alert(FILE_EXT.join(', ')+" 파일만 업로드 해주세요.");
+            return true;
+        }
+        // 용량체크
+        var fileSize = file.size;
+        var maxSize = 1024 * 1024 * FILE_MB;
+        if(fileSize > maxSize){
+            alert("파일 업로드 크기 제한은 "+FILE_MB+"MB 입니다.");
+            return true;
+        }
+    }
+    return false;
+}
+
+//3자리 단위마다 콤마 생성
+function addCommas(x) {
+    if(!x) x = 0;
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

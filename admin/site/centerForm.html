@@ -1,0 +1,1868 @@
+
+<!doctype html>
+<html lang="ko">
+<title>센터정보관리 | 킨코스코리아(주)</title>
+<meta charset="UTF-8" />
+<meta name="title" content="센터정보관리 | 킨코스코리아(주)" />
+<meta name="description" id="meta_description" content="센터정보관리 | 킨코스코리아(주)" />
+<meta name="keywords" content="복사,인쇄,포스터,제본,킨코스" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/x-icon" href="/image/common/favicon.ico">
+
+<!-- #################공통 CSS영역이 들어감###################### -->
+<link rel="stylesheet" href="/admin/css/admin.css">
+<link rel="stylesheet" href="/admin/css/jquery-ui.css">
+
+<!-- ##########공통 script 영역이 들어감#################### -->
+<!-- jQuery-->
+<script src="/admin/js/jquery/jquery-1.12.4.min.js"></script>
+
+<!-- jQuery plug in -->
+<script src="/admin/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="/admin/js/jquery/jquery.menu.js"></script>
+<script src="/admin/js/jquery.alphanumeric.js"></script>
+
+<!-- Utils -->
+<script src="/admin/js/common.js"></script>
+<script src="/admin/js/dateUtil.js"></script>
+<script src="/admin/js/numberUtil.js"></script>
+<script src="/admin/js/stringUtil.js"></script>
+
+
+<!-- 사용자 CSS 영역이 들어감 -->
+
+<!-- 사용자 스크립트 영역이 들어감 -->
+<script type="text/javascript">
+
+    //메뉴이동
+    function gf_menuMove(p_menu_url, p_menu_id, p_name, p_value){
+
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "get");  //get 방식
+        form.setAttribute("action", p_menu_url); //요청 보낼 주소
+
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "menu_id");
+        hiddenField.setAttribute("value", p_menu_id);
+        form.appendChild(hiddenField);
+
+        if(p_name && p_value){
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", p_name);
+            hiddenField.setAttribute("value", p_value);
+            form.appendChild(hiddenField);
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+
+    }
+
+    //페이지이동
+    function fn_pageMove(p_idx){
+        $('#pageForm_pageIndex').val(p_idx);
+        $('#pageForm').submit();
+    }
+
+    $(function(){
+
+        $.ajaxSetup({
+            complete:function(x,y){
+
+                if(JSON.parse(x.responseText).statusText == 'login_fail'){
+                    alert(JSON.parse(x.responseText).message);
+                    location.href="/";
+                }
+
+                if(JSON.parse(x.responseText).statusText == 'process_fail'){
+                    alert(JSON.parse(x.responseText).message);
+                }
+
+            },beforeSend : function(xmlHttpRequest){
+                xmlHttpRequest.setRequestHeader("AJAX","true");
+            },error:function(x,y){
+                console.log('에러 발생');
+            }
+
+        });
+
+        $('.numeric').numeric();
+        $('.numeric').on('change',function(){
+            var lang = $(this).val();
+            var check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            if(check.test(lang)){
+                $(this).val('');
+            }
+        });
+
+    });
+
+</script>
+
+
+
+
+<body>
+<div id="to_content"><a href="#container">본문 바로가기</a></div>
+<header id="hd">
+    <div id="hd_wrap">
+        <h1>킨코스코리아(주)</h1>
+
+        <div id="logo">
+            <a href="/main.do">
+                <img src="/admin/image/logo.jpg" alt="킨코스코리아(주) 관리자">
+            </a>
+        </div>
+
+        <ul id="tnb">
+            <li><a href="javascript:gf_menuMove(&#39;/membermng/memberMngRegi.do&#39;, &#39;200100&#39;,&#39;mb_no&#39;,&#39;1&#39;);">관리자정보</a></li>
+            <li><a href="javascript:gf_menuMove('/configuration/configView.do', '100100');">기본환경</a></li>
+            <li><a href="javascript:gf_menuMove('/shop/configform.do', '400100');">쇼핑몰환경</a></li>
+            <li><a href="//stat.kinkos.co.kr/btc/main.do" target="_blank">쇼핑몰</a></li>
+            <li id="tnb_logout"><a href="/logoutProc.do">로그아웃</a></li>
+            <li><a>khome_manager (10)</a></li>
+        </ul>
+
+        <nav id="gnb">
+            <h2>관리자 주메뉴</h2>
+            <ul id="gnb_1dul">
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/configuration/configView.do&#39;,&#39;100000&#39;);" class="gnb_1da">환경설정</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/configView.do&#39;, &#39;100100&#39;);" class="gnb_2da">기본환경설정</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/mngAuthList.do&#39;, &#39;100300&#39;);" class="gnb_2da">관리권한설정</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/adminMenuList.do&#39;, &#39;100200&#39;);" class="gnb_2da">메뉴설정</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/alimtalk/alimtalkTemplateList.do&#39;,&#39;102000&#39;);" class="gnb_1da">알림톡설정</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/alimtalk/alimtalkTemplateList.do&#39;, &#39;102850&#39;);" class="gnb_2da">알림톡설정</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/membermng/memberMngList.do&#39;,&#39;200000&#39;);" class="gnb_1da">회원관리</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/membermng/memberMngList.do&#39;, &#39;200100&#39;);" class="gnb_2da">회원관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/membermng/compMemberMngList.do&#39;, &#39;200110&#39;);" class="gnb_2da">기업회원관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/membermng/pointMngList.do&#39;, &#39;200200&#39;);" class="gnb_2da">포인트관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/membermng/daouCompanyList.do&#39;, &#39;200400&#39;);" class="gnb_2da">다우오피스 업체관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/shop/main.do&#39;,&#39;400000&#39;);" class="gnb_1da">쇼핑몰관리</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/configform.do&#39;, &#39;400100&#39;);" class="gnb_2da">쇼핑몰설정</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/orderList.do&#39;, &#39;400400&#39;);" class="gnb_2da">주문내역</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/fileOrderList.do?init=Y&#39;, &#39;400410&#39;);" class="gnb_2da">파일주문내역</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/engFileOrderList.do?init=Y&#39;, &#39;400450&#39;);" class="gnb_2da">영문파일주문내역</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/categoryList.do&#39;, &#39;400200&#39;);" class="gnb_2da">분류관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/itemList.do&#39;, &#39;400300&#39;);" class="gnb_2da">상품관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/itemQAList.do&#39;, &#39;400660&#39;);" class="gnb_2da">상품문의</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/itemUseList.do&#39;, &#39;400650&#39;);" class="gnb_2da">사용후기</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/itemStockList.do&#39;, &#39;400620&#39;);" class="gnb_2da">상품재고관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/itemTypeList.do&#39;, &#39;400610&#39;);" class="gnb_2da">상품유형관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/shop/couponList.do&#39;, &#39;400800&#39;);" class="gnb_2da">쿠폰관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/code/getCodeGroupList.do&#39;,&#39;700000&#39;);" class="gnb_1da">서비스관리</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/code/getCodeGroupList.do&#39;, &#39;700100&#39;);" class="gnb_2da">코드그룹관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/code/getPaperList.do&#39;, &#39;700200&#39;);" class="gnb_2da">종이관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/site/getCenterList.do&#39;,&#39;800000&#39;);" class="gnb_1da">사이트관리</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/site/getCenterList.do&#39;, &#39;800200&#39;);" class="gnb_2da">센터정보관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/board/getBoardList.do&#39;,&#39;300000&#39;);" class="gnb_1da">게시판관리</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/board/getBoardList.do&#39;, &#39;300100&#39;);" class="gnb_2da">게시판관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/board/getBoardGroupList.do&#39;, &#39;300200&#39;);" class="gnb_2da">게시판그룹관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/board/getContentList.do&#39;, &#39;300600&#39;);" class="gnb_2da">내용관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/board/getFaqMasterList.do&#39;, &#39;300700&#39;);" class="gnb_2da">FAQ관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <a href="javascript:gf_menuMove(&#39;/configuration/bannerMngList.do&#39;,&#39;900000&#39;);" class="gnb_1da">컨텐츠관리</a>
+
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/bannerMngList.do&#39;, &#39;900100&#39;);" class="gnb_2da">배너관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/mainMngList.do&#39;, &#39;900200&#39;);" class="gnb_2da">메인컨텐츠관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/serviceMngList.do&#39;, &#39;900300&#39;);" class="gnb_2da">서비스안내관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/popupLayerMngList.do&#39;, &#39;900400&#39;);" class="gnb_2da">팝업레이어관리</a>
+                        </li>
+                        <li class="gnb_2dli">
+                            <a href="javascript:gf_menuMove(&#39;/configuration/mallMenuTitle.do&#39;, &#39;900500&#39;);" class="gnb_2da">온라인몰 GNB 설정</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+                <li class="gnb_1dli">
+                    <ul class="gnb_2dul">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <noscript>
+            <p>
+                귀하께서 사용하시는 브라우저는 현재 <strong>자바스크립트를 사용하지 않음</strong>으로 설정되어 있습니다.<br>
+                <strong>자바스크립트를 사용하지 않음</strong>으로 설정하신 경우는 수정이나 삭제시 별도의 경고창이 나오지 않으므로 이점 주의하시기 바랍니다.
+            </p>
+        </noscript>
+    </div>
+</header>
+
+<ul id="lnb">
+    <li><a href="javascript:gf_menuMove(&#39;/site/getCenterList.do&#39;, &#39;800200&#39;)">센터정보관리</a></li>
+</ul>
+
+<div id="wrapper">
+    <div id="container">
+        <div id="text_size">
+            <!-- font_resize('엘리먼트id', '제거할 class', '추가할 class'); -->
+            <button onclick="font_resize('container', 'ts_up ts_up2', '');"><img src="/admin/image/ts01.gif" alt="기본"></button>
+            <button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up');"><img src="/admin/image/ts02.gif" alt="크게"></button>
+            <button onclick="font_resize('container', 'ts_up ts_up2', 'ts_up2');"><img src="/admin/image/ts03.gif" alt="더크게"></button>
+        </div>
+        <h1>
+            센터정보관리
+        </h1>
+
+        <!-- 사용자 CSS 추가 -->
+        <style>
+            table tr.jq_cl_btLine {border-bottom:1px solid blue;}
+        </style>
+        <!-- 사용자 스크립트 추가 -->
+
+        <!-- @2021-01-04 CSS 추가 -->
+        <style>
+            input[type=text], input[type=password], input[type=submit], select {box-sizing:border-box;}
+
+            form[name="centerForm"] section {position:relative; display:block; width:calc(100% - 40px); height:auto; margin:20px 20px 0 20px; padding:0; border:1px solid #dadada; border-bottom:0; box-sizing:border-box;}
+            form[name="centerForm"] section h2.h2_frm {display:block; width:100%; height:auto; min-height:35px; margin:0 0 10px 0; padding:15px 0 15px 20px; border-bottom:1px solid #dadada; box-sizing:border-box;}
+            form[name="centerForm"] section .tbl_frm01 {display:block; width:100%; height:auto; margin:0; padding:0; border-bottom:1px solid #dadada; box-sizing:border-box;}
+            form[name="centerForm"] section .tbl_frm01 th {border:0; border-top:1px solid #dadada;}
+            form[name="centerForm"] section .tbl_frm01 td {border:0; border-top:1px solid #dadada;}
+            form[name="centerForm"] section .section_toggle_btn {position:absolute; top:0; right:0; width:20px; height:20px; margin:0; padding:0; font-size:0; line-height:0; border:1px solid #b4b4b4; box-sizing:border-box;
+                background-image:url('/admin/image/ico_admin_section_toggle_down.png'); background-size:7px 4px; background-position:center; background-color:#d9d9d9; background-repeat:no-repeat;}
+            form[name="centerForm"] section.show .section_toggle_btn {background-image:url('/admin/image/ico_admin_section_toggle_up.png');}
+
+            form[name="centerForm"] .btn_confirm {display:block; width:calc(100% - 40px); height:auto; margin:0 20px; padding:10px 0; border:1px solid #dadada; border-top:0; box-sizing:border-box;}
+
+            form[name="centerForm"] section .anchor {display:none;}
+            form[name="centerForm"] section .tbl_frm01 {display:none;}
+            form[name="centerForm"] section+.btn_confirm {display:none;}
+            form[name="centerForm"] section.show h2.h2_frm {padding-bottom:0; border-bottom:0;}
+            form[name="centerForm"] section.show .anchor {display:block;}
+            form[name="centerForm"] section.show .tbl_frm01 {display:block;}
+            form[name="centerForm"] section.show+.btn_confirm {display:block;}
+        </style>
+        <!-- //@2021-01-04 CSS 추가 -->
+
+        <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
+        <script src="/admin/js/ckeditor/4.12.1/full/ckeditor.js"></script>
+        <script>
+            $(document).ready(function(){
+                var flag = "insert" ;
+                if (flag != "insert"){
+                    var location_code = null;
+                    $("#sub_location_code").html($("#location"+location_code).html());
+                }else{
+                    $("#sub_location_code").html($("#locationNone").html());
+                }
+                $("#center_open_date").datepicker({
+                    dateFormat :'yy-mm-dd',
+                    showMonthAfterYear : true,
+                    changeMonth : true,
+                    changeYear : true,
+                    numberOfMonths : 1,
+                    dayNamesMin : ['일','월','화','수','목','금','토'],
+                    monthNamesShort:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    //minDate : -0 , //오늘날짜 이후부터만 설정되게
+                    onClose:function(selectedDate){
+                        $('#todt').datepicker("option","minDate",selectedDate);
+                    },
+                    beforeShow : function(input){
+                        var i_offset = $(input).offset();
+                        setTimeout(function(){
+                            $("#ui-datepicker-div").css({'top':i_offset.top +25, 'bottom' :'' , left : i_offset.left})
+                        })
+                    }
+                })
+                $("#center_close_date").datepicker({
+                    dateFormat :'yy-mm-dd',
+                    showMonthAfterYear : true,
+                    changeMonth : true,
+                    changeYear : true,
+                    numberOfMonths : 1,
+                    dayNamesMin : ['일','월','화','수','목','금','토'],
+                    monthNamesShort:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    //minDate : -0 , //오늘날짜 이후부터만 설정되게
+                    onClose:function(selectedDate){
+                        $('#frdt').datepicker("option","maxDate",selectedDate);
+                    },
+                    beforeShow : function(input){
+                        var i_offset = $(input).offset();
+                        setTimeout(function(){
+                            $("#ui-datepicker-div").css({'top':i_offset.top + 25, 'bottom' :'' , left : i_offset.left})
+                        })
+                    }
+                })
+            });
+            function fncSaveCenter(){
+                var $text = $(".jq_cl_text");
+
+                $text.each(function(){
+                    var v = $(this).val();
+                    if(v === "") {
+                        v = "&#10;";
+                    }
+
+                    $(this).val(v.replace(/,/gi, "&#44;"));
+                });
+
+                $("#centerForm").attr("action", "/site/saveCenter.do");
+                $("#centerForm").attr("method", "post");
+                $("#centerForm").submit();
+            }
+
+            $(document).on("change","#location_code",function(){
+                if($(this).val()) $("#sub_location_code").html($("#location"+$(this).val()).html());
+                else $("#sub_location_code").html($("#locationNone").html());
+            })
+
+            function openDaumPostcode1() {
+                new daum.Postcode({
+                    oncomplete: function(data) {
+                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+                        // 우편번호와 주소 정보를 해당 필드에 넣고, 커서를 상세주소 필드로 이동한다.
+                        var addr = data.jibunAddress.replace(/(\s|^)\(.+\)$|\S+~\S+/g, '');
+                        document.getElementById('addr_old1').value = addr;
+                        document.getElementById('addr_old2').focus();
+                    }
+                }).open();
+            }
+            function postsearch1(){
+                if(!document.centerForm.addr_old1.value || !document.centerForm.addr_new1.value ){
+                    alert("지번 또는 도로명 주소를 입력후 이용해 주세요")
+                }else{
+                    $.ajax({
+                        type: 'GET',
+                        url: '/site/getPostSearch.ajax',
+                        data: {
+                            'query' : document.centerForm.addr_old1.value + ' '+document.centerForm.addr_old2.value ,
+                        },
+                        dataType: 'JSON',
+                        beforeSend: function() {
+                        },
+                        success: function(data) {
+                            if(data.result == "success"){
+                                document.centerForm.latitude.value = data.x;
+                                document.centerForm.longitude.value = data.y;
+                            }else{
+                                alert(data.result.msg);
+                            }
+                        },
+                        error : function(request, status, error) {
+                            alert(error);
+                        },
+                        complete : function(request, status, error){
+                        }
+                    });
+                }
+            }
+            function openDaumPostcode2() {
+                new daum.Postcode({
+                    oncomplete: function(data) {
+                        console.log(data);
+                        var addr = data.address.replace(/(\s|^)\(.+\)$|\S+~\S+/g, '');
+
+                        document.getElementById('addr_new1').value = addr;
+                        document.getElementById('addr_new2').focus();
+                    }
+                }).open();
+            }
+            function postsearch2(){
+                if(!document.centerForm.addr_old1.value || !document.centerForm.addr_new1.value ){
+                    alert("지번 또는 도로명 주소를 입력후 이용해 주세요")
+                }else{
+                    $.ajax({
+                        type: 'GET',
+                        url: '/site/getPostSearch.ajax',
+                        data: {
+                            'query' : document.centerForm.addr_new1.value +' '+document.centerForm.addr_new2.value,
+                        },
+                        dataType: 'JSON',
+                        beforeSend: function() {
+                        },
+                        success: function(data) {
+                            if(data.result == "success"){
+                                document.centerForm.latitude.value = data.x;
+                                document.centerForm.longitude.value = data.y;
+                            }else{
+                                alert(data.result.msg);
+                            }
+                        },
+                        error : function(request, status, error) {
+                            alert(error);
+                        },
+                        complete : function(request, status, error){
+                        }
+                    });
+                }
+            }
+
+            $(document).on("click", ".com_addLine",function() {
+                var type = $(this).attr("rel");
+
+                if($(':radio[name="use_'+type+'"]:checked').val()==1) {
+                    var newTitleItem = $("#"+type+"LineTitle").clone();
+                    var newTitleImgItem = ''
+                        +'<tr class="computerLine jq_cl_btLine">'
+                        +'<th scope="row">이미지</th>'
+                        +'<td colspan="3">'
+                        +'<input type="hidden" name="saveComfile_sub" />'
+                        +'<input type="file" name="savefile_com_sub" />'
+                        +'<div style="margin-top:5px;color:blue;">'
+                        +'60px * 60px'
+                        +'</div>'
+                        +'</td>'
+                        +'</tr>';
+                    newTitleItem.removeAttr('id');
+                    newTitleItem.find("input[type=text]").each(function() {
+                        $(this).val("");
+                    });
+                    newTitleItem.find("td:eq(0)").append("<input type='button' value=' 삭제 ' class='com_delLine btn_frmline' style='margin-left:10px;'>");
+                    $("."+type+"Line").last().after(newTitleItem);
+                    $("."+type+"Line").last().after(newTitleImgItem);
+                }
+            });
+            $(document).on("click", ".addLine",function() {
+                var type = $(this).attr("rel");
+
+                if($(':radio[name="use_'+type+'"]:checked').val()==1) {
+
+                    var newTitleItem = $("#"+type+"LineTitle").clone();
+                    var newContentItem = $("#"+type+"LineContent").clone();
+                    var newTitleImgItem = '';
+
+                    newTitleImgItem += '<tr class="'+type+'Line jq_cl_btLine">';
+                    newTitleImgItem += '<th scope="row">이미지</th>'+'<td colspan="3">';
+
+                    if(type == 'program'){
+                        newTitleImgItem +='<input type="hidden" name="savePromfile_sub" />';
+                        newTitleImgItem +='<input type="file" name="savefile_prom_sub" />';
+                    }else{
+                        newTitleImgItem +='<input type="hidden" name="saveEquipfile_sub" />';
+                        newTitleImgItem +='<input type="file" name="savefile_equip_sub" />';
+                    }
+                    newTitleImgItem +='<div style="margin-top:5px;color:blue;"> 60px * 60px </div>';
+                    newTitleImgItem +='</td>';
+                    newTitleImgItem +='</tr>';
+
+                    newTitleItem.removeAttr('id');
+                    newContentItem.removeAttr('id');
+                    newTitleItem.find("input[type=text]").each(function() {
+                        $(this).val("");
+                    });
+                    newContentItem.find("textarea").each(function() {
+                        $(this).val("");
+                    });
+
+                    newTitleItem.find("td:eq(0)").append("<input type='button' value=' 삭제 ' class='delLine btn_frmline' style='margin-left:10px;'>");
+                    $("."+type+"Line").last().after(newTitleItem);
+                    $("."+type+"Line").last().after(newContentItem);
+                    $("."+type+"Line").last().after(newTitleImgItem);
+                }
+            });
+            $(document).on("click", ".addEmail", function() {
+                var item = $("#emailHtml").html();
+
+                $(".emailBlock").append(item);
+            });
+
+            $(document).on("click", ".delEmail", function() {
+                $(this).parent().remove();
+            });
+
+            $(document).on("click", ".addSubway", function() {
+                var item = $("#subwayHtml").html();
+                $(".subwayBlock").append(item);
+            });
+
+            $(document).on("click", ".delSubway", function() {
+                $(this).parent().remove();
+            });
+            $(document).on("click", ".com_delLine", function() {
+                $(this).parent().parent().next().remove();
+                $(this).parent().parent().remove();
+            });
+
+
+            $(document).on("click", ".delLine", function() {
+                $(this).parent().parent().next().next().remove();
+                $(this).parent().parent().next().remove();
+                $(this).parent().parent().remove();
+            });
+
+            $(document).on("change",".viewLine",function() {
+                var type = $(this).attr("rel");
+                console.log($(this).val());
+                if($(this).val()==1) $("."+type+"Line").css("display","");
+                else $("."+type+"Line").css("display","none");
+            });
+        </script>
+
+        <form id="centerForm"  name="centerForm" enctype="multipart/form-data">
+            <input type="hidden" name="uid" id="uid" value="">
+            <input type="hidden" name="flag" value="insert">
+
+            <!-- @2021-01-04 수정 -->
+            <section id="anc_bo_basic" class="show">
+            <!-- //@2021-01-04 수정 -->
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">기본 설정</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <caption>센터 기본 설정</caption>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col style="width:40%">
+                            <col class="grid_3">
+                            <col style="width:40%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">센터코드</th>
+                            <td>
+                                <input type="text" name="center_code" class="text" maxlength="20" value="">
+
+                            </td>
+                            <th scope="row">센터명</th>
+                            <td><input type="text" name="center_name" class="text" maxlength="100" value=""></td>
+                        </tr>
+                        <tr class="not_use_field">
+                            <th scope="row">스킨사용</th>
+                            <td colspan="3">
+                                <input type="radio" name="skin" value="00" checked="checked"> 전체
+                                <input type="radio" name="skin" value="10"> 요약
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="not_use_field">바로주문 URL</th>
+                            <td class="not_use_field">
+                                <input type="text" name="order_link" class="text" maxlength="255" value=""><br>
+                                <span style="margin-top:5px;color:blue;">
+					※ http:// 또는 https:// 를 포함하여 전체 URL을 입력해 주세요
+				</span>
+                            </td>
+                            <th scope="row">센터  파일주문 노출/비노출</th>
+                            <td>
+                                <input type="checkbox" name="file_use_yn" value="1" id="file_use_yn"/>파일주문 노출 안함<br>
+                                <span style="margin-top:5px;color:blue;">
+					체크박스 선택시 센터리스트 화면에서 파일주문영역이 나오지 않습니다.
+				</span>
+                            </td>
+                            <th scope="row">센터사진</th>
+                            <td>
+                                <input type="file" name="center_img"><br>
+                                <span style="margin-top:5px;color:">※ 등록된 파일 :
+				현재미등록
+
+				</span><br>
+                                <span style="margin-top:5px;color:blue;">※ 가로 * 세로 = 900px * 400px</span>
+                            </td>
+                        </tr>
+                        <tr class="not_use_field">
+                            <th scope="row">아이콘</th>
+                            <td>
+                                <input type="text" name="icon_title" class="text" maxlength="255" value=""><br>
+                                <span style="margin-top:5px;color:blue;">
+					※ 아이콘명을 ',' 로 구분하여 입력해 주세요<br>
+					※ 예) 월 - 목 24HOUR,CAD,대형흑백
+				</span>
+                            </td>
+
+                            <th scope="row">웹하드 URL</th>
+                            <td>
+                                <input type="text" name="webhard_link" class="text" maxlength="255" value=""><br>
+                                <span style="margin-top:5px;color:blue;">
+					※ http:// 또는 https:// 를 포함하여 전체 URL을 입력해 주세요
+				</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">센터구분</th>
+                            <td>
+                                <select name="location_code" id="location_code">
+                                    <option value="">지역구분</option>
+
+                                    <option value="001">서울지역</option>
+                                    <option value="002" >경기지역</option>
+                                    <option value="003">부산지역</option>
+
+
+                                </select>
+                                <select name="sub_location_code" id="sub_location_code">
+                                </select>
+                                <select name="operating_hour_code">
+                                    <option value="">운영요일</option>
+                                    <option value="001">월요일~일요일(24시간)</option>
+                                    <option value="002">월요일~금요일(24시간)</option>
+                                    <option value="003">일요일~목요일(24시간)</option>
+                                    <option value="004">월요일~목요일(24시간)</option>
+                                    <option value="005">월요일~일요일</option>
+                                    <option value="006">월요일~토요일</option>
+                                </select>
+                            </td>
+                            <th scope="row">포스 센터코드</th>
+                            <td>
+                                <input type="text" name="ct_pos_jumcd" class="text" maxlength="255" value=""><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">제공서비스</th>
+                            <td>
+
+
+                                <input type="checkbox" name="service_code" value="ss14">성탄절 연휴기간 영업센터</input>
+
+
+
+
+                                <input type="checkbox" name="service_code" value="ss9">월 ~일 24시간 운영센터</input>
+
+
+
+
+                                <input type="checkbox" name="service_code" value="ss11">즉석스티커 가능센터</input>
+
+
+
+
+                                <input type="checkbox" name="service_code" value="ss1">즉석사진인화 서비스 센터</input>
+
+
+
+
+                                <input type="checkbox" name="service_code" value="ss3">대형 칼라스캔 가능센터</input>
+
+
+
+
+                                <input type="checkbox" name="service_code" value="ss4">대형 흑백출력,스캔 가능센터</input>
+
+
+
+
+                                <input type="checkbox" name="service_code" value="ss2">CAD출력 가능센터</input>
+
+
+
+                            </td>
+                            <th scope="row">센터안내노출</th>
+                            <td><input type="checkbox" name="view" value="1" id="view"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_addr">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">주소 설정</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <caption>주소 설정</caption>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col style="width:40%">
+                            <col class="grid_3">
+                            <col style="width:40%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">지번주소</th>
+                            <td>
+                                <input type="text" name="addr_old1" id="addr_old1" class="postsearch1" value="" readonly style="width: calc(100% - 95px);">
+                                <input type="button" value=" 검색 " class="postsearch1 btn_frmline"  onclick="openDaumPostcode1()">
+                                <input type="button" value=" 좌표 " class="coordinateSearch1 btn_frmline" onclick="postsearch1()"><br>
+                                <input type="text" name="addr_old2" id="addr_old2" value="" style="width:100%">
+                            </td>
+                            <th scope="row">도로명주소</th>
+                            <td>
+                                <input type="text" name="addr_new1" id="addr_new1" class="postsearch1" value="" readonly style="width: calc(100% - 95px);">
+                                <input type="button" value=" 검색 " class="postsearch1 btn_frmline" onclick="openDaumPostcode2()">
+                                <input type="button" value=" 좌표 " class="coordinateSearch1 btn_frmline" onclick="postsearch2()"><br>
+                                <input type="text" name="addr_new2" id="addr_new2" value="" style="width:100%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">위도</th>
+                            <td>
+                                <input type="text" name="latitude" id="latitude" class="text" maxlength="30" value="">
+                            </td>
+                            <th scope="row">경도</th>
+                            <td>
+                                <input type="text" name="longitude" id="longitude" class="text" maxlength="30" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전화</th>
+                            <td>
+                                <input type="text" name="telno" maxlength="20" value="">
+                            </td>
+                            <th scope="row">팩스</th>
+                            <td>
+                                <input type="text" name="faxno" maxlength="20"  value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">센터메일</th>
+                            <td class="emailBlock">
+                                <input type="text" name="email" value="" style="ime-mode:inavtice;width:100%">
+                                <span class="frm_info">여러 개 입력할 경우 ,(쉼표)로 구분하여 입력하세요.</span>
+                            </td>
+                            <th scope="row"></th>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">센터장메일</th>
+                            <td class="emailBlock">
+                                <input type="text" name="center_email" value="" style="ime-mode:inavtice;width:100%">
+                            </td>
+                            <th scope="row">연락처1</th>
+                            <td>
+                                <input type="text" name="center_hp" maxlength="20" value="" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CSS메일</th>
+                            <td class="emailBlock">
+                                <input type="text" name="css_email" value=""  style="ime-mode:inavtice;width:100%">
+                                <span class="frm_info">여러 개 입력할 경우 ,(쉼표)로 구분하여 입력하세요.</span>
+                            </td>
+                            <th scope="row">연락처2</th>
+                            <td>
+                                <input type="text" name="css_hp" maxlength="20" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">센터 오픈일</th>
+                            <td>
+                                <input type="text" name="center_open_date"  value="" id="center_open_date" placeholder="" size="14" maxlength="10" style="width:100px;">
+                            </td>
+                            <th scope="row">센터 폐점일</th>
+                            <td>
+                                <input type="text" name="center_close_date" value=""  id="center_close_date" placeholder="" size="14" maxlength="10" style="width:100px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">영업시간</th>
+                            <td>
+                                <textarea name="operating_hour" maxlength="500"></textarea>
+                            </td>
+                            <th scope="row">강조문구</th>
+                            <td>
+                                <input type="text" name="operating_cm" maxlength="100" value="">
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <th scope="row">공휴일 목록</th>
+                            <td>
+                                <label for="bo_device_0" class="sound_only">공휴일목록</label>
+                                <select name="holidaylist" id="holidaylist">
+
+
+                                </select>
+
+                                <!-- 				<textarea name="operating_hour" maxlength="100"></textarea> -->
+                            </td>
+                            <th scope="row">강조문구</th>
+                            <td>
+                                <input type="text" name="" maxlength="100" value=""  style="width:100px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DHL접수시간</th>
+                            <td>
+                                <textarea name="dhl_hour" maxlength="100"></textarea>
+                            </td>
+                            <th scope="row">강조문구</th>
+                            <td>
+                                <input type="text" name="dhl_cm" maxlength="100" value=""  style="width:100px;">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm" >
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_pc">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">PC/Scanner</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col style="width:40%">
+                            <col class="grid_3">
+                            <col style="width:40%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td colspan="4" style="background-color:#FBFBFB;">
+
+                                <input type="radio" name="use_computer" value="1" class="viewLine" rel="computer" > 사용
+                                <input type="radio" name="use_computer" value="0" class="viewLine" rel="computer" checked> 미사용
+
+
+                                <input type="button" value=" 추가 " class="com_addLine btn_frmline" rel="computer" style="margin-left:10px;">
+                            </td>
+                        </tr>
+
+
+                        <tr class="computerLine" id="computerLineTitle">
+                            <th scope="row">타이틀</th>
+                            <td>
+                                <input type="text" name="computer_title" maxlength="100" value="" class="jq_cl_text">
+                            </td>
+                            <th scope="row">대수</th>
+                            <td>
+                                <input type="text" name="computer_cm" value="" class="jq_cl_text">
+                            </td>
+                        </tr>
+                        <tr class="computerLine jq_cl_btLine" id="computerLineImg">
+                            <th scope="row">이미지</th>
+                            <td colspan="3">
+                                <input type="hidden" name="saveComfile_sub"/>
+                                <input type="file" name="savefile_com_sub" />
+                                <div style='margin-top:5px;color:blue;'>60px * 60px</div>
+                            </td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_program">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">프로그램</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <caption>프로그램 설정</caption>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col style="width:40%">
+                            <col class="grid_3">
+                            <col style="width:40%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td colspan="4" style="background-color:#FBFBFB;">
+
+                                <input type="radio" name="use_program" value="1" class="viewLine" rel="program"> 사용
+                                <input type="radio" name="use_program" value="0" class="viewLine" rel="program" checked> 미사용
+
+
+                                <input type="button" value=" 추가 " class="addLine btn_frmline" rel="program" style="margin-left:10px;">
+                            </td>
+                        </tr>
+
+
+                        <tr class="programLine" id="programLineTitle" >
+                            <th scope="row">타이틀</th>
+                            <td colspan="3">
+                                <input type="text" name="program_title" maxlength="100" value="" class="jq_cl_text">
+                            </td>
+                        </tr>
+                        <tr class="programLine" id="programLineContent">
+                            <th scope="row">내용</th>
+                            <td>
+                                <textarea name="program_content" class="jq_cl_text"></textarea>
+                            </td>
+                            <th scope="row">강조문구</th>
+                            <td>
+                                <textarea name="program_cm" class="jq_cl_text"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="programLine jq_cl_btLine" id="programLineImg">
+                            <th scope="row">이미지</th>
+                            <td colspan="3">
+                                <input type="hidden" name="savePromfile_sub"/>
+                                <input type="file" name="savefile_prom_sub" />
+                                <div style='margin-top:5px;color:blue;'>60px * 60px</div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_device">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">보유 장비</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <caption>보유 장비 설정</caption>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col style="width:40%">
+                            <col class="grid_3">
+                            <col style="width:40%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td colspan="4" style="background-color:#FBFBFB;">
+
+                                <input type="radio" name="use_equipment" value="1" class="viewLine" rel="equipment"> 사용
+                                <input type="radio" name="use_equipment" value="0" class="viewLine" rel="equipment" checked> 미사용
+
+
+                                <input type="button" value=" 추가 " class="addLine btn_frmline" rel="equipment" style="margin-left:10px;">
+
+                            </td>
+                        </tr>
+
+                        </th:block>
+
+                        <tr class="equipmentLine" id="equipmentLineTitle">
+                            <th scope="row">타이틀</th>
+                            <td colspan="3">
+                                <input type="text" name="equipment_title" maxlength="100" value="" class="jq_cl_text">
+                            </td>
+                        </tr>
+                        <tr class="equipmentLine" id="equipmentLineContent">
+                            <th scope="row">내용</th>
+                            <td>
+                                <textarea name="equipment_content" class="jq_cl_text"></textarea>
+                            </td>
+                            <th scope="row">강조문구</th>
+                            <td>
+                                <textarea name="equipment_cm" class="jq_cl_text"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="equipmentLine jq_cl_btLine" id="equipmentLineImg">
+                            <th scope="row">이미지</th>
+                            <td colspan="3">
+                                <input type="hidden" name="saveEquipfile_sub"/>
+                                <input type="file" name="savefile_equip_sub" />
+                                <div style='margin-top:5px;color:blue;'>60px * 60px</div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_info">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">기타안내</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <caption>기타안내 설정</caption>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col style="width:40%">
+                            <col class="grid_3">
+                            <col style="width:40%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">지하철로<br>오시는 경우</th>
+                            <td colspan="3">
+                                <textarea name="subway_guide" class="textareaCustom"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">자동차로<br>오시는 경우</th>
+                            <td colspan="3">
+                                <textarea name="car_guide" class="textareaCustom"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">버스로<br>오시는 경우</th>
+                            <td colspan="3">
+                                <textarea name="bus_guide" class="textareaCustom"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주차장</th>
+                            <td colspan="3">
+                                <textarea name="parking_guide" class="textareaCustom"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변지하철</th>
+
+                            <td colspan="3" class="subwayBlock">
+                                <select name="vicinity_subway">
+                                    <option value="">선택</option>
+
+                                    <option value="40">가산디지털단지역 1호선</option>
+
+                                    <option value="77">가산디지털단지역 7호선</option>
+
+                                    <option value="78">강남구청역 7호선</option>
+
+                                    <option value="96">강남구청역 분당선</option>
+
+                                    <option value="44">강남역 2호선</option>
+
+                                    <option value="100">강남역 신분당</option>
+
+                                    <option value="56">경복궁역 3호선</option>
+
+                                    <option value="71">공덕역 5호선</option>
+
+                                    <option value="75">공덕역 6호선</option>
+
+                                    <option value="92">공덕역 경의중앙선</option>
+
+                                    <option value="94">공덕역 공항</option>
+
+                                    <option value="72">광화문역 5호선</option>
+
+                                    <option value="45">교대역 2호선</option>
+
+                                    <option value="57">교대역 3호선</option>
+
+                                    <option value="46">구로디지털단지역 2호선</option>
+
+                                    <option value="86">국회의사당역 9호선</option>
+
+                                    <option value="79">남구로역 7호선</option>
+
+                                    <option value="58">남부터미널역 3호선</option>
+
+                                    <option value="80">논현역 7호선</option>
+
+                                    <option value="81">대림역 7호선</option>
+
+                                    <option value="59">마두역 3호선</option>
+
+                                    <option value="73">마포역 5호선</option>
+
+                                    <option value="109">명동역 3호선</option>
+
+                                    <option value="83">몽촌토성역 8호선</option>
+
+                                    <option value="67">범계역 4호선</option>
+
+                                    <option value="138">벡스코역 동해선</option>
+
+                                    <option value="147">벡스코역 부산2호선</option>
+
+                                    <option value="87">봉은사역 9호선</option>
+
+                                    <option value="47">삼성역 2호선</option>
+
+                                    <option value="88">삼성중앙역 9호선</option>
+
+                                    <option value="113">상수역 6호선</option>
+
+                                    <option value="89">샛강역 9호선</option>
+
+                                    <option value="149">서면역 부산1호선</option>
+
+                                    <option value="150">서면역 부산2호선</option>
+
+                                    <option value="41">서울역 1호선</option>
+
+                                    <option value="68">서울역 4호선</option>
+
+                                    <option value="104">서울역 경의중앙선</option>
+
+                                    <option value="103">서울역 공항</option>
+
+                                    <option value="106">서초역 2호선</option>
+
+                                    <option value="97">서현역 분당선</option>
+
+                                    <option value="84">석촌역 8호선</option>
+
+                                    <option value="48">선릉역 2호선</option>
+
+                                    <option value="107">선릉역 분당선</option>
+
+                                    <option value="90">선정릉역 9호선</option>
+
+                                    <option value="98">선정릉역 분당선</option>
+
+                                    <option value="137">센텀시티역 부산2호선</option>
+
+                                    <option value="148">센텀역 동해선</option>
+
+                                    <option value="146">송파나루역 9호선</option>
+
+                                    <option value="99">수내역 분당선</option>
+
+                                    <option value="42">시청역 1호선</option>
+
+                                    <option value="49">시청역 2호선</option>
+
+                                    <option value="60">신사역 3호선</option>
+
+                                    <option value="131">신촌역 2호선</option>
+
+                                    <option value="61">안국역 3호선</option>
+
+                                    <option value="62">압구정역 3호선</option>
+
+                                    <option value="63">양재역 3호선</option>
+
+                                    <option value="101">양재역 신분당</option>
+
+                                    <option value="74">여의도역 5호선</option>
+
+                                    <option value="91">여의도역 9호선</option>
+
+                                    <option value="50">역삼역 2호선</option>
+
+                                    <option value="51">을지로3가역 2호선</option>
+
+                                    <option value="64">을지로3가역 3호선</option>
+
+                                    <option value="112">을지로4가역 2호선</option>
+
+                                    <option value="111">을지로4가역 5호선</option>
+
+                                    <option value="52">을지로입구역 2호선</option>
+
+                                    <option value="53">잠실역 2호선</option>
+
+                                    <option value="85">잠실역 8호선</option>
+
+                                    <option value="65">정발산역 3호선</option>
+
+                                    <option value="43">종각역 1호선</option>
+
+                                    <option value="110">종로3가역 1호선</option>
+
+                                    <option value="108">종로3가역 4호선</option>
+
+                                    <option value="66">충무로역 3호선</option>
+
+                                    <option value="69">충무로역 4호선</option>
+
+                                    <option value="102">판교역 신분당</option>
+
+                                    <option value="70">평촌역 4호선</option>
+
+                                    <option value="82">학동역 7호선</option>
+
+                                    <option value="54">합정역 2호선</option>
+
+                                    <option value="76">합정역 6호선</option>
+
+                                    <option value="55">홍대입구역 2호선</option>
+
+                                    <option value="93">홍대입구역 경의중앙선</option>
+
+                                    <option value="95">홍대입구역 공항</option>
+
+                                    <option value="105">회현역 4호선</option>
+
+                                </select>
+                                <input type="button" value=" 추가 " class="addSubway btn_frmline">
+                            </td>
+
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#34A2F7;">(간선)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus1" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#4DC74D;">(지선)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus2" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#E2565F;">(광역)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus3" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#B16D79;">(공항)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus4" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#ECB646">(순환)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus5" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#5CA2C8">(일반)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus6" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#44BA42">(마을)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus7" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#A47DE9">(직행)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus8" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#AB44AF">(시외)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus9" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주변버스 <span style="font-weight:bold;color:#3556A7">(좌석)</span></th>
+                            <td colspan="3">
+                                <input type="text" name="vicinity_bus10" class="inputCustom" value="">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_ara">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">결제 정보</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <table>
+                        <caption>결제 정보</caption>
+                        <colgroup>
+                            <col class="grid_4">
+                            <col class="grid_3">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row" rowspan="3">ARS 카드결제<br>(이노페이)</th>
+                            <th scope="row">ARS 상점 ID</th>
+                            <td><input type="text" name="ct_arsmid" value=""></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PG 상점 ID</th>
+                            <td><input type="text" name="ct_pgmid"  value=""></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상점 라이선스 키</th>
+                            <td><input type="text" name="ct_licensekey" value=""></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">무통장 입금</th>
+                            <th scope="row">계좌번호</th>
+                            <td><input type="text" name="ct_bankcode" value=""></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">카드결제,계좌이체<br>(이니시스)</th>
+                            <th scope="row">상점 ID</th>
+                            <td><input type="text" name="inipay_mid" value=""></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+
+            <section id="anc_bo_ara">
+
+                <!-- @2021-01-04 추가 -->
+                <a href="#" class="section_toggle_btn">&nbsp;</a>
+                <!-- //@2021-01-04 추가 -->
+
+                <h2 class="h2_frm">요약 정보</h2>
+                <ul class="anchor">
+                    <li><a href="#anc_bo_basic">기본 설정</a></li>
+                    <li><a href="#anc_bo_addr">주소 설정</a></li>
+                    <li><a href="#anc_bo_pc">PC/Scanner</a></li>
+                    <li><a href="#anc_bo_program">프로그램</a></li>
+                    <li><a href="#anc_bo_device">보유 장비</a></li>
+                    <li><a href="#anc_bo_info">기타안내</a></li>
+                    <li><a href="#anc_bo_ara">결제 정보</a></li>
+                    <li><a href="#anc_bo_ara">요약 정보</a></li>
+                </ul>
+                <div class="tbl_frm01 tbl_wrap">
+                    <span class="sound_only">웹에디터 시작</span>
+                    <textarea  id="summary_html" name="summary_html"></textarea>
+                    <script type="text/javascript">
+                        CKEDITOR.replace('summary_html' , {height: 200 }
+                        );
+                    </script>
+                    <span class="sound_only">웹 에디터 끝</span>
+                </div>
+            </section>
+            <div class="btn_confirm01 btn_confirm">
+                <button type="button" class="btn_submit" onclick="fncSaveCenter()">확인</button>
+                <a href="/site/getCenterList.do">목록</a>
+            </div>
+        </form>
+
+        <div id="location001" style="display:none;">
+            <option value="">지역상세</option>
+            <option value="001001">강남지역</option>
+            <option value="001002">강북지역</option>
+            <option value="001003">강서지역</option>
+            <option value="001004">강동지역</option>
+        </div>
+        <div id="location002" style="display:none;">
+            <option value="">지역상세</option>
+            <option value="002001">분당지역</option>
+            <option value="002002">안양지역</option>
+            <option value="002003">일산지역</option>
+        </div>
+        <div id="location003" style="display:none;">
+            <option value="">지역상세</option>
+            <option value="003001">해운대구</option>
+            <option value="003002">부산진구</option>
+        </div>
+        <div id="locationNone" style="display:none;">
+            <option value="">지역상세</option>
+        </div>
+        <div id="subwayHtml" style="display:none;">
+            <div style="margin-top:5px;">
+                <select name="vicinity_subway">
+                    <option value="">선택</option>
+
+                    <option value="40">가산디지털단지역 1호선</option>
+
+                    <option value="77">가산디지털단지역 7호선</option>
+
+                    <option value="78">강남구청역 7호선</option>
+
+                    <option value="96">강남구청역 분당선</option>
+
+                    <option value="44">강남역 2호선</option>
+
+                    <option value="100">강남역 신분당</option>
+
+                    <option value="56">경복궁역 3호선</option>
+
+                    <option value="71">공덕역 5호선</option>
+
+                    <option value="75">공덕역 6호선</option>
+
+                    <option value="92">공덕역 경의중앙선</option>
+
+                    <option value="94">공덕역 공항</option>
+
+                    <option value="72">광화문역 5호선</option>
+
+                    <option value="45">교대역 2호선</option>
+
+                    <option value="57">교대역 3호선</option>
+
+                    <option value="46">구로디지털단지역 2호선</option>
+
+                    <option value="86">국회의사당역 9호선</option>
+
+                    <option value="79">남구로역 7호선</option>
+
+                    <option value="58">남부터미널역 3호선</option>
+
+                    <option value="80">논현역 7호선</option>
+
+                    <option value="81">대림역 7호선</option>
+
+                    <option value="59">마두역 3호선</option>
+
+                    <option value="73">마포역 5호선</option>
+
+                    <option value="109">명동역 3호선</option>
+
+                    <option value="83">몽촌토성역 8호선</option>
+
+                    <option value="67">범계역 4호선</option>
+
+                    <option value="138">벡스코역 동해선</option>
+
+                    <option value="147">벡스코역 부산2호선</option>
+
+                    <option value="87">봉은사역 9호선</option>
+
+                    <option value="47">삼성역 2호선</option>
+
+                    <option value="88">삼성중앙역 9호선</option>
+
+                    <option value="113">상수역 6호선</option>
+
+                    <option value="89">샛강역 9호선</option>
+
+                    <option value="149">서면역 부산1호선</option>
+
+                    <option value="150">서면역 부산2호선</option>
+
+                    <option value="41">서울역 1호선</option>
+
+                    <option value="68">서울역 4호선</option>
+
+                    <option value="104">서울역 경의중앙선</option>
+
+                    <option value="103">서울역 공항</option>
+
+                    <option value="106">서초역 2호선</option>
+
+                    <option value="97">서현역 분당선</option>
+
+                    <option value="84">석촌역 8호선</option>
+
+                    <option value="48">선릉역 2호선</option>
+
+                    <option value="107">선릉역 분당선</option>
+
+                    <option value="90">선정릉역 9호선</option>
+
+                    <option value="98">선정릉역 분당선</option>
+
+                    <option value="137">센텀시티역 부산2호선</option>
+
+                    <option value="148">센텀역 동해선</option>
+
+                    <option value="146">송파나루역 9호선</option>
+
+                    <option value="99">수내역 분당선</option>
+
+                    <option value="42">시청역 1호선</option>
+
+                    <option value="49">시청역 2호선</option>
+
+                    <option value="60">신사역 3호선</option>
+
+                    <option value="131">신촌역 2호선</option>
+
+                    <option value="61">안국역 3호선</option>
+
+                    <option value="62">압구정역 3호선</option>
+
+                    <option value="63">양재역 3호선</option>
+
+                    <option value="101">양재역 신분당</option>
+
+                    <option value="74">여의도역 5호선</option>
+
+                    <option value="91">여의도역 9호선</option>
+
+                    <option value="50">역삼역 2호선</option>
+
+                    <option value="51">을지로3가역 2호선</option>
+
+                    <option value="64">을지로3가역 3호선</option>
+
+                    <option value="112">을지로4가역 2호선</option>
+
+                    <option value="111">을지로4가역 5호선</option>
+
+                    <option value="52">을지로입구역 2호선</option>
+
+                    <option value="53">잠실역 2호선</option>
+
+                    <option value="85">잠실역 8호선</option>
+
+                    <option value="65">정발산역 3호선</option>
+
+                    <option value="43">종각역 1호선</option>
+
+                    <option value="110">종로3가역 1호선</option>
+
+                    <option value="108">종로3가역 4호선</option>
+
+                    <option value="66">충무로역 3호선</option>
+
+                    <option value="69">충무로역 4호선</option>
+
+                    <option value="102">판교역 신분당</option>
+
+                    <option value="70">평촌역 4호선</option>
+
+                    <option value="82">학동역 7호선</option>
+
+                    <option value="54">합정역 2호선</option>
+
+                    <option value="76">합정역 6호선</option>
+
+                    <option value="55">홍대입구역 2호선</option>
+
+                    <option value="93">홍대입구역 경의중앙선</option>
+
+                    <option value="95">홍대입구역 공항</option>
+
+                    <option value="105">회현역 4호선</option>
+
+                </select>
+                <input type="button" value=" 삭제 " class="delSubway btn_frmline">
+            </div>
+        </div>
+    </div><!-- container끝 -->
+
+</div>  <!-- //wrapper끝 -->
+
+<footer id="ft">
+    <p>
+        Copyright &copy; www.kinkos.co.kr. All rights reserved.<br>
+        <a href="#">상단으로</a>
+    </p>
+</footer>
+
+<!-- @2021-01-04 JS 추가 -->
+<script>
+    function sectionToggle() {
+        $('.section_toggle_btn').on('click', function(e) {
+            e.preventDefault();
+
+            var obj = $(this);
+            var parentObj = obj.closest('section');
+
+            parentObj.toggleClass('show');
+        });
+    }
+
+    $(document).ready(function() {
+        if ($('.section_toggle_btn').length) {
+            sectionToggle();
+        }
+    });
+</script>
+<!-- //@2021-01-04 JS 추가 -->
+
+</body>
+</html>
